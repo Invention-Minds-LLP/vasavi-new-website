@@ -1,0 +1,336 @@
+.page-header {
+    background: linear-gradient(rgba(59, 60, 66, 0.749), rgba(69, 70, 75, 0.8)), url('/img/Home/opd.jpg') center center no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.page-header .container-banner {
+    position: relative;
+    height: 50vh;
+}
+
+.page-header .centered-element-banner {
+    margin: 0;
+    position: inherit;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page-header .breadcrumb-item a,
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--light);
+}
+
+.page-header .breadcrumb-item a:hover,
+.page-header .breadcrumb-item.active {
+    color: var(--light);
+}
+
+section {
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.rounded {
+    border-radius: 2px !important;
+}
+
+
+.section-header {
+    text-align: center;
+}
+
+.section-header h2 {
+    font-size: 38px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.section-header1 h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.section-header p {
+    margin: 0 auto;
+    /* color: lightblue; */
+    padding-bottom: 20px;
+}
+
+@media (min-width: 1280px) {
+    .section-header p {
+        max-width: 80%;
+    }
+
+    .section-header h2 {
+        font-size: 28px;
+    }
+}
+
+.decri-para p {
+    text-align: start;
+    font-size: 18px !important;
+    font-weight: 400;
+
+}
+
+.decri-para1 p {
+    text-align: start;
+    font-size: 18px !important;
+    font-weight: 400;
+
+}
+
+.content p {
+    text-align: start;
+    font-size: 18px !important;
+    font-weight: 400;
+}
+
+.bg-light {
+    background-color: #EEF9FF !important;
+}
+
+
+.item2 {
+    background: #fff;
+    text-align: center;
+    padding: 30px 25px;
+    -webkit-box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    border: 5px solid rgba(0, 0, 0, 0.07);
+    margin-bottom: 30px;
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+
+.item2:hover {
+    background: var(--second-color);
+    box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+
+.item2:hover .item2,
+.item2:hover span.icon {
+    background: #fff;
+    border-radius: 10px;
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+
+.item2:hover h6,
+.item2:hover p {
+    color: #fff;
+    -webkit-transition: all .5s ease 0;
+    transition: all .5s ease 0;
+    transition: all 0.5s ease 0s;
+}
+
+.item2 h4 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.item2 .icon {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: var(--prime-color);
+    width: 90px;
+    height: 90px;
+    line-height: 96px;
+    border-radius: 50px;
+}
+
+.item2 .feature_box_col_one {
+    background: rgba(247, 198, 5, 0.20);
+    color: var(--prime-color)
+}
+
+.item2 .feature_box_col_two {
+    background: rgba(255, 77, 28, 0.15);
+    color: var(--prime-color)
+}
+
+.item2 .feature_box_col_three {
+    background: rgba(0, 147, 38, 0.15);
+    color: var(--prime-color)
+}
+
+.item2 .feature_box_col_four {
+    background: rgba(0, 108, 255, 0.15);
+    color: var(--prime-color)
+}
+
+.item2 .feature_box_col_five {
+    background: rgba(146, 39, 255, 0.15);
+    color: var(--prime-color)
+}
+
+.item2 .feature_box_col_six {
+    background: rgba(23, 39, 246, 0.15);
+    color: var(--prime-color)
+}
+
+.item2 p {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.item2 h6 {
+    margin-bottom: 20px;
+    color: #2f2f2f;
+}
+
+@media only screen and (max-width: 480px) {
+    section {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    .section-header p {
+        color: #000;
+    }
+
+    .decri-para p {
+        text-align: center !important;
+        font-size: 16px !important;
+        font-weight: 400;
+        /* padding-top: 20px; */
+    }
+
+    .decri-para1 p {
+        text-align: center !important;
+        font-size: 16px !important;
+        font-weight: 400;
+        padding-top: 5px;
+        margin: 0px;
+    }
+
+    .section-header1 {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .section-header1 h2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    section {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    .section-header p {
+        color: #000;
+    }
+
+    .decri-para p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        /* padding-top: 20px; */
+    }
+
+    .decri-para1 p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        padding-top: 5px;
+        margin: 0px;
+    }
+
+    .section-header1 {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .section-header1 h2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    section {
+        padding: 20px 0;
+        overflow: hidden;
+    }
+
+    .section-header h2 {
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    .section-header p {
+        color: #000;
+    }
+
+    .decri-para p {
+        text-align: justify;
+        font-size: 18px;
+        font-weight: 400;
+        /* padding-top: 20px; */
+    }
+
+    .decri-para1 p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        padding-top: 5px;
+        margin: 0px;
+    }
+
+    .section-header1 {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 0px;
+    }
+
+    .section-header1 h2 {
+        font-size: 18px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+    }
+
+}
