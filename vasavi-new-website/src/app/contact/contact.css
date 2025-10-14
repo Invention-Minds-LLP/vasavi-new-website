@@ -1,0 +1,89 @@
+.page-header {
+  background: linear-gradient(rgba(59, 60, 66, 0.749), rgba(69, 70, 75, 0.8)), url('/img/Home/opd.jpg') center center no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.page-header .container-banner {
+  position: relative;
+  height: 50vh;
+}
+
+.page-header .centered-element-banner {
+  margin: 0;
+  position: inherit;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center !important;
+}
+
+a {
+  text-decoration: none;
+  color: #0095da;
+}
+
+.text-primary {
+    color: #0095da !important;
+}
+
+.bg-light
+ {
+    background-color: #EEF9FF !important;
+}
+
+.page-header .breadcrumb-item a,
+.page-header .breadcrumb-item+.breadcrumb-item::before {
+  color: var(--light);
+}
+
+.page-header .breadcrumb-item a:hover,
+.page-header .breadcrumb-item.active {
+  color: var(--light);
+}
+
+
+section {
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.section-bg {
+  background-color: var(--light)
+}
+
+.section-title {
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--second-color);
+  bottom: 0;
+  left: 0;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  color: #777777;
+  font-size: 15px;
+}
+
+.bg-primary {
+  background-color: #0095da !important;
+}
+
+.section-header {
+  text-align: center;
+}
