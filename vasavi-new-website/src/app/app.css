@@ -1,0 +1,46 @@
+.fab {
+    position: fixed;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    outline: none;
+    border: none;
+  }
+  
+  svg{
+    width:30px;
+    height: 30px;
+  }
+  .whatsapp-btn {
+    background-color: #25d366;
+    bottom: 60px;
+    left: 20px;
+  }
+  
+  .bot-btn {
+    background-color: #004b91;
+    bottom: 60px;
+    right: 20px;
+  }
+  .chat-wrapper {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 380px;
+    height: 520px;
+    z-index: 9999;
+  }
+
+  .floating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

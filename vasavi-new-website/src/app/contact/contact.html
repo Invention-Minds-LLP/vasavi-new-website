@@ -25,44 +25,79 @@
 
         <div class="row pt-3 pt-md-5 d-flex justify-content-center">
             <div class="col-lg-6 wow slideInUp" data-wow-delay="0.3s">
-                <form (ngSubmit)="submitForm()" [formGroup]="contactForm">
+                <form [formGroup]="contactForm" (ngSubmit)="submitForm()" novalidate>
                     <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" formControlName="name" required
-                                class="form-control border-0 bg-light px-4" placeholder="Your Name"
-                                style="height: 55px" />
+                      <!-- Name -->
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          formControlName="name"
+                          class="form-control border-0 bg-light px-4"
+                          placeholder="Your Name"
+                          style="height: 55px"
+                        />
+                        <div *ngIf="f['name'].touched && f['name'].invalid" class="text-danger small mt-1">
+                          <div *ngIf="f['name'].errors?.['required']">Name is required</div>
+                          <div *ngIf="f['name'].errors?.['minlength']">Name must be at least 2 characters</div>
                         </div>
-
-                        <div class="col-12 col-md-6">
-                            <input type="tel" formControlName="phone" required
-                                class="form-control border-0 bg-light px-4" placeholder="Contact Number"
-                                style="height: 55px" />
+                      </div>
+                  
+                      <!-- Phone -->
+                      <div class="col-md-6">
+                        <input
+                          type="tel"
+                          formControlName="phone"
+                          class="form-control border-0 bg-light px-4"
+                          placeholder="Contact Number"
+                          style="height: 55px"
+                        />
+                        <div *ngIf="f['phone'].touched && f['phone'].invalid" class="text-danger small mt-1">
+                          <div *ngIf="f['phone'].errors?.['required']">Contact number is required</div>
+                          <div *ngIf="f['phone'].errors?.['pattern']">Enter a valid 10-digit phone number</div>
                         </div>
-
-                        <div class="col-md-12">
-                            <input type="text" formControlName="service" required
-                                class="form-control border-0 bg-light px-4" placeholder="Services"
-                                style="height: 55px" />
+                      </div>
+                  
+                      <!-- Service -->
+                      <div class="col-md-12">
+                        <input
+                          type="text"
+                          formControlName="service"
+                          class="form-control border-0 bg-light px-4"
+                          placeholder="Service"
+                          style="height: 55px"
+                        />
+                        <div *ngIf="f['service'].touched && f['service'].invalid" class="text-danger small mt-1">
+                          <div *ngIf="f['service'].errors?.['required']">Service is required</div>
                         </div>
-
-                        <div class="col-12">
-                            <textarea formControlName="message" class="form-control border-0 bg-light px-4 py-3"
-                                rows="4" placeholder="Message"></textarea>
+                      </div>
+                  
+                      <!-- Message -->
+                      <div class="col-12">
+                        <textarea
+                          formControlName="message"
+                          class="form-control border-0 bg-light px-4 py-3"
+                          rows="4"
+                          placeholder="Message"
+                        ></textarea>
+                        <div *ngIf="f['message'].touched && f['message'].invalid" class="text-danger small mt-1">
+                          <div *ngIf="f['message'].errors?.['required']">Message is required</div>
                         </div>
-
-                        <!-- ✅ reCAPTCHA -->
-                        <div class="form-group mt-3">
-                            <div id="recaptcha-container"></div> <!-- IMPORTANT -->
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-                        <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">
-                                Send Message
-                            </button>
-                        </div>
+                      </div>
+                  
+                      <!-- reCAPTCHA -->
+                      <div class="form-group mt-3">
+                        <div id="recaptcha-container"></div>
+                        <div class="help-block with-errors text-danger small"></div>
+                      </div>
+                  
+                      <div class="col-12">
+                        <button class="btn btn-primary w-100 py-3" type="submit" [disabled]="!contactForm.valid">
+                          Send Message
+                        </button>
+                      </div>
                     </div>
-                </form>
+                  </form>
+                  
             </div>
 
             <!-- Right column with contact info -->

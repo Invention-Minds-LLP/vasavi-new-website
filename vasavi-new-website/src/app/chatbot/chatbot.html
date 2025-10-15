@@ -1,0 +1,71 @@
+<div class="chat-wrapper">
+    <div class="header">
+      <div class="logo">
+        <img src="/img/logo/vasavi-log-bg.png" alt="Vasavi Hospitals Logo" />
+      </div>
+      <div class="titles">
+        <div class="name">Vasavi Hospitals</div>
+        <div class="sub">Your Health Support Assistant</div>
+      </div>
+      <button class="close-btn" (click)="close()">×</button>
+    </div>
+  
+    <div id="chatbox">
+      <div *ngFor="let msg of messages" class="msg" [ngClass]="msg.from">
+        <div class="bubble">
+          <p>{{ msg.text }}</p>
+  
+          <ul *ngIf="msg.reply?.options">
+            <li *ngFor="let opt of msg.reply.options; let i = index"
+                (click)="sendOption(opt, i + 1, opt)" [attr.data-idx]="i + 1">
+                {{ opt }}
+            </li>
+          </ul>
+          
+          
+  
+          <small *ngIf="msg.reply?.notemsg">{{ msg.reply.notemsg }}</small>
+  
+          <!-- <div *ngIf="msg.reply?.extra?.ui === 'date'" class="inline">
+            <input type="date" (change)="sendOption($event.target.value)" />
+          </div> -->
+
+            <div *ngIf="msg.reply?.extra?.ui === 'date'" class="inline">
+                <p-datepicker
+                placeholder="Choose a Date" 
+                [minDate]="minDate"
+                [disabledDays]="msg.reply.extra.disabledWeekdays"
+                (onSelect)="sendOption($event)"
+              ></p-datepicker>
+              
+              </div>
+          
+  
+          <div *ngIf="msg.reply?.extra?.patientName">
+            <strong>Patient:</strong> {{ msg.reply.extra.patientName }} <br />
+            <strong>Doctor:</strong> {{ msg.reply.extra.doctorName }} <br />
+            <strong>Department:</strong> {{ msg.reply.extra.department }} <br />
+            <strong>Date:</strong> {{ msg.reply.extra.date }} <br />
+            <strong>Time:</strong> {{ msg.reply.extra.timeslot }} <br />
+            <strong>Phone:</strong> {{ msg.reply.extra.phone }}
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="composer">
+      <input
+        type="text"
+        placeholder="Type here…"
+        [(ngModel)]="inputValue"
+        (keyup.enter)="send()"
+      />
+      <button (click)="send()">Send</button>
+    </div>
+    
+  <!-- Footer -->
+  <div class="chat-footer">
+    Developed by <a href="https://inventionminds.com" target="_blank">Invention Minds</a>
+  </div>
+  </div>
+  

@@ -44,6 +44,8 @@ import { About } from './about/about';
 import { Home } from './home/home';
 import { Package } from './package/package';
 import { ThankyouPage } from './thankyou-page/thankyou-page';
+import { Doctor } from './doctor/doctor';
+import { Chatbot } from './chatbot/chatbot';
 
 export const routes: Routes = [
     {path: 'anesthesiology' , component: Anesthesiology},
@@ -83,8 +85,10 @@ export const routes: Routes = [
     {path:'gallery', component:Gallery},
     {path:'contact', component:Contact},
     {path:'about', component:About},
-    {path:'home', component:Home},
+    {path:'', component:Home},
     {path:'package', component:Package},
     {path:'thankyou', component:ThankyouPage},
+    {path:'doctor/:slug', component: Doctor},
+    {path:'chatbot', component: Chatbot}
 
 ];

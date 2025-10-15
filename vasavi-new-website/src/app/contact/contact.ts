@@ -4,12 +4,14 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink, RouterModule } from '@angular/router';
 
+import { HttpClient } from '@angular/common/http';
+
 
 declare const grecaptcha: any;
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule, ReactiveFormsModule,RouterLink, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, RouterModule],
   templateUrl: './contact.html',
   styleUrl: './contact.css'
 })
@@ -17,45 +19,46 @@ export class Contact {
 
   contactForm!: FormGroup;
   recaptchaResponse: string = '';
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
-  constructor(private titleService: Title, private metaService: Meta, private fb: FormBuilder, private zone: NgZone) { }
+  constructor(private titleService: Title, private metaService: Meta, private fb: FormBuilder, private http: HttpClient) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Contact Vasavi Hospitals Banashankari Bangalore | 24/7 Support');
     this.metaService.updateTag({ name: 'description', content: 'Reach Vasavi Hospitals in Banashankari Bangalore. Book doctor appointments, emergency care, or patient support anytime, 24/7.' }),
 
       this.contactForm = this.fb.group({
-        name: ['', Validators.required],
-        phone: ['', Validators.required],
+        name: ['', [Validators.required, Validators.minLength(2)]],
+        phone: [
+          '',
+          [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]
+        ],
         service: ['', Validators.required],
-        message: ['']
+        message: ['', Validators.required],
       });
 
-    // Define global callback for reCAPTCHA
-    (window as any).onRecaptchaSuccess = (response: string) => {
-      this.zone.run(() => {
-        this.recaptchaResponse = response;
-        console.log('✅ reCAPTCHA verified:', response);
-      });
-    };
-  }
-
-  ngAfterViewInit(): void {
-    // Wait until the reCAPTCHA script is loaded, then render
-    const interval = setInterval(() => {
-      if (typeof grecaptcha !== 'undefined' && grecaptcha.render) {
+    // ✅ Initialize reCAPTCHA
+    setTimeout(() => {
+      if (typeof grecaptcha !== 'undefined') {
         grecaptcha.render('recaptcha-container', {
           sitekey: '6Le0LXAqAAAAAGDRVcwcrAtDUyu81GVurRimvCSW',
-          callback: 'onRecaptchaSuccess'
+          callback: (response: string) => {
+            this.recaptchaResponse = response;
+          },
         });
-        clearInterval(interval);
       }
     }, 500);
   }
 
+
+
+  get f() {
+    return this.contactForm.controls;
+  }
+
   submitForm(): void {
-    if (!this.contactForm.valid) {
-      alert('⚠️ Please fill all required fields.');
+    if (this.contactForm.invalid) {
+      alert('⚠️ Please fill all required fields correctly.');
       return;
     }
 
@@ -64,17 +67,38 @@ export class Contact {
       return;
     }
 
-    const formData = {
-      ...this.contactForm.value,
-      recaptcha: this.recaptchaResponse
+    const formValues = this.contactForm.value;
+
+    // ✅ Construct email parameters
+    const emailParams = {
+      name: formValues.name,
+      email: '',
+      phone: formValues.phone,
+      service: formValues.service,
+      message: formValues.message,
     };
 
-    console.log('✅ Form data ready:', formData);
+    const emailRequest = {
+      to: ['inventionmindsblr@gmail.com'],
+      status: 'Contact-Page',
+      appointmentDetails: emailParams,
+    };
 
-    alert('✅ Thank you for contacting us! We have received your message.');
-    this.contactForm.reset();
-    grecaptcha.reset();
+    console.log('📤 Sending email request:', emailRequest);
+
+    // ✅ Send email request
+    this.http.post(`${this.apiUrl}/email/send-email`, emailRequest).subscribe({
+      next: (res) => {
+        console.log('✅ Email sent successfully:', res);
+        alert('✅ Thank you! Your message has been sent successfully.');
+        this.contactForm.reset();
+        grecaptcha.reset();
+      },
+      error: (err) => {
+        console.error('❌ Error sending email:', err);
+        alert('❌ Failed to send message. Please try again later.');
+      },
+    });
   }
-
 }
 
