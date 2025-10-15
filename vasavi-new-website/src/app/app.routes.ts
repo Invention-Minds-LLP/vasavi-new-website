@@ -43,6 +43,7 @@ import { Contact } from './contact/contact';
 import { About } from './about/about';
 import { Home } from './home/home';
 import { Package } from './package/package';
+import { ThankyouPage } from './thankyou-page/thankyou-page';
 
 export const routes: Routes = [
     {path: 'anesthesiology' , component: Anesthesiology},
@@ -84,5 +85,6 @@ export const routes: Routes = [
     {path:'about', component:About},
     {path:'home', component:Home},
     {path:'package', component:Package},
+    {path:'thankyou', component:ThankyouPage},
 
 ];

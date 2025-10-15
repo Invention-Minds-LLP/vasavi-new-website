@@ -46,6 +46,8 @@ a{
     color: var(--primary);
 }
 
+
+
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link {
         margin-right: 0;

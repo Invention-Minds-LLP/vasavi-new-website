@@ -1,0 +1,13 @@
+.page-header {
+  background: linear-gradient(rgba(59, 60, 66, 0.749), rgba(69, 70, 75, 0.8)), url('/img/Home/opd.jpg') center center no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+a{
+    text-decoration: none;
+}
+
+h1,
+h5{
+    color: white !important;
+}

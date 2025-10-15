@@ -1566,6 +1566,11 @@ h2,
     .conditions_cards_grid {
         grid-template-columns: 1fr;
     }
+
+     .surgery_container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1740,6 +1745,56 @@ h2,
     .conditions_image {
         height: 300px;
     }
+
+     .content p {
+        text-align: center;
+        font-size: 16px !important;
+        font-weight: 400;
+    }
+
+    .image img {
+        width: 300px;
+    }
+
+    .para_style,
+    .box_para {
+        font-size: 14px;
+    }
+
+    .sur_card img {
+        width: 100px;
+        height: auto;
+    }
+
+    .surgery_content,
+    .form-container {
+        width: 100%;
+    }
+
+    .input-wrapper {
+        grid-template-columns: 100%;
+    }
+
+    .form-container {
+        padding: 25px 15px;
+    }
+
+    .content_flex span {
+        font-size: 16px;
+    }
+
+    .faq_grid {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .faq_container {
+        padding: 20px;
+    }
+
+    .sub_heading {
+        font-size: 18px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1808,4 +1863,22 @@ h2,
         margin-top: 10px;
     }
 
+}
+
+@media (max-width : 780px) {
+    .container_1 {
+        flex-direction: column;
+    }
+
+    .treatment_container_1,
+    .treatment_container_2 {
+        flex-wrap: wrap;
+    }
+
+    .surgery_content,
+    .form-container {
+        width: 100%;
+    }
+
+    
 }
