@@ -989,7 +989,9 @@ select {
     background-color: blue;
 } */
 
-h1, h2, .fw-bold {
+h1,
+h2,
+.fw-bold {
     font-weight: 800 !important;
 }
 
@@ -1220,8 +1222,7 @@ h1, h2, .fw-bold {
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: all 0.3s 
-ease;
+    transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -1248,6 +1249,16 @@ ease;
 
     .conditions_cards_grid {
         grid-template-columns: 1fr;
+    }
+
+    .surgery_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .surgery_container {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -1423,9 +1434,39 @@ ease;
     .conditions_image {
         height: 300px;
     }
-}
 
-@media (max-width: 480px) {
+
+    .sur_card img {
+        width: 100px;
+        height: auto;
+    }
+
+    .surgery_content,
+    .form-container {
+        width: 100%;
+    }
+
+    .content_flex span {
+        font-size: 16px;
+    }
+
+    .input-wrapper {
+        grid-template-columns: 100%;
+    }
+
+    .faq_container {
+        padding: 20px;
+    }
+
+    .faq_grid {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .form-container {
+        padding: 25px 15px;
+    }
+
     .conditions_header {
         margin-bottom: 40px;
     }
@@ -1466,6 +1507,7 @@ ease;
     }
 }
 
+
 @media (max-width: 768px) {
     .why_choose_us {
         flex-direction: column;
@@ -1491,9 +1533,46 @@ ease;
         margin-top: 10px;
     }
 
+    .sub_heading {
+        font-size: 18px;
+    }
+
+    .content p {
+        text-align: center;
+        font-size: 16px !important;
+        font-weight: 400;
+    }
+
+    .para_style,
+    .box_para {
+        font-size: 14px;
+    }
+
 }
 
- @media (max-width : 780px) {
-  .container_1 {
-    flex-direction: column;
-  }}
+@media (max-width : 780px) {
+    .container_1 {
+        flex-direction: column;
+    }
+
+    .treatment_container_1,
+    .treatment_container_2 {
+        flex-wrap: wrap;
+    }
+
+    .surgery_content,
+    .form-container {
+        width: 100%;
+    }
+
+    .conditions_cards_grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .faq_container {
+        padding: 20px;
+    }
+
+
+}

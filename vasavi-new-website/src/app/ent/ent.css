@@ -1491,8 +1491,31 @@
          font-size: 12px;
      }
 
+     .content p {
+         text-align: center;
+         font-size: 16px !important;
+         font-weight: 400;
+     }
+
+     .sub_heading {
+         font-size: 18px;
+     }
+
+     .content_flex span {
+         font-size: 16px;
+     }
+
+     .input-wrapper {
+         grid-template-columns: 100%;
+     }
+
      .form-container {
          padding: 25px 15px;
+     }
+
+     .faq_grid {
+         display: grid;
+         grid-template-columns: 100%;
      }
  }
 
@@ -1535,10 +1558,7 @@
      }
 
 
-     .faq_grid {
-         display: grid;
-         grid-template-columns: 100%;
-     }
+
 
 
      .image img {

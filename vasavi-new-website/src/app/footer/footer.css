@@ -64,3 +64,74 @@ a {
 .bg-light {
   background-color: #EEF9FF !important;
 }
+
+/*** Mobile Bottom Nav Bar ***/
+
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  display: flex;
+  padding: 5px 0;
+  box-shadow: 0 -2px 5px -2px #333;
+  background-color: #fff;
+}
+
+.mobile-bottom-nav__item {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-bottom-nav__item a {
+  color: #000 !important;
+  font-size: 11px;
+}
+
+.mobile-bottom-nav__item--active {
+  color: var(--prime-color);
+}
+
+.h300 img {
+  height: 300px;
+}
+
+.mobile-bottom-nav__item-content a i {
+  font-size: 18px;
+  color: var(--prime-color);
+  display: block;
+  margin-bottom: 3px;
+
+}
+
+.mobile-bottom-nav__item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdn {
+  padding: 10px 10px !important;
+  width: 180px;
+}
+
+.mod_head {
+  background: linear-gradient(to right, #0E2A46, #1E8DCC);
+}
+
+.modal-title {
+  color: #fff;
+}
+
+.vrt {
+  vertical-align: middle;
+}
