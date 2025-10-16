@@ -89,7 +89,7 @@ export class Footer implements OnInit {
   }  
 
    showDesigner(): boolean {
-    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent','/nephrology','/obstetrics-gynaecology','/oncology','/orthopedic','/pulmonology','/urology','/robotic-hernia-surgery','/robotic-tkr','/robotic-thr'];
+    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent','/nephrology','/obstetrics-gynaecology','/oncology','/orthopedic','/pulmonology','/urology','/robotic-hernia-surgery','/robotic-tkr','/robotic-thr','/robotic-gallbladder-removal-surgery','/robotic-appendectomy-surgery','/robotic-hysterectomy-surgery'];
     return inventionRoutes.includes(this.router.url);
   }
 }

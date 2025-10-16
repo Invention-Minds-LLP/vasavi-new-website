@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { PackageForm } from "../../package-form/package-form";
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-robotic-tkr',
-  imports: [PackageForm],
+  imports: [PackageForm, RouterModule],
   templateUrl: './robotic-tkr.component.html',
   styleUrl: './robotic-tkr.component.css'
 })
