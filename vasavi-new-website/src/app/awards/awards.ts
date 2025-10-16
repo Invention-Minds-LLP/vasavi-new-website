@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-awards',
-  imports: [],
+  imports: [RouterModule, RouterLink],
   templateUrl: './awards.html',
   styleUrl: './awards.css'
 })

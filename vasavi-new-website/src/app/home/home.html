@@ -240,7 +240,7 @@
             <owl-carousel-o #owlCar [options]="customOptions">
                 <ng-container *ngFor="let item of treatments">
                     <ng-template carouselSlide>
-                        <div class="testimonial">
+                        <div class="testimonial" style="width: 100%; padding: 10px;">
                             <div class="team-item treat-img position-relative">
                                 <img [src]="item.img" [alt]="item.title" />
                                 <div class="team-text bg-white p-4">
@@ -248,6 +248,7 @@
                                     <a [routerLink]="item.link" class="btn btn-primary">Know More</a>
                                 </div>
                             </div>
+
                         </div>
                     </ng-template>
                 </ng-container>

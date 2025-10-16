@@ -24,34 +24,34 @@ export class Home {
   treatments = [
     { img: 'img/Home/Orthopedic.jpg', alt: 'Orthopedics Treatment', title: 'Orthopedics', link: '/orthopedic' },
     { img: 'img/Home/Neurology.jpg', alt: 'Neurology Treatment', title: 'Neurology', link: '/neurology' },
-    { img: 'img/Home/PEDIATRICS.jpeg', alt: 'Pediatrics Treatment', title: 'Pediatrics', link: '/neurology' },
-    { img: 'img/Home/Laser Skin Treatment at Vasavi Hospitals.jpg', alt: 'Dermatology Treatment', title: 'Dermatology', link: '/neurology' },
-    { img: 'img/Home/CARDIOLOGY1.jpg', alt: 'Cardiology Treatment', title: 'Cardiology', link: '/neurology' },
-    { img: 'img/Home/ent6.jpg', alt: 'ENT Treatment', title: 'ENT', link: '/neurology' },
+    { img: 'img/Home/PEDIATRICS.jpeg', alt: 'Pediatrics Treatment', title: 'Pediatrics', link: '/pediatrics' },
+    { img: 'img/Home/Laser Skin Treatment at Vasavi Hospitals.jpg', alt: 'Dermatology Treatment', title: 'Dermatology', link: '/dermatology' },
+    { img: 'img/Home/CARDIOLOGY1.jpg', alt: 'Cardiology Treatment', title: 'Cardiology', link: '/cardiology' },
+    { img: 'img/Home/ent6.jpg', alt: 'ENT Treatment', title: 'ENT', link: '/ent' },
     { img: 'img/Home/Hematology.webp', alt: 'Hematology And BMT Treatment', title: 'Hematology And BMT', link: '/neurology' },
-    { img: 'img/Home/Medical-Oncology.jpg', alt: 'Medical Oncology Treatment', title: 'Medical Oncology', link: '/neurology' },
-    { img: 'img/Home/Ophthalmology.jpg', alt: 'Ophthalmology Treatment', title: 'Ophthalmology', link: '/neurology' },
-    { img: 'img/Home/radiology8.webp', alt: 'Radiology Treatment', title: 'Radiology', link: '/neurology' },
-    { img: 'img/Home/Vascular.webp', alt: 'Vascular Sciences Treatment', title: 'Vascular Sciences', link: '/neurology' },
-    { img: 'img/Home/Bariatric.jpg', alt: 'Bariatric Surgery Treatment', title: 'Bariatric Surgery', link: '/neurology' },
-    { img: 'img/Home/diabetes-glucometer-test.jpg', alt: 'Diabetes & Endocrinology Treatment', title: 'Diabetes & Endocrinology', link: '/neurology' },
-    { img: 'img/Home/vasavi-hospitals-internal-medicine-organs-overview.jpg', alt: 'Internal Medicine Treatment', title: 'Internal Medicine', link: '/neurology' },
-    { img: 'img/Home/Neurosurgery.jpg', alt: 'Neurosurgery Treatment', title: 'Neurosurgery', link: '/neurology' },
-    { img: 'img/Home/Minimally.jpg', alt: 'Minimally Invasive Surgery Treatment', title: 'Minimally Invasive Surgery', link: '/neurology' },
-    { img: 'img/Home/vasavi-hospitals-bangalore-oral-maxillofacial-surgery.png', alt: 'Oral & Maxillofacial Surgery Treatment', title: 'Oral & Maxillofacial Surgery', link: '/neurology' },
-    { img: 'img/Home/vasavi-hospitals-bangalore-gastroenterology-stomach-model.webp', alt: 'Surgical Gastroenterology Treatment', title: 'Surgical Gastroenterology', link: '/neurology' },
-    { img: 'img/Home/Emergency2.webp', alt: 'Emergency & Critical Care Treatment', title: 'Emergency & Critical Care', link: '/neurology' },
-    { img: 'img/Home/liver-hpb-doctor-hologram.png', alt: 'Liver And HPB Care Treatment', title: 'Liver And HPB Care', link: '/neurology' },
-    { img: 'img/Home/nicu-premature-baby-care-vasavi-hospitals.jpg', alt: 'Neonatology - (Level – 3 NICU) Treatment', title: 'Neonatology - (Level – 3 NICU)', link: '/neurology' },
-    { img: 'img/Home/doctor-nutrition-diet-consultation.jpg', alt: 'Nutrition & Dietetics Treatment', title: 'Nutrition & Dietetics', link: '/neurology' },
-    { img: 'img/Home/psychiatry1.jpg', alt: 'Psychiatry Treatment', title: 'Psychiatry', link: '/neurology' },
-    { img: 'img/Home/vasavi-hospitals-bangalore-surgical-oncology-blue-ribbon.png', alt: 'Surgical Oncology Treatment', title: 'Surgical Oncology', link: '/neurology' },
-    { img: 'img/Home/vasavi-dentistry-digital-care.jpg', alt: 'Dentistry Treatment', title: 'Dentistry', link: '/neurology' },
-    { img: 'img/Home/Medical Gastroenterology.webp', alt: 'Medical Gastroenterology Treatment', title: 'Medical Gastroenterology', link: '/neurology' },
-    { img: 'img/Home/Nephrology1.jpg', alt: 'Nephrology Treatment', title: 'Nephrology', link: '/neurology' },
-    { img: 'img/Home/Obstetrics1.jpg', alt: 'Obstetrics & Gynaecology Treatment', title: 'Obstetrics & Gynaecology', link: '/neurology' },
-    { img: 'img/Home/Pulmonology2.jpg', alt: 'Pulmonology Treatment', title: 'Pulmonology', link: '/neurology' },
-    { img: 'img/Home/Urology1.jpeg', alt: 'Urology Treatment', title: 'Urology', link: '/neurology' },
+    { img: 'img/Home/Medical-Oncology.jpg', alt: 'Medical Oncology Treatment', title: 'Medical Oncology', link: '/medical-oncology' },
+    { img: 'img/Home/Ophthalmology.jpg', alt: 'Ophthalmology Treatment', title: 'Ophthalmology', link: '/opthalmology' },
+    { img: 'img/Home/radiology8.webp', alt: 'Radiology Treatment', title: 'Radiology', link: '/radiology' },
+    { img: 'img/Home/Vascular.webp', alt: 'Vascular Sciences Treatment', title: 'Vascular Sciences', link: '/vascular-science' },
+    { img: 'img/Home/Bariatric.jpg', alt: 'Bariatric Surgery Treatment', title: 'Bariatric Surgery', link: '/bariatric-surgery' },
+    { img: 'img/Home/diabetes-glucometer-test.jpg', alt: 'Diabetes & Endocrinology Treatment', title: 'Diabetes & Endocrinology', link: '/diabetes-endocrinology' },
+    { img: 'img/Home/vasavi-hospitals-internal-medicine-organs-overview.jpg', alt: 'Internal Medicine Treatment', title: 'Internal Medicine', link: '/internal-medicine' },
+    { img: 'img/Home/Neurosurgery.jpg', alt: 'Neurosurgery Treatment', title: 'Neurosurgery', link: '/neurosurgery' },
+    { img: 'img/Home/Minimally.jpg', alt: 'Minimally Invasive Surgery Treatment', title: 'Minimally Invasive Surgery', link: '/minimally-invasive-surgery' },
+    { img: 'img/Home/vasavi-hospitals-bangalore-oral-maxillofacial-surgery.png', alt: 'Oral & Maxillofacial Surgery Treatment', title: 'Oral & Maxillofacial Surgery', link: '/oral-maxillofacial-surgery' },
+    { img: 'img/Home/vasavi-hospitals-bangalore-gastroenterology-stomach-model.webp', alt: 'Surgical Gastroenterology Treatment', title: 'Surgical Gastroenterology', link: '/surgical-gastroenterology' },
+    { img: 'img/Home/Emergency2.webp', alt: 'Emergency & Critical Care Treatment', title: 'Emergency & Critical Care', link: '/emergency-critical-care' },
+    { img: 'img/Home/liver-hpb-doctor-hologram.png', alt: 'Liver And HPB Care Treatment', title: 'Liver And HPB Care', link: '/liver-hpb-care' },
+    { img: 'img/Home/nicu-premature-baby-care-vasavi-hospitals.jpg', alt: 'Neonatology - (Level – 3 NICU) Treatment', title: 'Neonatology - (Level – 3 NICU)', link: '/neonatology' },
+    { img: 'img/Home/doctor-nutrition-diet-consultation.jpg', alt: 'Nutrition & Dietetics Treatment', title: 'Nutrition & Dietetics', link: '/nutrition-dietetics' },
+    { img: 'img/Home/psychiatry1.jpg', alt: 'Psychiatry Treatment', title: 'Psychiatry', link: '/psychiatry' },
+    { img: 'img/Home/vasavi-hospitals-bangalore-surgical-oncology-blue-ribbon.png', alt: 'Surgical Oncology Treatment', title: 'Surgical Oncology', link: '/surgical-oncology' },
+    { img: 'img/Home/vasavi-dentistry-digital-care.jpg', alt: 'Dentistry Treatment', title: 'Dentistry', link: '/dentistry' },
+    { img: 'img/Home/Medical Gastroenterology.webp', alt: 'Medical Gastroenterology Treatment', title: 'Medical Gastroenterology', link: '/medical-gastroenterology' },
+    { img: 'img/Home/Nephrology1.jpg', alt: 'Nephrology Treatment', title: 'Nephrology', link: '/nephrology' },
+    { img: 'img/Home/Obstetrics1.jpg', alt: 'Obstetrics & Gynaecology Treatment', title: 'Obstetrics & Gynaecology', link: '/obstetrics-gynaecology' },
+    { img: 'img/Home/Pulmonology2.jpg', alt: 'Pulmonology Treatment', title: 'Pulmonology', link: '/pulmonology' },
+    { img: 'img/Home/Urology1.jpeg', alt: 'Urology Treatment', title: 'Urology', link: '/urology' },
 
 
   ];
@@ -64,9 +64,9 @@ export class Home {
       text: `Excellent experience from doctors, nurses, front office staff, admission and insurance desk and ward staff.
                             Experienced doctors who are very confident and efficient in their work and answer all queries satisfactorily and in detail.
                             Nurses and ward members are very caring and sweet spoken.
-                            <br>
+                            
 
-                            Admission coordinators, especially Sneha and Madhuri are very supportive and helpful. <br>
+                            Admission coordinators, especially Sneha and Madhuri are very supportive and helpful. 
                             Overall much better experience than the other big names in the area like Fortis and Apollo hospitals.`,
     },
     {
@@ -117,7 +117,7 @@ export class Home {
       name: 'Murali K G',
       img: 'img/icon/boy-person.png',
       text: ` Very Good hospital with human touch. We are really satisfied with the way Dr. BALARAJ -CARDIOLOGIST 
-                         handled our treatment. <br>Thank you so much!!`,
+                         handled our treatment. Thank you so much!!`,
     },
     {
       name: 'Rekha Chandramurthy',
@@ -145,12 +145,12 @@ export class Home {
     responsive: {
       0: { items: 1 },
       600: { items: 2 },
-      1000: { items: 4 }
+      1000: { items: 3 }
     }
   };
 
   customOptions2: OwlOptions = {
-    loop: true,
+    loop: false,
     margin: 10,
     nav: false,
     dots: true,
@@ -190,7 +190,7 @@ export class Home {
 
     // speeds
     const fastSpeed = 1500; // faster when going forward
-    const slowSpeed = 3000; // slower when going backward
+    const slowSpeed = 100; // slower when going backward
     const interval = this.direction === 'forward' ? fastSpeed : slowSpeed;
 
     this[intervalRef] = setInterval(() => {
