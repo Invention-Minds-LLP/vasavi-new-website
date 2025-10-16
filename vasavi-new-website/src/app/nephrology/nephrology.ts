@@ -64,10 +64,10 @@ export class Nephrology {
       message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Best Neurology Hospital in Banashankari Bangalore | Vasavi Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.'
+      content: 'Vasavi Hospitals in Banashankari Bangalore provides expert neurology care for brain, spine, and nervous system disorders.'
     });
   }
 

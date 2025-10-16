@@ -66,10 +66,10 @@ export class Ent {
       message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Best ENT Hospital in Banashankari Bangalore | Vasavi Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.'
+      content: 'Advanced ENT care at Vasavi Hospitals in Banashankari Bangalore. Expert doctors for ear, nose, throat, and sinus treatments.'
     });
   }
 

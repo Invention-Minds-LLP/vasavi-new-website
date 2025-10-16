@@ -390,6 +390,7 @@ boby {
     /* bottom: 0; */
     top: 102%;
     margin-top: -90px;
+    cursor:pointer
 }
 
 .book-btn:hover {

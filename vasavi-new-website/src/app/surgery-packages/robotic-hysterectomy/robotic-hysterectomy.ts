@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { PackageForm } from "../../package-form/package-form";
+
 
 @Component({
   selector: 'app-robotic-hysterectomy',
-  imports: [],
+  imports: [PackageForm],
   templateUrl: './robotic-hysterectomy.html',
   styleUrl: './robotic-hysterectomy.css'
 })

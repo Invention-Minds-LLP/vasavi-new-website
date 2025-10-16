@@ -67,10 +67,10 @@ export class Cardiology {
       message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Best Cardiology Hospital in Banashankari Bangalore | Vasavi Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.'
+      content: 'Leading heart hospital in Banashankari Bangalore with Cath Lab, experienced cardiologists, and 24/7 emergency cardiac care.'
     });
   }
 
