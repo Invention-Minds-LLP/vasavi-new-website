@@ -46,9 +46,9 @@ import { Package } from './package/package';
 import { ThankyouPage } from './thankyou-page/thankyou-page';
 import { Doctor } from './doctor/doctor';
 import { Chatbot } from './chatbot/chatbot';
-import { RoboticHerniaComponent } from './robotic-hernia/robotic-hernia.component';
-import { RoboticTkrComponent } from './robotic-tkr/robotic-tkr.component';
-import { RoboticThrComponent } from './robotic-thr/robotic-thr.component';
+import { RoboticHerniaComponent } from './surgery-packages/robotic-hernia/robotic-hernia.component';
+import { RoboticTkrComponent } from './surgery-packages/robotic-tkr/robotic-tkr.component';
+import { RoboticThrComponent } from './surgery-packages/robotic-thr/robotic-thr.component';
 
 export const routes: Routes = [
     {path: 'anesthesiology' , component: Anesthesiology},

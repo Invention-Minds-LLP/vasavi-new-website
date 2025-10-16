@@ -5,7 +5,7 @@
             alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
         <img src="img/packages/Robotic Total hip mobile size.png" class="mobile_banner"
             alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <a class="book-btn">Book an Appointment</a>
+        <a class="book-btn" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</a>
     </div>
 
 
@@ -63,9 +63,101 @@
         </div>
 
         <div class="btn_section">
-            <button class="cta_2"> Book Your Surgery Package Now</button>
+            <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')"> Book Your Surgery Package
+                Now</button>
         </div>
     </div>
+
+    <!-- robotic-hip section (Mako) -->
+    <div class="container_2" id="robotic-hip">
+        <div class="cathlab_section">
+            <div class="cathlab_container">
+                <div class="cathlab_content">
+                    <h2 class="cathlab_main_title">Robotic Total Hip Replacement with Mako Technology</h2>
+                    <p class="cathlab_intro_text">
+                        Vasavi Hospitals is among the few centers in Banashankari, Bangalore, performing
+                        <strong>Robotic Total Hip Replacement using Mako technology</strong>. This advanced system
+                        enhances the
+                        precision of every movement, ensuring better alignment, stability, and comfort for patients
+                        undergoing hip
+                        replacement surgery.
+                    </p>
+
+                    <h3 class="cathlab_sub_title">
+                        Why Choose Mako Robotic Hip Replacement at Vasavi Hospitals, Banashankari, Bangalore?
+                    </h3>
+
+                    <div class="cathlab_features">
+                        <!-- card-1 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Enhanced Surgical Precision</h4>
+                                <p class="cathlab_feature_desc">
+                                    Mako’s robotic guidance allows exact implant placement, improving hip joint balance,
+                                    alignment, and long-term stability.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-2 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Personalized Surgical Planning</h4>
+                                <p class="cathlab_feature_desc">
+                                    Each procedure is planned using a 3D CT scan that creates a patient-specific model
+                                    for precise customization.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-3 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-hand-holding-medical"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Minimal Pain & Faster Recovery</h4>
+                                <p class="cathlab_feature_desc">
+                                    Robotic precision reduces muscle disruption, resulting in smaller incisions, less
+                                    pain, and quicker rehabilitation.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-4 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-walking"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Natural Movement & Long-Term Comfort</h4>
+                                <p class="cathlab_feature_desc">
+                                    Patients enjoy smoother motion, improved balance, and durable results that restore
+                                    everyday mobility with confidence.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt" style="margin-top: 30px;">
+                        <p class="cathlab_intro_text">
+                            With <strong>Mako Robotic Hip Replacement</strong> in Banashankari, Bangalore, Vasavi
+                            Hospitals brings
+                            world-class orthopedic innovation — combining accuracy, safety, and faster recovery for
+                            lasting mobility and comfort.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- section 4 -->
     <div class="container_2">
@@ -176,10 +268,13 @@
             <p class="para">Walk with confidence. Sit with ease. Sleep without pain. At Vasavi Hospitals, our Robotic
                 Hip Replacement Surgery helps you move naturally and live fully again.</p>
             <div class="cta_flex">
-                <button class="cta_2">Book an Appointment</button>
+                <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</button>
                 <a href="tel:08071500500" class="cta_call_2">Call Now</a>
             </div>
         </div>
     </div>
 
+    <div class="pop-up-form">
+        <app-package-form [showModal]="showPopup" [planName]="selectedPlan" (closed)="onModalClosed()" />
+    </div>
 </div>

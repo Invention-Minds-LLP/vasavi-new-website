@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Meta, Title } from '@angular/platform-browser';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-package-form',
-  imports: [RouterLink, RouterModule, ReactiveFormsModule, CommonModule, HttpClientModule],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, HttpClientModule],
   templateUrl: './package-form.html',
   styleUrl: './package-form.css'
 })
-export class PackageForm {
+export class PackageForm implements OnInit {
+  @Input() showModal = false;
+  @Input() planName = '';
+  @Output() closed = new EventEmitter<void>(); // <-- parent listener
+
   appointmentForm!: FormGroup;
   submitted = false;
   successMsg = '';
@@ -20,33 +23,32 @@ export class PackageForm {
 
   apiUrl = 'http://localhost:3000/api';
 
-  constructor(
-    private fb: FormBuilder,
-    private titleService: Title,
-    private metaService: Meta,
-    private http: HttpClient
-  ) {}
+  constructor(private fb: FormBuilder, private http: HttpClient) {}
 
   ngOnInit(): void {
     this.appointmentForm = this.fb.group({
-      plan: ['', Validators.required],
+      plan: [this.planName, Validators.required],
       name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]*$/), Validators.minLength(2)]],
       phone: ['', [Validators.required, Validators.pattern(/^[6-9][0-9]{9}$/)]],
       email: ['', [Validators.required, Validators.email]],
       date: ['', Validators.required],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
+  }
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
-    this.metaService.updateTag({
-      name: 'description',
-      content:
-        'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.',
-    });
+  ngOnChanges(): void {
+    if (this.appointmentForm && this.planName) {
+      this.appointmentForm.patchValue({ plan: this.planName });
+    }
   }
 
   get f() {
     return this.appointmentForm.controls;
+  }
+
+  closeModal() {
+    this.showModal = false;
+    this.closed.emit(); // <-- notify parent to reset flag
   }
 
   submitForm(): void {
@@ -61,42 +63,23 @@ export class PackageForm {
 
     this.isLoading = true;
 
-    const formValues = this.appointmentForm.value;
-    const emailParams = {
-      packageName: formValues.plan,
-      name: formValues.name,
-      email: formValues.email,
-      phone: formValues.phone,
-      date: formValues.date,
-      service: formValues.service,
-      message: formValues.message,
-    };
-
     const emailRequest = {
       to: ['inventionmindsblr@gmail.com'],
       status: 'Package-Enquiry',
-      appointmentDetails: emailParams,
+      appointmentDetails: this.appointmentForm.value,
     };
 
-    console.log('📤 Sending email request:', emailRequest);
-
     this.http.post(`${this.apiUrl}/email/send-pages-email`, emailRequest).subscribe({
-      next: (res: any) => {
-        console.log('✅ Email sent successfully:', res);
+      next: () => {
         this.successMsg = '✅ Thank you! Your enquiry has been sent successfully.';
         this.isLoading = false;
         this.appointmentForm.reset();
         this.submitted = false;
 
-        // Optional: Auto-close modal
-        const modal = document.getElementById('enquire');
-        if (modal) {
-          const bsModal = (window as any).bootstrap.Modal.getInstance(modal);
-          bsModal?.hide();
-        }
+        // close after short delay
+        setTimeout(() => this.closeModal(), 2000);
       },
-      error: (err: any) => {
-        console.error('❌ Error sending email:', err);
+      error: () => {
         this.errorMsg = '❌ Failed to send message. Please try again later.';
         this.isLoading = false;
       },
