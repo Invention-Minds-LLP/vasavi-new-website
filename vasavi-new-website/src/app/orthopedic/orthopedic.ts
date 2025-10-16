@@ -66,10 +66,10 @@ export class Orthopedic {
       message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Best Orthopedic Hospital in Banashankari Bangalore | Vasavi Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.'
+      content: 'Advanced orthopedic care at Vasavi Hospitals in Banashankari Bangalore. Joint replacement, bone care, and robotic knee surgery.'
     });
   }
 

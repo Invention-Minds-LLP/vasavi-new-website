@@ -65,10 +65,10 @@ export class Urology {
       message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Best Urology Hospital in Banashankari Bangalore | Vasavi Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.'
+      content: 'Vasavi Hospitals in Banashankari Bangalore offers expert urology treatments for kidney stones, bladder, and prostate health.'
     });
   }
 
