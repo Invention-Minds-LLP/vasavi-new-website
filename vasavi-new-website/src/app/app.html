@@ -1,6 +1,8 @@
 <div class="">
     <app-navbar></app-navbar>
     <router-outlet></router-outlet>
+    <app-popup *ngIf="showPopup" (close)="closePopup()"></app-popup>
+
     <!-- <app-robotic-thr/> -->
     <app-footer></app-footer>
   </div>
@@ -26,3 +28,15 @@
     <i class="bi bi-whatsapp"></i>
   </a>
   
+
+  <!-- image pop-ups -->
+<!-- <app-popup *ngIf="showPopup" /> -->
+
+<div class="image-popup" id="imagePopup" *ngIf="showPopup">
+  <div class="image-popup-content">
+    <span class="image-popup-close" (click)="closePopup()">
+      <i class="fas fa-times"></i>
+    </span>
+    <img src="img/vasavi-diabetic-package-pop-up.jpeg" alt="Pop up">
+  </div>
+</div>

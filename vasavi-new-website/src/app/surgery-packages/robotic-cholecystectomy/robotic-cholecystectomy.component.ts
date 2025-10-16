@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { PackageForm } from "../../package-form/package-form";
+import { RouterModule } from '@angular/router';
+
 
 @Component({
   selector: 'app-robotic-cholecystectomy',
-  imports: [PackageForm],
+  imports: [PackageForm, RouterModule],
   templateUrl: './robotic-cholecystectomy.component.html',
   styleUrl: './robotic-cholecystectomy.component.css'
 })

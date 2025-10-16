@@ -6,9 +6,10 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms'
 import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-obstetrics-gynaecology',
-  imports: [CommonModule, Cta, ReactiveFormsModule],
+  imports: [CommonModule, Cta, ReactiveFormsModule, RouterModule],
   templateUrl: './obstetrics-gynaecology.html',
   styleUrl: './obstetrics-gynaecology.css'
 })

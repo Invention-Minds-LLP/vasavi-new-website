@@ -9,15 +9,15 @@
 
         <!-- Doctor Details -->
         <div class="doc_content">
-            <div class="doc_name">{{filteredDoctor.name}}</div>
-            <div class="department">{{filteredDoctor.department}}</div>
+            <div class="doc_name">{{filteredDoctor?.name}}</div>
+            <div class="department">{{filteredDoctor?.department}}</div>
             <div class="qualification">
-                {{filteredDoctor.qualification}}
+                {{filteredDoctor?.qualification}}
             </div>
             <div class="doc_designation">
-                {{filteredDoctor.designation}}
+                {{filteredDoctor?.designation}}
             </div>
-            <div class="experience">{{filteredDoctor.experience}}Years of Experience
+            <div class="experience">{{filteredDoctor?.experience}}Years of Experience
             </div>
 
             <div class="cta_buttons">
@@ -34,19 +34,19 @@
                 Doctor Image<br>Placeholder
             </div> -->
             <div class="doctor_img">
-                <img [src]="filteredDoctor.image"
-                    [alt]="filteredDoctor.alt"/>
+                <img [src]="filteredDoctor?.image"
+                    [alt]="filteredDoctor?.alt"/>
             </div>
         </div>
     </div>
 
-    <div *ngIf="filteredDoctor.briefProfile">
+    <div *ngIf="filteredDoctor?.briefProfile">
         <div class="about-section" id="about">
             <div class="container">
                 <div class="about-content">
                     <h2 class="about-title">Profile Summary</h2>
                     <p class="about-description">
-                       {{filteredDoctor.briefProfile}}
+                       {{filteredDoctor?.briefProfile}}
                     </p>
                 </div>
             </div>
@@ -58,7 +58,7 @@
         <h2 class="expertise-title">Areas of Expertise</h2>
         <div class="expertise-wrapper" *ngIf="filteredDoctor?.areasOfExpertise?.length">
       
-          <div class="expertise-row" *ngFor="let row of getExpertiseRows(filteredDoctor.areasOfExpertise)">
+          <div class="expertise-row" *ngFor="let row of getExpertiseRows(filteredDoctor?.areasOfExpertise)">
             <div class="expertise-left">
               <p class="expertise-text" *ngIf="row.left">{{ row.left.expertise }}</p>
             </div>
@@ -81,7 +81,7 @@
       <div class="affiliations-section" *ngIf="filteredDoctor?.professionalAffilications?.length">
         <h2 class="affiliations-title">Professional Affiliations</h2>
         <div class="affiliations-container">
-          <div class="affiliation-card" *ngFor="let aff of filteredDoctor.professionalAffilications">
+          <div class="affiliation-card" *ngFor="let aff of filteredDoctor?.professionalAffilications">
             <div class="affiliation-logo">
               <ng-container *ngIf="aff.image; else iconBlock">
                 <img [src]="aff.image" [alt]="aff.paHeading" />
@@ -110,10 +110,10 @@
           </div>
       
           <div class="awards-carousel">
-            <div class="awards-track" [ngClass]="{'scrolling': filteredDoctor.awards.length > 2}">
+            <div class="awards-track" [ngClass]="{'scrolling': filteredDoctor?.awards.length > 2}">
               <div
                 class="award-card"
-                *ngFor="let award of filteredDoctor.awards.concat(filteredDoctor.awards.length > 2 ? filteredDoctor.awards : [])"
+                *ngFor="let award of filteredDoctor.awards.concat(filteredDoctor?.awards.length > 2 ? filteredDoctor.awards : [])"
                 [ngClass]="award.cardColorClass"
               >
                 <h4>{{ award.awardFor }}</h4>
@@ -131,7 +131,7 @@
         <div class="container">
           <h2 class="publications-title">Publications</h2>
           <ul class="publications-list">
-            <li class="publication-item" *ngFor="let publication of filteredDoctor.publications; let i = index">
+            <li class="publication-item" *ngFor="let publication of filteredDoctor?.publications; let i = index">
               <span class="pub-number">{{ i + 1 }}.</span>
               <span class="pub-text">
                 {{ publication?.title || publication }}
@@ -236,7 +236,7 @@
               <div class="input-wrapper">
                 <p-datepicker  [minDate]="minDate" 
                 placeholder="Choose a Date" inputId="icondisplay" name="date_appointment"
-                formControlName="date_appointment" [disabledDays]="disabledDays"
+                formControlName="date_appointment"
                 (onSelect)="onDateChange($event)" appendTo="body">
                 <ng-template pTemplate="date" let-date>
                     <span>
@@ -255,7 +255,6 @@
                     [options]="availableTimes"
                     optionLabel="name"
                     placeholder="Select a time slot"
-                    [disabled]="!availableTimes?.length"
                     required
                     appendTo="body"
                     styleClass="w-100"

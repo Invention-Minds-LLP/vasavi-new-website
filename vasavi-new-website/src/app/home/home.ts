@@ -4,11 +4,12 @@ import { RouterLink, RouterModule } from '@angular/router';
 import { CarouselComponent, CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { Cta } from "../cta/cta";
 import * as bootstrap from 'bootstrap';
+import { Popup } from "../popup/popup";
 
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule, CommonModule, RouterLink, RouterModule, Cta],
+  imports: [CarouselModule, CommonModule, RouterLink, RouterModule, Cta, Popup],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -189,8 +190,8 @@ export class Home {
     if (this[intervalRef]) clearInterval(this[intervalRef]);
 
     // speeds
-    const fastSpeed = 1500; // faster when going forward
-    const slowSpeed = 100; // slower when going backward
+    const fastSpeed = 2000; // faster when going forward
+    const slowSpeed = 10; // slower when going backward
     const interval = this.direction === 'forward' ? fastSpeed : slowSpeed;
 
     this[intervalRef] = setInterval(() => {
@@ -244,4 +245,5 @@ export class Home {
       }
     }, this.modalDelay);
   }
+  
 }

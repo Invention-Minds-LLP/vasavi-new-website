@@ -356,6 +356,43 @@ boby{
     box-shadow: 10px 10px 35px rgba(128, 128, 128, 0.786);
 }
 
+.hero-section {
+    position: relative;
+    width: 100%;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.mobile_banner {
+    display: none;
+}
+
+.book-btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 10;
+    left: 62%;
+    top: 109%;
+    margin-top: -90px;
+}
+
+.book-btn:hover {
+    background: #007bff;
+    color: #fff;
+}
+
 
 @media(max-width: 800px){
     .container_flex{
@@ -400,5 +437,35 @@ boby{
 
     .cta_2, .cta_call_2{
         font-size: 12px;
+    }
+
+     .mobile_banner {
+        display: block;
+    }
+
+    .desktop_banner {
+        display: none;
+    }
+}
+
+@media(max-width:1024px) {
+    .book-btn {
+        left: 63%;
+        top: 109%;
+    }
+}
+@media(max-width:768px) {
+   .book-btn {
+        left: 13%;
+        top: 117%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
+@media(max-width:480px) {
+   .book-btn {
+        left: 24%;
+        top: 108%;
+        font-size: 14px;
     }
 }

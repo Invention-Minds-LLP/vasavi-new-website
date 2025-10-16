@@ -1,6 +1,13 @@
 <div class="root-container">
     <!-- hero section -->
-
+    <!-- hero section -->
+    <div class="hero-section">
+        <img src="img/packages/Vasavi - 16-10-25 -Robotic Gallbladder  16-10-25 -.png" class="desktop_banner"
+            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+        <img src="img/packages/Vasavi  -robotic Gallbladder - mobile size  16-10-25.png" class="mobile_banner"
+            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+        <a class="book-btn" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</a>
+    </div>
 
 
     <!-- section 2 -->
@@ -20,7 +27,7 @@
             </div>
 
             <div class="container_image">
-                <img src="img/go/female-reproductive-system-illustration.png" alt="">
+                <img src="img/packages/gall-bladder-removal.jpg" alt="">
             </div>
         </div>
     </div>
@@ -52,7 +59,7 @@
                 <p class="card_para">Most patients go home within 24 hours.</p>
             </div>
             <div class="card">
-                <div class="card_heading">Experienced Laparoscopic & Robotic Surgeons</div>
+                <div class="card_heading">Experienced Robotic Surgeons</div>
                 <p class="card_para">Specialists trained in complex hepatobiliary and gallbladder surgeries.</p>
             </div>
             <div class="card">
@@ -165,35 +172,34 @@
             <h2 class="heading text-center">Meet Our Expert Orthopedic Specialists</h2>
             <p class="para_style doc_sec_para">Your recovery starts with an expert team you can trust.</p>
             <p class="para_style doc_sec_para">Our surgeons at Vasavi Hospitals have years of experience performing
-                laparoscopic and robotic cholecystectomies, ensuring every procedure is safe, precise, and
+                robotic cholecystectomies, ensuring every procedure is safe, precise, and
                 patient-focused.</p>
 
             <div class="doctors-container">
                 <!-- Doctor 1 -->
                 <div class="doctor-card">
                     <div class="doctor-image">
-                        <img src="img/new-doctor-image/dr-srivatsa-subramanya-spec.png" alt="">
+                        <img src="img/Doctor-img/MINIMALLY INVASIVE SURGERY/Dr.Ramesh T S.jpg" alt="">
                     </div>
-                    <h3 class="doctor-name">Dr. Srivatsa Subramanya</h3>
+                    <h3 class="doctor-name" style="margin-top: 40px;">Dr. Ramesh T S</h3>
                     <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
-                    <p class="qualification">MBBS, MS (Ortho); DNB (Ortho); fellowship in knee (Australia) fellowship in
-                        shoulder (Australia, Italy), fellowship in Orthopaedic trauma (S.Korea)</p>
-                    <p class="doctor-experience">17+ Years of Experience</p>
+                    <p class="qualification">MBBS, DNB, MRCS.Ed(U.K), FMAS, FAIS</p>
+                    <!-- <p class="doctor-experience">17+ Years of Experience</p> -->
                     <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-                    <a class="appointment-btn" href="/doctor-profile.php?slug=dr-srivatsa-subramanya">Book
-                        Appointment</a>
+                    <!-- <a class="appointment-btn" href="/doctor-profile.php?slug=dr-srivatsa-subramanya">Book
+                        Appointment</a> -->
                 </div>
 
                 <div class="doctor-card">
                     <div class="doctor-image">
-                        <img src="img/new-doctor-image/dr-venkatesh-rathod-spec.png" alt="">
+                        <img src="img/new-doctor-image/dr-mutharaju-k-r-sq.png" alt="">
                     </div>
-                    <h3 class="doctor-name">Dr. Venkatesh Rathod R</h3>
+                    <h3 class="doctor-name">Dr. Mutharaju K. R</h3>
                     <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
-                    <p class="qualification">MBBS, Dortho, DNB ortho</p>
-                    <p class="doctor-experience">11+ Years of Experience</p>
+                    <p class="qualification">MBBS, MS, FMBS (Fellow in Bariatric & Metabolic Surgery)</p>
+                    <p class="doctor-experience">23+ Years Experience</p>
                     <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-                    <a class="appointment-btn" href="/doctor-profile.php?slug=dr-venkatesh-rathod-r">Book
+                    <a class="appointment-btn" [routerLink]="'/doctors/dr-mutharaju-k-r'">Book
                         Appointment</a>
                 </div>
             </div>
@@ -210,10 +216,10 @@
 
         <div class="why_vasavi_flex">
             <div class="content">
-                <h3 class="why_vasavi_heading">Advanced Facilities & Expert Ortho Team</h3>
+                <h3 class="why_vasavi_heading">Advanced Facilities & Expert Team</h3>
                 <p class="para">Our operation theatres are equipped for precision-driven robotic surgeries.</p>
                 <ul>
-                    <li class="para">Dedicated operation theatres for robotic and laparoscopic procedures.</li>
+                    <li class="para">Dedicated operation theatres for robotic Surgery procedures.</li>
                     <li class="para">Surgeons trained in advanced hepatobiliary and robotic techniques.</li>
                     <li class="para">Safer anesthesia, faster discharge, and complete post-surgery support.</li>
                     <li class="para">Dedicated recovery and physiotherapy units for seamless healing.</li>
@@ -231,7 +237,7 @@
             </div>
             <div class="content">
                 <h3 class="why_vasavi_heading">Insurance & Affordable Packages</h3>
-                <p class="para">We make world-class orthopedic care accessible and worry-free.</p>
+                <p class="para">We make world-class care accessible and worry-free.</p>
                 <ul>
                     <li class="para">Cashless Treatment Facility with leading health insurance providers.</li>
                     <li class="para">Dedicated Insurance Desk for easy claim and approval handling.</li>
@@ -268,7 +274,7 @@
                 and moment without pain.</p>
             <div class="cta_flex">
                 <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</button>
-                <a href="tel:08071500500" class="cta_call_2">Call Now</a>
+                <a href="tel:8884545086" class="cta_call_2">Call Now</a>
             </div>
         </div>
     </div>

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { PackageForm } from "../../package-form/package-form";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-robotic-hernia',
-  imports: [PackageForm],
+  imports: [PackageForm, RouterModule],
   templateUrl: './robotic-hernia.component.html',
   styleUrl: './robotic-hernia.component.css'
 })
