@@ -46,6 +46,9 @@ import { Package } from './package/package';
 import { ThankyouPage } from './thankyou-page/thankyou-page';
 import { Doctor } from './doctor/doctor';
 import { Chatbot } from './chatbot/chatbot';
+import { RoboticHerniaComponent } from './robotic-hernia/robotic-hernia.component';
+import { RoboticTkrComponent } from './robotic-tkr/robotic-tkr.component';
+import { RoboticThrComponent } from './robotic-thr/robotic-thr.component';
 
 export const routes: Routes = [
     {path: 'anesthesiology' , component: Anesthesiology},
@@ -89,6 +92,10 @@ export const routes: Routes = [
     {path:'package', component:Package},
     {path:'thankyou', component:ThankyouPage},
     {path:'doctor/:slug', component: Doctor},
-    {path:'chatbot', component: Chatbot}
+    {path:'chatbot', component: Chatbot},
+    {path: 'robotic-hernia-surgery', component: RoboticHerniaComponent},
+    {path: 'robotic-tkr', component: RoboticTkrComponent},
+    {path: 'robotic-thr', component: RoboticThrComponent},
+     { path: '**', redirectTo: '' },
 
 ];
