@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class RoboticHysterectomy {
 
+    showPopup = false;
+  selectedPlan = '';
+
+  openPopup(plan: string) {
+    this.selectedPlan = plan;
+    this.showPopup = true;
+  }
+
+  onModalClosed() {
+    this.showPopup = false; // resets for next click
+  }
 }

@@ -5,10 +5,12 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
+import { InsuranceSection } from "../insurance-section/insurance-section";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-bariatricsurgery',
-  imports: [CommonModule, Cta, ReactiveFormsModule  ],
+  imports: [CommonModule, Cta, ReactiveFormsModule, InsuranceSection, RouterModule],
   templateUrl: './bariatricsurgery.html',
   styleUrl: './bariatricsurgery.css'
 })

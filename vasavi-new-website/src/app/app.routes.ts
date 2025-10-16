@@ -49,6 +49,9 @@ import { Chatbot } from './chatbot/chatbot';
 import { RoboticHerniaComponent } from './surgery-packages/robotic-hernia/robotic-hernia.component';
 import { RoboticTkrComponent } from './surgery-packages/robotic-tkr/robotic-tkr.component';
 import { RoboticThrComponent } from './surgery-packages/robotic-thr/robotic-thr.component';
+import { RoboticCholecystectomyComponent } from './surgery-packages/robotic-cholecystectomy/robotic-cholecystectomy.component';
+import { RoboticAppendectomy } from './surgery-packages/robotic-appendectomy/robotic-appendectomy';
+import { RoboticHysterectomy } from './surgery-packages/robotic-hysterectomy/robotic-hysterectomy';
 
 export const routes: Routes = [
     {path: 'anesthesiology' , component: Anesthesiology},
@@ -91,11 +94,14 @@ export const routes: Routes = [
     {path:'', component:Home},
     {path:'package', component:Package},
     {path:'thankyou', component:ThankyouPage},
-    {path:'doctor/:slug', component: Doctor},
+    {path:'doctors/:slug', component: Doctor},
     {path:'chatbot', component: Chatbot},
     {path: 'robotic-hernia-surgery', component: RoboticHerniaComponent},
     {path: 'robotic-tkr', component: RoboticTkrComponent},
     {path: 'robotic-thr', component: RoboticThrComponent},
+    {path: 'robotic-gallbladder-removal-surgery', component: RoboticCholecystectomyComponent},
+    {path: 'robotic-appendectomy-surgery', component: RoboticAppendectomy},
+    {path: 'robotic-hysterectomy-surgery', component: RoboticHysterectomy},
      { path: '**', redirectTo: '' },
 
 ];

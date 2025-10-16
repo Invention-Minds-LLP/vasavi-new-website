@@ -17,6 +17,20 @@ boby {
     display: none;
 }
 
+.hero-section {
+    position: relative;
+    width: 100%;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.mobile_banner {
+    display: none;
+}
+
 .container_2 {
     padding: 3% 6%;
 }
@@ -384,9 +398,8 @@ boby {
     transition: all 0.3s ease;
     position: absolute;
     z-index: 10;
-    left: 16%;
-    /* bottom: 0; */
-    top: 100%;
+    left: 18%;
+    top: 103%;
     margin-top: -90px;
 }
 
@@ -449,6 +462,20 @@ boby {
     .desktop_banner {
         display: none;
     }
+
+    .hero-section {
+        position: relative;
+        width: 100%;
+    }
+
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+
+    .mobile_banner {
+        display: block;
+    }
 }
 
 @media(max-width:1024px) {
@@ -457,16 +484,18 @@ boby {
         top: 107%;
     }
 }
+
 @media(max-width:768px) {
-   .book-btn {
-        left: 13%;
-        top: 115%;
+    .book-btn {
+        left: 19%;
+        top: 118%;
         padding: 8px 12px;
         font-size: 14px;
     }
 }
+
 @media(max-width:480px) {
-   .book-btn {
+    .book-btn {
         left: 24%;
         top: 106%;
         font-size: 14px;
@@ -671,7 +700,7 @@ boby {
 
 }
 
-@media (max-width: 900px){
+@media (max-width: 900px) {
     .cathlab_container {
         flex-direction: column;
         gap: 50px;
@@ -692,17 +721,17 @@ boby {
     }
 }
 
-@media (max-width: 770px){
+@media (max-width: 770px) {
 
-    .cathlab_features{
+    .cathlab_features {
         grid-template-columns: 100%;
     }
 
-    .cathlab_sub_title{
+    .cathlab_sub_title {
         font-size: 20px;
     }
 
-    .cathlab_main_title{
+    .cathlab_main_title {
         font-size: 22px;
     }
 
