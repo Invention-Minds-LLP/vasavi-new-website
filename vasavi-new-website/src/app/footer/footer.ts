@@ -18,7 +18,8 @@ export class Footer implements OnInit {
   errorMsg = '';
   isLoading = false;
 
-  apiUrl = 'http://localhost:3000/api';
+  // apiUrl = 'http://localhost:3000/api';.
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
   constructor(private fb: FormBuilder, private http: HttpClient,public router: Router) {}
 
@@ -70,6 +71,7 @@ export class Footer implements OnInit {
         this.enquiryForm.reset();
         this.submitted = false;
         this.isLoading = false;
+        this.router.navigate(['/thank-you']);
 
         // Optional: close modal automatically
         const modal = document.getElementById('enquire');

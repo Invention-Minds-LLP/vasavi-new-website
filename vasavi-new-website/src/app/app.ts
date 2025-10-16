@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, NgZone } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
@@ -6,6 +6,7 @@ import { RoboticTkrComponent } from './surgery-packages/robotic-tkr/robotic-tkr.
 import { RoboticHerniaComponent } from './surgery-packages/robotic-hernia/robotic-hernia.component';
 import { RoboticThrComponent } from './surgery-packages/robotic-thr/robotic-thr.component';
 import { Chatbot } from './chatbot/chatbot';
+import { Router, NavigationEnd } from '@angular/router';
 import  WOW  from 'wowjs';
 import AOS from 'aos';
 import { Popup } from "./popup/popup";
@@ -35,13 +36,38 @@ export class App {
   showGlobalPopup = false;
   currentRoute = '';
 
-  ngAfterViewInit() {
-    AOS.init({
-      duration: 1000,  // animation duration
-      once: false,     // trigger on every scroll
-      mirror: false,   // don't animate when scrolling back up
+
+  constructor(private router: Router,private ngZone: NgZone) {}
+
+  ngOnInit(): void {
+    this.showPopup = true;
+    // Initialize outside Angular to avoid DOM timing conflicts
+    this.ngZone.runOutsideAngular(() => {
+      setTimeout(() => {
+        AOS.init({
+          duration: 800,
+          once: false,
+          mirror: false,
+        });
+      }, 100);
     });
-    console.log('initizalied')
+  }
+
+  ngAfterViewInit(): void {
+    // Listen for navigation events safely
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.ngZone.runOutsideAngular(() => {
+          setTimeout(() => {
+            try {
+              AOS.refresh();
+            } catch (err) {
+              console.warn('AOS refresh failed:', err);
+            }
+          }, 500);
+        });
+      }
+    });
     
   }
 
@@ -78,9 +104,7 @@ export class App {
 
   showPopup = false;
 
-  ngOnInit(){
-    this.showPopup = true;
-  }
+
 
   closePopup() {
     this.showPopup = false;

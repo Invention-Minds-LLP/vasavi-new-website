@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact-fom',
@@ -16,10 +17,10 @@ export class ContactFom implements OnInit {
   successMsg = '';
   errorMsg = '';
 
-  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  apiUrl = 'http://localhost:3000/api';
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {
     this.appointmentForm = this.fb.group({
@@ -60,7 +61,7 @@ export class ContactFom implements OnInit {
 
     const emailRequest = {
       to: ['inventionmindsblr@gmail.com'],
-      status: 'Service-Page-1',
+      status: 'Specialty-Page',
       appointmentDetails: emailParams,
     };
 
@@ -72,6 +73,7 @@ export class ContactFom implements OnInit {
         this.successMsg = '✅ Thank you! Your message has been sent successfully.';
         this.appointmentForm.reset();
         this.submitted = false;
+        this.router.navigate(['/thank-you']);
       },
       error: (err: any) => {
         console.error('❌ Error sending email:', err);

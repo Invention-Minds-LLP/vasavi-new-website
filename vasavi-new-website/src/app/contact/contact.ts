@@ -3,6 +3,7 @@ import { Component, NgZone } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
 import { RouterLink, RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -19,10 +20,10 @@ export class Contact {
 
   contactForm!: FormGroup;
   recaptchaResponse: string = '';
-  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  apiUrl = 'http://localhost:3000/api';
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
 
-  constructor(private titleService: Title, private metaService: Meta, private fb: FormBuilder, private http: HttpClient) { }
+  constructor(private titleService: Title, private metaService: Meta, private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Contact Vasavi Hospitals Banashankari Bangalore | 24/7 Support');
@@ -94,6 +95,7 @@ export class Contact {
         alert('✅ Thank you! Your message has been sent successfully.');
         this.contactForm.reset();
         grecaptcha.reset();
+        this.router.navigate(['/thank-you']);
       },
       error: (err) => {
         console.error('❌ Error sending email:', err);

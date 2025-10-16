@@ -395,11 +395,13 @@
                         <label>Plan Name</label>
                       </div>
                       <div class="col-12 col-md-9 d-flex align-items-center">
-                        <input formControlName="plan" type="text"
-                               class="form-control bg-white border rounded"
-                               placeholder="Enter the Package Name" style="height:55px">
-                        <div class="text-danger small ms-2" *ngIf="submitted && f['plan'].errors">
-                          <small *ngIf="f['plan'].errors['required']">Plan name is required</small>
+                        <div class="w-100 d-flex flex-column align-items-start">
+                            <input formControlName="plan" type="text"
+                            class="form-control bg-white border rounded"
+                            placeholder="Enter the Package Name" style="height:55px">
+                     <div class="text-danger small ms-2" *ngIf="submitted && f['plan'].errors">
+                       <small *ngIf="f['plan'].errors['required']">Plan name is required</small>
+                     </div>
                         </div>
                       </div>
                     </div>
@@ -412,13 +414,15 @@
                         <label>First Name</label>
                       </div>
                       <div class="col-12 col-md-9 d-flex align-items-center">
-                        <input formControlName="name" type="text"
-                               class="form-control bg-white border rounded"
-                               placeholder="Enter Your Name" style="height:55px">
-                        <div class="text-danger small ms-2" *ngIf="submitted && f['name'].errors">
-                          <small *ngIf="f['name'].errors['required']">Name is required</small>
-                          <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
-                          <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                        <div class="w-100 d-flex flex-column align-items-start">
+                            <input formControlName="name" type="text"
+                            class="form-control bg-white border rounded"
+                            placeholder="Enter Your Name" style="height:55px">
+                     <div class="text-danger small ms-2" *ngIf="submitted && f['name'].errors">
+                       <small *ngIf="f['name'].errors['required']">Name is required</small>
+                       <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                       <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                     </div>
                         </div>
                       </div>
                     </div>
@@ -431,12 +435,14 @@
                         <label>Contact Number</label>
                       </div>
                       <div class="col-12 col-md-9 d-flex align-items-center">
-                        <input formControlName="phone" type="text"
-                               class="form-control bg-white border rounded"
-                               placeholder="Enter Contact Number" style="height:55px">
-                        <div class="text-danger small ms-2" *ngIf="submitted && f['phone'].errors">
-                          <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
-                          <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                        <div class="w-100 d-flex flex-column align-items-start">
+                            <input formControlName="phone" type="text"
+                            class="form-control bg-white border rounded"
+                            placeholder="Enter Contact Number" style="height:55px">
+                     <div class="text-danger small ms-2" *ngIf="submitted && f['phone'].errors">
+                       <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
+                       <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                     </div>
                         </div>
                       </div>
                     </div>
@@ -449,12 +455,14 @@
                         <label>Email Id</label>
                       </div>
                       <div class="col-12 col-md-9 d-flex align-items-center">
-                        <input formControlName="email" type="email"
-                               class="form-control bg-white border rounded"
-                               placeholder="Enter Email Id" style="height:55px">
-                        <div class="text-danger small ms-2" *ngIf="submitted && f['email'].errors">
-                          <small *ngIf="f['email'].errors['required']">Email is required</small>
-                          <small *ngIf="f['email'].errors['email']">Invalid email format</small>
+                        <div class="w-100 d-flex flex-column align-items-start">
+                            <input formControlName="email" type="email"
+                            class="form-control bg-white border rounded"
+                            placeholder="Enter Email Id" style="height:55px">
+                     <div class="text-danger small ms-2" *ngIf="submitted && f['email'].errors">
+                       <small *ngIf="f['email'].errors['required']">Email is required</small>
+                       <small *ngIf="f['email'].errors['email']">Invalid email format</small>
+                     </div>
                         </div>
                       </div>
                     </div>
@@ -467,11 +475,13 @@
                         <label>Preferred Date</label>
                       </div>
                       <div class="col-12 col-md-9 d-flex align-items-center">
-                        <input formControlName="date" type="date"
-                               class="form-control bg-white border rounded"
-                               style="height:55px">
-                        <div class="text-danger small ms-2" *ngIf="submitted && f['date'].errors">
-                          <small *ngIf="f['date'].errors['required']">Date is required</small>
+                        <div class="w-100 d-flex flex-column align-items-start">
+                            <input formControlName="date" type="date"
+                            class="form-control bg-white border rounded"
+                            style="height:55px">
+                     <div class="text-danger small ms-2" *ngIf="submitted && f['date'].errors">
+                       <small *ngIf="f['date'].errors['required']">Date is required</small>
+                     </div>
                         </div>
                       </div>
                     </div>
@@ -484,12 +494,14 @@
                         <label>Description</label>
                       </div>
                       <div class="col-12 col-md-9 d-flex align-items-center">
-                        <input formControlName="message" type="text"
-                               class="form-control bg-white border rounded"
-                               placeholder="Leave Your Message Here" style="height:55px">
-                        <div class="text-danger small ms-2" *ngIf="submitted && f['message'].errors">
-                          <small *ngIf="f['message'].errors['required']">Message is required</small>
-                          <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                        <div class="w-100 d-flex flex-column align-items-start">
+                            <input formControlName="message" type="text"
+                            class="form-control bg-white border rounded"
+                            placeholder="Leave Your Message Here" style="height:55px">
+                     <div class="text-danger small ms-2" *ngIf="submitted && f['message'].errors">
+                       <small *ngIf="f['message'].errors['required']">Message is required</small>
+                       <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                     </div>
                         </div>
                       </div>
                     </div>

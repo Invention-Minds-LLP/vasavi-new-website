@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms'
 import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -44,9 +45,9 @@ export class Nephrology {
 
   activeSection = 'overview';
 
-  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  apiUrl = 'http://localhost:3000/api';
-  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient) { }
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
+  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient, private router: Router) { }
 
   get f() {
     return this.appointmentForm.controls;
@@ -73,7 +74,7 @@ export class Nephrology {
 
   submitForm(): void {
     if (this.appointmentForm.invalid) {
-      alert('⚠️ Please fill all required fields correctly.');
+      alert('⚠️ Please fill all required fields correctly and the message should be more than 10 characters.');
       return;
     }
 
@@ -108,6 +109,7 @@ export class Nephrology {
         console.log('✅ Email sent successfully:', res);
         alert('✅ Thank you! Your message has been sent successfully.');
         this.appointmentForm.reset();
+        this.router.navigate(['/thank-you']);
       },
       error: (err:any) => {
         console.error('❌ Error sending email:', err);

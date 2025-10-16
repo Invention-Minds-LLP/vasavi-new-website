@@ -43,13 +43,13 @@ export class Doctor {
   contactForm: any = FormGroup;
   clicked: boolean = true;
   // apiUrl: string = 'http://localhost:3000/api'
-  // apiUrl: string = 'https://rashtrotthana-backend-812956739285.us-east4.run.app/api';
-  apiUrl = "https://backend-812956739285.us-east4.run.app/api";
+  // apiUrl = "https://backend-812956739285.us-east4.run.app/api";
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
   @ViewChild('formSection') formSection!: ElementRef;
 
-  scrollToForm() {
-    this.formSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
-  }
+  // scrollToForm() {
+  //   this.formSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  // }
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -744,6 +744,84 @@ export class Doctor {
         awards: [],
         professionalAffilications: [],
         publications: []
+      },
+      {
+        id: 18,
+        name: "Dr. Gargi Das",
+        image: "/img/new-doctor-image/Dr Gargi Das.png",
+        alt: "Dr Gargi Das – Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
+        areasOfExpertise: [
+          { icon: "", expertise: "Ophthalmology" },
+          { icon: "", expertise: "Refractive Surgery" },
+          { icon: "", expertise: "Glaucoma" },
+          { icon: "", expertise: "Diabetic Retinopathy Screening & Management" },
+          { icon: "", expertise: "Preventive Eye Care" },
+          { icon: "", expertise: "Corneal Disorders" },
+          { icon: "", expertise: "Eye Trauma Management" }
+        ],
+        title: "Dr. Gargi Das – Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
+        description: "Dr. Gargi Das specializes in ophthalmology, refractive surgery, glaucoma and diabetic retinopathy management at Vasavi Hospitals, Bangalore.",
+        briefProfile: "",
+        qualification: "MBBS, MD, FPRS",
+        department: "Bariatric Surgery",
+        experience: "6+",
+        designation: "Consultant - Ophthalmology",
+        awards: [],
+        professionalAffilications: [],
+        publications: []
+      },
+      {
+        id: 18,
+        name: "Dr. Sphoorthy G Itigi",
+        image: "/img/new-doctor-image/Dr Sphoorthy G Itigi.png",
+        alt: "Dr. Sphoorthy G Itigi – Consultant ENT Surgeon | Vasavi Hospitals Bangalore",
+        areasOfExpertise: [
+          { icon: "", expertise: "Micro Ear surgeries" },
+          { icon: "", expertise: "Endoscopic Sinus Surgery" },
+          { icon: "", expertise: "Vertigo management" },
+          { icon: "", expertise: "Vocal cord surgery" },
+          { icon: "", expertise: "Thyroid surgery" },
+          { icon: "", expertise: "Tonsillectomy and Adenoidectomy" },
+          { icon: "", expertise: "Snoring and Sleep Apnea Management" }
+        ],
+        title: "Dr. Sphoorthy G Itigi – Consultant ENT Surgeon | Vasavi Hospitals Bangalore",
+        description: "Dr Sphoorthy G Itigi is an ENT specialist in micro ear surgery, sinus surgery, thyroid and voice disorders at Vasavi Hospitals, Bangalore.",
+        briefProfile: "",
+        qualification: "MBBS, DLO, DNB (ENT)",
+        department: "Bariatric Surgery",
+        experience: "8+",
+        designation: "Consultant - ENT",
+        awards: [],
+        professionalAffilications: [],
+        publications: []
+      },
+      {
+        id: 18,
+        name: "Dr. Naneboena Sunitha",
+        image: "/img/new-doctor-image/dummy-female.png",
+        alt: "Dr Naneboena Sunitha – Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
+        areasOfExpertise: [
+          { icon: "", expertise: "Clinical nutrition and diet therapy" },
+          { icon: "", expertise: "Obesity and weight management" },
+          { icon: "", expertise: "Diabetes and lifestyle disorder nutrition" },
+          { icon: "", expertise: "Oncology nutrition and cancer care diets" },
+          { icon: "", expertise: "Preventive and therapeutic nutrition planning" },
+          { icon: "", expertise: "Corporate and community nutrition education" }
+        ],
+        title: "Dr. Naneboena Sunitha – Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
+        description: "Dr. Naneboena Sunitha, Nutritionist & Dietitian with 26 years of experience in clinical nutrition, diabetes, weight management and oncology care at Vasavi Hospitals, Bangalore.",
+        briefProfile: "Dr. Naneboena Sunitha is a highly accomplished Nutritionist and Dietitian with over 26 years of experience in clinical and academic nutrition. She has served as a Professor of Nutrition at reputed institutions including MvJ Medical College and East Point Medical College. Her expertise spans across weight management, diabetes reversal, and oncology nutrition, with a focus on achieving healthy results without nutritional deficiencies. Dr. Sunitha has successfully guided over 3000 patients in sustainable weight reduction programs and has worked extensively in cancer nutrition care at Mega Hospital. Beyond clinical practice, she has led numerous corporate wellness and nutrition awareness programs for leading organizations such as Infosys, Wipro, and Accenture. Her evidence-based, holistic approach integrates lifestyle modification with preventive nutrition, empowering individuals to make long-term, healthy choices for improved well-being.",
+        qualification: "Ph.D. (Food & Nutrition) | M.Sc. | M.Ed. | MBA (Marketing) | Diploma in Catering | DCA",
+        department: "Bariatric Surgery",
+        experience: "26+",
+        designation: "Consultant - Nutritionist & Dietitian",
+        awards: [],
+        professionalAffilications: [
+          { image: "/img/affiliations/IDA.jpg", icon: "fas fa-user-md card-icon", paHeading: "IDA", paDescription: "Indian Dietetic Association" },
+          { image: "/img/affiliations/NSI3.png", icon: "fas fa-user-md card-icon", paHeading: "NSI", paDescription: "Nutrition Society of India" },
+          { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "SCNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+        ],
+        publications: []
       }
     ];
             
@@ -755,20 +833,26 @@ export class Doctor {
     this.getAvailableSlots(this.filteredDoctor.id, formattedDate).subscribe({
 
       next: (availability) => {
-        console.log('Available slots:', availability);
-        // this.availableTimes = availableSlots.map((time: string) => ({ name: time }));
         if (availability && availability.availableFrom) {
           const [start, end] = availability.availableFrom.split('-');
           const slotDuration = availability.slotDuration;
           this.availableTimes = this.generateTimeSlots(start, end, slotDuration);
-
-          // Remove any already booked slots for that day
-
+  
+          // Enable only if slots exist
+          if (this.availableTimes.length > 0) {
+            this.contactForm.get('time')?.enable();
+          } else {
+            this.contactForm.get('time')?.disable();
+          }
         } else {
           this.availableTimes = [];
+          this.contactForm.get('time')?.disable();
         }
-
-      }
+      },
+      error: () => {
+        this.availableTimes = [];
+        this.contactForm.get('time')?.disable();
+      },
     });
 
     // Fetch unavailable dates using the doctor ID
@@ -1076,6 +1160,18 @@ export class Doctor {
       rows.push({ left: left[i], right: right[i] });
     }
     return rows;
+  }
+  scrollToForm(): void {
+    if (this.formSection && this.formSection.nativeElement) {
+      const element = this.formSection.nativeElement;
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+  scrollTo(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   
 

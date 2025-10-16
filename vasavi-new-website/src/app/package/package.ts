@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-package',
@@ -19,13 +20,15 @@ export class Package implements OnInit {
   errorMsg = '';
   isLoading = false;
 
-  apiUrl = 'http://localhost:3000/api';
+  // apiUrl = 'http://localhost:3000/api';
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
   constructor(
     private fb: FormBuilder,
     private titleService: Title,
     private metaService: Meta,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -85,16 +88,18 @@ export class Package implements OnInit {
       next: (res: any) => {
         console.log('✅ Email sent successfully:', res);
         this.successMsg = '✅ Thank you! Your enquiry has been sent successfully.';
+        alert(this.successMsg);
         this.isLoading = false;
         this.appointmentForm.reset();
         this.submitted = false;
-
         // Optional: Auto-close modal
         const modal = document.getElementById('enquire');
         if (modal) {
+          console.log(modal)
           const bsModal = (window as any).bootstrap.Modal.getInstance(modal);
           bsModal?.hide();
         }
+        this.router.navigate(['/thank-you']);
       },
       error: (err: any) => {
         console.error('❌ Error sending email:', err);
@@ -103,4 +108,10 @@ export class Package implements OnInit {
       },
     });
   }
+  ngOnDestroy() {
+    document.querySelectorAll('.modal-backdrop').forEach(el => el.remove());
+    document.body.classList.remove('modal-open');
+    document.body.style.removeProperty('padding-right');
+  }
+  
 }

@@ -173,6 +173,7 @@
                 <select id="doctor_name" formControlName="doctor">
                   <option value="">-- Select Doctor --</option>
                   <option value="Dr. Yashaswi Srikakula">Dr. Yashaswi Srikakula</option>
+                  <option value="Dr. Sphoorthy G Itigi">Dr. Sphoorthy G Itigi</option>
                 </select>
                 <div class="error" *ngIf="submitted && f['doctor'].errors">
                   <small *ngIf="f['doctor'].errors['required']">Please select a doctor</small>
@@ -284,7 +285,17 @@
             <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
             <!-- <a class="appointment-btn" href="/doctor-profile.php?slug=dr-ramesh-hanumegowda">Book Appointment</a> -->
         </div>
-
+        <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/.dr-spoorthi.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Sphoorthy G Itigi</h3>
+            <p class="doctor-title">Consultant - ENT </p>
+            <p class="qualification">MBBS, DLO, DNB (ENT)</p>
+            <p class="doctor-experience">8+ Years Experience</p>
+            <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-sphoorthy-g-itigi'">Book Appointment</a>
+        </div>
 
 
     </div>

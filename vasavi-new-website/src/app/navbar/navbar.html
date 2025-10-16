@@ -66,8 +66,7 @@
 </div>
 
 <nav id="head-nav"
-    class="navbar navbar-expand-lg bg-white navbar-light bg-white sticky-top pt-0 pt-md-0 py-lg-0 px-4 px-lg-5"
-    data-aos="fade-in" data-aos-delay="0.1s">
+    class="navbar navbar-expand-lg bg-white navbar-light bg-white sticky-top pt-0 pt-md-0 py-lg-0 px-4 px-lg-5">
 
     <a rel="canonical" [routerLink]="'/'" class="navbar-brand pt-4 pt-md-3">
         <img src="img/gallery/8.png">
@@ -182,8 +181,8 @@
           >
             Our Packages
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <ul class="dropdown-menu left" aria-labelledby="packagesDropdown">
+          <div class="dropdown-menu left" aria-labelledby="packagesDropdown">
+          <ul>
             <li><a class="dropdown-item" [routerLink]="'/robotic-hernia-surgery'">Robotic Hernia Surgery</a></li>
             <li><a class="dropdown-item" [routerLink]="'/robotic-tkr'">Robotic TKR</a></li>
             <li><a class="dropdown-item" [routerLink]="'/robotic-thr'">Robotic THR</a></li>
@@ -191,12 +190,14 @@
             <li><a class="dropdown-item" [routerLink]="'/robotic-tkr'">Robotic Appendectomy</a></li>
             <li><a class="dropdown-item" [routerLink]="'/robotic-thr'">Robotic Hysterectomy</a></li>
           </ul>
+          <ul>
+            <li><a class="dropdown-item" [routerLink]="'/robotic-gallbladder-removal-surgery'">Robotic Gallbladder Removal</a></li>
+            <li><a class="dropdown-item" [routerLink]="'/robotic-appendectomy-surgery'">Robotic Appendectomy</a></li>
+            <li><a class="dropdown-item" [routerLink]="'/robotic-hysterectomy-surgery'">Robotic Hysterectomy</a></li>
+          </ul>
           </div>
-          <!-- <ul class="dropdown-menu left" aria-labelledby="packagesDropdown">
-            <li><a class="dropdown-item" [routerLink]="'/robotic-hernia-surgery'">Robotic Gallbladder Removal</a></li>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-tkr'">Robotic Appendectomy</a></li>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-thr'">Robotic Hysterectomy</a></li>
-          </ul> -->
+
+          
         </li>
 
             <a rel="canonical" [routerLink]="'/awards'" class="nav-item nav-link">Awards </a>

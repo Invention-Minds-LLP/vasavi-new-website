@@ -6,11 +6,13 @@ import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-ent',
-  imports: [CommonModule, Cta, ReactiveFormsModule],
+  imports: [CommonModule, Cta, ReactiveFormsModule, RouterModule],
   templateUrl: './ent.html',
   styleUrl: './ent.css'
 })
@@ -45,9 +47,9 @@ export class Ent {
   activeSection = 'overview';
 
 
-  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  apiUrl = 'http://localhost:3000/api';
-  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient) { }
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
+  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient, private router: Router) { }
 
   get f() {
     return this.appointmentForm.controls;
@@ -74,7 +76,7 @@ export class Ent {
 
   submitForm(): void {
     if (this.appointmentForm.invalid) {
-      alert('⚠️ Please fill all required fields correctly.');
+      alert('⚠️ Please fill all required fields correctly and the message should be more than 10 characters.');
       return;
     }
 
@@ -109,6 +111,7 @@ export class Ent {
         console.log('✅ Email sent successfully:', res);
         alert('✅ Thank you! Your message has been sent successfully.');
         this.appointmentForm.reset();
+        this.router.navigate(['/thank-you']);
       },
       error: (err:any) => {
         console.error('❌ Error sending email:', err);

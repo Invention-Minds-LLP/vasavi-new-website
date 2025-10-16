@@ -5,7 +5,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -45,10 +46,10 @@ export class Cardiology {
   activeSection = 'overview';
 
 
-  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  apiUrl = 'http://localhost:3000/api';
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
 
-  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient) { }
+  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient, private router: Router) { }
 
 
   get f() {
@@ -75,7 +76,7 @@ export class Cardiology {
 
   submitForm(): void {
     if (this.appointmentForm.invalid) {
-      alert('⚠️ Please fill all required fields correctly.');
+      alert('⚠️ Please fill all required fields correctly and the message should be more than 10 characters.');
       return;
     }
 
@@ -110,6 +111,7 @@ export class Cardiology {
         console.log('✅ Email sent successfully:', res);
         alert('✅ Thank you! Your message has been sent successfully.');
         this.appointmentForm.reset();
+        this.router.navigate(['/thank-you']);
       },
       error: (err:any) => {
         console.error('❌ Error sending email:', err);

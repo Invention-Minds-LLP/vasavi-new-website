@@ -93,7 +93,7 @@ export const routes: Routes = [
     {path:'about', component:About},
     {path:'', component:Home},
     {path:'package', component:Package},
-    {path:'thankyou', component:ThankyouPage},
+    {path:'thank-you', component:ThankyouPage},
     {path:'doctors/:slug', component: Doctor},
     {path:'chatbot', component: Chatbot},
     {path: 'robotic-hernia-surgery', component: RoboticHerniaComponent},
