@@ -19,7 +19,8 @@ export class Contact {
 
   contactForm!: FormGroup;
   recaptchaResponse: string = '';
-  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  apiUrl = 'http://localhost:3000/api';
 
   constructor(private titleService: Title, private metaService: Meta, private fb: FormBuilder, private http: HttpClient) { }
 
@@ -62,10 +63,10 @@ export class Contact {
       return;
     }
 
-    if (!this.recaptchaResponse) {
-      alert('⚠️ Please complete the reCAPTCHA.');
-      return;
-    }
+    // if (!this.recaptchaResponse) {
+    //   alert('⚠️ Please complete the reCAPTCHA.');
+    //   return;
+    // }
 
     const formValues = this.contactForm.value;
 
@@ -87,7 +88,7 @@ export class Contact {
     console.log('📤 Sending email request:', emailRequest);
 
     // ✅ Send email request
-    this.http.post(`${this.apiUrl}/email/send-email`, emailRequest).subscribe({
+    this.http.post(`${this.apiUrl}/email/send-pages-email`, emailRequest).subscribe({
       next: (res) => {
         console.log('✅ Email sent successfully:', res);
         alert('✅ Thank you! Your message has been sent successfully.');

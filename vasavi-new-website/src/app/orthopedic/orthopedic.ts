@@ -4,10 +4,12 @@ import { Cta } from "../cta/cta";
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms'
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-orthopedic',
-  imports: [CommonModule, Cta],
+  imports: [CommonModule, Cta, ReactiveFormsModule],
   templateUrl: './orthopedic.html',
   styleUrl: './orthopedic.css'
 })
@@ -42,53 +44,77 @@ export class Orthopedic {
 
   activeSection = 'overview';
 
-  constructor(private fb: FormBuilder, private titleService: Title, private metaService: Meta) { }
+  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  apiUrl = 'http://localhost:3000/api';
+  constructor(private fb: FormBuilder, private titleService: Title, private metaService:Meta, private http: HttpClient) { }
 
-  ngOnInit(): void {
-    this.appointmentForm = this.fb.group({
-      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]*$/), Validators.minLength(2)]],
-      phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
-      email: ['', [Validators.required, Validators.email]],
-      appointment_date: ['', Validators.required],
-      doctor_name: ['', Validators.required],
-      message: ['', [Validators.required, Validators.minLength(10)]]
-    });
-
-    this.titleService.setTitle('Best Orthopedic Hospital in Banashankari Bangalore | Vasavi Hospitals');
-    this.metaService.updateTag({namre:'description', content:'Advanced orthopedic care at Vasavi Hospitals in Banashankari Bangalore. Joint replacement, bone care, and robotic knee surgery.'})
-  }
 
   get f() {
     return this.appointmentForm.controls;
   }
 
-  onSubmit() {
-    this.submitted = true;
-    this.successMsg = '';
-    this.errorMsg = '';
 
+  ngOnInit(): void {
+    this.appointmentForm = this.fb.group({
+      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]*$/), Validators.minLength(2)]],
+      phone: ['', [Validators.required, Validators.pattern(/^[6-9][0-9]{9}$/)]],
+      email: ['', [Validators.required, Validators.email]],
+      date: ['', Validators.required],
+      doctor: ['', Validators.required],
+      message: ['', [Validators.required, Validators.minLength(10)]]
+  });
+
+    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.metaService.updateTag({
+      name: 'description',
+      content: 'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.'
+    });
+  }
+
+
+  submitForm(): void {
     if (this.appointmentForm.invalid) {
+      alert('⚠️ Please fill all required fields correctly.');
       return;
     }
 
-    // Validate future date
-    const selectedDate = new Date(this.f['appointment_date'].value);
-    const today = new Date();
-    if (selectedDate < today) {
-      this.errorMsg = 'Please select a future date';
-      return;
-    }
+    // if (!this.recaptchaResponse) {
+    //   alert('⚠️ Please complete the reCAPTCHA.');
+    //   return;
+    // }
 
-    // this.appointmentService.bookAppointment(this.appointmentForm.value).subscribe({
-    //   next: (response) => {
-    //     this.successMsg = 'Appointment request submitted successfully! We will contact you soon.';
-    //     this.appointmentForm.reset();
-    //     this.submitted = false;
-    //   },
-    //   error: (error) => {
-    //     this.errorMsg = 'Something went wrong. Please try again later.';
-    //   }
-    // });
+    const formValues = this.appointmentForm.value;
+
+    // ✅ Construct email parameters
+    const emailParams = {
+      name: formValues.name,
+      email: formValues.email,
+      phone: formValues.phone,
+      date: formValues.date,
+      doctor: formValues.doctor,
+      message: formValues.message,
+    };
+
+    const emailRequest = {
+      to: ['inventionmindsblr@gmail.com'],
+      status: 'Service-Page',
+      appointmentDetails: emailParams,
+    };
+
+    console.log('📤 Sending email request:', emailRequest);
+
+    // ✅ Send email request
+    this.http.post(`${this.apiUrl}/email/send-pages-email`, emailRequest).subscribe({
+      next: (res:any) => {
+        console.log('✅ Email sent successfully:', res);
+        alert('✅ Thank you! Your message has been sent successfully.');
+        this.appointmentForm.reset();
+      },
+      error: (err:any) => {
+        console.error('❌ Error sending email:', err);
+        alert('❌ Failed to send message. Please try again later.');
+      },
+    });
   }
 
 

@@ -6,13 +6,12 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-package',
-  standalone: true, // ✅ Important
+  selector: 'app-package-form',
   imports: [RouterLink, RouterModule, ReactiveFormsModule, CommonModule, HttpClientModule],
-  templateUrl: './package.html',
-  styleUrls: ['./package.css']
+  templateUrl: './package-form.html',
+  styleUrl: './package-form.css'
 })
-export class Package implements OnInit {
+export class PackageForm {
   appointmentForm!: FormGroup;
   submitted = false;
   successMsg = '';

@@ -192,152 +192,204 @@
     </div>
 </nav>
 
-<div class="modal" id="enquire" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="enquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
+
+            <!-- Header -->
             <div class="modal-header mod_head">
-                <h5 class="modal-title" id="exampleModalLabel"><i class='bx bx-envelope vrt'></i> Enquire Now</h5>
-                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"
-                    style="color:#fff"></button>
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <i class='bx bx-envelope vrt'></i> Enquire Now
+                </h5>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
 
+            <!-- Body -->
             <div class="modal-body">
-                <div class="contact-form contact-forms">
-                    <div class="container">
-                        <form class="cons-contact-form" method="POST" action="contact_mailer.php" id="contactForm">
-                            <div class="row g-3">
+                <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()" novalidate>
+                    <div class="row g-3">
 
-                                <div class="col-12 col-sm-6">
-                                    <label for="">Your Name</label>
-                                    <input name="name" required=" " required=" " type="text"
-                                        class="form-control bg-light border-0" placeholder="" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for=""> Contact Number</label>
-                                    <input name="phone" required=" " required=" " type="tel"
-                                        class="form-control bg-light border-0" placeholder="" style="height: 55px;">
-                                </div>
-                                <!-- <div class="col-12 col-sm-12">
-                                    <label for="">Your Email Id</label>
-                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="" style="height: 55px;">
-                                </div> -->
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <label for="">Appointment Date</label>
-                                        <input type="date" name="date"
-                                            class="form-control  bg-light text-dark border-0 datetimepicker-input"
-                                            placeholder="" data-target="#date" data-toggle="datetimepicker"
-                                            style="height: 55px;">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-6">
-                                    <label for="">Service Looking For</label>
-                                    <input type="text" name="service" class="form-control bg-light border-0"
-                                        placeholder="" style="height: 55px;">
-                                </div>
-
-                                <div class="col-12 col-sm-12">
-                                    <label for="">Leave your message here</label>
-                                    <textarea name="message" class="form-control bg-light border-0" id="" cols="30"
-                                        rows="4" placeholder=""></textarea>
-                                </div>
-
-                                <!-- ✅ reCAPTCHA -->
-                                <div class="form-group mt-3">
-                                    <div id="recaptcha-container"></div> <!-- IMPORTANT -->
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-
-
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" name="submit" type="submit">Make An
-                                        Appointment</button>
-                                </div>
+                        <!-- Name -->
+                        <div class="col-12 col-sm-6">
+                            <label>Your Name</label>
+                            <input formControlName="name" type="text" class="form-control bg-light border-0"
+                                style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['name'].errors">
+                                <small *ngIf="f['name'].errors['required']">Name is required</small>
+                                <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                                <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
                             </div>
-                        </form>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-12 col-sm-6">
+                            <label>Contact Number</label>
+                            <input formControlName="phone" type="tel" class="form-control bg-light border-0"
+                                style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['phone'].errors">
+                                <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
+                                <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Date -->
+                        <div class="col-12 col-sm-6">
+                            <label>Appointment Date</label>
+                            <input formControlName="appointment_date" type="date"
+                                class="form-control bg-light border-0 text-dark" style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['appointment_date'].errors">
+                                <small *ngIf="f['appointment_date'].errors['required']">Appointment date is
+                                    required</small>
+                            </div>
+                        </div>
+
+                        <!-- Service -->
+                        <div class="col-12 col-sm-6">
+                            <label>Service Looking For</label>
+                            <input formControlName="service" type="text" class="form-control bg-light border-0"
+                                style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['service'].errors">
+                                <small *ngIf="f['service'].errors['required']">Service is required</small>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="col-12">
+                            <label>Leave your message here</label>
+                            <textarea formControlName="message" rows="4"
+                                class="form-control bg-light border-0"></textarea>
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['message'].errors">
+                                <small *ngIf="f['message'].errors['required']">Message is required</small>
+                                <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                            </div>
+                        </div>
+
+                        <!-- reCAPTCHA (optional placeholder, can integrate Google API) -->
+                        <!-- <div class="col-12">
+                            <div id="recaptcha-container" class="my-2"></div>
+                            <div class="text-danger small" *ngIf="submitted && f['recaptcha'].errors">
+                                <small *ngIf="f['recaptcha'].errors['required']">Please complete the reCAPTCHA</small>
+                            </div>
+                        </div> -->
+
+                        <!-- Submit Button -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100 py-3" [disabled]="isLoading">
+                                <span *ngIf="!isLoading">Make An Appointment</span>
+                                <span *ngIf="isLoading"><i class="bx bx-loader bx-spin"></i> Sending...</span>
+                            </button>
+                        </div>
+
+                        <!-- Success/Error Messages -->
+                        <div class="col-12 text-center mt-2">
+                            <p class="text-success fw-semibold" *ngIf="successMsg">{{ successMsg }}</p>
+                            <p class="text-danger fw-semibold" *ngIf="errorMsg">{{ errorMsg }}</p>
+                        </div>
+
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
 
 
-<div class="modal" id="enquire" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+<div class="modal fade" id="enquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header mod_head">
-                <h5 class="modal-title" id="exampleModalLabel"><i class='bx bx-envelope vrt'></i> Enquire Now</h5>
-                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"
-                    style="color:#fff"></button>
-            </div>
-
-            <div class="modal-body">
-                <div class="contact-form contact-forms">
-                    <div class="container">
-                        <form class="cons-contact-form" method="POST" action="contact_mailer1.php" id="contactForm">
-                            <div class="row g-3">
-
-                                <div class="col-12 col-sm-6">
-                                    <label for="">Your Name</label>
-                                    <input name="name" required=" " required=" " type="text"
-                                        class="form-control bg-light border-0" placeholder="" style="height: 55px;">
-                                </div>
-                                <div class="col-12 col-sm-6">
-                                    <label for=""> Contact Number</label>
-                                    <input name="phone" required=" " required=" " type="tel"
-                                        class="form-control bg-light border-0" placeholder="" style="height: 55px;">
-                                </div>
-                                <!-- <div class="col-12 col-sm-12">
-                                    <label for="">Your Email Id</label>
-                                    <input type="email" name="email" class="form-control bg-light border-0" placeholder="" style="height: 55px;">
-                                </div> -->
-                                <div class="col-12 col-sm-6">
-                                    <div class="date" id="date" data-target-input="nearest">
-                                        <label for="">Appointment Date</label>
-                                        <input type="date" name="date"
-                                            class="form-control  bg-light text-dark border-0 datetimepicker-input"
-                                            placeholder="" data-target="#date" data-toggle="datetimepicker"
-                                            style="height: 55px;">
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-sm-6">
-                                    <label for="">Package Looking For</label>
-                                    <input type="text" name="service" class="form-control bg-light border-0"
-                                        placeholder="" style="height: 55px;">
-                                </div>
-
-                                <div class="col-12 col-sm-12">
-                                    <label for="">Leave your message here</label>
-                                    <textarea name="message" class="form-control bg-light border-0" id="" cols="30"
-                                        rows="4" placeholder=""></textarea>
-                                </div>
-
-                                <div class="form-group mt-3">
-                                    <div class="g-recaptcha" data-sitekey="6LcVL3AqAAAAAKTqMfy5xse-fU5RQHVpUM9-LqPT"
-                                        data-callback='onSubmit' data-action='submit'>
-                                    </div>
-                                    <input class="form-control d-none" data-recaptcha="true">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-
-
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" name="submit" type="submit">Make An
-                                        Appointment</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+      <div class="modal-content">
+        
+        <!-- Header -->
+        <div class="modal-header mod_head">
+          <h5 class="modal-title" id="exampleModalLabel">
+            <i class='bx bx-envelope vrt'></i> Enquire Now
+          </h5>
+          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
+  
+        <!-- Body -->
+        <div class="modal-body">
+          <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()" novalidate>
+            <div class="row g-3">
+              
+              <!-- Name -->
+              <div class="col-12 col-sm-6">
+                <label>Your Name</label>
+                <input formControlName="name" type="text" class="form-control bg-light border-0" style="height:55px">
+                <div class="text-danger small mt-1" *ngIf="submitted && f['name'].errors">
+                  <small *ngIf="f['name'].errors['required']">Name is required</small>
+                  <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                  <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                </div>
+              </div>
+  
+              <!-- Phone -->
+              <div class="col-12 col-sm-6">
+                <label>Contact Number</label>
+                <input formControlName="phone" type="tel" class="form-control bg-light border-0" style="height:55px">
+                <div class="text-danger small mt-1" *ngIf="submitted && f['phone'].errors">
+                  <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
+                  <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                </div>
+              </div>
+  
+              <!-- Appointment Date -->
+              <div class="col-12 col-sm-6">
+                <label>Appointment Date</label>
+                <input formControlName="appointment_date" type="date" class="form-control bg-light border-0 text-dark" style="height:55px">
+                <div class="text-danger small mt-1" *ngIf="submitted && f['appointment_date'].errors">
+                  <small *ngIf="f['appointment_date'].errors['required']">Appointment date is required</small>
+                </div>
+              </div>
+  
+              <!-- Service -->
+              <div class="col-12 col-sm-6">
+                <label>Service Looking For</label>
+                <input formControlName="service" type="text" class="form-control bg-light border-0" style="height:55px">
+                <div class="text-danger small mt-1" *ngIf="submitted && f['service'].errors">
+                  <small *ngIf="f['service'].errors['required']">Service is required</small>
+                </div>
+              </div>
+  
+              <!-- Message -->
+              <div class="col-12">
+                <label>Leave your message here</label>
+                <textarea formControlName="message" rows="4" class="form-control bg-light border-0"></textarea>
+                <div class="text-danger small mt-1" *ngIf="submitted && f['message'].errors">
+                  <small *ngIf="f['message'].errors['required']">Message is required</small>
+                  <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                </div>
+              </div>
+  
+              <!-- reCAPTCHA (optional placeholder, can integrate Google API) -->
+              <div class="col-12">
+                <div id="recaptcha-container" class="my-2"></div>
+                <div class="text-danger small" *ngIf="submitted && f['recaptcha'].errors">
+                  <small *ngIf="f['recaptcha'].errors['required']">Please complete the reCAPTCHA</small>
+                </div>
+              </div>
+  
+              <!-- Submit Button -->
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100 py-3" [disabled]="isLoading">
+                  <span *ngIf="!isLoading">Make An Appointment</span>
+                  <span *ngIf="isLoading"><i class="bx bx-loader bx-spin"></i> Sending...</span>
+                </button>
+              </div>
+  
+              <!-- Success/Error Messages -->
+              <div class="col-12 text-center mt-2">
+                <p class="text-success fw-semibold" *ngIf="successMsg">{{ successMsg }}</p>
+                <p class="text-danger fw-semibold" *ngIf="errorMsg">{{ errorMsg }}</p>
+              </div>
+  
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
 
 
 <div class="modal" id="enquire1" aria-labelledby="exampleModalLabel" aria-hidden="true">

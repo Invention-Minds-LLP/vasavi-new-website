@@ -135,3 +135,21 @@ a {
 .vrt {
   vertical-align: middle;
 }
+
+.text-danger small {
+  color: #dc3545;
+}
+
+.text-success {
+  color: #28a745;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: #dc3545;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched {
+  border-color: #198754;
+}

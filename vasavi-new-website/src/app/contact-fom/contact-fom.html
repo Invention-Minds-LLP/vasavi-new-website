@@ -1,64 +1,96 @@
-<section class="bg-white">
+<section class="bg-white" [formGroup]="appointmentForm">
     <div class="container">
-        <div class="row d-flex justify-content-center">
-            <div class="col-12 col-md-12 col-lg-6 d-flex align-items-center order-md-2 mt-2 mt-lg-0">
-                <img src="img/contact-us.webp" class="w-100" alt="">
-            </div>
-
-            <div class="col-12 col-md-12 col-lg-6 d-flex align-items-center">
-                <div class="bg-primary  rounded p-3 p-md-3">
-                    <h2 class="mb-4 text-center text-light">Book An Appointment</h2>
-                    <form class="cons-contact-form" method="POST" action="contact_mailer.php" id="contactForm">
-                        <div class="row d-flex justify-content-center">
-                            <div class="col-12 col-sm-6 pb-2">
-                                <label class="text-light" for="">Your Name</label>
-                                <input type="text" name="name" required=" " class="form-control bg-light border-0"
-                                    placeholder="" style="height: 55px;">
-                            </div>
-
-                            <div class="col-12 col-sm-6 pb-2">
-                                <label class="text-light" for=""> Contact Number</label>
-                                <input type="tel" name="phone" required=" " class="form-control bg-light border-0"
-                                    placeholder="" style="height: 55px;">
-                            </div>
-
-                            <div class="col-12 col-sm-12 pb-2">
-                                <label class="text-light" for="">Your Email Id</label>
-                                <input type="email" name="email" class="form-control bg-light border-0" placeholder=""
-                                    style="height: 55px;">
-                            </div>
-
-                            <div class="col-12 col-sm-6 pb-2">
-                                <div class="date" id="date" data-target-input="nearest">
-                                    <label class="text-light" for="">Appointment Date</label>
-                                    <input type="date" name="appointment_date"
-                                        class="form-control bg-light text-dark border-0 datetimepicker-input"
-                                        placeholder="dd/mm/yyy" data-target="#date" data-toggle="datetimepicker"
-                                        style="height: 55px;">
-                                </div>
-                            </div>
-
-                            <div class="col-12 col-sm-6 pb-2">
-                                <label class="text-light" for="">Service looking for</label>
-                                <input type="text" name="service" class="form-control bg-light border-0" placeholder=""
-                                    style="height: 55px;">
-                            </div>
-
-                            <div class="col-12 col-sm-12 pb-2">
-                                <label class="text-light" for="">Leave your message here</label>
-                                <textarea name="message" class="form-control bg-light border-0" id="" cols="30" rows="4"
-                                    placeholder=""></textarea>
-                            </div>
-
-                            <div class="col-12 mt-2">
-                                <button class="btn btn-light w-100 py-3" type="submit" name="submit">Make An
-                                    Appointment</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+      <div class="row d-flex justify-content-center">
+        
+        <!-- Image -->
+        <div class="col-12 col-md-12 col-lg-6 d-flex align-items-center order-md-2 mt-2 mt-lg-0">
+          <img src="img/contact-us.webp" class="w-100" alt="Book Appointment">
         </div>
+  
+        <!-- Form Section -->
+        <div class="col-12 col-md-12 col-lg-6 d-flex align-items-center">
+          <div class="bg-primary rounded p-3 p-md-3 w-100">
+            <h2 class="mb-4 text-center text-light">Book An Appointment</h2>
+  
+            <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()" novalidate>
+              <div class="row d-flex justify-content-center">
+  
+                <!-- Name -->
+                <div class="col-12 col-sm-6 pb-2">
+                  <label class="text-light">Your Name</label>
+                  <input type="text" formControlName="name" class="form-control bg-light border-0" style="height:55px">
+                  <div class="text-warning small mt-1" *ngIf="submitted && f['name'].errors">
+                    <small *ngIf="f['name'].errors['required']">Name is required</small>
+                    <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                    <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                  </div>
+                </div>
+  
+                <!-- Phone -->
+                <div class="col-12 col-sm-6 pb-2">
+                  <label class="text-light">Contact Number</label>
+                  <input type="tel" formControlName="phone" class="form-control bg-light border-0" style="height:55px">
+                  <div class="text-warning small mt-1" *ngIf="submitted && f['phone'].errors">
+                    <small *ngIf="f['phone'].errors['required']">Phone number is required</small>
+                    <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                  </div>
+                </div>
+  
+                <!-- Email -->
+                <div class="col-12 pb-2">
+                  <label class="text-light">Your Email Id</label>
+                  <input type="email" formControlName="email" class="form-control bg-light border-0" style="height:55px">
+                  <div class="text-warning small mt-1" *ngIf="submitted && f['email'].errors">
+                    <small *ngIf="f['email'].errors['required']">Email is required</small>
+                    <small *ngIf="f['email'].errors['email']">Invalid email format</small>
+                  </div>
+                </div>
+  
+                <!-- Date -->
+                <div class="col-12 col-sm-6 pb-2">
+                  <label class="text-light">Appointment Date</label>
+                  <input type="date" formControlName="appointment_date"
+                         class="form-control bg-light text-dark border-0" style="height:55px">
+                  <div class="text-warning small mt-1" *ngIf="submitted && f['appointment_date'].errors">
+                    <small *ngIf="f['appointment_date'].errors['required']">Date is required</small>
+                  </div>
+                </div>
+  
+                <!-- Service -->
+                <div class="col-12 col-sm-6 pb-2">
+                  <label class="text-light">Service Looking For</label>
+                  <input type="text" formControlName="service" class="form-control bg-light border-0" style="height:55px">
+                  <div class="text-warning small mt-1" *ngIf="submitted && f['service'].errors">
+                    <small *ngIf="f['service'].errors['required']">Service is required</small>
+                  </div>
+                </div>
+  
+                <!-- Message -->
+                <div class="col-12 pb-2">
+                  <label class="text-light">Leave your message here</label>
+                  <textarea formControlName="message"
+                            class="form-control bg-light border-0" rows="4"></textarea>
+                  <div class="text-warning small mt-1" *ngIf="submitted && f['message'].errors">
+                    <small *ngIf="f['message'].errors['required']">Message is required</small>
+                    <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                  </div>
+                </div>
+  
+                <!-- Submit -->
+                <div class="col-12 mt-2">
+                  <button class="btn btn-light w-100 py-3" type="submit">Make An Appointment</button>
+                </div>
+  
+                <!-- Success/Error -->
+                <div class="col-12 text-center mt-2">
+                  <p class="text-success fw-semibold" *ngIf="successMsg">{{ successMsg }}</p>
+                  <p class="text-danger fw-semibold" *ngIf="errorMsg">{{ errorMsg }}</p>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-
-</section>
+  </section>
+  
