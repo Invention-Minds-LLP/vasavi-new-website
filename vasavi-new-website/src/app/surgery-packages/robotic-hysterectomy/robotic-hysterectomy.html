@@ -5,7 +5,7 @@
             alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
         <img src="img/packages/Vasavi Robotic hysterectomy - mobile size.png" class="mobile_banner"
             alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <a class="book-btn" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</a>
+        <a class="book-btn" (click)="openPopup('Robotic Hysterectomy Surgery')">Book an Appointment</a>
     </div>
 
 
@@ -27,7 +27,7 @@
             </div>
 
             <div class="container_image">
-                <img src="img/packages/robotic-knee-replacement-at-vasavi-hospitals-bangalore.jpg" alt="">
+                <img src="img/go/female-reproductive-system-illustration.png" alt="">
             </div>
         </div>
     </div>
@@ -183,6 +183,10 @@
                 <a href="tel:8884545086" class="cta_call_2">Call Now</a>
             </div>
         </div>
+    </div>
+
+    <div class="pop-up-form">
+        <app-package-form [showModal]="showPopup" [planName]="selectedPlan" (closed)="onModalClosed()" />
     </div>
 
 </div>

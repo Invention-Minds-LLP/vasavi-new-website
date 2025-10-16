@@ -401,6 +401,7 @@ boby {
     left: 18%;
     top: 103%;
     margin-top: -90px;
+    cursor: pointer;
 }
 
 .book-btn:hover {

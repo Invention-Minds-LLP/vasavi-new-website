@@ -5,7 +5,7 @@
             alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
         <img src="img/packages/Vasavi- Robotic Appendix - mobile size 16-10-25.png" class="mobile_banner"
             alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <a class="book-btn" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</a>
+        <a class="book-btn" (click)="openPopup(' Robotic Appendectomy Surgery')">Book an Appointment</a>
     </div>
 
 
@@ -70,7 +70,7 @@
         </div>
 
         <div class="btn_section">
-            <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')"> Book Your Surgery Package
+            <button class="cta_2" (click)="openPopup(' Robotic Appendectomy Surgery')"> Book Your Surgery Package
                 Now</button>
         </div>
     </div>
@@ -274,10 +274,14 @@
                 Appendectomy Surgery helps you heal quickly, move comfortably, and live freely again — all with the
                 safety of robotic precision and expert care.</p>
             <div class="cta_flex">
-                <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</button>
+                <button class="cta_2" (click)="openPopup(' Robotic Appendectomy Surgery')">Book an Appointment</button>
                 <a href="tel:8884545086" class="cta_call_2">Call Now</a>
             </div>
         </div>
+    </div>
+
+    <div class="pop-up-form">
+        <app-package-form [showModal]="showPopup" [planName]="selectedPlan" (closed)="onModalClosed()" />
     </div>
 
 </div>
