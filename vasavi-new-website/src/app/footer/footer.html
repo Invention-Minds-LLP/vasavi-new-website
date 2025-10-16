@@ -112,10 +112,26 @@
                 <p>&copy; Vasavi Hospitals All Rights Reserved.</p>
             </div>
 
-            <div class="col-12 text-start col-md-6 d-flex align-items-sm-start align-items-md-end flex-column">
-                <p>Designed by <a target="_blank" rel="noopener noreferrer" rel="canonical"
-                        href="https://www.furecs.com/">Future Revolution</a></p>
+            <!-- Show "Invention Minds" only for specified routes -->
+            <div class="col-12 text-start col-md-6 d-flex align-items-sm-start align-items-md-end flex-column"
+                *ngIf="showDesigner()">
+                <p>
+                    Designed and Developed by
+                    <a href="https://inventionminds.com/" target="_blank" rel="noopener noreferrer">
+                        Invention Minds LLP
+                    </a>
+                </p>
+            </div>
 
+            <!-- Otherwise, show "Future Revolution" -->
+            <div class="col-12 text-start col-md-6 d-flex align-items-sm-start align-items-md-end flex-column"
+                *ngIf="!showDesigner()">
+                <p>
+                    Designed by
+                    <a href="https://www.furecs.com/" target="_blank" rel="noopener noreferrer" rel="canonical">
+                        Future Revolution
+                    </a>
+                </p>
             </div>
         </div>
     </div>

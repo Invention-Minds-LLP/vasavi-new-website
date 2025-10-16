@@ -2,7 +2,7 @@
 
 .navbar.sticky-top {
   top: 0;              /* keep it at the top */
-  z-index: 1100;       /* above content */
+  /* z-index: 1100;        */
   background: #fff;    /* optional */
 }
 
