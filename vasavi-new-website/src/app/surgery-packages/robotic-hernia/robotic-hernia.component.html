@@ -1,11 +1,11 @@
 <div class="root-container">
     <!-- hero section -->
-<div class="hero-section">
+    <div class="hero-section">
         <img src="img/packages/robothic Hernia - 15-10-25.png" class="desktop_banner"
             alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
         <img src="img/packages/Robotic hernia - mobile size.png" class="mobile_banner"
             alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <a class="book-btn">Book an Appointment</a>
+        <a class="book-btn" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</a>
     </div>
 
 
@@ -15,9 +15,15 @@
 
             <div class="container_content">
                 <div class="heading">When Hernia Pain Starts Affecting Daily Life</div>
-                <p class="para">A hernia doesn’t just cause a bulge — it can lead to pain, weakness, and difficulty with movement. Over time, untreated hernias may grow larger or even cause complications that affect digestion and overall comfort.</p>
-                <p class="para">If you’ve tried medicines or support belts without relief, Robotic Hernia Repair offers a safe, lasting solution.</p>
-                <p class="para">Our Robotic Hernia Surgery Package (₹1,80,000)* includes consultation, surgery, anesthesia, hospital stay, and post-operative care — all under one transparent plan. With robotic precision and minimal scarring, most patients resume light activity within days and recover fully within weeks.</p>
+                <p class="para">A hernia doesn’t just cause a bulge — it can lead to pain, weakness, and difficulty with
+                    movement. Over time, untreated hernias may grow larger or even cause complications that affect
+                    digestion and overall comfort.</p>
+                <p class="para">If you’ve tried medicines or support belts without relief, Robotic Hernia Repair offers
+                    a safe, lasting solution.</p>
+                <p class="para">Our Robotic Hernia Surgery Package (₹1,80,000)* includes consultation, surgery,
+                    anesthesia, hospital stay, and post-operative care — all under one transparent plan. With robotic
+                    precision and minimal scarring, most patients resume light activity within days and recover fully
+                    within weeks.</p>
             </div>
 
             <div class="container_image">
@@ -29,7 +35,9 @@
     <!-- section 3 -->
     <div class="container_2">
         <div class="heading text-center">Why Choose Robotic Hernia Surgery at Vasavi Hospitals</div>
-        <p class="para">Because precision and safety matter when it comes to your recovery. At Vasavi Hospitals, our robotic-assisted technology allows surgeons to operate with unmatched accuracy, ensuring quicker recovery, minimal pain, and reduced recurrence risk.</p>
+        <p class="para">Because precision and safety matter when it comes to your recovery. At Vasavi Hospitals, our
+            robotic-assisted technology allows surgeons to operate with unmatched accuracy, ensuring quicker recovery,
+            minimal pain, and reduced recurrence risk.</p>
 
         <div class="sub_heading text-center">Here’s what makes it the right choice</div>
         <div class="card_section">
@@ -60,9 +68,100 @@
         </div>
 
         <div class="btn_section">
-            <button class="cta_2"> Book Your Surgery Package Now</button>
+            <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')"> Book Your Surgery Package
+                Now</button>
         </div>
     </div>
+
+
+    <!-- robotic-hernia section (Da Vinci Xi) -->
+    <div class="container_2" id="robotic-hernia">
+        <div class="cathlab_section">
+            <div class="cathlab_container">
+                <div class="cathlab_content">
+                    <h2 class="cathlab_main_title">Robotic Hernia Surgery with Da Vinci Xi Technology</h2>
+                    <p class="cathlab_intro_text">
+                        Vasavi Hospitals in Banashankari, Bangalore, offers advanced
+                        <strong>Robotic Hernia Surgery using the Da Vinci Xi system</strong>.
+                        This next-generation robotic platform provides surgeons with unmatched control and precision,
+                        allowing safer, minimally invasive hernia repairs with faster recovery.
+                    </p>
+
+                    <h3 class="cathlab_sub_title">
+                        Why Choose Da Vinci Xi Robotic Hernia Surgery at Vasavi Hospitals, Banashankari, Bangalore?
+                    </h3>
+
+                    <div class="cathlab_features">
+                        <!-- card-1 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Superior Precision & Visualization</h4>
+                                <p class="cathlab_feature_desc">
+                                    The Da Vinci Xi system offers 3D HD vision and wristed instruments that move with
+                                    human-like dexterity,
+                                    ensuring precise hernia repair even in complex areas.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-2 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Smaller Cuts, Minimal Pain</h4>
+                                <p class="cathlab_feature_desc">
+                                    Tiny incisions reduce scarring and postoperative discomfort,
+                                    helping patients return to normal activity sooner.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-3 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-hand-holding-medical"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Faster Recovery & Shorter Hospital Stay</h4>
+                                <p class="cathlab_feature_desc">
+                                    The precision and minimal tissue trauma of robotic surgery mean
+                                    quicker healing, lower infection risk, and early discharge.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-4 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Long-Term Durability & Safety</h4>
+                                <p class="cathlab_feature_desc">
+                                    Secure mesh placement and enhanced precision lower the chances of hernia recurrence,
+                                    ensuring long-lasting results and confidence in recovery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt" style="margin-top: 30px;">
+                        <p class="cathlab_intro_text">
+                            With <strong>Da Vinci Xi Robotic Hernia Surgery</strong> in Banashankari, Bangalore,
+                            Vasavi Hospitals delivers cutting-edge surgical excellence — combining accuracy,
+                            safety, and faster recovery for a smoother healing experience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- section 4 -->
     <div class="container_2">
@@ -70,8 +169,11 @@
         <!-- doctor section -->
         <div class="doctors-section" id="doctors">
             <h2 class="heading text-center">Meet Our Surgical Experts</h2>
-            <p class="para_style doc_sec_para">Behind every successful recovery is a team that treats you like family.</p>
-            <p class="para_style doc_sec_para">Our experienced surgeons at Vasavi Hospitals have performed hundreds of successful hernia repairs using advanced robotic systems — delivering safer outcomes, minimal pain, and quicker discharge.</p>
+            <p class="para_style doc_sec_para">Behind every successful recovery is a team that treats you like family.
+            </p>
+            <p class="para_style doc_sec_para">Our experienced surgeons at Vasavi Hospitals have performed hundreds of
+                successful hernia repairs using advanced robotic systems — delivering safer outcomes, minimal pain, and
+                quicker discharge.</p>
 
             <div class="doctors-container">
                 <!-- Doctor 1 -->
@@ -109,7 +211,8 @@
 
     <div class="container_2">
         <h2 class="heading text-center">Why Vasavi Hospitals</h2>
-        <p class="para text-center">At Vasavi Hospitals, we bring together technology, experience, and empathy to provide world-class surgical care with personal attention.</p>
+        <p class="para text-center">At Vasavi Hospitals, we bring together technology, experience, and empathy to
+            provide world-class surgical care with personal attention.</p>
         <p class="para text-center"> Our focus is on delivering top-quality results with warmth, care, and personalized
             attention</p>
 
@@ -150,14 +253,16 @@
         <div class="why_vasavi_flex">
             <div class="content">
                 <h3 class="why_vasavi_heading">Easy Access & Patient Comfort</h3>
-                <p class="para">Conveniently located in Kumaraswamy Layout, well-connected by Metro and major city routes.</p>
+                <p class="para">Conveniently located in Kumaraswamy Layout, well-connected by Metro and major city
+                    routes.</p>
                 <ul>
                     <li class="para">Conveniently located in Kumaraswamy Layout, easily reachable by Metro and major
                         routes.</li>
                     <li class="para">Lodging options available for attendants and families.</li>
                     <li class="para">Surrounded by pharmacies, restaurants, and essential amenities.</li>
                 </ul>
-                <p class="para">From consultation to complete recovery, we make your hospital experience stress-free.</p>
+                <p class="para">From consultation to complete recovery, we make your hospital experience stress-free.
+                </p>
             </div>
             <div class="why_vasavi_image">
                 <img src="img/packages/vasavi-hospitals-transportation-image.png" alt="">
@@ -168,12 +273,17 @@
     <div class="container_2">
         <div class="we_cure_with_care_section">
             <h2 class="heading">We Cure With Care</h2>
-            <p class="para">No more pain. No more limits. At Vasavi Hospitals, our Robotic Hernia Surgery ensures faster healing, greater comfort, and long-term relief — so you can get back to doing what you love.</p>
+            <p class="para">No more pain. No more limits. At Vasavi Hospitals, our Robotic Hernia Surgery ensures faster
+                healing, greater comfort, and long-term relief — so you can get back to doing what you love.</p>
             <div class="cta_flex">
-                <button class="cta_2">Book an Appointment</button>
+                <button (click)="openPopup('Robotic Total Knee Relacement')" class="cta_2">Book an Appointment</button>
                 <a href="tel:08071500500" class="cta_call_2">Call Now</a>
             </div>
         </div>
+    </div>
+
+    <div class="pop-up-form">
+        <app-package-form [showModal]="showPopup" [planName]="selectedPlan" (closed)="onModalClosed()" />
     </div>
 
 </div>

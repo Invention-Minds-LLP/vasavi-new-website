@@ -1,11 +1,11 @@
 <div class="root-container">
     <!-- hero section -->
-  <div class="hero-section">
+    <div class="hero-section">
         <img src="img/packages/Robotic Total Knee.png" class="desktop_banner"
             alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
         <img src="img/packages/Robotic Total Knee - mobile size.png" class="mobile_banner"
             alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <a class="book-btn">Book an Appointment</a>
+        <a class="book-btn" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</a>
     </div>
 
     <!-- section 2 -->
@@ -62,9 +62,101 @@
         </div>
 
         <div class="btn_section">
-            <button class="cta_2"> Book Your Surgery Package Now</button>
+            <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')"> Book Your Surgery Package
+                Now</button>
         </div>
     </div>
+
+    <!-- robotic-knee section (Mako) -->
+    <div class="container_2" id="robotic-knee">
+        <div class="cathlab_section">
+            <div class="cathlab_container">
+                <div class="cathlab_content">
+                    <h2 class="cathlab_main_title">Robotic Knee Replacement Surgery with Mako Technology</h2>
+                    <p class="cathlab_intro_text">
+                        Vasavi Hospitals is among the few centers in Banashankari, Bangalore, offering advanced
+                        <strong>Robotic Knee Replacement using Mako technology</strong>. This next-generation system
+                        combines the
+                        expertise of our orthopedic surgeons with robotic precision for safer, more accurate, and faster
+                        knee
+                        replacements.
+                    </p>
+
+                    <h3 class="cathlab_sub_title">
+                        Why Choose Mako Robotic Knee Replacement at Vasavi Hospitals, Banashankari, Bangalore?
+                    </h3>
+
+                    <div class="cathlab_features">
+                        <!-- card-1 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Unmatched Surgical Precision</h4>
+                                <p class="cathlab_feature_desc">
+                                    The Mako system ensures millimeter-level accuracy in implant positioning, improving
+                                    alignment and long-term joint performance.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-2 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Customized to Every Patient</h4>
+                                <p class="cathlab_feature_desc">
+                                    Each procedure is pre-planned using a 3D CT scan that maps your unique knee anatomy
+                                    for a personalized fit.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-3 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-hand-holding-medical"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Less Pain, Minimal Scarring & Faster Recovery</h4>
+                                <p class="cathlab_feature_desc">
+                                    Robotic precision means smaller incisions, reduced tissue damage, and a quicker
+                                    return to normal activities.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- card-4 -->
+                        <div class="cathlab_feature_item">
+                            <div class="cathlab_icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="cathlab_feature_content">
+                                <h4 class="cathlab_feature_title">Improved Mobility & Long-Lasting Results</h4>
+                                <p class="cathlab_feature_desc">
+                                    Patients experience more natural movement, better stability, and lasting comfort
+                                    after surgery.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt" style="margin-top: 30px;">
+                        <p class="cathlab_intro_text">
+                            With <strong>Mako Robotic Knee Replacement</strong> in Banashankari, Bangalore, Vasavi
+                            Hospitals offers a
+                            breakthrough in joint replacement care — combining precision, safety, and faster healing for
+                            every patient.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- section 4 -->
     <div class="container_2">
@@ -176,10 +268,15 @@
                 Knee Replacement Surgery restores your strength, stability, and freedom — so you can enjoy every step
                 again.</p>
             <div class="cta_flex">
-                <button class="cta_2">Book an Appointment</button>
+                <button class="cta_2" (click)="openPopup('Robotic Total Knee Relacement')">Book an Appointment</button>
                 <a href="tel:08071500500" class="cta_call_2">Call Now</a>
             </div>
         </div>
+    </div>
+
+
+    <div class="pop-up-form">
+        <app-package-form [showModal]="showPopup" [planName]="selectedPlan" (closed)="onModalClosed()" />
     </div>
 
 </div>
