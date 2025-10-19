@@ -77,7 +77,8 @@ export class Package implements OnInit {
     };
 
     const emailRequest = {
-      to: ['inventionmindsblr@gmail.com'],
+      // to: ['inventionmindsblr@gmail.com'],
+      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
       status: 'Package-Enquiry',
       appointmentDetails: emailParams,
     };

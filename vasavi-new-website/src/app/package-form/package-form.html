@@ -9,10 +9,10 @@
       <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()" novalidate>
         <!-- Plan -->
         <div class="form-group">
-          <label>Plan Name</label>
+          <label>Package Name</label>
           <input formControlName="plan" type="text" [value]="planName" placeholder="Enter the Package Name" [disabled]="true"/>
           <div class="error" *ngIf="submitted && f['plan'].errors">
-            <small *ngIf="f['plan'].errors['required']">Plan name is required</small>
+            <small *ngIf="f['plan'].errors['required']">Package name is required</small>
           </div>
         </div>
 

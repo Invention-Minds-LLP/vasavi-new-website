@@ -1083,8 +1083,8 @@ export class Doctor {
       // };
 
       const emailRequest = {
-        // to: ['patientservices@rashtrotthanahospital.com', 'frontoffice@rashtrotthanahospital.com'],
-        to:['inventionmindsblr@gmail.com'],
+        // to:['inventionmindsblr@gmail.com'],
+        to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
         status: 'frontoffice',
         appointmentDetails: emailParams,
       };

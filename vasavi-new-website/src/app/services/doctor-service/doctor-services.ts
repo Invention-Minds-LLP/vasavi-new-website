@@ -12,8 +12,8 @@ interface BotReply {
 
 @Injectable({ providedIn: 'root' })
 export class DoctorServices {
-  // private apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  private apiUrl = "https://backend-812956739285.us-east4.run.app/api"
+  private apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // private apiUrl = "https://backend-812956739285.us-east4.run.app/api"
   private step = 1;
   private state: any = {};
 
@@ -299,8 +299,8 @@ export class DoctorServices {
               };
 
               const emailPayload = {
-                // to: ['digital@vasavihospitals.com', 'Vinay.d@vasavihospitals.com'], // Add any other recipients here
-                to: ['inventionmindsblr@gmail.com'],
+                to: ['digital@vasavihospitals.com', 'Vinay.d@vasavihospitals.com'], // Add any other recipients here
+                // to: ['inventionmindsblr@gmail.com'],
                 status: 'frontoffice',
                 appointmentDetails: emailParams
               };

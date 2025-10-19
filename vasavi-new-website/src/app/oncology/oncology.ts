@@ -96,7 +96,8 @@ export class Oncology {
      };
  
      const emailRequest = {
-       to: ['inventionmindsblr@gmail.com'],
+      //  to: ['inventionmindsblr@gmail.com'],
+      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
        status: 'Service-Page',
        appointmentDetails: emailParams,
      };

@@ -18,6 +18,8 @@ export class Footer implements OnInit {
   errorMsg = '';
   isLoading = false;
 
+  hide : boolean = true
+
   // apiUrl = 'http://localhost:3000/api';.
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
@@ -60,7 +62,8 @@ export class Footer implements OnInit {
     };
 
     const emailRequest = {
-      to: ['inventionmindsblr@gmail.com'],
+      // to: ['inventionmindsblr@gmail.com'],
+      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
       status: 'Enquiry-Form',
       appointmentDetails: emailParams,
     };
@@ -71,14 +74,13 @@ export class Footer implements OnInit {
         this.enquiryForm.reset();
         this.submitted = false;
         this.isLoading = false;
+        this.hide = false
         this.router.navigate(['/thank-you']);
 
-        // Optional: close modal automatically
         const modal = document.getElementById('enquire');
-        if (modal) {
-          const bsModal = (window as any).bootstrap.Modal.getInstance(modal);
-          bsModal?.hide();
-        }
+        const bsModal = (window as any).bootstrap.Modal.getInstance(modal);
+        bsModal?.hide();
+        
       },
       error: (err: any) => {
         console.error('❌ Error sending enquiry:', err);

@@ -73,7 +73,8 @@ export class PackageForm implements OnInit {
     this.isLoading = true;
 
     const emailRequest = {
-      to: ['inventionmindsblr@gmail.com'],
+      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
+      // to: ['inventionmindsblr@gmail.com'],
       status: 'Package-Enquiry',
       appointmentDetails: this.appointmentForm.value,
     };

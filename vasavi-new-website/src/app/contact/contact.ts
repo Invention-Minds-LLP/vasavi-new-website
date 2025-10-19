@@ -81,7 +81,8 @@ export class Contact {
     };
 
     const emailRequest = {
-      to: ['inventionmindsblr@gmail.com'],
+      // to: ['inventionmindsblr@gmail.com'],
+      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
       status: 'Contact-Page',
       appointmentDetails: emailParams,
     };
