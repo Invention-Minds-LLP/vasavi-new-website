@@ -78,144 +78,135 @@
 
     <div #navbarCollapse class="collapse navbar-collapse " id="navbarCollapse" (click)="onNavClick($event)">
         <div class="navbar-nav mx-auto py-0">
-            <a rel="canonical" [routerLink]="'/'" class="nav-item nav-link ">Home</a>
-            <a rel="canonical" [routerLink]="'/about'" class="nav-item nav-link ">About Us</a>
+            <a rel="canonical" [routerLink]="'/'" class="nav-item nav-link">Home</a>
+            <a rel="canonical" [routerLink]="'/about-vasavi-hospitals-in-bangalore'" class="nav-item nav-link">About
+                Us</a>
+
             <div class="nav-item dropdown">
-                <a rel="canonical" href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our
-                    Services</a>
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <ul>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/anesthesiology'"> Anesthesiology
-                            </a>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/anesthesiology-hospital-in-bangalore'">Anesthesiology</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/bariatric-surgery-in-bangalore'">Bariatric
+                                Surgery</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/cardiology-hospital-in-bangalore'">Cardiology</a>
                         </li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/bariatric-surgery'">Bariatric
-                                Surgery
-                            </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/cardiology'"> Cardiology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/dentistry'"> Dentistry </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/dermatology'">Dermatology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/diabetes-endocrinology'">Diabetes &
+                        <li><a class="dropdown-item" [routerLink]="'/dental-clinic-in-bangalore'">Dentistry</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/dermatology-skin-clinic-in-bangalore'">Dermatology</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/diabetes-and-endocrinology-center-in-bangalore'">Diabetes &
                                 Endocrinology</a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/emergency-critical-care'">Emergency
-                                &
-                                Critical Care </a></li>
-
-
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/emergency-and-critical-care-in-bangalore'">Emergency & Critical Care</a>
+                        </li>
                     </ul>
 
                     <ul>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/ent'"> ENT </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/internal-medicine'">Internal
+                        <li><a class="dropdown-item" [routerLink]="'/ent-hospital-in-bangalore'">ENT</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/internal-medicine-hospital-in-bangalore'">Internal
                                 Medicine</a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/liver-hpb-care'">Liver And HPB Care
-                            </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/medical-gastroenterology'"> Medical
-                                Gastroenterology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/medical-oncology'">Medical Oncology
-                            </a></li>
-                        <li><a rel="canonical" class="dropdown-item"
-                                [routerLink]="'/minimally-invasive-surgery'">Minimally
-                                Invasive Surgery </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/neonatology'"> Neonatology - (Level
-                                –
-                                3 NICU) </a></li>
-
-
-
-                    </ul>
-
-                    <ul>
-
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/nephrology'"> Nephrology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/neurology'">Neurology</a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/neurosurgery'"> Neurosurgery </a>
+                        <li><a class="dropdown-item" [routerLink]="'/liver-hpb-care-center-in-bangalore'">Liver & HPB
+                                Care</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/gastroenterology-hospital-in-bangalore'">Medical
+                                Gastroenterology</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/medical-oncology-cancer-treatment-in-bangalore'">Medical Oncology</a>
                         </li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/nutrition-dietetics'"> Nutrition &
-                                Dietetics </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/obstetrics-gynaecology'">Obstetrics
-                                &
-                                Gynaecology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/oncology'">Oncology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/opthalmology'"> Ophthalmology</a>
+                        <li><a class="dropdown-item" [routerLink]="'/minimally-invasive-surgery-in-bangalore'">Minimally
+                                Invasive Surgery</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/neonatology-and-nicu-care-in-bangalore'">Neonatology (Level-3 NICU)</a>
                         </li>
                     </ul>
 
                     <ul>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/oral-maxillofacial-surgery'">Oral &
-                                Maxillofacial Surgery </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/orthopedic'">Orthopedics</a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/pediatrics'">Pediatrics </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/physiotherapy'"> Physiotherapy</a>
+                        <li><a class="dropdown-item" [routerLink]="'/nephrology-hospital-in-bangalore'">Nephrology</a>
                         </li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/plastic-surgery'">Plastic
-                                Surgery</a>
+                        <li><a class="dropdown-item" [routerLink]="'/neurology-hospital-in-bangalore'">Neurology</a>
                         </li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/psychiatry'"> Psychiatry </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/pulmonology'"> Pulmonology </a>
-                        </li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/neurosurgery-specialist-in-bangalore'">Neurosurgery</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/nutrition-and-dietetics-consultation-in-bangalore'">Nutrition &
+                                Dietetics</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/obstetrics-and-gynaecology-hospital-in-bangalore'">Obstetrics &
+                                Gynaecology</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/oncology-hospital-in-bangalore'">Oncology</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/eye-hospital-in-bangalore'">Ophthalmology</a></li>
                     </ul>
 
                     <ul>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/radiology'">Radiology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/surgical-gastroenterology'">
-                                Surgical
-                                Gastroenterology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/surgical-oncology'">Surgical
-                                Oncology
-                            </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/urology'"> Urology </a></li>
-                        <li><a rel="canonical" class="dropdown-item" [routerLink]="'/vascular-science'">Vascular
+                        <li><a class="dropdown-item" [routerLink]="'/oral-and-maxillofacial-surgery-in-bangalore'">Oral
+                                & Maxillofacial Surgery</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/orthopedic-hospital-in-bangalore'">Orthopedics</a>
+                        </li>
+                        <li><a class="dropdown-item" [routerLink]="'/pediatric-hospital-in-bangalore'">Pediatrics</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/physiotherapy-center-in-bangalore'">Physiotherapy</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/plastic-and-reconstructive-surgery-in-bangalore'">Plastic Surgery</a>
+                        </li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/psychiatry-and-mental-health-in-bangalore'">Psychiatry</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/lung-specialist-in-bangalore'">Pulmonology</a></li>
+                    </ul>
+
+                    <ul>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/radiology-and-imaging-services-in-bangalore'">Radiology</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/surgical-gastroenterology-in-bangalore'">Surgical
+                                Gastroenterology</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/surgical-oncology-cancer-hospital-in-bangalore'">Surgical Oncology</a>
+                        </li>
+                        <li><a class="dropdown-item" [routerLink]="'/urology-hospital-in-bangalore'">Urology</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/vascular-surgery-in-bangalore'">Vascular
                                 Sciences</a></li>
-
                     </ul>
                 </div>
             </div>
-        <li class="nav-item dropdown">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="packagesDropdown"
-            role="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Surgery Packages
-          </a>
-          <div class="dropdown-menu left" aria-labelledby="packagesDropdown">
-          <ul>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-hernia-surgery'">Robotic Hernia Surgery</a></li>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-tkr'">Robotic TKR</a></li>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-thr'">Robotic THR</a></li>
-          </ul>
-          <ul>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-gallbladder-removal-surgery'">Robotic Gallbladder Removal</a></li>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-appendectomy-surgery'">Robotic Appendectomy</a></li>
-            <li><a class="dropdown-item" [routerLink]="'/robotic-hysterectomy-surgery'">Robotic Hysterectomy</a></li>
-          </ul>
-          </div>
 
-          
-        </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" data-bs-toggle="dropdown">Our
+                    Packages</a>
+                <div class="dropdown-menu left" aria-labelledby="packagesDropdown">
+                    <ul>
+                        <li><a class="dropdown-item" [routerLink]="'/robotic-hernia-surgery-in-bangalore'">Robotic
+                                Hernia Surgery</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/robotic-total-knee-replacement-in-bangalore'">Robotic TKR</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/robotic-total-hip-replacement-in-bangalore'">Robotic THR</a></li>
+                        <li><a class="dropdown-item"
+                                [routerLink]="'/robotic-gallbladder-removal-surgery-in-bangalore'">Robotic Gallbladder
+                                Removal</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/robotic-appendectomy-surgery-in-bangalore'">Robotic
+                                Appendectomy</a></li>
+                        <li><a class="dropdown-item" [routerLink]="'/robotic-hysterectomy-surgery-in-bangalore'">Robotic
+                                Hysterectomy</a></li>
+                    </ul>
+                </div>
+            </li>
 
-            <a rel="canonical" [routerLink]="'/awards'" class="nav-item nav-link">Awards </a>
+            <a rel="canonical" [routerLink]="'/awards-and-recognition'" class="nav-item nav-link">Awards</a>
             <a rel="canonical" [routerLink]="'/gallery'" class="nav-item nav-link">Gallery</a>
+            <a rel="canonical" href="https://vasavihospitals.com/blog/" target="_blank"
+                class="nav-item nav-link">Blog</a>
+            <a rel="canonical" [routerLink]="'/contact-vasavi-hospitals-in-bangalore'" class="nav-item nav-link">Contact
+                Us</a>
 
-            <a rel="canonical" target="_blank" rel="noopener noreferrer" href="https://vasavihospitals.com/blog/"
-                class="nav-item nav-link">Blog </a>
-            <a rel="canonical" [routerLink]="'/contact'" class="nav-item nav-link">Contact Us</a>
-
-            <a rel="canonical" href="http://115.243.85.241:700/" target="_blank"
-                class="btn btn-primary py-2 px-4 ms-3 d-block d-md-none mb-3">Patient Portal</a>
-            <a rel="canonical" [routerLink]="'/package'"
-                class="btn btn-primary py-2 px-4 ms-3 d-block d-md-none mb-3">Health Package </a>
-            <!-- <a rel="canonical" href="contact.php" target="_blank" class="btn btn-primary py-2 px-4 ms-3 d-block d-md-none mb-3" >Book An Appointment</a> -->
+            <a rel="canonical" [routerLink]="'/health-packages-in-bangalore'"
+                class="btn btn-primary py-2 px-4 ms-3 d-block d-md-none mb-3">Health Package</a>
             <a rel="canonical" href="http://115.243.85.241:650/" target="_blank"
-                class="btn btn-primary py-2 px-4 ms-3 d-block d-md-none mb-3">Book An Appointment</a>
-
+                class="btn btn-primary py-2 px-4 ms-3 d-block d-md-none mb-3">Book Appointment</a>
         </div>
-
 
         <a rel="canonical" href="http://115.243.85.241:650/" target="_blank"
             class="btn btn-primary py-2 px-4 ms-3 d-none d-md-block">Book An Appointment</a>
+
     </div>
 </nav>

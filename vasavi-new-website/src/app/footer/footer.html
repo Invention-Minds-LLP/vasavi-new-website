@@ -48,20 +48,27 @@
                             <h3 class="text-light mb-0">Quick Links</h3>
                         </div>
                         <div class="link-animated pt-2 pt-md-4 d-flex flex-column justify-content-start">
-                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/home'"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/about'"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/awards'"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Awards</a>
-
-                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/gallery'"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Gallery</a>
-                            <a class="text-light mb-2" rel="canonical" target="_blank" rel="noopener noreferrer"
-                                href="https://vasavihospitals.com/blog/"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Blog</a>
-                            <a class="text-light" rel="canonical" [routerLink]="'/contact'"><i
-                                    class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/'">
+                                <i class="bi bi-arrow-right text-primary me-2"></i>Home
+                            </a>
+                            <a class="text-light mb-2" rel="canonical"
+                                [routerLink]="'/about-vasavi-hospitals-in-bangalore'">
+                                <i class="bi bi-arrow-right text-primary me-2"></i>About Us
+                            </a>
+                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/awards-and-recognition'">
+                                <i class="bi bi-arrow-right text-primary me-2"></i>Awards
+                            </a>
+                            <a class="text-light mb-2" rel="canonical" [routerLink]="'/gallery'">
+                                <i class="bi bi-arrow-right text-primary me-2"></i>Gallery
+                            </a>
+                            <a class="text-light mb-2" rel="canonical" target="_blank"
+                                href="https://vasavihospitals.com/blog/">
+                                <i class="bi bi-arrow-right text-primary me-2"></i>Blog
+                            </a>
+                            <a class="text-light" rel="canonical"
+                                [routerLink]="'/contact-vasavi-hospitals-in-bangalore'">
+                                <i class="bi bi-arrow-right text-primary me-2"></i>Contact Us
+                            </a>
                         </div>
                     </div>
 
@@ -152,7 +159,7 @@
         <div class="col-3">
             <div class="mobile-bottom-nav__item mobile-bottom-nav__item--active">
                 <div class="mobile-bottom-nav__item-content">
-                    <a rel="canonical" [routerLink]="'/home'">
+                    <a rel="canonical" [routerLink]="'/'">
                         <i class='fa fa-home'></i>
                         Home
                     </a>
@@ -172,7 +179,7 @@
         <div class="col-3">
             <div class="mobile-bottom-nav__item">
                 <div class="mobile-bottom-nav__item-content">
-                    <a rel="canonical" href="https://api.whatsapp.com/send?phone=+9188845 45086">
+                    <a rel="canonical" href="https://api.whatsapp.com/send?phone=+918884545086">
                         <i class='fab fa-whatsapp'></i>
                         Whatsapp
                     </a>
@@ -182,7 +189,7 @@
         <div class="col-3">
             <div class="mobile-bottom-nav__item">
                 <div class="mobile-bottom-nav__item-content">
-                    <a rel="canonical" [routerLink]="'/contact'">
+                    <a rel="canonical" [routerLink]="'/contact-vasavi-hospitals-in-bangalore'">
                         <i class='fa fa-envelope'></i>
                         Enquire
                     </a>
@@ -191,6 +198,7 @@
         </div>
     </div>
 </nav>
+
 
 <div class="modal fade" id="enquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -297,99 +305,105 @@
 
 <div class="modal fade" id="enquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        
-        <!-- Header -->
-        <div class="modal-header mod_head">
-          <h5 class="modal-title" id="exampleModalLabel">
-            <i class='bx bx-envelope vrt'></i> Enquire Now
-          </h5>
-          <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-  
-        <!-- Body -->
-        <div class="modal-body">
-          <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()" novalidate>
-            <div class="row g-3">
-              
-              <!-- Name -->
-              <div class="col-12 col-sm-6">
-                <label>Your Name</label>
-                <input formControlName="name" type="text" class="form-control bg-light border-0" style="height:55px">
-                <div class="text-danger small mt-1" *ngIf="submitted && f['name'].errors">
-                  <small *ngIf="f['name'].errors['required']">Name is required</small>
-                  <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
-                  <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
-                </div>
-              </div>
-  
-              <!-- Phone -->
-              <div class="col-12 col-sm-6">
-                <label>Contact Number</label>
-                <input formControlName="phone" type="tel" class="form-control bg-light border-0" style="height:55px">
-                <div class="text-danger small mt-1" *ngIf="submitted && f['phone'].errors">
-                  <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
-                  <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
-                </div>
-              </div>
-  
-              <!-- Appointment Date -->
-              <div class="col-12 col-sm-6">
-                <label>Appointment Date</label>
-                <input formControlName="appointment_date" type="date" class="form-control bg-light border-0 text-dark" style="height:55px">
-                <div class="text-danger small mt-1" *ngIf="submitted && f['appointment_date'].errors">
-                  <small *ngIf="f['appointment_date'].errors['required']">Appointment date is required</small>
-                </div>
-              </div>
-  
-              <!-- Service -->
-              <div class="col-12 col-sm-6">
-                <label>Service Looking For</label>
-                <input formControlName="service" type="text" class="form-control bg-light border-0" style="height:55px">
-                <div class="text-danger small mt-1" *ngIf="submitted && f['service'].errors">
-                  <small *ngIf="f['service'].errors['required']">Service is required</small>
-                </div>
-              </div>
-  
-              <!-- Message -->
-              <div class="col-12">
-                <label>Leave your message here</label>
-                <textarea formControlName="message" rows="4" class="form-control bg-light border-0"></textarea>
-                <div class="text-danger small mt-1" *ngIf="submitted && f['message'].errors">
-                  <small *ngIf="f['message'].errors['required']">Message is required</small>
-                  <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
-                </div>
-              </div>
-  
-              <!-- reCAPTCHA (optional placeholder, can integrate Google API) -->
-              <div class="col-12">
-                <div id="recaptcha-container" class="my-2"></div>
-                <div class="text-danger small" *ngIf="submitted && f['recaptcha'].errors">
-                  <small *ngIf="f['recaptcha'].errors['required']">Please complete the reCAPTCHA</small>
-                </div>
-              </div>
-  
-              <!-- Submit Button -->
-              <div class="col-12">
-                <button type="submit" class="btn btn-primary w-100 py-3" [disabled]="isLoading">
-                  <span *ngIf="!isLoading">Make An Appointment</span>
-                  <span *ngIf="isLoading"><i class="bx bx-loader bx-spin"></i> Sending...</span>
-                </button>
-              </div>
-  
-              <!-- Success/Error Messages -->
-              <div class="col-12 text-center mt-2">
-                <p class="text-success fw-semibold" *ngIf="successMsg">{{ successMsg }}</p>
-                <p class="text-danger fw-semibold" *ngIf="errorMsg">{{ errorMsg }}</p>
-              </div>
-  
+        <div class="modal-content">
+
+            <!-- Header -->
+            <div class="modal-header mod_head">
+                <h5 class="modal-title" id="exampleModalLabel">
+                    <i class='bx bx-envelope vrt'></i> Enquire Now
+                </h5>
+                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </form>
+
+            <!-- Body -->
+            <div class="modal-body">
+                <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()" novalidate>
+                    <div class="row g-3">
+
+                        <!-- Name -->
+                        <div class="col-12 col-sm-6">
+                            <label>Your Name</label>
+                            <input formControlName="name" type="text" class="form-control bg-light border-0"
+                                style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['name'].errors">
+                                <small *ngIf="f['name'].errors['required']">Name is required</small>
+                                <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                                <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="col-12 col-sm-6">
+                            <label>Contact Number</label>
+                            <input formControlName="phone" type="tel" class="form-control bg-light border-0"
+                                style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['phone'].errors">
+                                <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
+                                <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                            </div>
+                        </div>
+
+                        <!-- Appointment Date -->
+                        <div class="col-12 col-sm-6">
+                            <label>Appointment Date</label>
+                            <input formControlName="appointment_date" type="date"
+                                class="form-control bg-light border-0 text-dark" style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['appointment_date'].errors">
+                                <small *ngIf="f['appointment_date'].errors['required']">Appointment date is
+                                    required</small>
+                            </div>
+                        </div>
+
+                        <!-- Service -->
+                        <div class="col-12 col-sm-6">
+                            <label>Service Looking For</label>
+                            <input formControlName="service" type="text" class="form-control bg-light border-0"
+                                style="height:55px">
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['service'].errors">
+                                <small *ngIf="f['service'].errors['required']">Service is required</small>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="col-12">
+                            <label>Leave your message here</label>
+                            <textarea formControlName="message" rows="4"
+                                class="form-control bg-light border-0"></textarea>
+                            <div class="text-danger small mt-1" *ngIf="submitted && f['message'].errors">
+                                <small *ngIf="f['message'].errors['required']">Message is required</small>
+                                <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                            </div>
+                        </div>
+
+                        <!-- reCAPTCHA (optional placeholder, can integrate Google API) -->
+                        <div class="col-12">
+                            <div id="recaptcha-container" class="my-2"></div>
+                            <div class="text-danger small" *ngIf="submitted && f['recaptcha'].errors">
+                                <small *ngIf="f['recaptcha'].errors['required']">Please complete the reCAPTCHA</small>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary w-100 py-3" [disabled]="isLoading">
+                                <span *ngIf="!isLoading">Make An Appointment</span>
+                                <span *ngIf="isLoading"><i class="bx bx-loader bx-spin"></i> Sending...</span>
+                            </button>
+                        </div>
+
+                        <!-- Success/Error Messages -->
+                        <div class="col-12 text-center mt-2">
+                            <p class="text-success fw-semibold" *ngIf="successMsg">{{ successMsg }}</p>
+                            <p class="text-danger fw-semibold" *ngIf="errorMsg">{{ errorMsg }}</p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  
+</div>
+
 
 
 <div class="modal" id="enquire1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -1,0 +1,51 @@
+User-agent: *
+Disallow: /package.php
+Disallow: /index.php
+Disallow: /about.php
+Disallow: /anesthesiology.php
+Disallow: /bariatric-surgery.php
+Disallow: /cardiology.php
+Disallow: /dentistry.php
+Disallow: /dermatology.php
+Disallow: /diabetes-endocrinology.php
+Disallow: /emergency-critical-care.php
+Disallow: /ent.php
+Disallow: /internal-medicine.php
+Disallow: /liver-hpb-care.php
+Disallow: /medical-gastroenterology.php
+Disallow: /medical-oncology.php
+Disallow: /medical.php
+Disallow: /minimally-invasive-surgery.php
+Disallow: /neonatology.php
+Disallow: /nephrology.php
+Disallow: /neurology.php
+Disallow: /neurosurgery.php
+Disallow: /nutrition-dietetics.php
+Disallow: /obstetrics-gynaecology.php
+Disallow: /opthalmology.php
+Disallow: /oral-maxillofacial-surgery.php
+Disallow: /orthopedic.php
+Disallow: /pediatrics.php
+Disallow: /physiotherapy.php
+Disallow: /plastic-surgery.php
+Disallow: /psychiatry.php
+Disallow: /pulmonology.php
+Disallow: /radiology.php
+Disallow: /surgical-gastroenterology.php
+Disallow: /surgical-oncology.php
+Disallow: /urology.php
+Disallow: /vascular-science.php
+Disallow: /awards.php
+Disallow: /gallery.php
+Disallow: /contact.php
+Disallow: /hematology.php
+Disallow: /oncology.php
+
+# Doctor Profile Pages
+Disallow: /doctor-profile.php
+
+# Allow only homepage
+Allow: /
+
+# Sitemap for reference
+Sitemap: https://vasavihospitals.com/sitemap.xml
