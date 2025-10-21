@@ -53,6 +53,8 @@ import { RoboticCholecystectomyComponent } from './surgery-packages/robotic-chol
 import { RoboticAppendectomy } from './surgery-packages/robotic-appendectomy/robotic-appendectomy';
 import { RoboticHysterectomy } from './surgery-packages/robotic-hysterectomy/robotic-hysterectomy';
 
+import { RoboticHernia } from './ads-pages/robotic-hernia/robotic-hernia';
+
 // export const routes: Routes = [
 //     {path: 'anesthesiology' , component: Anesthesiology},
 //     {path:'bariatric-surgery', component:Bariatricsurgery},
@@ -156,5 +158,10 @@ export const routes: Routes = [
   { path: 'robotic-gallbladder-removal-surgery-in-bangalore', component: RoboticCholecystectomyComponent },
   { path: 'robotic-appendectomy-surgery-in-bangalore', component: RoboticAppendectomy },
   { path: 'robotic-hysterectomy-surgery-in-bangalore', component: RoboticHysterectomy },
+
+
+  // ads
+
+  { path: 'robotic-hernia-ads', component: RoboticHernia },  
   { path: '**', redirectTo: '' },
 ];
