@@ -1,0 +1,339 @@
+<div class="container_1">
+
+    <!-- hero section -->
+    <div class="hero-section">
+        <div class="hero_content">
+            <h1 class="s_h1">Affordable Robotic Hernia Surgery in Bangalore</h1>
+            <p class="s_para">Constant hernia pain can make even simple movements difficult. At Vasavi Hospitals, we use
+                advanced robotic-assisted technology to repair hernias safely and precisely — ensuring smaller cuts,
+                faster healing, and lasting comfort. Get back to your normal life with expert care you can trust.</p>
+
+            <div class="points">
+                <div class="point">
+                    <div class="icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="s_para">Minimally Invasive & Highly Precise Surgery</div>
+                </div>
+                <div class="point">
+                    <div class="icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="s_para">Faster Recovery & Minimal Scarring</div>
+                </div>
+                <div class="point">
+                    <div class="icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="s_para">Performed by Expert Robotic Surgeons</div>
+                </div>
+                <div class="point">
+                    <div class="icon"><i class="fa-solid fa-check"></i></div>
+                    <div class="s_para">All-Inclusive Package – ₹1,80,000</div>
+                </div>
+            </div>
+
+            <div class="hero-button-flex">
+                <button class="book-appointment-btn">
+                    <i class="fa-solid fa-calendar-check"></i> Book an Appointment
+                </button>
+                <a class="call-now-btn">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+
+
+
+        <app-callback-form />
+    </div>
+
+
+    <!-- stat section -->
+
+    <section class="stats-section stat-desktop">
+        <p class="stats-subtitle">
+            Years of trusted care in <strong style="color: rgb(255, 208, 0);">advanced hernia treatment.</strong>
+        </p>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="icon-box yellow">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>500,000+</h3>
+                    <p>clinical events handled</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon-box pink">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>97%</h3>
+                    <p>patient satisfaction</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon-box blue">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>50%</h3>
+                    <p>reduced readmissions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+
+
+    <!-- stat section -->
+
+    <section class="stats-section stat-mobile">
+        <p class="stats-subtitle">
+            Years of trusted care in <strong style="color: rgb(255, 208, 0);">advanced hernia treatment.</strong>
+        </p>
+
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="icon-box yellow">
+                    <i class="fa-solid fa-stethoscope"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>500,000+</h3>
+                    <p>clinical events handled</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon-box pink">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>97%</h3>
+                    <p>patient satisfaction</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="icon-box blue">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>50%</h3>
+                    <p>reduced readmissions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hernia-section-a">
+        <div class="header-container">
+            <h2>Book an Appointment with Our Robotic Hernia Experts at Vasavi Hospitals, Bangalore</h2>
+            <p>Experience the next generation of hernia care with Da Vinci Xi Robotic Surgery — combining advanced
+                precision, minimal pain, and faster recovery for long-lasting relief.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Da Vinci Xi Robotic Precision</h3>
+                <p>3D HD vision and robotic accuracy ensure precise, minimal-scar hernia repair with faster recovery.
+                </p>
+            </div>
+            <div class="feature-card">
+                <h3>Minimal Pain & Faster Healing</h3>
+                <p>Tiny incisions mean less pain, minimal blood loss, and quick return to normal activities.</p>
+            </div>
+            <div class="feature-card">
+                <h3>All-Inclusive & Insurance-Covered Care</h3>
+                <p>Transparent packages from ₹1,80,000* with cashless insurance for a worry-free experience.</p>
+            </div>
+        </div>
+
+        <a href="#" class="cta-button">Check Availability & Book Now</a>
+    </div>
+
+
+    <div class="hernia-flow-section">
+        <div class="section-header">
+            <h1>Understanding Hernia Types & Our Treatment Approach</h1>
+            <p>Whether it's the location or the cause, understanding your hernia type is the first step to treatment. We
+                offer specialized, minimally invasive care for all.</p>
+        </div>
+
+        <div class="hernia-comparison-blocks">
+            <div *ngFor="let hernia of herniaTypes" class="hernia-block" [ngClass]="hernia?.cssClass">
+
+                <span class="type-badge">{{ hernia.badgeText }}</span>
+                <h2>{{ hernia.title }}</h2>
+                <p>{{ hernia.description }}</p>
+
+                <div class="tag-flex">
+                    <!-- <div class="tag">{{ hernia?.tag }}</div> -->
+                    <div class="tag">{{ hernia?.location }}</div>
+                    <div class="tag">{{ hernia?.recoverytime }}</div>
+                    <div class="tag">{{ hernia?.hospitalStay }}</div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <div class="treatment-benefits">
+            <h2>Why Choose Our Laparoscopic Mesh Repair?</h2>
+            <div class="benefit-cards">
+                <div class="benefit-item">
+                    <i class="benefit-icon">🔪</i>
+                    <p>Minimally Invasive</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon">⏱️</i>
+                    <p>Faster Recovery</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon">🛡️</i>
+                    <p>Long-Term Relief</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon">✅</i>
+                    <p>Insurance-Friendly</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="cta-button-flow">Book Your Specialist Consultation Now</a> -->
+    </div>
+
+
+    <div class="surgery-timeline-h">
+        <div class="timeline-header-h">
+            <h1>What to Expect During Bariatric Surgery</h1>
+            <p>Your Step-by-Step Care Journey</p>
+        </div>
+
+        <div class="timeline-container-h">
+            <div class="timeline-step-h">
+                <div class="step-marker-h">1</div>
+                <h3>Consultation & Evaluation</h3>
+                <p>Meet our robotic surgery team, review scan reports, and discuss your symptoms. A personalized
+                    treatment plan is created with full cost transparency.</p>
+            </div>
+
+            <div class="timeline-step-h">
+                <div class="step-marker-h">2</div>
+                <h3>Surgery Day</h3>
+                <p>Undergo a safe, minimally invasive bariatric surgery under general anesthesia. The procedure
+                    typically lasts 1–2 hours.</p>
+            </div>
+
+            <div class="timeline-step-h">
+                <div class="step-marker-h">3</div>
+                <h3>Post-Surgery Stay</h3>
+                <p>Stay under observation for 1–2 days. Our team monitors your recovery and provides post-surgery care
+                    and dietary guidance.</p>
+            </div>
+
+            <div class="timeline-step-h">
+                <div class="step-marker-h">4</div>
+                <h3>Recovery & Follow-Up</h3>
+                <p>Resume light activities in 3–5 days. Regular follow-ups help track progress and ensure healthy,
+                    long-term weight management.</p>
+            </div>
+        </div>
+
+
+        <!-- <div class="benefits-section-short">
+            <h2>Why Choose Our Laparoscopic Mesh Repair?</h2>
+
+            <div class="benefits-bar">
+                <div class="benefit-item-short">
+                    <span class="icon-short">🔪</span>
+                    <p>Minimally Invasive</p>
+                </div>
+                <div class="benefit-item-short">
+                    <span class="icon-short">⏱️</span>
+                    <p>Faster Recovery</p>
+                </div>
+                <div class="benefit-item-short">
+                    <span class="icon-short">🛡️</span>
+                    <p>Long-Term Relief</p>
+                </div>
+                <div class="benefit-item-short">
+                    <span class="icon-short">✅</span>
+                    <p>Insurance-Friendly</p>
+                </div>
+            </div>
+
+            <a href="#" class="cta-button-short">Book Your Specialist Consultation Now</a>
+        </div> -->
+
+        <!-- <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
+        </app-pop-up-form-ads> -->
+
+        <div class="comparison-section" style="margin-top: 30px;">
+            <div class="comparison-header">
+                <h1>Robotic vs. Laparoscopic Hernia Surgery: What's the Difference?</h1>
+                <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
+                    leading to faster recovery and better patient outcomes compared to traditional laparoscopy.</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-column robotic-column">
+                    <h2>Robotic Surgery (Da Vinci Xi)</h2>
+                    <ul>
+                        <li class="plus">
+                            <span class="icon-indicator">+</span>
+                            <p><strong>3D HD Vision:</strong> Surgeon sees the surgical field in high-definition,
+                                three-dimensional view for unparalleled depth perception.</p>
+                        </li>
+                        <li class="plus">
+                            <span class="icon-indicator">+</span>
+                            <p><strong>Enhanced Dexterity:</strong> Robotic instruments have seven degrees of motion,
+                                mimicking the human wrist, which allows for finer and more precise suturing (stitching).
+                            </p>
+                        </li>
+                        <li class="plus">
+                            <span class="icon-indicator">+</span>
+                            <p><strong>Superior Precision:</strong> Filters out natural hand tremors and allows for more
+                                complex, delicate repairs.</p>
+                        </li>
+                        <li class="plus">
+                            <span class="icon-indicator">+</span>
+                            <p><strong>Reduced Pain & Scarring:</strong> The high precision results in less trauma to
+                                surrounding tissue.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison-column laparoscopic-column">
+                    <h2>Laparoscopic Surgery</h2>
+                    <ul>
+                        <li class="minus">
+                            <span class="icon-indicator">-</span>
+                            <p><strong>2D Vision:</strong> Surgeons view a flat, two-dimensional image, which can limit
+                                depth perception.</p>
+                        </li>
+                        <li class="minus">
+                            <span class="icon-indicator">-</span>
+                            <p><strong>Limited Movement:</strong> Instruments have restricted movement (4 degrees of
+                                motion), making complex suturing more challenging.</p>
+                        </li>
+                        <li class="minus">
+                            <span class="icon-indicator">-</span>
+                            <p><strong>Good Precision:</strong> Excellent compared to open surgery, but lacks the
+                                micro-movements of a robotic system.</p>
+                        </li>
+                        <li class="minus">
+                            <span class="icon-indicator">-</span>
+                            <p><strong>Minimal Scarring:</strong> Also offers small incisions, but robotic methods often
+                                allow for even smaller, strategically placed cuts.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" class="cta-button-comparison">Talk to a Specialist About Robotic Surgery</a>
+        </div>
+
+
+
+
+    </div>
