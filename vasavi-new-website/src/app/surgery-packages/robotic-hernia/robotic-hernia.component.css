@@ -1,26 +1,94 @@
-.hero-section {
+/* .hero-section {
+    position: relative;
     display: flex;
-    gap: 100px;
-    align-items: center;
     justify-content: center;
-    background-color: #DCEEFF;
-    /* light blue */
-    padding: 3% 0;
+    align-items: center;
+    gap: 100px;
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #1a4d6d 0%, #2d7a9e 50%, #3a9fc7 100%);
+    overflow: hidden;
+} */
+
+
+
+/* .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/packages/hernia-bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+} */
+
+
+.hero-section {
+    position: relative;
+    width: 100%;
 }
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+}
+
+.mobile_banner {
+    display: none;
+}
+
+
+.book-btn {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: absolute;
+    z-index: 10;
+    left: 18%;
+    /* bottom: 0; */
+    top: 96%;
+    margin-top: -60px;
+    cursor: pointer;
+    border: none;
+}
+
+.book-btn:hover {
+    background: #007bff;
+    color: #fff;
+}
+
 
 .hero_content {
     width: 60%;
+    position: relative;
+    z-index: 5;
+}
+
+.bold {
+    font-weight: 800;
 }
 
 .s_h1 {
-    color: #0056B3;
+    color: #ffffff;
     /* primary blue */
     font-family: Poppins;
-    font-size: 32px;
+    font-size: 36px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 800;
     line-height: normal;
     text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
 .s_para {
@@ -31,10 +99,15 @@
     font-style: normal;
     font-weight: 500;
     line-height: 26px;
+
+    /* font-size: 1.1rem; */
+    /* margin-bottom: 1.5rem; */
+    color: #f0f8ff;
+    /* line-height: 1.8; */
 }
 
 .points {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .point {
@@ -59,49 +132,55 @@
 
 .hero-button-flex {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .book-appointment-btn,
 .call-now-btn {
-    padding: 12px 25px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     border: none;
-    border-radius: 25px;
-    font-family: Poppins;
-    font-size: 16px;
-    font-weight: 500;
+    border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 30px;
+    gap: 0.5rem;
     text-decoration: none;
-    transition: background-color 0.3s;
+}
+
+.heading {
+    font-size: 2.2em;
+    color: #0056B3;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .book-appointment-btn {
-    background-color: #0056B3;
-    color: white;
+    background: #ffd700;
+    color: #1a4d6d;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
 }
 
 .book-appointment-btn:hover {
-    background-color: #003F88;
-    /* darker blue */
+    background: #ffed4e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
 }
 
 .call-now-btn {
-    background-color: #A8C9FF;
-    /* light blue */
-    color: #003F88;
-    margin-left: 15px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
 }
 
 .call-now-btn:hover {
-    background-color: #90B8FF;
-}
-
-i {
-    font-size: 18px;
+    background: #ffffff;
+    color: #1a4d6d;
+    transform: translateY(-2px);
 }
 
 .stats-section {
@@ -114,14 +193,15 @@ i {
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 4px 15px rgba(0, 86, 179, 0.1);
     position: relative;
-    margin-top: -50PX;
+    margin-top: 50PX;
     box-shadow: 5px 5px 50px rgba(128, 128, 128, 0.762);
 }
 
 .stats-subtitle {
-    font-size: 16px;
+    font-size: 22px;
     color: #003f88;
     margin-bottom: 25px;
+    font-weight: 700;
 }
 
 .stats-subtitle strong {
@@ -155,6 +235,28 @@ i {
     transform: translateY(-5px);
 }
 
+.what-is-hernia {
+    padding: 5% 6% 0 6%;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.what-is-hernia h1 {
+    font-size: 2.2em;
+    color: #0056B3;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.video video {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.505);
+}
+
 .icon-box {
     width: 55px;
     height: 55px;
@@ -183,7 +285,7 @@ i {
 
 .stat-content h3 {
     color: #0056b3;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 700;
     margin: 0;
 }
@@ -194,7 +296,7 @@ i {
     margin: 0;
 }
 
-.stat-mobile{
+.stat-mobile {
     display: none;
 }
 
@@ -228,6 +330,14 @@ i {
     margin-bottom: 30px;
 }
 
+.feature-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
 .features-grid {
     display: flex;
     justify-content: center;
@@ -248,6 +358,20 @@ i {
     /* Accent color on top */
 }
 
+.fa-info {
+    background-color: #003f88;
+    border-radius: 50%;
+    padding: 5px 5px;
+    color: white;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+}
+
+.fa-angles-right {
+    font-size: 16px;
+}
+
 .icon-laparoscopic,
 .icon-insurance,
 .icon-relief {
@@ -264,10 +388,12 @@ i {
     font-weight: 700;
 }
 
-.feature-card p {
+.feature-card p,
+.feature-card li {
     font-size: 0.95em;
     color: #666;
     line-height: 1.5;
+    font-weight: 400;
 }
 
 .cta-button {
@@ -288,6 +414,13 @@ i {
     background-color: #e07b00;
 }
 
+@media(max-width:1024px) {
+    .book-btn {
+        left: 10%;
+        top: 107%;
+    }
+}
+
 
 @media (max-width: 800px) {
     .hero-section {
@@ -298,6 +431,17 @@ i {
     .hero_content {
         width: 100%;
         padding: 2%;
+    }
+
+    .book-btn {
+        left: 15%;
+        top: 105%;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .what-is-hernia {
+        flex-direction:  column;
     }
 }
 
@@ -332,7 +476,7 @@ i {
     margin: 0 auto 50px;
 }
 
-.section-header h1 {
+.section-header h2 {
     color: #1a4d8c;
     font-size: 2.5em;
     margin-bottom: 10px;
@@ -366,38 +510,52 @@ i {
 }
 
 .inguinal {
-  background-color: #e3f2fd; /* Light Blue */
-  border-top: 4px solid #1976d2; /* Deep Blue Accent */
+    background-color: #e3f2fd;
+    /* Light Blue */
+    border-top: 4px solid #1976d2;
+    /* Deep Blue Accent */
 }
 
 .femoral {
-  background-color: #fce4ec; /* Light Pink */
-  border-top: 4px solid #d81b60; /* Magenta Accent */
+    background-color: #fce4ec;
+    /* Light Pink */
+    border-top: 4px solid #d81b60;
+    /* Magenta Accent */
 }
 
 .umbilical {
-  background-color: #fff8e1; /* Soft Cream */
-  border-top: 4px solid #ffb300; /* Warm Yellow Accent */
+    background-color: #fff8e1;
+    /* Soft Cream */
+    border-top: 4px solid #ffb300;
+    /* Warm Yellow Accent */
 }
 
 .ventral {
-  background-color: #e8f5e9; /* Light Green */
-  border-top: 4px solid #43a047; /* Deep Green Accent */
+    background-color: #e8f5e9;
+    /* Light Green */
+    border-top: 4px solid #43a047;
+    /* Deep Green Accent */
 }
 
 .incisional {
-  background-color: #ede7f6; /* Light Lavender */
-  border-top: 4px solid #7e57c2; /* Purple Accent */
+    background-color: #ede7f6;
+    /* Light Lavender */
+    border-top: 4px solid #7e57c2;
+    /* Purple Accent */
 }
 
 .hiatal {
-  background-color: #e0f7fa; /* Aqua Cyan */
-  border-top: 4px solid #00838f; /* Teal Accent */
+    background-color: #e0f7fa;
+    /* Aqua Cyan */
+    border-top: 4px solid #00838f;
+    /* Teal Accent */
 }
 
 .epigastric {
-  background-color: #f3e5f5; /* Light Violet */
-  border-top: 4px solid #8e24aa; /* Deep Violet Accent */
+    background-color: #f3e5f5;
+    /* Light Violet */
+    border-top: 4px solid #8e24aa;
+    /* Deep Violet Accent */
 }
 
 /* Optional hover effect for interactivity */
@@ -408,9 +566,9 @@ i {
 .incisional:hover,
 .hiatal:hover,
 .epigastric:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 
@@ -448,6 +606,7 @@ i {
 .tag {
     display: inline-block;
     padding: 5px 15px;
+    /* background-color: white; */
     background-color: rgba(0, 0, 0, 0.05);
     border-radius: 20px;
     font-size: 0.9em;
@@ -510,20 +669,20 @@ i {
     transition: background-color 0.3s ease;
 }
 
-.we_cure_with_care_section{
+.we_cure_with_care_section {
     border-radius: 15px;
     padding: 2%;
     box-shadow: 10px 10px 35px rgba(128, 128, 128, 0.786);
     margin-top: 100px;
 }
 
-.cta_flex{
+.cta_flex {
     display: flex;
     gap: 20px;
     margin-top: 30px;
 }
 
-.cta_2{
+.cta_2 {
     color: #FBFBFB;
     text-align: center;
     font-family: Inter;
@@ -541,7 +700,7 @@ i {
     border: none,
 }
 
-.cta_call_2{
+.cta_call_2 {
     color: #000;
     text-align: center;
     font-family: Inter;
@@ -730,11 +889,11 @@ i {
         max-width: 100%;
     }
 
-    .stat-desktop{
+    .stat-desktop {
         display: none;
     }
 
-    .stat-mobile{
+    .stat-mobile {
         display: block;
     }
 }
@@ -743,6 +902,12 @@ i {
 @media (max-width: 480px) {
     .surgery-timeline-h {
         padding: 30px 15px;
+    }
+
+    .book-btn {
+        left: 30%;
+        top: 100%;
+        font-size: 16px;
     }
 
     .timeline-header-h h1 {
@@ -833,7 +998,33 @@ i {
         font-size: 22px;
     }
 
-    
+    .mobile_banner {
+        display: block;
+    }
+
+    .desktop_banner {
+        display: none;
+    }
+
+    .video video {
+        width: 300px;
+    }
+
+    .what-is-hernia{
+        gap: 20px;
+    }
+
+    .what-is-hernia h1{
+        font-size: 26px;
+    }
+
+    .hernia-section-a{
+        margin-top: 40px;
+    }
+
+    .feature-wrapper{
+        gap: 30px;
+    }
 
 }
 
@@ -908,7 +1099,8 @@ i {
 .comparison-section {
     font-family: 'Inter', sans-serif;
     padding: 80px 5%;
-    background-color: #eaf4ff; /* A slightly different light blue to contrast the hero */
+    background-color: #eaf4ff;
+    /* A slightly different light blue to contrast the hero */
     text-align: center;
 }
 
@@ -917,11 +1109,36 @@ i {
     margin: 0 auto 50px;
 }
 
-.comparison-header h1 {
+.comparison-header h2 {
     font-size: 2.2em;
     color: #0056B3;
     margin-bottom: 15px;
     font-weight: 700;
+}
+
+.comparison-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Optional: make robotic image have a subtle blue tint */
+.robotic-column .comparison-image {
+  border: 3px solid rgba(0,123,255,0.2);
+}
+
+/* Optional: make laparoscopic image have a neutral tint */
+.laparoscopic-column .comparison-image {
+  border: 3px solid rgba(204,204,204,0.3);
+}
+
+@media (max-width: 480px ){
+        .comparison-header h2{
+        font-size: 26px;
+    }
 }
 
 .comparison-header p {
@@ -1066,9 +1283,287 @@ i {
     .comparison-column h2 {
         font-size: 1.5em;
     }
-    
+
     .cta-button-comparison {
         font-size: 1em;
         padding: 15px 25px;
     }
+}
+
+/* .hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+    padding: 4rem 5%;
+    background: linear-gradient(135deg, #1a4d6d 0%, #2d7a9e 50%, #3a9fc7 100%);
+    overflow: hidden;
+}
+
+/* Background image with tint */
+/* .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1200');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+} */
+
+/* Overlay tint */
+/* .hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 77, 109, 0.416) 0%, rgba(45, 122, 158, 0.249) 50%, rgba(19, 79, 103, 0.216) 100%);
+    z-index: 1;
+}
+
+.hero_content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.s_h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.s_para {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #f0f8ff;
+    line-height: 1.8;
+}
+
+.bold {
+    font-weight: 700;
+    color: #ffd700;
+}
+
+.points {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.point {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.point:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(10px);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #ffd700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon i {
+    color: #1a4d6d;
+    font-size: 1.2rem;
+}
+
+.point .s_para {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.hero-button-flex {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.book-appointment-btn,
+.call-now-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.book-appointment-btn {
+    background: #ffd700;
+    color: #1a4d6d;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.book-appointment-btn:hover {
+    background: #ffed4e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+.call-now-btn {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.call-now-btn:hover {
+    background: #ffffff;
+    color: #1a4d6d;
+    transform: translateY(-2px);
+}
+
+.callback-form-container {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    align-self: center;
+    max-width: 400px;
+}
+
+.callback-form-container h3 {
+    color: #1a4d6d;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2d7a9e;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #1a4d6d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #2d7a9e;
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 3rem 4%;
+    }
+
+    .callback-form-container {
+        max-width: 100%;
+    }
+
+    .s_h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .s_h1 {
+        font-size: 2rem;
+    }
+
+    .s_para {
+        font-size: 1rem;
+    }
+
+    .hero-button-flex {
+        flex-direction: column;
+    }
+
+    .book-appointment-btn,
+    .call-now-btn {
+        width: 100%;
+        justify-content: center;
+    }
+} */
+
+.note-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f4f9ff;
+    border-left: 4px solid #0078d4;
+    padding: 12px 16px;
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.note-text strong {
+    color: #004b91;
+}
+
+.note-text em {
+    font-style: normal;
+    color: #0078d4;
+    font-weight: 600;
 }
