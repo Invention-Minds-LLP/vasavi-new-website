@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from '../../doctors-card/doctors-card';
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
+import { PackageForm } from "../../package-form/package-form";
 
 interface HerniaType {
   cssClass: string;
@@ -17,7 +18,7 @@ interface HerniaType {
 
 @Component({
   selector: 'app-robotic-hernia',
-  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds],
+  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds, PackageForm],
   templateUrl: './robotic-hernia.component.html',
   styleUrl: './robotic-hernia.component.css',
 })
@@ -117,14 +118,24 @@ export class RoboticHerniaComponent {
     },
   ];
 
+  private popupInterval: any;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.openPopup();
+    }, 5000);
+
+    // this.popupInterval = setInterval(() => {
+    //   this.openPopup();
+    // }, 25000);
+  }
+
   isPopupOpen = false;
 
-  // 🔹 Function to open popup
   openPopup() {
     this.isPopupOpen = true;
   }
 
-  // 🔹 Function to close popup
   closePopup() {
     this.isPopupOpen = false;
   }
