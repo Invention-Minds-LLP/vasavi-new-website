@@ -5,7 +5,7 @@
 
     <main class="callback-form">
         <!-- Step 1: User details form -->
-        <form #callbackForm="ngForm" (ngSubmit)="onSubmit(callbackForm)" *ngIf="!showOTP && !successMessage" novalidate>
+        <form #callbackForm="ngForm" (ngSubmit)="onSubmit(callbackForm)" *ngIf="!successMessage" novalidate>
 
             <!-- Name -->
             <div class="form-group">
@@ -21,7 +21,7 @@
             <!-- Mobile -->
             <div class="form-group">
                 <label for="mobile">Mobile Number*</label>
-                <input type="tel" id="mobile" name="mobile" required pattern="^[6-9]\\d{9}$"
+                <input type="tel" id="mobile" name="mobile" required pattern="^[6-9][0-9]{9}$"
                     [(ngModel)]="formData.mobile" #mobile="ngModel" placeholder="Enter your mobile number"
                     class="form-control" />
                 <div class="error" *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)">
@@ -35,7 +35,7 @@
             </button>
         </form>
 
-        <!-- Step 2: OTP -->
+        <!-- Step 2: OTP
         <div *ngIf="showOTP && !successMessage" class="otp-section">
             <h3>Enter OTP</h3>
             <p>Please enter the OTP sent to your mobile number.</p>
@@ -51,7 +51,7 @@
             <button type="button" class="submit-btn" (click)="verifyOTP()" [disabled]="otp.invalid">
                 Verify OTP
             </button>
-        </div>
+        </div> -->
 
         <!-- Success message -->
         <div *ngIf="successMessage" class="success-message">

@@ -82,3 +82,10 @@ label {
   font-weight: 600;
   box-shadow: 0 0 8px rgba(0, 86, 179, 0.15);
 }
+
+@media (max-width: 600px) {
+  .callback-container {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+}

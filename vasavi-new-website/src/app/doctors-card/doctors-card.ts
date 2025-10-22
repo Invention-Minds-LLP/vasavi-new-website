@@ -13,4 +13,6 @@ export class DoctorsCard {
 @Input() doctorDetails:any
 @Input() headers:any
 
+
+
 }

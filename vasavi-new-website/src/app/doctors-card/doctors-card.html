@@ -14,11 +14,17 @@
             </div>
             <h3 class="doctor-name" *ngIf="doctor?.name">{{doctor?.name}}</h3>
             <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
-            <p class="qualification" *ngIf="doctor?.qualification">{{doctor?.qualification}}y</p>
+            <p class="qualification" *ngIf="doctor?.qualification">{{doctor?.qualification}}</p>
             <p class="qualification" *ngIf="doctor?.department">{{doctor?.department}}</p>
             <p class="doctor-experience" *ngIf="doctor?.experience">{{doctor?.experience}} Years Experience</p>
             <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-            <button class="appointment-btn" [routerLink]="doctor?.slug">Book Appointment</button>
+            <a *ngIf="doctor?.slug"
+            class="appointment-btn"
+            [routerLink]="['/doctors'+ doctor?.slug]">
+           Book Appointment
+         </a>
+         
+
         </div>
     </div>
 </div>

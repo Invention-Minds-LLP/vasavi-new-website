@@ -1,192 +1,301 @@
-<div class="root-container">
-    <!-- hero section -->
-    <div class="hero-section">
-        <img src="img/packages/Vasavi -Robotic hysterectomy - 16-10-25.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/Vasavi Robotic hysterectomy - mobile size.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <a class="book-btn" (click)="openPopup('Robotic Hysterectomy Surgery')">Book an Appointment</a>
+<div class="container_1"></div>
+
+<!-- hero section -->
+<div class="hero-section">
+  <div class="hero_content">
+    <h1 class="s_h1"><strong>Affordable Robotic Hysterectomy Surgery in Bangalore</strong></h1>
+    <p class="s_para">
+      Struggling with <strong>uterine fibroids</strong>, <strong>endometriosis</strong>, or 
+      <strong>abnormal uterine bleeding</strong>? These conditions can cause chronic pain and fatigue, 
+      affecting your quality of life. When medications and non-surgical treatments don’t help, a 
+      <strong>Hysterectomy</strong> — surgical removal of the uterus — can provide lasting relief and recovery.
+    </p>
+
+    <p class="s_para">
+      At <strong>Vasavi Hospitals, Bangalore</strong>, we specialize in 
+      <strong>Robotic Hysterectomy</strong> using the advanced <strong>Da Vinci Xi Surgical System</strong>, 
+      as well as <strong>Laparoscopic Hysterectomy</strong>. Both techniques are <strong>minimally invasive</strong>, 
+      ensuring <strong>faster recovery</strong>, <strong>less pain</strong>, and <strong>minimal scarring</strong>. 
+      Choose <strong>Affordable Hysterectomy Surgery in Bangalore</strong> for comfort, safety, and confidence.
+    </p>
+
+    <div class="points">
+      <div class="point">
+        <div class="icon"><i class="fa-solid fa-check"></i></div>
+        <div class="s_para"><strong>Minimally Invasive</strong> – Robotic & Laparoscopic Hysterectomy</div>
+      </div>
+      <div class="point">
+        <div class="icon"><i class="fa-solid fa-check"></i></div>
+        <div class="s_para"><strong>Faster Recovery</strong> & Shorter Hospital Stay</div>
+      </div>
+      <div class="point">
+        <div class="icon"><i class="fa-solid fa-check"></i></div>
+        <div class="s_para"><strong>Reduced Pain</strong> and Minimal Scarring</div>
+      </div>
+      <div class="point">
+        <div class="icon"><i class="fa-solid fa-check"></i></div>
+        <div class="s_para"><strong>Experienced Gynecologic Surgeons</strong> with Robotic Expertise</div>
+      </div>
+      <div class="point">
+        <div class="icon"><i class="fa-solid fa-check"></i></div>
+        <div class="s_para"><strong>Transparent, All-Inclusive Packages</strong> starting at ₹2,90,000* (T & C Apply)</div>
+      </div>
     </div>
 
-
-
-    <!-- section 2 -->
-    <div class="container_2">
-        <div class="container_flex">
-
-            <div class="container_content">
-                <h2 class="heading">When Pelvic Pain or Bleeding Disrupts Life</h2>
-                <p class="para">Conditions like fibroids, endometriosis, adenomyosis, or uterine prolapse can cause
-                    severe pain, fatigue, or bleeding that affects your work, rest, and confidence.</p>
-                <p class="para">If medications or non-surgical options haven’t helped, Robotic Hysterectomy offers a
-                    safe, precise, and long-term solution for relief.</p>
-                <p class="para">Our Robotic Hysterectomy Package (₹1,80,000)* includes consultation, surgery,
-                    anesthesia, hospital stay, and post-operative care — all in one transparent plan. With robotic
-                    precision and expert gynecologic surgeons, most patients walk within a day and recover comfortably
-                    within 1–2 weeks.</p>
-            </div>
-
-            <div class="container_image">
-                <img src="img/go/female-reproductive-system-illustration.png" alt="">
-            </div>
-        </div>
+    <div class="hero-button-flex">
+      <button class="book-appointment-btn" (click)="openPopup()">
+        <i class="fa-solid fa-calendar-check"></i> <strong>Book an Appointment</strong>
+      </button>
+      <a class="call-now-btn" href="tel:8884545086">
+        <i class="fa-solid fa-phone"></i> <strong>Call Now</strong>
+      </a>
     </div>
+  </div>
 
-    <!-- section 3 -->
-    <div class="container_2">
-        <div class="heading text-center">Why Choose Robotic Hysterectomy at Vasavi Hospitals</div>
-        <p class="para">Because your body deserves care that’s as gentle as it is advanced. At Vasavi Hospitals, we use
-            robotic-assisted surgical systems that give our surgeons enhanced control, precision, and vision — ensuring
-            smoother recovery and better outcomes.</p>
-
-        <div class="sub_heading text-center">Here’s why patients choose us</div>
-        <div class="card_section">
-            <div class="card">
-                <div class="card_heading">Smaller Cuts, Less Pain</div>
-                <p class="card_para">Robotic instruments allow minimal incisions for quick healing.</p>
-            </div>
-            <div class="card">
-                <div class="card_heading">Faster Recovery & Shorter Stay</div>
-                <p class="card_para">Most patients go home within 24–48 hours.</p>
-            </div>
-            <div class="card">
-                <div class="card_heading">Precise & Safe</div>
-                <p class="card_para">Better visualization and control reduce bleeding and complications.</p>
-            </div>
-            <div class="card">
-                <div class="card_heading">Quicker Return to Daily Life</div>
-                <p class="card_para">Resume routine activities in just days, not weeks.</p>
-            </div>
-            <div class="card">
-                <div class="card_heading">Experienced Gynecologic Surgeons</div>
-                <p class="card_para">Specialists with years of expertise in robotic hysterectomy surgery.</p>
-            </div>
-            <div class="card">
-                <div class="card_heading">Affordable Excellence</div>
-                <p class="card_para">Advanced technology made accessible for every woman.</p>
-            </div>
-        </div>
-
-        <div class="btn_section">
-            <button class="cta_2" (click)="openPopup('Robotic Hysterectomy Surgery')">Book Your Surgery Package Now</button>
-        </div>
-    </div>
-
-    <!-- section 4 -->
-    <div class="container_2">
-
-        <!-- doctor section -->
-        <div class="doctors-section" id="doctors">
-            <h2 class="heading text-center">Meet Our Gynecologic Experts</h2>
-            <p class="para_style doc_sec_para">Your recovery starts with an expert team you can trust.</p>
-            <p class="para_style doc_sec_para">At the heart of every successful recovery is a team that listens,
-                understands, and cares. Our gynecologists at Vasavi Hospitals combine modern surgical precision with
-                empathy — guiding women safely through every stage, from diagnosis to post-surgery healing.</p>
-
-            <div class="doctors-container">
-                <!-- Doctor 1 -->
-
-                <div class="doctor-card">
-                    <div class="doctor-image">
-                        <img src="img/go/dr-nisha-buchade-sq.png" alt="">
-                    </div>
-                    <h3 class="doctor-name">Dr.Nisha Buchade</h3>
-                    <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
-                    <p class="qualification">MBBS, MS Fellowship in gynec-oncology, Fellowship in Advanced infertility
-                    </p>
-                    <p class="doctor-experience">15+ Years Experience</p>
-                    <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-                    <a class="appointment-btn" href="doctors/dr-nisha-buchade">Book Appointment</a>
-                </div>
-
-                <div class="doctor-card">
-                    <div class="doctor-image">
-                        <img src="img/new-doctor-image/dr-sowmya-sangmesh-sq.png" alt="">
-                    </div>
-                    <h3 class="doctor-name">Dr. Sowmya Sangmesh </h3>
-                    <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
-                    <p class="qualification">MBBS.,MS (OBG) .FELLOWSHIP MINIMAL ACCESS SURGERY, ADVANCED DIPLOMA
-                        REPRODUCTIVE
-                        MEDICINE</p>
-                    <p class="doctor-experience">14+ Years Experience</p>
-                    <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-                    <a class="appointment-btn" href="doctors/dr-sowmya-sangmesh">Book Appointment</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- section 5 -->
-
-    <div class="container_2">
-        <h2 class="heading text-center">Why Vasavi Hospitals</h2>
-        <p class="para text-center">At Vasavi Hospitals, we believe women’s health deserves the perfect balance of compassion and advanced care.</p>
-
-
-        <div class="why_vasavi_flex">
-            <div class="content">
-                <h3 class="why_vasavi_heading">Advanced Facilities & Expert Gynecology Team</h3>
-                <p class="para">Our operation theatres are equipped for precision-driven robotic surgeries.</p>
-                <ul>
-                    <li class="para">Dedicated robotic operation theatres designed for gynecologic surgeries.</li>
-                    <li class="para">Expert surgeons trained in advanced robotic hysterectomy.</li>
-                    <li class="para">Enhanced visualization and precision for complex uterine conditions.</li>
-                    <li class="para">Supportive post-surgery recovery with physiotherapy and counseling.</li>
-                </ul>
-                <p class="para">We ensure comfort, safety, and confidence at every step.</p>
-            </div>
-            <div class="why_vasavi_image">
-                <img src="img/packages/building-image.png" alt="">
-            </div>
-        </div>
-
-        <div class="why_vasavi_flex column_reverse">
-            <div class="why_vasavi_image">
-                <img src="img/packages/insurance-facility.png" alt="">
-            </div>
-            <div class="content">
-                <h3 class="why_vasavi_heading">Insurance & Affordable Packages</h3>
-                <p class="para">We make world-class care accessible and worry-free.</p>
-                <ul>
-                    <li class="para">Cashless Treatment Facility with major insurance partners.</li>
-                    <li class="para">Dedicated Insurance Desk to simplify paperwork and approvals.</li>
-                    <li class="para">Transparent Billing - no hidden or surprise costs.</li>
-                    <li class="para">All-Inclusive Robotic Hysterectomy Package starting at <b>₹1,80,000*</b>.</li>
-                </ul>
-                <p class="para">Because peace of mind should come with peace of health.</p>
-            </div>
-        </div>
-
-        <div class="why_vasavi_flex">
-            <div class="content">
-                <h3 class="why_vasavi_heading">Easy Access & Patient Comfort</h3>
-                <p class="para">For patients visiting from across Bangalore and nearby districts:</p>
-                <ul>
-                    <li class="para">Conveniently located in Kumaraswamy Layout, easily reachable by Metro and main city roads.</li>
-                    <li class="para">Nearby stay facilities for family and caretakers.</li>
-                    <li class="para">Surrounded by pharmacies, restaurants, and essential amenities.</li>
-                </ul>
-                <p class="para">We make every part of your hospital experience smooth, private, and stress-free.</p>
-            </div>
-            <div class="why_vasavi_image">
-                <img src="img/packages/vasavi-hospitals-transportation-image.png" alt="">
-            </div>
-        </div>
-    </div>
-
-    <div class="container_2">
-        <div class="we_cure_with_care_section">
-            <h2 class="heading">We Cure With Care</h2>
-            <p class="para">Feel lighter. Move freely. Live pain-free. At Vasavi Hospitals, our Robotic Hysterectomy Surgery helps you reclaim your comfort and confidence with advanced precision and care.</p>
-            <div class="cta_flex">
-                <button class="cta_2" (click)="openPopup('Robotic Hysterectomy Surgery')">Book an Appointment</button>
-                <a href="tel:8884545086" class="cta_call_2">Call Now</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="pop-up-form">
-        <app-package-form [showModal]="showPopup" [planName]="selectedPlan" (closed)="onModalClosed()" />
-    </div>
-
+  <div class="image-column">
+    <img src="img/go/female-reproductive-system-illustration.png" 
+         alt="Robotic Hysterectomy Surgery in Bangalore - Vasavi Hospitals">
+  </div>
 </div>
+
+<!-- stat section -->
+<section class="stats-section stat-desktop">
+  <p class="stats-subtitle">
+    Bangalore’s Trusted Hospital for <strong style="color: rgb(255, 208, 0);">Advanced Robotic & Laparoscopic Hysterectomy</strong>
+  </p>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="icon-box yellow"><i class="fa-solid fa-stethoscope"></i></div>
+      <div class="stat-content">
+        <h3>500,000+</h3>
+        <p>Clinical Events Handled</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon-box pink"><i class="fa-solid fa-heart"></i></div>
+      <div class="stat-content">
+        <h3>97%</h3>
+        <p>Patient Satisfaction</p>
+      </div>
+    </div>
+
+    <div class="stat-card">
+      <div class="icon-box blue"><i class="fa-solid fa-bed"></i></div>
+      <div class="stat-content">
+        <h3>50%</h3>
+        <p>Reduced Readmissions</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-section stat-mobile">
+  <p class="stats-subtitle">
+    Years of trusted care in <strong style="color: rgb(255, 208, 0);">Advanced Gynecologic & Reproductive Surgery</strong>
+  </p>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="icon-box yellow"><i class="fa-solid fa-stethoscope"></i></div>
+      <div class="stat-content"><h3>500,000+</h3><p>Clinical Events Handled</p></div>
+    </div>
+    <div class="stat-card">
+      <div class="icon-box pink"><i class="fa-solid fa-heart"></i></div>
+      <div class="stat-content"><h3>97%</h3><p>Patient Satisfaction</p></div>
+    </div>
+    <div class="stat-card">
+      <div class="icon-box blue"><i class="fa-solid fa-bed"></i></div>
+      <div class="stat-content"><h3>50%</h3><p>Reduced Readmissions</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- what is hysterectomy -->
+<div class="hernia-section-a two-column-layout">
+  <div class="content-column">
+    <div class="header-container">
+      <h2><strong>What is a Hysterectomy?</strong></h2>
+      <p>
+        A <strong>Hysterectomy</strong> is a surgical procedure to remove the <strong>uterus (womb)</strong>. 
+        It’s often recommended for women with <strong>fibroids</strong>, <strong>severe endometriosis</strong>, 
+        <strong>adenomyosis</strong>, <strong>uterine prolapse</strong>, or <strong>abnormal bleeding</strong>. 
+        At <strong>Vasavi Hospitals, Bangalore</strong>, we offer <strong>Laparoscopic</strong> and 
+        <strong>Robotic Hysterectomy (Da Vinci Xi)</strong> to ensure safe, precise, and faster recovery.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3><strong>Why It’s Done</strong></h3>
+        <p>
+          Treats <strong>fibroids</strong>, <strong>heavy bleeding</strong>, <strong>pelvic pain</strong>, and 
+          <strong>endometriosis</strong>. Minimally invasive techniques ensure quicker recovery, less pain, and better outcomes.
+        </p>
+        <ul class="mini-list">
+          <li>Relief from chronic pelvic pain</li>
+          <li>Improved quality of life</li>
+          <li>Minimal scarring and blood loss</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <h3><strong>Laparoscopic Hysterectomy</strong></h3>
+        <p>
+          Uses tiny incisions and a camera-guided approach for <strong>precise removal of the uterus</strong>. 
+          Offers <strong>minimal scarring</strong>, <strong>short hospital stay</strong>, and <strong>fast recovery</strong>.
+        </p>
+        <ul class="mini-list">
+          <li>Quick healing</li>
+          <li>Day-care/short stay</li>
+          <li>Faster return to routine</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <h3><strong>Robotic Hysterectomy (Da Vinci Xi)</strong></h3>
+        <p>
+          Provides <strong>3D HD vision</strong>, <strong>enhanced precision</strong>, and better control during surgery. 
+          Ideal for complex cases where accuracy and safety are critical.
+        </p>
+        <ul class="mini-list">
+          <li>High-definition 3D visualization</li>
+          <li>Superior dexterity & precision</li>
+          <li>Minimal pain and blood loss</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-column">
+    <app-callback-form  [pageName]="'Hysterectomy'"/>
+  </div>
+
+  <!-- <div class="cta-row">
+    <a href="#" class="cta-button"><strong>Check Availability & Book Now</strong></a>
+  </div> -->
+</div>
+
+<!-- pain section -->
+<div class="hernia-flow-section">
+    <div class="section-header">
+      <h1><strong>Understanding Uterine Conditions: Symptoms & Severity</strong></h1>
+      <p>
+        Learn about common <strong>uterine disorders</strong> and <strong>gynecological conditions</strong> that may require 
+        <strong>Laparoscopic</strong> or <strong>Robotic Hysterectomy Surgery</strong> for long-term relief and safe recovery.
+      </p>
+    </div>
+  
+    <div class="hernia-comparison-blocks">
+      <div *ngFor="let condition of hysterectomyConditions" class="hernia-block" [ngClass]="condition?.cssClass">
+        <span class="type-badge">{{ condition.badgeText }}</span>
+        <h2>{{ condition.title }}</h2>
+        <p [innerHTML]="condition.description"></p>
+        <div class="tag-flex">
+          <div class="tag" *ngIf="condition.symptoms" [innerHTML]="condition.symptoms"></div>
+          <div class="tag" *ngIf="condition.recommendedTreatment" [innerHTML]="condition.recommendedTreatment"></div>
+          <div class="tag" *ngIf="condition.recoveryTime" [innerHTML]="condition.recoveryTime"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- timeline -->
+<div class="surgery-timeline-h">
+  <div class="timeline-header-h">
+    <h1><strong>What to Expect During Hysterectomy Surgery</strong></h1>
+    <p>At <strong>Vasavi Hospitals, Bangalore</strong>, we ensure faster recovery, smaller scars, and 
+      <strong>minimal pain</strong> through advanced <strong>Laparoscopic</strong> and 
+      <strong>Robotic Hysterectomy</strong> procedures.</p>
+  </div>
+
+  <div class="timeline-container-h">
+    <div class="timeline-step-h">
+      <div class="step-marker-h">1</div>
+      <h3>Consultation & Evaluation</h3>
+      <p>Our <strong>gynecologic specialists</strong> assess your symptoms through ultrasound and lab tests 
+        and design a personalized surgical plan with full cost transparency.</p>
+    </div>
+
+    <div class="timeline-step-h">
+      <div class="step-marker-h">2</div>
+      <h3>Surgery Day</h3>
+      <p>The <strong>Robotic or Laparoscopic Hysterectomy</strong> is performed under anesthesia and lasts 1–2 hours. 
+        Small incisions ensure <strong>minimal pain</strong> and faster recovery.</p>
+    </div>
+
+    <div class="timeline-step-h">
+      <div class="step-marker-h">3</div>
+      <h3>Post-Surgery Stay</h3>
+      <p>Patients usually stay for 1–2 days. Our care team provides pain management, diet advice, and recovery support.</p>
+    </div>
+
+    <div class="timeline-step-h">
+      <div class="step-marker-h">4</div>
+      <h3>Recovery & Follow-Up</h3>
+      <p>Most patients resume light activities within 1–2 weeks, with regular follow-ups ensuring complete healing and comfort.</p>
+    </div>
+  </div>
+</div>
+
+<!-- comparison -->
+<div class="comparison-section" style="margin-top: 30px;">
+  <div class="comparison-header">
+    <h1><strong>Robotic vs. Laparoscopic Hysterectomy Surgery: What’s the Difference?</strong></h1>
+    <p>Both are <strong>minimally invasive procedures</strong> for uterus removal, but the 
+      <strong>Da Vinci Xi Robotic System</strong> offers greater precision, control, and faster recovery.</p>
+  </div>
+
+  <div class="comparison-table">
+    <div class="comparison-column robotic-column">
+      <h2><strong>Robotic Hysterectomy (Da Vinci Xi)</strong></h2>
+      <ul>
+        <li class="plus"><span class="icon-indicator">+</span>
+          <p><strong>3D HD Vision:</strong> Provides better visibility for precise dissection and suturing.</p></li>
+        <li class="plus"><span class="icon-indicator">+</span>
+          <p><strong>Superior Dexterity:</strong> Robotic arms mimic human wrist motion for enhanced accuracy.</p></li>
+        <li class="plus"><span class="icon-indicator">+</span>
+          <p><strong>Less Pain & Blood Loss:</strong> Smaller incisions ensure minimal tissue trauma.</p></li>
+      </ul>
+    </div>
+
+    <div class="comparison-column robotic-column">
+      <h2><strong>Laparoscopic Hysterectomy</strong></h2>
+      <ul>
+        <li class="plus"><span class="icon-indicator">+</span>
+          <p><strong>2D Vision:</strong> Reliable but offers limited depth perception compared to robotic systems.</p></li>
+        <li class="plus"><span class="icon-indicator">+</span>
+          <p><strong>Excellent Results:</strong> Proven effective with quick healing and minimal scars.</p></li>
+        <li class="plus"><span class="icon-indicator">+</span>
+          <p><strong>Safe & Cost-Effective:</strong> Ideal for most cases of uterine conditions.</p></li>
+      </ul>
+    </div>
+  </div>
+
+  <a (click)="openPopup()" class="cta-button-comparison"><strong>Talk to a Specialist About Robotic Surgery</strong></a>
+</div>
+
+<!-- doctors -->
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+
+<!-- we cure with care -->
+<div class="container_2">
+  <div class="we_cure_with_care_section">
+    <h2 class="heading"><strong>We Cure With Care</strong></h2>
+    <p class="para">Feel lighter. Heal faster. Live pain-free. At <strong>Vasavi Hospitals, Bangalore</strong>, 
+      our <strong>Robotic Hysterectomy</strong> ensures <strong>safer surgery</strong>, 
+      <strong>faster recovery</strong>, and <strong>lasting relief</strong> — helping women regain comfort and confidence.</p>
+    <div class="cta_flex">
+      <button class="cta_2" (click)="openPopup()"><strong>Book an Appointment</strong></button>
+      <a href="tel:8884545086" class="cta_call_2"><strong>Call Now</strong></a>
+    </div>
+  </div>
+</div>
+
+<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+      <button class="popup-close" (click)="closePopup()">✖</button>
+      <app-callback-form [pageName]="'Appendectomy'"></app-callback-form>
+    </div>
+  </div>
