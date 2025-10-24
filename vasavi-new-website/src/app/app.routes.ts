@@ -54,6 +54,10 @@ import { RoboticAppendectomy } from './surgery-packages/robotic-appendectomy/rob
 import { RoboticHysterectomy } from './surgery-packages/robotic-hysterectomy/robotic-hysterectomy';
 
 import { RoboticHernia } from './ads-pages/robotic-hernia/robotic-hernia';
+import { SinusSurgery } from './surgery-packages/sinus-surgery/sinus-surgery';
+import { AdenoidRemoval } from './surgery-packages/adenoid-removal/adenoid-removal';
+import { ACLReconstructio } from './surgery-packages/acl-reconstructio/acl-reconstructio';
+import { FistulaSurgery } from './surgery-packages/fistula-surgery/fistula-surgery';
 
 // export const routes: Routes = [
 //     {path: 'anesthesiology' , component: Anesthesiology},
@@ -158,6 +162,10 @@ export const routes: Routes = [
   { path: 'robotic-gallbladder-removal-surgery-in-bangalore', component: RoboticCholecystectomyComponent },
   { path: 'robotic-appendectomy-surgery-in-bangalore', component: RoboticAppendectomy },
   { path: 'robotic-hysterectomy-surgery-in-bangalore', component: RoboticHysterectomy },
+  { path: 'sinus-surgery', component: SinusSurgery },
+  { path: 'adenoid-removal', component: AdenoidRemoval },
+  { path: 'ACL-reconstructio', component: ACLReconstructio },
+  { path: 'fistula-surgery', component: FistulaSurgery },
 
 
   // ads
