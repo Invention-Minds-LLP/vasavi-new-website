@@ -96,3 +96,7 @@ h2,
   vertical-align: top;
   border-color: rgb(222, 226, 230);
 }
+
+button a{
+  cursor: pointer !important;
+}

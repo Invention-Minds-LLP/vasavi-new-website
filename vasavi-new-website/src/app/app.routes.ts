@@ -58,6 +58,9 @@ import { SinusSurgery } from './surgery-packages/sinus-surgery/sinus-surgery';
 import { AdenoidRemoval } from './surgery-packages/adenoid-removal/adenoid-removal';
 import { ACLReconstructio } from './surgery-packages/acl-reconstructio/acl-reconstructio';
 import { FistulaSurgery } from './surgery-packages/fistula-surgery/fistula-surgery';
+import { ProstateRemoval } from './surgery-packages/prostate-removal/prostate-removal';
+import { Haemorrhoidectomy } from './surgery-packages/haemorrhoidectomy/haemorrhoidectomy';
+import { Tonsillectomy } from './surgery-packages/tonsillectomy/tonsillectomy';
 
 // export const routes: Routes = [
 //     {path: 'anesthesiology' , component: Anesthesiology},
@@ -166,6 +169,9 @@ export const routes: Routes = [
   { path: 'adenoid-removal', component: AdenoidRemoval },
   { path: 'ACL-reconstructio', component: ACLReconstructio },
   { path: 'fistula-surgery', component: FistulaSurgery },
+  { path: 'turp-surgery-in-bangalore', component: ProstateRemoval },
+  { path: 'piles-surgery-in-bangalore', component: Haemorrhoidectomy },
+  { path: 'tonsillectomy-surgery-in-bangalore', component: Tonsillectomy },
 
 
   // ads
