@@ -10,7 +10,7 @@
 
     <section class="stats-section">
         <p class="stats-subtitle">
-           Years of Expertise in Advanced Hysterectomy Care
+           Years of Expertise in Advanced Sinus Surgery Care
         </p>
 
         <div class="stats-container">
@@ -19,8 +19,8 @@
                     <i class="fa-solid fa-stethoscope"></i>
                 </div>
                 <div class="stat-content">
-                    <h3>5,000+</h3>
-                    <p>Successful Surgeries performed</p>
+                    <h3>7,000+</h3>
+                    <p>Successful Surgeries Performed</p>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
                 </div>
                 <div class="stat-content">
                     <h3>25+</h3>
-                    <p>Years of Surgical Experience</p>
+                    <p>Years of ENT Surgical Experience</p>
                 </div>
             </div>
         </div>
@@ -89,11 +89,11 @@
     <!-- What is hernia -->
     <section class="what-is-hernia">
         <div class="what_content_Section">
-            <h1>Affordable Hysterectomy Surgery in Bangalore</h1>
-            <h2>What is Hysterectomy?</h2>
-            <p>A hysterectomy is a surgical procedure to remove the uterus. It is usually recommended for women experiencing conditions such as <b>fibroids, severe uterine bleeding, endometriosis, chronic pelvic pain</b>, or certain types of uterine cancer. Depending on your condition, the surgery may also involve removing the cervix, ovaries, or fallopian tubes.</p>
-            <p>At <b>Vasavi Hospitals</b>, our expert gynecologists use <b>advanced laparoscopic and robotic</b> methods for safer surgery, less pain, and faster recovery.</p>
-            <p>If you’re experiencing persistent <b>pelvic pain or heavy bleeding</b>, meet our specialists for the right diagnosis and treatment.</p>
+            <h1>Affordable Sinus Surgery in Bangalore</h1>
+            <h2>What is Sinus Surgery?</h2>
+            <p>Sinus surgery is a procedure to clear blocked sinus passages, improving airflow and <b>relieving long-term sinus infections, headaches, or breathing difficulties</b>. It is often recommended when medications or nasal sprays no longer provide lasting relief.</p>
+            <p>At Vasavi Hospitals, our ENT specialists perform <b>Endoscopic Sinus Surgery</b>, a minimally invasive procedure that uses advanced cameras and fine instruments to restore natural drainage and breathing comfort with minimal discomfort.</p>
+            <p>If you suffer from frequent <b>sinus infections, facial pressure, or nasal blockage</b>, meet our ENT experts for accurate diagnosis and effective treatment.</p>
         </div>
         <div class="video">
             <video autoplay loop muted playsinline>
@@ -113,33 +113,33 @@
 
                 <div class="header-container">
                     <h2>Know the Signs. Choose the Right Care.</h2>
-                    <p>Many women ignore early symptoms of uterine problems until they start affecting daily life. At <b>Vasavi Hospitals</b> , we help you identify the cause early and treat it safely with advanced surgical care.</p>
+                    <p>Many people mistake sinus pain or congestion for a common cold. At Vasavi Hospitals, we help identify chronic sinus conditions early and provide advanced endoscopic treatment for long-term relief.</p>
                 </div>
 
                 <div class="features-grid">
                     <div class="feature-card">
                         <h3>Common Symptoms</h3>
                         <ul>
-                            <li class="s_para" style="margin-top: 10px;">Heavy or irregular menstrual bleeding</li>
-                            <li class="s_para" style="margin-top: 10px;">Persistent lower abdominal or pelvic pain</li>
-                            <li class="s_para" style="margin-top: 10px;">Pressure or fullness in the lower abdomen</li>
-                            <li class="s_para" style="margin-top: 10px;">Difficulty passing urine or bowel movements</li>
+                            <li class="s_para" style="margin-top: 10px;">Persistent nasal congestion or stuffiness</li>
+                            <li class="s_para" style="margin-top: 10px;">Repeated sinus infections or facial pain</li>
+                            <li class="s_para" style="margin-top: 10px;">Headache and pressure around the eyes or forehead</li>
+                            <li class="s_para" style="margin-top: 10px;">Loss of smell or difficulty breathing through the nose</li>
                         </ul>
                     </div>
                     <div class="feature-card">
                         <h3>Surgery Options</h3>
-                        <p>At <b>Vasavi Hospitals</b> hysterectomy is performed using <span class="bold">advanced laparoscopic and robotic-assisted techniques</span> for greater precision, minimal scarring, and faster recovery. Our expert gynecologists ensure every procedure is handled with utmost safety and care.</p>
+                        <p>At Vasavi Hospitals, <b>Endoscopic Sinus Surgery</b> is performed through the nostrils using a thin camera and precision instruments - no external cuts, minimal bleeding, and quicker recovery. Our surgeons ensure safe, effective, and lasting results.</p>
                     </div>
                     <div class="feature-card">
                         <h3>Affordable & Insurance-Covered Packages</h3>
-                        <p>Transparent, all-inclusive packages starting at affordable price with <b>cashless insurance options</b>, making advanced women’s healthcare accessible and stress-free.</p>
+                        <p>Transparent, all-inclusive packages starting at an affordable price with cashless insurance options for a stress-free experience.</p>
                     </div>
                 </div>
 
             </div>
 
             <div class="form">
-               <app-callback-form  [pageName]="'Hysterectomy'"/>
+                <app-callback-form  [pageName]="'Sinus Surgery'"/>
             </div>
 
         </div>
@@ -222,58 +222,10 @@
     </div>
 
 
-    <div class="hernia-flow-section">
-        <div class="section-header">
-            <h2>Types of Hysterectomy and Recovery Overview</h2>
-            <p>Each type of hysterectomy varies based on how much of the uterus or surrounding organs are removed. Here’s a quick overview to help you understand the options and recovery timelines.</p>
-        </div>
-
-        <div class="hernia-comparison-blocks">
-            <div *ngFor="let hernia of herniaTypes" class="hernia-block" [ngClass]="hernia?.cssClass">
-
-                <span class="type-badge">{{ hernia.badgeText }}</span>
-                <h2>{{ hernia.title }}</h2>
-                <p>{{ hernia.description }}</p>
-
-                <div class="tag-flex">
-                    <!-- <div class="tag">{{ hernia?.tag }}</div> -->
-                    <div class="tag">{{ hernia?.location }}</div>
-                    <div class="tag">{{ hernia?.recoverytime }}</div>
-                    <div class="tag">{{ hernia?.hospitalStay }}</div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- <div class="treatment-benefits">
-            <h2>Why Choose Our Laparoscopic Mesh Repair?</h2>
-            <div class="benefit-cards">
-                <div class="benefit-item">
-                    <i class="benefit-icon">🔪</i>
-                    <p>Minimally Invasive</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="benefit-icon">⏱️</i>
-                    <p>Faster Recovery</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="benefit-icon">🛡️</i>
-                    <p>Long-Term Relief</p>
-                </div>
-                <div class="benefit-item">
-                    <i class="benefit-icon">✅</i>
-                    <p>Insurance-Friendly</p>
-                </div>
-            </div>
-        </div>
-
-        <a href="#" class="cta-button-flow">Book Your Specialist Consultation Now</a> -->
-    </div>
-
 
     <div class="surgery-timeline-h">
         <div class="timeline-header-h">
-            <h2>What to Expect During Hysterectomy Surgery</h2>
+            <h2>What to Expect During Sinus Surgery</h2>
             <p>Your Step-by-Step Care Journey</p>
         </div>
 
@@ -281,25 +233,25 @@
             <div class="timeline-step-h">
                 <div class="step-marker-h">1</div>
                 <h3>Consultation & Evaluation</h3>
-                <p>Meet our gynecology team to discuss your symptoms, review reports, and decide the most suitable treatment. We ensure complete clarity about the procedure, cost, and recovery before you proceed.</p>
+                <p>Meet our ENT specialists to discuss your symptoms and undergo diagnostic scans such as nasal endoscopy or CT imaging. We explain the condition, procedure, and recovery plan clearly.</p>
             </div>
 
             <div class="timeline-step-h">
                 <div class="step-marker-h">2</div>
                 <h3>Surgery Day</h3>
-                <p>The surgery is performed under general anesthesia using <b>advanced laparoscopic or robotic-assisted techniques</b>. It usually takes 1–2 hours and is designed to minimize pain, reduce scarring, and speed up recovery.</p>
+                <p>The procedure is done under local or general anesthesia using <b>Endoscopic techniques</b>. It takes about <b>1-2 hours</b>, removes blockages safely, and restores normal sinus function — without external scars.</p>
             </div>
 
             <div class="timeline-step-h">
                 <div class="step-marker-h">3</div>
                 <h3>Post-Surgery Stay</h3>
-                <p>You’ll stay in the hospital for 1–2 days for observation while our team monitors your recovery. You’ll receive guidance on diet, wound care, and medications to help your body heal smoothly.</p>
+                <p>Most patients go home the same day or after an overnight stay. Our team monitors your breathing, provides nasal care instructions, and ensures a smooth recovery.</p>
             </div>
 
             <div class="timeline-step-h">
                 <div class="step-marker-h">4</div>
                 <h3>Recovery & Follow-Up</h3>
-                <p>Most women can resume light work within 2–3 weeks, depending on the type of hysterectomy performed. Follow-up visits ensure proper healing, help manage hormonal changes if any, and support your overall well-being.</p>
+                <p>You can return to light activities within <b>3–5 days</b>. Follow-up visits help clean the nasal passages, prevent infection, and ensure long-term relief from sinus symptoms.</p>
             </div>
         </div>
 
@@ -347,13 +299,12 @@
             </div>
         </div> -->
 
-
-
+        
+        
     </div>
-
-           <div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
-            <div class="popup-container" (click)="$event.stopPropagation()">
-              <button class="popup-close" (click)="closePopup()">✖</button>
-              <app-callback-form [pageName]="'Hysterectomy'"></app-callback-form>
-            </div>
-          </div>
+    <div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+        <div class="popup-container" (click)="$event.stopPropagation()">
+          <button class="popup-close" (click)="closePopup()">✖</button>
+          <app-callback-form [pageName]="'Sinus Surgery'"></app-callback-form>
+        </div>
+      </div>
