@@ -61,12 +61,12 @@ const staticRoutes = [
   '/lung-specialist-in-bangalore',
 
   // --- Robotic Surgery Packages ---
-  '/robotic-hernia-surgery-in-bangalore',
-  '/robotic-total-knee-replacement-in-bangalore',
-  '/robotic-total-hip-replacement-in-bangalore',
-  '/robotic-gallbladder-removal-surgery-in-bangalore',
-  '/robotic-appendectomy-surgery-in-bangalore',
-  '/robotic-hysterectomy-surgery-in-bangalore',
+  '/hernia-surgery-in-bangalore',
+  '/total-knee-replacement-in-bangalore',
+  '/total-hip-replacement-in-bangalore',
+  '/gallbladder-removal-surgery-in-bangalore',
+  '/appendectomy-surgery-in-bangalore',
+  '/hysterectomy-surgery-in-bangalore',
 
   // --- Others ---
   '/ai-health-chatbot-in-bangalore',

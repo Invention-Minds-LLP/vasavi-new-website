@@ -159,19 +159,23 @@ export const routes: Routes = [
   { path: 'thank-you', component: ThankyouPage },
   { path: 'doctors/:slug', component: Doctor },
   { path: 'ai-health-chatbot-in-bangalore', component: Chatbot },
-  { path: 'robotic-hernia-surgery-in-bangalore', component: RoboticHerniaComponent },
-  { path: 'robotic-total-knee-replacement-in-bangalore', component: RoboticTkrComponent },
-  { path: 'robotic-total-hip-replacement-in-bangalore', component: RoboticThrComponent },
-  { path: 'robotic-gallbladder-removal-surgery-in-bangalore', component: RoboticCholecystectomyComponent },
-  { path: 'robotic-appendectomy-surgery-in-bangalore', component: RoboticAppendectomy },
-  { path: 'robotic-hysterectomy-surgery-in-bangalore', component: RoboticHysterectomy },
-  { path: 'sinus-surgery', component: SinusSurgery },
-  { path: 'adenoid-removal', component: AdenoidRemoval },
-  { path: 'ACL-reconstructio', component: ACLReconstructio },
-  { path: 'fistula-surgery', component: FistulaSurgery },
-  { path: 'turp-surgery-in-bangalore', component: ProstateRemoval },
-  { path: 'piles-surgery-in-bangalore', component: Haemorrhoidectomy },
-  { path: 'tonsillectomy-surgery-in-bangalore', component: Tonsillectomy },
+
+  // surgery packages
+  
+  { path: 'hernia-surgery-in-bangalore', component: RoboticHerniaComponent },
+  { path: 'total-knee-replacement-in-bangalore', component: RoboticTkrComponent },
+  { path: 'total-hip-replacement-in-bangalore', component: RoboticThrComponent },
+  { path: 'gallbladder-removal-surgery-in-bangalore', component: RoboticCholecystectomyComponent },
+  { path: 'appendectomy-surgery-in-bangalore', component: RoboticAppendectomy },
+  { path: 'hysterectomy-surgery-in-bangalore', component: RoboticHysterectomy },
+
+  { path: 'sinus-surgery-in-bangalore', component: SinusSurgery },
+  { path: 'adenoid-removal-in-bangalore', component: AdenoidRemoval },
+  { path: 'ACL-reconstructio-in-bangalore', component: ACLReconstructio },
+  { path: 'fistula-surgery-in-bangalore', component: FistulaSurgery },
+  { path: 'turp-surgery-in-bangalore-in-bangalore', component: ProstateRemoval },
+  { path: 'piles-surgery-in-bangalore-in-bangalore', component: Haemorrhoidectomy },
+  { path: 'tonsillectomy-surgery-in-bangalore-in-bangalore', component: Tonsillectomy },
 
 
   // ads
