@@ -7,38 +7,56 @@ import { Cta } from "../../cta/cta";
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-adenoid-removal',
+  selector: 'app-coronary-angiography',
   imports: [CallbackForm, CommonModule, DoctorsCard, Cta, PopUpFormAds],
-  templateUrl: './adenoid-removal.html',
-  styleUrl: './adenoid-removal.css'
+  templateUrl: './coronary-angiography.html',
+  styleUrl: './coronary-angiography.css'
 })
-export class AdenoidRemoval {
+export class CoronaryAngiography {
 
   constructor(private title:Title, private meta:Meta){}
 
-   doctorHeader : any = {
+  doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
     description : ""
   }
 
   doctors: any = [
     {
-      name: "Dr. Yashaswi Srikakula",
-      img: "img/new-doctor-image/dummy-female-sq.png",
+      name: "Dr. Krishna Kumar B. R",
+      img: "img/new-doctor-image/dummy-male-sq.png",
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
       // experience: "15+",
       // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, DLO, Fellowship in Rhinology",
+      qualification: "MBBS, PGD Cardiology",
       // slug: "/dr-nisha-buchade"
     },
     {
-      name: "Dr. Sphoorthy G Itigi",
-      img: "img/Doctor-img/ENT/dr-spoorthi.png",
+      name: "Dr. Girish Navasundi",
+      img: "img/new-doctor-image/dr-girish-b-navasundi.png",
       alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
-      experience: "8+",
-      department: "Consultant - ENT",
-      qualification: "MBBS, DLO, DNB (ENT)",
-      slug: "/dr-sphoorthy-g-itigi"
+      // experience: "14+",
+      // department: "Consultant - ENT",
+      qualification: "MBBS MD DNB",
+      // slug: "/dr-sowmya-sangmesh"
+    },
+    {
+      name: "Dr. Praneeth",
+      img: "img/new-doctor-image/dr-praneeth-s.png",
+      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
+      // experience: "15+",
+      // department: "Gynecology, Robotic & Laparoscopic Surgery",
+      qualification: "MBBS MD DM",
+      // slug: "/dr-nisha-buchade"
+    },
+    {
+      name: "Dr. Balaraj",
+      img: "img/new-doctor-image/dr-balaraj.png",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      // experience: "14+",
+      // department: "Consultant - ENT",
+      qualification: "MBBS MD DNB DM Cardiology",
+      // slug: "/dr-sowmya-sangmesh"
     }
   ];
 
@@ -63,8 +81,9 @@ export class AdenoidRemoval {
       this.openPopup();
     }, 5000);
 
-    this.title.setTitle('Adenoid Removal Surgery in Bangalore | ENT Specialists')
-    this.meta.updateTag({name:'description', content:'Safe adenoidectomy for kids & adults. No external cuts, painless recovery & improved breathing at Vasavi Hospitals.'})
+    this.title.setTitle('Coronary Angiography in Bangalore | Heart Blockage Test');
+    this.meta.updateTag({name:'description', content:'Accurate coronary angiography to detect heart blockages early. Trusted cardiologists & advanced cardiac lab at Vasavi Hospitals.'})
+
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
     // }, 25000);
@@ -75,5 +94,5 @@ export class AdenoidRemoval {
     // ✅ You can send this data to backend or API here
     this.closePopup(); // close popup after success
   }
-  
+
 }
