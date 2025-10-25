@@ -35,7 +35,7 @@ export class RoboticHysterectomy {
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
       experience: "15+",
       department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, MS, Fellowship in Gynec-Oncology, Fellowship in Advanced Infertility",
+      // qualification: "MBBS, MS, Fellowship in Gynec-Oncology, Fellowship in Advanced Infertility",
       slug: "/dr-nisha-buchade"
     },
     {
@@ -44,7 +44,7 @@ export class RoboticHysterectomy {
       alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
       experience: "14+",
       department: "Obstetrics & Gynecology, Minimal Access & Reproductive Surgery",
-      qualification: "MBBS, MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma in Reproductive Medicine",
+      // qualification: "MBBS, MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma in Reproductive Medicine",
       slug: "/dr-sowmya-sangmesh"
     }
   ];

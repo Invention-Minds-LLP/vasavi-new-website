@@ -91,7 +91,7 @@ export class Footer implements OnInit {
   }  
 
    showDesigner(): boolean {
-    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent','/nephrology','/obstetrics-gynaecology','/oncology','/orthopedic','/pulmonology','/urology','/robotic-hernia-surgery','/robotic-tkr','/robotic-thr','/robotic-gallbladder-removal-surgery-in-bangalore','/robotic-appendectomy-surgery-in-bangalore','/robotic-hysterectomy-surgery-in-bangalore'];
+    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent','/nephrology','/obstetrics-gynaecology','/oncology','/orthopedic','/pulmonology','/urology','/robotic-hernia-surgery','/robotic-tkr','/robotic-thr','/gallbladder-removal-surgery-in-bangalore','/appendectomy-surgery-in-bangalore','/hysterectomy-surgery-in-bangalore'];
     return inventionRoutes.includes(this.router.url);
   }
 }

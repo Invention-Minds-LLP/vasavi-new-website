@@ -18,11 +18,11 @@
             <p class="qualification" *ngIf="doctor?.department">{{doctor?.department}}</p>
             <p class="doctor-experience" *ngIf="doctor?.experience">{{doctor?.experience}} Years Experience</p>
             <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-            <a *ngIf="doctor?.slug"
+            <button *ngIf="doctor?.slug"
             class="appointment-btn"
             [routerLink]="['/doctors'+ doctor?.slug]">
            Book Appointment
-         </a>
+        </button>
          
 
         </div>

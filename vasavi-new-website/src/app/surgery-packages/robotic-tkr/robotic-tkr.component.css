@@ -25,10 +25,6 @@
     z-index: 0;
 } */
 
-body{
-    overflow-y: hidden;
-}
-
 
 .hero-section {
     position: relative;
@@ -421,7 +417,7 @@ body{
 @media(max-width:1024px) {
     .book-btn {
         left: 10%;
-        top: 97%;
+        top: 107%;
     }
 }
 
@@ -438,7 +434,7 @@ body{
     }
 
     .book-btn {
-        left: 10%;
+        left: 15%;
         top: 105%;
         padding: 8px 12px;
         font-size: 14px;
@@ -458,11 +454,23 @@ body{
 
     .stat-card {
         width: 90%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .stats-section {
         margin-top: 50PX;
+    }
+    .stat-content h3{
+        font-size: 24px;
+    }
+    .stat-content p{
+        text-align: left;
+    }
+    .stat-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
     }
 }
 
@@ -734,7 +742,7 @@ body{
 }
 
 .surgery-timeline-h {
-    padding: 0 40px 60px 40px;
+    padding: 40px 40px 60px 40px;
     background-color: #ffffff;
 }
 
@@ -824,6 +832,7 @@ body{
     max-width: 280px;
 }
 
+
 /* Mobile */
 @media (max-width: 768px) {
     .surgery-timeline-h {
@@ -909,7 +918,7 @@ body{
     }
 
     .book-btn {
-        left: 27%;
+        left: 30%;
         top: 100%;
         font-size: 16px;
     }
@@ -1029,7 +1038,18 @@ body{
     .feature-wrapper{
         gap: 30px;
     }
-
+    .stat-content h3{
+        font-size: 24px;
+    }
+    .stat-content p{
+        text-align: left;
+    }
+    .stat-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 
 .benefits-section-short {
@@ -1264,6 +1284,50 @@ body{
 .cta-button-comparison:hover {
     background-color: #e07b00;
 }
+
+/* Overlay background */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Popup box */
+  .popup-container {
+    background: #fff;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    animation: scaleIn 0.25s ease-in-out;
+  }
+  
+  /* Close button */
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s;
+  }
+  
+  .popup-close:hover {
+    color: #000;
+  }
 
 
 /* Responsive adjustments for the comparison table */
@@ -1570,4 +1634,12 @@ body{
     font-style: normal;
     color: #0078d4;
     font-weight: 600;
+}
+@media (max-width: 330px) {
+    .icon-box{
+        width: 35%;
+    }
+    .stat-content{
+        width: 65%;
+    }
 }
