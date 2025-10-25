@@ -80,7 +80,7 @@
             <div class="stat-card">
                 <div class="icon-box blue"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="stat-content">
-                    <h3>25+</h3>
+                    <h3>29+</h3>
                     <p>Years Experienced Orthopedic Surgeons</p>
                 </div>
             </div>
@@ -115,7 +115,7 @@
             <div class="stat-card">
                 <div class="icon-box blue"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="stat-content">
-                    <h3>25+</h3>
+                    <h3>29+</h3>
                     <p>Years Experienced Orthopedic Surgeons</p>
                 </div>
             </div>
@@ -184,7 +184,7 @@
             </div>
 
             <div class="form">
-                <app-callback-form />
+                <app-callback-form [pageName]="'TKR'"></app-callback-form>
             </div>
 
         </div>
@@ -230,7 +230,7 @@
                 </ul>
             </div>
 
-            <div class="comparison-column laparoscopic-column">
+            <div class="comparison-column robotic-column">
                 <img src="img/packages/conventional-knee-replacement.jpg" alt="Conventional Total Knee Replacement Surgery"
                     class="comparison-image">
                 <h2>Conventional Knee Replacement</h2>
@@ -294,9 +294,9 @@
                     activities faster with better mobility scores.</p>
             </div>
         </div>
-
+<!-- 
         <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
-        </app-pop-up-form-ads>
+        </app-pop-up-form-ads> -->
     </div>
 
 
@@ -343,8 +343,12 @@
             </div>
         </div> -->
 
-    <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()"
-        (onSubmit)="handleFormSubmit($event)"></app-pop-up-form-ads>
-
 
 </div>
+
+<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+      <button class="popup-close" (click)="closePopup()">✖</button>
+      <app-callback-form [pageName]="'TKR'"></app-callback-form>
+    </div>
+  </div>

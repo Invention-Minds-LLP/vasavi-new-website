@@ -18,12 +18,12 @@ export class Footer implements OnInit {
   errorMsg = '';
   isLoading = false;
 
-  hide : boolean = true
+  hide: boolean = true
 
   // apiUrl = 'http://localhost:3000/api';.
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
-  constructor(private fb: FormBuilder, private http: HttpClient,public router: Router) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, public router: Router) { }
 
   ngOnInit(): void {
     this.enquiryForm = this.fb.group({
@@ -63,7 +63,7 @@ export class Footer implements OnInit {
 
     const emailRequest = {
       // to: ['inventionmindsblr@gmail.com'],
-      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
+      to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com'],
       status: 'Enquiry-Form',
       appointmentDetails: emailParams,
     };
@@ -80,7 +80,7 @@ export class Footer implements OnInit {
         const modal = document.getElementById('enquire');
         const bsModal = (window as any).bootstrap.Modal.getInstance(modal);
         bsModal?.hide();
-        
+
       },
       error: (err: any) => {
         console.error('❌ Error sending enquiry:', err);
@@ -88,10 +88,14 @@ export class Footer implements OnInit {
         this.isLoading = false;
       },
     });
-  }  
+  }
 
-   showDesigner(): boolean {
-    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent','/nephrology','/obstetrics-gynaecology','/oncology','/orthopedic','/pulmonology','/urology','/robotic-hernia-surgery','/robotic-tkr','/robotic-thr','/gallbladder-removal-surgery-in-bangalore','/appendectomy-surgery-in-bangalore','/hysterectomy-surgery-in-bangalore'];
+  showDesigner(): boolean {
+    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent', '/nephrology', '/obstetrics-gynaecology', '/oncology',
+       '/orthopedic', '/pulmonology', '/urology', '/robotic-hernia-surgery', '/robotic-tkr', '/robotic-thr',
+        '/gallbladder-removal-surgery-in-bangalore', '/appendectomy-surgery-in-bangalore', '/hysterectomy-surgery-in-bangalore',
+      'tonsillectomy-surgery-in-bangalore-in-bangalore', 'piles-surgery-in-bangalore-in-bangalore', 'turp-surgery-in-bangalore-in-bangalore', 'fistula-surgery-in-bangalore',
+      'acl-reconstruction-in-bangalore', 'adenoid-removal-in-bangalore', 'sinus-surgery-in-bangalore'];
     return inventionRoutes.includes(this.router.url);
   }
 }

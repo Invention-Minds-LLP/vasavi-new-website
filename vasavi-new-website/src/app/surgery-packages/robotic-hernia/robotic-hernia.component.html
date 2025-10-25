@@ -194,7 +194,7 @@
             </div>
 
             <div class="form">
-                <app-callback-form />
+                <app-callback-form  [pageName]="'Hernia'"></app-callback-form>
             </div>
 
         </div>
@@ -407,8 +407,13 @@
             </div>
         </div> -->
 
-        <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()"
-            (onSubmit)="handleFormSubmit($event)"></app-pop-up-form-ads>
 
 
     </div>
+
+    <div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+        <div class="popup-container" (click)="$event.stopPropagation()">
+          <button class="popup-close" (click)="closePopup()">✖</button>
+          <app-callback-form [pageName]="'Hernia'"></app-callback-form>
+        </div>
+      </div>

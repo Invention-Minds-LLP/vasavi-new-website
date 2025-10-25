@@ -42,6 +42,7 @@ export class RoboticTkrComponent {
       alt: 'Best General Surgeon in Bangalore | Dr. Mutharaju K. R',
       experience: '23+',
       department: 'Robotic & Minimally Invasive Surgery',
+      slug:'/dr-mutharaju-k-r'
     },
   ];
 

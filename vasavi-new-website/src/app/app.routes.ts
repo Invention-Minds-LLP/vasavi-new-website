@@ -171,7 +171,7 @@ export const routes: Routes = [
 
   { path: 'sinus-surgery-in-bangalore', component: SinusSurgery },
   { path: 'adenoid-removal-in-bangalore', component: AdenoidRemoval },
-  { path: 'ACL-reconstructio-in-bangalore', component: ACLReconstructio },
+  { path: 'acl-reconstruction-in-bangalore', component: ACLReconstructio },
   { path: 'fistula-surgery-in-bangalore', component: FistulaSurgery },
   { path: 'turp-surgery-in-bangalore-in-bangalore', component: ProstateRemoval },
   { path: 'piles-surgery-in-bangalore-in-bangalore', component: Haemorrhoidectomy },

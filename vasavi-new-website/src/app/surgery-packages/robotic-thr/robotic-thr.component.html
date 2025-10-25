@@ -122,7 +122,7 @@
             </div>
 
             <div class="form">
-                <app-callback-form />
+                <app-callback-form [pageName]="'Total-Hip-Replacement'" />
             </div>
         </div>
 
@@ -162,7 +162,7 @@
                 </ul>
             </div>
 
-            <div class="comparison-column laparoscopic-column">
+            <div class="comparison-column robotic-column">
                 <img src="img/packages/conventional-hip-replacement.png" alt="Conventional Total Hip Replacement Surgery" class="comparison-image">
                 <h2>Conventional Hip Replacement</h2>
                 <ul>
@@ -182,7 +182,7 @@
             </div>
         </div>
 
-        <a href="#" class="cta-button-comparison">Consult Our Orthopedic Experts</a>
+        <a (click)="openPopup()" class="cta-button-comparison">Consult Our Orthopedic Experts</a>
     </div>
 
 
@@ -218,12 +218,16 @@
                 <p>With physiotherapy and gradual exercises, patients regain flexibility and confidence. Robotic patients often recover faster with improved balance and posture.</p>
             </div>
         </div>
-
-        <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
-        </app-pop-up-form-ads>
     </div>
 
     <!-- <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
     </app-pop-up-form-ads> -->
 
 </div>
+
+<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+      <button class="popup-close" (click)="closePopup()">✖</button>
+      <app-callback-form [pageName]="'Total-Hip-Replacement'"></app-callback-form>
+    </div>
+  </div>
