@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-fistula-surgery',
@@ -12,6 +13,9 @@ import { Cta } from "../../cta/cta";
   styleUrl: './fistula-surgery.css'
 })
 export class FistulaSurgery {
+
+  constructor(private title:Title, private meta:Meta){}
+
    doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
     description : ""
@@ -58,6 +62,10 @@ export class FistulaSurgery {
     setTimeout(() => {
       this.openPopup();
     }, 5000);
+
+    this.title.setTitle('Fistula Surgery in Bangalore | Fistulectomy & Fistulotomy');
+    this.meta.updateTag({name:'description', content:'Effective treatment for anal fistula with minimally invasive surgery. Quick recovery & low recurrence rates.'})
+    
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

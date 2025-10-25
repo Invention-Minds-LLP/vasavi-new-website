@@ -4,6 +4,7 @@ import { DoctorsCard } from '../../doctors-card/doctors-card';
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
 import { PackageForm } from "../../package-form/package-form";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -23,6 +24,9 @@ interface HerniaType {
   styleUrl: './robotic-tkr.component.css'
 })
 export class RoboticTkrComponent {
+
+  constructor(private title:Title, private meta:Meta){}
+
   doctorHeader: any = {
     title: 'Meet Our Surgery Specialist',
     description: '',
@@ -128,6 +132,9 @@ export class RoboticTkrComponent {
     setTimeout(() => {
       this.openPopup();
     }, 5000);
+
+    this.title.setTitle('Total Knee Replacement Surgery in Bangalore | Walk Pain-Free Again');
+    this.meta.updateTag({name:'description', content:'Get long-lasting relief from knee pain with advanced Total Knee Replacement at Vasavi Hospitals. Expert orthopedic care, faster recovery & cashless insurance.'})
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

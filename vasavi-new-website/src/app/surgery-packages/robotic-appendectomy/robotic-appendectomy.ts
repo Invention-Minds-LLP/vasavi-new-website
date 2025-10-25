@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -24,6 +25,13 @@ interface HerniaType {
   styleUrl: './robotic-appendectomy.css',
 })
 export class RoboticAppendectomy {
+
+  constructor(private title:Title, private meta:Meta){}
+
+  ngOnInit(): void{
+    this.title.setTitle('Appendix Removal Surgery in Bangalore | Laparoscopic Appendectomy');
+    this.meta.updateTag({name:'descrtption', content:'Advanced appendix removal with laparoscopic & robotic care. Fast healing, minimal pain & cashless insurance options.'})
+  }
 
   doctorHeader : any = {
     title : "Meet Our Surgery Specialist",

@@ -61,6 +61,10 @@ import { FistulaSurgery } from './surgery-packages/fistula-surgery/fistula-surge
 import { ProstateRemoval } from './surgery-packages/prostate-removal/prostate-removal';
 import { Haemorrhoidectomy } from './surgery-packages/haemorrhoidectomy/haemorrhoidectomy';
 import { Tonsillectomy } from './surgery-packages/tonsillectomy/tonsillectomy';
+import { OvarianCystectomy } from './surgery-packages/ovarian-cystectomy/ovarian-cystectomy';
+import { FibroidRemoval } from './surgery-packages/fibroid-removal/fibroid-removal';
+import { CTAngiography } from './surgery-packages/ct-angiography/ct-angiography';
+import { CoronaryAngiography } from './surgery-packages/coronary-angiography/coronary-angiography';
 
 // export const routes: Routes = [
 //     {path: 'anesthesiology' , component: Anesthesiology},
@@ -176,6 +180,11 @@ export const routes: Routes = [
   { path: 'turp-surgery-in-bangalore-in-bangalore', component: ProstateRemoval },
   { path: 'piles-surgery-in-bangalore-in-bangalore', component: Haemorrhoidectomy },
   { path: 'tonsillectomy-surgery-in-bangalore-in-bangalore', component: Tonsillectomy },
+  { path: 'ovarian-cystectomy', component: OvarianCystectomy },
+  { path: 'fibroid-removal', component: FibroidRemoval },
+  { path: 'CT-angiography', component: CTAngiography },
+  { path: 'coronary-angiography', component: CoronaryAngiography },
+
 
 
   // ads

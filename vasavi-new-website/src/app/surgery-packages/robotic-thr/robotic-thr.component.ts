@@ -4,6 +4,7 @@ import { DoctorsCard } from '../../doctors-card/doctors-card';
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
 import { PackageForm } from "../../package-form/package-form";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -24,6 +25,8 @@ interface HerniaType {
   styleUrl: './robotic-thr.component.css'
 })
 export class RoboticThrComponent {
+
+  constructor(private title:Title, private meta:Meta){}
 
   doctorHeader: any = {
     title: 'Meet Our Surgery Specialist',
@@ -130,6 +133,9 @@ export class RoboticThrComponent {
     setTimeout(() => {
       this.openPopup();
     }, 5000);
+
+    this.title.setTitle('Total Hip Replacement Surgery in Bangalore | Regain Mobility & Comfort');
+    this.meta.updateTag({name:'description', content:'Experience pain-free movement with advanced Hip Replacement surgery at Vasavi Hospitals. Safe, precise & affordable orthopedic care with fast recovery.'})
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

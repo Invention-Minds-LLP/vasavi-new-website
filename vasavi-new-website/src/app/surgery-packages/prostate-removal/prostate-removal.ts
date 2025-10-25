@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -23,6 +24,14 @@ interface HerniaType {
   styleUrl: './prostate-removal.css'
 })
 export class ProstateRemoval {
+
+  constructor(private title:Title, private meta:Meta){}
+
+  ngOnInit():void{
+    this.title.setTitle('TURP Prostate Removal Surgery in Bangalore | Vasavi Urology');
+    this.meta.updateTag({name:'description', content:'Treat enlarged prostate safely with advanced TURP. No external cuts, quick recovery & insurance-covered packages.'})
+  }
+
   doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
     description : ""
