@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -24,6 +25,9 @@ interface HerniaType {
   styleUrl: './sinus-surgery.css'
 })
 export class SinusSurgery {
+
+  constructor(private title:Title, private meta:Meta){}
+
 
   doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
@@ -71,6 +75,9 @@ export class SinusSurgery {
     setTimeout(() => {
       this.openPopup();
     }, 5000);
+
+    this.title.setTitle('Endoscopic Sinus Surgery in Bangalore | Vasavi Hospitals ENT');
+    this.meta.updateTag({name:'description', content:'Relieve sinus infections & breathing issues with advanced endoscopic sinus surgery. Minimally invasive, faster healing.'})
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

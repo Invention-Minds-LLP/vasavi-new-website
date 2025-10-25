@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-acl-reconstructio',
@@ -12,6 +13,9 @@ import { Cta } from "../../cta/cta";
   styleUrl: './acl-reconstructio.css'
 })
 export class ACLReconstructio {
+
+  constructor(private title:Title, private meta:Meta){}
+
     doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
     description : ""
@@ -58,6 +62,9 @@ export class ACLReconstructio {
     setTimeout(() => {
       this.openPopup();
     }, 5000);
+
+    this.title.setTitle('ACL Reconstruction Surgery in Bangalore | Orthopedic Experts');
+    this.meta.updateTag({name:'description', content:'Restore knee stability with arthroscopic ACL reconstruction. Sports injury recovery made faster & pain-free.'})
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -22,6 +23,8 @@ interface HerniaType {
   styleUrl: './robotic-hysterectomy.css'
 })
 export class RoboticHysterectomy {
+
+  constructor(private title:Title, private meta: Meta){}
 
   doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
@@ -116,6 +119,8 @@ export class RoboticHysterectomy {
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
     // }, 25000);
+    this.title.setTitle(' Affordable Hysterectomy Surgery in Bangalore | Vasavi Hospitals');
+    this.meta.updateTag({name:'description', content:'Get expert laparoscopic & robotic hysterectomy in Bangalore for fibroids, bleeding & uterine issues. Safe, precise & quick recovery.'})
   }
 
   handleFormSubmit(data: { name: string; phoneNumber: string; otp: string }) {

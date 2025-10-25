@@ -4,6 +4,7 @@ import { DoctorsCard } from '../../doctors-card/doctors-card';
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
 import { PackageForm } from "../../package-form/package-form";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -23,6 +24,10 @@ interface HerniaType {
   styleUrl: './robotic-hernia.component.css',
 })
 export class RoboticHerniaComponent {
+
+  constructor(private title: Title, private meta:Meta){}
+
+
   doctorHeader: any = {
     title: 'Meet Our Surgery Specialist',
     description: '',
@@ -125,6 +130,9 @@ export class RoboticHerniaComponent {
     setTimeout(() => {
       this.openPopup();
     }, 5000);
+
+    this.title.setTitle('Hernia Surgery in Bangalore | Advanced Laparoscopic Repair');
+    this.meta.updateTag({name:'description', content:'Treat hernias safely with laparoscopic hernia surgery at Vasavi Hospitals. Minimal scars, quick recovery & affordable, insurance-covered packages.'})
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

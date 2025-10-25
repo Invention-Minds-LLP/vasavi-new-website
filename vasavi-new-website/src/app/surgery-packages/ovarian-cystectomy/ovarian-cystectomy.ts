@@ -7,38 +7,38 @@ import { Cta } from "../../cta/cta";
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-adenoid-removal',
+  selector: 'app-ovarian-cystectomy',
   imports: [CallbackForm, CommonModule, DoctorsCard, Cta, PopUpFormAds],
-  templateUrl: './adenoid-removal.html',
-  styleUrl: './adenoid-removal.css'
+  templateUrl: './ovarian-cystectomy.html',
+  styleUrl: './ovarian-cystectomy.css'
 })
-export class AdenoidRemoval {
+export class OvarianCystectomy {
 
   constructor(private title:Title, private meta:Meta){}
 
-   doctorHeader : any = {
+  doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
     description : ""
   }
 
   doctors: any = [
-    {
-      name: "Dr. Yashaswi Srikakula",
-      img: "img/new-doctor-image/dummy-female-sq.png",
+     {
+      name: "Dr.Nisha Buchade",
+      img: "img/go/dr-nisha-buchade-sq.png",
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
-      // experience: "15+",
+      experience: "15+",
       // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, DLO, Fellowship in Rhinology",
-      // slug: "/dr-nisha-buchade"
+      qualification: "MBBS, MS Fellowship in gynec-oncology, Fellowship in Advanced infertility",
+      slug: "/dr-nisha-buchade"
     },
     {
-      name: "Dr. Sphoorthy G Itigi",
-      img: "img/Doctor-img/ENT/dr-spoorthi.png",
+      name: "Dr. Sowmya Sangmesh",
+      img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
       alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
-      experience: "8+",
-      department: "Consultant - ENT",
-      qualification: "MBBS, DLO, DNB (ENT)",
-      slug: "/dr-sphoorthy-g-itigi"
+      experience: "14+",
+      // department: "Consultant - ENT",
+      qualification: "MBBS.,MS (OBG) .FELLOWSHIP MINIMAL ACCESS SURGERY, ADVANCED DIPLOMA REPRODUCTIVE MEDICINE",
+      slug: "/dr-sowmya-sangmesh"
     }
   ];
 
@@ -63,8 +63,9 @@ export class AdenoidRemoval {
       this.openPopup();
     }, 5000);
 
-    this.title.setTitle('Adenoid Removal Surgery in Bangalore | ENT Specialists')
-    this.meta.updateTag({name:'description', content:'Safe adenoidectomy for kids & adults. No external cuts, painless recovery & improved breathing at Vasavi Hospitals.'})
+    this.title.setTitle('Ovarian Cyst Removal Surgery in Bangalore | Laparoscopic Care');
+    this.meta.updateTag({name:'description', content:'Minimally invasive ovarian cyst removal preserving fertility. Expert gynecologists, affordable packages & fast recovery.'})
+
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
     // }, 25000);
@@ -75,5 +76,4 @@ export class AdenoidRemoval {
     // ✅ You can send this data to backend or API here
     this.closePopup(); // close popup after success
   }
-  
 }

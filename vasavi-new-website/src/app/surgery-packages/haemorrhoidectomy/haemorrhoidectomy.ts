@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from "../../cta/cta";
+import { Meta, Title } from '@angular/platform-browser';
 
 interface HerniaType {
   cssClass: string;
@@ -23,6 +24,15 @@ interface HerniaType {
   styleUrl: './haemorrhoidectomy.css'
 })
 export class Haemorrhoidectomy {
+
+  constructor(private title:Title, private meta:Meta){}
+
+  ngOnInit():void{
+    this.title.setTitle('Laser & Conventional Piles Surgery in Bangalore | Vasavi')
+    this.meta.updateTag({name:'description', content:'Pain-free piles surgery using laser & advanced techniques. Affordable, safe & covered by cashless insurance.'})
+  }
+
+
   doctorHeader : any = {
     title : "Meet Our Surgery Specialist",
     description : ""

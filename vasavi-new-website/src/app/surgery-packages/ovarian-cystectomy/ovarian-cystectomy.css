@@ -416,8 +416,8 @@
 
 @media(max-width:1024px) {
     .book-btn {
-        left: 15%;
-        top: 98%;
+        left: 10%;
+        top: 107%;
     }
 }
 
@@ -919,7 +919,7 @@
     }
 
     .book-btn {
-        left: 25%;
+        left: 30%;
         top: 100%;
         font-size: 16px;
     }
