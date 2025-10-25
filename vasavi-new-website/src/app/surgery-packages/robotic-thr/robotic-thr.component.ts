@@ -32,20 +32,23 @@ export class RoboticThrComponent {
 
   doctors: any = [
     {
-      name: 'Dr. Ramesh T S',
-      img: 'img/Doctor-img/MINIMALLY INVASIVE SURGERY/Dr.Ramesh T S.jpg',
-      alt: 'Best General Surgeon in Bangalore | Dr. Ramesh T S',
-      experience: '29+',
-      department: 'Robotic & Minimally Invasive Surgery',
+      name: "Dr. Srivatsa Subramanya",
+      img: "img/new-doctor-image/dr-srivatsa-subramanya-spec.png",
+      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
+      experience: "17+",
+      // department: "Gynecology, Robotic & Laparoscopic Surgery",
+      // qualification: "MBBS, MS (Ortho); DNB (Ortho); fellowship in knee (Australia) fellowship in shoulder (Australia, Italy), fellowship in Orthopaedic trauma (S.Korea)",
+      slug: "/dr-srivatsa-subramanya"
     },
     {
-      name: 'Dr. Mutharaju K. R',
-      img: 'img/new-doctor-image/dr-mutharaju-k-r-sq.png',
-      alt: 'Best General Surgeon in Bangalore | Dr. Mutharaju K. R',
-      experience: '23+',
-      department: 'Robotic & Minimally Invasive Surgery',
-      slug:'/dr-mutharaju-k-r'
-    },
+      name: "Dr. Venkatesh Rathod R",
+      img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
+      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
+      experience: "11+",
+      // department: "Consultant - ENT",
+      // qualification: "MBBS, Dortho, DNB ortho",
+      slug: "/dr-venkatesh-rathod-r"
+    }
   ];
 
   herniaTypes: HerniaType[] = [
