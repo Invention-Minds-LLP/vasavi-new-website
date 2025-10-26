@@ -7,9 +7,16 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-footer',
   standalone: true, // ✅ REQUIRED for imports to work
-  imports: [RouterLink, RouterModule, CommonModule, CommonModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    RouterLink,
+    RouterModule,
+    CommonModule,
+    CommonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   templateUrl: './footer.html',
-  styleUrls: ['./footer.css'] // ✅ plural
+  styleUrls: ['./footer.css'], // ✅ plural
 })
 export class Footer implements OnInit {
   enquiryForm!: FormGroup;
@@ -18,16 +25,19 @@ export class Footer implements OnInit {
   errorMsg = '';
   isLoading = false;
 
-  hide: boolean = true
+  hide: boolean = true;
 
   // apiUrl = 'http://localhost:3000/api';.
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
-  constructor(private fb: FormBuilder, private http: HttpClient, public router: Router) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, public router: Router) {}
 
   ngOnInit(): void {
     this.enquiryForm = this.fb.group({
-      name: ['', [Validators.required, Validators.pattern(/^[a-zA-Z ]*$/), Validators.minLength(2)]],
+      name: [
+        '',
+        [Validators.required, Validators.pattern(/^[a-zA-Z ]*$/), Validators.minLength(2)],
+      ],
       phone: ['', [Validators.required, Validators.pattern(/^[6-9]\d{9}$/)]],
       appointment_date: ['', Validators.required],
       service: ['', Validators.required],
@@ -74,13 +84,12 @@ export class Footer implements OnInit {
         this.enquiryForm.reset();
         this.submitted = false;
         this.isLoading = false;
-        this.hide = false
+        this.hide = false;
         this.router.navigate(['/thank-you']);
 
         const modal = document.getElementById('enquire');
         const bsModal = (window as any).bootstrap.Modal.getInstance(modal);
         bsModal?.hide();
-
       },
       error: (err: any) => {
         console.error('❌ Error sending enquiry:', err);
@@ -91,11 +100,33 @@ export class Footer implements OnInit {
   }
 
   showDesigner(): boolean {
-    const inventionRoutes = ['/bariatric-surgery', '/cardiology', '/ent', '/nephrology', '/obstetrics-gynaecology', '/oncology',
-       '/orthopedic', '/pulmonology', '/urology', '/robotic-hernia-surgery', '/robotic-tkr', '/robotic-thr',
-        '/gallbladder-removal-surgery-in-bangalore', '/appendectomy-surgery-in-bangalore', '/hysterectomy-surgery-in-bangalore',
-      'tonsillectomy-surgery-in-bangalore-in-bangalore', 'piles-surgery-in-bangalore-in-bangalore', 'turp-surgery-in-bangalore-in-bangalore', 'fistula-surgery-in-bangalore',
-      'acl-reconstruction-in-bangalore', 'adenoid-removal-in-bangalore', 'sinus-surgery-in-bangalore','/hernia-surgery-in-bangalore','/total-knee-replacement-in-bangalore','/total-hip-replacement-in-bangalore'];
+    const inventionRoutes = [
+      '/bariatric-surgery',
+      '/cardiology',
+      '/ent',
+      '/nephrology',
+      '/obstetrics-gynaecology',
+      '/oncology',
+      '/orthopedic',
+      '/pulmonology',
+      '/urology',
+      '/robotic-hernia-surgery',
+      '/robotic-tkr',
+      '/robotic-thr',
+      '/gallbladder-removal-surgery-in-bangalore',
+      '/appendectomy-surgery-in-bangalore',
+      '/hysterectomy-surgery-in-bangalore',
+      '/tonsillectomy-surgery-in-bangalore-in-bangalore',
+      '/piles-surgery-in-bangalore-in-bangalore',
+      '/turp-surgery-in-bangalore-in-bangalore',
+      '/fistula-surgery-in-bangalore',
+      '/acl-reconstruction-in-bangalore',
+      '/adenoid-removal-in-bangalore',
+      '/sinus-surgery-in-bangalore',
+      '/hernia-surgery-in-bangalore',
+      '/total-knee-replacement-in-bangalore',
+      '/total-hip-replacement-in-bangalore',
+    ];
     return inventionRoutes.includes(this.router.url);
   }
 }
