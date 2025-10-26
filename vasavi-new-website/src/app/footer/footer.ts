@@ -126,6 +126,10 @@ export class Footer implements OnInit {
       '/hernia-surgery-in-bangalore',
       '/total-knee-replacement-in-bangalore',
       '/total-hip-replacement-in-bangalore',
+      '/ovarian-cystectomy-in-bangalore',
+      '/fibroid-removal-in-bangalore',
+      '/ct-angiography-in-bangalore',
+      '/coronary-angiography-in-bangalore',
     ];
     return inventionRoutes.includes(this.router.url);
   }

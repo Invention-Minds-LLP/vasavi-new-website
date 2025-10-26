@@ -48,24 +48,26 @@ export class Tonsillectomy {
     document.body.style.overflow = ''; // restore scroll
   }
 
-  doctors: any = [
+    doctors: any = [
     {
-      name : "Dr. Ramesh Hanumegowda",
-      img : "img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png",
-      alt : "Best General Surgeon in Bangalore | Dr. Ramesh T S",
-      experience : "15+",
-      department : "Urology",
-      slug:'dr-ramesh-hanumegowda'
+      name: "Dr. Yashaswi Srikakula",
+      img: "img/new-doctor-image/dummy-female-sq.png",
+      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
+      // experience: "15+",
+      // department: "Gynecology, Robotic & Laparoscopic Surgery",
+      qualification: "MBBS, DLO, Fellowship in Rhinology",
+      // slug: "/dr-nisha-buchade"
     },
     {
-      name : "Dr. Supreeth Nagaraju",
-      img : "img/new-doctor-image/dummy-male-sq.png",
-      alt : "Best General Surgeon in Bangalore | Dr. Mutharaju K. R",
-      experience : "",
-      department : "Urology",
-      slug:''
-    },
-  ]
+      name: "Dr. Sphoorthy G Itigi",
+      img: "img/Doctor-img/ENT/dr-spoorthi.png",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      experience: "8+",
+      department: "Consultant - ENT",
+      qualification: "MBBS, DLO, DNB (ENT)",
+      slug: "/dr-sphoorthy-g-itigi"
+    }
+  ];
 
 
 herniaTypes: HerniaType[] = [
