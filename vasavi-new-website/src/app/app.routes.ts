@@ -180,10 +180,10 @@ export const routes: Routes = [
   { path: 'turp-surgery-in-bangalore-in-bangalore', component: ProstateRemoval },
   { path: 'piles-surgery-in-bangalore-in-bangalore', component: Haemorrhoidectomy },
   { path: 'tonsillectomy-surgery-in-bangalore-in-bangalore', component: Tonsillectomy },
-  { path: 'ovarian-cystectomy', component: OvarianCystectomy },
-  { path: 'fibroid-removal', component: FibroidRemoval },
-  { path: 'CT-angiography', component: CTAngiography },
-  { path: 'coronary-angiography', component: CoronaryAngiography },
+  { path: 'ovarian-cystectomy-in-bangalore-in-bangalore', component: OvarianCystectomy },
+  { path: 'fibroid-removal-in-bangalore-in-bangalore', component: FibroidRemoval },
+  { path: 'CT-angiography-in-bangalore-in-bangalore', component: CTAngiography },
+  { path: 'coronary-angiography-in-bangalore-in-bangalore', component: CoronaryAngiography },
 
 
 
