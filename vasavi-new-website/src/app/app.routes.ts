@@ -182,7 +182,7 @@ export const routes: Routes = [
   { path: 'tonsillectomy-surgery-in-bangalore-in-bangalore', component: Tonsillectomy },
   { path: 'ovarian-cystectomy-in-bangalore-in-bangalore', component: OvarianCystectomy },
   { path: 'fibroid-removal-in-bangalore-in-bangalore', component: FibroidRemoval },
-  { path: 'CT-angiography-in-bangalore-in-bangalore', component: CTAngiography },
+  { path: 'ct-angiography-in-bangalore-in-bangalore', component: CTAngiography },
   { path: 'coronary-angiography-in-bangalore-in-bangalore', component: CoronaryAngiography },
 
 

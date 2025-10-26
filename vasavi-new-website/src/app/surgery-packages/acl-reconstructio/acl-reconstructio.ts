@@ -25,19 +25,19 @@ export class ACLReconstructio {
     {
       name: "Dr. Srivatsa Subramanya",
       img: "img/new-doctor-image/dr-srivatsa-subramanya-spec.png",
-      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
+      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
       experience: "17+",
       // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, MS (Ortho); DNB (Ortho); fellowship in knee (Australia) fellowship in shoulder (Australia, Italy), fellowship in Orthopaedic trauma (S.Korea)",
+      // qualification: "MBBS, MS (Ortho); DNB (Ortho); fellowship in knee (Australia) fellowship in shoulder (Australia, Italy), fellowship in Orthopaedic trauma (S.Korea)",
       slug: "/dr-srivatsa-subramanya"
     },
     {
       name: "Dr. Venkatesh Rathod R",
       img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
       experience: "11+",
       // department: "Consultant - ENT",
-      qualification: "MBBS, Dortho, DNB ortho",
+      // qualification: "MBBS, Dortho, DNB ortho",
       slug: "/dr-venkatesh-rathod-r"
     }
   ];
