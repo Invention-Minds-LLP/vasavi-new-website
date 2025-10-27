@@ -34,23 +34,23 @@ export class RoboticTkrComponent {
 
   doctors: any = [
    {
-      name: "Dr. Srivatsa Subramanya",
-      img: "img/new-doctor-image/dr-srivatsa-subramanya-spec.png",
+      name: "Dr. Rupendu T",
+      img: "img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png",
       alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
-      experience: "17+",
-      // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      // qualification: "MBBS, MS (Ortho); DNB (Ortho); fellowship in knee (Australia) fellowship in shoulder (Australia, Italy), fellowship in Orthopaedic trauma (S.Korea)",
-      slug: "/dr-srivatsa-subramanya"
+      experience: "40+",
+      department: "Sr. Consultant Orthopaedic Surgeon",
+      qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
+      // slug: "/dr-srivatsa-subramanya"
     },
-    {
-      name: "Dr. Venkatesh Rathod R",
-      img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
-      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
-      experience: "11+",
-      // department: "Consultant - ENT",
-      // qualification: "MBBS, Dortho, DNB ortho",
-      slug: "/dr-venkatesh-rathod-r"
-    }
+    // {
+    //   name: "Dr. Venkatesh Rathod R",
+    //   img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
+    //   alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
+    //   experience: "11+",
+    //   department: "Consultant - ENT",
+    //   qualification: "MBBS, Dortho, DNB ortho",
+    //   slug: "/dr-venkatesh-rathod-r"
+    // }
   ];
 
   herniaTypes: HerniaType[] = [
