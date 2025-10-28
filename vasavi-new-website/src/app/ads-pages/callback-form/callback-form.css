@@ -86,6 +86,6 @@ label {
 @media (max-width: 600px) {
   .callback-container {
     padding: 30px 20px;
-    margin: 20px;
+    /* margin: 20px; */
   }
 }

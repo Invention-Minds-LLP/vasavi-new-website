@@ -64,10 +64,10 @@ export class Nephrology {
       message: ['', [Validators.required, Validators.minLength(10)]]
   });
 
-    this.titleService.setTitle('Best Neurology Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Best Kidney & Nephrology Hospital in Banashankari Bangalore | Vasavi Hospitals');
     this.metaService.updateTag({
       name: 'description',
-      content: 'Vasavi Hospitals in Banashankari Bangalore provides expert neurology care for brain, spine, and nervous system disorders.'
+      content: 'Vasavi Hospitals in Banashankari Bangalore offers nephrology care, dialysis, and treatments for kidney diseases.'
     });
   }
 

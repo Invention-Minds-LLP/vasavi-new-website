@@ -101,16 +101,32 @@ export class Footer implements OnInit {
 
 showDesigner(): boolean {
   const inventionRoutes = [
-    '/bariatric-surgery',
-    '/cardiology',
-    '/ent',
-    '/nephrology',
-    '/obstetrics-gynaecology',
-    '/oncology',
-    '/orthopedic',
-    '/pulmonology',
-    '/urology',
+    '/bariatric-surgery-in-bangalore',
+    '/cardiology-hospital-in-bangalore',
+    '/ent-hospital-in-bangalore',
+    '/nephrology-hospital-in-bangalore',
+    '/obstetrics-and-gynaecology-hospital-in-bangalore',
+    '/oncology-hospital-in-bangalore',
+    '/orthopedic-hospital-in-bangalore',
+    '/lung-specialist-in-bangalore',
+    '/urology-hospital-in-bangalore',
 
+    // Doctors page
+    '/doctors/dr-karthik-k',
+    '/doctors/dr-mutharaju-k-r',
+    '/doctors/dr-abhiram-r',
+    '/doctors/dr-raveendra-reddy',
+    '/doctors/dr-sphoorthy-g-itigi',
+    '/doctors/dr-ashok-m-v',
+    '/doctors/dr-nisha-buchade',
+    '/doctors/dr-vinay-hosadurga',
+    '/doctors/dr-ramesh-hanumegowda',
+    '/doctors/dr-sowmya-sangmesh',
+    '/doctors/dr-srivatsa-subramanya',
+    '/doctors/dr-gargi-das',
+    '/doctors/dr-sunil-r',
+    '/doctors/dr-pratham-r-bysani',
+    '/doctors/dr-venkatesh-rathod-r',
 
     // surgery packages
     // '/robotic-hernia-surgery',
