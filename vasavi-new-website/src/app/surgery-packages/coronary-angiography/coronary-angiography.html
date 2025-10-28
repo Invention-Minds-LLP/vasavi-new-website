@@ -304,7 +304,7 @@
         
         
     </div>
-    <div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
+    <div class="popup-overlay" *ngIf="isPopupOpen">
         <div class="popup-container" (click)="$event.stopPropagation()">
           <button class="popup-close" (click)="closePopup()">✖</button>
           <app-callback-form [pageName]="'coronary-angiography'"></app-callback-form>

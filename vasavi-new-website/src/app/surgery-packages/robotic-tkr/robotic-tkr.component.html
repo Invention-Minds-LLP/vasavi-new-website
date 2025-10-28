@@ -80,7 +80,7 @@
             <div class="stat-card">
                 <div class="icon-box blue"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="stat-content">
-                    <h3>29+</h3>
+                    <h3>40+</h3>
                     <p>Years Experienced Orthopedic Surgeons</p>
                 </div>
             </div>
@@ -115,7 +115,7 @@
             <div class="stat-card">
                 <div class="icon-box blue"><i class="fa-solid fa-user-doctor"></i></div>
                 <div class="stat-content">
-                    <h3>29+</h3>
+                    <h3>40+</h3>
                     <p>Years Experienced Orthopedic Surgeons</p>
                 </div>
             </div>
@@ -138,7 +138,7 @@
         </div>
         <div class="video">
             <video autoplay loop muted playsinline>
-                <source src="/img/packages/tkr-video.mp4" type="video/mp4" />
+                <source src="img/packages/total-knee-replacement-2025-10-16-07-35-12-utc.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -344,9 +344,10 @@
 
 </div>
 
-<div class="popup-overlay" *ngIf="isPopupOpen" (click)="closePopup()">
-    <div class="popup-container" (click)="$event.stopPropagation()">
-      <button class="popup-close" (click)="closePopup()">✖</button>
-      <app-callback-form [pageName]="'TKR'"></app-callback-form>
-    </div>
+<div class="popup-overlay" *ngIf="isPopupOpen">
+  <div class="popup-container" (click)="$event.stopPropagation()">
+    <button class="popup-close" (click)="closePopup()">✖</button>
+    <app-callback-form [pageName]="'TKR'"></app-callback-form>
   </div>
+</div>
+

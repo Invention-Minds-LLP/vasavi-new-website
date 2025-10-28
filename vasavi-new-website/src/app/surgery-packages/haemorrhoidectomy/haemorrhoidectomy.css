@@ -434,7 +434,7 @@
     }
 
     .book-btn {
-        left: 15%;
+       left: 13%;
         top: 105%;
         padding: 8px 12px;
         font-size: 14px;
@@ -918,7 +918,7 @@
     }
 
     .book-btn {
-        left: 30%;
+        left: 23%;
         top: 100%;
         font-size: 16px;
     }
@@ -1302,18 +1302,18 @@
   
   /* Popup box */
   .popup-container {
-    background: #fff;
+    /* background: #fff; */
     border-radius: 10px;
     max-width: 500px;
     width: 90%;
-    padding: 30px 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    /* padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
     position: relative;
     animation: scaleIn 0.25s ease-in-out;
   }
   
   /* Close button */
-  .popup-close {
+  /* .popup-close {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -1323,11 +1323,23 @@
     cursor: pointer;
     color: #555;
     transition: 0.2s;
+  } */
+    .popup-close {
+    position: absolute;
+    top: 58px;
+    right: 6px;
+    background: transparent;
+    border: none;
+    font-size: 21px;
+    cursor: pointer;
+    color: red;
+    transition: 0.2s;
+    font-weight: 800;
   }
   
-  .popup-close:hover {
+  /* .popup-close:hover {
     color: #000;
-  }
+  } */
 
 
 /* Responsive adjustments for the comparison table */

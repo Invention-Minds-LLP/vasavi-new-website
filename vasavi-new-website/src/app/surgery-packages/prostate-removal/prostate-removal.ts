@@ -55,7 +55,7 @@ export class ProstateRemoval {
       alt : "Best General Surgeon in Bangalore | Dr. Ramesh T S",
       experience : "15+",
       department : "Urology",
-      slug:'dr-ramesh-hanumegowda'
+      slug:'/dr-ramesh-hanumegowda'
     },
     {
       name : "Dr. Supreeth Nagaraju",
