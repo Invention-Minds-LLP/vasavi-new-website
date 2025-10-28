@@ -40,18 +40,28 @@ export class RoboticThrComponent {
       alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
       experience: "40+",
       department: "Sr. Consultant Orthopaedic Surgeon",
-      qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
+      // qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
       // slug: "/dr-srivatsa-subramanya"
     },
-    // {
-    //   name: "Dr. Venkatesh Rathod R",
-    //   img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
-    //   alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
-    //   experience: "11+",
-    //   // department: "Consultant - ENT",
-    //   // qualification: "MBBS, Dortho, DNB ortho",
-    //   slug: "/dr-venkatesh-rathod-r"
-    // }
+    {
+      name: 'Dr. Srivatsa Subramanya',
+      img: 'img/new-doctor-image/dr-srivatsa-subramanya.png',
+      alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
+      experience: '17+',
+      department: 'Consultant-Orthopedics',
+      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+      slug: "/dr-srivatsa-subramanya" 
+    },
+    {
+      name: "Dr. Venkatesh Rathod R",
+      img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
+      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
+      experience: "11+",
+      department: 'Consultant-Orthopedics',
+      // department: "Consultant - ENT",
+      // qualification: "MBBS, Dortho, DNB ortho",
+      slug: "/dr-venkatesh-rathod-r"
+    }
   ];
 
   herniaTypes: HerniaType[] = [

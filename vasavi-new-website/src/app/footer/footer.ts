@@ -99,38 +99,43 @@ export class Footer implements OnInit {
     });
   }
 
-  showDesigner(): boolean {
-    const inventionRoutes = [
-      '/bariatric-surgery',
-      '/cardiology',
-      '/ent',
-      '/nephrology',
-      '/obstetrics-gynaecology',
-      '/oncology',
-      '/orthopedic',
-      '/pulmonology',
-      '/urology',
-      '/robotic-hernia-surgery',
-      '/robotic-tkr',
-      '/robotic-thr',
-      '/gallbladder-removal-surgery-in-bangalore',
-      '/appendectomy-surgery-in-bangalore',
-      '/hysterectomy-surgery-in-bangalore',
-      '/tonsillectomy-surgery-in-bangalore-in-bangalore',
-      '/piles-surgery-in-bangalore-in-bangalore',
-      '/turp-surgery-in-bangalore-in-bangalore',
-      '/fistula-surgery-in-bangalore',
-      '/acl-reconstruction-in-bangalore',
-      '/adenoid-removal-in-bangalore',
-      '/sinus-surgery-in-bangalore',
-      '/hernia-surgery-in-bangalore',
-      '/total-knee-replacement-in-bangalore',
-      '/total-hip-replacement-in-bangalore',
-      '/ovarian-cystectomy-in-bangalore',
-      '/fibroid-removal-in-bangalore',
-      '/ct-angiography-in-bangalore',
-      '/coronary-angiography-in-bangalore',
-    ];
-    return inventionRoutes.includes(this.router.url);
-  }
+showDesigner(): boolean {
+  const inventionRoutes = [
+    '/bariatric-surgery',
+    '/cardiology',
+    '/ent',
+    '/nephrology',
+    '/obstetrics-gynaecology',
+    '/oncology',
+    '/orthopedic',
+    '/pulmonology',
+    '/urology',
+
+
+    // surgery packages
+    // '/robotic-hernia-surgery',
+    // '/robotic-tkr',
+    // '/robotic-thr',
+    '/gallbladder-removal-surgery-in-bangalore',
+    '/appendectomy-surgery-in-bangalore',
+    '/hysterectomy-surgery-in-bangalore',
+    '/tonsillectomy-surgery-in-bangalore',
+    '/piles-surgery-in-bangalore',
+    '/turp-surgery-in-bangalore',
+    '/fistula-surgery-in-bangalore',
+    '/acl-reconstruction-in-bangalore',
+    '/adenoid-removal-in-bangalore',
+    '/sinus-surgery-in-bangalore',
+    '/hernia-surgery-in-bangalore',
+    '/total-knee-replacement-in-bangalore',
+    '/total-hip-replacement-in-bangalore',
+    '/ovarian-cystectomy-in-bangalore',
+    '/fibroid-removal-in-bangalore',
+    '/ct-angiography-in-bangalore',
+    '/coronary-angiography-in-bangalore',
+  ];
+
+  return inventionRoutes.includes(this.router.url);
+}
+
 }
