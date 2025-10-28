@@ -177,13 +177,13 @@ export const routes: Routes = [
   { path: 'adenoid-removal-in-bangalore', component: AdenoidRemoval },
   { path: 'acl-reconstruction-in-bangalore', component: ACLReconstructio },
   { path: 'fistula-surgery-in-bangalore', component: FistulaSurgery },
-  { path: 'turp-surgery-in-bangalore-in-bangalore', component: ProstateRemoval },
-  { path: 'piles-surgery-in-bangalore-in-bangalore', component: Haemorrhoidectomy },
-  { path: 'tonsillectomy-surgery-in-bangalore-in-bangalore', component: Tonsillectomy },
-  { path: 'ovarian-cystectomy-in-bangalore-in-bangalore', component: OvarianCystectomy },
-  { path: 'fibroid-removal-in-bangalore-in-bangalore', component: FibroidRemoval },
-  { path: 'ct-angiography-in-bangalore-in-bangalore', component: CTAngiography },
-  { path: 'coronary-angiography-in-bangalore-in-bangalore', component: CoronaryAngiography },
+  { path: 'turp-surgery-in-bangalore', component: ProstateRemoval },
+  { path: 'piles-surgery-in-bangalore', component: Haemorrhoidectomy },
+  { path: 'tonsillectomy-surgery-in-bangalore', component: Tonsillectomy },
+  { path: 'ovarian-cystectomy-in-bangalore', component: OvarianCystectomy },
+  { path: 'fibroid-removal-in-bangalore', component: FibroidRemoval },
+  { path: 'ct-angiography-in-bangalore', component: CTAngiography },
+  { path: 'coronary-angiography-in-bangalore', component: CoronaryAngiography },
 
 
 
