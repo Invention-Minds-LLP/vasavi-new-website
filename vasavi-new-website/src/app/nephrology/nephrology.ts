@@ -97,7 +97,8 @@ export class Nephrology {
 
     const emailRequest = {
       // to: ['inventionmindsblr@gmail.com'],
-      to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
+      to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com'],
+      whatsappNumber: ['918884466000'],
       status: 'Service-Page',
       appointmentDetails: emailParams,
     };

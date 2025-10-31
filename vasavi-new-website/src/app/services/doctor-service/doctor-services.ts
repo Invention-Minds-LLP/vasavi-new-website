@@ -300,7 +300,9 @@ export class DoctorServices {
 
               const emailPayload = {
                 to: ['digital@vasavihospitals.com', 'Vinay.d@vasavihospitals.com'], // Add any other recipients here
+                whatsappNumber: ['918884466000'],
                 // to: ['inventionmindsblr@gmail.com'],
+                // whatsappNumber: ['919342287945'],
                 status: 'frontoffice',
                 appointmentDetails: emailParams
               };

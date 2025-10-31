@@ -1083,10 +1083,12 @@ export class Doctor {
       // };
 
       const emailRequest = {
-        // to:['inventionmindsblr@gmail.com'],
-        to:['Vinay.d@vasavihospitals.com','digital@vasavihospitals.com'],
+        to: ['digital@vasavihospitals.com', 'Vinay.d@vasavihospitals.com'], // Add any other recipients here
+        whatsappNumber: ['918884466000'],
+        // to: ['inventionmindsblr@gmail.com'],
+        // whatsappNumber: ['919342287945'],
         status: 'frontoffice',
-        appointmentDetails: emailParams,
+        appointmentDetails: emailParams
       };
 
       // Fetch the doctor ID by name

@@ -74,6 +74,7 @@ export class Footer implements OnInit {
     const emailRequest = {
       // to: ['inventionmindsblr@gmail.com'],
       to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com'],
+      whatsappNumber: ['918884466000'],
       status: 'Enquiry-Form',
       appointmentDetails: emailParams,
     };
