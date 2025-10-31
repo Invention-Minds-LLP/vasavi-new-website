@@ -18,8 +18,8 @@ export class MedicalOncology {
   constructor(private titleService:Title, private metaService: Meta){}
 
   ngOnInit():void{
-    this.titleService.setTitle('Best Oncology Hospital in Banashankari Bangalore | Vasavi Hospitals');
-    this.metaService.updateTag({name:'description', content:'Cancer care hospital in Banashankari Bangalore. Vasavi Hospitals offers expert oncologists for diagnosis and comprehensive treatment.'})
+    this.titleService.setTitle('Expert Medical Oncology & Chemotherapy Treatment');
+    this.metaService.updateTag({name:'description', content:'Advanced Medical Oncology treatments, including chemotherapy, immunotherapy, and targeted therapy. Consult with our leading cancer specialists today.'})
   }
 
   testimonials = [
