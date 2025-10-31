@@ -11,6 +11,7 @@ import  WOW  from 'wowjs';
 import AOS from 'aos';
 import { Popup } from "./popup/popup";
 import { CommonModule } from '@angular/common';
+import { CanonicalUrl } from './canonical-url'; 
 
 
 @Component({
@@ -24,7 +25,7 @@ import { CommonModule } from '@angular/common';
     RoboticThrComponent,
     Chatbot,
     Popup,
-    CommonModule
+    CommonModule,
 ],
   templateUrl: './app.html',
  styleUrls: ['./app.css'],
@@ -37,7 +38,7 @@ export class App {
   currentRoute = '';
 
 
-  constructor(private router: Router,private ngZone: NgZone) {}
+  constructor(private router: Router,private ngZone: NgZone, private canonicalUrls : CanonicalUrl) {}
 
   ngOnInit(): void {
     this.showPopup = true;

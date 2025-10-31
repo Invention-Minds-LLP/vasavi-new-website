@@ -41,11 +41,10 @@ export class Package implements OnInit {
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
 
-    this.titleService.setTitle('Best Bariatric Surgery Hospital in Banashankari Bangalore | Vasavi Hospitals');
+    this.titleService.setTitle('Full Body Health Checkup Packages | Healthy Life Clinic');
     this.metaService.updateTag({
       name: 'description',
-      content:
-        'Vasavi Hospitals in Banashankari Bangalore offers advanced bariatric and weight loss surgeries with safe procedures and faster recovery.',
+      content: 'Invest in your health! Get a comprehensive full body checkup including blood tests, consultation, and more. Book your package today to ensure complete wellness.',
     });
   }
 
