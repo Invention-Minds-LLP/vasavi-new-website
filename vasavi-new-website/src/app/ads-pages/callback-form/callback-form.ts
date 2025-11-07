@@ -4,23 +4,27 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { RecaptchaModule } from 'ng-recaptcha';
+
+import { environment } from '../../../environments/environment';
+import { LocationService } from '../../location-service'
+
+
 @Component({
   selector: 'app-callback-form',
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RecaptchaModule],
   templateUrl: './callback-form.html',
-  styleUrl: './callback-form.css'
+  styleUrl: './callback-form.css',
 })
 export class CallbackForm {
-
   @Input() pageName: string = 'Website'; // Pass page name dynamically (e.g. Hysterectomy Page)
-  // apiUrl: string = 'http://localhost:3000/api'; // Replace with your real API base URL
+  // apiUrl: string = 'http://localhost:3000/api';
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-
 
   formData = {
     name: '',
     mobile: '',
-    otp:''
+    otp: '',
   };
   userAddress: string = 'Fetching location...';
 
@@ -34,8 +38,9 @@ export class CallbackForm {
   isVerifying = false;
   resendTimer = 0;
   resendInterval: any;
-
-  constructor(private http: HttpClient, private router: Router) {}
+  captchaResponse: string | null = null;
+  siteKey = environment.recaptchaSiteKey;
+  constructor(private http: HttpClient, private router: Router, private locationService: LocationService) {}
 
   // onSubmit(form: any) {
   //   if (form.valid) {
@@ -54,27 +59,111 @@ export class CallbackForm {
   //   }
   // }
 
-
   ngOnInit(): void {
-    this.fetchUserLocation();
+    // this.fetchUserLocation();
+  }
+
+  onCaptchaResolved(token: any) {
+    console.log('Captcha verified, token:', token);
+    this.captchaResponse = token; // ✅ set captcha response here
+
+    // (your existing logic)
+    if (!this.formData.name || !this.formData.mobile) {
+      alert('Please fill name and mobile number first!');
+      return;
+    }
+
+    // this.isSending = true;
+
+    this.http
+      .post(`${this.apiUrl}/email/verify`, {
+        name: this.formData.name,
+        mobile: this.formData.mobile,
+        token: token,
+      })
+      .subscribe({
+        next: (res: any) => {
+          // this.isSending = false;
+          
+        },
+        error: (err) => {
+          // this.isSending = false;
+          alert('Server error, please try again.');
+          console.error(err);
+        },
+      });
   }
 
   fetchUserLocation(): void {
-    this.http.get('https://ipapi.co/json/').subscribe({
-      next: (data: any) => {
-        const city = data.city || '';
-        const state = data.region || '';
-        const country = data.country_name || '';
-        const postal = data.postal || '';
+    if (!navigator.geolocation) {
 
-        // Build formatted address
-        this.userAddress = `${city}${city && state ? ', ' : ''}${state}${state && country ? ', ' : ''}${country}${postal ? ' - ' + postal : ''}`.trim();
+      alert('❌ Geolocation is not supported by your browser.');
+      this.userAddress = 'Location unavailable';
+      return;
+    }
+
+    // this.isSending = true;
+
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude, longitude, accuracy } = pos.coords;
+        console.log('📍 Coordinates:', latitude, longitude, 'Accuracy (m):', accuracy);
+
+        fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&addressdetails=1`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            const addr = data.address || {};
+            const area =
+              addr.suburb ||
+              addr.village ||
+              addr.hamlet ||
+              addr.neighbourhood ||
+              addr.locality ||
+              '';
+            const city = addr.city || addr.town || addr.municipality || addr.county || '';
+            const state = addr.state || '';
+            const country = addr.country || '';
+            const postal = addr.postcode || '';
+
+            this.userAddress = `${area ? area + ', ' : ''}${city ? city + ', ' : ''}${
+              state ? state + ', ' : ''
+            }${country}${postal ? ' - ' + postal : ''}`;
+
+            console.log('📍 Precise Address:', this.userAddress);
+            // this.isSending = false;
+          })
+          .catch((err) => {
+            console.error('⚠️ Reverse geocoding failed:', err);
+            this.userAddress = `Lat: ${latitude}, Lng: ${longitude}`;
+            // this.isSending = false;
+          });
       },
-      error: () => {
-        console.warn('⚠️ Could not fetch IP location.');
+      (err) => {
+        // this.isSending = false;
+        console.warn('⚠️ Location error:', err);
+        switch (err.code) {
+          case err.PERMISSION_DENIED:
+            alert('Please allow location access for precise detection.');
+            break;
+          case err.POSITION_UNAVAILABLE:
+            alert('Location unavailable. Try again.');
+            break;
+          case err.TIMEOUT:
+            alert('Location request timed out. Try again.');
+            break;
+          default:
+            alert('Unable to fetch location.');
+        }
         this.userAddress = 'Unknown Location';
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 20000,
+        maximumAge: 0,
       }
-    });
+    );
   }
 
   // // ✅ Form submission (no OTP)
@@ -112,38 +201,42 @@ export class CallbackForm {
   //   });
   // }
 
-
   // Step 1️⃣ Generate and send OTP
+  
   sendOtp(form: any) {
     if (form.invalid) {
       alert('⚠️ Please enter valid details before sending OTP.');
       return;
     }
 
+    this.fetchUserLocation();
+
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     localStorage.setItem('callback_otp', otp);
     localStorage.setItem('callback_otp_expiry', (Date.now() + 2 * 60 * 1000).toString()); // 2 min expiry
 
     this.isSending = true;
-    this.http.post(`${this.apiUrl}/sms/send-otp-vasavi`, {
-      patientName: this.formData.name,
-      patientPhoneNumber: '91' + this.formData.mobile, // ensure with country code
-      service: this.pageName,
-      otp
-    }).subscribe({
-      next: () => {
-        this.isSending = false;
-        this.otpSent = true;
-        this.showOTP = true;
-        this.startResendTimer();
-        alert('✅ OTP sent to your mobile number.');
-      },
-      error: (err) => {
-        console.error('❌ OTP send failed:', err);
-        this.isSending = false;
-        alert('❌ Failed to send OTP. Please try again.');
-      }
-    });
+    this.http
+      .post(`${this.apiUrl}/sms/send-otp-vasavi`, {
+        patientName: this.formData.name,
+        patientPhoneNumber: '91' + this.formData.mobile, // ensure with country code
+        service: this.pageName,
+        otp,
+      })
+      .subscribe({
+        next: () => {
+          this.isSending = false;
+          this.otpSent = true;
+          this.showOTP = true;
+          this.startResendTimer();
+          alert('✅ OTP sent to your mobile number.');
+        },
+        error: (err) => {
+          console.error('❌ OTP send failed:', err);
+          this.isSending = false;
+          alert('❌ Failed to send OTP. Please try again.');
+        },
+      });
   }
 
   // Step 2️⃣ Verify OTP locally
@@ -196,7 +289,6 @@ export class CallbackForm {
     const seconds = this.resendTimer % 60;
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   }
-  
 
   // Step 4️⃣ Send callback email after OTP verified
   sendEmail() {
@@ -205,7 +297,7 @@ export class CallbackForm {
       name: this.formData.name,
       phone: this.formData.mobile,
       address: this.userAddress,
-      page: this.pageName
+      page: this.pageName,
     };
 
     const emailRequest = {
@@ -214,7 +306,7 @@ export class CallbackForm {
       to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
       // to:['inventionmindsblr@gmail.com'],
       status: 'Callback-Form',
-      appointmentDetails
+      appointmentDetails,
     };
 
     this.http.post(`${this.apiUrl}/email/send-pages-email`, emailRequest).subscribe({
@@ -225,7 +317,7 @@ export class CallbackForm {
       error: (err) => {
         console.error('❌ Email send failed:', err);
         alert('❌ Failed to send email. Please try again later.');
-      }
+      },
     });
   }
 }
