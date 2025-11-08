@@ -64,7 +64,7 @@ export class CallbackForm {
   }
 
   onCaptchaResolved(token: any) {
-    console.log('Captcha verified, token:', token);
+    // console.log('Captcha verified, token:', token);
     this.captchaResponse = token; // ✅ set captcha response here
 
     // (your existing logic)
@@ -131,39 +131,60 @@ export class CallbackForm {
               state ? state + ', ' : ''
             }${country}${postal ? ' - ' + postal : ''}`;
 
-            console.log('📍 Precise Address:', this.userAddress);
+            console.log('Precise Address:', this.userAddress);
             // this.isSending = false;
           })
           .catch((err) => {
             console.error('⚠️ Reverse geocoding failed:', err);
             this.userAddress = `Lat: ${latitude}, Lng: ${longitude}`;
-            // this.isSending = false;
           });
       },
       (err) => {
-        // this.isSending = false;
-        console.warn('⚠️ Location error:', err);
+      console.warn('⚠️ Location error:', err);
+
+      if (err.code === err.PERMISSION_DENIED) {
+        console.log('🔁 Fallback: Using IP-based location...');
+        this.fetchSecondaryLocation(); // ✅ fallback function call
+      } else {
         switch (err.code) {
-          case err.PERMISSION_DENIED:
-            alert('Please allow location access for precise detection.');
-            break;
           case err.POSITION_UNAVAILABLE:
-            alert('Location unavailable. Try again.');
+            alert('Location unavailable. Trying alternate detection...');
             break;
           case err.TIMEOUT:
-            alert('Location request timed out. Try again.');
+            alert('Location request timed out. Trying alternate detection...');
             break;
           default:
-            alert('Unable to fetch location.');
+            alert('Unable to fetch location. Trying alternate detection...');
         }
-        this.userAddress = 'Unknown Location';
-      },
+        this.fetchSecondaryLocation(); // ✅ fallback function call
+      }
+    },
       {
         enableHighAccuracy: true,
         timeout: 20000,
         maximumAge: 0,
       }
     );
+  }
+
+
+  fetchSecondaryLocation(): void {
+    this.http.get('https://ipapi.co/json/').subscribe({
+      next: (data: any) => {
+        const city = data.city || '';
+        const state = data.region || '';
+        const country = data.country_name || '';
+        const postal = data.postal || '';
+
+        // Build formatted address
+        this.userAddress = `${city}${city && state ? ', ' : ''}${state}${state && country ? ', ' : ''}${country}${postal ? ' - ' + postal : ''}`.trim();
+        console.log(this.userAddress)
+      },
+      error: () => {
+        console.warn('⚠️ Could not fetch IP location.');
+        this.userAddress = 'Unknown Location';
+      }
+    });
   }
 
   // // ✅ Form submission (no OTP)
