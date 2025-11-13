@@ -28,7 +28,7 @@ export class OvarianCystectomy {
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
       experience: "15+",
       // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, MS Fellowship in gynec-oncology, Fellowship in Advanced infertility",
+      qualification: "MBBS, MS (OBG), Fellowship in gynec-oncology, Fellowship in Advanced infertility,  Fellowship Minimal Access Surgery (Laparoscopic and Robotic Surgery)",
       slug: "/dr-nisha-buchade"
     },
     {
@@ -37,7 +37,7 @@ export class OvarianCystectomy {
       alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
       experience: "14+",
       // department: "Consultant - ENT",
-      qualification: "MBBS.,MS (OBG) .FELLOWSHIP MINIMAL ACCESS SURGERY, ADVANCED DIPLOMA REPRODUCTIVE MEDICINE",
+      qualification: "MBBS, MS (OBG), Fellowship Minimal Access Surgery, Advanced Diploma Repoductive Medicine",
       slug: "/dr-sowmya-sangmesh"
     }
   ];

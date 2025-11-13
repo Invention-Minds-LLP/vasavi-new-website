@@ -250,7 +250,7 @@
     font-weight: 700;
 }
 
-.video video {
+.video video, .video img {
     width: 500px;
     height: auto;
     border-radius: 10px;
@@ -1022,7 +1022,7 @@
         display: none;
     }
 
-    .video video {
+    .video video, .video img {
         width: 300px;
     }
 

@@ -71,20 +71,20 @@ export class RoboticHysterectomy {
       title: 'Total Hysterectomy',
       description:
         'Removes the entire uterus along with the cervix. It’s the most common type, often done for fibroids, heavy bleeding, or uterine growths.',
-      location: '4–6 weeks',
+      location: '2–4 weeks',
       hospitalStay: '1–2 days',
       recoverytime: 'Laparoscopic / Robotic',
     },
-    {
-      cssClass: 'femoral',
-      badgeText: 'More Common in Women',
-      title: 'Supracervical Hysterectomy',
-      description:
-        'Removes the upper part of the uterus but keeps the cervix intact. This is usually recommended when there’s no cervical disease and the goal is to preserve pelvic support.',
-      location: '3–5 weeks',
-      hospitalStay: '1 day',
-      recoverytime: 'Laparoscopic / Abdominal',
-    },
+    // {
+    //   cssClass: 'femoral',
+    //   badgeText: 'More Common in Women',
+    //   title: 'Supracervical Hysterectomy',
+    //   description:
+    //     'Removes the upper part of the uterus but keeps the cervix intact. This is usually recommended when there’s no cervical disease and the goal is to preserve pelvic support.',
+    //   location: '3–5 weeks',
+    //   hospitalStay: '1 day',
+    //   recoverytime: 'Laparoscopic / Abdominal',
+    // },
     {
       cssClass: 'umbilical',
       badgeText: 'Often in Adults',
@@ -101,7 +101,7 @@ export class RoboticHysterectomy {
       title: 'Radical Hysterectomy',
       description:
         'Removes the uterus, cervix, part of the vagina, and surrounding tissues. This is usually advised for early-stage cervical or uterine cancer.',
-      location: '6–8 weeks',
+      location: '4–6 weeks',
       hospitalStay: '2–3 days',
       recoverytime: 'Robotic / Open',
     },
