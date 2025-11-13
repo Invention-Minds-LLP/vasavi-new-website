@@ -812,7 +812,7 @@ export class Doctor {
         description: "Dr. Naneboena Sunitha, Nutritionist & Dietitian with 26 years of experience in clinical nutrition, diabetes, weight management and oncology care at Vasavi Hospitals, Bangalore.",
         briefProfile: "Dr. Naneboena Sunitha is a highly accomplished Nutritionist and Dietitian with over 26 years of experience in clinical and academic nutrition. She has served as a Professor of Nutrition at reputed institutions including MvJ Medical College and East Point Medical College. Her expertise spans across weight management, diabetes reversal, and oncology nutrition, with a focus on achieving healthy results without nutritional deficiencies. Dr. Sunitha has successfully guided over 3000 patients in sustainable weight reduction programs and has worked extensively in cancer nutrition care at Mega Hospital. Beyond clinical practice, she has led numerous corporate wellness and nutrition awareness programs for leading organizations such as Infosys, Wipro, and Accenture. Her evidence-based, holistic approach integrates lifestyle modification with preventive nutrition, empowering individuals to make long-term, healthy choices for improved well-being.",
         qualification: "Ph.D. (Food & Nutrition) | M.Sc. | M.Ed. | MBA (Marketing) | Diploma in Catering | DCA",
-        department: "Bariatric Surgery",
+        department: "",
         experience: "26+",
         designation: "Consultant - Nutritionist & Dietitian",
         awards: [],
@@ -822,6 +822,35 @@ export class Doctor {
           { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "SCNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
         ],
         publications: []
+      },
+      {
+        id: 19,
+        name : "Dr. Revathi Natesan",
+        department: "Dentistry",
+        qualification : "Masters in Conservative Dentistry and Endodontics",
+        image: "/img/new-doctor-image/dr-revathi-natesan.png",
+        alt: "Dr. Revathi Natesan – Consultant Dentist | Vasavi Hospitals, Bangalore",
+        areasOfExpertise : [
+          { icon: "", expertise: "Preventive Dentistry" },
+          { icon: "", expertise: "Caries Management" },
+          { icon: "", expertise: "Dental Fillings" },
+          { icon: "", expertise: "Inlays" },
+          { icon: "", expertise: "Pulpectomy" },
+          { icon: "", expertise: "Pulpotomy" },
+          { icon: "", expertise: "Root Canal Treatment" },
+          { icon: "", expertise: "Esthetic Dentistry (Veneers, Teeth Whitening, Smile Rehabilitation)" },
+          { icon: "", expertise: "Dental Crowns" },
+          { icon: "", expertise: "Bridges" },
+          { icon: "", expertise: "Post & Core" },
+          { icon: "", expertise: "Minimally Invasive Dentistry" },
+          { icon: "", expertise: "General Dentistry" },
+        ],
+        experience : "15+",
+        briefProfile : "An Endodontist, that believes in the preventive, minimally invasive and integrated approaches for treating  conditions of the oral cavity",
+        awards: [
+          { icon: "fas fa-medal", awardFor: "Awards for math not related to the profession ", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        ],
+
       }
     ];
             
