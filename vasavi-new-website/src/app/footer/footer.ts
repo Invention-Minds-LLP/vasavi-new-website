@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FacebookPixel } from '../facebook-pixel';
 
 @Component({
   selector: 'app-footer',
@@ -30,7 +31,7 @@ export class Footer implements OnInit {
   // apiUrl = 'http://localhost:3000/api';.
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
-  constructor(private fb: FormBuilder, private http: HttpClient, public router: Router) {}
+  constructor(private fb: FormBuilder, private http: HttpClient, public router: Router, private pixel:FacebookPixel ) {}
 
   ngOnInit(): void {
     this.enquiryForm = this.fb.group({
@@ -154,5 +155,12 @@ showDesigner(): boolean {
 
   return inventionRoutes.includes(this.router.url);
 }
+
+trackCall() {
+  this.pixel.trackCustomEvent('CallInitiated', {
+    phone: '08071500500'
+  });
+}
+
 
 }

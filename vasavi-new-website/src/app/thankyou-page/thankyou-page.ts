@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
+import { FacebookPixel } from '../facebook-pixel';
 
 @Component({
   selector: 'app-thankyou-page',
@@ -9,4 +10,12 @@ import { RouterLink, RouterModule } from '@angular/router';
 })
 export class ThankyouPage {
 
+    constructor(private pixel: FacebookPixel) {}
+
+    ngOnInit(){
+            this.pixel.trackStandardEvent('Lead', {
+      content_name: 'Appointment Form',
+      status: 'Success'
+    });
+    }
 }
