@@ -134,8 +134,8 @@
           <ul class="publications-list">
             <li class="publication-item" *ngFor="let publication of filteredDoctor?.publications; let i = index">
               <span class="pub-number">{{ i + 1 }}.</span>
-              <span class="pub-text">
-                {{ publication?.title || publication }}
+              <span class="pub-text" [innerHTML]="publication?.title || publication">
+                <!-- {{  }} -->
               </span>
             </li>
           </ul>
