@@ -376,6 +376,67 @@
     background: #EB999C;
 }
 
+.award-card.teal {
+    background: #B5E5E0;
+}
+
+.award-card.orange {
+    background: #F9C79F;
+}
+
+.award-card.lavender {
+    background: #D3C7FF;
+}
+
+.award-card.mint {
+    background: #C9F4C7;
+}
+
+.award-card.coral {
+    background: #FFB7A5;
+}
+
+.award-card.sky {
+    background: #B7E3FF;
+}
+
+.award-card.peach {
+    background: #FFDCC7;
+}
+
+.award-card.rose {
+    background: #F6B8C8;
+}
+
+.award-card.soft-blue {
+    background: #C4DFFF;
+}
+
+.award-card.soft-green {
+    background: #DFF7D8;
+}
+
+.award-card.soft-purple {
+    background: #E5D4F5;
+}
+
+.award-card.mauve {
+    background: #D8B4E2;
+}
+
+.award-card.sand {
+    background: #F0E0C2;
+}
+
+.award-card.apricot {
+    background: #F6CFAF;
+}
+
+.award-card.soft-grey {
+    background: #E5E7EB;
+}
+
+
 /* Infinite scroll keyframes */
 @keyframes scrollAwards {
     0% {

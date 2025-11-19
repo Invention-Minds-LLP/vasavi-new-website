@@ -12,8 +12,8 @@ interface HerniaType {
   title: string;
   description: string;
   tag?: string;
-  location? : string;
-  recoverytime? : string;
+  location?: string;
+  recoverytime?: string;
   hospitalStay?: string
 }
 
@@ -25,16 +25,16 @@ interface HerniaType {
 })
 export class Tonsillectomy {
 
-  constructor(private title:Title, private meta:Meta){}
+  constructor(private title: Title, private meta: Meta) { }
 
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.title.setTitle('Tonsil Removal Surgery in Bangalore | ENT Specialists');
-    this.meta.updateTag({name:'description', content:'Safe tonsillectomy for chronic throat infections & snoring. Gentle care & fast healing for children & adults.'})
+    this.meta.updateTag({ name: 'description', content: 'Safe tonsillectomy for chronic throat infections & snoring. Gentle care & fast healing for children & adults.' })
   }
-  doctorHeader : any = {
-    title : "Meet Our Surgery Specialist",
-    description : ""
+  doctorHeader: any = {
+    title: "Meet Our Surgery Specialist",
+    description: ""
   }
   isPopupOpen = false;
 
@@ -48,7 +48,16 @@ export class Tonsillectomy {
     document.body.style.overflow = ''; // restore scroll
   }
 
-    doctors: any = [
+  doctors: any = [
+    {
+      name: "Dr. Kumaresh Krishnamoorthy",
+      img: "img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
+      alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
+      experience: "25+",
+      department: "Consultant - ENT, Head & Neck Surgeon",
+      qualification: "MS(ENT), Fellow, Head & Neck Surgery (USA), Fellow, Otology & Neurotology (USA)",
+      slug: "/dr-kumaresh-krishnamoorthy"
+    },
     {
       name: "Dr. Yashaswi Srikakula",
       img: "img/new-doctor-image/dummy-female-sq.png",
@@ -66,45 +75,46 @@ export class Tonsillectomy {
       department: "Consultant - ENT",
       qualification: "MBBS, DLO, DNB (ENT)",
       slug: "/dr-sphoorthy-g-itigi"
-    }
+    },
+
   ];
 
 
-herniaTypes: HerniaType[] = [
-  {
-    cssClass: 'inguinal',
-    badgeText: 'Classic Presentation',
-    title: 'Recognizing Appendicitis',
-    description: 'Abdominal Pain: Usually begins as mild discomfort around the navel and shifts to the lower right side of the abdomen. It often increases in intensity and is accompanied by tenderness and sensitivity in the area.',
-    location: 'Location: Lower Right',
-    hospitalStay: '',
-    recoverytime: 'Recovery: Same Day Surgery'
-  },
-  {
-    cssClass: 'umbilical',
-    badgeText: 'General Signs',
-    title: 'Common Symptoms of Appendicitis',
-    description: `Watch for these general symptoms that may indicate appendix inflammation:<br />
+  herniaTypes: HerniaType[] = [
+    {
+      cssClass: 'inguinal',
+      badgeText: 'Classic Presentation',
+      title: 'Recognizing Appendicitis',
+      description: 'Abdominal Pain: Usually begins as mild discomfort around the navel and shifts to the lower right side of the abdomen. It often increases in intensity and is accompanied by tenderness and sensitivity in the area.',
+      location: 'Location: Lower Right',
+      hospitalStay: '',
+      recoverytime: 'Recovery: Same Day Surgery'
+    },
+    {
+      cssClass: 'umbilical',
+      badgeText: 'General Signs',
+      title: 'Common Symptoms of Appendicitis',
+      description: `Watch for these general symptoms that may indicate appendix inflammation:<br />
     • Loss of appetite <br />
     • Nausea or vomiting <br />
     • Mild fever <br />
     • Diarrhea or constipation <br />
     • Abdominal bloating <br />
     • Pain during urination`,
-    location: 'Urgency: Seek medical evaluation immediately for proper diagnosis',
-    hospitalStay: 'Treatment: Laparoscopic or Robotic Appendectomy under expert surgical care.',
-    recoverytime: 'Stay: 1-2 Days'
-  },
-  {
-    cssClass: 'ventral',
-    badgeText: 'High Risk Alert',
-    title: 'Warning Signs (Burst Appendix)',
-    description: `Severe Symptoms: <br />
+      location: 'Urgency: Seek medical evaluation immediately for proper diagnosis',
+      hospitalStay: 'Treatment: Laparoscopic or Robotic Appendectomy under expert surgical care.',
+      recoverytime: 'Stay: 1-2 Days'
+    },
+    {
+      cssClass: 'ventral',
+      badgeText: 'High Risk Alert',
+      title: 'Warning Signs (Burst Appendix)',
+      description: `Severe Symptoms: <br />
     • A high fever <br />
     • Severe, sudden pain throughout the abdominal area`,
-    location: 'Immediate Action: Visit the emergency department immediately.',
-    hospitalStay: 'Treatment: Emergency Laparoscopic or Robotic Appendectomy, ensuring safe and thorough removal with minimal tissue trauma.',
-    recoverytime: ''
-  }
-];
+      location: 'Immediate Action: Visit the emergency department immediately.',
+      hospitalStay: 'Treatment: Emergency Laparoscopic or Robotic Appendectomy, ensuring safe and thorough removal with minimal tissue trauma.',
+      recoverytime: ''
+    }
+  ];
 }
