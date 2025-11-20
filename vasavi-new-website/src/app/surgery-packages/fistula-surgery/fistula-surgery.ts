@@ -35,7 +35,7 @@ export class FistulaSurgery {
       name: "Dr. Venkatesh Rathod R",
       img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
       alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
-      experience: "11+",
+      experience: "16+",
       // department: "Consultant - ENT",
       qualification: "MBBS, Dortho, DNB ortho",
       slug: "/dr-venkatesh-rathod-r"
