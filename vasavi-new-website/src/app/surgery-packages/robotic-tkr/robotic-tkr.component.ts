@@ -55,7 +55,7 @@ export class RoboticTkrComponent {
       name: "Dr. Venkatesh Rathod R",
       img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
       alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
-      experience: "11+",
+      experience: "16+",
       department: "Consultant - Orthopedics",
       // qualification: "MBBS, Dortho, DNB ortho",
       slug: "/dr-venkatesh-rathod-r"

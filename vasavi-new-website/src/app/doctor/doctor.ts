@@ -297,7 +297,7 @@ export class Doctor {
       briefProfile: "Dr. Venkatesh Rathod - I am a highly competent and skilled surgeon with more than 11 years of experience in orthopedic surgery. I have expertise in upper limb trauma management, expert in minimally invasive surgery, complicated Periarticular Fractures, complex/multiple tendon injuries, local and free flap surgeries in hand and wrist. Have special interest in MAKO robotic Hip Knee & shoulders replacement and arthroscopic surgeries. I have been a member of the team of doctors for royal challengers Bangalore cricket team attending to sport injuries. I have several publications to my credit. I play pivotal role in execution and streamlining the operative plan of the team to ensure smooth running of the department for excellent patient care and rehabilitation. I have been an integral part of Vasavi institute of advanced orthopedics from the time it started. He has performed and assisted nearly 3000 surgeries till date. I have an accomplished medical professional adept at performing surgeries completing evaluations and developing successful treatment plans. Driven to communicate well and establish strong rapport with all patients.",
       qualification: "MBBS, Dortho, DNB ortho",
       department: "Orthopedics",
-      experience: "11+",
+      experience: "16+",
       designation: "Consultant Orthopedic Surgeon",
       awards: [
         {
