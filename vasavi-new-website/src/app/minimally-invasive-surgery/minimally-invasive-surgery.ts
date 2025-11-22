@@ -6,10 +6,11 @@ import { ContactFom } from "../contact-fom/contact-fom";
 import { SubNavbar } from "../sub-navbar/sub-navbar";
 import { Cta } from "../cta/cta";
 import { Meta, Title } from '@angular/platform-browser';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-minimally-invasive-surgery',
-  imports: [CarouselModule, CommonModule, ContactFom, SubNavbar, Cta],
+  imports: [CarouselModule, CommonModule, ContactFom, SubNavbar, Cta, RouterLink],
   templateUrl: './minimally-invasive-surgery.html',
   styleUrl: './minimally-invasive-surgery.css'
 })

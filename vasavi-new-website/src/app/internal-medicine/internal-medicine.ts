@@ -6,10 +6,11 @@ import { ContactFom } from "../contact-fom/contact-fom";
 import { SubNavbar } from "../sub-navbar/sub-navbar";
 import { Cta } from "../cta/cta";
 import { Meta, Title } from '@angular/platform-browser';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-internal-medicine',
-  imports: [CarouselModule, CommonModule, ContactFom, SubNavbar, Cta],
+  imports: [CarouselModule, CommonModule, ContactFom, SubNavbar, Cta, RouterLink],
   templateUrl: './internal-medicine.html',
   styleUrl: './internal-medicine.css'
 })
