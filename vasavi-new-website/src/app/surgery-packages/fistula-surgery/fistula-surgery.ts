@@ -22,24 +22,15 @@ export class FistulaSurgery {
   }
 
   doctors: any = [
+    
     {
-      name: "Dr. Srivatsa Subramanya",
-      img: "img/new-doctor-image/dr-srivatsa-subramanya-spec.png",
-      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
-      experience: "17+",
-      // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, MS (Ortho); DNB (Ortho); fellowship in knee (Australia) fellowship in shoulder (Australia, Italy), fellowship in Orthopaedic trauma (S.Korea)",
-      slug: "/dr-srivatsa-subramanya"
+      name : "Dr. Mohan Ram. P",
+      img : "/img/new-doctor-image/dummy-male.png",
+      alt : "Best General Surgeon in Bangalore | Dr. Mohan Ram. P",
+      experience : "15+",
+      department : "General Surgery",
+      slug:'/dr-mohan-ram-p'
     },
-    {
-      name: "Dr. Venkatesh Rathod R",
-      img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
-      experience: "16+",
-      // department: "Consultant - ENT",
-      qualification: "MBBS, Dortho, DNB ortho",
-      slug: "/dr-venkatesh-rathod-r"
-    }
   ];
 
   isPopupOpen = false;

@@ -887,6 +887,112 @@ export class Doctor {
           `
       ]
     },
+    {
+      id: 20,
+      name: "Dr. Mohan Ram. P",
+      image: "/img/new-doctor-image/dummy-male.png",
+      alt: "Dr. Mohan Ram. P | Laparoscopic General Surgeon at Vasavi Hospital Bangalore",
+      areasOfExpertise: [
+        { icon: "", expertise: "Laparoscopic & Open General Surgeries" },
+        { icon: "", expertise: "Laser Proctology (Piles, Fissures, Fistula)" },
+        { icon: "", expertise: "Hernia Repairs & GI Endoscopies" },
+        { icon: "", expertise: "Varicose Vein & Colorectal Surgeries" },
+        { icon: "", expertise: "Emergency Trauma & Critical Care Surgeries" },
+      ],
+      title: "Dr. Mohan Ram. P Consultant General Surgeon | Vasavi Hospitals Bangalore",
+      description: "Consult Dr. Mohan Ram, an expert Laparoscopic & General Surgeon in Bangalore with 15+ years’ experience in laser proctology, hernia repairs, varicose veins and emergency surgeries.",
+      briefProfile: "Dr. Mohan Ram is a General Surgeon, Laparoscopic Surgeon, Vascular Surgeon, Proctologist and a Laser Specialist in Bangalore. He practices at Pristyn Care Clinic, Bangalore. He completed MBBS from Raja Rajeshwari Medical College & Hospital, Bangalore, Karnataka in 2011, MS (General Surgery) from PES Institute of Medical Sciences and Research, Kuppam, Andhra Pradesh in 2017. Being an accomplished surgeon, and having over 14 Years of experience, Dr. Mohan Ram makes sure his patients get quality and timely treatment. Patient comfort, quick recovery and state of the art surgical practices are the corner stones at Pristyn Care.",
+      qualification: "MBBS, MS (General Surgery), Fellowship - FIAGES, FALS (Advanced Laparoscopy)",
+      department: "General Surgery",
+      experience: "15+",
+      designation: "Consultant Laparoscopic & General Surgeon | Laser Proctologist",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+        // { image: "/img/affiliations/AOI.jpg", icon: "fas fa-user-md card-icon", paHeading: "AOI", paDescription: "Association of Otolaryngologists of India" },
+        // { image: "/img/affiliations/FHNO.jpg", icon: "fas fa-user-md card-icon", paHeading: "FHNO", paDescription: "Foundation for Head and Neck Oncology" },
+        // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+      ],
+      publications: [
+
+      ]
+    },
+    {
+  "id": 21,
+  "name": "Dr. Revathi Natesan",
+  "image": "/img/new-doctor-image/dr-revathi-natesan.png",
+  "alt": "Dr. Revathi Natesan | Endodontist | Vasavi Hospitals Bangalore",
+  "areasOfExpertise": [
+    { "icon": "fas fa-tooth", "expertise": "Preventive Dentistry" },
+    { "icon": "fas fa-teeth", "expertise": "Caries Management" },
+    { "icon": "fas fa-tooth", "expertise": "Dental Fillings" },
+    { "icon": "fas fa-teeth", "expertise": "Inlays" },
+    { "icon": "fas fa-syringe", "expertise": "Pulpectomy" },
+    { "icon": "fas fa-syringe", "expertise": "Pulpotomy" },
+    { "icon": "fas fa-tooth", "expertise": "Root Canal Treatment" },
+    { "icon": "fas fa-smile", "expertise": "Esthetic Dentistry" },
+    { "icon": "fas fa-crown", "expertise": "Dental Crowns" },
+    { "icon": "fas fa-bridge", "expertise": "Bridges" },
+    { "icon": "fas fa-tooth", "expertise": "Post & Core" },
+    { "icon": "fas fa-stethoscope", "expertise": "Minimally Invasive Dentistry" },
+    { "icon": "fas fa-user-md", "expertise": "General Dentistry" }
+  ],
+  "title": "Dr. Revathi Natesan | Endodontist at Vasavi Hospitals",
+  "description": "Dr. Revathi Natesan is an experienced Endodontist at Vasavi Hospitals with 15+ years of expertise in preventive dentistry, root canal treatment, and aesthetic dentistry. Specialist in minimally invasive dental procedures and comprehensive oral care.",
+  "briefProfile": "An Endodontist that believes in the preventive, minimally invasive and integrated approaches for treating conditions of the oral cavity. Dedicated to providing comprehensive dental care with a focus on patient comfort and long-term oral health.",
+  "qualification": "Masters in Conservative Dentistry and Endodontics",
+  "department": "Dentistry",
+  "experience": "15+",
+  "designation": "Consultant Endodontist",
+  "awards": [],
+  "professionalAffilications": [],
+  "publications": []
+}
+    // {
+    //   id: 20,
+    //   name: "",
+    //   image: "",
+    //   alt: "",
+    //   areasOfExpertise: [
+    //     { icon: "", expertise: "" },
+    //   ],
+    //   title: "",
+    //   description: "",
+    //   briefProfile: "",
+    //   qualification: "",
+    //   department: "",
+    //   experience: "",
+    //   designation: "",
+    //   awards: [
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+    //     { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+
+    //   ],
+    //   professionalAffilications: [
+    //     // { image: "/img/affiliations/AOI.jpg", icon: "fas fa-user-md card-icon", paHeading: "AOI", paDescription: "Association of Otolaryngologists of India" },
+    //     // { image: "/img/affiliations/FHNO.jpg", icon: "fas fa-user-md card-icon", paHeading: "FHNO", paDescription: "Foundation for Head and Neck Oncology" },
+    //     // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+    //   ],
+    //   publications: [
+        
+    //   ]
+    // },
   ];
 
 

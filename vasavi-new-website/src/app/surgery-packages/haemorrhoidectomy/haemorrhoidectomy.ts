@@ -50,21 +50,14 @@ export class Haemorrhoidectomy {
   }
 
   doctors: any = [
-    {
-      name : "Dr. Ramesh T S",
-      img : "img/Doctor-img/MINIMALLY INVASIVE SURGERY/Dr.Ramesh T S.jpg",
-      alt : "Best General Surgeon in Bangalore | Dr. Ramesh T S",
-      experience : "29+",
-      department : "Robotic & Minimally Invasive Surgery",
-      slug:''
-    },
-    {
-      name : "Dr. Mutharaju K. R",
-      img : "img/new-doctor-image/dr-mutharaju-k-r-sq.png",
-      alt : "Best General Surgeon in Bangalore | Dr. Mutharaju K. R",
-      experience : "23+",
-      department : "Robotic & Minimally Invasive Surgery",
-      slug:'/dr-mutharaju-k-r'
+    
+     {
+      name : "Dr. Mohan Ram. P",
+      img : "/img/new-doctor-image/dummy-male.png",
+      alt : "Best General Surgeon in Bangalore | Dr. Mohan Ram. P",
+      experience : "15+",
+      department : "General Surgery",
+      slug:'/dr-mohan-ram-p'
     },
   ]
 
