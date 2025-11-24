@@ -46,12 +46,12 @@ export class SinusSurgery {
     },
     {
       name: "Dr. Yashaswi Srikakula",
-      img: "img/new-doctor-image/dummy-female-sq.png",
+      img: "/img/new-doctor-image/dr-yashasvi-sq.png",
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
-      // experience: "15+",
-      // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, DLO, Fellowship in Rhinology",
-      // slug: "/dr-nisha-buchade"
+      experience: "15+",
+      department: "Consultant - ENT",
+      qualification: "MBBS, DLO, Fellowship in Rhinology and Anterior Skull Base",
+      slug: "/dr-yashaswi-srikakula"
     },
     {
       name: "Dr. Sphoorthy G Itigi",

@@ -524,6 +524,10 @@ h3,
   color: var(--primary);
 }
 
+.doctor-slide{
+  padding: 30px;
+}
+
 
 
 @media only screen and (max-width: 480px) {

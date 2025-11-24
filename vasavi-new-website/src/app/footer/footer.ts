@@ -129,7 +129,8 @@ showDesigner(): boolean {
     '/doctors/dr-sunil-r',
     '/doctors/dr-pratham-r-bysani',
     '/doctors/dr-venkatesh-rathod-r',
-
+    '/doctors/dr-ramesh-t-s',
+    '/doctors/dr-yashaswi-srikakula',
     // surgery packages
     // '/robotic-hernia-surgery',
     // '/robotic-tkr',
