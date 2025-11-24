@@ -40,6 +40,7 @@ export class RoboticHerniaComponent {
       alt: 'Best General Surgeon in Bangalore | Dr. Ramesh T S',
       experience: '29+',
       department: 'Robotic & Minimally Invasive Surgery',
+      slug:'/dr-ramesh-t-s'
     },
     {
       name: 'Dr. Mutharaju K. R',

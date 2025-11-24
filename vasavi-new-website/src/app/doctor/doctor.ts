@@ -840,10 +840,10 @@ export class Doctor {
       title: "Dr. Kumaresh Krishnamoorthy Itigi - Consultant ENT Surgeon | Vasavi Hospitals Bangalore",
       description: "Dr. Kumaresh Krishnamoorthy is a leading ENT specialist at Vasavi Hospitals, Bangalore, with 25 years of expertise in General ENT, Paediatric ENT, Head & Neck care, vertigo treatment, thyroid disorders, hearing loss and implantation otology.",
       briefProfile: "I am an ENT, Head & Neck, and Neurotology specialist with over two decades of experience dedicated to restoring hearing, balance, voice, and breathing. After completing my basic surgical training in India, I pursued dual fellowships in the USA - one in Head & Neck Surgery and another in Otology & Neurotology - which helped me refine my expertise in managing complex skull-base and otological conditions. My practice focuses on advanced ENT surgeries, including cochlear implantation, bone-anchored hearing reconstruction, voice and sinus surgeries, and head & neck cancer care. Over the years, I’ve had the privilege of treating patients from across India and abroad, and each case reinforces my belief in a patient-centric, compassionate approach to care. Beyond clinical practice, I am deeply passionate about healthcare innovation and frugal medical technology. I mentor startups, guide young innovators, and have been part of several national initiatives to promote healthcare entrepreneurship. I train specialists in resource limited countries like Iraq and Tanzannia and have been profiled in almost all leading news media and tele media",
-      qualification: "MS(ENT), Fellow, Head & Neck Surgery (USA), Fellow, Otology & Neurotology (USA)",
+      qualification: "MS (ENT), Fellow – Head & Neck Surgery (USA) Fellow – Otology & Neurotology (USA)",
       department: "ENT",
       experience: "25+",
-      designation: "Consultant - ENT, Head & Neck Surgeon",
+      designation: "Consultant - ENT, Head & Neck and Neurotologist",
       awards: [
         { icon: "fas fa-medal", awardFor: "Distinguished Alumnus - PSG Institutions", awardDescription: "Honored by PSG Institutions for professional excellence.", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
         { icon: "fas fa-medal", awardFor: "Top 25 HealthTech Entrepreneurs of India (2023)", awardDescription: "Recognized by Indian Innovators Association.", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
@@ -956,7 +956,7 @@ export class Doctor {
   "awards": [],
   "professionalAffilications": [],
   "publications": []
-}
+},
     // {
     //   id: 20,
     //   name: "",
@@ -993,7 +993,93 @@ export class Doctor {
         
     //   ]
     // },
+     {
+      id: 22,
+      name: "Dr. Ramesh T. S",
+      image: "/img/new-doctor-image/dr-ramesh-t-s.png",
+      alt: "Dr. Ramesh T. S | General Surgeon at Vasavi Hospital Bangalore",
+      areasOfExpertise: [
+        { icon: "", expertise: "Robotic & Minimally Invasive Surgery" },
+        { icon: "", expertise: "General & Laparoscopic Surgery" },
+        { icon: "", expertise: "Advanced Laparoscopic Procedures" },
+        { icon: "", expertise: "Laparoscopic Gynecology Surgeries" },
+        { icon: "", expertise: "Endoscopy (Upper GI & related procedures)" },
+        { icon: "", expertise: "Gastrointestinal & Colorectal Surgeries" },
+        { icon: "", expertise: "Hernia Repairs, Gallbladder & Appendectomy" },
+        { icon: "", expertise: "Trauma and Emergency Surgeries" },
+      ],
+      title: "Dr. Ramesh T. S | General Surgeon at Vasavi Hospital Bangalore",
+      description: "Consult Dr. Ramesh T. S, an accredited General & Minimally Invasive Surgeon (29+ years clinical, 25+ surgery) and Robotic Surgeon of Edinburgh at Vasavi Hospitals Bangalore.",
+      briefProfile: "Dr. Ramesh T. S is a highly skilled and experienced Consultant in Minimal Access Surgery at Vasavi Hospitals. With a strong academic background and extensive surgical experience, he is recognized for his expertise in laparoscopic procedures involving the abdomen and non-cardiac thoracic region, with a special focus on laser anorectal surgeries. Dr. Ramesh completed his MBBS from Jagadguru Jayadeva Murugarajendra Medical College (JJMMC) in 1996, followed by DNB in General Surgery from the National Board of Examinations, New Delhi, in 2005. In the same year, he earned his MRCS (UK) from the University of Edinburgh. To further strengthen his proficiency in minimally invasive techniques, he has also obtained FMAS (Fellowship in Minimal Access Surgery) and FICS (Fellowship of the International College of Surgeons).",
+      qualification: "MBBS, DNB (General Surgery), MRCS (Edinburgh, U.K.), FMAS,  FAIS",
+      department: "Accredited Robotic Surgeon of Edinburgh",
+      experience: "29+",
+      designation: "Consultant - General & Minimally Invasive Surgery",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+        // { image: "/img/affiliations/AOI.jpg", icon: "fas fa-user-md card-icon", paHeading: "AOI", paDescription: "Association of Otolaryngologists of India" },
+        // { image: "/img/affiliations/FHNO.jpg", icon: "fas fa-user-md card-icon", paHeading: "FHNO", paDescription: "Foundation for Head and Neck Oncology" },
+        // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+      ],
+      publications: [
+
+      ]
+    },
+     {
+      id: 23,
+      name: "Dr. Yashaswi Srikakula",
+      image: "/img/new-doctor-image/dr-yashasvi.png",
+      alt: "Dr. Yashaswi Srikakula | Consultant ENT at Vasavi Hospital Bangalore",
+      areasOfExpertise: [
+        { icon: "", expertise: "Chronic Rhinosinusitis & Sinus Surgery (FESS)" },
+        { icon: "", expertise: "Nasal Obstruction & Deviated Septum" },
+        { icon: "", expertise: "Allergic Rhinitis & Seasonal Allergies" },
+        { icon: "", expertise: "Immunotherapy for Allergies" },
+        { icon: "", expertise: "Nasal Polyps Treatment" },
+        { icon: "", expertise: "Autoimmune & Inflammatory Disorders (affecting ENT)" },
+        { icon: "", expertise: "Allergy Testing & Management" },
+        { icon: "", expertise: "Pediatric Rhinology & Allergy Care" },
+      ],
+      title: "Dr. Yashaswi Srikakula | Consultant ENT at Vasavi Hospital Bangalore",
+      description: "Dr. Yashaswi is one of the best ENT specialist in Bangalore with 15 years of experience. She is an expert for treating children with ear, nose, and throat conditions.",
+      briefProfile: "Dr. Yashaswi Srikakula is a highly experienced ENT specialist with over 15 years of expertise in treating complex ear, nose, and throat conditions. She completed her MBBS at JSS Medical College, Mysore, and her post-graduate training at KIMS, Bangalore. Dr. Yashaswi specializes in microscopic ear surgery, functional endoscopic sinus surgery (FESS) and allergy treatments. She has received advanced training in anterior skull base surgery at MCV ENT Trust Hospital, Coimbatore and in allergy and immunology at the Bangalore Allergy Centre. With a focus on personalized care, Dr. Yashaswi provides comprehensive treatment for a wide range of ENT and allergy-related conditions.",
+      qualification: "MBBS, DLO, Fellowship in Rhinology and Anterior Skull Base",
+      // department: "Accredited Robotic Surgeon of Edinburgh",
+      experience: "15+",
+      designation: "Consultant - ENT",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+        // { image: "/img/affiliations/Apollo_Hospitals_Logo.svg", icon: "fas fa-user-md card-icon", paHeading: "Apollo hospital", paDescription: "Apollo hospital" },
+        // { image: "/img/affiliations/Trustwell-hospital.png", icon: "fas fa-user-md card-icon", paHeading: "Trustwell hospital", paDescription: "Trustwell hospital" },
+        // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+      ],
+      publications: [
+        "All India journal publications"
+      ]
+    },
   ];
+
+  
 
 
   onDateChange(event: any) {
