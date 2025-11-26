@@ -74,6 +74,7 @@ export class Doctor {
       message: ['', Validators.required],
       date_appointment: ['', Validators.required],
     });
+    this.minDate = new Date();
   }
   loadDoctorBySlug(slug: string) {
     // Replace with actual data source (e.g., service or static list)
@@ -824,7 +825,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 19,
+      id: 16,
       name: "Dr. Kumaresh Krishnamoorthy",
       image: "/img/new-doctor-image/dr-kumaresh-krishnamoorthy.png",
       alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
