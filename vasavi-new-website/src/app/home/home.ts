@@ -5,11 +5,12 @@ import { CarouselComponent, CarouselModule, OwlOptions } from 'ngx-owl-carousel-
 import { Cta } from "../cta/cta";
 import * as bootstrap from 'bootstrap';
 import { Popup } from "../popup/popup";
+import { DoctorsSlide } from "../doctors-slide/doctors-slide";
 
 
 @Component({
   selector: 'app-home',
-  imports: [CarouselModule, CommonModule, RouterLink, RouterModule, Cta, Popup],
+  imports: [CarouselModule, CommonModule, RouterLink, RouterModule, Cta, Popup, DoctorsSlide],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
@@ -22,38 +23,38 @@ export class Home {
   autoplayInterval2: any;
 
 
-treatments = [
-  { img: 'img/Home/Orthopedic.jpg', alt: 'Orthopedics Treatment', title: 'Orthopedics', link: '/orthopedic-hospital-in-bangalore' },
-  { img: 'img/Home/Neurology.jpg', alt: 'Neurology Treatment', title: 'Neurology', link: '/neurology-hospital-in-bangalore' },
-  { img: 'img/Home/PEDIATRICS.jpeg', alt: 'Pediatrics Treatment', title: 'Pediatrics', link: '/pediatric-hospital-in-bangalore' },
-  { img: 'img/Home/Laser Skin Treatment at Vasavi Hospitals.jpg', alt: 'Dermatology Treatment', title: 'Dermatology', link: '/dermatology-skin-clinic-in-bangalore' },
-  { img: 'img/Home/CARDIOLOGY1.jpg', alt: 'Cardiology Treatment', title: 'Cardiology', link: '/cardiology-hospital-in-bangalore' },
-  { img: 'img/Home/ent6.jpg', alt: 'ENT Treatment', title: 'ENT', link: '/ent-hospital-in-bangalore' },
-  { img: 'img/Home/Hematology.webp', alt: 'Hematology And BMT Treatment', title: 'Hematology And BMT', link: '/oncology-hospital-in-bangalore' },
-  { img: 'img/Home/Medical-Oncology.jpg', alt: 'Medical Oncology Treatment', title: 'Medical Oncology', link: '/medical-oncology-cancer-treatment-in-bangalore' },
-  { img: 'img/Home/Ophthalmology.jpg', alt: 'Ophthalmology Treatment', title: 'Ophthalmology', link: '/eye-hospital-in-bangalore' },
-  { img: 'img/Home/radiology8.webp', alt: 'Radiology Treatment', title: 'Radiology', link: '/radiology-and-imaging-services-in-bangalore' },
-  { img: 'img/Home/Vascular.webp', alt: 'Vascular Sciences Treatment', title: 'Vascular Sciences', link: '/vascular-surgery-in-bangalore' },
-  { img: 'img/Home/Bariatric.jpg', alt: 'Bariatric Surgery Treatment', title: 'Bariatric Surgery', link: '/bariatric-surgery-in-bangalore' },
-  { img: 'img/Home/diabetes-glucometer-test.jpg', alt: 'Diabetes & Endocrinology Treatment', title: 'Diabetes & Endocrinology', link: '/diabetes-and-endocrinology-center-in-bangalore' },
-  { img: 'img/Home/vasavi-hospitals-internal-medicine-organs-overview.jpg', alt: 'Internal Medicine Treatment', title: 'Internal Medicine', link: '/internal-medicine-hospital-in-bangalore' },
-  { img: 'img/Home/Neurosurgery.jpg', alt: 'Neurosurgery Treatment', title: 'Neurosurgery', link: '/neurosurgery-specialist-in-bangalore' },
-  { img: 'img/Home/Minimally.jpg', alt: 'Minimally Invasive Surgery Treatment', title: 'Minimally Invasive Surgery', link: '/minimally-invasive-surgery-in-bangalore' },
-  { img: 'img/Home/vasavi-hospitals-bangalore-oral-maxillofacial-surgery.png', alt: 'Oral & Maxillofacial Surgery Treatment', title: 'Oral & Maxillofacial Surgery', link: '/oral-and-maxillofacial-surgery-in-bangalore' },
-  { img: 'img/Home/vasavi-hospitals-bangalore-gastroenterology-stomach-model.webp', alt: 'Surgical Gastroenterology Treatment', title: 'Surgical Gastroenterology', link: '/surgical-gastroenterology-in-bangalore' },
-  { img: 'img/Home/Emergency2.webp', alt: 'Emergency & Critical Care Treatment', title: 'Emergency & Critical Care', link: '/emergency-and-critical-care-in-bangalore' },
-  { img: 'img/Home/liver-hpb-doctor-hologram.png', alt: 'Liver And HPB Care Treatment', title: 'Liver And HPB Care', link: '/liver-hpb-care-center-in-bangalore' },
-  { img: 'img/Home/nicu-premature-baby-care-vasavi-hospitals.jpg', alt: 'Neonatology - (Level – 3 NICU) Treatment', title: 'Neonatology - (Level – 3 NICU)', link: '/neonatology-and-nicu-care-in-bangalore' },
-  { img: 'img/Home/doctor-nutrition-diet-consultation.jpg', alt: 'Nutrition & Dietetics Treatment', title: 'Nutrition & Dietetics', link: '/nutrition-and-dietetics-consultation-in-bangalore' },
-  { img: 'img/Home/psychiatry1.jpg', alt: 'Psychiatry Treatment', title: 'Psychiatry', link: '/psychiatry-and-mental-health-in-bangalore' },
-  { img: 'img/Home/vasavi-hospitals-bangalore-surgical-oncology-blue-ribbon.png', alt: 'Surgical Oncology Treatment', title: 'Surgical Oncology', link: '/surgical-oncology-cancer-hospital-in-bangalore' },
-  { img: 'img/Home/vasavi-dentistry-digital-care.jpg', alt: 'Dentistry Treatment', title: 'Dentistry', link: '/dental-clinic-in-bangalore' },
-  { img: 'img/Home/Medical Gastroenterology.webp', alt: 'Medical Gastroenterology Treatment', title: 'Medical Gastroenterology', link: '/gastroenterology-hospital-in-bangalore' },
-  { img: 'img/Home/Nephrology1.jpg', alt: 'Nephrology Treatment', title: 'Nephrology', link: '/nephrology-hospital-in-bangalore' },
-  { img: 'img/Home/Obstetrics1.jpg', alt: 'Obstetrics & Gynaecology Treatment', title: 'Obstetrics & Gynaecology', link: '/obstetrics-and-gynaecology-hospital-in-bangalore' },
-  { img: 'img/Home/Pulmonology2.jpg', alt: 'Pulmonology Treatment', title: 'Pulmonology', link: '/lung-specialist-in-bangalore' },
-  { img: 'img/Home/Urology1.jpeg', alt: 'Urology Treatment', title: 'Urology', link: '/urology-hospital-in-bangalore' },
-];
+  treatments = [
+    { img: 'img/Home/Orthopedic.jpg', alt: 'Orthopedics Treatment', title: 'Orthopedics', link: '/orthopedic-hospital-in-bangalore' },
+    { img: 'img/Home/Neurology.jpg', alt: 'Neurology Treatment', title: 'Neurology', link: '/neurology-hospital-in-bangalore' },
+    { img: 'img/Home/PEDIATRICS.jpeg', alt: 'Pediatrics Treatment', title: 'Pediatrics', link: '/pediatric-hospital-in-bangalore' },
+    { img: 'img/Home/Laser Skin Treatment at Vasavi Hospitals.jpg', alt: 'Dermatology Treatment', title: 'Dermatology', link: '/dermatology-skin-clinic-in-bangalore' },
+    { img: 'img/Home/CARDIOLOGY1.jpg', alt: 'Cardiology Treatment', title: 'Cardiology', link: '/cardiology-hospital-in-bangalore' },
+    { img: 'img/Home/ent6.jpg', alt: 'ENT Treatment', title: 'ENT', link: '/ent-hospital-in-bangalore' },
+    { img: 'img/Home/Hematology.webp', alt: 'Hematology And BMT Treatment', title: 'Hematology And BMT', link: '/oncology-hospital-in-bangalore' },
+    { img: 'img/Home/Medical-Oncology.jpg', alt: 'Medical Oncology Treatment', title: 'Medical Oncology', link: '/medical-oncology-cancer-treatment-in-bangalore' },
+    { img: 'img/Home/Ophthalmology.jpg', alt: 'Ophthalmology Treatment', title: 'Ophthalmology', link: '/eye-hospital-in-bangalore' },
+    { img: 'img/Home/radiology8.webp', alt: 'Radiology Treatment', title: 'Radiology', link: '/radiology-and-imaging-services-in-bangalore' },
+    { img: 'img/Home/Vascular.webp', alt: 'Vascular Sciences Treatment', title: 'Vascular Sciences', link: '/vascular-surgery-in-bangalore' },
+    { img: 'img/Home/Bariatric.jpg', alt: 'Bariatric Surgery Treatment', title: 'Bariatric Surgery', link: '/bariatric-surgery-in-bangalore' },
+    { img: 'img/Home/diabetes-glucometer-test.jpg', alt: 'Diabetes & Endocrinology Treatment', title: 'Diabetes & Endocrinology', link: '/diabetes-and-endocrinology-center-in-bangalore' },
+    { img: 'img/Home/vasavi-hospitals-internal-medicine-organs-overview.jpg', alt: 'Internal Medicine Treatment', title: 'Internal Medicine', link: '/internal-medicine-hospital-in-bangalore' },
+    { img: 'img/Home/Neurosurgery.jpg', alt: 'Neurosurgery Treatment', title: 'Neurosurgery', link: '/neurosurgery-specialist-in-bangalore' },
+    { img: 'img/Home/Minimally.jpg', alt: 'Minimally Invasive Surgery Treatment', title: 'Minimally Invasive Surgery', link: '/minimally-invasive-surgery-in-bangalore' },
+    { img: 'img/Home/vasavi-hospitals-bangalore-oral-maxillofacial-surgery.png', alt: 'Oral & Maxillofacial Surgery Treatment', title: 'Oral & Maxillofacial Surgery', link: '/oral-and-maxillofacial-surgery-in-bangalore' },
+    { img: 'img/Home/vasavi-hospitals-bangalore-gastroenterology-stomach-model.webp', alt: 'Surgical Gastroenterology Treatment', title: 'Surgical Gastroenterology', link: '/surgical-gastroenterology-in-bangalore' },
+    { img: 'img/Home/Emergency2.webp', alt: 'Emergency & Critical Care Treatment', title: 'Emergency & Critical Care', link: '/emergency-and-critical-care-in-bangalore' },
+    { img: 'img/Home/liver-hpb-doctor-hologram.png', alt: 'Liver And HPB Care Treatment', title: 'Liver And HPB Care', link: '/liver-hpb-care-center-in-bangalore' },
+    { img: 'img/Home/nicu-premature-baby-care-vasavi-hospitals.jpg', alt: 'Neonatology - (Level – 3 NICU) Treatment', title: 'Neonatology - (Level – 3 NICU)', link: '/neonatology-and-nicu-care-in-bangalore' },
+    { img: 'img/Home/doctor-nutrition-diet-consultation.jpg', alt: 'Nutrition & Dietetics Treatment', title: 'Nutrition & Dietetics', link: '/nutrition-and-dietetics-consultation-in-bangalore' },
+    { img: 'img/Home/psychiatry1.jpg', alt: 'Psychiatry Treatment', title: 'Psychiatry', link: '/psychiatry-and-mental-health-in-bangalore' },
+    { img: 'img/Home/vasavi-hospitals-bangalore-surgical-oncology-blue-ribbon.png', alt: 'Surgical Oncology Treatment', title: 'Surgical Oncology', link: '/surgical-oncology-cancer-hospital-in-bangalore' },
+    { img: 'img/Home/vasavi-dentistry-digital-care.jpg', alt: 'Dentistry Treatment', title: 'Dentistry', link: '/dental-clinic-in-bangalore' },
+    { img: 'img/Home/Medical Gastroenterology.webp', alt: 'Medical Gastroenterology Treatment', title: 'Medical Gastroenterology', link: '/gastroenterology-hospital-in-bangalore' },
+    { img: 'img/Home/Nephrology1.jpg', alt: 'Nephrology Treatment', title: 'Nephrology', link: '/nephrology-hospital-in-bangalore' },
+    { img: 'img/Home/Obstetrics1.jpg', alt: 'Obstetrics & Gynaecology Treatment', title: 'Obstetrics & Gynaecology', link: '/obstetrics-and-gynaecology-hospital-in-bangalore' },
+    { img: 'img/Home/Pulmonology2.jpg', alt: 'Pulmonology Treatment', title: 'Pulmonology', link: '/lung-specialist-in-bangalore' },
+    { img: 'img/Home/Urology1.jpeg', alt: 'Urology Treatment', title: 'Urology', link: '/urology-hospital-in-bangalore' },
+  ];
 
 
 
@@ -133,6 +134,65 @@ treatments = [
     },
 
   ];
+
+  doctorSlide = [
+    {
+      name: "Dr. Nisha Buchade",
+      img: "img/go/dr-nisha-buchade-sq.png",
+      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
+      experience: "15+",
+      department: "Obstetrics and Gynaecology",
+      // qualification: "MBBS, MS Fellowship in gynec-oncology, Fellowship in Advanced infertility",
+      slug: "/dr-nisha-buchade"
+    },
+    {
+      name: 'Dr. Srivatsa Subramanya',
+      img: 'img/new-doctor-image/dr-srivatsa-subramanya.png',
+      alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
+      experience: '17+',
+      department: 'Orthopedics',
+      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+      slug: "/dr-srivatsa-subramanya"
+    },
+    {
+      name: "Dr. Ramesh Hanumegowda",
+      img: "img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png",
+      alt: "Best General Surgeon in Bangalore | Dr. Ramesh T S",
+      experience: "15+",
+      department: "Urology",
+      slug: '/dr-ramesh-hanumegowda'
+    },
+    {
+      name: "Dr. Ramesh T S",
+      img: "/img/new-doctor-image/dr-ramesh-t-s-sq.png",
+      alt: "Best General Surgeon in Bangalore | Dr. Ramesh T S",
+      experience: "29+",
+      department: "General Surgery",
+      slug:'/dr-ramesh-t-s'
+    },
+
+
+    {
+      name: "Dr. Mohan Ram. P",
+      img: "/img/new-doctor-image/dummy-male.png",
+      alt: "Best General Surgeon in Bangalore | Dr. Mohan Ram. P",
+      experience: "15+",
+      department: "General Surgery and Proctology",
+      slug: '/dr-mohan-ram-p'
+    },
+
+    {
+      name: "Dr. Kumaresh Krishnamoorthy",
+      img: "img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
+      alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
+      experience: "25+",
+      department: "ENT",
+      qualification: "MS(ENT), Fellow, Head & Neck Surgery (USA), Fellow, Otology & Neurotology (USA)",
+      slug: "/dr-kumaresh-krishnamoorthy"
+    },
+  ]
+
+
 
 
   customOptions: OwlOptions = {
@@ -244,5 +304,5 @@ treatments = [
       }
     }, this.modalDelay);
   }
-  
+
 }

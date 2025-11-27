@@ -237,7 +237,7 @@
               <div class="input-wrapper">
                 <p-datepicker  [minDate]="minDate" 
                 placeholder="Choose a Date" inputId="icondisplay" name="date_appointment"
-                formControlName="date_appointment"
+                formControlName="date_appointment" [disabledDays]="disabledDays"
                 (onSelect)="onDateChange($event)" appendTo="body">
                 <ng-template pTemplate="date" let-date>
                     <span>

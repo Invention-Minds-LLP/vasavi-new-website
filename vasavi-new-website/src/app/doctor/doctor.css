@@ -157,7 +157,12 @@
     color: #333;
     font-weight: 500;
 }
-
+.disabled-day {
+    color: #ccc !important;
+    pointer-events: none !important;
+    opacity: 0.5;
+  }
+  
 
 /* .affiliation-card:hover {
     background: linear-gradient(135deg, #2e3192, #0095da);
