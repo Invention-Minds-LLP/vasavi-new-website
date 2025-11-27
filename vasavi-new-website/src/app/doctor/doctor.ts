@@ -816,13 +816,19 @@ export class Doctor {
       department: "",
       experience: "26+",
       designation: "Consultant - Nutritionist & Dietitian",
-      awards: [],
+      awards: [
+        { icon: "fas fa-baby-carriage", awardFor: "Community Health Leadership", awardDescription: "Recognized for outstanding contribution to public health initiatives and community nutrition awareness", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        { icon: "fas fa-file-alt", awardFor: "Invited Expert Speaker", awardDescription: "Invited speaker at leading corporate wellness programs and academic medical conferences", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+      ],
       professionalAffilications: [
         { image: "/img/affiliations/IDA.jpg", icon: "fas fa-user-md card-icon", paHeading: "IDA", paDescription: "Indian Dietetic Association" },
         { image: "/img/affiliations/NSI3.png", icon: "fas fa-user-md card-icon", paHeading: "NSI", paDescription: "Nutrition Society of India" },
         { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "SCNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
       ],
-      publications: []
+      publications: [
+        'Authored research papers on nutrition-based interventions for obesity and diabetes management',
+        'Contributed articles on preventive health, balanced diets, and corporate wellness nutrition'
+      ]
     },
     {
       id: 16,
