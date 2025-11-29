@@ -21,19 +21,32 @@ section {
 
 .key-doc-button{
     position: absolute;
-    bottom: 100px;
+    bottom:50px;
     right: 10%;
 }
 
 .welcome-doc-button{
   position: absolute;
-  bottom: 10px;
-  left: 2%;
+  bottom: 50px;
+  left: 25%;
+}
+
+.welcome-doc-button .call-btn,
+.robotic-banner-button .call-btn{
+  border: 2px solid yellow;
+  color: yellow;
+}
+.welcome-doc-button .call-btn:hover,
+.robotic-banner-button .call-btn:hover{
+  border: 2px solid yellow;
+  color: black;
+  background: yellow;
+
 }
 
 .robotic-banner-button{
     position: absolute;
-    bottom: 100px;
+    bottom: 50px;
     right: 15%;
 }
 
@@ -552,7 +565,7 @@ h3,
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 15%;
+  width: 6%;
   top: 0;
 }
 
@@ -589,6 +602,11 @@ h3,
 
 .doctor-slide{
   padding: 30px;
+}
+
+.desktop-banner{
+  width:100%;
+  height: auto;
 }
 
 
@@ -672,11 +690,24 @@ h3,
 
 @media (max-width : 1024px){
   .key-doc-button{
-    right: 2%;
+    right: 5%;
+    bottom: 20px;
+    .call-btn, .book-btn{
+     font-size: 14px;
+     font-weight: 600;
+     padding: 14px;
+ }
   }
 
   .robotic-banner-button{
-    right: 5%;
+    right: 15%;
+    bottom: 20px;
+    .call-btn, .book-btn{
+     font-size: 14px;
+     font-weight: 600;
+     padding: 14px;
+ }
+    
   }
 
   .welcome-doc-button{
@@ -686,19 +717,24 @@ h3,
      padding: 14px;
  }
   }
+
+  .welcome-doc-button{
+    bottom: 20px;
+  }
 }
 
 @media (max-width : 850px){
   .key-doc-button{
     right: 2%;
-    flex-direction: column;
+    /* flex-direction: column; */
     bottom: 20px;
   }
 
   .robotic-banner-button{
-    right: 17%;
-    flex-direction: column;
+    right: 10%;
+    /* flex-direction: column; */
     bottom: 20px;
+    
   }
 
   .call-btn, .book-btn{
@@ -708,8 +744,8 @@ h3,
  }
 
  .welcome-doc-button{
-
-    bottom: 5px;
+    bottom: 20px;
+    left: 24%;
 
     .call-btn, .book-btn{
      font-size: 12px;
@@ -720,11 +756,26 @@ h3,
 }
 
 @media (max-width : 600px){
-  .key-doc-button, .robotic-banner-button, .welcome-doc-button{
-    left: 0;
+  .key-doc-button, 
+  .welcome-doc-button{
+    left: 50px;
+    bottom: 20px;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+     .call-btn, .book-btn{
+     font-size: 12px;
+     font-weight: 600;
+     padding: 12px;
+ }
+    /* justify-content: center;
+    align-items: center; */
+  }
+
+  .robotic-banner-button {
+    .call-btn, .book-btn{
+     font-size: 12px;
+     font-weight: 600;
+     padding: 12px;
+ }
   }
 
   .desktop-banner{

@@ -112,6 +112,7 @@ showDesigner(): boolean {
     '/orthopedic-hospital-in-bangalore',
     '/lung-specialist-in-bangalore',
     '/urology-hospital-in-bangalore',
+    '/all-doctors',
 
     // Doctors page
     '/doctors/dr-karthik-k',

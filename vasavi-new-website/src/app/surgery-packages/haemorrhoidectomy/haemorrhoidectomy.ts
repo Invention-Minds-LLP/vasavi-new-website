@@ -53,7 +53,7 @@ export class Haemorrhoidectomy {
     
      {
       name : "Dr. Mohan Ram. P",
-      img : "/img/new-doctor-image/dummy-male.png",
+      img : "/img/new-doctor-image/dr-mohan-ram- p-sq.png",
       alt : "Best General Surgeon in Bangalore | Dr. Mohan Ram. P",
       experience : "15+",
       department : "General Surgery",
