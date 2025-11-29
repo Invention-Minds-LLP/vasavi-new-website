@@ -65,6 +65,7 @@ import { OvarianCystectomy } from './surgery-packages/ovarian-cystectomy/ovarian
 import { FibroidRemoval } from './surgery-packages/fibroid-removal/fibroid-removal';
 import { CTAngiography } from './surgery-packages/ct-angiography/ct-angiography';
 import { CoronaryAngiography } from './surgery-packages/coronary-angiography/coronary-angiography';
+import { DoctorsPage } from './doctors-page/doctors-page';
 
 // export const routes: Routes = [
 //     {path: 'anesthesiology' , component: Anesthesiology},
@@ -163,6 +164,8 @@ export const routes: Routes = [
   { path: 'thank-you', component: ThankyouPage },
   { path: 'doctors/:slug', component: Doctor },
   { path: 'ai-health-chatbot-in-bangalore', component: Chatbot },
+  { path: 'all-doctors', component: DoctorsPage },
+
 
   // surgery packages
   

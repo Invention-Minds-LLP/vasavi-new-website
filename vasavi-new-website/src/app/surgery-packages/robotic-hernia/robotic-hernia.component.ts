@@ -25,7 +25,7 @@ interface HerniaType {
 })
 export class RoboticHerniaComponent {
 
-  constructor(private title: Title, private meta:Meta){}
+  constructor(private title: Title, private meta: Meta) { }
 
 
   doctorHeader: any = {
@@ -40,7 +40,7 @@ export class RoboticHerniaComponent {
       alt: 'Best General Surgeon in Bangalore | Dr. Ramesh T S',
       experience: '29+',
       department: 'Robotic & Minimally Invasive Surgery',
-      slug:'/dr-ramesh-t-s'
+      slug: '/dr-ramesh-t-s'
     },
     {
       name: 'Dr. Mutharaju K. R',
@@ -48,7 +48,16 @@ export class RoboticHerniaComponent {
       alt: 'Best General Surgeon in Bangalore | Dr. Mutharaju K. R',
       experience: '23+',
       department: 'Robotic & Minimally Invasive Surgery',
-      slug : "/dr-mutharaju-k-r"
+      slug: "/dr-mutharaju-k-r"
+    },
+
+    {
+      name: "Dr. Mohan Ram. P",
+      img: "/img/new-doctor-image/dr-mohan-ram- p-sq.png",
+      alt: "Best General Surgeon in Bangalore | Dr. Mohan Ram. P",
+      experience: "15+",
+      department: "General Surgery",
+      slug: '/dr-mohan-ram-p'
     },
   ];
 
@@ -133,7 +142,7 @@ export class RoboticHerniaComponent {
     }, 5000);
 
     this.title.setTitle('Hernia Surgery in Bangalore | Advanced Laparoscopic Repair');
-    this.meta.updateTag({name:'description', content:'Treat hernias safely with laparoscopic hernia surgery at Vasavi Hospitals. Minimal scars, quick recovery & affordable, insurance-covered packages.'})
+    this.meta.updateTag({ name: 'description', content: 'Treat hernias safely with laparoscopic hernia surgery at Vasavi Hospitals. Minimal scars, quick recovery & affordable, insurance-covered packages.' })
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();

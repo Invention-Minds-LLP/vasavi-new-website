@@ -1,0 +1,60 @@
+<div class="all-doctors">
+    <div class="header">
+        <div class="heading">Our Key Doctors</div>
+        <div class="para">At Vasavi Hospitals, our experienced doctors provide compassionate, personalized care using
+            the latest medical advancements. From general medicine to specialized treatments, our team is dedicated to
+            your health and well-being.</div>
+    </div>
+
+    <div class="doctors-container">
+        <div class="filter">
+
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Enter Doctor's Name" [(ngModel)]="searchText"
+                        (input)="filterDoctors()">
+
+                    <!-- Search clear -->
+                    <i class="fa fa-times close-icon" *ngIf="searchText" (click)="searchText=''; filterDoctors()"></i>
+
+                    <i class="fa fa-search search-icon"></i>
+                </div>
+            </div>
+
+
+            <div class="filter-container">
+
+                <div class="select-box">
+                    <select [(ngModel)]="selectedDepartment" (change)="filterDoctors()">
+                        <option value="">Select Speciality</option>
+                        <option *ngFor="let dep of departments">{{ dep }}</option>
+                    </select>
+                    
+                    <i class="fa fa-chevron-down arrow"></i>
+                </div>
+                <i *ngIf="selectedDepartment" class="fa fa-times dropdown-clear"
+                    (click)="selectedDepartment=''; filterDoctors()"></i>
+
+               
+            </div>
+        </div>
+
+
+        <div class="doctor-card" *ngFor="let doctor of filterDoctors()">
+            <div class="doctor-image">
+                <img [src]="doctor?.img" [alt]="doctor?.alt">
+            </div>
+            <h3 class="doctor-name" *ngIf="doctor?.name">{{doctor?.name}}</h3>
+            <p class="qualification" *ngIf="doctor?.department">{{doctor?.department}}</p>
+            <p class="doctor-experience" *ngIf="doctor?.experience">{{doctor?.experience}} Years Experience</p>
+            <button *ngIf="doctor?.slug" class="appointment-btn" [routerLink]="['/doctors'+ doctor?.slug]">
+                Book Appointment
+            </button>
+
+
+        </div>
+    </div>
+    <div class="no-doctor" *ngIf="filterDoctors().length === 0">
+        No doctors found
+    </div>
+</div>

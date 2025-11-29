@@ -897,7 +897,7 @@ export class Doctor {
     {
       id: 20,
       name: "Dr. Mohan Ram. P",
-      image: "/img/new-doctor-image/dummy-male.png",
+      image: "/img/new-doctor-image/dr-mohan-ram-p.png",
       alt: "Dr. Mohan Ram. P | Laparoscopic General Surgeon at Vasavi Hospital Bangalore",
       areasOfExpertise: [
         { icon: "", expertise: "Laparoscopic & Open General Surgeries" },
