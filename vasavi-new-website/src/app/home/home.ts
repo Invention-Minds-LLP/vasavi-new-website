@@ -305,4 +305,9 @@ export class Home {
     }, this.modalDelay);
   }
 
+  bookAppointment() {
+    window.open("http://115.243.85.241:650/", "_blank");
+  }
+  
+
 }

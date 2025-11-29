@@ -322,7 +322,7 @@ export class CallbackForm {
     };
 
     const emailRequest = {
-      // whatsappNumber:['919342287945', '917708059010'],
+      // whatsappNumber:['919342287945'],
       whatsappNumber: ['919164840378'],
       to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
       // to:['inventionmindsblr@gmail.com'],
