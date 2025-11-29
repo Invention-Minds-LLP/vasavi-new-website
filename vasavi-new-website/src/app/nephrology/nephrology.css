@@ -1503,6 +1503,13 @@ h2,
     font-weight: 500;
 }
 
+.wrapper-grid{
+    display: grid;
+    column-gap: 10px;
+    row-gap: 10px;
+    grid-template-columns: 50% 50%;
+}
+
 .date-badge {
     display: inline-flex;
     align-items: center;
@@ -1513,7 +1520,7 @@ h2,
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
-    margin-top: 16px;
+    margin-bottom: 10px;
 }
 
 .date-badge::before {
@@ -1702,6 +1709,10 @@ h2,
         margin-top: -80px;
         right: 0;
         left: 0;
+    }
+
+    .wrapper-grid{
+        grid-template-columns: 100%;
     }
 
 }

@@ -3,6 +3,69 @@ section {
   overflow: hidden;
 }
 
+.mobile-banner{
+  display: none;
+}
+
+.carousel-style{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-buttons{
+  display: flex;
+  gap: 10px;
+  /* margin-top: -100px; */
+}
+
+.key-doc-button{
+    position: absolute;
+    bottom: 100px;
+    right: 10%;
+}
+
+.welcome-doc-button{
+  position: absolute;
+  bottom: 10px;
+  left: 2%;
+}
+
+.robotic-banner-button{
+    position: absolute;
+    bottom: 100px;
+    right: 15%;
+}
+
+ .book-btn {
+     display: inline-block;
+     background: #007bff;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 600;
+     padding: 14px 28px;
+     border-radius: 8px;
+     text-decoration: none;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s ease;
+     border: none;
+     outline: none;
+ }
+
+ .call-btn{
+    display: inline-block;
+     background: transparent;
+     color: #007bff;
+     font-size: 18px;
+     font-weight: 600;
+     padding: 14px 28px;
+     border-radius: 8px;
+     text-decoration: none;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+     transition: all 0.3s ease;
+     border: 2px solid #007bff;
+     outline: none;
+ }
 
 .section-header {
   text-align: center;
@@ -607,6 +670,80 @@ h3,
 
 }
 
+@media (max-width : 1024px){
+  .key-doc-button{
+    right: 2%;
+  }
+
+  .robotic-banner-button{
+    right: 5%;
+  }
+
+  .welcome-doc-button{
+    .call-btn, .book-btn{
+     font-size: 14px;
+     font-weight: 600;
+     padding: 14px;
+ }
+  }
+}
+
+@media (max-width : 850px){
+  .key-doc-button{
+    right: 2%;
+    flex-direction: column;
+    bottom: 20px;
+  }
+
+  .robotic-banner-button{
+    right: 17%;
+    flex-direction: column;
+    bottom: 20px;
+  }
+
+  .call-btn, .book-btn{
+     font-size: 14px;
+     font-weight: 600;
+     padding: 14px;
+ }
+
+ .welcome-doc-button{
+
+    bottom: 5px;
+
+    .call-btn, .book-btn{
+     font-size: 12px;
+     font-weight: 600;
+     padding: 12px;
+ }
+  }
+}
+
+@media (max-width : 600px){
+  .key-doc-button, .robotic-banner-button, .welcome-doc-button{
+    left: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desktop-banner{
+    display: none;
+  }
+
+  .mobile-banner{
+    display: block;
+  }
+}
+
+@media (max-width: 400px){
+  
+  .call-btn, .book-btn{
+     font-size: 12px;
+     font-weight: 600;
+     padding: 10px;
+ }
+}
 
 @media only screen and (min-width: 750px) {
   section {
