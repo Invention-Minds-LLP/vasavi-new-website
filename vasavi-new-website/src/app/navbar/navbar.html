@@ -64,7 +64,7 @@
                         <div class="d-inline-flex align-items-center pt-3" style="height: 45px;">
                                 <!-- <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" target="_blank"  href=""><i class="fab fa-youtube fw-normal"></i></a> -->
 
-                                <a rel="canonical" href="tel:080 71 500 500" class="text-light" (click)="trackCall()"> 
+                                <a rel="canonical" href="tel:080 71 500 500" class="text-light" (click)="trackCall()">
                                         <h4 class="text-light pt-2"><i class="fa fa-phone me-2"></i>080 71 500 500</h4>
                                 </a>
                         </div>
@@ -79,9 +79,10 @@
                 <img src="img/gallery/8.png">
         </a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <i class="fa fa-bars"></i>
+        <button class="navbar-toggler" type="button" (click)="toggleMobileMenu()">
+                <i class="fa" [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"></i>
         </button>
+
 
         <div #navbarCollapse class="collapse navbar-collapse " id="navbarCollapse" (click)="onNavClick($event)">
                 <div class="navbar-nav mx-auto py-0">
@@ -288,7 +289,7 @@
                                 </div>
                         </li>
 
-                        <a rel="canonical" [routerLink]="'/all-doctors'" class="nav-item nav-link">Doctors</a>
+                        <!-- <a rel="canonical" [routerLink]="'/all-doctors'" class="nav-item nav-link">Doctors</a> -->
                         <a rel="canonical" [routerLink]="'/awards-and-recognition'" class="nav-item nav-link">Awards</a>
                         <a rel="canonical" [routerLink]="'/gallery'" class="nav-item nav-link">Gallery</a>
                         <a rel="canonical" href="https://vasavihospitals.com/blog/" target="_blank"

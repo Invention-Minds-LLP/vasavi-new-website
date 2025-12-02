@@ -64,7 +64,7 @@ export class RoboticThrComponent {
     },
     {
       name: 'Dr. Srivatsa Subramanya',
-      img: 'img/new-doctor-image/dr-srivatsa-subramanya.png',
+      img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
       alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
       experience: '17+',
       department: 'Consultant-Orthopedics',

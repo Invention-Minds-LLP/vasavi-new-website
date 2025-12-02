@@ -111,6 +111,33 @@ a{
     left: -35px !important;
 }
 
+@media (max-width: 991px) {
+  .dropdown-menu {
+    display: none;
+    position: static !important;
+    width: 100% !important;
+    background: #fff !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  .dropdown-menu ul {
+    padding-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.navbar-toggler .fa {
+  transition: 0.3s ease;
+  font-size: 22px;
+}
+
+
+
 @media only screen and (min-width: 992px) {
     .dropdown:hover .dropdown-menu {
         display: flex;

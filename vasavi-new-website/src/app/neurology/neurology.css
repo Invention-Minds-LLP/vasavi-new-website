@@ -854,3 +854,9 @@ a {
     }
 
 }
+
+@media(max-width:320px){
+    .testimonial .testimonial-content {
+    height: auto;
+}
+}
