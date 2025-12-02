@@ -53,9 +53,31 @@
         <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
     </div>
 
+    <!-- navs -->
+    <div class="carousel-container sticky-top">
+        <div class="carousel-track" id="carouselTrack" #carouselTrack>
+            <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+                (click)="scrollToSection(section.id)">
+                {{ section.name }}
+            </a>
+
+        </div>
+
+        <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-btn next" id="nextBtn" #nextBtn>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </button>
+    </div>
+
     <!-- stat section -->
 
-    <section class="stats-section stat-desktop">
+    <section class="stats-section stat-desktop" id="overview">
         <p class="stats-subtitle">
             Years of Trusted Care in Advanced Hernia Treatment.
         </p>
@@ -134,7 +156,7 @@
     </section>
 
     <!-- What is hernia -->
-    <section class="what-is-hernia">
+    <section class="what-is-hernia" id="overview">
         <div class="what_content_Section">
             <h1>Affordable Hernia Surgery in Bangalore</h1>
             <h2>What is Hernia?</h2>
@@ -155,7 +177,7 @@
 
 
     <!--  -->
-    <div class="hernia-section-a">
+    <div class="hernia-section-a" id="symptoms">
 
         <div class="feature-wrapper">
 
@@ -174,7 +196,8 @@
                         <ul>
                             <li class="s_para" style="margin-top: 10px;">Bulge or swelling in the abdomen or groin</li>
                             <li class="s_para" style="margin-top: 10px;">Discomfort while standing or lifting</li>
-                            <li class="s_para" style="margin-top: 10px;">Pain that worsens when coughing or bending</li>
+                            <li class="s_para" style="margin-top: 10px;">Pain and swelling increases on coughing,
+                                standing and bending</li>
                         </ul>
                     </div>
                     <div class="feature-card">
@@ -185,7 +208,8 @@
                     </div>
                     <div class="feature-card">
                         <h3>Affordable & Insurance-Covered Packages</h3>
-                        <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options for
+                        <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance
+                            options for
                             a
                             stress-free experience.</p>
                     </div>
@@ -193,8 +217,8 @@
 
             </div>
 
-            <div class="form">
-                <app-callback-form  [pageName]="'Hernia'"></app-callback-form>
+            <div class="form" id="appointment">
+                <app-callback-form [pageName]="'Hernia'"></app-callback-form>
             </div>
 
         </div>
@@ -209,7 +233,7 @@
 
     <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
 
-    <div class="comparison-section" style="margin-top: 30px;">
+    <div class="comparison-section" style="margin-top: 30px;" id="surgery">
         <div class="comparison-header">
             <h2>Robotic vs. Laparoscopic Hernia Surgery: What's the Difference?</h2>
             <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
@@ -218,7 +242,8 @@
 
         <div class="comparison-table">
             <div class="comparison-column robotic-column">
-                <img src="img/packages/intuitive-davinci-xi-system-lineup-lowres.jpg" alt="Da Vinci Xi Robotic Surgery System" class="comparison-image">
+                <img src="img/packages/intuitive-davinci-xi-system-lineup-lowres.jpg"
+                    alt="Da Vinci Xi Robotic Surgery System" class="comparison-image">
                 <h2>Robotic Surgery (Da Vinci Xi)</h2>
                 <ul>
                     <li class="plus">
@@ -246,7 +271,8 @@
             </div>
 
             <div class="comparison-column robotic-column">
-                <img src="img/packages/laproscopic.jpg" alt="Laparoscopic Hysterectomy Surgery" class="comparison-image">
+                <img src="img/packages/laproscopic.jpg" alt="Laparoscopic Hysterectomy Surgery"
+                    class="comparison-image">
                 <h2>Laparoscopic Surgery</h2>
                 <ul>
                     <li class="plus">
@@ -277,7 +303,7 @@
     </div>
 
 
-    <div class="hernia-flow-section">
+    <div class="hernia-flow-section" id="types">
         <div class="section-header">
             <h2>Types of Hernia and Recovery Overview</h2>
             <p>Each hernia type differs in location and recovery time. Here’s a quick look at common hernia types and
@@ -327,7 +353,7 @@
     </div>
 
 
-    <div class="surgery-timeline-h">
+    <div class="surgery-timeline-h" id="procedures">
         <div class="timeline-header-h">
             <h2>What to Expect During Hernia Surgery</h2>
             <p>Your Step-by-Step Care Journey</p>
@@ -413,7 +439,7 @@
 
     <div class="popup-overlay" *ngIf="isPopupOpen">
         <div class="popup-container" (click)="$event.stopPropagation()">
-          <button class="popup-close" (click)="closePopup()">✖</button>
-          <app-callback-form [pageName]="'Hernia'"></app-callback-form>
+            <button class="popup-close" (click)="closePopup()">✖</button>
+            <app-callback-form [pageName]="'Hernia'"></app-callback-form>
         </div>
-      </div>
+    </div>

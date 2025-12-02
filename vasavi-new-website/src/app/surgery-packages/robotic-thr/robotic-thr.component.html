@@ -9,6 +9,29 @@
         <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
     </div>
 
+
+    <!-- navs -->
+    <div class="carousel-container sticky-top">
+        <div class="carousel-track" id="carouselTrack" #carouselTrack>
+            <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+                (click)="scrollToSection(section.id)">
+                {{ section.name }}
+            </a>
+
+        </div>
+
+        <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-btn next" id="nextBtn" #nextBtn>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </button>
+    </div>
+
     <!-- stat section -->
     <section class="stats-section stat-desktop">
         <p class="stats-subtitle">
@@ -43,7 +66,7 @@
     </section>
 
     <!-- stat section mobile -->
-    <section class="stats-section stat-mobile">
+    <section class="stats-section stat-mobile"> 
         <p class="stats-subtitle">
             Advanced Hip Replacement Care with Experienced Orthopedic Expertise.
         </p>
@@ -76,12 +99,17 @@
     </section>
 
     <!-- What is THR -->
-    <section class="what-is-hernia">
+    <section class="what-is-hernia" id="overview">
         <div class="what_content_Section">
             <h1>Affordable Hip Replacement Surgery in Bangalore</h1>
             <h2>What is Total Hip Replacement?</h2>
-            <p>Total Hip Replacement (THR) is a procedure where the damaged or worn-out parts of your hip joint are replaced with artificial components called prostheses. It helps restore pain-free motion and stability in people with arthritis, fractures, or chronic hip pain.</p>
-            <p>If hip pain limits your daily movement or disturbs your sleep, it may be time to consult our experts. At Vasavi Hospitals, we offer both <span class="bold">Conventional Hip Replacement</span> and <span class="bold">Mako Robotic-Assisted Surgery</span> — for smoother movement, accurate alignment, and lasting comfort.</p>
+            <p>Total Hip Replacement (THR) is a procedure where the damaged or worn-out parts of your hip joint are
+                replaced with artificial components called prostheses. It helps restore pain-free motion and stability
+                in people with arthritis, fractures, or chronic hip pain.</p>
+            <p>If hip pain limits your daily movement or disturbs your sleep, it may be time to consult our experts. At
+                Vasavi Hospitals, we offer both <span class="bold">Conventional Hip Replacement</span> and <span
+                    class="bold">Mako Robotic-Assisted Surgery</span> — for smoother movement, accurate alignment, and
+                lasting comfort.</p>
         </div>
 
         <div class="video">
@@ -93,41 +121,48 @@
     </section>
 
     <!-- feature section -->
-    <div class="hernia-section-a">
+    <div class="hernia-section-a" id="symptoms">
         <div class="feature-wrapper">
             <div class="features-grid-content">
                 <div class="header-container">
                     <h2>Recognize the Symptoms. Restore Your Mobility.</h2>
-                    <p>Don’t ignore persistent hip pain or stiffness. Early consultation can prevent further joint damage and help you regain mobility faster with advanced surgical care.</p>
+                    <p>Don’t ignore persistent hip pain or stiffness. Early consultation can prevent further joint
+                        damage and help you regain mobility faster with advanced surgical care.</p>
                 </div>
 
                 <div class="features-grid">
                     <div class="feature-card">
                         <h3>Common Symptoms</h3>
                         <ul>
-                            <li class="s_para" style="margin-top:10px;">Hip pain that worsens with walking or movement</li>
-                            <li class="s_para" style="margin-top:10px;">Difficulty sitting, standing, or bending comfortably</li>
+                            <li class="s_para" style="margin-top:10px;">Hip pain that worsens with walking or movement
+                            </li>
+                            <li class="s_para" style="margin-top:10px;">Difficulty sitting, standing, or bending
+                                comfortably</li>
                             <li class="s_para" style="margin-top:10px;">Grinding or stiffness in the hip joint</li>
                         </ul>
                     </div>
                     <div class="feature-card">
                         <h3>Our Expertise</h3>
-                        <p>Our orthopedic specialists perform <span class="bold">Total Hip Replacement</span> using both <span class="bold">Conventional</span> and <span class="bold">Mako Robotic</span> systems — ensuring precise joint alignment, minimal pain, and improved mobility.</p>
+                        <p>Our orthopedic specialists perform <span class="bold">Total Hip Replacement</span> using both
+                            <span class="bold">Conventional</span> and <span class="bold">Mako Robotic</span> systems —
+                            ensuring precise joint alignment, minimal pain, and improved mobility.</p>
                     </div>
                     <div class="feature-card">
                         <h3>Affordable & Insurance-Covered Packages</h3>
-                        <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance support for a stress-free experience.</p>
+                        <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance
+                            support for a stress-free experience.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="form">
+            <div class="form" id="appointment">
                 <app-callback-form [pageName]="'Total-Hip-Replacement'" />
             </div>
         </div>
 
         <p class="note-text">
-            <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic-assisted hip replacement enhances accuracy and safety, but every procedure is led by our experienced surgeons.
+            <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic-assisted hip replacement enhances accuracy
+            and safety, but every procedure is led by our experienced surgeons.
         </p>
 
         <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
@@ -136,10 +171,11 @@
     <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
 
     <!-- Comparison Section -->
-    <div class="comparison-section" style="margin-top: 30px;">
+    <div class="comparison-section" style="margin-top: 30px;" id="surgery">
         <div class="comparison-header">
             <h2>Robotic (Mako) vs. Conventional Hip Replacement</h2>
-            <p>Both approaches relieve pain and restore mobility, but the Mako Robotic System provides enhanced accuracy and natural movement for long-term comfort.</p>
+            <p>Both approaches relieve pain and restore mobility, but the Mako Robotic System provides enhanced accuracy
+                and natural movement for long-term comfort.</p>
         </div>
 
         <div class="comparison-table">
@@ -148,35 +184,43 @@
                 <h2>Mako Robotic-Assisted Surgery</h2>
                 <ul>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>3D Planning & Mapping:</strong> Creates a personalized 3D model for precise implant positioning and alignment.</p>
+                        <p><strong>3D Planning & Mapping:</strong> Creates a personalized 3D model for precise implant
+                            positioning and alignment.</p>
                     </li>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Unmatched Precision:</strong> Robotic arm ensures controlled bone preparation, preserving healthy tissue.</p>
+                        <p><strong>Unmatched Precision:</strong> Robotic arm ensures controlled bone preparation,
+                            preserving healthy tissue.</p>
                     </li>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Less Pain & Faster Recovery:</strong> Minimal soft-tissue damage helps patients walk comfortably within days.</p>
+                        <p><strong>Less Pain & Faster Recovery:</strong> Minimal soft-tissue damage helps patients walk
+                            comfortably within days.</p>
                     </li>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Natural Movement Restoration:</strong> Improves balance, leg length equality, and long-term joint performance.</p>
+                        <p><strong>Natural Movement Restoration:</strong> Improves balance, leg length equality, and
+                            long-term joint performance.</p>
                     </li>
                 </ul>
             </div>
 
             <div class="comparison-column robotic-column">
-                <img src="img/packages/conventional-hip-replacement.png" alt="Conventional Total Hip Replacement Surgery" class="comparison-image">
+                <img src="img/packages/conventional-hip-replacement.png"
+                    alt="Conventional Total Hip Replacement Surgery" class="comparison-image">
                 <h2>Conventional Hip Replacement</h2>
                 <ul>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Trusted Technique:</strong> Time-proven method that offers lasting relief from severe hip pain.</p>
+                        <p><strong>Trusted Technique:</strong> Time-proven method that offers lasting relief from severe
+                            hip pain.</p>
                     </li>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Expert Execution:</strong> Performed by highly experienced orthopedic surgeons for accurate results.</p>
+                        <p><strong>Expert Execution:</strong> Performed by highly experienced orthopedic surgeons for
+                            accurate results.</p>
                     </li>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
                         <p><strong>Improved Function:</strong> Restores joint stability and daily activity comfort.</p>
                     </li>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Cost-Effective Option:</strong> Ideal for patients seeking reliable outcomes at affordable costs.</p>
+                        <p><strong>Cost-Effective Option:</strong> Ideal for patients seeking reliable outcomes at
+                            affordable costs.</p>
                     </li>
                 </ul>
             </div>
@@ -187,7 +231,7 @@
 
 
     <!-- Surgery Timeline -->
-    <div class="surgery-timeline-h">
+    <div class="surgery-timeline-h" id="procedures">
         <div class="timeline-header-h">
             <h2>Your Hip Replacement Journey</h2>
             <p>Comprehensive Care from Consultation to Recovery</p>
@@ -197,25 +241,29 @@
             <div class="timeline-step-h">
                 <div class="step-marker-h">1</div>
                 <h3>Consultation & Pre-Surgery Evaluation</h3>
-                <p>Our orthopedic specialists review your X-rays and assess hip mobility. For robotic surgery, a 3D scan maps your hip for personalized implant planning.</p>
+                <p>Our orthopedic specialists review your X-rays and assess hip mobility. For robotic surgery, a 3D scan
+                    maps your hip for personalized implant planning.</p>
             </div>
 
             <div class="timeline-step-h">
                 <div class="step-marker-h">2</div>
                 <h3>Surgery Day</h3>
-                <p>Under anesthesia, the surgeon performs conventional or robotic-assisted hip replacement to restore smooth movement and joint stability.</p>
+                <p>Under anesthesia, the surgeon performs conventional or robotic-assisted hip replacement to restore
+                    smooth movement and joint stability.</p>
             </div>
 
             <div class="timeline-step-h">
                 <div class="step-marker-h">3</div>
                 <h3>Hospital Stay</h3>
-                <p>Patients typically stand or walk with support within 24 hours. A 2–3-day hospital stay includes guided physiotherapy sessions for safe recovery.</p>
+                <p>Patients typically stand or walk with support within 24 hours. A 2–3-day hospital stay includes
+                    guided physiotherapy sessions for safe recovery.</p>
             </div>
 
             <div class="timeline-step-h">
                 <div class="step-marker-h">4</div>
                 <h3>Recovery & Rehabilitation</h3>
-                <p>With physiotherapy and gradual exercises, patients regain flexibility and confidence. Robotic patients often recover faster with improved balance and posture.</p>
+                <p>With physiotherapy and gradual exercises, patients regain flexibility and confidence. Robotic
+                    patients often recover faster with improved balance and posture.</p>
             </div>
         </div>
     </div>
@@ -227,7 +275,7 @@
 
 <div class="popup-overlay" *ngIf="isPopupOpen">
     <div class="popup-container" (click)="$event.stopPropagation()">
-      <button class="popup-close" (click)="closePopup()">✖</button>
-      <app-callback-form [pageName]="'Total-Hip-Replacement'"></app-callback-form>
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'Total-Hip-Replacement'"></app-callback-form>
     </div>
-  </div>
+</div>

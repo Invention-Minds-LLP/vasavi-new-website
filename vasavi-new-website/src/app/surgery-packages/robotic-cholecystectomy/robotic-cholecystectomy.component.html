@@ -62,13 +62,34 @@
 </div> -->
 
 <div class="hero-section">
-        <img src="img/packages/GallBladderSurgery.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/Gallbladder_mobile.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
-    </div>
+  <img src="img/packages/GallBladderSurgery.png" class="desktop_banner"
+    alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+  <img src="img/packages/Gallbladder_mobile.png" class="mobile_banner"
+    alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+  <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
 
+<!-- navs -->
+<div class="carousel-container sticky-top">
+  <div class="carousel-track" id="carouselTrack" #carouselTrack>
+    <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+      (click)="scrollToSection(section.id)">
+      {{ section.name }}
+    </a>
+
+  </div>
+
+  <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15,18 9,12 15,6"></polyline>
+    </svg>
+  </button>
+  <button class="carousel-btn next" id="nextBtn" #nextBtn>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9,18 15,12 9,6"></polyline>
+    </svg>
+  </button>
+</div>
 
 
 <!-- stat section -->
@@ -193,14 +214,20 @@
 </div> -->
 
 <!-- What is hernia -->
-<section class="what-is-hernia">
+<section class="what-is-hernia" id="overview">
   <div class="what_content_Section">
     <h1>Affordable Gallbladder Stone Removal Surgery in Bangalore </h1>
     <h2>What is Gallbladder Stone Removal Surgery?</h2>
-    <p>Gallbladder removal, also known as <span class="bold">Cholecystectomy</span>, is a surgical procedure performed to remove the gallbladder when it contains stones or <span class="bold">causes pain, infection or digestive problems</span>. Gallstones are hardened deposits that block bile flow, leading to severe abdominal discomfort, nausea and inflammation.
+    <p>Gallbladder removal, also known as <span class="bold">Cholecystectomy</span>, is a surgical procedure performed
+      to remove the gallbladder when it contains stones or <span class="bold">causes pain, infection or digestive
+        problems</span>. Gallstones are hardened deposits that block bile flow, leading to severe abdominal discomfort,
+      nausea and inflammation.
     </p>
-    <p>At Vasavi Hospitals, our experienced surgeons perform both <span class="bold">Laparoscopic</span> and <span class="bold">Robotic Gallbladder Removal</span> procedures for safer, quicker and more precise results. These advanced methods help reduce pain, minimize scars and promote faster recovery.</p>
-    <p>If you experience sharp pain in the upper right abdomen, nausea after meals or indigestion, meet our specialists for an accurate diagnosis and timely treatment.
+    <p>At Vasavi Hospitals, our experienced surgeons perform both <span class="bold">Laparoscopic</span> and <span
+        class="bold">Robotic Gallbladder Removal</span> procedures for safer, quicker and more precise results. These
+      advanced methods help reduce pain, minimize scars and promote faster recovery.</p>
+    <p>If you experience sharp pain in the upper right abdomen, nausea after meals or indigestion, meet our specialists
+      for an accurate diagnosis and timely treatment.
     </p>
   </div>
   <div class="video">
@@ -211,7 +238,7 @@
   </div>
 </section>
 
-<div class="hernia-section-a">
+<div class="hernia-section-a" id="symptoms">
 
   <div class="feature-wrapper">
 
@@ -219,7 +246,8 @@
 
       <div class="header-container">
         <h2>Know the Signs. Choose the Right Care.</h2>
-        <p>Many people ignore gallbladder symptoms until the pain becomes unbearable. At Vasavi Hospitals, we help you detect the condition early and treat it effectively using modern surgical techniques.</p>
+        <p>Many people ignore gallbladder symptoms until the pain becomes unbearable. At Vasavi Hospitals, we help you
+          detect the condition early and treat it effectively using modern surgical techniques.</p>
       </div>
 
       <div class="features-grid">
@@ -234,17 +262,20 @@
         </div>
         <div class="feature-card">
           <h3>Surgery Options</h3>
-          <p>At Vasavi Hospitals, gallbladder removal is performed using <span class="bold">Laparoscopic or Robotic-assisted techniques</span> for better precision, minimal scarring and faster recovery. Our expert surgeons ensure complete safety and comfort from diagnosis to recovery.</p>
+          <p>At Vasavi Hospitals, gallbladder removal is performed using <span class="bold">Laparoscopic or
+              Robotic-assisted techniques</span> for better precision, minimal scarring and faster recovery. Our expert
+            surgeons ensure complete safety and comfort from diagnosis to recovery.</p>
         </div>
         <div class="feature-card">
           <h3>Affordable & Insurance-Covered Packages</h3>
-          <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance support for a stress-free experience.</p>
+          <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance support for a
+            stress-free experience.</p>
         </div>
       </div>
 
     </div>
 
-    <div class="form">
+    <div class="form" id="appointment">
       <app-callback-form [pageName]="'Cholecystectomy'" />
     </div>
 
@@ -262,75 +293,76 @@
 
 
 <!-- comparison -->
-<div class="comparison-section" style="margin-top: 30px;">
+<div class="comparison-section" style="margin-top: 30px;" id="surgery">
   <div class="comparison-header">
-      <h2>Robotic vs. Laparoscopic  Surgery: What's the Difference?</h2>
-      <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
-          leading to faster recovery and better patient outcomes compared to traditional laparoscopy.</p>
+    <h2>Robotic vs. Laparoscopic Surgery: What's the Difference?</h2>
+    <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
+      leading to faster recovery and better patient outcomes compared to traditional laparoscopy.</p>
   </div>
 
   <div class="comparison-table">
-      <div class="comparison-column robotic-column">
-          <img src="img/packages/intuitive-davinci-xi-system-lineup-lowres.jpg" alt="Da Vinci Xi Robotic Surgery System" class="comparison-image">
-          <h2>Robotic Surgery (Da Vinci Xi)</h2>
-          <ul>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>3D HD Vision:</strong> Surgeon sees the surgical field in high-definition,
-                      three-dimensional view for unparalleled depth perception.</p>
-              </li>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>Enhanced Dexterity:</strong> Robotic instruments have seven degrees of motion,
-                      mimicking the human wrist, which allows for finer and more precise suturing (stitching).
-                  </p>
-              </li>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>Superior Precision:</strong> Filters out natural hand tremors and allows for more
-                      complex, delicate repairs.</p>
-              </li>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>Reduced Pain & Scarring:</strong> The high precision results in less trauma to
-                      surrounding tissue.</p>
-              </li>
-          </ul>
-      </div>
+    <div class="comparison-column robotic-column">
+      <img src="img/packages/intuitive-davinci-xi-system-lineup-lowres.jpg" alt="Da Vinci Xi Robotic Surgery System"
+        class="comparison-image">
+      <h2>Robotic Surgery (Da Vinci Xi)</h2>
+      <ul>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>3D HD Vision:</strong> Surgeon sees the surgical field in high-definition,
+            three-dimensional view for unparalleled depth perception.</p>
+        </li>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>Enhanced Dexterity:</strong> Robotic instruments have seven degrees of motion,
+            mimicking the human wrist, which allows for finer and more precise suturing (stitching).
+          </p>
+        </li>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>Superior Precision:</strong> Filters out natural hand tremors and allows for more
+            complex, delicate repairs.</p>
+        </li>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>Reduced Pain & Scarring:</strong> The high precision results in less trauma to
+            surrounding tissue.</p>
+        </li>
+      </ul>
+    </div>
 
-      <div class="comparison-column robotic-column">
-          <img src="img/packages/laproscopic.jpg" alt="Laparoscopic Hysterectomy Surgery" class="comparison-image">
-          <h2>Laparoscopic Surgery</h2>
-          <ul>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>2D Vision:</strong> Surgeons view a flat, two-dimensional image, which can limit
-                      depth perception.</p>
-              </li>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>Limited Movement:</strong> Instruments have restricted movement (4 degrees of
-                      motion), making complex suturing more challenging.</p>
-              </li>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>Good Precision:</strong> Excellent compared to open surgery, but lacks the
-                      micro-movements of a robotic system.</p>
-              </li>
-              <li class="plus">
-                  <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                  <p><strong>Minimal Scarring:</strong> Also offers small incisions, but robotic methods often
-                      allow for even smaller, strategically placed cuts.</p>
-              </li>
-          </ul>
-      </div>
+    <div class="comparison-column robotic-column">
+      <img src="img/packages/laproscopic.jpg" alt="Laparoscopic Hysterectomy Surgery" class="comparison-image">
+      <h2>Laparoscopic Surgery</h2>
+      <ul>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>2D Vision:</strong> Surgeons view a flat, two-dimensional image, which can limit
+            depth perception.</p>
+        </li>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>Limited Movement:</strong> Instruments have restricted movement (4 degrees of
+            motion), making complex suturing more challenging.</p>
+        </li>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>Good Precision:</strong> Excellent compared to open surgery, but lacks the
+            micro-movements of a robotic system.</p>
+        </li>
+        <li class="plus">
+          <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+          <p><strong>Minimal Scarring:</strong> Also offers small incisions, but robotic methods often
+            allow for even smaller, strategically placed cuts.</p>
+        </li>
+      </ul>
+    </div>
   </div>
 
   <a (click)="openPopup()" class="cta-button-comparison">Speak with our specialists today</a>
 </div>
 
 <!-- timeline -->
-<div class="surgery-timeline-h">
+<div class="surgery-timeline-h" id="procedures">
   <div class="timeline-header-h">
     <h2><strong>What to Expect During Gallbladder Stone Removal Surgery</strong></h2>
     <p>Your Step-by-Step Care Journey
@@ -341,26 +373,31 @@
     <div class="timeline-step-h">
       <div class="step-marker-h">1</div>
       <h3>Consultation & Evaluation</h3>
-      <p>Our surgical team will assess your symptoms, perform scans like ultrasound or CT and confirm the presence of gallstones. We explain the procedure, expected recovery and cost clearly before surgery.</p>
+      <p>Our surgical team will assess your symptoms, perform scans like ultrasound or CT and confirm the presence of
+        gallstones. We explain the procedure, expected recovery and cost clearly before surgery.</p>
     </div>
 
     <div class="timeline-step-h">
       <div class="step-marker-h">2</div>
       <h3>Surgery Day</h3>
-      <p>The procedure is done under general anesthesia using <span class="bold">Laparoscopic or Robotic-assisted methods</span>. Small incisions are made to remove the gallbladder safely. The surgery usually takes about 1 hour, ensuring minimal blood loss and quicker healing.</p>
+      <p>The procedure is done under general anesthesia using <span class="bold">Laparoscopic or Robotic-assisted
+          methods</span>. Small incisions are made to remove the gallbladder safely. The surgery usually takes about 1
+        hour, ensuring minimal blood loss and quicker healing.</p>
     </div>
 
     <div class="timeline-step-h">
       <div class="step-marker-h">3</div>
       <h3>Post-Surgery Stay</h3>
-      <p>You’ll stay in the hospital for <span class="bold">1–2 days</span> under observation. Our team monitors your recovery and provides diet guidance and care instructions to avoid post-surgery discomfort.
+      <p>You’ll stay in the hospital for <span class="bold">1–2 days</span> under observation. Our team monitors your
+        recovery and provides diet guidance and care instructions to avoid post-surgery discomfort.
       </p>
     </div>
 
     <div class="timeline-step-h">
       <div class="step-marker-h">4</div>
       <h3>Recovery & Follow-Up</h3>
-      <p>Most patients resume normal activities within <span class="bold">5–7 days</span>. Follow-up visits ensure proper healing, dietary balance and digestive comfort after surgery..</p>
+      <p>Most patients resume normal activities within <span class="bold">5–7 days</span>. Follow-up visits ensure
+        proper healing, dietary balance and digestive comfort after surgery..</p>
     </div>
   </div>
 </div>

@@ -1,52 +1,74 @@
- <div class="hero-section">
-        <img src="img/packages/Ovarian_cyst.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/Ovarian_cyst_mobile.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+<div class="hero-section">
+    <img src="img/packages/Ovarian_cyst.png" class="desktop_banner"
+        alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+    <img src="img/packages/Ovarian_cyst_mobile.png" class="mobile_banner"
+        alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+    <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
+
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+
     </div>
 
-    <!-- stat section -->
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
 
-    <section class="stats-section">
-        <p class="stats-subtitle">
-           Years of Expertise in Advanced Ovarian Cyst Treatment
-        </p>
+<!-- stat section -->
 
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="icon-box yellow">
-                    <i class="fa-solid fa-stethoscope"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>10,000+</h3>
-                    <p> Successful Surgeries Performed</p>
-                </div>
+<section class="stats-section">
+    <p class="stats-subtitle">
+        Years of Expertise in Advanced Ovarian Cyst Treatment
+    </p>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon-box yellow">
+                <i class="fa-solid fa-stethoscope"></i>
             </div>
-
-            <div class="stat-card">
-                <div class="icon-box pink">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>80-97%</h3>
-                    <p>Success Rate</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="icon-box blue">
-                    <i class="fa-solid fa-bed"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>15+</h3>
-                    <p> Years Experienced Doctors</p>
-                </div>
+            <div class="stat-content">
+                <h3>10,000+</h3>
+                <p> Successful Surgeries Performed</p>
             </div>
         </div>
-    </section>
 
-    <!-- stat section -->
+        <div class="stat-card">
+            <div class="icon-box pink">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-content">
+                <h3>80-97%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box blue">
+                <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="stat-content">
+                <h3>15+</h3>
+                <p> Years Experienced Doctors</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- stat section -->
 <!-- 
     <section class="stats-section stat-mobile">
         <p class="stats-subtitle">
@@ -86,76 +108,87 @@
         </div>
     </section> -->
 
-    <!-- What is hernia -->
-    <section class="what-is-hernia">
-        <div class="what_content_Section">
-            <h1>Affordable Ovarian Cystectomy Surgery in Bangalore</h1>
-            <h2>What is Ovarian Cystectomy?</h2>
-            <p>Ovarian Cystectomy is a surgical procedure to remove cysts from one or both ovaries while preserving healthy ovarian tissue. These cysts are usually fluid-filled sacs that can cause pain, bloating or irregular periods.</p>
-            <p>At Vasavi Hospitals, our skilled gynecologists perform <b>Laparoscopic Ovarian Cystectomy</b>, a minimally invasive surgery that involves small incisions and advanced instruments for precise removal. This ensures less pain, minimal scarring and a faster recovery compared to open surgery.</p>
-            <p>If you experience pelvic pain, bloating or irregular menstrual cycles, consult our specialists for an accurate diagnosis and the best treatment plan.</p>
-        </div>
-        <div class="video">
-            <video autoplay loop muted playsinline>
-                <source src="/img/packages/ovarian-cyst.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
+<!-- What is hernia -->
+<section class="what-is-hernia" id="overview">
+    <div class="what_content_Section">
+        <h1>Affordable Ovarian Cystectomy Surgery in Bangalore</h1>
+        <h2>What is Ovarian Cystectomy?</h2>
+        <p>Ovarian Cystectomy is a surgical procedure to remove cysts from one or both ovaries while preserving healthy
+            ovarian tissue. These cysts are usually fluid-filled sacs that can cause pain, bloating or irregular
+            periods.</p>
+        <p>At Vasavi Hospitals, our skilled gynecologists perform <b>Laparoscopic Ovarian Cystectomy</b>, a minimally
+            invasive surgery that involves small incisions and advanced instruments for precise removal. This ensures
+            less pain, minimal scarring and a faster recovery compared to open surgery.</p>
+        <p>If you experience pelvic pain, bloating or irregular menstrual cycles, consult our specialists for an
+            accurate diagnosis and the best treatment plan.</p>
+    </div>
+    <div class="video">
+        <video autoplay loop muted playsinline>
+            <source src="/img/packages/ovarian-cyst.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
 
 
-    <!--  -->
-    <div class="hernia-section-a">
+<!--  -->
+<div class="hernia-section-a" id="symptoms">
 
-        <div class="feature-wrapper">
+    <div class="feature-wrapper">
 
-            <div class="features-grid-content">
+        <div class="features-grid-content">
 
-                <div class="header-container">
-                    <h2>Know the Signs. Choose the Right Care.</h2>
-                    <p>Ovarian cysts are common, but some may grow large or become painful if left untreated. At Vasavi Hospitals, we detect the condition early and treat it effectively using advanced laparoscopic surgery to restore comfort and hormonal balance.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Common Symptoms</h3>
-                        <ul>
-                            <li class="s_para" style="margin-top: 10px;">Lower abdominal or pelvic pain</li>
-                            <li class="s_para" style="margin-top: 10px;">Bloating or a feeling of fullness in the abdomen</li>
-                            <li class="s_para" style="margin-top: 10px;">Irregular menstrual periods</li>
-                            <li class="s_para" style="margin-top: 10px;">Pain during intercourse or urination</li>
-                            <li class="s_para" style="margin-top: 10px;">Nausea or heaviness in the lower belly</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Surgery Options</h3>
-                        <p>At Vasavi Hospitals, Ovarian Cystectomy is performed using <b>Laparoscopic techniques</b> for better precision and quicker recovery. The cyst is safely removed while preserving the ovary, helping maintain fertility and hormonal health.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Affordable & Insurance-Covered Packages</h3>
-                        <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options, making advanced gynecological care affordable and worry-free.</p>
-                    </div>
-                </div>
-
+            <div class="header-container">
+                <h2>Know the Signs. Choose the Right Care.</h2>
+                <p>Ovarian cysts are common, but some may grow large or become painful if left untreated. At Vasavi
+                    Hospitals, we detect the condition early and treat it effectively using advanced laparoscopic
+                    surgery to restore comfort and hormonal balance.</p>
             </div>
 
-            <div class="form">
-                <app-callback-form  [pageName]="'ovarian-cystectomy'"/>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Common Symptoms</h3>
+                    <ul>
+                        <li class="s_para" style="margin-top: 10px;">Lower abdominal or pelvic pain</li>
+                        <li class="s_para" style="margin-top: 10px;">Bloating or a feeling of fullness in the abdomen
+                        </li>
+                        <li class="s_para" style="margin-top: 10px;">Irregular menstrual periods</li>
+                        <li class="s_para" style="margin-top: 10px;">Pain during intercourse or urination</li>
+                        <li class="s_para" style="margin-top: 10px;">Nausea or heaviness in the lower belly</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>Surgery Options</h3>
+                    <p>At Vasavi Hospitals, Ovarian Cystectomy is performed using <b>Laparoscopic techniques</b> for
+                        better precision and quicker recovery. The cyst is safely removed while preserving the ovary,
+                        helping maintain fertility and hormonal health.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Affordable & Insurance-Covered Packages</h3>
+                    <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options,
+                        making advanced gynecological care affordable and worry-free.</p>
+                </div>
             </div>
 
         </div>
 
-        <!-- <p class="note-text">
+        <div class="form" id="appointment">
+            <app-callback-form [pageName]="'ovarian-cystectomy'" />
+        </div>
+
+    </div>
+
+    <!-- <p class="note-text">
             <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic surgery refers to robotic-assisted surgery.
             It is not performed by robots. All procedures are performed by our skilled surgeons.
         </p> -->
 
-        <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
-    </div>
+    <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
+</div>
 
-    <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
 
-    <!-- <div class="comparison-section" style="margin-top: 30px;">
+<!-- <div class="comparison-section" style="margin-top: 30px;">
         <div class="comparison-header">
             <h2>Robotic vs. Laparoscopic Surgery: What's the Difference?</h2>
             <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
@@ -224,40 +257,45 @@
 
 
 
-    <div class="surgery-timeline-h">
-        <div class="timeline-header-h">
-            <h2>What to Expect During Ovarian Cystectomy Surgery</h2>
-            <p>Your Step-by-Step Care Journey</p>
+<div class="surgery-timeline-h" id="procedures">
+    <div class="timeline-header-h">
+        <h2>What to Expect During Ovarian Cystectomy Surgery</h2>
+        <p>Your Step-by-Step Care Journey</p>
+    </div>
+
+    <div class="timeline-container-h">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">1</div>
+            <h3>Consultation & Evaluation</h3>
+            <p>Meet our gynecology team for a detailed evaluation. We perform ultrasound and other diagnostic tests to
+                assess the cyst’s size and type before planning surgery.</p>
         </div>
 
-        <div class="timeline-container-h">
-            <div class="timeline-step-h">
-                <div class="step-marker-h">1</div>
-                <h3>Consultation & Evaluation</h3>
-                <p>Meet our gynecology team for a detailed evaluation. We perform ultrasound and other diagnostic tests to assess the cyst’s size and type before planning surgery.</p>
-            </div>
-
-            <div class="timeline-step-h">
-                <div class="step-marker-h">2</div>
-                <h3> Surgery Day</h3>
-                <p>The procedure is performed under general anesthesia using <b>Laparoscopic methods</b>. Small incisions are made in the abdomen to remove the cyst safely while preserving the ovary. The surgery typically takes <b>1-2 hours</b>.</p>
-            </div>
-
-            <div class="timeline-step-h">
-                <div class="step-marker-h">3</div>
-                <h3>Post-Surgery Stay</h3>
-                <p>You’ll stay in the hospital for <b>1-2 days</b> for observation. Our doctors provide post-operative guidance on diet, rest and medication to ensure smooth recovery.</p>
-            </div>
-
-            <div class="timeline-step-h">
-                <div class="step-marker-h">4</div>
-                <h3>Recovery & Follow-Up</h3>
-                <p>Most patients resume light activities within <b>5-7 days</b>. Follow-up visits help monitor healing and confirm the return of normal ovarian function.</p>
-            </div>
+        <div class="timeline-step-h">
+            <div class="step-marker-h">2</div>
+            <h3> Surgery Day</h3>
+            <p>The procedure is performed under general anesthesia using <b>Laparoscopic methods</b>. Small incisions
+                are made in the abdomen to remove the cyst safely while preserving the ovary. The surgery typically
+                takes <b>1-2 hours</b>.</p>
         </div>
 
+        <div class="timeline-step-h">
+            <div class="step-marker-h">3</div>
+            <h3>Post-Surgery Stay</h3>
+            <p>You’ll stay in the hospital for <b>1-2 days</b> for observation. Our doctors provide post-operative
+                guidance on diet, rest and medication to ensure smooth recovery.</p>
+        </div>
 
-        <!-- <div class="benefits-section-short">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">4</div>
+            <h3>Recovery & Follow-Up</h3>
+            <p>Most patients resume light activities within <b>5-7 days</b>. Follow-up visits help monitor healing and
+                confirm the return of normal ovarian function.</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="benefits-section-short">
             <h2>Why Choose Our Laparoscopic Mesh Repair?</h2>
 
             <div class="benefits-bar">
@@ -282,11 +320,11 @@
             <a href="#" class="cta-button-short">Book Your Specialist Consultation Now</a>
         </div> -->
 
-        <!-- <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
+    <!-- <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
         </app-pop-up-form-ads> -->
 
 
-        <!-- <div class="container_2">
+    <!-- <div class="container_2">
             <div class="we_cure_with_care_section">
                 <h2 class="heading">We Cure With Care</h2>
                 <p class="para">Digest comfortably. Move freely. Live confidently. At Vasavi Hospitals, our Robotic
@@ -300,12 +338,12 @@
             </div>
         </div> -->
 
-        
-        
+
+
+</div>
+<div class="popup-overlay" *ngIf="isPopupOpen">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'ovarian-cystectomy'"></app-callback-form>
     </div>
-    <div class="popup-overlay" *ngIf="isPopupOpen">
-        <div class="popup-container" (click)="$event.stopPropagation()">
-          <button class="popup-close" (click)="closePopup()">✖</button>
-          <app-callback-form [pageName]="'ovarian-cystectomy'"></app-callback-form>
-        </div>
-      </div>
+</div>

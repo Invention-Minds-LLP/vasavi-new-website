@@ -41,7 +41,7 @@ export class App {
   constructor(private router: Router,private ngZone: NgZone, private canonicalUrls : CanonicalUrl) {}
 
   ngOnInit(): void {
-    this.showPopup = true;
+    this.showPopup = false;
     // Initialize outside Angular to avoid DOM timing conflicts
     this.ngZone.runOutsideAngular(() => {
       setTimeout(() => {

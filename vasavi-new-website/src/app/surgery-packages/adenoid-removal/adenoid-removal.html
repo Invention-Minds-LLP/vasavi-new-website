@@ -6,6 +6,28 @@
     <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
 </div>
 
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item"
+            [class.active]="activeSection === section.id" (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+
+    </div>
+
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
+
 <!-- stat section -->
 
 <section class="stats-section">
@@ -87,7 +109,7 @@
     </section> -->
 
 <!-- What is hernia -->
-<section class="what-is-hernia">
+<section class="what-is-hernia" id="overview">
     <div class="what_content_Section">
         <h1>Affordable Adenoidectomy for Children in Bangalore</h1>
         <h2>What is Adenoidectomy?</h2>
@@ -117,7 +139,7 @@
 
 
 <!--  -->
-<div class="hernia-section-a">
+<div class="hernia-section-a" id="symptoms">
 
     <div class="feature-wrapper">
 
@@ -156,7 +178,7 @@
 
         </div>
 
-        <div class="form">
+        <div class="form" id="appointment">
             <app-callback-form [pageName]="'Adenoid Removal'" />
         </div>
 
@@ -241,7 +263,7 @@
 
 
 
-<div class="surgery-timeline-h">
+<div class="surgery-timeline-h" id="procedures">
     <div class="timeline-header-h">
         <h2>What to Expect During Adenoid Removal Surgery</h2>
         <p>Your Step-by-Step Care Journey</p>

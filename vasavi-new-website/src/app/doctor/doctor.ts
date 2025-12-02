@@ -799,7 +799,7 @@ export class Doctor {
     {
       id: 18,
       name: "Dr. Naneboena Sunitha",
-      image: "/img/new-doctor-image/dummy-female.png",
+      image: "/img/new-doctor-image/dr-naneboena-sunitha.png",
       alt: "Dr Naneboena Sunitha - Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
       areasOfExpertise: [
         { icon: "", expertise: "Clinical nutrition and diet therapy" },
@@ -900,10 +900,10 @@ export class Doctor {
       image: "/img/new-doctor-image/dr-mohan-ram-p.png",
       alt: "Dr. Mohan Ram. P | Laparoscopic General Surgeon at Vasavi Hospital Bangalore",
       areasOfExpertise: [
-        { icon: "", expertise: "Laparoscopic & Open General Surgeries" },
-        { icon: "", expertise: "Laser Proctology (Piles, Fissures, Fistula)" },
         { icon: "", expertise: "Hernia Repairs & GI Endoscopies" },
+        { icon: "", expertise: "Laparoscopic & Open General Surgeries" },
         { icon: "", expertise: "Varicose Vein & Colorectal Surgeries" },
+        { icon: "", expertise: "Laser Proctology (Piles, Fissures, Fistula)" },
         { icon: "", expertise: "Emergency Trauma & Critical Care Surgeries" },
       ],
       title: "Dr. Mohan Ram. P Consultant General Surgeon | Vasavi Hospitals Bangalore",

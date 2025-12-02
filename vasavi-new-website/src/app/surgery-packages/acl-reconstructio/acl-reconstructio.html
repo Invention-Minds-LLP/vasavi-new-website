@@ -1,52 +1,74 @@
- <div class="hero-section">
-        <img src="img/packages/acl-reconstruction-desktop.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/ACL-reconstruction.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+<div class="hero-section">
+    <img src="img/packages/acl-reconstruction-desktop.png" class="desktop_banner"
+        alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+    <img src="img/packages/ACL-reconstruction.png" class="mobile_banner"
+        alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+    <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
+
+<!-- stat section -->
+
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item"
+            [class.active]="activeSection === section.id" (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+
     </div>
 
-    <!-- stat section -->
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
 
-    <section class="stats-section">
-        <p class="stats-subtitle">
-           Years of Expertise in Advanced ACL Reconstruction Care
-        </p>
+<section class="stats-section"id="treatments">
+    <p class="stats-subtitle">
+        Years of Expertise in Advanced ACL Reconstruction Care
+    </p>
 
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="icon-box yellow">
-                    <i class="fa-solid fa-stethoscope"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>7,000+</h3>
-                    <p>Successful Surgeries Performed</p>
-                </div>
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon-box yellow">
+                <i class="fa-solid fa-stethoscope"></i>
             </div>
-
-            <div class="stat-card">
-                <div class="icon-box pink">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>80-97%</h3>
-                    <p>Success Rate</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="icon-box blue">
-                    <i class="fa-solid fa-bed"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>40+</h3>
-                    <p>Years Experienced Doctors</p>
-                </div>
+            <div class="stat-content">
+                <h3>7,000+</h3>
+                <p>Successful Surgeries Performed</p>
             </div>
         </div>
-    </section>
 
-    <!-- stat section -->
+        <div class="stat-card">
+            <div class="icon-box pink">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-content">
+                <h3>80-97%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box blue">
+                <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="stat-content">
+                <h3>40+</h3>
+                <p>Years Experienced Doctors</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- stat section -->
 <!-- 
     <section class="stats-section stat-mobile">
         <p class="stats-subtitle">
@@ -86,75 +108,86 @@
         </div>
     </section> -->
 
-    <!-- What is hernia -->
-    <section class="what-is-hernia">
-        <div class="what_content_Section">
-            <h1>Affordable ACL Reconstruction Surgery in Bangalore</h1>
-            <h2>What is ACL Reconstruction?</h2>
-            <p>ACL Reconstruction is a surgical procedure to repair or replace a torn Anterior Cruciate Ligament (ACL) - one of the main ligaments that stabilize the knee. It is commonly required after sports injuries, accidents or sudden twisting movements that cause knee instability or pain.</p>
-            <p>At Vasavi Hospitals, our expert orthopedic surgeons perform Arthroscopic ACL Reconstruction, a minimally invasive procedure that uses small incisions for faster healing, minimal pain and better mobility.</p>
-            <p>If you experience knee pain, swelling or a feeling of your knee “giving way,” consult our specialists for accurate diagnosis and effective treatment options.</p>
-        </div>
-        <div class="video">
-            <video autoplay loop muted playsinline>
-                <source src="/img/packages/acl-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-        </div>
-    </section>
+<!-- What is hernia -->
+<section class="what-is-hernia" id="whyvasavi" id="overview">
+    <div class="what_content_Section">
+        <h1>Affordable ACL Reconstruction Surgery in Bangalore</h1>
+        <h2>What is ACL Reconstruction?</h2>
+        <p>ACL Reconstruction is a surgical procedure to repair or replace a torn Anterior Cruciate Ligament (ACL) - one
+            of the main ligaments that stabilize the knee. It is commonly required after sports injuries, accidents or
+            sudden twisting movements that cause knee instability or pain.</p>
+        <p>At Vasavi Hospitals, our expert orthopedic surgeons perform Arthroscopic ACL Reconstruction, a minimally
+            invasive procedure that uses small incisions for faster healing, minimal pain and better mobility.</p>
+        <p>If you experience knee pain, swelling or a feeling of your knee “giving way,” consult our specialists for
+            accurate diagnosis and effective treatment options.</p>
+    </div>
+    <div class="video">
+        <video autoplay loop muted playsinline>
+            <source src="/img/packages/acl-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
 
 
-    <!--  -->
-    <div class="hernia-section-a">
+<!--  -->
+<div class="hernia-section-a" id="symptoms">
 
-        <div class="feature-wrapper">
+    <div class="feature-wrapper">
 
-            <div class="features-grid-content">
+        <div class="features-grid-content">
 
-                <div class="header-container">
-                    <h2>Know the Signs. Choose the Right Care.</h2>
-                    <p>ACL injuries can limit mobility and affect your daily life if left untreated. At Vasavi Hospitals, we identify the extent of ligament damage and provide safe, advanced surgical care to restore stability and confidence in your movement.</p>
-                </div>
-
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>Common Symptoms</h3>
-                        <ul>
-                            <li class="s_para" style="margin-top: 10px;">Sudden pain or a popping sound in the knee during injury</li>
-                            <li class="s_para" style="margin-top: 10px;">Swelling and stiffness within a few hours</li>
-                            <li class="s_para" style="margin-top: 10px;">Difficulty walking or bearing weight on the leg</li>
-                            <li class="s_para" style="margin-top: 10px;">Knee instability or a “slipping” feeling</li>
-                        </ul>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Surgery Options</h3>
-                        <p>At Vasavi Hospitals, ACL Reconstruction Surgery is performed using <b>Arthroscopic techniques</b>. The torn ligament is replaced with a graft (from the patient’s tissue or a donor) through tiny incisions, ensuring quicker recovery and minimal scarring.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Affordable & Insurance-Covered Packages</h3>
-                        <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options, making world-class orthopedic care accessible and stress-free.</p>
-                    </div>
-                </div>
-
+            <div class="header-container">
+                <h2>Know the Signs. Choose the Right Care.</h2>
+                <p>ACL injuries can limit mobility and affect your daily life if left untreated. At Vasavi Hospitals, we
+                    identify the extent of ligament damage and provide safe, advanced surgical care to restore stability
+                    and confidence in your movement.</p>
             </div>
 
-            <div class="form">
-                <app-callback-form  [pageName]="'ACL-reconstruction'"/>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Common Symptoms</h3>
+                    <ul>
+                        <li class="s_para" style="margin-top: 10px;">Sudden pain or a popping sound in the knee during
+                            injury</li>
+                        <li class="s_para" style="margin-top: 10px;">Swelling and stiffness within a few hours</li>
+                        <li class="s_para" style="margin-top: 10px;">Difficulty walking or bearing weight on the leg
+                        </li>
+                        <li class="s_para" style="margin-top: 10px;">Knee instability or a “slipping” feeling</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>Surgery Options</h3>
+                    <p>At Vasavi Hospitals, ACL Reconstruction Surgery is performed using <b>Arthroscopic
+                            techniques</b>. The torn ligament is replaced with a graft (from the patient’s tissue or a
+                        donor) through tiny incisions, ensuring quicker recovery and minimal scarring.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Affordable & Insurance-Covered Packages</h3>
+                    <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options,
+                        making world-class orthopedic care accessible and stress-free.</p>
+                </div>
             </div>
 
         </div>
 
-        <!-- <p class="note-text">
+        <div class="form" id="appointment">
+            <app-callback-form [pageName]="'ACL-reconstruction'" />
+        </div>
+
+    </div>
+
+    <!-- <p class="note-text">
             <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic surgery refers to robotic-assisted surgery.
             It is not performed by robots. All procedures are performed by our skilled surgeons.
         </p> -->
 
-        <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
-    </div>
+    <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
+</div>
 
-    <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
 
-    <!-- <div class="comparison-section" style="margin-top: 30px;">
+<!-- <div class="comparison-section" style="margin-top: 30px;">
         <div class="comparison-header">
             <h2>Robotic (Mako) vs. Conventional Knee Replacement</h2>
             <p>Both techniques offer lasting relief, but the Mako Robotic System enhances precision, reducing pain and
@@ -214,40 +247,46 @@
 
 
 
-    <div class="surgery-timeline-h">
-        <div class="timeline-header-h">
-            <h2>What to Expect During ACL Reconstruction Surgery</h2>
-            <p>Your Step-by-Step Care Journey</p>
+<div class="surgery-timeline-h" id="procedures">
+    <div class="timeline-header-h">
+        <h2>What to Expect During ACL Reconstruction Surgery</h2>
+        <p>Your Step-by-Step Care Journey</p>
+    </div>
+
+    <div class="timeline-container-h">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">1</div>
+            <h3>Consultation & Evaluation</h3>
+            <p>Meet our orthopedic team for a detailed knee examination and imaging tests such as MRI or X-rays. We
+                explain the ligament damage, treatment options, cost and recovery plan before the surgery.</p>
         </div>
 
-        <div class="timeline-container-h">
-            <div class="timeline-step-h">
-                <div class="step-marker-h">1</div>
-                <h3>Consultation & Evaluation</h3>
-                <p>Meet our orthopedic team for a detailed knee examination and imaging tests such as MRI or X-rays. We explain the ligament damage, treatment options, cost and recovery plan before the surgery.</p>
-            </div>
-
-            <div class="timeline-step-h">
-                <div class="step-marker-h">2</div>
-                <h3>Surgery Day</h3>
-                <p>The surgery is done under spinal or general anesthesia using <b>Arthroscopic (keyhole) techniques</b>. The torn ACL is reconstructed using a tendon graft, ensuring precise alignment and stability. The procedure usually takes <b>1-2 hours</b>.</p>
-            </div>
-
-            <div class="timeline-step-h">
-                <div class="step-marker-h">3</div>
-                <h3>Post-Surgery Stay</h3>
-                <p>You’ll stay in the hospital for <b>1-2 days</b> for observation. Our physiotherapists will guide you through gentle exercises to begin early knee movement and prevent stiffness.</p>
-            </div>
-
-            <div class="timeline-step-h">
-                <div class="step-marker-h">4</div>
-                <h3>Recovery & Follow-Up</h3>
-                <p>Most patients can walk with support within a few days. Full recovery and return to sports typically take <b>4-6 months</b>, with regular physiotherapy and follow-up visits ensuring complete knee strength and stability.</p>
-            </div>
+        <div class="timeline-step-h">
+            <div class="step-marker-h">2</div>
+            <h3>Surgery Day</h3>
+            <p>The surgery is done under spinal or general anesthesia using <b>Arthroscopic (keyhole) techniques</b>.
+                The torn ACL is reconstructed using a tendon graft, ensuring precise alignment and stability. The
+                procedure usually takes <b>1-2 hours</b>.</p>
         </div>
 
+        <div class="timeline-step-h">
+            <div class="step-marker-h">3</div>
+            <h3>Post-Surgery Stay</h3>
+            <p>You’ll stay in the hospital for <b>1-2 days</b> for observation. Our physiotherapists will guide you
+                through gentle exercises to begin early knee movement and prevent stiffness.</p>
+        </div>
 
-        <!-- <div class="benefits-section-short">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">4</div>
+            <h3>Recovery & Follow-Up</h3>
+            <p>Most patients can walk with support within a few days. Full recovery and return to sports typically take
+                <b>4-6 months</b>, with regular physiotherapy and follow-up visits ensuring complete knee strength and
+                stability.</p>
+        </div>
+    </div>
+
+
+    <!-- <div class="benefits-section-short">
             <h2>Why Choose Our Laparoscopic Mesh Repair?</h2>
 
             <div class="benefits-bar">
@@ -272,11 +311,11 @@
             <a href="#" class="cta-button-short">Book Your Specialist Consultation Now</a>
         </div> -->
 
-        <!-- <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
+    <!-- <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
         </app-pop-up-form-ads> -->
 
 
-        <!-- <div class="container_2">
+    <!-- <div class="container_2">
             <div class="we_cure_with_care_section">
                 <h2 class="heading">We Cure With Care</h2>
                 <p class="para">Digest comfortably. Move freely. Live confidently. At Vasavi Hospitals, our Robotic
@@ -290,12 +329,12 @@
             </div>
         </div> -->
 
-        
-        
+
+
+</div>
+<div class="popup-overlay" *ngIf="isPopupOpen">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'ACL-reconstructio'"></app-callback-form>
     </div>
-    <div class="popup-overlay" *ngIf="isPopupOpen">
-        <div class="popup-container" (click)="$event.stopPropagation()">
-          <button class="popup-close" (click)="closePopup()">✖</button>
-          <app-callback-form [pageName]="'ACL-reconstructio'"></app-callback-form>
-        </div>
-      </div>
+</div>
