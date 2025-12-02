@@ -856,7 +856,8 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid #e2e8f0;
     margin-top: 30px;
-    margin: 2% 3%
+    margin: 2% 3%;
+   
 }
 
 .carousel-track {
@@ -1413,7 +1414,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 10000;
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -1786,4 +1787,11 @@
     font-style: normal;
     color: #0078d4;
     font-weight: 600;
+}
+
+@media(max-width: 320px){
+     .timeline-header-h h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
 }

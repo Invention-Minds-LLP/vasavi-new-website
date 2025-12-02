@@ -1734,7 +1734,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
+    z-index: 10000;
     animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -1789,5 +1789,11 @@
     to {
         transform: scale(1);
         opacity: 1;
+    }
+}
+@media(max-width: 320px){
+     .timeline-header-h h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
     }
 }
