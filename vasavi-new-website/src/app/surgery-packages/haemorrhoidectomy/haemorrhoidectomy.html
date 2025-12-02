@@ -1,6 +1,6 @@
 <div class="container_1"></div>
 
-    <!-- hero section
+<!-- hero section
     <div class="hero-section">
         <div class="hero_content">
             <h1 class="s_h1">Affordable Appendix Surgery in Bangalore</h1>
@@ -50,125 +50,158 @@
         <app-callback-form  [pageName]="'Appendectomy'"/>
     </div> -->
 
-    <div class="hero-section">
-        <img src="img/packages/piles-banner-desktop.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/piles-banner.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+<div class="hero-section">
+    <img src="img/packages/piles-banner-desktop.png" class="desktop_banner"
+        alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+    <img src="img/packages/piles-banner.png" class="mobile_banner"
+        alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+    <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
+
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+
     </div>
 
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
 
-    <!-- stat section -->
 
-    <section class="stats-section ">
-        <p class="stats-subtitle">
-            Years of Expertise in Advanced Piles Treatment
-        </p>
+<!-- stat section -->
 
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="icon-box yellow">
-                    <i class="fa-solid fa-stethoscope"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>3,500+</h3>
-                    <p> Successful Surgeries Performed</p>
-                </div>
+<section class="stats-section ">
+    <p class="stats-subtitle">
+        Years of Expertise in Advanced Piles Treatment
+    </p>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon-box yellow">
+                <i class="fa-solid fa-stethoscope"></i>
             </div>
-
-            <div class="stat-card">
-                <div class="icon-box pink">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>80-97%</h3>
-                    <p>Success Rate</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="icon-box blue">
-                    <i class="fa-solid fa-bed"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>25+</h3>
-                    <p>Years Experienced Surgeons</p>
-                </div>
+            <div class="stat-content">
+                <h3>3,500+</h3>
+                <p> Successful Surgeries Performed</p>
             </div>
         </div>
-    </section>
+
+        <div class="stat-card">
+            <div class="icon-box pink">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-content">
+                <h3>80-97%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box blue">
+                <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="stat-content">
+                <h3>25+</h3>
+                <p>Years Experienced Surgeons</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
-        <!-- What is hernia -->
-        <section class="what-is-hernia">
-            <div class="what_content_Section">
-                <h1>Affordable Piles Surgery in Bangalore</h1>
-                <h2>What is Piles Surgery (Haemorrhoidectomy)?</h2>
-                <p>Piles are swollen veins in the lower rectum or anus that cause pain, itching or bleeding during bowel movements. When medication and lifestyle changes don’t help, Haemorrhoidectomy - a surgical removal of piles - is recommended for lasting relief.</p>
-                <p>At Vasavi Hospitals, our experienced surgeons perform <span class="bold">Advanced Laser and Conventional Piles Surgery </span>with utmost precision and care. These methods ensure minimal pain, less bleeding and faster recovery, helping you return to normal life comfortably.</p>
-                <p>If you notice bleeding, pain or swelling around the anal region, it’s important to consult our specialists early for accurate diagnosis and safe treatment.
+<!-- What is hernia -->
+<section class="what-is-hernia" id="overview" id="overview">
+    <div class="what_content_Section">
+        <h1>Affordable Piles Surgery in Bangalore</h1>
+        <h2>What is Piles Surgery (Haemorrhoidectomy)?</h2>
+        <p>Piles are lumps in the anal region caused by swollen veins of the anal canal. Patients commonly experience
+            bleeding while passing stools, pain during bowel movements, and difficulty in passing stools. When
+            medication and lifestyle changes don’t help, Haemorrhoidectomy - the surgical removal of piles - is
+            recommended for lasting relief.</p>
+        <p>At Vasavi Hospitals, our experienced surgeons perform <span class="bold">Advanced Laser (Minimally invasive)
+                and Conventional Piles Surgery </span>with utmost precision and care. These methods ensure minimal pain,
+            less bleeding and faster recovery, helping you return to normal life comfortably.</p>
+        <p>If you notice bleeding, pain or swelling around the anal region, it’s important to consult our specialists
+            early for accurate diagnosis and safe treatment.
+        </p>
+    </div>
+    <div class="video">
+        <video autoplay loop muted playsinline>
+            <source src="/img/packages/piles-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
+
+<div class="hernia-section-a" id="symptoms">
+
+    <div class="feature-wrapper">
+
+        <div class="features-grid-content">
+
+            <div class="header-container">
+                <h2>Know the Signs. Choose the Right Care.</h2>
+                <p>Many people delay piles treatment due to embarrassment or fear of surgery. At Vasavi Hospitals, we
+                    provide safe, compassionate and effective solutions that relieve discomfort and prevent recurrence.
                 </p>
             </div>
-            <div class="video">
-                <video autoplay loop muted playsinline>
-                    <source src="/img/packages/piles-video.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
 
-        <div class="hernia-section-a">
-
-            <div class="feature-wrapper">
-    
-                <div class="features-grid-content">
-    
-                    <div class="header-container">
-                        <h2>Know the Signs. Choose the Right Care.</h2>
-                        <p>Many people delay piles treatment due to embarrassment or fear of surgery. At Vasavi Hospitals, we provide safe, compassionate and effective solutions that relieve discomfort and prevent recurrence.</p>
-                    </div>
-    
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <h3>Common Symptoms</h3>
-                            <ul>
-                                <li class="s_para" style="margin-top: 10px;">Bleeding during bowel movements</li>
-                                <li class="s_para" style="margin-top: 10px;">Pain, itching or burning sensation in the anal area</li>
-                                <li class="s_para" style="margin-top: 10px;">Swelling or lump around the anus</li>
-                                <li class="s_para" style="margin-top: 10px;">Mucus discharge or discomfort while sitting</li>
-                            </ul>
-                        </div>
-                        <div class="feature-card">
-                            <h3>Surgery Options</h3>
-                            <p>At Vasavi Hospitals, Piles Surgery is performed using <span class="bold">Laser or Conventional methods</span> depending on your condition. Laser treatment offers quicker healing and minimal discomfort, while conventional surgery ensures complete removal in severe cases.</p>
-                        </div>
-                        <div class="feature-card">
-                            <h3>Affordable & Insurance-Covered Packages</h3>
-                            <p>Transparent, all-inclusive packages starting at affordable cost with cashless insurance options, making advanced surgical care accessible and stress-free</p>
-                        </div>
-                    </div>
-    
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Common Symptoms</h3>
+                    <ul>
+                        <li class="s_para" style="margin-top: 10px;">Bleeding while passing stools</li>
+                        <li class="s_para" style="margin-top: 10px;">Pain while passing stools</li>
+                        <li class="s_para" style="margin-top: 10px;">Swelling or lump around the anus</li>
+                        <li class="s_para" style="margin-top: 10px;">Mucus discharge or discomfort while sitting</li>
+                    </ul>
                 </div>
-    
-                <div class="form">
-                    <app-callback-form  [pageName]="'Haemorrhoidectomy'"/>
+                <div class="feature-card">
+                    <h3>Surgery Options</h3>
+                    <p>At Vasavi Hospitals, Piles Surgery is performed using <span class="bold">Laser or Conventional
+                            methods</span> depending on your condition. Laser treatment offers quicker healing and
+                        minimal discomfort, while conventional surgery ensures complete removal in severe cases.</p>
                 </div>
-    
+                <div class="feature-card">
+                    <h3>Affordable & Insurance-Covered Packages</h3>
+                    <p>Transparent, all-inclusive packages starting at affordable cost with cashless insurance options,
+                        making advanced surgical care accessible and stress-free</p>
+                </div>
             </div>
-    
-            <!-- <p class="note-text">
+
+        </div>
+
+        <div class="form" id="appointment">
+            <app-callback-form [pageName]="'Haemorrhoidectomy'" />
+        </div>
+
+    </div>
+
+    <!-- <p class="note-text">
                 <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic surgery refers to robotic-assisted surgery.
                 It is not performed by robots. All procedures are performed by our skilled surgeons.
             </p> -->
-    
-            <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
-        </div>
-    
-        <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
-    
-    <!-- <div class="hernia-flow-section">
+
+    <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
+</div>
+
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+
+<!-- <div class="hernia-flow-section">
         <div class="section-header">
             <h1>Understanding Appendicitis: Signs & When to Seek Treatment</h1>
             <p>Whether it's the sudden onset or subtle discomfort, recognizing the <span style="font-weight: 800;">symptoms of appendicitis</span> is the first step toward effective treatment. We offer specialized, minimally invasive care for this urgent condition.</p>
@@ -192,8 +225,8 @@
 
     </div> -->
 
-      <!-- comparison -->
-      <!-- <div class="comparison-section" style="margin-top: 30px;">
+<!-- comparison -->
+<!-- <div class="comparison-section" style="margin-top: 30px;">
         <div class="comparison-header">
             <h2>Robotic vs. Laparoscopic  Surgery: What's the Difference?</h2>
             <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
@@ -259,40 +292,46 @@
 
         <a (click)="openPopup()" class="cta-button-comparison">Speak with our specialists today</a>
     </div> -->
-    
-        <div class="surgery-timeline-h">
-            <div class="timeline-header-h">
-                <h2>What to Expect During Piles Surgery (Haemorrhoidectomy)</h2>
-                <p>Your Step-by-Step Care Journey</p>
-            </div>
-        
-            <div class="timeline-container-h">
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">1</div>
-                    <h3>Consultation & Evaluation</h3>
-                    <p>Meet our colorectal specialists for a detailed assessment. We review your symptoms, perform a clinical examination and recommend the best treatment plan based on your condition</p>
-                </div>
-        
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">2</div>
-                    <h3>Surgery Day</h3>
-                    <p>The procedure is performed under local or spinal anesthesia. Using Laser or Conventional methods, the swollen veins are carefully removed or sealed to stop bleeding and pain. The surgery usually takes <span class="bold">30–60 minutes</span>.</p>
-                </div>
-        
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">3</div>
-                    <h3>Post-Surgery Stay</h3>
-                    <p>Most patients stay in the hospital for <span class="bold">1 day</span>. Our team provides dietary guidance, pain management and hygiene tips to ensure a smooth and comfortable recovery.</p>
-                </div>
-        
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">4</div>
-                    <h3>Recovery & Follow-Up</h3>
-                    <p>You can resume normal activities within <span class="bold">3–5 days</span>, depending on the surgery type. Follow-up visits help track healing, manage any discomfort and ensure long-term relief from piles.</p>
-                </div>
-            </div>
+
+<div class="surgery-timeline-h" id="procedures">
+    <div class="timeline-header-h">
+        <h2>What to Expect During Piles Surgery (Haemorrhoidectomy)</h2>
+        <p>Your Step-by-Step Care Journey</p>
+    </div>
+
+    <div class="timeline-container-h">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">1</div>
+            <h3>Consultation & Evaluation</h3>
+            <p>Meet our colorectal specialists for a detailed assessment. We review your symptoms, perform a clinical
+                examination and recommend the best treatment plan based on your condition</p>
         </div>
-        
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">2</div>
+            <h3>Surgery Day</h3>
+            <p>The procedure is performed under local or spinal anesthesia. Using Laser or Conventional methods, the
+                swollen veins are carefully removed or sealed to stop bleeding and pain. The surgery usually takes <span
+                    class="bold">15–30 minutes</span>.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">3</div>
+            <h3>Post-Surgery Stay</h3>
+            <p>Most patients stay in the hospital for <span class="bold">1 day</span>. Our team provides dietary
+                guidance, pain management and hygiene tips to ensure a smooth and comfortable recovery.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">4</div>
+            <h3>Recovery & Follow-Up</h3>
+            <p>You can resume normal activities within <span class="bold">3–5 days</span>, depending on the surgery
+                type. Follow-up visits help track healing, manage any discomfort and ensure long-term relief from piles.
+            </p>
+        </div>
+    </div>
+</div>
+
 
 
 <!-- 
@@ -336,9 +375,9 @@
             </div>
         </div> -->
 
-        <div class="popup-overlay" *ngIf="isPopupOpen">
-            <div class="popup-container" (click)="$event.stopPropagation()">
-              <button class="popup-close" (click)="closePopup()">✖</button>
-              <app-callback-form [pageName]="'Haemorrhoidectomy'"></app-callback-form>
-            </div>
-          </div>
+<div class="popup-overlay" *ngIf="isPopupOpen">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'Haemorrhoidectomy'"></app-callback-form>
+    </div>
+</div>

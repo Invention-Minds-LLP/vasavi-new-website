@@ -1,6 +1,6 @@
 <div class="container_1"></div>
 
-    <!-- hero section
+<!-- hero section
     <div class="hero-section">
         <div class="hero_content">
             <h1 class="s_h1">Affordable Appendix Surgery in Bangalore</h1>
@@ -50,125 +50,161 @@
         <app-callback-form  [pageName]="'Appendectomy'"/>
     </div> -->
 
-    <div class="hero-section">
-        <img src="img/packages/appendix-surgery-desktop.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/appendix-surgery.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+<div class="hero-section">
+    <img src="img/packages/appendix-surgery-desktop.png" class="desktop_banner"
+        alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+    <img src="img/packages/appendix-surgery.png" class="mobile_banner"
+        alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+    <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
+
+
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+
     </div>
 
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
 
-    <!-- stat section -->
 
-    <section class="stats-section ">
-        <p class="stats-subtitle">
-            Years of Expertise in Advanced Appendix Removal Care
+<!-- stat section -->
+
+<section class="stats-section ">
+    <p class="stats-subtitle">
+        Years of Expertise in Advanced Appendix Removal Care
+    </p>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon-box yellow">
+                <i class="fa-solid fa-stethoscope"></i>
+            </div>
+            <div class="stat-content">
+                <h3>10,000+</h3>
+                <p> Successful Surgeries Performed</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box pink">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-content">
+                <h3>80-97%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box blue">
+                <i class="fa-solid fa-bed"></i>
+            </div>
+            <div class="stat-content">
+                <h3>29+</h3>
+                <p>Years Experienced Surgeons</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- What is hernia -->
+<section class="what-is-hernia" id="overview">
+    <div class="what_content_Section">
+        <h1>Affordable Appendix Removal Surgery in Bangalore</h1>
+        <h2>What is Appendix Removal Surgery?</h2>
+        <p>Appendix removal, also known as Appendectomy, is a surgical procedure performed to remove an inflamed or
+            infected appendix - a small pouch located at the lower right side of the abdomen. When the appendix becomes
+            swollen or bursts (a condition called appendicitis), it causes severe abdominal pain and needs immediate
+            treatment.</p>
+        <p>At Vasavi Hospitals, our skilled surgeons perform laparoscopic and robotic-assisted appendectomy to ensure
+            faster healing, smaller incisions and minimal discomfort.</p>
+        <p>If you’re experiencing sharp pain in the lower abdomen, nausea or fever, consult our specialists right away
+            for timely diagnosis and care.
         </p>
+    </div>
+    <div class="video">
+        <video autoplay loop muted playsinline>
+            <source src="/img/packages/appendix-video-2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</section>
 
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="icon-box yellow">
-                    <i class="fa-solid fa-stethoscope"></i>
+<div class="hernia-section-a" id="symptoms">
+
+    <div class="feature-wrapper">
+
+        <div class="features-grid-content">
+
+            <div class="header-container">
+                <h2>Know the Signs. Choose the Right Care.</h2>
+                <p>Many people delay treatment for abdominal pain, assuming it’s temporary. At Vasavi Hospitals, we help
+                    detect appendicitis early and treat it safely through advanced surgical care.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Common Symptoms</h3>
+                    <ul>
+                        <li class="s_para" style="margin-top: 10px;">Sudden pain near the belly button that moves to the
+                            lower right abdomen</li>
+                        <li class="s_para" style="margin-top: 10px;">Nausea or vomiting soon after abdominal pain starts
+                        </li>
+                        <li class="s_para" style="margin-top: 10px;">Fever, loss of appetite or swelling in the abdomen
+                        </li>
+                        <li class="s_para" style="margin-top: 10px;">Pain that worsens while coughing, sneezing or
+                            walking</li>
+                    </ul>
                 </div>
-                <div class="stat-content">
-                    <h3>10,000+</h3>
-                    <p> Successful Surgeries Performed</p>
+                <div class="feature-card">
+                    <h3>Surgery Options</h3>
+                    <p>Appendix removal is performed using <span class="bold">laparoscopic or robotic-assisted
+                            techniques</span>, allowing precise removal with less scarring and faster recovery. Our
+                        surgical team ensures complete safety and comfort throughout your care journey.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Affordable & Insurance-Covered Packages</h3>
+                    <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options
+                        for a smooth, worry-free experience.</p>
                 </div>
             </div>
 
-            <div class="stat-card">
-                <div class="icon-box pink">
-                    <i class="fa-solid fa-heart"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>80-97%</h3>
-                    <p>Success Rate</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="icon-box blue">
-                    <i class="fa-solid fa-bed"></i>
-                </div>
-                <div class="stat-content">
-                    <h3>29+</h3>
-                    <p>Years Experienced Surgeons</p>
-                </div>
-            </div>
         </div>
-    </section>
 
-
-
-        <!-- What is hernia -->
-        <section class="what-is-hernia">
-            <div class="what_content_Section">
-                <h1>Affordable Appendix Removal Surgery in Bangalore</h1>
-                <h2>What is Appendix Removal Surgery?</h2>
-                <p>Appendix removal, also known as Appendectomy, is a surgical procedure performed to remove an inflamed or infected appendix - a small pouch located at the lower right side of the abdomen. When the appendix becomes swollen or bursts (a condition called appendicitis), it causes severe abdominal pain and needs immediate treatment.</p>
-                <p>At Vasavi Hospitals, our skilled surgeons perform laparoscopic and robotic-assisted appendectomy to ensure faster healing, smaller incisions and minimal discomfort.</p>
-                <p>If you’re experiencing sharp pain in the lower abdomen, nausea or fever, consult our specialists right away for timely diagnosis and care.
-                </p>
-            </div>
-            <div class="video">
-                <video autoplay loop muted playsinline>
-                    <source src="/img/packages/appendix-video-2.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </section>
-
-        <div class="hernia-section-a">
-
-            <div class="feature-wrapper">
-    
-                <div class="features-grid-content">
-    
-                    <div class="header-container">
-                        <h2>Know the Signs. Choose the Right Care.</h2>
-                        <p>Many people delay treatment for abdominal pain, assuming it’s temporary. At Vasavi Hospitals, we help detect appendicitis early and treat it safely through advanced surgical care.</p>
-                    </div>
-    
-                    <div class="features-grid">
-                        <div class="feature-card">
-                            <h3>Common Symptoms</h3>
-                            <ul>
-                                <li class="s_para" style="margin-top: 10px;">Sudden pain near the belly button that moves to the lower right abdomen</li>
-                                <li class="s_para" style="margin-top: 10px;">Nausea or vomiting soon after abdominal pain starts</li>
-                                <li class="s_para" style="margin-top: 10px;">Fever, loss of appetite or swelling in the abdomen</li>
-                                <li class="s_para" style="margin-top: 10px;">Pain that worsens while coughing, sneezing or walking</li>
-                            </ul>
-                        </div>
-                        <div class="feature-card">
-                            <h3>Surgery Options</h3>
-                            <p>Appendix removal is performed using <span class="bold">laparoscopic or robotic-assisted techniques</span>, allowing precise removal with less scarring and faster recovery. Our surgical team ensures complete safety and comfort throughout your care journey.</p>
-                        </div>
-                        <div class="feature-card">
-                            <h3>Affordable & Insurance-Covered Packages</h3>
-                            <p>Transparent, all-inclusive packages starting at affordable price with cashless insurance options for a smooth, worry-free experience.</p>
-                        </div>
-                    </div>
-    
-                </div>
-    
-                <div class="form">
-                    <app-callback-form  [pageName]="'Appendectomy'"/>
-                </div>
-    
-            </div>
-    
-            <p class="note-text">
-                <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic surgery refers to robotic-assisted surgery.
-                It is not performed by robots. All procedures are performed by our skilled surgeons.
-            </p>
-    
-            <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
+        <div class="form" id="appointment"> 
+            <app-callback-form [pageName]="'Appendectomy'" />
         </div>
-    
-        <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
-    
-    <!-- <div class="hernia-flow-section">
+
+    </div>
+
+    <p class="note-text">
+        <strong><i class="fa-solid fa-info"></i> Note:</strong> Robotic surgery refers to robotic-assisted surgery.
+        It is not performed by robots. All procedures are performed by our skilled surgeons.
+    </p>
+
+    <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
+</div>
+
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+
+<!-- <div class="hernia-flow-section">
         <div class="section-header">
             <h1>Understanding Appendicitis: Signs & When to Seek Treatment</h1>
             <p>Whether it's the sudden onset or subtle discomfort, recognizing the <span style="font-weight: 800;">symptoms of appendicitis</span> is the first step toward effective treatment. We offer specialized, minimally invasive care for this urgent condition.</p>
@@ -192,106 +228,111 @@
 
     </div> -->
 
-      <!-- comparison -->
-      <div class="comparison-section" style="margin-top: 30px;">
-        <div class="comparison-header">
-            <h2>Robotic vs. Laparoscopic  Surgery: What's the Difference?</h2>
-            <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
-                leading to faster recovery and better patient outcomes compared to traditional laparoscopy.</p>
-        </div>
-
-        <div class="comparison-table">
-            <div class="comparison-column robotic-column">
-                <img src="img/packages/intuitive-davinci-xi-system-lineup-lowres.jpg" alt="Da Vinci Xi Robotic Surgery System" class="comparison-image">
-                <h2>Robotic Surgery (Da Vinci Xi)</h2>
-                <ul>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>3D HD Vision:</strong> Surgeon sees the surgical field in high-definition,
-                            three-dimensional view for unparalleled depth perception.</p>
-                    </li>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Enhanced Dexterity:</strong> Robotic instruments have seven degrees of motion,
-                            mimicking the human wrist, which allows for finer and more precise suturing (stitching).
-                        </p>
-                    </li>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Superior Precision:</strong> Filters out natural hand tremors and allows for more
-                            complex, delicate repairs.</p>
-                    </li>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Reduced Pain & Scarring:</strong> The high precision results in less trauma to
-                            surrounding tissue.</p>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="comparison-column robotic-column">
-                <img src="img/packages/laproscopic.jpg" alt="Laparoscopic Hysterectomy Surgery" class="comparison-image">
-                <h2>Laparoscopic Surgery</h2>
-                <ul>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>2D Vision:</strong> Surgeons view a flat, two-dimensional image, which can limit
-                            depth perception.</p>
-                    </li>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Limited Movement:</strong> Instruments have restricted movement (4 degrees of
-                            motion), making complex suturing more challenging.</p>
-                    </li>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Good Precision:</strong> Excellent compared to open surgery, but lacks the
-                            micro-movements of a robotic system.</p>
-                    </li>
-                    <li class="plus">
-                        <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
-                        <p><strong>Minimal Scarring:</strong> Also offers small incisions, but robotic methods often
-                            allow for even smaller, strategically placed cuts.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <a (click)="openPopup()" class="cta-button-comparison">Speak with our specialists today</a>
+<!-- comparison -->
+<div class="comparison-section" style="margin-top: 30px;" id="surgery">
+    <div class="comparison-header">
+        <h2>Robotic vs. Laparoscopic Surgery: What's the Difference?</h2>
+        <p>While both are minimally invasive, the Da Vinci Xi Robotic System offers superior precision,
+            leading to faster recovery and better patient outcomes compared to traditional laparoscopy.</p>
     </div>
-        <div class="surgery-timeline-h">
-            <div class="timeline-header-h">
-                <h2>What to Expect During Appendix Removal Surgery</h2>
-                <p>Your Step-by-Step Care Journey</p>
-            </div>
-        
-            <div class="timeline-container-h">
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">1</div>
-                    <h3>Consultation & Evaluation</h3>
-                    <p>Our surgical team will examine your symptoms, perform diagnostic scans and confirm if your appendix needs removal. We ensure transparent discussions about treatment, costs and expected recovery.</p>
-                </div>
-        
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">2</div>
-                    <h3>Surgery Day</h3>
-                    <p>The procedure is done under general anesthesia using laparoscopic or robotic methods. It usually takes about 45 minutes to 1 hour and ensures minimal scarring and quick healing.</p>
-                </div>
-        
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">3</div>
-                    <h3>Post-Surgery Stay</h3>
-                    <p>You’ll be kept under observation for 1–2 days. Our doctors will monitor your recovery, provide dietary guidance and explain post-surgery care for a smooth transition home.</p>
-                </div>
-        
-                <div class="timeline-step-h">
-                    <div class="step-marker-h">4</div>
-                    <h3>Recovery & Follow-Up</h3>
-                    <p>Most patients return to normal routines within 1–2 weeks. Follow-up visits help track healing, manage stitches if needed and ensure full recovery without complications.</p>
-                </div>
-            </div>
+
+    <div class="comparison-table">
+        <div class="comparison-column robotic-column">
+            <img src="img/packages/intuitive-davinci-xi-system-lineup-lowres.jpg"
+                alt="Da Vinci Xi Robotic Surgery System" class="comparison-image">
+            <h2>Robotic Surgery (Da Vinci Xi)</h2>
+            <ul>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>3D HD Vision:</strong> Surgeon sees the surgical field in high-definition,
+                        three-dimensional view for unparalleled depth perception.</p>
+                </li>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>Enhanced Dexterity:</strong> Robotic instruments have seven degrees of motion,
+                        mimicking the human wrist, which allows for finer and more precise suturing (stitching).
+                    </p>
+                </li>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>Superior Precision:</strong> Filters out natural hand tremors and allows for more
+                        complex, delicate repairs.</p>
+                </li>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>Reduced Pain & Scarring:</strong> The high precision results in less trauma to
+                        surrounding tissue.</p>
+                </li>
+            </ul>
         </div>
-        
+
+        <div class="comparison-column robotic-column">
+            <img src="img/packages/laproscopic.jpg" alt="Laparoscopic Hysterectomy Surgery" class="comparison-image">
+            <h2>Laparoscopic Surgery</h2>
+            <ul>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>2D Vision:</strong> Surgeons view a flat, two-dimensional image, which can limit
+                        depth perception.</p>
+                </li>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>Limited Movement:</strong> Instruments have restricted movement (4 degrees of
+                        motion), making complex suturing more challenging.</p>
+                </li>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>Good Precision:</strong> Excellent compared to open surgery, but lacks the
+                        micro-movements of a robotic system.</p>
+                </li>
+                <li class="plus">
+                    <span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
+                    <p><strong>Minimal Scarring:</strong> Also offers small incisions, but robotic methods often
+                        allow for even smaller, strategically placed cuts.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <a (click)="openPopup()" class="cta-button-comparison">Speak with our specialists today</a>
+</div>
+<div class="surgery-timeline-h" id="procedures">
+    <div class="timeline-header-h">
+        <h2>What to Expect During Appendix Removal Surgery</h2>
+        <p>Your Step-by-Step Care Journey</p>
+    </div>
+
+    <div class="timeline-container-h">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">1</div>
+            <h3>Consultation & Evaluation</h3>
+            <p>Our surgical team will examine your symptoms, perform diagnostic scans and confirm if your appendix needs
+                removal. We ensure transparent discussions about treatment, costs and expected recovery.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">2</div>
+            <h3>Surgery Day</h3>
+            <p>The procedure is done under general anesthesia using laparoscopic or robotic methods. It usually takes
+                about 45 minutes to 1 hour and ensures minimal scarring and quick healing.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">3</div>
+            <h3>Post-Surgery Stay</h3>
+            <p>You’ll be kept under observation for 1–2 days. Our doctors will monitor your recovery, provide dietary
+                guidance and explain post-surgery care for a smooth transition home.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">4</div>
+            <h3>Recovery & Follow-Up</h3>
+            <p>Most patients return to normal routines within 1–2 weeks. Follow-up visits help track healing, manage
+                stitches if needed and ensure full recovery without complications.</p>
+        </div>
+    </div>
+</div>
+
 
 
 <!-- 
@@ -335,9 +376,9 @@
             </div>
         </div> -->
 
-        <div class="popup-overlay" *ngIf="isPopupOpen">
-            <div class="popup-container" (click)="$event.stopPropagation()">
-              <button class="popup-close" (click)="closePopup()">✖</button>
-              <app-callback-form [pageName]="'Appendectomy'"></app-callback-form>
-            </div>
-          </div>
+<div class="popup-overlay" *ngIf="isPopupOpen">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'Appendectomy'"></app-callback-form>
+    </div>
+</div>

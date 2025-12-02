@@ -53,6 +53,28 @@
         <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
     </div>
 
+    <!-- navs -->
+    <div class="carousel-container sticky-top">
+        <div class="carousel-track" id="carouselTrack" #carouselTrack>
+            <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+                (click)="scrollToSection(section.id)">
+                {{ section.name }}
+            </a>
+
+        </div>
+
+        <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+        </button>
+        <button class="carousel-btn next" id="nextBtn" #nextBtn>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </button>
+    </div>
+
     <!-- stat section -->
 
     <section class="stats-section stat-desktop">
@@ -124,7 +146,7 @@
 
 
     <!-- What is hernia -->
-    <section class="what-is-hernia">
+    <section class="what-is-hernia" id="overview">
         <div class="what_content_Section">
             <h1>Affordable Knee Replacement Surgery in Bangalore</h1>
             <h2>What is Total Knee Replacement?</h2>
@@ -146,7 +168,7 @@
 
 
     <!--  -->
-    <div class="hernia-section-a">
+    <div class="hernia-section-a" id="symptoms">
 
         <div class="feature-wrapper">
 
@@ -176,14 +198,15 @@
                     </div>
                     <div class="feature-card">
                         <h3>Affordable & Insurance-Covered Packages</h3>
-                        <p>Transparent pricing starting at affordable price with cashless insurance options for a smooth,
+                        <p>Transparent pricing starting at affordable price with cashless insurance options for a
+                            smooth,
                             worry-free experience.</p>
                     </div>
                 </div>
 
             </div>
 
-            <div class="form">
+            <div class="form" id="appointment">
                 <app-callback-form [pageName]="'TKR'"></app-callback-form>
             </div>
 
@@ -199,7 +222,7 @@
 
     <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
 
-    <div class="comparison-section" style="margin-top: 30px;">
+    <div class="comparison-section" style="margin-top: 30px;" id="surgery">
         <div class="comparison-header">
             <h2>Robotic (Mako) vs. Conventional Knee Replacement</h2>
             <p>Both techniques offer lasting relief, but the Mako Robotic System enhances precision, reducing pain and
@@ -231,8 +254,8 @@
             </div>
 
             <div class="comparison-column robotic-column">
-                <img src="img/packages/conventional-knee-replacement.jpg" alt="Conventional Total Knee Replacement Surgery"
-                    class="comparison-image">
+                <img src="img/packages/conventional-knee-replacement.jpg"
+                    alt="Conventional Total Knee Replacement Surgery" class="comparison-image">
                 <h2>Conventional Knee Replacement</h2>
                 <ul>
                     <li class="plus"><span class="icon-indicator"><i class="fa-solid fa-angles-right"></i></span>
@@ -257,7 +280,7 @@
         <button class="cta-button-comparison" (click)="openPopup()">Consult Our Orthopedic Specialists</button>
     </div>
 
-    <div class="surgery-timeline-h">
+    <div class="surgery-timeline-h" id="procedures">
         <div class="timeline-header-h">
             <h2>What to Expect During Hernia Surgery</h2>
             <p>Your Step-by-Step Care Journey</p>
@@ -292,7 +315,7 @@
                     activities faster with better mobility scores.</p>
             </div>
         </div>
-<!-- 
+        <!-- 
         <app-pop-up-form-ads [isOpen]="isPopupOpen" (onClose)="closePopup()" (onSubmit)="handleFormSubmit($event)">
         </app-pop-up-form-ads> -->
     </div>
@@ -345,9 +368,8 @@
 </div>
 
 <div class="popup-overlay" *ngIf="isPopupOpen">
-  <div class="popup-container" (click)="$event.stopPropagation()">
-    <button class="popup-close" (click)="closePopup()">✖</button>
-    <app-callback-form [pageName]="'TKR'"></app-callback-form>
-  </div>
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'TKR'"></app-callback-form>
+    </div>
 </div>
-

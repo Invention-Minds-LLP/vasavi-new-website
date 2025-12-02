@@ -50,17 +50,38 @@
         <app-callback-form  [pageName]="'Appendectomy'"/>
     </div> -->
 
-     <div class="hero-section">
-        <img src="img/packages/Prostate.png" class="desktop_banner"
-            alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
-        <img src="img/packages/Prostate_mobile.png" class="mobile_banner"
-            alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
-        <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+<div class="hero-section">
+    <img src="img/packages/Prostate.png" class="desktop_banner"
+        alt="Cancer patient with headscarf smiling at Vasavi Hospital oncology care">
+    <img src="img/packages/Prostate_mobile.png" class="mobile_banner"
+        alt="Comprehensive oncology care in Bangalore with advanced cancer treatments and expert oncologists">
+    <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
+
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+
     </div>
 
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
 
 <!-- stat section -->
- 
+
 
 <section class="stats-section ">
     <p class="stats-subtitle">
@@ -103,17 +124,22 @@
 
 
 <!-- What is hernia -->
-<section class="what-is-hernia">
+<section class="what-is-hernia" id="overview">
     <div class="what_content_Section">
         <h1>Affordable Prostate Removal (TURP) Surgery in Bangalore</h1>
         <h2>What is Prostate Removal (TURP) Surgery?</h2>
-        <p>Prostate removal, known as <span class="bold">TURP (Transurethral Resection of the Prostate)</span>, is a common surgery performed to
-            treat <span class="bold">Benign Prostatic Hyperplasia (BPH)</span> - a condition where the prostate gland becomes enlarged and blocks
+        <p>Prostate removal, known as <span class="bold">TURP (Transurethral Resection of the Prostate)</span>, is a
+            common surgery performed to
+            treat <span class="bold">Benign Prostatic Hyperplasia (BPH)</span> - a condition where the prostate gland
+            becomes enlarged and blocks
             urine flow.</p>
-        <p>During the procedure, a special instrument called a <span class="bold">resectoscope</span> is passed through the urethra to remove
-            excess prostate tissue, improving urine flow and relieving symptoms. There are <span class="bold">no external cuts or stitches</span>,
+        <p>During the procedure, a special instrument called a <span class="bold">resectoscope</span> is passed through
+            the urethra to remove
+            excess prostate tissue, improving urine flow and relieving symptoms. There are <span class="bold">no
+                external cuts or stitches</span>,
             making it a safe and effective treatment for urinary problems caused by an enlarged prostate.</p>
-        <p>At <span class="bold">Vasavi Hospitals</span>, our expert urologists perform TURP with precision, ensuring faster recovery, minimal
+        <p>At <span class="bold">Vasavi Hospitals</span>, our expert urologists perform TURP with precision, ensuring
+            faster recovery, minimal
             discomfort and long-term relief.</p>
         <p>If you experience frequent urination, weak urine flow or difficulty emptying your bladder, consult our
             specialists for an accurate diagnosis and appropriate care.
@@ -127,7 +153,7 @@
     </div>
 </section>
 
-<div class="hernia-section-a">
+<div class="hernia-section-a" id="symptoms">
 
     <div class="feature-wrapper">
 
@@ -135,7 +161,9 @@
 
             <div class="header-container">
                 <h2>Know the Signs. Choose the Right Care.</h2>
-                <p>Prostate enlargement is common as men age but can lead to serious urinary problems if left untreated. At <span class="bold">Vasavi Hospitals</span>, we help you manage the condition effectively and restore normal urinary function.</p>
+                <p>Prostate enlargement is common as men age but can lead to serious urinary problems if left untreated.
+                    At <span class="bold">Vasavi Hospitals</span>, we help you manage the condition effectively and
+                    restore normal urinary function.</p>
             </div>
 
             <div class="features-grid">
@@ -147,23 +175,27 @@
                         </li>
                         <li class="s_para" style="margin-top: 10px;">Difficulty starting or stopping urination
                         </li>
-                        <li class="s_para" style="margin-top: 10px;">Feeling that the bladder doesn’t empty completely</li>
+                        <li class="s_para" style="margin-top: 10px;">Feeling that the bladder doesn’t empty completely
+                        </li>
                         <li class="s_para" style="margin-top: 10px;">Discomfort or burning while urinating</li>
                     </ul>
                 </div>
                 <div class="feature-card">
                     <h3>Surgery Options</h3>
-                    <p>At Vasavi Hospitals, <span class="bold">Prostate Removal (TURP) Surgery</span> is performed through the urethra using advanced resection techniques. The procedure is minimally invasive, involves no external cuts and offers quick recovery with excellent results.</p>
+                    <p>At Vasavi Hospitals, <span class="bold">Prostate Removal (TURP) Surgery</span> is performed
+                        through the urethra using advanced resection techniques. The procedure is minimally invasive,
+                        involves no external cuts and offers quick recovery with excellent results.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Affordable & Insurance-Covered Packages</h3>
-                    <p>Transparent, all-inclusive packages starting at affordable cost (includes instruments), with <span>cashless insurance</span> options for a smooth and stress-free experience.</p>
+                    <p>Transparent, all-inclusive packages starting at affordable cost (includes instruments), with
+                        <span>cashless insurance</span> options for a smooth and stress-free experience.</p>
                 </div>
             </div>
 
         </div>
 
-        <div class="form">
+        <div class="form" id="appointment">
             <app-callback-form [pageName]="'TURP'" />
         </div>
 
@@ -272,7 +304,7 @@
     <a (click)="openPopup()" class="cta-button-comparison">Speak with our specialists today</a>
 </div> -->
 
-<div class="surgery-timeline-h">
+<div class="surgery-timeline-h" id="procedures">
     <div class="timeline-header-h">
         <h2>What to Expect During Prostate Removal (TURP) Surgery</h2>
         <p>Your Step-by-Step Care Journey</p>
@@ -282,25 +314,32 @@
         <div class="timeline-step-h">
             <div class="step-marker-h">1</div>
             <h3>Consultation & Evaluation</h3>
-            <p>Meet our urology team for a complete evaluation, including urine flow tests, ultrasound and PSA levels. We explain the condition, procedure and recovery process in detail before proceeding.</p>
+            <p>Meet our urology team for a complete evaluation, including urine flow tests, ultrasound and PSA levels.
+                We explain the condition, procedure and recovery process in detail before proceeding.</p>
         </div>
 
         <div class="timeline-step-h">
             <div class="step-marker-h">2</div>
             <h3>Surgery Day</h3>
-            <p>The surgery is performed under spinal or general anesthesia. Using a <span class="bold">resectoscope inserted through the urethra</span>, the enlarged prostate tissue is carefully removed. The procedure takes about <span class="bold">60–90 minutes</span> and leaves <span class="bold">no external scars.</span></p>
+            <p>The surgery is performed under spinal or general anesthesia. Using a <span class="bold">resectoscope
+                    inserted through the urethra</span>, the enlarged prostate tissue is carefully removed. The
+                procedure takes about <span class="bold">60–90 minutes</span> and leaves <span class="bold">no external
+                    scars.</span></p>
         </div>
 
         <div class="timeline-step-h">
             <div class="step-marker-h">3</div>
             <h3>Post-Surgery Stay</h3>
-            <p>You’ll stay in the hospital for <span class="bold">2-3 days</span> for observation. A catheter is placed temporarily to help drain urine while the area heals. Our team ensures your comfort and provides clear instructions for recovery.</p>
+            <p>You’ll stay in the hospital for <span class="bold">2-3 days</span> for observation. A catheter is placed
+                temporarily to help drain urine while the area heals. Our team ensures your comfort and provides clear
+                instructions for recovery.</p>
         </div>
 
         <div class="timeline-step-h">
             <div class="step-marker-h">4</div>
             <h3>Recovery & Follow-Up</h3>
-            <p>Most patients resume normal routines within 2-3 weeks. Follow-up visits help monitor healing, check urine flow and ensure long-lasting comfort and relief.</p>
+            <p>Most patients resume normal routines within 2-3 weeks. Follow-up visits help monitor healing, check urine
+                flow and ensure long-lasting comfort and relief.</p>
         </div>
     </div>
 </div>

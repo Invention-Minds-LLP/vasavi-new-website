@@ -245,7 +245,7 @@ export class DoctorsPage {
     },
     {
       name: "Dr. Naneboena Sunitha",
-      img: "/img/new-doctor-image/dummy-female.png",
+      img: "/img/new-doctor-image/dr-naneboena-sunitha-sq.png",
       alt: "Dr Naneboena Sunitha - Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
       experience: "26+",
       department: "Nutrition & Dietetics",

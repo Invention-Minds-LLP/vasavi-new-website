@@ -296,13 +296,13 @@ export class Home {
 
   ngAfterViewInit() {
     // Wait for the view to render, then show the modal after custom delay
-    setTimeout(() => {
-      const modalElement = document.getElementById('enquire');
-      if (modalElement) {
-        const modal = new bootstrap.Modal(modalElement);
-        modal.show();
-      }
-    }, this.modalDelay);
+    // setTimeout(() => {
+    //   const modalElement = document.getElementById('enquire');
+    //   if (modalElement) {
+    //     const modal = new bootstrap.Modal(modalElement);
+    //     modal.show();
+    //   }
+    // }, this.modalDelay);
   }
 
   bookAppointment() {
