@@ -166,7 +166,7 @@ export class Home {
       name: "Dr. Ramesh T S",
       img: "/img/new-doctor-image/dr-ramesh-t-s-sq.png",
       alt: "Best General Surgeon in Bangalore | Dr. Ramesh T S",
-      experience: "29+",
+      experience: "30+",
       department: "General Surgery",
       slug:'/dr-ramesh-t-s'
     },

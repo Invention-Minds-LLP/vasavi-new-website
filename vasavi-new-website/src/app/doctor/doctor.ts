@@ -934,36 +934,36 @@ export class Doctor {
       ]
     },
     {
-  "id": 21,
-  "name": "Dr. Revathi Natesan",
-  "image": "/img/new-doctor-image/dr-revathi-natesan.png",
-  "alt": "Dr. Revathi Natesan | Endodontist | Vasavi Hospitals Bangalore",
-  "areasOfExpertise": [
-    { "icon": "fas fa-tooth", "expertise": "Preventive Dentistry" },
-    { "icon": "fas fa-teeth", "expertise": "Caries Management" },
-    { "icon": "fas fa-tooth", "expertise": "Dental Fillings" },
-    { "icon": "fas fa-teeth", "expertise": "Inlays" },
-    { "icon": "fas fa-syringe", "expertise": "Pulpectomy" },
-    { "icon": "fas fa-syringe", "expertise": "Pulpotomy" },
-    { "icon": "fas fa-tooth", "expertise": "Root Canal Treatment" },
-    { "icon": "fas fa-smile", "expertise": "Esthetic Dentistry" },
-    { "icon": "fas fa-crown", "expertise": "Dental Crowns" },
-    { "icon": "fas fa-bridge", "expertise": "Bridges" },
-    { "icon": "fas fa-tooth", "expertise": "Post & Core" },
-    { "icon": "fas fa-stethoscope", "expertise": "Minimally Invasive Dentistry" },
-    { "icon": "fas fa-user-md", "expertise": "General Dentistry" }
-  ],
-  "title": "Dr. Revathi Natesan | Endodontist at Vasavi Hospitals",
-  "description": "Dr. Revathi Natesan is an experienced Endodontist at Vasavi Hospitals with 15+ years of expertise in preventive dentistry, root canal treatment, and aesthetic dentistry. Specialist in minimally invasive dental procedures and comprehensive oral care.",
-  "briefProfile": "An Endodontist that believes in the preventive, minimally invasive and integrated approaches for treating conditions of the oral cavity. Dedicated to providing comprehensive dental care with a focus on patient comfort and long-term oral health.",
-  "qualification": "Masters in Conservative Dentistry and Endodontics",
-  "department": "Dentistry",
-  "experience": "15+",
-  "designation": "Consultant Endodontist",
-  "awards": [],
-  "professionalAffilications": [],
-  "publications": []
-},
+      "id": 21,
+      "name": "Dr. Revathi Natesan",
+      "image": "/img/new-doctor-image/dr-revathi-natesan.png",
+      "alt": "Dr. Revathi Natesan | Endodontist | Vasavi Hospitals Bangalore",
+      "areasOfExpertise": [
+        { "icon": "fas fa-tooth", "expertise": "Preventive Dentistry" },
+        { "icon": "fas fa-teeth", "expertise": "Caries Management" },
+        { "icon": "fas fa-tooth", "expertise": "Dental Fillings" },
+        { "icon": "fas fa-teeth", "expertise": "Inlays" },
+        { "icon": "fas fa-syringe", "expertise": "Pulpectomy" },
+        { "icon": "fas fa-syringe", "expertise": "Pulpotomy" },
+        { "icon": "fas fa-tooth", "expertise": "Root Canal Treatment" },
+        { "icon": "fas fa-smile", "expertise": "Esthetic Dentistry" },
+        { "icon": "fas fa-crown", "expertise": "Dental Crowns" },
+        { "icon": "fas fa-bridge", "expertise": "Bridges" },
+        { "icon": "fas fa-tooth", "expertise": "Post & Core" },
+        { "icon": "fas fa-stethoscope", "expertise": "Minimally Invasive Dentistry" },
+        { "icon": "fas fa-user-md", "expertise": "General Dentistry" }
+      ],
+      "title": "Dr. Revathi Natesan | Endodontist at Vasavi Hospitals",
+      "description": "Dr. Revathi Natesan is an experienced Endodontist at Vasavi Hospitals with 15+ years of expertise in preventive dentistry, root canal treatment, and aesthetic dentistry. Specialist in minimally invasive dental procedures and comprehensive oral care.",
+      "briefProfile": "An Endodontist that believes in the preventive, minimally invasive and integrated approaches for treating conditions of the oral cavity. Dedicated to providing comprehensive dental care with a focus on patient comfort and long-term oral health.",
+      "qualification": "Masters in Conservative Dentistry and Endodontics",
+      "department": "Dentistry",
+      "experience": "15+",
+      "designation": "Consultant Endodontist",
+      "awards": [],
+      "professionalAffilications": [],
+      "publications": []
+    },
     // {
     //   id: 20,
     //   name: "",
@@ -997,10 +997,10 @@ export class Doctor {
     //     // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
     //   ],
     //   publications: [
-        
+
     //   ]
     // },
-     {
+    {
       id: 22,
       name: "Dr. Ramesh T. S",
       image: "/img/new-doctor-image/dr-ramesh-t-s.png",
@@ -1020,8 +1020,8 @@ export class Doctor {
       briefProfile: "Dr. Ramesh T. S is a highly skilled and experienced Consultant in Minimal Access Surgery at Vasavi Hospitals. With a strong academic background and extensive surgical experience, he is recognized for his expertise in laparoscopic procedures involving the abdomen and non-cardiac thoracic region, with a special focus on laser anorectal surgeries. Dr. Ramesh completed his MBBS from Jagadguru Jayadeva Murugarajendra Medical College (JJMMC) in 1996, followed by DNB in General Surgery from the National Board of Examinations, New Delhi, in 2005. In the same year, he earned his MRCS (UK) from the University of Edinburgh. To further strengthen his proficiency in minimally invasive techniques, he has also obtained FMAS (Fellowship in Minimal Access Surgery) and FICS (Fellowship of the International College of Surgeons).",
       qualification: "MBBS, DNB (General Surgery), MRCS (Edinburgh, U.K.), FMAS,  FAIS",
       department: "Accredited Robotic Surgeon of Edinburgh",
-      experience: "29+",
-      designation: "Consultant - General & Minimally Invasive Surgery",
+      experience: "30+",
+      designation: "Sr. Consultant - General & Minimally Invasive Surgery",
       awards: [
         // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
         // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
@@ -1042,7 +1042,7 @@ export class Doctor {
 
       ]
     },
-     {
+    {
       id: 23,
       name: "Dr. Yashaswi Srikakula",
       image: "/img/new-doctor-image/dr-yashasvi.png",
@@ -1084,9 +1084,53 @@ export class Doctor {
         "All India journal publications"
       ]
     },
+
+    {
+      id: 24,
+      name: "Dr. Rupendu T",
+      image: "/img/new-doctor-image/dr-rupendu-t.png",
+      alt: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
+      areasOfExpertise: [
+        { icon: "", expertise: "Joint Replacement Surgery (Hip, Knee)" },
+        { icon: "", expertise: "ACL & PCL Reconstruction" },
+        { icon: "", expertise: "Hip Resurfacing" },
+        { icon: "", expertise: "Fracture Management" },
+        { icon: "", expertise: "Spine Disorders" },
+        { icon: "", expertise: "Arthritis Treatment" },
+        { icon: "", expertise: "Sports Injuries" },
+        { icon: "", expertise: "Shoulder Dislocation" },
+        { icon: "", expertise: "Bone Tumors" },
+        { icon: "", expertise: "Knee Braces & Pain Management" },
+        { icon: "", expertise: "Nerve and Muscle Disorders" },
+      ],
+      title: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
+      description: "Dr. Rupendu T is an experienced orthopaedic surgeon specializing in advanced bone, joint, and musculoskeletal treatments. His expertise includes fracture management, joint replacement surgeries, sports injuries, and minimally invasive orthopaedic procedures.",
+      briefProfile: "Dr. Rupendu Thongavalen is a highly experienced Orthopedic Surgeon with over 45 years of overall experience, including 38 years as a specialist. He completed his MBBS from Bangalore Medical College and Research Institute in 1979 and his MS in Orthopedics from Bangalore University in 1987. Known for his expertise, compassion, and patient-centric approach, Dr. Thongavalen currently practices at Shanti Hospital and Research Clinic & Trauma & Joint Clinic in Jayanagar, Bangalore. He specializes in advanced orthopedic care, including joint replacements, spine surgeries, fracture management, arthritis treatment, and sports injury management. Patients can trust him for comprehensive and personalized orthopedic care, backed by decades of experience and a commitment to improving mobility and quality of life.",
+      qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
+      // department: "Accredited Robotic Surgeon of Edinburgh",
+      experience: "45+",
+      designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+        { image: "/img/affiliations/KMC (2).jpg", icon: "fas fa-user-md card-icon", paHeading: "KMC", paDescription: "Karnataka Medical Council" },
+        { image: "/img/affiliations/IMA.png", icon: "fas fa-user-md card-icon", paHeading: "IMA", paDescription: "Indian Medical Association" },
+        // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+      ],
+      publications: []
+    },
   ];
 
-  
+
 
 
   onDateChange(event: any) {

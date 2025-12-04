@@ -62,7 +62,7 @@ export class DoctorsPage {
       name: "Dr. Ramesh T. S",
       img: "/img/new-doctor-image/dr-ramesh-t-s.png",
       alt: "Dr. Ramesh T. S | General Surgeon at Vasavi Hospital Bangalore",
-      experience: "29+",
+      experience: "30+",
       department: "Accredited Robotic Surgeon of Edinburgh",
       slug: "/dr-ramesh-t-s"
     },

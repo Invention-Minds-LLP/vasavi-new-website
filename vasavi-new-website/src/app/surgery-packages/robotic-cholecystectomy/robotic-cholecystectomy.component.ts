@@ -73,9 +73,9 @@ export class RoboticCholecystectomyComponent {
   doctors: any = [
     {
       name : "Dr. Ramesh T S",
-      img : "img/Doctor-img/MINIMALLY INVASIVE SURGERY/Dr.Ramesh T S.jpg",
+      img : "img/new-doctor-image/dr-ramesh-t-s-sq.png",
       alt : "Best General Surgeon in Bangalore | Dr. Ramesh T S",
-      experience : "29+",
+      experience : "30+",
       department : "Robotic & Minimally Invasive Surgery",
       slug:'/dr-ramesh-t-s'
     },
