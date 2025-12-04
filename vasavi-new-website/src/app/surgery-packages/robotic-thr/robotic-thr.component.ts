@@ -57,10 +57,10 @@ export class RoboticThrComponent {
       name: "Dr. Rupendu T",
       img: "img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png",
       alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
-      experience: "40+",
+      experience: "45+",
       department: "Sr. Consultant Orthopaedic Surgeon",
       // qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
-      // slug: "/dr-srivatsa-subramanya"
+      slug: "/dr-rupendu-t"
     },
     {
       name: 'Dr. Srivatsa Subramanya',
