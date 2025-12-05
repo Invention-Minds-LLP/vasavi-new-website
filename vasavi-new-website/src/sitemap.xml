@@ -371,6 +371,11 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.vasavihospitals.com/doctors/dr-rupendu-t</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.vasavihospitals.com/blog/2025/09/12/what-is-robotic-surgery-in-gynecology</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
