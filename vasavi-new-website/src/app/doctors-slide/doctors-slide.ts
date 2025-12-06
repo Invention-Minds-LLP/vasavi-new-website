@@ -5,7 +5,7 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-doctors-slide',
-  imports: [CommonModule, RouterModule,CarouselModule],
+  imports: [CommonModule, RouterModule, CarouselModule],
   templateUrl: './doctors-slide.html',
   styleUrl: './doctors-slide.css'
 })
@@ -15,15 +15,20 @@ export class DoctorsSlide {
   carouselOptions: OwlOptions = {
     loop: true,
     margin: 20,
-    nav: false,
+    nav: true,
     dots: false,
     autoplay: true,
     autoplayTimeout: 3000,
     smartSpeed: 700,
+    navText: [
+      '<i class="fa fa-chevron-left"></i>',   
+      '<i class="fa fa-chevron-right"></i>'   
+    ],
     responsive: {
       0: { items: 1 },
       600: { items: 2 },
       1000: { items: 4 }
     }
   };
+
 }
