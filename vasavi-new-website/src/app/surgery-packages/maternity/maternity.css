@@ -54,7 +54,7 @@
     transition: all 0.3s ease;
     position: absolute;
     z-index: 10;
-    left: 13%;
+    left: 16%;
     /* bottom: 0; */
     top: 96%;
     margin-top: -60px;
@@ -257,6 +257,12 @@
     box-shadow: 20px 10px 50px rgba(0, 0, 0, 0.505);
 }
 
+.video img{
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
 .icon-box {
     width: 55px;
     height: 55px;
@@ -416,8 +422,8 @@
 
 @media(max-width:1024px) {
     .book-btn {
-        left: 10%;
-        top: 98%;
+        left: 13%;
+        top: 99%;
     }
 }
 
@@ -434,7 +440,7 @@
     }
 
     .book-btn {
-        left: 11%;
+        left: 13%;
         top: 105%;
         padding: 8px 12px;
         font-size: 14px;
@@ -855,6 +861,7 @@
     border: 1px solid #e2e8f0;
     margin-top: 30px;
     margin: 2% 3%;
+
 }
 
 .carousel-track {
@@ -1044,7 +1051,7 @@
     }
 
     .book-btn {
-        left: 20%;
+        left: 23%;
         top: 100%;
         font-size: 16px;
     }
@@ -1149,6 +1156,10 @@
         width: 300px;
     }
 
+    .video img {
+        width: 300px;
+    }
+
     .what-is-hernia {
         gap: 20px;
     }
@@ -1179,6 +1190,13 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
+    }
+}
+
+@media(max-width: 320px){
+     .timeline-header-h h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
     }
 }
 
@@ -1436,13 +1454,24 @@
     border-radius: 10px;
     max-width: 500px;
     width: 90%;
-    /* padding: 30px 20px; */
-    /* box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
+    /* padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
     position: relative;
     animation: scaleIn 0.25s ease-in-out;
 }
 
 /* Close button */
+/* .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s;
+  } */
 .popup-close {
     position: absolute;
     top: 58px;
@@ -1456,6 +1485,9 @@
     font-weight: 800;
 }
 
+/* .popup-close:hover {
+    color: #000;
+  } */
 
 
 /* Responsive adjustments for the comparison table */
@@ -1772,39 +1804,4 @@
     .stat-content {
         width: 65%;
     }
-}
-
-@media(max-width: 320px){
-     .timeline-header-h h2 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-    }
-}
-
-
-.popup-content {
-    position: relative;
-    field-sizing: flex;
-    justify-content: center;
-}
-
-@media (max-width : 500px) {
-    .popup-content {
-        width: 90%;
-    }
-}
-
-.close-btn {
-  position: absolute;
-  top: -12px;
-  right: -12px;
-  background: red;
-  color: white;
-  border: none;
-  font-size: 20px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }

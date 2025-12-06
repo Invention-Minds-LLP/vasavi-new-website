@@ -1,0 +1,200 @@
+<div class="container_1"></div>
+
+<div class="hero-section">
+    <img src="img/packages/maternity-banner-desktop.png" class="desktop_banner"
+        alt="Maternity care and pregnancy services banner at Vasavi Hospital">
+    <img src="img/packages/maternity-banner.png" class="mobile_banner"
+        alt="Maternity care and pregnancy services banner at Vasavi Hospital">
+    <button class="book-btn" (click)="openPopup()">Book an Appointment</button>
+</div>
+
+<!-- navs -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+    </div>
+
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
+
+<!-- stat section -->
+<section class="stats-section">
+    <p class="stats-subtitle">
+        Years of Expertise in Maternity Care
+    </p>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="icon-box yellow">
+                <i class="fa-solid fa-baby"></i>
+            </div>
+            <div class="stat-content">
+                <h3>3,000+</h3>
+                <p>Successful Deliveries Performed</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box pink">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="stat-content">
+                <h3>70-90%</h3>
+                <p>Success Rate</p>
+            </div>
+        </div>
+
+        <div class="stat-card">
+            <div class="icon-box blue">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div class="stat-content">
+                <h3>15+</h3>
+                <p>Years Experienced Obstetricians</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is maternity -->
+<section class="what-is-hernia" id="overview">
+    <div class="what_content_Section">
+        <h1>Trusted Maternity Care With Expert Doctors</h1>
+        <h2>Your Complete Pregnancy & Delivery Care Partner</h2>
+        <p>Becoming a mother is a life-changing journey - and having the right maternity hospital by your side makes all the difference. At our maternity hospital in Bangalore, we provide complete pregnancy and baby-delivery care with compassion, safety, and unwavering support at every step.</p>
+        <p>With <span class="bold">15+ years of experienced obstetricians</span>, our team ensures the highest standards of care, whether you're planning a Normal Delivery, Vaginal Delivery, or a C-Section Delivery. Our specialists are consistently recognized among the top 10 best gynecology doctors in Bangalore, making us a trusted choice for families searching for the best maternity hospital near me.</p>
+        <p>We believe every mother deserves premium care at an affordable price - transparent, ethical, and designed to provide the best experience without compromising on quality, safety, or comfort.</p>
+    </div>
+    <div class="video">
+        <!-- <video autoplay loop muted playsinline>
+            <source src="/img/packages/maternity-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video> -->
+        <img src="img/packages/prenent-women-getting-consultation-at-vasavi-hospitals.jpg" alt="Pregnent women getting consultation at vasavi hospitals">
+    </div>
+</section>
+
+<div class="hernia-section-a" id="services">
+    <div class="feature-wrapper">
+        <div class="features-grid-content">
+            <div class="header-container">
+                <h2>Why Choose Our Maternity Care</h2>
+                <p>From your first antenatal visit to bringing your baby home, we're with you every step of the way with expert care, advanced facilities, and compassionate support.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Complete Pregnancy Care</h3>
+                    <p>From your first antenatal visit to postnatal recovery, we offer full maternity support - including regular checkups, pregnancy scans, counselling and 24/7 doctor availability for your safety.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Experienced Maternity Team</h3>
+                    <p>Led by <span class="bold">15+ years experienced Obstetricians & Gynecologists</span>, our team is skilled in Normal Delivery, C-Section, Painless Delivery, and High-risk Pregnancy care, ensuring safe and personalised maternity support.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Premium Care at an Affordable Price</h3>
+                    <p>Receive world-class maternity services with transparent pricing, cashless insurance options, and thoughtfully designed packages that make your experience comfortable and stress-free.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form" id="appointment">
+            <app-callback-form [pageName]="'Maternity Care'" />
+        </div>
+    </div>
+
+    <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
+</div>
+
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+
+<div class="hernia-section-a" id="why-choose">
+    <div class="header-container">
+        <h2>Why Choose Us for Your Maternity Journey</h2>
+        <p>Trusted by thousands of families for safe deliveries, expert care, and compassionate support throughout pregnancy and beyond.</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>15+ Years of Maternity Expertise</h3>
+            <p>Experienced Obstetricians & Gynecologists trusted for safe and successful deliveries.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Safe Normal & C-Section Delivery Care</h3>
+            <p>Advanced labour rooms, fetal monitoring, and round-the-clock medical support.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Dedicated High-Risk Pregnancy Management</h3>
+            <p>Specialised care for complications, ensuring mother and baby safety at every stage.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>NICU & Newborn Specialist Support</h3>
+            <p>Neonatologists and NICU facilities available for immediate newborn care.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Comfortable Rooms & Family-Friendly Environment</h3>
+            <p>Clean, private, and supportive spaces designed for a calm birth experience.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Premium Care at an Affordable Price</h3>
+            <p>Transparent packages, insurance support, and superior maternity services without compromising quality.</p>
+        </div>
+    </div>
+</div>
+
+<div class="surgery-timeline-h" id="procedures">
+    <div class="timeline-header-h">
+        <h2>What to Expect During Your Maternity Journey</h2>
+        <p>Your Step-by-Step Care Experience</p>
+    </div>
+
+    <div class="timeline-container-h">
+        <div class="timeline-step-h">
+            <div class="step-marker-h">1</div>
+            <h3>Antenatal Consultation & Pregnancy Scans</h3>
+            <p>Your journey begins with regular antenatal checkups, pregnancy scans, blood tests, and personalised guidance from our maternity specialists to ensure a healthy and safe pregnancy.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">2</div>
+            <h3>Admission & Labour Preparation</h3>
+            <p>When labour begins or during your scheduled admission, our team monitors you closely, offering labour support, pain-management options, and continuous fetal monitoring for a smooth delivery process.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">3</div>
+            <h3>Baby Delivery & Hospital Stay</h3>
+            <p>Whether it's a Normal Delivery or C-Section, our experienced obstetricians ensure safe care for both mother and baby. After delivery, you'll stay in a comfortable private room with nursing care and newborn specialist support.</p>
+        </div>
+
+        <div class="timeline-step-h">
+            <div class="step-marker-h">4</div>
+            <h3>Postnatal Recovery & Newborn Care</h3>
+            <p>We assist with breastfeeding, newborn care, and post-delivery recovery. Mothers receive guidance on healing, diet, and follow-up visits, while babies are monitored by pediatricians and neonatologists.</p>
+        </div>
+    </div>
+</div>
+
+<div class="popup-overlay" *ngIf="isPopupOpen">
+    <div class="popup-container" (click)="$event.stopPropagation()">
+        <button class="popup-close" (click)="closePopup()">✖</button>
+        <app-callback-form [pageName]="'Maternity Care'"></app-callback-form>
+    </div>
+</div>

@@ -48,6 +48,10 @@ export class RoboticCholecystectomyComponent {
   ];
 
   ngOnInit():void{
+        setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
+
     this.title.setTitle('Gallbladder Stone Removal Surgery in Bangalore | Vasavi Hospitals')
     this.meta.updateTag({name:'desctiption', content:'Safe laparoscopic & robotic gallbladder surgery for stone removal. Quick recovery & affordable all-inclusive packages.'})
   }
@@ -277,4 +281,14 @@ export class RoboticCholecystectomyComponent {
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
   }
   
+        isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
+  }
 }

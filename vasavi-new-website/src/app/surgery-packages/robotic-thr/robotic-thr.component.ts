@@ -159,9 +159,9 @@ export class RoboticThrComponent {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+    setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Total Hip Replacement Surgery in Bangalore | Regain Mobility & Comfort');
     this.meta.updateTag({name:'description', content:'Experience pain-free movement with advanced Hip Replacement surgery at Vasavi Hospitals. Safe, precise & affordable orthopedic care with fast recovery.'})
@@ -317,6 +317,19 @@ export class RoboticThrComponent {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 }

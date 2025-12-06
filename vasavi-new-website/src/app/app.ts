@@ -11,7 +11,8 @@ import  WOW  from 'wowjs';
 import AOS from 'aos';
 import { Popup } from "./popup/popup";
 import { CommonModule } from '@angular/common';
-import { CanonicalUrl } from './canonical-url'; 
+import { CanonicalUrl } from './canonical-url';
+import { Maternity } from "./surgery-packages/maternity/maternity"; 
 
 
 @Component({
@@ -26,6 +27,7 @@ import { CanonicalUrl } from './canonical-url';
     Chatbot,
     Popup,
     CommonModule,
+    Maternity
 ],
   templateUrl: './app.html',
  styleUrls: ['./app.css'],

@@ -66,7 +66,9 @@ import { FibroidRemoval } from './surgery-packages/fibroid-removal/fibroid-remov
 import { CTAngiography } from './surgery-packages/ct-angiography/ct-angiography';
 import { CoronaryAngiography } from './surgery-packages/coronary-angiography/coronary-angiography';
 import { DoctorsPage } from './doctors-page/doctors-page';
+import { Maternity } from './surgery-packages/maternity/maternity';
 import { HealthCheck } from './health-package/health-check/health-check';
+// import { HealthCheck } from './health-package/health-check/health-check';
 
 // export const routes: Routes = [
 //     {path: 'anesthesiology' , component: Anesthesiology},
@@ -166,7 +168,9 @@ export const routes: Routes = [
   { path: 'doctors/:slug', component: Doctor },
   { path: 'ai-health-chatbot-in-bangalore', component: Chatbot },
   { path: 'all-doctors', component: DoctorsPage },
-  { path: 'health-check', component: HealthCheck },
+  { path: 'maternity-hospital-in-bangalore', component: Maternity },
+  // { path: 'health-check', component: HealthCheck },
+  { path: 'diabetic-health-check-package', component: HealthCheck },
   
 
 

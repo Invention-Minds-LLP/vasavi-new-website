@@ -1,18 +1,18 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
 import { CommonModule } from '@angular/common';
-import { DoctorsCard } from '../../doctors-card/doctors-card';
+import { DoctorsCard } from "../../doctors-card/doctors-card";
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
-import { Cta } from '../../cta/cta';
+import { Cta } from "../../cta/cta";
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-acl-reconstructio',
+  selector: 'app-maternity',
   imports: [CallbackForm, CommonModule, DoctorsCard, Cta, PopUpFormAds],
-  templateUrl: './acl-reconstructio.html',
-  styleUrl: './acl-reconstructio.css',
+  templateUrl: './maternity.html',
+  styleUrl: './maternity.css'
 })
-export class ACLReconstructio {
+export class Maternity {
   constructor(private title: Title, private meta: Meta) { }
   @ViewChild('carouselTrack', { static: false }) trackRef!: ElementRef<HTMLDivElement>;
   @ViewChild('prevBtn', { static: false }) prevBtnRef!: ElementRef<HTMLButtonElement>;
@@ -24,93 +24,57 @@ export class ACLReconstructio {
   resizeTimeout: any;
   activeSection = 'overview';
 
-  doctorHeader: any = {
-    title: 'Meet Our Surgery Specialist',
-    description: '',
-  };
-
   sections = [
-      { name: 'Overview', id: 'overview' },
-    { name: 'Symptoms', id: 'symptoms' },
+    { name: 'Overview', id: 'overview' },
+    { name: 'Our Services', id: 'services' },
     { name: 'Book an Appointment', id: 'appointment' },
     { name: 'Our Doctors', id: 'doctors' },
-    // { name: 'Surgery Options', id: 'surgery' },
-    // { name: 'Types', id: 'types' },
-    { name: 'Procedures', id: 'procedures' }
+    { name: 'Why Choose Us', id: 'why-choose' },
+    { name: 'Your Journey', id: 'procedures' }
   ];
 
-  doctors: any = [
-    {
-      name: 'Dr. Rupendu T',
-      img: 'img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png',
-      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
-      experience: '45+',
-      department: 'Sr. Consultant Orthopaedic Surgeon',
-      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-rupendu-t"
-    },
-    {
-      name: 'Dr. Srivatsa Subramanya',
-      img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
-      alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
-      experience: '17+',
-      department: 'Consultant-Orthopedics',
-      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-srivatsa-subramanya"
-    },
-    {
-      name: 'Dr. Venkatesh Rathod R',
-      img: 'img/new-doctor-image/dr-venkatesh-rathod-spec.png',
-      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R',
-      experience: '16+',
-      department: 'Consultant-Orthopedics',
-      // department: "Consultant - ENT",
-      // qualification: "MBBS, Dortho, DNB ortho",
-      slug: '/dr-venkatesh-rathod-r',
-    },
-  ];
+  ngOnInit(): void {
+    this.title.setTitle('Best Maternity Hospital in Bangalore | Normal & C-Section Delivery | Vasavi')
+    this.meta.updateTag({ name: 'description', content: 'Trusted maternity care with 15+ years experienced obstetricians. Safe Normal Delivery, C-Section & High-risk pregnancy care. Affordable packages with cashless insurance.' })
+  }
 
+  doctorHeader: any = {
+    title: "Meet Our Maternity Specialists",
+    description: "Experienced Obstetricians & Gynecologists dedicated to your safe delivery"
+  }
+  
   isPopupOpen = false;
 
   openPopup(): void {
     this.isPopupOpen = true;
-    document.body.style.overflow = 'hidden'; // disable background scroll
+    document.body.style.overflow = 'hidden';
   }
 
   closePopup(): void {
     this.isPopupOpen = false;
-    document.body.style.overflow = ''; // restore scroll
+    document.body.style.overflow = '';
   }
 
-  private popupInterval: any;
-
-  ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
-
-    setTimeout(() => {
-      this.openImagePopup();
-    }, 5000);
-
-    this.title.setTitle('ACL Reconstruction Surgery in Bangalore | Orthopedic Experts');
-    this.meta.updateTag({
-      name: 'description',
-      content:
-        'Restore knee stability with arthroscopic ACL reconstruction. Sports injury recovery made faster & pain-free.',
-    });
-
-    // this.popupInterval = setInterval(() => {
-    //   this.openPopup();
-    // }, 25000);
-  }
-
-  handleFormSubmit(data: { name: string; phoneNumber: string; otp: string }) {
-    console.log('Form Data Received:', data);
-    // ✅ You can send this data to backend or API here
-    this.closePopup(); // close popup after success
-  }
-
+  doctors: any = [
+    {
+      name: "Dr.Nisha Buchade",
+      img: "img/go/dr-nisha-buchade-sq.png",
+      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
+      experience: "15+",
+      // department: "Gynecology, Robotic & Laparoscopic Surgery",
+      qualification: "MBBS, MS Fellowship in gynec-oncology, Fellowship in Advanced infertility",
+      slug: "/dr-nisha-buchade"
+    },
+    {
+      name: "Dr. Sowmya Sangmesh",
+      img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      experience: "14+",
+      // department: "Consultant - ENT",
+      qualification: "MBBS.,MS (OBG) .FELLOWSHIP MINIMAL ACCESS SURGERY, ADVANCED DIPLOMA REPRODUCTIVE MEDICINE",
+      slug: "/dr-sowmya-sangmesh"
+    }
+  ];
 
   // sub navbar
   ngAfterViewInit(): void {
@@ -122,12 +86,10 @@ export class ACLReconstructio {
     window.removeEventListener('resize', this.handleResize.bind(this));
   }
 
-  // Carousel Items
   private get items(): NodeListOf<HTMLElement> {
     return this.trackRef.nativeElement.querySelectorAll('.section-item');
   }
 
-  // Update carousel mode
   private updateCarouselMode(): void {
     const containerWidth = this.trackRef.nativeElement.parentElement!.clientWidth - 32;
     const itemsArray = Array.from(this.items);
@@ -145,7 +107,6 @@ export class ACLReconstructio {
     }
   }
 
-  // Calculate visible items
   private calculateItemsPerView(): void {
     const containerWidth = this.trackRef.nativeElement.parentElement!.clientWidth - 32;
     let totalWidth = 0;
@@ -162,7 +123,6 @@ export class ACLReconstructio {
     this.itemsPerView = Math.max(1, itemCount);
   }
 
-  // Show/hide carousel buttons
   private showCarouselControls(): void {
     this.prevBtnRef.nativeElement.classList.remove('hide');
     this.prevBtnRef.nativeElement.classList.add('show');
@@ -177,7 +137,6 @@ export class ACLReconstructio {
     this.nextBtnRef.nativeElement.classList.add('hide');
   }
 
-  // Update carousel position
   private updateCarousel(): void {
     if (!this.isCarouselMode) return;
     const itemWidth = this.items[0].offsetWidth + 16;
@@ -207,7 +166,6 @@ export class ACLReconstructio {
     }
   }
 
-  // Scroll to section
   scrollToSection(sectionId: string): void {
     const targetElement = document.getElementById(sectionId);
     if (targetElement) {
@@ -216,12 +174,10 @@ export class ACLReconstructio {
     }
   }
 
-  // Event listeners
   private setupEventListeners(): void {
     this.prevBtnRef.nativeElement.addEventListener('click', () => this.prev());
     this.nextBtnRef.nativeElement.addEventListener('click', () => this.next());
 
-    // Touch support
     let startX: number | null = null;
     const track = this.trackRef.nativeElement;
 
@@ -233,7 +189,6 @@ export class ACLReconstructio {
       startX = null;
     });
 
-    // Window resize
     window.addEventListener('resize', this.handleResize.bind(this));
   }
 
@@ -241,18 +196,4 @@ export class ACLReconstructio {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
   }
-
-      isPopupImageOpen = false;
-  // selectedImage: string | null = null;
-
-  openImagePopup() {
-    this.isPopupImageOpen = true;
-  }
-
-  closeImagePopup() {
-    this.isPopupImageOpen = false;
-  }
-
-  
-  
 }
