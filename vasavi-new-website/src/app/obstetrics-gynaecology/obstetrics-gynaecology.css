@@ -147,6 +147,10 @@ a {
     background-color: #3B41AF !important;
 }
 
+a.box_para{
+    color: blue;
+}
+
 .treatment-box:hover .sub_heading,
 .treatment-box:hover .box_para {
     color: white;

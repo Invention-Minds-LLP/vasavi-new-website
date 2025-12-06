@@ -1772,3 +1772,35 @@
         margin-bottom: 10px;
     }
 }
+
+.popup-content {
+    position: relative;
+    field-sizing: flex;
+    justify-content: center;
+}
+
+@media (max-width : 500px) {
+    .popup-content {
+        width: 90%;
+    }
+}
+
+.popup-image {
+    width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}

@@ -157,6 +157,11 @@ export class RoboticTkrComponent {
   private popupInterval: any;
 
   ngOnInit(): void {
+
+    setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
+
     // setTimeout(() => {
     //   this.openPopup();
     // }, 5000);
@@ -314,5 +319,16 @@ export class RoboticTkrComponent {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+    isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }
