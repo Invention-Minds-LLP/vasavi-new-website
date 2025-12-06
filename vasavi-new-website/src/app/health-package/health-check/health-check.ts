@@ -27,7 +27,7 @@ export class HealthCheck {
     },
     {
       icon: "fa-solid fa-check",
-      content: "Ideal for diabetics,prediabetics & high-risk individuals"
+      content: "Ideal for diabetics, prediabetics & high-risk individuals"
     },
   ]
 
