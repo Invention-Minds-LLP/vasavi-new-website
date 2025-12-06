@@ -164,6 +164,62 @@
     padding: 20px;
 }
 
+:host ::ng-deep .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* max-width: 900px; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9999;              /* make sure nav is above slides */
+  pointer-events: auto;       /* allow nav container to receive events */
+  padding: 0 10px;
+}
+
+/* make sure buttons themselves accept clicks */
+:host ::ng-deep .owl-nav button.owl-prev,
+:host ::ng-deep .owl-nav button.owl-next {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.28) !important;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* hide default span wrapper if present */
+:host ::ng-deep .owl-nav button span {
+  display: none;
+}
+
+/* create icons for custom spans */
+:host ::ng-deep .custom-prev::before,
+:host ::ng-deep .custom-next::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 18px;
+  color: #fff;
+}
+/* optional: nudge buttons slightly inward */
+:host ::ng-deep .owl-nav button.owl-prev { transform: translateX(-14%); }
+:host ::ng-deep .owl-nav button.owl-next { transform: translateX(14%); }
+
+/* ensure slides are underneath nav */
+:host ::ng-deep .owl-stage { z-index: 1; }
+
+::ng-deep .fa-chevron-left,
+::ng-deep .fa-chevron-right{
+    color: black;
+}
+
 @media (max-width : 480px) {
 
     .heading {
