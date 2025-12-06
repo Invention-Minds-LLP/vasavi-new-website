@@ -627,29 +627,53 @@ label {
 }
 
 .error {
-  color: red;
-  font-size: 12px;
-  margin-top: 4px;
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
 .otp-timer {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #1B8FCD;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #1B8FCD;
 }
 
 .otp-timer button {
-  background: transparent;
-  border: 1px solid #1B8FCD;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
+    background: transparent;
+    border: 1px solid #1B8FCD;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.faq-heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 23.8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34.8px;
+    /* 146.218% */
+    letter-spacing: -0.24px;
+}
+
+.card-icon{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: #D3F7FB;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 50%;
+    
 }
 
 
 @media(max-width: 1024px) {
     .banner {
         margin: 20px;
+        gap: 10px;
     }
 
     .blue-1 {
@@ -659,7 +683,9 @@ label {
 
     .flex {
         flex-wrap: wrap;
+        justify-content: center;
     }
+
 
     .banner-bg {
         height: auto;
@@ -683,13 +709,17 @@ label {
         margin-top: 80px;
     }
 
-     .book-appointment button{
+    .book-appointment button {
         width: 30%;
         justify-content: center;
     }
 
-    .book-appointment{
+    .book-appointment {
         padding: 20px;
+    }
+
+    .faq-heading {
+        font-size: 20px;
     }
 }
 
@@ -719,7 +749,7 @@ label {
     }
 
     .flex {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
     }
 
@@ -867,28 +897,40 @@ label {
         width: 100%;
     }
 
-    .health-packages{
+    .health-packages {
         gap: 20px;
     }
 
-    .package-heading{
+    .package-heading {
         font-size: 16px;
     }
 
-    .cote{
+    .cote {
         font-size: 16px;
     }
 
-    .heading{
+    .heading {
         font-size: 18px;
     }
 
-    .para{
+    .para {
         font-size: 14px;
     }
 
-    .book-appointment button{
+    .book-appointment button {
         width: 100%;
         justify-content: center;
+    }
+    .faq-heading {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .about-heading{
+        font-size: 22px;
+    }
+
+    .about-para span{
+        font-size: 16px;
     }
 }
