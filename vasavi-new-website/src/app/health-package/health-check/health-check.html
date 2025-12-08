@@ -49,12 +49,12 @@
         <div class="form" id="appointmentFormSection">
             <div class="form-heading">Book Your Appointment</div>
 
-            <form [formGroup]="appointmentForm" (ngSubmit)="bookAppointment()" class="form-content">
+            <form [formGroup]="appointmentForm" class="form-content">
 
 
                 <div class="flex2">
                     <label>Select Date</label>
-                    <input type="date" formControlName="date">
+                    <input type="date" formControlName="date" [min]="minDate">
                     <small class="error"
                         *ngIf="appointmentForm.get('date')?.touched && appointmentForm.get('date')?.invalid">
                         Date is required
@@ -85,7 +85,7 @@
                 <!-- OTP Input -->
                 <div class="flex2" *ngIf="otpSent">
                     <label>Enter OTP:</label>
-                    <input type="number" formControlName="otp" (input)="verifyOtp()">
+                    <input type="number" formControlName="otp">
 
                     <small class="error" *ngIf="otpInvalid">Incorrect OTP</small>
                     <small class="error" *ngIf="otpExpired">OTP expired. Please resend.</small>
@@ -95,10 +95,8 @@
                         <button type="button" *ngIf="timeLeft === 0" (click)="resendOtp()">Resend OTP</button>
                     </div>
                 </div>
-
-                <!-- Book Button -->
-                <button class="btn" type="submit" [disabled]="!otpVerified || appointmentForm.invalid">
-                    Book Appointment
+                <button class="btn" type="submit" *ngIf="otpSent" (click)="verifyOtp()" [disabled]="otpSent && appointmentForm.invalid">
+                    Verify OTP
                 </button>
 
 

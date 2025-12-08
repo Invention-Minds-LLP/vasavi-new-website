@@ -64,13 +64,13 @@
                             </div>
                         </th>
 
-                        <th routerLink="/diabetic-health-check-package" style="cursor: pointer;">
+                        <th style="cursor: pointer;">
                             <div class="heading">Vasavi Diabetic Health Check <p class="pb-2"></p>
                             </div>
                             <div class="info">
                                 <div class="amount">Rs.3000/-</div>
-                                <a href="" data-bs-toggle="modal" data-bs-target="#enquire"> <button
-                                        type="button">Enquire Now</button></a>
+                                <button (click)="goToDiabeticPackage()"
+                                        type="button">Enquire Now</button>
 
                             </div>
                         </th>

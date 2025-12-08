@@ -114,5 +114,7 @@ export class Package implements OnInit {
     document.body.classList.remove('modal-open');
     document.body.style.removeProperty('padding-right');
   }
-  
+  goToDiabeticPackage(){
+    this.router.navigate(['/diabetic-health-check-package']);
+  }
 }

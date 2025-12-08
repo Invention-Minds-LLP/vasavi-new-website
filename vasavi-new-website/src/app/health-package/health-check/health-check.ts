@@ -4,6 +4,10 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { Title } from '@angular/platform-browser';
 import { DoctorsSlide } from "../../doctors-slide/doctors-slide";
 
+import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-health-check',
   imports: [CommonModule, FormsModule, DoctorsSlide, ReactiveFormsModule],
@@ -11,6 +15,8 @@ import { DoctorsSlide } from "../../doctors-slide/doctors-slide";
   styleUrl: './health-check.css'
 })
 export class HealthCheck {
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
 
   whyChoose = [
     {
@@ -233,10 +239,15 @@ export class HealthCheck {
   timeLeft = 0;
   interval: any;
   canSendOtp = false;
+  pageName = 'Health Checkup';
+  otp:any;
+  minDate: string = new Date().toISOString().split('T')[0];
 
-  constructor(private fb: FormBuilder) { }
+
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
+    
     this.appointmentForm = this.fb.group({
       date: ['', Validators.required],
       name: ['', [Validators.required]],
@@ -267,10 +278,25 @@ export class HealthCheck {
     this.otpInvalid = false;
     this.otpExpired = false;
 
+
     this.generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
     console.log("OTP:", this.generatedOtp);
-
-    alert("OTP Sent!");
+    this.http
+    .post(`${this.apiUrl}/sms/send-otp-vasavi`, {
+      patientName: this.appointmentForm.value.name,
+      patientPhoneNumber: '91' + this.appointmentForm.value.mobile, // ensure with country code
+      service: this.pageName,
+      otp: this.generatedOtp,
+    })
+    .subscribe({
+      next: () => {
+        this.otpSent = true;
+      },
+      error: (err) => {
+        console.error('❌ OTP send failed:', err);
+        alert('❌ Failed to send OTP. Please try again.');
+      },
+    });
   }
 
   startOtpTimer() {
@@ -300,9 +326,11 @@ export class HealthCheck {
     const enteredOtp = String(this.appointmentForm.value.otp);
 
     if (enteredOtp === this.generatedOtp) {
+
       this.otpVerified = true;
       this.otpInvalid = false;
       this.otpExpired = false;
+      this.bookAppointment();
     } else {
       this.otpVerified = false;
       this.otpInvalid = true;
@@ -311,9 +339,34 @@ export class HealthCheck {
 
   bookAppointment() {
     if (!this.otpVerified) return;
-
-    alert("Appointment Booked Successfully!");
     console.log("Form Data:", this.appointmentForm.value);
+      const appointmentDetails = {
+        name: this.appointmentForm.value.name,
+        phone: this.appointmentForm.value.mobile,
+        date: this.appointmentForm.value.date,
+        address: '',
+        page: this.pageName,
+      };
+  
+      const emailRequest = {
+        // whatsappNumber:['919342287945'],
+        whatsappNumber: ['919164840378'],
+        to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
+        // to:['inventionmindsblr@gmail.com'],
+        status: 'Health Checkup Appointment Booking',
+        appointmentDetails,
+      };
+  
+      this.http.post(`${this.apiUrl}/email/send-pages-email`, emailRequest).subscribe({
+        next: () => {
+          this.router.navigate(['/thank-you']);
+        },
+        error: (err) => {
+          console.error('❌ Email send failed:', err);
+          alert('❌ Failed to send email. Please try again later.');
+        },
+      });
+    
 
     this.appointmentForm.reset();
     this.otpSent = false;
