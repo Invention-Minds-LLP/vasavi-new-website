@@ -1,12 +1,12 @@
 <!-- banner -->
 <div class="banner-part">
     <div class="banner-bg">
-        <div class="gray">
-            <div class="blue"></div>
+        <div class="blue">
+            <div class="gray"></div>
         </div>
 
-        <div class="gray-1">
-            <div class="blue-1"></div>
+        <div class="blue-1">
+            <div class="gray-1"></div>
         </div>
     </div>
 </div>
@@ -14,133 +14,96 @@
 <div class="health-packages">
     <div class="banner">
         <div class="banner-content">
-            <!-- <div class="banner-sub-heading">Annual Master Diabetes Care</div> -->
-            <div class="banner-headeing">Diabetes Health Check</div>
+            <div class="banner-headeing">{{ currentPackage?.pageTitle }}</div>
+
             <div class="flex1">
                 <div class="banner-package-price">
                     <div class="price">
                         <div class="package-heading">Package Price</div>
-                        <div class="amount">₹4000 <span>onwards</span></div>
-                        <div class="cote">All-in-One Diabetes Care.</div>
+                        <div class="amount">₹{{ currentPackage?.pagePrice }} <span>onwards</span></div>
+                        <div class="cote">{{ currentPackage?.pageSubtitle }}</div>
                     </div>
                 </div>
-                <div class="banner-para">Track your blood sugar, heart, kidney, liver and overall health through a
-                    single,
 
-                    diabetes package - designed to prevent complications and support long-term wellbeing.</div>
+                <div class="banner-para">
+                    {{ currentPackage?.pageDescription }}
+                </div>
+
+
                 <div class="flex">
-                    <div class="banner-card">
-                        <div class="title">39 tests</div>
-                        <div class="para1">Complete diabetic evaluation</div>
-                    </div>
-                    <div class="banner-card">
-                        <div class="title">Type 1 & Type 2</div>
-                        <div class="para1">Suitable for all diabetics</div>
-                    </div>
-                    <div class="banner-card">
-                        <div class="title">Complete Screening</div>
-                        <div class="para1">Covers all major diabetes markers.</div>
+                    <div class="banner-card" *ngFor="let card of currentPackage?.bannerCards">
+                        <div class="title">{{ card.title }}</div>
+                        <div class="para1">{{ card.subtitle }}</div>
                     </div>
                 </div>
-                <!-- <button>Download Package Details</button> -->
+
+
             </div>
         </div>
 
+        <!-- Form section -->
         <div class="form" id="appointmentFormSection">
             <div class="form-heading">Book Your Appointment</div>
-
             <form [formGroup]="appointmentForm" class="form-content">
-
-
-                <div class="flex2">
-                    <label>Select Date</label>
-                    <input type="date" formControlName="date" [min]="minDate">
-                    <small class="error"
-                        *ngIf="appointmentForm.get('date')?.touched && appointmentForm.get('date')?.invalid">
-                        Date is required
-                    </small>
-                </div>
-
-                <div class="flex2">
-                    <label>Full Name:</label>
-                    <input type="text" formControlName="name">
-                    <small class="error"
-                        *ngIf="appointmentForm.get('name')?.touched && appointmentForm.get('name')?.invalid">
-                        Name is required
-                    </small>
-                </div>
-
-                <div class="flex2">
-                    <label>Mobile Number:</label>
-                    <div class="otp">
-                        <input type="number" formControlName="mobile">
-                        <button type="button" (click)="sendOtp()" [disabled]="!canSendOtp">Send OTP</button>
-                    </div>
-                    <small class="error"
-                        *ngIf="appointmentForm.get('mobile')?.touched && appointmentForm.get('mobile')?.invalid">
-                        Enter a valid 10-digit mobile number
-                    </small>
-                </div>
-
-                <!-- OTP Input -->
-                <div class="flex2" *ngIf="otpSent">
-                    <label>Enter OTP:</label>
-                    <input type="number" formControlName="otp">
-
-                    <small class="error" *ngIf="otpInvalid">Incorrect OTP</small>
-                    <small class="error" *ngIf="otpExpired">OTP expired. Please resend.</small>
-
-                    <div class="otp-timer">
-                        <span *ngIf="timeLeft > 0">Resend OTP in {{ timeLeft }}s</span>
-                        <button type="button" *ngIf="timeLeft === 0" (click)="resendOtp()">Resend OTP</button>
-                    </div>
-                </div>
-                <button class="btn" type="submit" *ngIf="otpSent" (click)="verifyOtp()" [disabled]="otpSent && appointmentForm.invalid">
-                    Verify OTP
-                </button>
-
-
+                <div class="flex2"> <label>Select Date</label> <input type="date" formControlName="date"
+                        [min]="minDate"> <small class="error"
+                        *ngIf="appointmentForm.get('date')?.touched && appointmentForm.get('date')?.invalid"> Date is
+                        required </small> </div>
+                <div class="flex2"> <label>Full Name:</label> <input type="text" formControlName="name"> <small
+                        class="error"
+                        *ngIf="appointmentForm.get('name')?.touched && appointmentForm.get('name')?.invalid"> Name is
+                        required </small> </div>
+                <div class="flex2"> <label>Mobile Number:</label>
+                    <div class="otp"> <input type="number" formControlName="mobile"> <button type="button"
+                            (click)="sendOtp()" [disabled]="!canSendOtp">Send OTP</button> </div> <small class="error"
+                        *ngIf="appointmentForm.get('mobile')?.touched && appointmentForm.get('mobile')?.invalid"> Enter
+                        a valid 10-digit mobile number </small>
+                </div> <!-- OTP Input -->
+                <div class="flex2" *ngIf="otpSent"> <label>Enter OTP:</label> <input type="number"
+                        formControlName="otp"> <small class="error" *ngIf="otpInvalid">Incorrect OTP</small> <small
+                        class="error" *ngIf="otpExpired">OTP expired. Please resend.</small>
+                    <div class="otp-timer"> <span *ngIf="timeLeft > 0">Resend OTP in {{ timeLeft }}s</span> <button
+                            type="button" *ngIf="timeLeft === 0" (click)="resendOtp()">Resend OTP</button> </div>
+                </div> <button class="btn" type="submit" *ngIf="otpSent" (click)="verifyOtp()"
+                    [disabled]="otpSent && appointmentForm.invalid"> Verify OTP </button>
             </form>
-
         </div>
-
     </div>
+
+
     <div class="health-package">
 
-        <!-- About -->
-        <div class="about">
-            <div class="">
-                <div class="about-heading">Diabetes affects more than just your sugar.</div>
-                <div class="about-para">
-                    <div>It can silently damage your <span>kidneys, eyes, nerves, heart, joints, and
-                            immunity</span> without
-                        showing symptoms</div><br>
-                    <div>
-                        That’s why your check-up must be <span>full-body</span>, not just a sugar test. Our
-                        Master
-                        Diabetes Care
-                        Package
-                        covers <span>everything diabetes touches</span> - helping you catch problems early and stay in
-                        control.
+        <!-- ABOUT SECTION  -->
+        <div class="about" *ngIf="currentPackage?.about?.length > 0">
+            <div>
+
+                <div *ngFor="let ab of currentPackage?.about">
+                    <div class="about-heading">{{ ab.title }}</div>
+
+                    <div class="about-para">
+                        <div [innerHTML]="ab.subtitle"></div>
                     </div>
+                    <br>
                 </div>
+
             </div>
-            <div class="">
-                <!-- <div class="box"></div> -->
-                 <img src="img/health-package/diabetes.jpg" alt="" class="box"> 
+
+            <div>
+                <img [src]="currentPackage?.aboutImage" class="box" />
             </div>
         </div>
 
-        <!-- Packages -->
-        <div class="packages">
+
+        <!-- INCLUDES SECTION -->
+        <div class="packages" *ngIf="currentPackage?.includes?.length > 0">
             <div class="package-header">
-                <div class="heading">What’s included in the package?</div>
-                <div class="para">Structured into investigations, imaging, cardiac care and specialist consultations.
-                </div>
+                <div class="heading">{{ currentPackage?.includesTitle }}</div>
+                <div class="para">{{ currentPackage?.includesSubtitle }}</div>
+
             </div>
 
             <div class="package-cards">
-                <div class="card" *ngFor="let item of includes">
+                <div class="card" *ngFor="let item of currentPackage?.includes">
 
                     <div class="card-header">{{ item.title }}</div>
 
@@ -155,69 +118,67 @@
 
         </div>
 
-        <!-- why choose -->
-        <div class="why-choose">
+        <!-- WHY CHOOSE -->
+        <div class="why-choose" *ngIf="currentPackage?.whyChoose?.length > 0">
             <div class="package-header">
-                <div class="heading">Why choose this diabetes package?</div>
-                <div class="para">Specially curated for long-term diabetes management, complication prevention and
-                    holistic
-                    lifestyle support.</div>
+                <div class="heading">{{ currentPackage?.whyChooseTitle }}</div>
+                <div class="para">{{ currentPackage?.whyChooseSubtitle }}</div>
+
             </div>
+
             <div class="choose-wrapper">
-                <div class="choose-cards" *ngFor="let item of whyChoose">
+                <div class="choose-cards" *ngFor="let item of currentPackage?.whyChoose">
                     <i [class]="item.icon" class="card-icon"></i>
                     <div class="content">{{ item.content }}</div>
                 </div>
             </div>
         </div>
 
-        <!-- Doctors-card -->
-        <div class="doctors">
-            <app-doctors-slide [doctorSlide]="doctorSlide"></app-doctors-slide>
+
+        <!-- DOCTORS SLIDE -->
+        <div class="doctors" *ngIf="currentPackage?.doctorSlide?.length > 0">
+            <app-doctors-slide [doctorSlide]="currentPackage?.doctorSlide"></app-doctors-slide>
         </div>
 
-        <!-- care with us -->
-        <div class="care-with-us">
+
+        <!-- CARE WITH US -->
+        <div class="care-with-us" *ngIf="currentPackage?.careWith?.length > 0">
             <div class="package-header">
-                <div class="heading">Your Care Journey With Us</div>
-                <div class="para">Specially curated for long-term diabetes management, complication prevention and
-                    holistic
-                    lifestyle support.</div>
+                <div class="heading">{{ currentPackage?.careTitle }}</div>
+                <div class="para">{{ currentPackage?.careSubtitle }}</div>
             </div>
+
             <div class="choose-wrapper">
-                <div class="care-cards" *ngFor="let item of careWith">
+                <div class="care-cards" *ngFor="let item of currentPackage?.careWith">
                     <img [src]="item.img" />
-                    <div class="care-content">{{item.content}}</div>
+                    <div class="care-content">{{ item.content }}</div>
                 </div>
             </div>
         </div>
 
-        <!-- book appointment -->
+        <!-- CTA SECTION -->
         <div class="book-appointment">
-            <div class="">
-                <div class="heading">Ready to take charge of your diabetes?</div>
-                <div class="para">Book your Master Diabetes Care package and start your journey towards better
-                    sugar
-                    control and a
-                    healthier life.</div>
+            <div class="package-header">
+                <div class="heading">{{ currentPackage?.ctaTitle }}</div>
+                <div class="para">{{ currentPackage?.ctaSubtitle }}</div>
             </div>
 
             <button (click)="scrollToForm()">Book Appointment</button>
         </div>
 
-
-
-        <!-- Faqs -->
-        <div class="accordion-wrapper">
+        <!-- FAQ -->
+        <div class="accordion-wrapper" *ngIf="currentPackage?.faqs?.length > 0">
             <div class="header">FAQs</div>
 
-            <div class="accordion-item" *ngFor="let item of faqs; let i = index">
+            <div class="accordion-item" *ngFor="let item of currentPackage?.faqs; let i = index">
 
                 <div class="accordion-header" (click)="toggle(i)">
-                    <span class="arrow" [class.open]="openedIndex === i"><svg xmlns="http://www.w3.org/2000/svg"
-                            width="12" height="16" viewBox="0 0 12 16" fill="none">
+                    <span class="arrow" [class.open]="openedIndex === i">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16">
                             <path d="M7.3 8L0 2.3L1.8 0L12 8L1.8 16L0 13.7L7.3 8Z" fill="black" />
-                        </svg></span>
+                        </svg>
+                    </span>
+
                     <div class="faq-heading">{{ item.title }}</div>
 
                 </div>

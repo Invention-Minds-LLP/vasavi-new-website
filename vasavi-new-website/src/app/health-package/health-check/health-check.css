@@ -60,13 +60,11 @@
 
 .banner-card {
     width: 230px;
-    height: 90px;
+    height: 120px;
     border-radius: 20px;
     background: #D9D9D9;
     padding: 15px;
 }
-
-.gray {}
 
 .blue {
     width: 194px;
@@ -77,6 +75,27 @@
     transform: rotate(180deg);
     position: relative;
     top: 396px;
+}
+
+.gray {
+    width: 229px;
+    height: 259px;
+    border-radius: 0 0 0 289.5px;
+    border: 40px solid rgba(48, 51, 148, 0.20);
+    transform: rotate(360deg);
+    position: relative;
+    top: -40px;
+    left: -73px;
+}
+
+.gray-1 {
+    width: 586px;
+    height: 629px;
+    border-radius: 0 0 0 334.5px;
+    border: 40px solid rgba(48, 51, 148, 0.20);
+    position: relative;
+    top: -50px;
+    right: 75px;
 }
 
 .blue-1 {
@@ -173,6 +192,7 @@
     flex-direction: column;
     gap: 20px;
     align-items: start;
+    margin-top: 10px;
 }
 
 .flex1 button {
@@ -312,7 +332,7 @@ input {
 .box {
     width: 397px;
     height: 337px;
-    background: #D9D9D9;
+    background: transparent;
     margin-right: 50px;
 }
 
@@ -464,7 +484,7 @@ label {
 
 
 .doctors {
-    background: #D9D9D9;
+    /* background: #D9D9D9; */
     width: 100%;
     height: auto;
     padding: 20px;
@@ -599,7 +619,7 @@ label {
 }
 
 .book-appointment {
-    background: #D9D9D9;
+    background: linear-gradient(94deg, #3B41AF 0%, #1B8FCD 100%);
     height: 150px;
     width: 100%;
     display: flex;
@@ -615,15 +635,20 @@ label {
     justify-content: flex-end;
     align-items: center;
     border-radius: 30px;
-    background: #1B8FCD;
+    background: white;
     box-shadow: 3px 4px 15px 0 rgba(63, 176, 206, 0.65);
-    color: #FFF;
+    color: black;
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
     line-height: 16px;
     border: none;
+}
+
+.book-appointment .heading,
+.para {
+    color: white;
 }
 
 .error {
@@ -657,7 +682,7 @@ label {
     letter-spacing: -0.24px;
 }
 
-.card-icon{
+.card-icon {
     width: 30px;
     height: 30px;
     padding: 10px;
@@ -666,7 +691,7 @@ label {
     justify-content: center;
     display: flex;
     border-radius: 50%;
-    
+
 }
 
 
@@ -720,6 +745,10 @@ label {
 
     .faq-heading {
         font-size: 20px;
+    }
+
+    .gray-1 {
+        width: 419px;
     }
 }
 
@@ -802,7 +831,7 @@ label {
 
     .about {
         width: 95%;
-        margin-top: 176px;
+        margin-top: 235px;
     }
 }
 
@@ -818,7 +847,7 @@ label {
     }
 
     .about {
-        width: 100%;
+        width: 90%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -837,7 +866,8 @@ label {
     }
 
     .box {
-        width: 300px;
+        width: 250px;
+        height: auto;
         margin-right: 0;
     }
 
@@ -921,16 +951,17 @@ label {
         width: 100%;
         justify-content: center;
     }
+
     .faq-heading {
         font-size: 18px;
         line-height: 25px;
     }
 
-    .about-heading{
+    .about-heading {
         font-size: 22px;
     }
 
-    .about-para span{
+    .about-para span {
         font-size: 16px;
     }
 }

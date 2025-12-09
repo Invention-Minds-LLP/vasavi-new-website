@@ -170,12 +170,15 @@ export const routes: Routes = [
   { path: 'all-doctors', component: DoctorsPage },
   { path: 'maternity-hospital-in-bangalore', component: Maternity },
   // { path: 'health-check', component: HealthCheck },
-  { path: 'diabetic-health-check-package', component: HealthCheck },
-  
+  // { path: 'diabetic-health-check-package', component: HealthCheck },
+  { path: 'health-package/:slug', component: HealthCheck },
+
+
+
 
 
   // surgery packages
-  
+
   { path: 'hernia-surgery-in-bangalore', component: RoboticHerniaComponent },
   { path: 'total-knee-replacement-in-bangalore', component: RoboticTkrComponent },
   { path: 'total-hip-replacement-in-bangalore', component: RoboticThrComponent },
@@ -199,6 +202,6 @@ export const routes: Routes = [
 
   // ads
 
-  { path: 'robotic-hernia-ads', component: RoboticHernia },  
+  { path: 'robotic-hernia-ads', component: RoboticHernia },
   { path: '**', redirectTo: '' },
 ];
