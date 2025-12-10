@@ -1779,6 +1779,8 @@
         font-size: 1.5em;
         margin-bottom: 10px;
     }
+
+    
 }
 
 
@@ -1791,6 +1793,10 @@
 @media (max-width : 500px) {
     .popup-content {
         width: 90%;
+    }
+
+    .popup-image{
+        width: 100%;
     }
 }
 
