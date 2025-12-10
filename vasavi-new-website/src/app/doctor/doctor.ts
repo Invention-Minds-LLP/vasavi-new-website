@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
@@ -10,6 +10,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePickerModule } from 'primeng/datepicker';
 import { SelectModule } from 'primeng/select';
 import { ToastModule } from 'primeng/toast'
+import { HealthPackageForm } from '../health-package-form/health-package-form';
 
 type DayName = 'sun' | 'mon' | 'tue' | 'wed' | 'thu' | 'fri' | 'sat';
 interface Availability {
@@ -25,7 +26,7 @@ interface Availability {
 }
 @Component({
   selector: 'app-doctor',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, DatePickerModule, SelectModule, ToastModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, DatePickerModule, SelectModule, ToastModule, HealthPackageForm],
   templateUrl: './doctor.html',
   styleUrl: './doctor.css',
   providers: [MessageService]
@@ -50,6 +51,9 @@ export class Doctor {
   // scrollToForm() {
   //   this.formSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   // }
+
+  isSpecialDoctor: boolean = false; 
+  specialDoctorSlug: string = "dr-kumaresh-krishnamoorthy";
 
   constructor(private route: ActivatedRoute,
     private router: Router,
@@ -91,6 +95,11 @@ export class Doctor {
 
     if (doctor) {
       this.filteredDoctor = doctor;
+      this.isSpecialDoctor = slug === this.specialDoctorSlug;
+
+      if (!this.isSpecialDoctor) {
+        this.contactForm;  // load default form
+      }
       this.titleService.setTitle(this.filteredDoctor.title || this.filteredDoctor.name);
       this.metaService.updateTag({ name: 'description', content: this.filteredDoctor.description || this.filteredDoctor.about });
       this.getDoctorById(this.filteredDoctor.id).subscribe(
