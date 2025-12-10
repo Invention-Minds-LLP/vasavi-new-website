@@ -42,7 +42,7 @@
         </div>
 
         <!-- Form section -->
-        <div class="form" id="appointmentFormSection">
+        <!-- <div class="form" id="appointmentFormSection">
             <div class="form-heading">Book Your Appointment</div>
             <form [formGroup]="appointmentForm" class="form-content">
                 <div class="flex2"> <label>Select Date</label> <input type="date" formControlName="date"
@@ -58,7 +58,7 @@
                             (click)="sendOtp()" [disabled]="!canSendOtp">Send OTP</button> </div> <small class="error"
                         *ngIf="appointmentForm.get('mobile')?.touched && appointmentForm.get('mobile')?.invalid"> Enter
                         a valid 10-digit mobile number </small>
-                </div> <!-- OTP Input -->
+                </div> 
                 <div class="flex2" *ngIf="otpSent"> <label>Enter OTP:</label> <input type="number"
                         formControlName="otp"> <small class="error" *ngIf="otpInvalid">Incorrect OTP</small> <small
                         class="error" *ngIf="otpExpired">OTP expired. Please resend.</small>
@@ -67,6 +67,9 @@
                 </div> <button class="btn" type="submit" *ngIf="otpSent" (click)="verifyOtp()"
                     [disabled]="otpSent && appointmentForm.invalid"> Verify OTP </button>
             </form>
+        </div> -->
+        <div class="">
+            <app-health-package-form id="appointmentFormSection"></app-health-package-form>
         </div>
     </div>
 

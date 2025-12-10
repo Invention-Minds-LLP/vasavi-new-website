@@ -1,302 +1,273 @@
 <div class="bg-gradient-to-br from-light to-white min-h-screen">
 
-    <div class="hero_bg">
-        <div class="floating_elements">
-            <div class="floating_element"></div>
-            <div class="floating_element"></div>
-            <div class="floating_element"></div>
-        </div>
+  <div class="hero_bg">
+    <div class="floating_elements">
+      <div class="floating_element"></div>
+      <div class="floating_element"></div>
+      <div class="floating_element"></div>
+    </div>
 
-        <!-- Doctor Details -->
-        <div class="doc_content">
-            <h1 class="doc_name">{{filteredDoctor?.name}}</h1>
-            <div class="department">{{filteredDoctor?.department}}</div>
-            <div class="qualification">
-                {{filteredDoctor?.qualification}}
-            </div>
-            <div class="doc_designation">
-                {{filteredDoctor?.designation}}
-            </div>
-            <div class="experience">{{filteredDoctor?.experience}} Years of Experience
-            </div>
+    <!-- Doctor Details -->
+    <div class="doc_content">
+      <h1 class="doc_name">{{filteredDoctor?.name}}</h1>
+      <div class="department">{{filteredDoctor?.department}}</div>
+      <div class="qualification">
+        {{filteredDoctor?.qualification}}
+      </div>
+      <div class="doc_designation">
+        {{filteredDoctor?.designation}}
+      </div>
+      <div class="experience">{{filteredDoctor?.experience}} Years of Experience
+      </div>
 
-            <div class="cta_buttons">
-              <button class="btn-btn btn_primary-btn" (click)="scrollTo('appointment')">Book Appointment</button>
-              <button class="btn-btn btn_secondary-btn" (click)="scrollTo('about')">Learn More</button>
-            </div>
-            
-        </div>
+      <div class="cta_buttons">
+        <button class="btn-btn btn_primary-btn" (click)="scrollTo('appointment')">Book Appointment</button>
+        <button class="btn-btn btn_secondary-btn" (click)="scrollTo('about')">Learn More</button>
+      </div>
 
-        <!-- Doctor Image -->
-        <div class="doctor_image">
-            <div class="doctor_bg"></div>
-            <!-- Placeholder for doctor image -->
-            <!-- <div class="doctor_img" ">
+    </div>
+
+    <!-- Doctor Image -->
+    <div class="doctor_image">
+      <div class="doctor_bg"></div>
+      <!-- Placeholder for doctor image -->
+      <!-- <div class="doctor_img" ">
                 Doctor Image<br>Placeholder
             </div> -->
-            <div class="doctor_img">
-                <img [src]="filteredDoctor?.image"
-                    [alt]="filteredDoctor?.alt"/>
-            </div>
-        </div>
+      <div class="doctor_img">
+        <img [src]="filteredDoctor?.image" [alt]="filteredDoctor?.alt" />
+      </div>
     </div>
+  </div>
 
-    <div *ngIf="filteredDoctor?.briefProfile">
-        <div class="about-section" id="about">
-            <div class="container">
-                <div class="about-content">
-                    <h2 class="about-title">Profile Summary</h2>
-                    <p class="about-description">
-                       {{filteredDoctor?.briefProfile}}
-                    </p>
+  <div *ngIf="filteredDoctor?.briefProfile">
+    <div class="about-section" id="about">
+      <div class="container">
+        <div class="about-content">
+          <h2 class="about-title">Profile Summary</h2>
+          <p class="about-description">
+            {{filteredDoctor?.briefProfile}}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container expertise-section" id="about" *ngIf="filteredDoctor?.areasOfExpertise?.length">
+    <h2 class="expertise-title">Areas of Expertise</h2>
+    <div class="expertise-wrapper" *ngIf="filteredDoctor?.areasOfExpertise?.length">
+
+      <div class="expertise-row" *ngFor="let row of getExpertiseRows(filteredDoctor?.areasOfExpertise)">
+        <div class="expertise-left">
+          <p class="expertise-text" *ngIf="row.left">{{ row.left.expertise }}</p>
+        </div>
+
+        <div class="expertise-center">
+          <div class="expertise-dot"></div>
+        </div>
+
+        <div class="expertise-right">
+          <p class="expertise-text" *ngIf="row.right">{{ row.right.expertise }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <div class="affiliations-section" *ngIf="filteredDoctor?.professionalAffilications?.length">
+    <h2 class="affiliations-title">Professional Affiliations</h2>
+    <div class="affiliations-container">
+      <div class="affiliation-card" *ngFor="let aff of filteredDoctor?.professionalAffilications">
+        <div class="affiliation-logo">
+          <ng-container *ngIf="aff.image; else iconBlock">
+            <img [src]="aff.image" [alt]="aff.paHeading" />
+          </ng-container>
+          <ng-template #iconBlock>
+            <i [class]="aff.icon"></i>
+          </ng-template>
+        </div>
+        <p class="affiliation-description">{{ aff.paDescription }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- Awards Section - Updated Condition -->
+
+  <section class="awards-section" *ngIf="filteredDoctor?.awards?.length">
+    <div class="">
+      <div class="section-header">
+        <h2 class="section-title">Honors & Awards</h2>
+        <p class="section-subtitle">
+          Recognition for excellence in gynecological care and medical innovation
+        </p>
+      </div>
+
+      <div class="awards-carousel">
+        <div class="awards-track" [ngClass]="{'scrolling': filteredDoctor?.awards.length > 2}">
+          <div class="award-card"
+            *ngFor="let award of filteredDoctor.awards.concat(filteredDoctor?.awards.length > 2 ? filteredDoctor.awards : [])"
+            [ngClass]="award.cardColorClass">
+            <h4>{{ award.awardFor }}</h4>
+            <p>{{ award.awardDescription }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="publications-section" *ngIf="filteredDoctor?.publications?.length">
+    <div class="container">
+      <h2 class="publications-title">Publications</h2>
+      <ul class="publications-list">
+        <li class="publication-item" *ngFor="let publication of filteredDoctor?.publications; let i = index">
+          <span class="pub-number">{{ i + 1 }}.</span>
+          <span class="pub-text" [innerHTML]="publication?.title || publication">
+            <!-- {{  }} -->
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- Enhanced Publications Section -->
+  <div class="max-w-6xl mx-auto py-16">
+
+    <!-- Appointment Form Section -->
+    <div class="pacage-form">
+      <app-health-package-form *ngIf="isSpecialDoctor" [doctor]="filteredDoctor"></app-health-package-form>
+    </div>
+    <div class="form-section" id="appointment" #formSection *ngIf="!isSpecialDoctor">
+      <div class="form-container">
+        <div class="form-box">
+          <div class="form-title">
+            <h3>Book an Appointment</h3>
+            <p>Schedule your consultation with {{ filteredDoctor?.name }}</p>
+            <hr />
+          </div>
+
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <!-- Name Row -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label>First Name *</label>
+                <div class="input-wrapper">
+                  <input type="text" formControlName="firstName" placeholder="Enter your first name" required />
                 </div>
-            </div>
-    
-        </div>
-    </div>
+                <div *ngIf="f['firstName'].touched && f['firstName'].invalid">
+                  <small class="error" *ngIf="f['firstName'].errors?.['required']">First name is required</small>
+                  <small class="error" *ngIf="f['firstName'].errors?.['minlength']">Minimum 2 characters
+                    required</small>
+                </div>
+              </div>
 
-    <div class="container expertise-section" id="about" *ngIf="filteredDoctor?.areasOfExpertise?.length">
-        <h2 class="expertise-title">Areas of Expertise</h2>
-        <div class="expertise-wrapper" *ngIf="filteredDoctor?.areasOfExpertise?.length">
-      
-          <div class="expertise-row" *ngFor="let row of getExpertiseRows(filteredDoctor?.areasOfExpertise)">
-            <div class="expertise-left">
-              <p class="expertise-text" *ngIf="row.left">{{ row.left.expertise }}</p>
-            </div>
-      
-            <div class="expertise-center">
-              <div class="expertise-dot"></div>
-            </div>
-      
-            <div class="expertise-right">
-              <p class="expertise-text" *ngIf="row.right">{{ row.right.expertise }}</p>
-            </div>
-          </div>
-      
-        </div>
-      </div>
-      
-
-
-
-      <div class="affiliations-section" *ngIf="filteredDoctor?.professionalAffilications?.length">
-        <h2 class="affiliations-title">Professional Affiliations</h2>
-        <div class="affiliations-container">
-          <div class="affiliation-card" *ngFor="let aff of filteredDoctor?.professionalAffilications">
-            <div class="affiliation-logo">
-              <ng-container *ngIf="aff.image; else iconBlock">
-                <img [src]="aff.image" [alt]="aff.paHeading" />
-              </ng-container>
-              <ng-template #iconBlock>
-                <i [class]="aff.icon"></i>
-              </ng-template>
-            </div>
-            <p class="affiliation-description">{{ aff.paDescription }}</p>
-          </div>
-        </div>
-      </div>
-      
-
-
-
-    <!-- Awards Section - Updated Condition -->
-
-    <section class="awards-section" *ngIf="filteredDoctor?.awards?.length">
-        <div class="">
-          <div class="section-header">
-            <h2 class="section-title">Honors & Awards</h2>
-            <p class="section-subtitle">
-              Recognition for excellence in gynecological care and medical innovation
-            </p>
-          </div>
-      
-          <div class="awards-carousel">
-            <div class="awards-track" [ngClass]="{'scrolling': filteredDoctor?.awards.length > 2}">
-              <div
-                class="award-card"
-                *ngFor="let award of filteredDoctor.awards.concat(filteredDoctor?.awards.length > 2 ? filteredDoctor.awards : [])"
-                [ngClass]="award.cardColorClass"
-              >
-                <h4>{{ award.awardFor }}</h4>
-                <p>{{ award.awardDescription }}</p>
+              <div class="form-group">
+                <label>Last Name *</label>
+                <div class="input-wrapper">
+                  <input type="text" formControlName="lastName" placeholder="Enter your last name" required />
+                </div>
+                <div *ngIf="f['lastName'].touched && f['lastName'].invalid">
+                  <small class="error" *ngIf="f['lastName'].errors?.['required']">Last name is required</small>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
 
-
-
-      <section class="publications-section" *ngIf="filteredDoctor?.publications?.length">
-        <div class="container">
-          <h2 class="publications-title">Publications</h2>
-          <ul class="publications-list">
-            <li class="publication-item" *ngFor="let publication of filteredDoctor?.publications; let i = index">
-              <span class="pub-number">{{ i + 1 }}.</span>
-              <span class="pub-text" [innerHTML]="publication?.title || publication">
-                <!-- {{  }} -->
-              </span>
-            </li>
-          </ul>
-        </div>
-      </section>
-      
-
-
-
-
-    <!-- Enhanced Publications Section -->
-    <div class="max-w-6xl mx-auto py-16">
-
-<!-- Appointment Form Section -->
-<div class="form-section" id="appointment" #formSection>
-    <div class="form-container">
-      <div class="form-box">
-        <div class="form-title">
-          <h3>Book an Appointment</h3>
-          <p>Schedule your consultation with {{ filteredDoctor?.name }}</p>
-          <hr />
-        </div>
-  
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-          <!-- Name Row -->
-          <div class="form-grid">
-            <div class="form-group">
-              <label>First Name *</label>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  formControlName="firstName"
-                  placeholder="Enter your first name"
-                  required
-                />
+            <!-- Contact Row -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <div class="input-wrapper">
+                  <input type="tel" formControlName="contactNumber" placeholder="Enter your phone number" required />
+                </div>
+                <div *ngIf="f['contactNumber'].touched && f['contactNumber'].invalid">
+                  <small class="error" *ngIf="f['contactNumber'].errors?.['required']">Contact number is
+                    required</small>
+                  <small class="error" *ngIf="f['contactNumber'].errors?.['pattern']">Enter digits only</small>
+                  <small class="error" *ngIf="f['contactNumber'].errors?.['minlength']">Must be 10 digits</small>
+                </div>
               </div>
-              <div *ngIf="f['firstName'].touched && f['firstName'].invalid">
-                <small class="error" *ngIf="f['firstName'].errors?.['required']">First name is required</small>
-                <small class="error" *ngIf="f['firstName'].errors?.['minlength']">Minimum 2 characters required</small>
+
+              <div class="form-group">
+                <label>Email Address *</label>
+                <div class="input-wrapper">
+                  <input type="email" formControlName="email" placeholder="Enter your email" required />
+                </div>
+                <div *ngIf="f['email'].touched && f['email'].invalid">
+                  <small class="error" *ngIf="f['email'].errors?.['required']">Email is required</small>
+                  <small class="error" *ngIf="f['email'].errors?.['email']">Invalid email format</small>
+                </div>
               </div>
             </div>
-  
-            <div class="form-group">
-              <label>Last Name *</label>
-              <div class="input-wrapper">
-                <input
-                  type="text"
-                  formControlName="lastName"
-                  placeholder="Enter your last name"
-                  required
-                />
-              </div>
-              <div *ngIf="f['lastName'].touched && f['lastName'].invalid">
-                <small class="error" *ngIf="f['lastName'].errors?.['required']">Last name is required</small>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Contact Row -->
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Phone Number *</label>
-              <div class="input-wrapper">
-                <input
-                  type="tel"
-                  formControlName="contactNumber"
-                  placeholder="Enter your phone number"
-                  required
-                />
-              </div>
-              <div *ngIf="f['contactNumber'].touched && f['contactNumber'].invalid">
-                <small class="error" *ngIf="f['contactNumber'].errors?.['required']">Contact number is required</small>
-                <small class="error" *ngIf="f['contactNumber'].errors?.['pattern']">Enter digits only</small>
-                <small class="error" *ngIf="f['contactNumber'].errors?.['minlength']">Must be 10 digits</small>
-              </div>
-            </div>
-  
-            <div class="form-group">
-              <label>Email Address *</label>
-              <div class="input-wrapper">
-                <input
-                  type="email"
-                  formControlName="email"
-                  placeholder="Enter your email"
-                  required
-                />
-              </div>
-              <div *ngIf="f['email'].touched && f['email'].invalid">
-                <small class="error" *ngIf="f['email'].errors?.['required']">Email is required</small>
-                <small class="error" *ngIf="f['email'].errors?.['email']">Invalid email format</small>
-              </div>
-            </div>
-          </div>
-  
-          <!-- Date + Time -->
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Preferred Date *</label>
-              <div class="input-wrapper">
-                <p-datepicker  [minDate]="minDate" 
-                placeholder="Choose a Date" inputId="icondisplay" name="date_appointment"
-                formControlName="date_appointment" [disabledDays]="disabledDays"
-                (onSelect)="onDateChange($event)" appendTo="body">
-                <ng-template pTemplate="date" let-date>
-                    <span>
+
+            <!-- Date + Time -->
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Preferred Date *</label>
+                <div class="input-wrapper">
+                  <p-datepicker [minDate]="minDate" placeholder="Choose a Date" inputId="icondisplay"
+                    name="date_appointment" formControlName="date_appointment" [disabledDays]="disabledDays"
+                    (onSelect)="onDateChange($event)" appendTo="body">
+                    <ng-template pTemplate="date" let-date>
+                      <span>
                         {{ date.day }}
-                    </span>
-                </ng-template>
-            </p-datepicker>
+                      </span>
+                    </ng-template>
+                  </p-datepicker>
+                </div>
               </div>
-            </div>
-  
-            <div class="form-group">
+
+              <div class="form-group">
                 <label>Available Time Slots *</label>
                 <div class="input-wrapper">
-                  <p-select
-                    formControlName="time"
-                    [options]="availableTimes"
-                    optionLabel="name"
-                    placeholder="Select a time slot"
-                    required
-                    appendTo="body"
-                    styleClass="w-100"
-                  >
+                  <p-select formControlName="time" [options]="availableTimes" optionLabel="name"
+                    placeholder="Select a time slot" required appendTo="body" styleClass="w-100">
                   </p-select>
-              
+
                   <!-- optional: show 'no slots' message below -->
                   <div *ngIf="!availableTimes?.length" class="no-slots">
                     No slots available
                   </div>
                 </div>
               </div>
-              
-          </div>
-  
-          <!-- Message -->
-          <div class="form-group">
-            <label>Reason for Visit</label>
-            <div class="input-wrapper">
-              <textarea
-                formControlName="message"
-                rows="4"
-                placeholder="Please describe your symptoms or reason for the appointment..."
-              ></textarea>
+
             </div>
-            <div *ngIf="f['message'].touched && f['message'].invalid">
-              <small class="error">Message is required</small>
+
+            <!-- Message -->
+            <div class="form-group">
+              <label>Reason for Visit</label>
+              <div class="input-wrapper">
+                <textarea formControlName="message" rows="4"
+                  placeholder="Please describe your symptoms or reason for the appointment..."></textarea>
+              </div>
+              <div *ngIf="f['message'].touched && f['message'].invalid">
+                <small class="error">Message is required</small>
+              </div>
             </div>
-          </div>
-  
-          <!-- Submit -->
-          <div class="submit-button">
-            <button type="submit" [disabled]="contactForm.invalid">Schedule Appointment</button>
-          </div>
-        </form>
-  
-        <div id="responseMessage">{{ '' }}</div>
+
+            <!-- Submit -->
+            <div class="submit-button">
+              <button type="submit" [disabled]="contactForm.invalid">Schedule Appointment</button>
+            </div>
+          </form>
+
+          <div id="responseMessage">{{ '' }}</div>
+        </div>
       </div>
     </div>
-  </div>
-  
 
-    </div>
-    <p-toast></p-toast>
+
+  </div>
+  <p-toast></p-toast>

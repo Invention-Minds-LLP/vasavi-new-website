@@ -1471,6 +1471,15 @@
     }
 }
 
+@media (max-width :767px) {
+    .popup-content {
+        width: 90%;
+    }
+
+    .popup-image{
+        width: 100%;
+    }
+}
 @media (max-width: 480px) {
     .comparison-header h1 {
         font-size: 1.8em;
@@ -1790,15 +1799,7 @@
     justify-content: center;
 }
 
-@media (max-width : 500px) {
-    .popup-content {
-        width: 90%;
-    }
 
-    .popup-image{
-        width: 100%;
-    }
-}
 
 .close-btn {
   position: absolute;

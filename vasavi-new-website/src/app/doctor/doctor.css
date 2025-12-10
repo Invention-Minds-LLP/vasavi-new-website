@@ -1687,6 +1687,13 @@ body {
     margin: 0 auto;
 }
 
+.pacage-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
 
 
 

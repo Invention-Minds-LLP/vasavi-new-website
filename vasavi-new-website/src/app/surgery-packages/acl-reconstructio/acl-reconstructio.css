@@ -959,6 +959,13 @@
     max-width: 280px;
 }
 
+@media (max-width : 767px) {
+
+    .popup-image{
+        width: 100%;
+    }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .surgery-timeline-h {
@@ -1419,6 +1426,8 @@
     }
 }
 
+
+
 @media (max-width: 480px) {
     .comparison-header h1 {
         font-size: 1.8em;
@@ -1433,12 +1442,9 @@
         padding: 15px 25px;
     }
 }
-@media (max-width : 500px) {
 
-    .popup-image{
-        width: 100%;
-    }
-}
+
+
 
 
 @media (max-width: 330px) {
