@@ -48,6 +48,9 @@ export class RoboticAppendectomy {
   ];
 
   ngOnInit(): void {
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
     this.title.setTitle('Appendix Removal Surgery in Bangalore | Laparoscopic Appendectomy');
     this.meta.updateTag({ name: 'descrtption', content: 'Advanced appendix removal with laparoscopic & robotic care. Fast healing, minimal pain & cashless insurance options.' })
   }
@@ -256,6 +259,17 @@ export class RoboticAppendectomy {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 }

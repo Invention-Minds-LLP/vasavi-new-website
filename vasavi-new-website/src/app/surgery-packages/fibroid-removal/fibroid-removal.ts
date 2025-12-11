@@ -78,9 +78,9 @@ export class FibroidRemoval {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+ setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Fibroid Removal Surgery in Bangalore | Laparoscopic Myomectomy');
     this.meta.updateTag({name:'description', content:'Remove uterine fibroids safely with advanced laparoscopic surgery. Preserve fertility & ensure faster recovery.'})
@@ -225,6 +225,17 @@ export class FibroidRemoval {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 }

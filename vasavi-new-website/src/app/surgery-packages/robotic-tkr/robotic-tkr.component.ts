@@ -5,6 +5,7 @@ import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
 import { PackageForm } from "../../package-form/package-form";
 import { Meta, Title } from '@angular/platform-browser';
+import { SeniorDoctorProfile } from '../../senior-doctor-profile/senior-doctor-profile';
 
 interface HerniaType {
   cssClass: string;
@@ -19,13 +20,13 @@ interface HerniaType {
 
 @Component({
   selector: 'app-robotic-tkr',
-  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds, PackageForm],
+  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds, PackageForm, SeniorDoctorProfile],
   templateUrl: './robotic-tkr.component.html',
   styleUrl: './robotic-tkr.component.css'
 })
 export class RoboticTkrComponent {
 
-  constructor(private title:Title, private meta:Meta){}
+  constructor(private title: Title, private meta: Meta) { }
   @ViewChild('carouselTrack', { static: false }) trackRef!: ElementRef<HTMLDivElement>;
   @ViewChild('prevBtn', { static: false }) prevBtnRef!: ElementRef<HTMLButtonElement>;
   @ViewChild('nextBtn', { static: false }) nextBtnRef!: ElementRef<HTMLButtonElement>;
@@ -37,7 +38,7 @@ export class RoboticTkrComponent {
   activeSection = 'overview';
 
   sections = [
-   { name: 'Overview', id: 'overview' },
+    { name: 'Overview', id: 'overview' },
     { name: 'Symptoms', id: 'symptoms' },
     { name: 'Book an Appointment', id: 'appointment' },
     { name: 'Our Doctors', id: 'doctors' },
@@ -52,7 +53,7 @@ export class RoboticTkrComponent {
   };
 
   doctors: any = [
-   {
+    {
       name: "Dr. Rupendu T",
       img: "img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png",
       alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
@@ -68,7 +69,7 @@ export class RoboticTkrComponent {
       experience: '17+',
       department: 'Orthopedics',
       // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-srivatsa-subramanya" 
+      slug: "/dr-srivatsa-subramanya"
     },
     {
       name: "Dr. Venkatesh Rathod R",
@@ -154,6 +155,7 @@ export class RoboticTkrComponent {
     },
   ];
 
+
   private popupInterval: any;
 
   ngOnInit(): void {
@@ -167,7 +169,7 @@ export class RoboticTkrComponent {
     // }, 5000);
 
     this.title.setTitle('Total Knee Replacement Surgery in Bangalore | Walk Pain-Free Again');
-    this.meta.updateTag({name:'description', content:'Get long-lasting relief from knee pain with advanced Total Knee Replacement at Vasavi Hospitals. Expert orthopedic care, faster recovery & cashless insurance.'})
+    this.meta.updateTag({ name: 'description', content: 'Get long-lasting relief from knee pain with advanced Total Knee Replacement at Vasavi Hospitals. Expert orthopedic care, faster recovery & cashless insurance.' })
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
@@ -190,7 +192,7 @@ export class RoboticTkrComponent {
     this.closePopup(); // close popup after success
   }
 
-  
+
   // sub navbar
   ngAfterViewInit(): void {
     this.updateCarouselMode();
@@ -321,7 +323,7 @@ export class RoboticTkrComponent {
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
   }
 
-    isPopupImageOpen = false;
+  isPopupImageOpen = false;
   // selectedImage: string | null = null;
 
   openImagePopup() {

@@ -46,6 +46,9 @@ export class ProstateRemoval {
     { name: 'Procedures', id: 'procedures' }
   ];
   ngOnInit():void{
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
     this.title.setTitle('TURP Prostate Removal Surgery in Bangalore | Vasavi Urology');
     this.meta.updateTag({name:'description', content:'Treat enlarged prostate safely with advanced TURP. No external cuts, quick recovery & insurance-covered packages.'})
   }
@@ -254,6 +257,17 @@ herniaTypes: HerniaType[] = [
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 }

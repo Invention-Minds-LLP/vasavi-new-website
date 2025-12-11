@@ -67,10 +67,25 @@ const staticRoutes = [
   '/gallbladder-removal-surgery-in-bangalore',
   '/appendectomy-surgery-in-bangalore',
   '/hysterectomy-surgery-in-bangalore',
+  '/tonsillectomy-surgery-in-bangalore',
+  '/adenoid-removal-in-bangalore',
+  '/sinus-surgery-in-bangalore',
+  '/piles-surgery-in-bangalore',
+  '/fistula-surgery-in-bangalore',
+  '/acl-reconstruction-in-bangalore',
+  '/turp-surgery-in-bangalore',
+  '/ovarian-cystectomy-in-bangalore',
+  '/fibroid-removal-in-bangalore',
+  '/ct-angiography-in-bangalore',
+  '/coronary-angiography-in-bangalore',
 
   // --- Others ---
   '/ai-health-chatbot-in-bangalore',
   '/thank-you',
+
+  // --- Health-packages ---
+  '/health-package/cardiac-wellness-package',
+  '/health-package/diabetes-health-check'
 ];
 
 // ✅ Dynamic doctor and blog routes

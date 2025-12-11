@@ -147,8 +147,8 @@
   <div class="max-w-6xl mx-auto py-16">
 
     <!-- Appointment Form Section -->
-    <div class="pacage-form">
-      <app-health-package-form *ngIf="isSpecialDoctor" [doctor]="filteredDoctor"></app-health-package-form>
+    <div class="pacage-form" id="appointment">
+      <app-health-package-form *ngIf="isSpecialDoctor" [doctor]="filteredDoctor" [page]="'Doctor-Page'"></app-health-package-form>
     </div>
     <div class="form-section" id="appointment" #formSection *ngIf="!isSpecialDoctor">
       <div class="form-container">

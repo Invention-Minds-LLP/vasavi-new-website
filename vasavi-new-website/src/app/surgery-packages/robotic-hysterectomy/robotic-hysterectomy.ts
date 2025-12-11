@@ -12,8 +12,8 @@ interface HerniaType {
   title: string;
   description: string;
   tag?: string;
-  location? : string;
-  recoverytime? : string;
+  location?: string;
+  recoverytime?: string;
   hospitalStay?: string
 }
 @Component({
@@ -24,7 +24,7 @@ interface HerniaType {
 })
 export class RoboticHysterectomy {
 
-  constructor(private title:Title, private meta: Meta){}
+  constructor(private title: Title, private meta: Meta) { }
 
   @ViewChild('carouselTrack', { static: false }) trackRef!: ElementRef<HTMLDivElement>;
   @ViewChild('prevBtn', { static: false }) prevBtnRef!: ElementRef<HTMLButtonElement>;
@@ -37,7 +37,7 @@ export class RoboticHysterectomy {
   activeSection = 'overview';
 
   sections = [
-   { name: 'Overview', id: 'overview' },
+    { name: 'Overview', id: 'overview' },
     { name: 'Symptoms', id: 'symptoms' },
     { name: 'Book an Appointment', id: 'appointment' },
     { name: 'Our Doctors', id: 'doctors' },
@@ -46,9 +46,9 @@ export class RoboticHysterectomy {
     { name: 'Procedures', id: 'procedures' }
   ];
 
-  doctorHeader : any = {
-    title : "Meet Our Surgery Specialist",
-    description : ""
+  doctorHeader: any = {
+    title: "Meet Our Surgery Specialist",
+    description: ""
   }
 
   doctors: any = [
@@ -125,22 +125,22 @@ export class RoboticHysterectomy {
       hospitalStay: '2–3 days',
       recoverytime: 'Robotic / Open',
     },
-    
+
   ];
 
-  
+
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+    setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
     // }, 25000);
     this.title.setTitle(' Affordable Hysterectomy Surgery in Bangalore | Vasavi Hospitals');
-    this.meta.updateTag({name:'description', content:'Get expert laparoscopic & robotic hysterectomy in Bangalore for fibroids, bleeding & uterine issues. Safe, precise & quick recovery.'})
+    this.meta.updateTag({ name: 'description', content: 'Get expert laparoscopic & robotic hysterectomy in Bangalore for fibroids, bleeding & uterine issues. Safe, precise & quick recovery.' })
   }
 
   handleFormSubmit(data: { name: string; phoneNumber: string; otp: string }) {
@@ -150,7 +150,7 @@ export class RoboticHysterectomy {
   }
 
 
-  
+
   // sub navbar
   ngAfterViewInit(): void {
     this.updateCarouselMode();
@@ -280,5 +280,16 @@ export class RoboticHysterectomy {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
   }
-  
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
+  }
+
 }

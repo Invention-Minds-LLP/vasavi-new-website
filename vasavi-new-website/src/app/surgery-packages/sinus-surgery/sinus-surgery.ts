@@ -101,9 +101,9 @@ export class SinusSurgery {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+ setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Endoscopic Sinus Surgery in Bangalore | Vasavi Hospitals ENT');
     this.meta.updateTag({name:'description', content:'Relieve sinus infections & breathing issues with advanced endoscopic sinus surgery. Minimally invasive, faster healing.'})
@@ -248,6 +248,17 @@ export class SinusSurgery {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 

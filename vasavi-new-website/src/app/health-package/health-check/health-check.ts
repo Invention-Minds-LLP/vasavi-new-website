@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
 import { DoctorsSlide } from "../../doctors-slide/doctors-slide";
 
 import { environment } from '../../../environments/environment';
@@ -48,12 +48,21 @@ export class HealthCheck {
   // minDate: string = new Date().toISOString().split('T')[0];
   currentPackage: any;
 
-  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute) { }
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router, private route: ActivatedRoute, private title: Title, private meta: Meta) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
       const slug = params['slug'];
       this.currentPackage = this.packages.find(p => p.slug === slug);
+
+      if (this.currentPackage) {
+        this.title.setTitle(this.currentPackage.metaTitle);
+
+        this.meta.updateTag({
+          name: 'description',
+          content: this.currentPackage.metaDescription
+        });
+      }
     });
 
     // this.appointmentForm = this.fb.group({
@@ -190,6 +199,9 @@ export class HealthCheck {
   packages = [
     {
       slug: "diabetes-health-check",
+
+      metaTitle: "Diabetes Health Check Package | Vasavi Hospital Bangalore",
+      metaDescription: "Complete diabetes checkup package at Vasavi Hospital, Bangalore. Includes HbA1c, blood sugar tests, kidney screening & expert diabetology consultation.",
 
       // Banner section
       pageTitle: "Diabetes Health Check",
@@ -434,9 +446,12 @@ export class HealthCheck {
 
 
     //Cardiac Health Package
-   
+
     {
-       slug: "cardiac-wellness-package",
+      slug: "cardiac-wellness-package",
+      metaTitle: "Cardiac Health Check Package | Vasavi Hospital Bangalore",
+      metaDescription: "Comprehensive cardiac health check package at Vasavi Hospital, Bangalore. Includes ECG, echo, blood tests & cardiologist consultation for early detection.",
+
 
       // Banner section
       pageTitle: "Cardiac Health Package",

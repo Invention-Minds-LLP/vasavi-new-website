@@ -96,9 +96,9 @@ export class CoronaryAngiography {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Coronary Angiography in Bangalore | Heart Blockage Test');
     this.meta.updateTag({ name: 'description', content: 'Accurate coronary angiography to detect heart blockages early. Trusted cardiologists & advanced cardiac lab at Vasavi Hospitals.' })
@@ -243,6 +243,17 @@ export class CoronaryAngiography {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 }

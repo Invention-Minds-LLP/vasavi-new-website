@@ -47,6 +47,9 @@ export class Haemorrhoidectomy {
   ];
 
   ngOnInit(): void {
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
     this.title.setTitle('Laser & Conventional Piles Surgery in Bangalore | Vasavi')
     this.meta.updateTag({ name: 'description', content: 'Pain-free piles surgery using laser & advanced techniques. Affordable, safe & covered by cashless insurance.' })
   }
@@ -248,5 +251,16 @@ export class Haemorrhoidectomy {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }

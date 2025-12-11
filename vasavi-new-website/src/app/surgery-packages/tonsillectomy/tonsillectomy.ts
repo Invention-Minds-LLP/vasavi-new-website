@@ -49,6 +49,9 @@ export class Tonsillectomy {
 
 
   ngOnInit(): void {
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
     this.title.setTitle('Tonsil Removal Surgery in Bangalore | ENT Specialists');
     this.meta.updateTag({ name: 'description', content: 'Safe tonsillectomy for chronic throat infections & snoring. Gentle care & fast healing for children & adults.' })
   }
@@ -267,5 +270,16 @@ export class Tonsillectomy {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }

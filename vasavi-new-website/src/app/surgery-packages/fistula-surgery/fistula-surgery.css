@@ -1745,18 +1745,20 @@
   }
   
   /* Close button */
- .popup-close {
-    position: absolute;
-    top: 58px;
-    right: 6px;
-    background: transparent;
-    border: none;
-    font-size: 21px;
-    cursor: pointer;
-    color: red;
-    transition: 0.2s;
-    font-weight: 800;
-  }
+.close-btn {
+  position: absolute;
+  top:130px;
+  right: 400px;
+  background: red;
+  color: white;
+  border: none;
+  font-size: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
   
   /* .popup-close:hover {
     color: #000;
@@ -1777,5 +1779,31 @@
      .timeline-header-h h2 {
         font-size: 1.5em;
         margin-bottom: 10px;
+    }
+}
+
+@media(max-width:1439px) {
+    .close-btn {
+        top: 205px;
+        right: 154px;
+    }
+}
+
+@media(max-width:1023px) {
+    .close-btn {
+        top: 85px;
+        right: 27px;
+    }
+}
+
+@media (max-width : 767px) {
+
+    .popup-image{
+        width: 100%;
+        padding: 20px;
+    }
+     .close-btn{
+        top: 238px;
+        right: 8px;
     }
 }
