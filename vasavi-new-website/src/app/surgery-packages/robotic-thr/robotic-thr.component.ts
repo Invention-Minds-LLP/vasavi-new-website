@@ -5,6 +5,7 @@ import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
 import { PackageForm } from "../../package-form/package-form";
 import { Meta, Title } from '@angular/platform-browser';
+import { SeniorDoctorProfile } from "../../senior-doctor-profile/senior-doctor-profile";
 
 interface HerniaType {
   cssClass: string;
@@ -20,7 +21,7 @@ interface HerniaType {
 
 @Component({
   selector: 'app-robotic-thr',
-  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds, PackageForm],
+  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds, PackageForm, SeniorDoctorProfile],
   templateUrl: './robotic-thr.component.html',
   styleUrl: './robotic-thr.component.css'
 })

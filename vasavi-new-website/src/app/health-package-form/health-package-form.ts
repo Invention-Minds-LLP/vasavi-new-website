@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 
@@ -13,6 +13,7 @@ import { Route, Router } from '@angular/router';
 export class HealthPackageForm {
 
   @Input() doctor: any;
+  @Input() page: any
 
    apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
@@ -126,13 +127,13 @@ export class HealthPackageForm {
 
   bookAppointment() {
     if (!this.otpVerified) return;
-    console.log("Form Data:", this.appointmentForm.value);
+    console.log("Form Data:", this.appointmentForm.value, this.page);
     const appointmentDetails = {
       name: this.appointmentForm.value.name,
       phone: this.appointmentForm.value.mobile,
       date: this.appointmentForm.value.date,
       address: '',
-      page: this.pageName,
+      page: this.page,
     };
 
     const emailRequest = {

@@ -97,10 +97,9 @@ export class CTAngiography {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
-
+   setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
     this.title.setTitle('CT Angiography Test in Bangalore | Advanced Diagnostic Imaging');
     this.meta.updateTag({name:'description', content:'High-precision CT angiography for heart, brain & arteries. Quick, safe & insurance-covered diagnostic test.'})
 
@@ -244,6 +243,17 @@ export class CTAngiography {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 
 }

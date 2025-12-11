@@ -5,10 +5,11 @@ import { DoctorsCard } from '../../doctors-card/doctors-card';
 import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
 import { Cta } from '../../cta/cta';
 import { Meta, Title } from '@angular/platform-browser';
+import { SeniorDoctorProfile } from "../../senior-doctor-profile/senior-doctor-profile";
 
 @Component({
   selector: 'app-acl-reconstructio',
-  imports: [CallbackForm, CommonModule, DoctorsCard, Cta, PopUpFormAds],
+  imports: [CallbackForm, CommonModule, DoctorsCard, Cta, PopUpFormAds, SeniorDoctorProfile],
   templateUrl: './acl-reconstructio.html',
   styleUrl: './acl-reconstructio.css',
 })

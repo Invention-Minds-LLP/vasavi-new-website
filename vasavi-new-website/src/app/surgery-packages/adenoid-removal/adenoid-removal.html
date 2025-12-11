@@ -351,3 +351,10 @@
         <app-callback-form [pageName]="'Adenoid Removal'"></app-callback-form>
     </div>
 </div>
+
+<div class="popup-overlay image-pop-up" *ngIf="isPopupImageOpen">
+  <div class="popup-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeImagePopup()">✖</button>
+    <img src="img/packages/surgery-pop-ups.jpg" class="popup-image" />
+  </div>
+</div>

@@ -1,0 +1,345 @@
+.doctor-card {
+    width: 100%;
+    /* max-width: 1384px; */
+    /* width: 1384px; */
+    height: 418px;
+    border-radius: 33px;
+    border: 8px solid #303394;
+    /* padding: 30px; */
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-part {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+    top: -70px;
+}
+
+.left-side {
+    padding: 20px 30px;
+}
+
+
+.content {
+    flex: 1;
+}
+
+.name {
+    color: #000;
+    /* text-align: center; */
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.64px;
+}
+
+.department {
+    color: #000;
+    /* text-align: center; */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+
+.btn {
+    width: 303px;
+    height: 60px;
+    border-radius: 26.5px;
+   background: linear-gradient(90deg, #4B3CB5 0%, #6755E1 100%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FFF;
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.qualification {
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+    /* 187.5% */
+    letter-spacing: 0.16px;
+}
+
+.box-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 423px;
+    height: 82px;
+    border-radius: 41px;
+    border: 1px solid #303394;
+    background: #FFF;
+    backdrop-filter: blur(2px);
+    padding: 2px;
+}
+
+.heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+.heading .one {
+    color: #000;
+    font-family: Italianno;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.55px;
+}
+
+.heading .two {
+    color: #303394;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+.heading .three {
+    color: #1B8FCD;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.4px;
+}
+
+.count {
+    color: #303394;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    /* 78.125% */
+    letter-spacing: 0.32px;
+}
+
+.dept {
+    color: #303394;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    /* 156.25% */
+    letter-spacing: 0.16px;
+    width: 146px;
+    text-align: right;
+}
+
+.content-part .doctor-img {
+    width: 383px;
+    height: auto;
+    position: relative;
+    top: -20px;
+}
+
+.right-side .banner-img {
+    border-radius: 24px;
+    width: 1146px;
+    height: 765px;
+    position: absolute;
+    left: 350px;
+}
+
+@media (max-width: 1024px) {
+
+    .doctor-card {
+        padding: 20px;
+        /* width: 100%; */
+    }
+
+    .content-part {
+        top: 0;
+        gap: 30px;
+        align-items: normal;
+    }
+
+    .content-part .doctor-img {
+        width: 243px;
+        top: -8px;
+        height: auto;
+        right: 10px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+    .department {
+        font-size: 18px;
+    }
+    .qualification{
+        line-height: normal;
+    }
+
+    .right-side .banner-img {
+        display: none;
+    }
+
+    .left-side {
+        padding: 0;
+    }
+    .count {
+        font-size: 24px;
+    }
+    .dept{
+        text-align: center;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .doctor-card {
+        /* padding: 20px; */
+        border-width: 5px;
+        height: auto;
+        width: 100%;
+    }
+
+    .content-part {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .department {
+        font-size: 18px;
+    }
+
+    .btn {
+        width: 100%;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .content-part .doctor-img {
+        width: 80%;
+        margin: auto;
+        top: 0;
+        left: 0;
+    }
+
+    .box {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 14px;
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heading {
+        font-size: 26px;
+        padding: 0 10px;
+    }
+
+    .count {
+        font-size: 18px;
+    }
+
+    .dept {
+        font-size: 14px;
+        text-align: center;
+        
+    }
+
+    .box img {
+        width: 40px;
+    }
+
+    .heading .one {
+        font-size: 30px;
+    }
+
+    .heading .two {
+        font-size: 18px;
+    }
+
+    .heading .three {
+        font-size: 18px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .qualification {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+
+    @media (max-width: 480px) {
+
+        .name {
+            font-size: 28px;
+        }
+
+        .btn {
+            font-size: 18px;
+            height: 50px;
+        }
+
+        .box {
+            font-size: 13px;
+            flex-wrap: wrap;
+            height: auto;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-part .doctor-img {
+            width: 90%;
+            top: 25px;
+        }
+    }
+}

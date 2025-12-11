@@ -442,7 +442,7 @@
     }
 
     .what-is-hernia {
-        flex-direction:  column;
+        flex-direction: column;
     }
 }
 
@@ -461,13 +461,16 @@
     .stats-section {
         margin-top: 50PX;
     }
-    .stat-content h3{
+
+    .stat-content h3 {
         font-size: 24px;
     }
-    .stat-content p{
+
+    .stat-content p {
         text-align: left;
     }
-    .stat-content{
+
+    .stat-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -853,7 +856,7 @@
     border: 1px solid #e2e8f0;
     margin-top: 30px;
     margin: 2% 3%;
-    
+
 }
 
 .carousel-track {
@@ -1031,9 +1034,9 @@
         display: block;
     }
 
-     .feature-wrapper{
+    .feature-wrapper {
         flex-wrap: wrap;
-     }
+    }
 }
 
 /* Small Mobile */
@@ -1148,29 +1151,32 @@
         width: 300px;
     }
 
-    .what-is-hernia{
+    .what-is-hernia {
         gap: 20px;
     }
 
-    .what-is-hernia h1{
+    .what-is-hernia h1 {
         font-size: 26px;
     }
 
-    .hernia-section-a{
+    .hernia-section-a {
         margin-top: 40px;
     }
 
-    .feature-wrapper{
+    .feature-wrapper {
         gap: 30px;
         flex-wrap: wrap;
     }
-    .stat-content h3{
+
+    .stat-content h3 {
         font-size: 24px;
     }
-    .stat-content p{
+
+    .stat-content p {
         text-align: left;
     }
-    .stat-content{
+
+    .stat-content {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -1267,26 +1273,26 @@
 }
 
 .comparison-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 25px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Optional: make robotic image have a subtle blue tint */
 .robotic-column .comparison-image {
-  border: 3px solid rgba(0,123,255,0.2);
+    border: 3px solid rgba(0, 123, 255, 0.2);
 }
 
 /* Optional: make laparoscopic image have a neutral tint */
 .laparoscopic-column .comparison-image {
-  border: 3px solid rgba(204,204,204,0.3);
+    border: 3px solid rgba(204, 204, 204, 0.3);
 }
 
-@media (max-width: 480px ){
-        .comparison-header h2{
+@media (max-width: 480px) {
+    .comparison-header h2 {
         font-size: 26px;
     }
 }
@@ -1418,17 +1424,17 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10000;
     animation: fadeIn 0.3s ease-in-out;
-    
-  }
-  
-  /* Popup box */
-  .popup-container {
+
+}
+
+/* Popup box */
+.popup-container {
     /* background: #fff; */
     border-radius: 10px;
     max-width: 500px;
@@ -1437,24 +1443,27 @@
     box-shadow: 0 10px 30px rgba(0,0,0,0.3); */
     position: relative;
     animation: scaleIn 0.25s ease-in-out;
-  }
-  
-  /* Close button */
- .popup-close {
+}
+
+/* Close button */
+
+.close-btn {
     position: absolute;
-    top: 58px;
-    right: 6px;
-    background: transparent;
+    top: 130px;
+    right: 400px;
+    background: red;
+    color: white;
     border: none;
-    font-size: 21px;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     cursor: pointer;
-    color: red;
-    transition: 0.2s;
-    font-weight: 800;
-  }
-  
-  
-  /* .popup-close:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* .popup-close:hover {
     color: #000;
   } */
 
@@ -1764,18 +1773,48 @@
     color: #0078d4;
     font-weight: 600;
 }
+
+@media(max-width:1439px) {
+    .close-btn {
+        top: 205px;
+        right: 154px;
+    }
+}
+
+@media(max-width:1023px) {
+    .close-btn {
+        top: 85px;
+        right: 27px;
+    }
+}
+
+
 @media (max-width: 330px) {
-    .icon-box{
+    .icon-box {
         width: 35%;
     }
-    .stat-content{
+
+    .stat-content {
         width: 65%;
     }
 }
 
-@media(max-width: 320px){
-     .timeline-header-h h2 {
+@media(max-width: 320px) {
+    .timeline-header-h h2 {
         font-size: 1.5em;
         margin-bottom: 10px;
+    }
+}
+
+@media (max-width : 767px) {
+
+    .popup-image {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .close-btn {
+        top: 238px;
+        right: 8px;
     }
 }

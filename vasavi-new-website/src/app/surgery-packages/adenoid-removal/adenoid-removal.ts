@@ -87,9 +87,9 @@ export class AdenoidRemoval {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Adenoid Removal Surgery in Bangalore | ENT Specialists')
     this.meta.updateTag({ name: 'description', content: 'Safe adenoidectomy for kids & adults. No external cuts, painless recovery & improved breathing at Vasavi Hospitals.' })
@@ -232,5 +232,16 @@ export class AdenoidRemoval {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }

@@ -78,9 +78,9 @@ export class OvarianCystectomy {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+ setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Ovarian Cyst Removal Surgery in Bangalore | Laparoscopic Care');
     this.meta.updateTag({name:'description', content:'Minimally invasive ovarian cyst removal preserving fertility. Expert gynecologists, affordable packages & fast recovery.'})
@@ -225,5 +225,16 @@ export class OvarianCystectomy {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }

@@ -157,9 +157,9 @@ export class RoboticHerniaComponent {
   private popupInterval: any;
 
   ngOnInit(): void {
-    // setTimeout(() => {
-    //   this.openPopup();
-    // }, 5000);
+ setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
 
     this.title.setTitle('Hernia Surgery in Bangalore | Advanced Laparoscopic Repair');
     this.meta.updateTag({ name: 'description', content: 'Treat hernias safely with laparoscopic hernia surgery at Vasavi Hospitals. Minimal scars, quick recovery & affordable, insurance-covered packages.' })
@@ -314,5 +314,16 @@ export class RoboticHerniaComponent {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }

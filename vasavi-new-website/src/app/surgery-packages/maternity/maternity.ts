@@ -34,6 +34,9 @@ export class Maternity {
   ];
 
   ngOnInit(): void {
+     setTimeout(() => {
+      this.openImagePopup();
+    }, 5000);
     this.title.setTitle('Best Maternity Hospital in Bangalore | Normal & C-Section Delivery | Vasavi')
     this.meta.updateTag({ name: 'description', content: 'Trusted maternity care with 15+ years experienced obstetricians. Safe Normal Delivery, C-Section & High-risk pregnancy care. Affordable packages with cashless insurance.' })
   }
@@ -195,5 +198,16 @@ export class Maternity {
   private handleResize(): void {
     clearTimeout(this.resizeTimeout);
     this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
+  }
+
+  isPopupImageOpen = false;
+  // selectedImage: string | null = null;
+
+  openImagePopup() {
+    this.isPopupImageOpen = true;
+  }
+
+  closeImagePopup() {
+    this.isPopupImageOpen = false;
   }
 }
