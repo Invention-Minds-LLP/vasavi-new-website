@@ -1432,6 +1432,10 @@
         width: 100%;
         max-width: 500px;
     }
+
+    .senior-doctor{
+        padding: 20px 50px;
+    }
 }
 
 
@@ -1850,4 +1854,10 @@
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width:767px){
+     .senior-doctor{
+        padding: 10px 20px;
+    }
 }

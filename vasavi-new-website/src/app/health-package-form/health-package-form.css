@@ -124,3 +124,29 @@ label {
     border-radius: 6px;
     cursor: pointer;
 }
+
+@media(max-width:767px) {
+    .form {
+        width: 270px;
+        padding: 20px;
+    }
+
+    .form-heading {
+        font-size: 14px;
+    }
+
+    .otp {
+        flex-direction: column;
+    }
+
+    .otp input {
+        width: 100%;
+    }
+
+    .otp button {
+        width: 100%;
+    }
+    input {
+        width: 100%;
+    }
+}
