@@ -186,10 +186,11 @@
     }
 
     .content-part .doctor-img {
-        width: 335px;
-        top: 33px;
+        width: 265px;
         height: auto;
-        right: -150px;
+        position: relative;
+        right: 51px;
+        top: -12px;
     }
 
     .heading .one,
@@ -199,7 +200,12 @@
     }
 
     .box {
-        width: 100%;
+        width: 95%;
+        height: 70px;
+    }
+
+    .box img{
+        width: 60px;
     }
 
     .heading {
@@ -227,19 +233,28 @@
     }
 
     .count {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .dept {
         text-align: center;
+        font-size: 14px;
     }
 
     .content {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin-top: 10px;
     }
 }
+
+/* @media(max-width:1023px) {
+    .content-part .doctor-img {
+        top: -12px;
+        right: 27px;
+    }
+} */
 
 
 
@@ -252,12 +267,18 @@
         width: 100%;
     }
 
-    
+
 
     .content-part {
         flex-direction: column-reverse;
-        text-align: center;
+        /* text-align: center; */
         gap: 40px;
+        align-items: center;
+    }
+
+    .content-part .doctor-img{
+        top: 20px;
+        right: 0;
     }
 
     .name {
@@ -284,11 +305,11 @@
     .box {
         width: 100%;
         font-size: 14px;
-        padding: 12px 14px;
+        /* padding: 12px 14px; */
         flex-wrap: wrap;
         height: auto;
         align-items: center;
-        justify-content: center;
+        /* justify-content: center; */
     }
 
     .heading {
@@ -307,7 +328,7 @@
     }
 
     .box img {
-        width: 40px;
+        width: 60px;
     }
 
     .heading .one {
@@ -330,6 +351,10 @@
     .qualification {
         font-size: 14px;
         line-height: 22px;
+    }
+
+    .content{
+        text-align: center;
     }
 
 
@@ -362,21 +387,30 @@
             font-size: 20px;
             padding: 0 10px;
         }
-          .heading .one {
-        font-size: 20px;
-    }
 
-    .heading .two {
-        font-size: 20px;
-    }
+        .heading .one {
+            font-size: 20px;
+        }
 
-    .heading .three {
-        font-size: 20px;
-    }
+        .heading .two {
+            font-size: 20px;
+        }
 
-    .heading {
-        font-size: 20px;
-        text-align: center;
-    }
+        .heading .three {
+            font-size: 20px;
+        }
+
+        .heading {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .content{
+            text-align: center;
+        }
+
+        .box img{
+            width: 40px;
+        }
     }
 }
