@@ -1,5 +1,5 @@
 import { Component, signal, NgZone } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet  } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
 import { RoboticTkrComponent } from './surgery-packages/robotic-tkr/robotic-tkr.component';
@@ -13,6 +13,11 @@ import { Popup } from "./popup/popup";
 import { CommonModule } from '@angular/common';
 import { CanonicalUrl } from './canonical-url';
 import { Maternity } from "./surgery-packages/maternity/maternity"; 
+
+import { SeoSchema } from './SEO/seo-schema';
+import { SCHEMA_MAP } from './SEO/schema-map';
+import { filter } from 'rxjs/operators';
+
 
 
 @Component({
@@ -40,7 +45,25 @@ export class App {
   currentRoute = '';
 
 
-  constructor(private router: Router,private ngZone: NgZone, private canonicalUrls : CanonicalUrl) {}
+  constructor(private router: Router,private ngZone: NgZone, private canonicalUrls : CanonicalUrl, private SeoSchema: SeoSchema) {
+    this.router.events
+  .pipe(filter(event => event instanceof NavigationEnd))
+  .subscribe((event: NavigationEnd) => {
+
+    console.log('NavigationEnd fired'); // 👈 ADD THIS
+
+    const url = event.urlAfterRedirects.split('?')[0];
+    console.log('Current URL:', url);   // 👈 ADD THIS
+
+    console.log('Schema exists:', SCHEMA_MAP[url]); // 👈 ADD THIS
+
+    if (SCHEMA_MAP[url]) {
+      this.SeoSchema.setSchema(SCHEMA_MAP[url]);
+      console.log('Schema injected'); // 👈 ADD THIS
+    }
+  });
+
+  }
 
   ngOnInit(): void {
     this.showPopup = false;
