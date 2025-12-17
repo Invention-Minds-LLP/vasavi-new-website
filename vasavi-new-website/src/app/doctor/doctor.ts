@@ -273,7 +273,7 @@ export class Doctor {
       briefProfile: "Dedicated gynecologist providing compassionate, ethical, and evidence-based care with a focus on women's health.",
       qualification: "MBBS, MS OBG, Fellowship in Gynecological Oncology and minimal access surgery, Fellowship in advanced infertility",
       department: "Gynecology",
-      experience: "14+",
+      experience: "15+",
       designation: "Consultant Gynecologist",
       awards: [
         { icon: "fas fa-baby-carriage", awardFor: "Excellence in Maternity Care", awardDescription: "Times health excellence award for best maternity and child care", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },

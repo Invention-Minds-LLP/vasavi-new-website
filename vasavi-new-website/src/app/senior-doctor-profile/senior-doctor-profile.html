@@ -1,31 +1,40 @@
 <div class="doctor-card">
+
     <div class="right-side">
-        <img src="/img/senior-doctor/6363 2.png" alt="" class="banner-img">
-        <!-- <img src="img/senior-doctor/Ortho Dr. Rupendu T (9) (1) 2.png" alt="" class="doctor-img"> -->
+        <img [src]="doctorProfileData?.bannerImg" [alt]="doctorProfileData?.alt" class="banner-img">
     </div>
+
     <div class="left-side">
-        <div class="heading"><span class="one"> One of the </span> <span class="two"> Top 5 </span> <span class="three"> Orthopedic Doctors </span> in Bangalore</div>
+
+        <div class="heading">
+            <span class="one">One of the</span>
+            <span class="two"> Top 5</span>
+            <span class="three"> {{ doctorProfileData?.header }} Doctors</span> in Bangalore
+        </div>
+
         <div class="content-part">
+
             <div class="content">
-                <div class="name">Dr. Rupendu T</div>
-                <div class="department">Sr. Consultant Orthopaedic Surgeon</div>
-                <div class="qualification">MBBS, D.Ortho, MS(Ortho), <br>Fellowship in Joint Replacement Surgery (Australia, Germany)</div>
-                <button class="btn" [routerLink]="'/doctors/dr-rupendu-t'"> Book Appointment</button>
+                <div class="name">{{ doctorProfileData?.name }}</div>
+                <div class="department">{{ doctorProfileData?.department }}</div>
+
+                <div class="qualification" [innerHTML]="doctorProfileData?.qualification">
+                </div>
+
+                <button class="btn" [routerLink]="['/doctors', doctorProfileData?.slug]">
+                    Book Appointment
+                </button>
             </div>
 
             <div class="box-details">
-                <div class="box" *ngFor="let box of boxDetails">
-                    <!-- <div class="">{{box.img}}</div> -->
-                     <img [src]="box.img" alt="" class="img">
-                    <div class="count">{{box.count}}</div>
-                    <div class="dept">{{box.department}}</div>
+                <div class="box" *ngFor="let box of doctorProfileData?.boxDetails">
+                    <img [src]="box.img" class="img">
+                    <div class="count">{{ box.count }}</div>
+                    <div class="dept">{{ box.department }}</div>
                 </div>
             </div>
 
-            <img src="img/senior-doctor/Ortho Dr. Rupendu T (9) (1) 2.png" alt="" class="doctor-img">
+            <img [src]="doctorProfileData?.img" class="doctor-img">
         </div>
     </div>
-
-    
-
 </div>

@@ -94,6 +94,25 @@
 
                             </div>
                         </th>
+                        <th>
+                            <div class="heading">Comprehensive Annual Diabetes Care Package</div>
+                            <div class="info">
+                                <div class="amount">Rs. 9999/-</div>
+                                <button (click)="goToPackage('comprehensive-annual-diabetes-care-package')" type="button">Enquire
+                                    Now</button>
+
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Comprehensive Annual Heart Care Package</div>
+                            <div class="info">
+                                <div class="amount">Rs. 6999/-</div>
+                                <button (click)="goToPackage('comprehensive-annual-heart-care-package')" type="button">Enquire
+                                    Now</button>
+
+                            </div>
+                        </th>
 
                     </tr>
                 </thead>
@@ -128,6 +147,13 @@
                         <td>
                             <p>Complete Blood Count (CBC), ESR (Erythrocyte Sedimentation Rate), Peripheral Smear</p>
                         </td>
+                        <td>
+                            <p>Complete Blood Count (CBC) (2 year)</p>
+                        </td>
+                        <td>
+                            <p>Complete Blood Count (CBC) (4 year), ESR – Erythrocyte Sedimentation Rate (Once year),
+                                Peripheral Smear (Once year)</p>
+                        </td>
                     </tr>
 
                     <tr>
@@ -144,19 +170,45 @@
                         </td>
 
                         <td>
-                            <p>Iron Profile, Random Blood Sugar, Electrolytes (Sodium, Potassium, Chloride), Blood Urea, Serum Creatinine, Uric Acid, Glycosylated, Hemoglobin (HbA1C), Vitamin B12, Total 25 OH Vitamin D, CPK</p>
+                            <p>Iron Profile, Random Blood Sugar, Electrolytes (Sodium, Potassium, Chloride), Blood Urea,
+                                Serum Creatinine, Uric Acid, Glycosylated, Hemoglobin (HbA1C), Vitamin B12, Total 25 OH
+                                Vitamin D, CPK</p>
                         </td>
 
                         <td>
-                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated Hemoglobin(Hba1c)</p>
+                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated
+                                Hemoglobin(Hba1c)</p>
                         </td>
 
                         <td>
-                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated Hemoglobin(Hba1c), Vitamin B12,Vitamin D</p>
+                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated
+                                Hemoglobin(Hba1c), Vitamin B12,Vitamin D</p>
                         </td>
 
                         <td>
-                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated Hemoglobin(Hba1c), Vitamin B12, Vitamin D</p>
+                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated
+                                Hemoglobin(Hba1c), Vitamin B12, Vitamin D</p>
+                        </td>
+                        <td>
+                            <p>Fasting Blood Sugar (FBS) (4 year),
+                                Post Prandial Blood Sugar (PPBS) (4 year),
+                                HbA1c – Glycosylated Hemoglobin (4 year),
+                                Urine Microalbumin (4 year),
+                                Renal Function Test (RFT) (3 year),
+                                Thyroid Stimulating Hormone (TSH) (2 year)</p>
+                        </td>
+
+                        <td>
+                            <p>Fasting Blood Sugar (FBS) (4× / year),
+                                Post Prandial Blood Sugar (PPBS) (4× / year),
+                                Random Blood Sugar (RBS) (Once / year),
+                                Blood Urea (Once / year),
+                                Serum Creatinine (3× / year),
+                                Uric Acid (Once / year),
+                                Electrolytes – Sodium, Potassium, Chloride (Once / year),
+                                HbA1c – Glycosylated Hemoglobin (3× / year),
+                                Vitamin B12 (Once / year),
+                                Vitamin D (25-OH Total) (Once / year)</p>
                         </td>
 
                     </tr>
@@ -167,7 +219,8 @@
                             <!-- <svg class="starter" viewBox="0 0 24 24">
 								<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
 							</svg> -->
-                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol / HDL Ratio</p>
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
                         </td>
 
                         <td>
@@ -179,16 +232,36 @@
                         </td>
 
                         <td>
-                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol / HDL Ratio</p>
-                        </td>
-
-                        <td>
-                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol / HDL Ratio</p>
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
                         </td>
 
                         <td>
                             <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
                                 HDL Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Lipid Profile (2 year),
+                                Total Cholesterol (2 year),
+                                HDL Cholesterol (2 year),
+                                LDL Cholesterol (2 year),
+                                Triglycerides (2 year),
+                                Liver Function Test,
+                                Liver Function Test (LFT) (2 year)</p>
+                        </td>
+
+                        <td>
+                            <p>Total Cholesterol (3 year),
+                                HDL Cholesterol (3 year),
+                                LDL Cholesterol (3 year),
+                                Triglycerides (3 year),
+                                Total Cholesterol / HDL Ratio (3 year)</p>
                         </td>
                     </tr>
 
@@ -216,6 +289,23 @@
                             <p>Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, SGPT, SGOT, Alkaline Phosphatase,
                                 Total Protein, Albumin, Globulin, A / G Ratio</p>
                         </td>
+
+                        <td>
+                            <p>-</p>
+                        </td>
+
+                        <td>
+                            <p>Liver Function Test (LFT) (Once year),
+                                Total Bilirubin (Once year),
+                                Direct Bilirubin (Once year),
+                                Indirect Bilirubin (Once year),
+                                SGOT (AST) (Once year),
+                                SGPT (ALT) (Once year),
+                                Alkaline Phosphatase (Once year),
+                                Total Protein (Once year),
+                                Albumin (Once year),
+                                Globulin (Once year)</p>
+                        </td>
                     </tr>
 
 
@@ -228,11 +318,13 @@
                             <p>Blood Grouping – Rh Typing, Urine Analysis, Stool – occult blood </p>
                         </td>
                         <td>
-                            <p>Pap Smear & Breast Examination for women, Thyroid Profile (T3, T4, TSH), Blood Grouping - Rh Typing, Total Cholesterol, Serum Calcium, Urine Routine</p>
+                            <p>Pap Smear & Breast Examination for women, Thyroid Profile (T3, T4, TSH), Blood Grouping -
+                                Rh Typing, Total Cholesterol, Serum Calcium, Urine Routine</p>
                         </td>
 
                         <td>
-                            <p>Urine Routine, TSH (Thyroid Stimulating Hormone), Chest PA View (X-Ray), Abdomen & Pelvis (USG) </p>
+                            <p>Urine Routine, TSH (Thyroid Stimulating Hormone), Chest PA View (X-Ray), Abdomen & Pelvis
+                                (USG) </p>
                         </td>
 
                         <td>
@@ -248,6 +340,14 @@
                         <td>
                             <p>Blood Grouping – Rh Typing, Complete Urine Analysis, Pap Smear & Breast Examination for
                                 women, TSH, GGTP</p>
+                        </td>
+
+                        <td>
+                            <p>-</p>
+                        </td>
+
+                        <td>
+                            <p>-</p>
                         </td>
 
 
@@ -277,6 +377,20 @@
                         <td>
                             <p>ECG (Resting)</p>
                         </td>
+
+                        <td>
+                            <p>ECG (2 year),
+                                TMT – Treadmill Test (Once year),
+                                2D ECHO (Once year)</p>
+                        </td>
+
+                        <td>
+                            <p>ECG (4 year),
+                                TMT – Treadmill Test (Once year),
+                                ECHO – 2D Echo (2 year),
+                                CPK (Once year),
+                                CPK-MB (Once year)</p>
+                        </td>
                     </tr>
 
                     <tr>
@@ -305,6 +419,15 @@
                             <p>Chest X-Ray, Ultrasound – Abdomen, 2D ECHO CARDIOGRAPHY, *TMT on doctor's advice</p>
                         </td>
 
+                        <td>
+                            <p>Chest X-Ray (Once year),
+                                USG Abdomen & Pelvis (Once year)</p>
+                        </td>
+
+                        <td>
+                            <p>Chest X-Ray (2 year)</p>
+                        </td>
+
                     </tr>
 
                     <tr>
@@ -318,6 +441,19 @@
                         </td>
                         <td>
                             <p>Pulmonary Function Test</p>
+                        </td>
+
+                        <td>
+                            <p>CT Calcium Scoring (Once year),
+                                Other Tests / Supportive Care,
+                                Physiotherapy Consultation (Once year)</p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Serum Calcium (Once year),
+                                HbA1c (3 year),
+                                CPK / CPK-MB (Once year)</p>
                         </td>
 
                     </tr>
@@ -345,13 +481,28 @@
                                 customer's choice (within 2 days), Dietitian Consultation</p>
                         </td>
                         <td>
-                            <p>Internal Medicine Consultation, Surgical Consultation, Dental Consultation, Ophthalmologist Consultation, One
+                            <p>Internal Medicine Consultation, Surgical Consultation, Dental Consultation,
+                                Ophthalmologist Consultation, One
                                 additional Consultation of customer's choice (within 2 days), Dietitian Consultation</p>
                         </td>
                         <td>
                             <p>Internal Medicine Consultation, Gynecology Consultation, Ophthalmologist Consultation,
-                                Dental Consultation, One additional Consultation of customer's choice (within 2 days), Dietitian Consultation
+                                Dental Consultation, One additional Consultation of customer's choice (within 2 days),
+                                Dietitian Consultation
                             </p>
+                        </td>
+
+                        <td>
+                            <p>Physician / Diabetologist Consultation (4 year),
+                                Lifestyle Management Consultation (4 year),
+                                Dietician Consultation (4 year)</p>
+                        </td>
+
+                        <td>
+                            <p>Cardiologist Consultation (4 year),
+                                General Physician Consultation (4 year),
+                                Dietician Consultation (4 year),
+                                Physiotherapy Consultation (2 year)</p>
                         </td>
 
                     </tr>
