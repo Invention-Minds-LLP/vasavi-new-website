@@ -1,61 +1,110 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, input, Input } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Route, Router } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { NgHcaptchaModule } from 'ng-hcaptcha';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-health-package-form',
-  imports: [FormsModule, CommonModule,ReactiveFormsModule],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, NgHcaptchaModule],
   templateUrl: './health-package-form.html',
-  styleUrl: './health-package-form.css'
+  styleUrl: './health-package-form.css',
 })
 export class HealthPackageForm {
-
+  @Input() page: any;
   @Input() doctor: any;
-  @Input() page: any
 
-   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  apiUrl = 'http://localhost:3000/api';
 
   appointmentForm!: FormGroup;
+
+  showInitialForm = true;
+  showCaptcha = false;
+  captchaVerified = false;
   otpSent = false;
+
+  siteKey = environment.hcaptchaSiteKey;
+
+  captchaToken: string | null = null;
+
+  generatedOtp!: string;
   otpVerified = false;
   otpInvalid = false;
   otpExpired = false;
-  generatedOtp!: string;
   timeLeft = 0;
   interval: any;
-  canSendOtp = false;
-  pageName = 'Health Checkup';
-  otp: any;
-  minDate: string = new Date().toISOString().split('T')[0];
-  currentPackage: any;
 
-   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) { }
+  pageName = 'Health Checkup';
+
+  minDate: string = new Date().toISOString().split('T')[0];
+
+  constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {}
 
   ngOnInit() {
     this.appointmentForm = this.fb.group({
       date: ['', Validators.required],
-      name: ['', [Validators.required]],
+      name: ['', Validators.required],
       mobile: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]],
-      otp: ['']
+      otp: [''],
     });
+  }
 
-    // Enable Send OTP button only when 3 fields are valid
-    this.appointmentForm.valueChanges.subscribe(() => {
-      const dateValid = this.appointmentForm.get('date')?.valid;
-      const nameValid = this.appointmentForm.get('name')?.valid;
-      const mobileValid = this.appointmentForm.get('mobile')?.valid;
+  onInitialSubmit() {
+    if (!this.appointmentForm.valid) return;
 
-      this.canSendOtp = !!(dateValid && nameValid && mobileValid);
-    });
+    this.showInitialForm = false;
+    this.showCaptcha = true;
+  }
 
+  captchaSession: string | null = null;
 
+  onCaptchaVerify(token: string | any) {
+    // Extract token if it's an object
+    const captchaToken = typeof token === 'string' ? token : token?.token || token;
+    console.log('hCaptcha token:', captchaToken);
+
+    this.http
+      .post<any>(`${this.apiUrl}/captcha/verify`, {
+        captchaToken: captchaToken,
+      })
+      .subscribe({
+        next: (res) => {
+          this.captchaVerified = true;
+          this.captchaSession = res.captchaSession;
+          console.log('✅ Captcha verified successfully');
+        },
+        error: (err) => {
+          console.error('❌ Captcha verification error:', err);
+          this.captchaVerified = false;
+          alert('Captcha verification failed. Please try again.');
+        },
+      });
+  }
+
+  onCaptchaExpire() {
+    this.captchaVerified = false;
+    this.captchaSession = null;
+  }
+
+  onCaptchaError(error: any) {
+  console.error('hCaptcha error:', error);
+  this.captchaVerified = false;
+  this.captchaSession = null;
+  alert('Captcha failed to load. Please refresh the page.');
+}
+
+  onCaptchaSubmit() {
+    if (!this.captchaVerified) return;
+
+    this.showCaptcha = false;
+    this.sendOtp();
   }
 
   sendOtp() {
-    if (!this.canSendOtp) return;
-
     this.generateOtp();
     this.startOtpTimer();
   }
@@ -66,13 +115,13 @@ export class HealthPackageForm {
     this.otpInvalid = false;
     this.otpExpired = false;
 
-
     this.generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-    console.log("OTP:", this.generatedOtp);
+    console.log('OTP:', this.generatedOtp);
+
     this.http
       .post(`${this.apiUrl}/sms/send-otp-vasavi`, {
         patientName: this.appointmentForm.value.name,
-        patientPhoneNumber: '91' + this.appointmentForm.value.mobile, // ensure with country code
+        patientPhoneNumber: '91' + this.appointmentForm.value.mobile,
         service: this.pageName,
         otp: this.generatedOtp,
       })
@@ -114,7 +163,6 @@ export class HealthPackageForm {
     const enteredOtp = String(this.appointmentForm.value.otp);
 
     if (enteredOtp === this.generatedOtp) {
-
       this.otpVerified = true;
       this.otpInvalid = false;
       this.otpExpired = false;
@@ -127,20 +175,18 @@ export class HealthPackageForm {
 
   bookAppointment() {
     if (!this.otpVerified) return;
-    console.log("Form Data:", this.appointmentForm.value, this.page);
+
     const appointmentDetails = {
       name: this.appointmentForm.value.name,
       phone: this.appointmentForm.value.mobile,
       date: this.appointmentForm.value.date,
       address: '',
-      page: this.page,
+      page: this.pageName,
     };
 
     const emailRequest = {
-      // whatsappNumber:['919342287945'],
       whatsappNumber: ['919164840378'],
       to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
-      // to:['inventionmindsblr@gmail.com'],
       status: 'Health Checkup Appointment Booking',
       appointmentDetails,
     };
@@ -155,7 +201,6 @@ export class HealthPackageForm {
       },
     });
 
-
     this.appointmentForm.reset();
     this.otpSent = false;
     this.otpVerified = false;
@@ -163,5 +208,4 @@ export class HealthPackageForm {
     this.otpExpired = false;
     clearInterval(this.interval);
   }
-
 }
