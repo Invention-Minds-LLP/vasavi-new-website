@@ -10,26 +10,8 @@ import { RouterLink, RouterModule } from "@angular/router";
   styleUrl: './senior-doctor-profile.css'
 })
 export class SeniorDoctorProfile {
- 
+ @Input()  doctorProfileData:any;
 
-  boxDetails=[
-  {  
-    img:"img/senior-doctor/kneepad.png",
-    count:"45+ Years",
-   department:"of Orthopedic Excellence"
-  },
-  {  
-    img:"img/senior-doctor/surgery.png",
-    count:"5000+",
-   department:"Surgeries Performed"
-  },
-  {  
-    img:"img/senior-doctor/Vector.png",
-    count:"10,000+",
-   department:"Patients Treated Successfully"
-  },
-
-
-  ]
+  
 
 }

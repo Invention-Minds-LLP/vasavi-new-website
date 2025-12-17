@@ -45,7 +45,7 @@ export class DoctorsPage {
       name: "Dr. Nisha Buchade",
       img: "/img/new-doctor-image/dr-nisha-buchade.png",
       alt: "Dr. Nisha Buchade | Gynecologist | Vasavi Hospitals Bangalore",
-      experience: "14+",
+      experience: "15+",
       department: "Gynecology",
       slug: "/dr-nisha-buchade"
     },

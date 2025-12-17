@@ -333,4 +333,35 @@ export class RoboticThrComponent {
     this.isPopupImageOpen = false;
   }
 
+    doctorProfileData: any = {
+    name: 'Dr. Rupendu T',
+    header:"Orthopedic",
+    bannerImg: 'img/senior-doctor/6363 2.png',
+    img: 'img/senior-doctor/ortho-dr-rupendu-t.png',
+    alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
+    experience: '45+',
+    department: 'Sr. Consultant Orthopaedic Surgeon',
+    qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+    slug: "dr-rupendu-t",
+    boxDetails: [
+      {
+        img: "img/senior-doctor/kneepad.png",
+        count: "45+ Years",
+        department: "of Orthopedic Excellence"
+      },
+      {
+        img: "img/senior-doctor/surgery.png",
+        count: "5000+",
+        department: "Surgeries Performed"
+      },
+      {
+        img: "img/senior-doctor/Vector.png",
+        count: "10,000+",
+        department: "Patients Treated Successfully"
+      },
+
+
+    ]
+  }
+
 }

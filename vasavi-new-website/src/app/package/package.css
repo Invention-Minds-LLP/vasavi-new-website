@@ -124,6 +124,12 @@ table th:nth-child(6) .heading {
 table th:nth-child(7) .heading {
     background: var(--essential);
 }
+table th:nth-child(8) .heading {
+    background: var(--professional);
+}
+table th:nth-child(9) .heading {
+    background: var(--essential);
+}
 
 table th .info {
     position: relative;
@@ -172,6 +178,12 @@ table th:nth-child(6) .amount {
 }
 
 table th:nth-child(7) .amount {
+    color: var(--essential);
+}
+table th:nth-child(8) .amount {
+    color: var(--professional);
+}
+table th:nth-child(9) .amount {
     color: var(--essential);
 }
 
@@ -254,6 +266,23 @@ table th:nth-child(7) button {
 table th:nth-child(7) button:hover {
     background: var(--essential);
 }
+table th:nth-child(8) button {
+    color: var(--professional);
+    border: 1px solid var(--professional);
+}
+
+table th:nth-child(8) button:hover {
+    background: var(--professional);
+}
+table th:nth-child(9) button {
+    color: var(--essential);
+    border: 1px solid var(--essential);
+}
+
+table th:nth-child(9) button:hover {
+    background: var(--essential);
+}
+
 
 table th button:hover {
     color: var(--white);

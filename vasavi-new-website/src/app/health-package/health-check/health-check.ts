@@ -442,9 +442,6 @@ export class HealthCheck {
       ],
     },
 
-
-
-
     //Cardiac Health Package
 
     {
@@ -456,7 +453,7 @@ export class HealthCheck {
       // Banner section
       pageTitle: "Cardiac Health Package",
       pagePrice: "5999",
-      pageSubtitle: "All-in-One Diabetes Care",
+      pageSubtitle: "All-in-One Cardiac Care",
       pageDescription:
         "Monitor your heart health with a complete cardiac evaluation designed to detect risks early, prevent complications, and support long-term cardiac wellbeing. This package includes essential tests for your heart, blood, cholesterol, liver, thyroid, and overall body function - along with specialist consultations.",
 
@@ -627,6 +624,471 @@ export class HealthCheck {
           title: "Is this package suitable for elderly patients?",
           content:
             "Absolutely. The package is ideal for seniors, as it checks heart function, rhythm, cholesterol, and overall cardiac risk factors."
+        }
+      ],
+    },
+
+    //Cardiac Annual Package
+    {
+      slug: "comprehensive-annual-heart-care-package",
+      metaTitle: "Cardiac Health Check Package | Vasavi Hospital Bangalore",
+      metaDescription: "Comprehensive cardiac health check package at Vasavi Hospital, Bangalore. Includes ECG, echo, blood tests & cardiologist consultation for early detection.",
+
+
+      // Banner section
+      pageTitle: "Comprehensive Annual Heart Care Package",
+      pagePrice: "6999",
+      pageSubtitle: "One Year Heart Care",
+      pageDescription:"Track your heart health, blood pressure, cholesterol, and overall cardiac function through a complete annual heart care package.",
+      // Banner Cards
+      bannerCards: [
+        { title: "40+ Tests", subtitle: "Comprehensive cardiac evaluation" },
+        { title: "Preventive & Diagnostic", subtitle: "Suitable for all heart risk groups" },
+        { title: "Complete Heart Screening", subtitle: "Covers all major cardiac markers" }
+      ],
+
+      // About Section
+      about: [
+        {
+          title: "Heart health needs year-round care, not occasional check-ups.",
+          subtitle:
+            `<div>Heart problems often develop silently, affecting blood flow, blood pressure, and overall vitality long before warning signs appear.</div> <br>
+
+          <div>That’s why Vasavi Hospitals’ Comprehensive Annual Cardiac Care Plan focuses on regular heart monitoring, timely diagnostics, and expert cardiology consultations throughout the year — helping you detect risks early, protect your heart, and live with confidence every day.</div>`
+        }
+      ],
+      aboutImage: "img/health-package/red-heart-with-word-human-middle.png",
+
+      // Includes
+      includesTitle: "What’s included in the package?",
+      includesSubtitle:
+        "Structured into investigations, imaging, cardiac care and specialist consultations.",
+      includes: [
+        {
+          title: "Hematology",
+          content: [
+            "Complete Blood Count (CBC) (4 year)",
+            "ESR – Erythrocyte Sedimentation Rate (Once year)",
+            "Peripheral Smear (Once year)"
+          ]
+        },
+        {
+          title: "Biochemical Parameters",
+          content: [
+            "Fasting Blood Sugar (FBS) (4 year)",
+            "Post Prandial Blood Sugar (PPBS) (4 year)",
+            "Random Blood Sugar (RBS) (Once year)",
+            "Blood Urea (Once year)",
+            "Serum Creatinine (3 year)",
+            "Uric Acid (Once year)",
+            "Electrolytes – Sodium, Potassium, Chloride (Once year)",
+            "HbA1c – Glycosylated Hemoglobin (3 year)",
+            "Vitamin B12 (Once year)",
+            "Vitamin D (25-OH Total) (Once year)"
+          ]
+        },
+        {
+          title: "Lipid Profile Test",
+          content: ["Total Cholesterol (3 year)",
+            "HDL Cholesterol (3 year)",
+            "LDL Cholesterol (3 year)",
+            "Triglycerides (3 year)",
+            "Total Cholesterol / HDL Ratio (3 year)"
+          ]
+        },
+        {
+          title: "Cardiology",
+          content: [
+            "ECG (4 year)",
+            "TMT – Treadmill Test (Once year)",
+            "ECHO – 2D Echo (2 year)",
+            "CPK (Once year)",
+            "CPK-MB (Once year)"
+          ]
+        },
+        {
+          title: "Liver Function Test",
+          content: [
+            "Liver Function Test (LFT) (Once year)",
+            "Total Bilirubin (Once year)",
+            "Direct Bilirubin (Once / year)",
+            "Indirect Bilirubin (Once year)",
+            "SGOT (AST) (Once / year)",
+            "SGPT (ALT) (Once / year)",
+            "Alkaline Phosphatase (Once year)",
+            "Total Protein (Once year)",
+            "Albumin (Once year)",
+            "Globulin (Once year)",
+          ]
+        },
+        {
+          title: "Other Tests",
+          content: [
+            "Urine Routine",
+            "TSH (Thyroid Stimulating Hormone)",
+            "Chest PA View (X-Ray)",
+            "Abdomen & Pelvis (USG)"
+          ]
+        },
+        {
+          title: "Radiology",
+          content: ["Chest X-Ray (2 year)"]
+        },
+        {
+          title: "Special Tests",
+          content: ["Serum Calcium (Once year)","HbA1c (3 year)", "CPK / CPK-MB (Once year)"]
+        },
+        {
+          title: "Consultations",
+          content: [
+            "Cardiologist Consultation (4 year)",
+            "General Physician Consultation (4 year)",
+            "Dietician Consultation (4 year)",
+            "Physiotherapy Consultation (2 year)"
+          ]
+        }
+      ],
+
+
+
+      // Why Choose
+      whyChooseTitle: "Why choose this cardiac package?",
+      whyChooseSubtitle:
+        "Specially curated for long-term heart health, early risk detection, and complete cardiovascular wellness.",
+      whyChoose: [
+        {
+          icon: "fa-solid fa-check",
+          content: "One-year comprehensive heart care"
+        },
+        {
+          icon: "fa-solid fa-check",
+          content: "Expert cardiology supervision"
+        },
+        {
+          icon: "fa-solid fa-check",
+          content: "Preventive & diagnostic coverage"
+        },
+        {
+          icon: "fa-solid fa-check",
+          content: "Affordable annual package"
+        }
+      ],
+
+      // Care With Us
+      careTitle: "Your Care Journey With Us",
+      careSubtitle:
+        "Specially curated for long-term heart health, early detection, and complete cardiac wellness.",
+      careWith: [
+        {
+          img: "/img/health-package/Ellipse 10.png",
+          content: "Book your slot online or via call"
+        },
+        {
+          img: "/img/health-package/Ellipse 11.png",
+          content: " Visit the center as per fasting / test instructions"
+        },
+        {
+          img: "/img/health-package/Ellipse 12.png",
+          content: "Sample collection & cardiac scans as per package"
+        },
+        {
+          img: "/img/health-package/Ellipse 13.png",
+          content: "Consultation with our expert cardiologists"
+        },
+        {
+          img: "/img/health-package/Ellipse 14.png",
+          content: "Personalized lifestyle, cardiac risk & diet plan"
+        }
+      ],
+
+      // Doctors Slide
+      doctorSlide: [
+        
+      ],
+
+      // CTA
+      ctaTitle: "Ready to take charge of your heart health?",
+      ctaSubtitle:
+        "Book your Comprehensive Annual Heart Care Package and start your journey towards better heart care, early risk detection, and a healthier life.",
+
+      // FAQ
+      faqs: [
+        {
+          title: "Who should take the Annual Cardiac Care Package?",
+          content:
+            "This package is ideal for individuals with heart disease, high blood pressure, diabetes, family history of heart problems, or those above 40 years of age."
+        },
+        {
+          title: "Does this package help in early detection of heart disease?",
+          content:
+            "Yes. Regular monitoring helps detect heart risks early, even before symptoms appear."
+        },
+        {
+          title: "How long is the package valid?",
+          content:
+            "The package is valid for one full year (365 days) from activation."
+        },
+        {
+          title: "Are diet and lifestyle consultations included?",
+          content:
+            "Yes. The package includes dietician and lifestyle guidance to support heart health."
+        },
+        {
+          title: "Is this package useful for patients without known heart disease?",
+          content:
+            "Yes. It is also suitable for preventive heart health screening, especially for high-risk individuals."
+        }
+      ],
+    },
+
+
+
+    //Comprehensive Annual Diabetes Care Package
+    {
+      slug: "comprehensive-annual-diabetes-care-package",
+      metaTitle: "Cardiac Health Check Package | Vasavi Hospital Bangalore",
+      metaDescription: "Comprehensive cardiac health check package at Vasavi Hospital, Bangalore. Includes ECG, echo, blood tests & cardiologist consultation for early detection.",
+
+
+      // Banner section
+      pageTitle: "Comprehensive Annual Diabetes Care Package",
+      pagePrice: "9999",
+      pageSubtitle: "One plan Full year",
+      pageDescription:"Track your blood sugar, kidney, heart, liver, and overall health through a complete annual diabetes care package.",
+      // Banner Cards
+      bannerCards: [
+        { title: "39+ Tests", subtitle: "Comprehensive diabetes evaluation" },
+        { title: "Type 1 & Type 2", subtitle: "Suitable for all diabetics" },
+        { title: "Complete Diabetes Screening", subtitle: "Covers all major diabetes markers" }
+      ],
+
+      // About Section
+      about: [
+        {
+          title: "Diabetes needs year-round care, not occasional tests.",
+          subtitle:
+            `<div>Diabetes is a lifelong condition that can silently affect your heart, kidneys, eyes, nerves, and overall wellbeing if not monitored regularly.</div> <br>
+
+          <div>That’s why Vasavi Hospitals’ Comprehensive Annual Diabetes Care Plan focuses on continuous monitoring, timely investigations, and expert consultations throughout the year — helping you stay in control, avoid complications, and live healthier every day.</div>`
+        }
+      ],
+      aboutImage: "img/health-package/doctor-use-digital-glucose-monitor-measure-test-stripe-check-diabetes-from-finger-blood-sugar-level.jpg",
+
+      // Includes
+      includesTitle: "What’s included in the package?",
+      includesSubtitle:
+        "Structured into investigations, imaging, Diabetes care and specialist consultations.",
+      includes: [
+        {
+          title: "Hematology",
+          content: [
+            "Complete Blood Count (CBC) (2 year)"
+          ]
+        },
+        {
+          title: "Biochemical Parameters",
+          content: [
+            "Fasting Blood Sugar (FBS) (4 year)",
+            "Post Prandial Blood Sugar (PPBS) (4 year)",
+            "HbA1c – Glycosylated Hemoglobin (4 year)",
+            "Urine Microalbumin (4 year)",
+            "Renal Function Test (RFT) (3 year)",
+            "Thyroid Stimulating Hormone (TSH) (2 year)"
+          ]
+        },
+        {
+          title: "Lipid Profile Test",
+          content: ["Lipid Profile (2 year)",
+            "Total Cholesterol (2 year)",
+            "HDL Cholesterol (2  year)",
+            "LDL Cholesterol (2 year)",
+            "Triglycerides (2 year)",
+            "Liver Function Test",
+            "Liver Function Test (LFT) (2 year)"
+          ]
+        },
+        {
+          title: "Cardiology",
+          content: [
+            "ECG (2 year)",
+            "TMT – Treadmill Test (Once year)",
+            "2D ECHO (Once year)"
+          ]
+        },
+        // {
+        //   title: "Liver Function Test",
+        //   content: [
+        //     "Liver Function Test (LFT) (Once year)",
+        //     "Total Bilirubin (Once year)",
+        //     "Direct Bilirubin (Once / year)",
+        //     "Indirect Bilirubin (Once year)",
+        //     "SGOT (AST) (Once / year)",
+        //     "SGPT (ALT) (Once / year)",
+        //     "Alkaline Phosphatase (Once year)",
+        //     "Total Protein (Once year)",
+        //     "Albumin (Once year)",
+        //     "Globulin (Once year)",
+        //   ]
+        // },
+        // {
+        //   title: "Other Tests",
+        //   content: [
+        //     "Urine Routine",
+        //     "TSH (Thyroid Stimulating Hormone)",
+        //     "Chest PA View (X-Ray)",
+        //     "Abdomen & Pelvis (USG)"
+        //   ]
+        // },
+        {
+          title: "Radiology",
+          content: ["Chest X-Ray (Once year)",
+            "USG Abdomen & Pelvis (Once / year)"
+          ]
+        },
+        {
+          title: "Special Tests",
+          content: ["CT Calcium Scoring (Once year)", "Other Tests / Supportive Care",
+            "Physiotherapy Consultation (Once year)"
+          ]
+        },
+        {
+          title: "Consultations",
+          content: [
+            "Physician / Diabetologist Consultation (4 year)",
+            "Lifestyle Management Consultation (4 year)",
+            "Dietician Consultation (4 year)"
+          ]
+        }
+      ],
+
+      // Why Choose
+      whyChooseTitle: "Why choose this Diabetes package?",
+      whyChooseSubtitle:
+        "Specially curated for long-term heart health, early risk detection, and complete cardiovascular wellness.",
+      whyChoose: [
+        {
+          icon: "fa-solid fa-check",
+          content: "Year-round diabetes care under one roof"
+        },
+        {
+          icon: "fa-solid fa-check",
+          content: " Expert-led by diabetologists & physicians"
+        },
+        {
+          icon: "fa-solid fa-check",
+          content: "Regular monitoring to prevent complications"
+        },
+        {
+          icon: "fa-solid fa-check",
+          content: "Covers heart, kidney & overall health"
+        }
+      ],
+
+      // Care With Us
+      careTitle: "Your Care Journey With Us",
+      careSubtitle:
+        "Specially curated for long-term heart health, early detection, and complete Diabetes wellness.",
+      careWith: [
+        {
+          img: "/img/health-package/Ellipse 10.png",
+          content: "Book your slot online or via call"
+        },
+        {
+          img: "/img/health-package/Ellipse 11.png",
+          content: " Visit the center as per fasting / test instructions"
+        },
+        {
+          img: "/img/health-package/Ellipse 12.png",
+          content: "Sample collection & Diabetes scans as per package"
+        },
+        {
+          img: "/img/health-package/Ellipse 13.png",
+          content: "Consultation with our expert cardiologists"
+        },
+        {
+          img: "/img/health-package/Ellipse 14.png",
+          content: "Personalized lifestyle, Diabetes risk & diet plan"
+        }
+      ],
+
+      // Doctors Slide
+      doctorSlide: [
+        {
+          name: "Dr. Vinay Hosadurga",
+          img: "/img/new-doctor-image/dr-vinay-hosadurga.png",
+          alt: "Dr. Vinay Hosadurga | General Physician | Vasavi Hospitals Bangalore",
+          experience: "14+",
+          department: "General Medicine",
+          slug: "/dr-vinay-hosadurga"
+        },
+        {
+          name: "Dr. Sunil R",
+          img: "/img/new-doctor-image/dummy-male.png",
+          alt: "Dr. Sunil R | Nephrologist | Vasavi Hospitals Bangalore",
+          experience: "15+",
+          department: "Nephrology",
+          slug: "/dr-sunil-r"
+        },
+        {
+          name: "Dr. Gargi Das",
+          img: "/img/new-doctor-image/Dr Gargi Das.png",
+          alt: "Dr Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
+          experience: "6+",
+          department: "Ophthalmology",
+          slug: "/dr-gargi-das"
+        },
+        {
+          name: "Dr. Ramesh Hanumegowda",
+          img: "img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png",
+          alt: "Best General Surgeon in Bangalore | Dr. Ramesh T S",
+          experience: "15+",
+          department: "Urology",
+          slug: "/dr-ramesh-hanumegowda"
+        },
+        {
+          name: "Dr. Nisha Buchade",
+          img: "img/go/dr-nisha-buchade-sq.png",
+          alt: "Best Gynecologic Oncologist | Dr. Nisha Buchade",
+          experience: "15+",
+          department: "Obstetrics and Gynaecology",
+          slug: "/dr-nisha-buchade"
+        },
+        {
+          name: "Dr. Naneboena Sunitha",
+          img: "/img/new-doctor-image/dr-naneboena-sunitha-sq.png",
+          alt: "Dr Naneboena Sunitha | Consultant Nutritionist",
+          experience: "26+",
+          department: "Nutrition & Dietetics",
+          slug: "/dr-naneboena-sunitha"
+        }
+      ],
+
+      // CTA
+      ctaTitle: "Ready to take charge of your heart health?",
+      ctaSubtitle:
+        "Book your Comprehensive Annual Diabetes Care Plan and start your journey towards better heart care, early risk detection, and a healthier life.",
+
+      // FAQ
+      faqs: [
+        {
+          title: "Who should opt for the Annual Diabetes Care Plan?",
+          content:
+            "This plan is ideal for people with Type 1 or Type 2 diabetes, prediabetes, or those at high risk due to family history, obesity, or lifestyle factors."
+        },
+        {
+          title: "How is this plan different from a regular diabetes check-up?",
+          content:
+            "Unlike one-time tests, this plan offers year-round monitoring, repeated investigations, and regular doctor consultations to help manage diabetes continuously."
+        },
+        {
+          title: "Does the package include doctor consultations?",
+          content:
+            "Yes. The plan includes Physician/Diabetologist, Lifestyle Management, and Dietician consultations multiple times a year."
+        },
+        {
+          title: "Is this package suitable for newly diagnosed diabetics?",
+          content:
+            "Absolutely. It helps newly diagnosed patients understand their condition early and start structured treatment and monitoring."
         }
       ],
     },
