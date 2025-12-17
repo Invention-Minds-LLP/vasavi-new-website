@@ -17,8 +17,8 @@ export class HealthPackageForm {
   @Input() page: any;
   @Input() doctor: any;
 
-  // apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
-  apiUrl = 'http://localhost:3000/api';
+  apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
+  // apiUrl = 'http://localhost:3000/api';
 
   appointmentForm!: FormGroup;
 
@@ -68,7 +68,7 @@ export class HealthPackageForm {
     console.log('hCaptcha token:', captchaToken);
 
     this.http
-      .post<any>(`${this.apiUrl}/captcha/verify`, {
+      .post<any>(`${this.apiUrl}/email/captcha/verify`, {
         captchaToken: captchaToken,
       })
       .subscribe({
@@ -187,6 +187,8 @@ export class HealthPackageForm {
     const emailRequest = {
       whatsappNumber: ['919164840378'],
       to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
+      // whatsappNumber:['919342287945'],
+      // to:['inventionmindsblr@gmail.com'],
       status: 'Health Checkup Appointment Booking',
       appointmentDetails,
     };
