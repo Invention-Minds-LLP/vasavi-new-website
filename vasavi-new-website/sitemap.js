@@ -85,7 +85,9 @@ const staticRoutes = [
 
   // --- Health-packages ---
   '/health-package/cardiac-wellness-package',
-  '/health-package/diabetes-health-check'
+  '/health-package/diabetes-health-check',
+  '/health-package/comprehensive-annual-diabetes-care-package',
+  '/health-package/comprehensive-annual-heart-care-package'
 ];
 
 // ✅ Dynamic doctor and blog routes

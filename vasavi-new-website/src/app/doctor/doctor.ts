@@ -917,8 +917,8 @@ export class Doctor {
       ],
       title: "Dr. Mohan Ram. P Consultant General Surgeon | Vasavi Hospitals Bangalore",
       description: "Consult Dr. Mohan Ram, an expert Laparoscopic & General Surgeon in Bangalore with 15+ years’ experience in laser proctology, hernia repairs, varicose veins and emergency surgeries.",
-      briefProfile: "Dr. Mohan Ram is a General Surgeon, Laparoscopic Surgeon, Vascular Surgeon, Proctologist and a Laser Specialist in Bangalore. He practices at Pristyn Care Clinic, Bangalore. He completed MBBS from Raja Rajeshwari Medical College & Hospital, Bangalore, Karnataka in 2011, MS (General Surgery) from PES Institute of Medical Sciences and Research, Kuppam, Andhra Pradesh in 2017. Being an accomplished surgeon, and having over 14 Years of experience, Dr. Mohan Ram makes sure his patients get quality and timely treatment. Patient comfort, quick recovery and state of the art surgical practices are the corner stones at Pristyn Care.",
-      qualification: "MBBS, MS (General Surgery), Fellowship - FIAGES, FALS (Advanced Laparoscopy)",
+      briefProfile: "Dr. Mohan Ram is a General Surgeon, Laparoscopic Surgeon, Vascular Surgeon, Proctologist and Laser Specialist practicing at Vasavi Hospitals, Bangalore. He completed his MBBS from Raja Rajeshwari Medical College & Hospital, Bangalore in 2011 and MS (General Surgery) from PES Institute of Medical Sciences and Research, Kuppam in 2017. With over 14 years of experience, he ensures patients receive quality, timely treatment, focusing on patient comfort, quick recovery and state-of-the-art surgical practices. He has also earned prestigious fellowships, including FIAGES (2019) - Fellowship of the Indian Association of Gastrointestinal Endo Surgeons and FALS (2024) - Fellowship in Advanced Laparoscopic Surgery, reflecting his expertise in advanced surgical care.",
+      qualification: "MBBS, MS (General Surgery), FIAGES (2019) - Fellowship of the Indian Association of Gastrointestinal Endo Surgeons, FALS (2024) - Fellowship in Advanced Laparoscopic Surgery.",
       department: "General Surgery",
       experience: "15+",
       designation: "Consultant Laparoscopic & General Surgeon | Laser Proctologist",
@@ -1136,6 +1136,41 @@ export class Doctor {
         // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
       ],
       publications: []
+    },
+
+    {
+      id: 2,
+      name: "Dr. Krishna Kumar B R",
+      image: "img/new-doctor-image/dr-krishna-kumar-b-r.png",
+      alt: "Dr. Krishna Kumar B R | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
+      areasOfExpertise: [
+         { icon: "", expertise: "Clinical Cardiology" },
+        { icon: "", expertise: "Heart Failure Management" },
+        { icon: "", expertise: `ECG, Echocardiography, TMT, C-MRI (Cardiac MRI), 
+          CT-CAG (CT Coronary Angiography)` },
+        { icon: "", expertise: "Cardiac Stress Studies" },
+      ],
+      title: "",
+      description: "",
+      briefProfile: "Dr. Krishna Kumar B. R. is a well-known cardiologist with 17 years of experience in the field of cardiology. He has worked as a specialist in different cities across India and has been associated with many reputed hospitals. Dr. Krishna Kumar B. R. has contributed to the management of numerous complex medical cases in several hospitals. He is widely recognized for his accurate diagnosis and empathetic approach to patient care. His areas of special interest include clinical cardiology, heart failure management, echocardiography (ECHO), treadmill test (TMT), CT coronary angiography (CT-CAG), cardiac MRI (C-MRI), and cardiac stress studies. He is a graduate and has also completed a diploma in Clinical Cardiology. In addition, he has actively participated in research work and various workshops under the cardiology department.",
+      qualification: "MBBS, Diploma in Clinical Cardiology",
+      department: "Cardiologist",
+      experience: "17+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+      ],
+      publications: [ ]
     },
   ];
 
