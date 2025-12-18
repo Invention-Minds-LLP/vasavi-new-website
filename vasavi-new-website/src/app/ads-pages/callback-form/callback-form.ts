@@ -4,15 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { RecaptchaModule } from 'ng-recaptcha';
 
 import { environment } from '../../../environments/environment';
-import { LocationService } from '../../location-service'
+import { LocationService } from '../../location-service';
 
+import { NgHcaptchaModule } from 'ng-hcaptcha';
 
 @Component({
   selector: 'app-callback-form',
-  imports: [FormsModule, CommonModule, RecaptchaModule],
+  imports: [FormsModule, CommonModule, NgHcaptchaModule],
   templateUrl: './callback-form.html',
   styleUrl: './callback-form.css',
 })
@@ -40,7 +40,17 @@ export class CallbackForm {
   resendInterval: any;
   captchaResponse: string | null = null;
   siteKey = environment.recaptchaSiteKey;
-  constructor(private http: HttpClient, private router: Router, private locationService: LocationService) {}
+
+  hsiteKey = environment.hcaptchaSiteKey_static;
+
+  captchaVerified = false;
+  captchaSession: string | null = null;
+
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private locationService: LocationService
+  ) {}
 
   // onSubmit(form: any) {
   //   if (form.valid) {
@@ -61,6 +71,37 @@ export class CallbackForm {
 
   ngOnInit(): void {
     // this.fetchUserLocation();
+  }
+
+  onCaptchaVerify(token: string | any) {
+    const captchaToken = typeof token === 'string' ? token : token?.token || token;
+
+    this.http
+      .post<any>(`${this.apiUrl}/email/captcha/verify`, {
+        captchaToken,
+      })
+      .subscribe({
+        next: (res) => {
+          this.captchaVerified = true;
+          this.captchaSession = res.captchaSession;
+          console.log('✅ hCaptcha verified');
+        },
+        error: () => {
+          this.captchaVerified = false;
+          alert('Captcha verification failed. Please retry.');
+        },
+      });
+  }
+
+  onCaptchaExpire() {
+    this.captchaVerified = false;
+    this.captchaSession = null;
+  }
+
+  onCaptchaError(err: any) {
+    console.error('hCaptcha error:', err);
+    this.captchaVerified = false;
+    this.captchaSession = null;
   }
 
   onCaptchaResolved(token: any) {
@@ -84,7 +125,6 @@ export class CallbackForm {
       .subscribe({
         next: (res: any) => {
           // this.isSending = false;
-          
         },
         error: (err) => {
           // this.isSending = false;
@@ -96,7 +136,6 @@ export class CallbackForm {
 
   fetchUserLocation(): void {
     if (!navigator.geolocation) {
-
       alert('❌ Geolocation is not supported by your browser.');
       this.userAddress = 'Location unavailable';
       return;
@@ -140,25 +179,25 @@ export class CallbackForm {
           });
       },
       (err) => {
-      console.warn('⚠️ Location error:', err);
+        console.warn('⚠️ Location error:', err);
 
-      if (err.code === err.PERMISSION_DENIED) {
-        console.log('🔁 Fallback: Using IP-based location...');
-        this.fetchSecondaryLocation(); // ✅ fallback function call
-      } else {
-        switch (err.code) {
-          case err.POSITION_UNAVAILABLE:
-            alert('Location unavailable. Trying alternate detection...');
-            break;
-          case err.TIMEOUT:
-            alert('Location request timed out. Trying alternate detection...');
-            break;
-          default:
-            alert('Unable to fetch location. Trying alternate detection...');
+        if (err.code === err.PERMISSION_DENIED) {
+          console.log('🔁 Fallback: Using IP-based location...');
+          this.fetchSecondaryLocation(); // ✅ fallback function call
+        } else {
+          switch (err.code) {
+            case err.POSITION_UNAVAILABLE:
+              alert('Location unavailable. Trying alternate detection...');
+              break;
+            case err.TIMEOUT:
+              alert('Location request timed out. Trying alternate detection...');
+              break;
+            default:
+              alert('Unable to fetch location. Trying alternate detection...');
+          }
+          this.fetchSecondaryLocation(); // ✅ fallback function call
         }
-        this.fetchSecondaryLocation(); // ✅ fallback function call
-      }
-    },
+      },
       {
         enableHighAccuracy: true,
         timeout: 20000,
@@ -166,7 +205,6 @@ export class CallbackForm {
       }
     );
   }
-
 
   fetchSecondaryLocation(): void {
     this.http.get('https://ipapi.co/json/').subscribe({
@@ -177,13 +215,15 @@ export class CallbackForm {
         const postal = data.postal || '';
 
         // Build formatted address
-        this.userAddress = `${city}${city && state ? ', ' : ''}${state}${state && country ? ', ' : ''}${country}${postal ? ' - ' + postal : ''}`.trim();
-        console.log(this.userAddress)
+        this.userAddress = `${city}${city && state ? ', ' : ''}${state}${
+          state && country ? ', ' : ''
+        }${country}${postal ? ' - ' + postal : ''}`.trim();
+        console.log(this.userAddress);
       },
       error: () => {
         console.warn('⚠️ Could not fetch IP location.');
         this.userAddress = 'Unknown Location';
-      }
+      },
     });
   }
 
@@ -223,7 +263,7 @@ export class CallbackForm {
   // }
 
   // Step 1️⃣ Generate and send OTP
-  
+
   sendOtp(form: any) {
     if (form.invalid) {
       alert('⚠️ Please enter valid details before sending OTP.');

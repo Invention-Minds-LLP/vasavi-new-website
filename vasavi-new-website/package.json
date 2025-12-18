@@ -39,7 +39,6 @@
     "bootstrap": "^5.3.8",
     "jquery": "^3.7.1",
     "ng-hcaptcha": "^2.7.0",
-    "ng-recaptcha": "^13.2.1",
     "ngx-owl-carousel-o": "^20.0.1",
     "owl.carousel": "^2.3.4",
     "primeicons": "^7.0.0",

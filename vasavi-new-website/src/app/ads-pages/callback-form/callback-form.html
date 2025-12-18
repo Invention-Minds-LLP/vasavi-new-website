@@ -35,11 +35,21 @@
         </div>
       </div>
 
-      <re-captcha [siteKey]="siteKey" (resolved)="onCaptchaResolved($event)">
-      </re-captcha>
+      <div>
+        <ng-hcaptcha [siteKey]="hsiteKey" (verify)="onCaptchaVerify($event)" (expired)="onCaptchaExpire()"
+          (error)="onCaptchaError($event)">
+        </ng-hcaptcha>
 
-      <button type="button" class="submit-btn" style="margin-top: 15px;" [disabled]="!callbackForm.valid || isSending || !captchaResponse"
-        (click)="sendOtp(callbackForm)">
+        <small class="error" *ngIf="!captchaVerified">
+          Please complete the captcha verification
+        </small>
+      </div>
+
+      <button type="button" class="submit-btn" [disabled]="
+    !callbackForm.valid ||
+    !captchaVerified ||
+    isSending
+  " (click)="sendOtp(callbackForm)">
         {{ isSending ? 'Sending OTP...' : 'Send OTP' }}
       </button>
     </form>
@@ -56,7 +66,7 @@
         <button (click)="verifyOtp()" [disabled]="isVerifying">
           {{ isVerifying ? 'Verifying...' : 'Verify OTP' }}
         </button>
-        <button (click)="resendOtp()" [disabled]="resendTimer > 0 || !captchaResponse" >
+        <button (click)="resendOtp()" [disabled]="resendTimer > 0 || !captchaResponse">
           Resend OTP
           <span *ngIf="resendTimer > 0">({{ formattedResendTime }})</span>
         </button>
