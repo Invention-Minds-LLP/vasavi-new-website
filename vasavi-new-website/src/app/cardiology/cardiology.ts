@@ -6,12 +6,12 @@ import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 
 
 @Component({
   selector: 'app-cardiology',
-  imports: [CommonModule, Cta, ReactiveFormsModule],
+  imports: [CommonModule, Cta, ReactiveFormsModule, RouterModule],
   templateUrl: './cardiology.html',
   styleUrl: './cardiology.css'
 })

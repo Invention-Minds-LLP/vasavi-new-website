@@ -60,7 +60,7 @@
 
       <div class="expertise-row" *ngFor="let row of getExpertiseRows(filteredDoctor?.areasOfExpertise)">
         <div class="expertise-left">
-          <p class="expertise-text" *ngIf="row.left">{{ row.left.expertise }}</p>
+          <p class="expertise-text"  style="white-space: pre-line" *ngIf="row.left">{{ row.left.expertise }}</p>
         </div>
 
         <div class="expertise-center">
@@ -68,7 +68,7 @@
         </div>
 
         <div class="expertise-right">
-          <p class="expertise-text" *ngIf="row.right">{{ row.right.expertise }}</p>
+          <p class="expertise-text"  style="white-space: pre-line" *ngIf="row.right">{{ row.right.expertise }}</p>
         </div>
       </div>
 

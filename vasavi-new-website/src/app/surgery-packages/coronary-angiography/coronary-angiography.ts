@@ -43,12 +43,12 @@ export class CoronaryAngiography {
   doctors: any = [
     {
       name: "Dr. Krishna Kumar B. R",
-      img: "img/new-doctor-image/dummy-male-sq.png",
+      img: "img/new-doctor-image/dr-krishna-kumar-b-r-sq.png",
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
-      // experience: "15+",
-      // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS, PGD Cardiology",
-      // slug: "/dr-nisha-buchade"
+      experience: "17+",
+      department: "Cardiologist",
+      qualification: "MBBS, Diploma in Clinical Cardiology",
+      slug: "/dr-krishna-kumar-b-r"
     },
     {
       name: "Dr. Girish Navasundi",

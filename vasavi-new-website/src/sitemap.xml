@@ -301,6 +301,16 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.vasavihospitals.com/health-package/comprehensive-annual-diabetes-care-package</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.vasavihospitals.com/health-package/comprehensive-annual-heart-care-package</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>https://www.vasavihospitals.com/doctors/dr-ashok-m-v</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
@@ -437,6 +447,11 @@
     </url>
     <url>
         <loc>https://www.vasavihospitals.com/doctors/dr-rupendu-t</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.vasavihospitals.com/doctors/dr-krishna-kumar-b-r</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

@@ -639,7 +639,7 @@ export class HealthCheck {
       pageTitle: "Comprehensive Annual Heart Care Package",
       pagePrice: "6999",
       pageSubtitle: "One Year Heart Care",
-      pageDescription:"Track your heart health, blood pressure, cholesterol, and overall cardiac function through a complete annual heart care package.",
+      pageDescription: "Track your heart health, blood pressure, cholesterol, and overall cardiac function through a complete annual heart care package.",
       // Banner Cards
       bannerCards: [
         { title: "40+ Tests", subtitle: "Comprehensive cardiac evaluation" },
@@ -654,7 +654,7 @@ export class HealthCheck {
           subtitle:
             `<div>Heart problems often develop silently, affecting blood flow, blood pressure, and overall vitality long before warning signs appear.</div> <br>
 
-          <div>That’s why Vasavi Hospitals’ Comprehensive Annual Cardiac Care Plan focuses on regular heart monitoring, timely diagnostics, and expert cardiology consultations throughout the year — helping you detect risks early, protect your heart, and live with confidence every day.</div>`
+          <div>That’s why Vasavi Hospitals Comprehensive Annual Cardiac Care Plan focuses on regular heart monitoring, timely diagnostics, and expert cardiology consultations throughout the year - helping you detect risks early, protect your heart, and live with confidence every day.</div>`
         }
       ],
       aboutImage: "img/health-package/red-heart-with-word-human-middle.png",
@@ -667,89 +667,94 @@ export class HealthCheck {
         {
           title: "Hematology",
           content: [
-            "Complete Blood Count (CBC) (4 year)",
-            "ESR – Erythrocyte Sedimentation Rate (Once year)",
-            "Peripheral Smear (Once year)"
+            "Complete Blood Count (CBC) (4 times / year)",
+            "ESR – Erythrocyte Sedimentation Rate (Once / year)",
+            "Peripheral Smear (Once / year)"
           ]
         },
         {
           title: "Biochemical Parameters",
           content: [
-            "Fasting Blood Sugar (FBS) (4 year)",
-            "Post Prandial Blood Sugar (PPBS) (4 year)",
-            "Random Blood Sugar (RBS) (Once year)",
-            "Blood Urea (Once year)",
-            "Serum Creatinine (3 year)",
-            "Uric Acid (Once year)",
-            "Electrolytes – Sodium, Potassium, Chloride (Once year)",
-            "HbA1c – Glycosylated Hemoglobin (3 year)",
-            "Vitamin B12 (Once year)",
-            "Vitamin D (25-OH Total) (Once year)"
+            "Fasting Blood Sugar (FBS) (4 times / year)",
+            "Post Prandial Blood Sugar (PPBS) (4 times / year)",
+            "Random Blood Sugar (RBS) (Once / year)",
+            "Blood Urea (Once / year)",
+            "Serum Creatinine (3 times / year)",
+            "Uric Acid (Once / year)",
+            "Electrolytes – Sodium, Potassium, Chloride (Once / year)",
+            "HbA1c – Glycosylated Hemoglobin (3 times / year)",
+            "Vitamin B12 (Once / year)",
+            "Vitamin D (25-OH Total) (Once / year)"
           ]
         },
         {
           title: "Lipid Profile Test",
-          content: ["Total Cholesterol (3 year)",
-            "HDL Cholesterol (3 year)",
-            "LDL Cholesterol (3 year)",
-            "Triglycerides (3 year)",
-            "Total Cholesterol / HDL Ratio (3 year)"
+          content: [
+            "Total Cholesterol (3 times / year)",
+            "HDL Cholesterol (3 times / year)",
+            "LDL Cholesterol (3 times / year)",
+            "Triglycerides (3 times / year)",
+            "Total Cholesterol / HDL Ratio (3 times / year)"
           ]
         },
         {
           title: "Cardiology",
           content: [
-            "ECG (4 year)",
-            "TMT – Treadmill Test (Once year)",
-            "ECHO – 2D Echo (2 year)",
-            "CPK (Once year)",
-            "CPK-MB (Once year)"
+            "ECG (4 times / year)",
+            "TMT – Treadmill Test (Once / year)",
+            "ECHO – 2D Echo (2 times / year)",
+            "CPK (Once / year)",
+            "CPK-MB (Once / year)"
           ]
         },
         {
           title: "Liver Function Test",
           content: [
-            "Liver Function Test (LFT) (Once year)",
-            "Total Bilirubin (Once year)",
+            "Liver Function Test (LFT) (Once / year)",
+            "Total Bilirubin (Once / year)",
             "Direct Bilirubin (Once / year)",
-            "Indirect Bilirubin (Once year)",
+            "Indirect Bilirubin (Once / year)",
             "SGOT (AST) (Once / year)",
             "SGPT (ALT) (Once / year)",
-            "Alkaline Phosphatase (Once year)",
-            "Total Protein (Once year)",
-            "Albumin (Once year)",
-            "Globulin (Once year)",
+            "Alkaline Phosphatase (Once / year)",
+            "Total Protein (Once / year)",
+            "Albumin (Once / year)",
+            "Globulin (Once / year)"
           ]
         },
         {
           title: "Other Tests",
           content: [
-            "Urine Routine",
-            "TSH (Thyroid Stimulating Hormone)",
-            "Chest PA View (X-Ray)",
-            "Abdomen & Pelvis (USG)"
+            "Urine Routine (Once / year)",
+            "TSH (Thyroid Stimulating Hormone) (Once / year)",
+            "Chest PA View (X-Ray) (Once / year)",
+            "Abdomen & Pelvis (USG) (Once / year)"
           ]
         },
         {
           title: "Radiology",
-          content: ["Chest X-Ray (2 year)"]
+          content: [
+            "Chest X-Ray (2 times / year)"
+          ]
         },
         {
           title: "Special Tests",
-          content: ["Serum Calcium (Once year)","HbA1c (3 year)", "CPK / CPK-MB (Once year)"]
+          content: [
+            "Serum Calcium (Once / year)",
+            "HbA1c (3 times / year)",
+            "CPK / CPK-MB (Once / year)"
+          ]
         },
         {
           title: "Consultations",
           content: [
-            "Cardiologist Consultation (4 year)",
-            "General Physician Consultation (4 year)",
-            "Dietician Consultation (4 year)",
-            "Physiotherapy Consultation (2 year)"
+            "Cardiologist Consultation (4 times / year)",
+            "General Physician Consultation (4 times / year)",
+            "Dietician Consultation (4 times / year)",
+            "Physiotherapy Consultation (2 times / year)"
           ]
         }
       ],
-
-
 
       // Why Choose
       whyChooseTitle: "Why choose this cardiac package?",
@@ -803,13 +808,14 @@ export class HealthCheck {
 
       // Doctors Slide
       doctorSlide: [
-        
+
       ],
 
       // CTA
       ctaTitle: "Ready to take charge of your heart health?",
       ctaSubtitle:
-        "Book your Comprehensive Annual Heart Care Package and start your journey towards better heart care, early risk detection, and a healthier life.",
+        `Book your Comprehensive Annual Heart Care Package and start your journey towards better heart care,
+         early risk detection, and a healthier life.`,
 
       // FAQ
       faqs: [
@@ -854,7 +860,7 @@ export class HealthCheck {
       pageTitle: "Comprehensive Annual Diabetes Care Package",
       pagePrice: "9999",
       pageSubtitle: "One plan Full year",
-      pageDescription:"Track your blood sugar, kidney, heart, liver, and overall health through a complete annual diabetes care package.",
+      pageDescription: "Track your blood sugar, kidney, heart, liver, and overall health through a complete annual diabetes care package.",
       // Banner Cards
       bannerCards: [
         { title: "39+ Tests", subtitle: "Comprehensive diabetes evaluation" },
@@ -869,7 +875,7 @@ export class HealthCheck {
           subtitle:
             `<div>Diabetes is a lifelong condition that can silently affect your heart, kidneys, eyes, nerves, and overall wellbeing if not monitored regularly.</div> <br>
 
-          <div>That’s why Vasavi Hospitals’ Comprehensive Annual Diabetes Care Plan focuses on continuous monitoring, timely investigations, and expert consultations throughout the year — helping you stay in control, avoid complications, and live healthier every day.</div>`
+          <div>That’s why Vasavi Hospitals Comprehensive Annual Diabetes Care Plan focuses on continuous monitoring, timely investigations, and expert consultations throughout the year - helping you stay in control, avoid complications, and live healthier every day.</div>`
         }
       ],
       aboutImage: "img/health-package/doctor-use-digital-glucose-monitor-measure-test-stripe-check-diabetes-from-finger-blood-sugar-level.jpg",
@@ -882,81 +888,61 @@ export class HealthCheck {
         {
           title: "Hematology",
           content: [
-            "Complete Blood Count (CBC) (2 year)"
+            "Complete Blood Count (CBC) (2 times / year)"
           ]
         },
         {
           title: "Biochemical Parameters",
           content: [
-            "Fasting Blood Sugar (FBS) (4 year)",
-            "Post Prandial Blood Sugar (PPBS) (4 year)",
-            "HbA1c – Glycosylated Hemoglobin (4 year)",
-            "Urine Microalbumin (4 year)",
-            "Renal Function Test (RFT) (3 year)",
-            "Thyroid Stimulating Hormone (TSH) (2 year)"
+            "Fasting Blood Sugar (FBS) (4 times / year)",
+            "Post Prandial Blood Sugar (PPBS) (4 times / year)",
+            "HbA1c – Glycosylated Hemoglobin (4 times / year)",
+            "Urine Microalbumin (4 times / year)",
+            "Renal Function Test (RFT) (3 times / year)",
+            "Thyroid Stimulating Hormone (TSH) (2 times / year)"
           ]
         },
         {
           title: "Lipid Profile Test",
-          content: ["Lipid Profile (2 year)",
-            "Total Cholesterol (2 year)",
-            "HDL Cholesterol (2  year)",
-            "LDL Cholesterol (2 year)",
-            "Triglycerides (2 year)",
+          content: [
+            "Lipid Profile (2 times / year)",
+            "Total Cholesterol (2 times / year)",
+            "HDL Cholesterol (2 times / year)",
+            "LDL Cholesterol (2 times / year)",
+            "Triglycerides (2 times / year)",
             "Liver Function Test",
-            "Liver Function Test (LFT) (2 year)"
+            "Liver Function Test (LFT) (2 times / year)"
           ]
         },
         {
           title: "Cardiology",
           content: [
-            "ECG (2 year)",
-            "TMT – Treadmill Test (Once year)",
-            "2D ECHO (Once year)"
+            "ECG (2 times / year)",
+            "TMT – Treadmill Test (Once / year)",
+            "2D ECHO (Once / year)"
           ]
         },
-        // {
-        //   title: "Liver Function Test",
-        //   content: [
-        //     "Liver Function Test (LFT) (Once year)",
-        //     "Total Bilirubin (Once year)",
-        //     "Direct Bilirubin (Once / year)",
-        //     "Indirect Bilirubin (Once year)",
-        //     "SGOT (AST) (Once / year)",
-        //     "SGPT (ALT) (Once / year)",
-        //     "Alkaline Phosphatase (Once year)",
-        //     "Total Protein (Once year)",
-        //     "Albumin (Once year)",
-        //     "Globulin (Once year)",
-        //   ]
-        // },
-        // {
-        //   title: "Other Tests",
-        //   content: [
-        //     "Urine Routine",
-        //     "TSH (Thyroid Stimulating Hormone)",
-        //     "Chest PA View (X-Ray)",
-        //     "Abdomen & Pelvis (USG)"
-        //   ]
-        // },
         {
           title: "Radiology",
-          content: ["Chest X-Ray (Once year)",
+          content: [
+            "Chest X-Ray (Once / year)",
             "USG Abdomen & Pelvis (Once / year)"
           ]
         },
         {
           title: "Special Tests",
-          content: ["CT Calcium Scoring (Once year)", "Other Tests / Supportive Care",
-            "Physiotherapy Consultation (Once year)"
+          content: [
+            "CT Calcium Scoring (Once / year)",
+            "Other Tests Supportive Care",
+            "Physiotherapy Consultation (Once / year)"
           ]
         },
         {
           title: "Consultations",
           content: [
-            "Physician / Diabetologist Consultation (4 year)",
-            "Lifestyle Management Consultation (4 year)",
-            "Dietician Consultation (4 year)"
+            "Physician / Diabetologist Consultation (4 times / year)",
+            "Lifestyle Management Consultation (4 times / year)",
+            "Dietician Consultation (4 times / year)"
           ]
         }
       ],
@@ -1066,7 +1052,8 @@ export class HealthCheck {
       // CTA
       ctaTitle: "Ready to take charge of your heart health?",
       ctaSubtitle:
-        "Book your Comprehensive Annual Diabetes Care Plan and start your journey towards better heart care, early risk detection, and a healthier life.",
+        `Book your Comprehensive Annual Diabetes Care Plan and start your journey towards better heart care, 
+        early risk detection, and a healthier life.`,
 
       // FAQ
       faqs: [

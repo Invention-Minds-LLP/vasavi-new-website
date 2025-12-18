@@ -627,7 +627,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0px;
+    gap: 40px;
 }
 
 .book-appointment button {
