@@ -1139,7 +1139,7 @@ export class Doctor {
     },
 
     {
-      id: 2,
+      id: '',
       name: "Dr. Krishna Kumar B R",
       image: "img/new-doctor-image/dr-krishna-kumar-b-r.png",
       alt: "Dr. Krishna Kumar B R | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",

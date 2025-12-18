@@ -1,0 +1,69 @@
+
+
+
+# ===== 301 Redirects from Old PHP Pages to New Angular Pages =====
+
+Redirect 301 /anesthesiology.php https://www.vasavihospitals.com/anesthesiology-hospital-in-bangalore
+Redirect 301 /bariatric-surgery.php https://www.vasavihospitals.com/bariatric-surgery-in-bangalore
+Redirect 301 /dentistry.php https://www.vasavihospitals.com/dental-clinic-in-bangalore
+Redirect 301 /dermatology.php https://www.vasavihospitals.com/dermatology-skin-clinic-in-bangalore
+Redirect 301 /diabetes-endocrinology.php https://www.vasavihospitals.com/diabetes-and-endocrinology-center-in-bangalore
+Redirect 301 /emergency-critical-care.php https://www.vasavihospitals.com/emergency-and-critical-care-in-bangalore
+Redirect 301 /internal-medicine.php https://www.vasavihospitals.com/internal-medicine-hospital-in-bangalore
+Redirect 301 /liver-hpb-care.php https://www.vasavihospitals.com/liver-hpb-care-center-in-bangalore
+Redirect 301 /medical-gastroenterology.php https://www.vasavihospitals.com/gastroenterology-hospital-in-bangalore
+Redirect 301 /medical-oncology.php https://www.vasavihospitals.com/medical-oncology-cancer-treatment-in-bangalore
+Redirect 301 /minimally-invasive-surgery.php https://www.vasavihospitals.com/minimally-invasive-surgery-in-bangalore
+Redirect 301 /neonatology.php https://www.vasavihospitals.com/neonatology-and-nicu-care-in-bangalore
+Redirect 301 /nephrology.php https://www.vasavihospitals.com/nephrology-hospital-in-bangalore
+Redirect 301 /neurology.php https://www.vasavihospitals.com/neurology-hospital-in-bangalore
+Redirect 301 /neurosurgery.php https://www.vasavihospitals.com/neurosurgery-specialist-in-bangalore
+Redirect 301 /nutrition-dietetics.php https://www.vasavihospitals.com/nutrition-and-dietetics-consultation-in-bangalore
+Redirect 301 /opthalmology.php https://www.vasavihospitals.com/eye-hospital-in-bangalore
+Redirect 301 /oral-maxillofacial-surgery.php https://www.vasavihospitals.com/oral-and-maxillofacial-surgery-in-bangalore
+Redirect 301 /pediatrics.php https://www.vasavihospitals.com/pediatric-hospital-in-bangalore
+Redirect 301 /physiotherapy.php https://www.vasavihospitals.com/physiotherapy-center-in-bangalore
+Redirect 301 /plastic-surgery.php https://www.vasavihospitals.com/plastic-and-reconstructive-surgery-in-bangalore
+Redirect 301 /psychiatry.php https://www.vasavihospitals.com/psychiatry-and-mental-health-in-bangalore
+Redirect 301 /radiology.php https://www.vasavihospitals.com/radiology-and-imaging-services-in-bangalore
+Redirect 301 /surgical-gastroenterology.php https://www.vasavihospitals.com/surgical-gastroenterology-in-bangalore
+Redirect 301 /surgical-oncology.php https://www.vasavihospitals.com/surgical-oncology-cancer-hospital-in-bangalore
+Redirect 301 /vascular-science.php https://www.vasavihospitals.com/vascular-surgery-in-bangalore
+Redirect 301 /cardiology.php https://www.vasavihospitals.com/cardiology-hospital-in-bangalore
+Redirect 301 /ent.php https://www.vasavihospitals.com/ent-hospital-in-bangalore
+Redirect 301 /urology.php https://www.vasavihospitals.com/urology-hospital-in-bangalore
+Redirect 301 /pulmonology.php https://www.vasavihospitals.com/lung-specialist-in-bangalore
+Redirect 301 /oncology.php https://www.vasavihospitals.com/oncology-hospital-in-bangalore
+Redirect 301 /orthopedic.php https://www.vasavihospitals.com/orthopedic-hospital-in-bangalore
+
+# Pages like About / Contact / Awards / Gallery
+Redirect 301 /about.php https://www.vasavihospitals.com/about-vasavi-hospitals-in-bangalore
+Redirect 301 /contact.php https://www.vasavihospitals.com/contact-vasavi-hospitals-in-bangalore
+Redirect 301 /awards.php https://www.vasavihospitals.com/awards-and-recognition
+Redirect 301 /gallery.php https://www.vasavihospitals.com/gallery
+Redirect 301 /package.php https://www.vasavihospitals.com/health-packages-in-bangalore
+
+# Doctor Profile
+Redirect 301 /doctor-profile.php https://www.vasavihospitals.com/doctors
+
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+<IfModule mod_headers.c>
+  Header set Cache-Control "no-cache, no-store, must-revalidate"
+  Header set Pragma "no-cache"
+  Header set Expires 0
+</IfModule>
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

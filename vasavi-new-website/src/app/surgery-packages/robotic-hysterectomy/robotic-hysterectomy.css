@@ -1450,6 +1450,19 @@
     color: #000;
   } */
 
+  .popup-close {
+    position: absolute;
+    top: 58px;
+    right: 6px;
+    background: transparent;
+    border: none;
+    font-size: 21px;
+    cursor: pointer;
+    color: red;
+    transition: 0.2s;
+    font-weight: 800;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
