@@ -1139,7 +1139,7 @@ export class Doctor {
     },
 
     {
-      id: '',
+      id: 18,
       name: "Dr. Krishna Kumar B R",
       image: "img/new-doctor-image/dr-krishna-kumar-b-r.png",
       alt: "Dr. Krishna Kumar B R | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
@@ -1175,7 +1175,7 @@ export class Doctor {
     },
 
     {
-      id: '',
+      id: 17,
       name: "Dr. Sruthi Bhaskaran",
       image: "img/new-doctor-image/dr-sruthi-bhaskaran.png",
       alt: "Dr. Krishna Kumar B R | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
@@ -1213,7 +1213,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: '',
+      id: 19,
       name: "Dr. Manjunath P H",
       image: "img/new-doctor-image/dr-manjunath-p-h.png",
       alt: "Dr. Manjunath P H | Consultant Pulmonologist at Vasavi Hospital Bangalore",
@@ -1251,7 +1251,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: '',
+      id: 20,
       name: "Dr. Akshay Masur",
       image: "img/new-doctor-image/dr-akshay-masur.png",
       alt: "Dr. Akshay Masur | Internal Medicine & Endoscopy Specialist at Vasavi Hospitals Bangalore",
@@ -1282,7 +1282,7 @@ export class Doctor {
       description: "Dr. Akshay Masur is an experienced Internal Medicine specialist with over 9 years of expertise. He specializes in managing complex medical conditions and advanced gastrointestinal procedures, including diagnostic and therapeutic upper GI endoscopy and colonoscopy. He practices as a lead consultant at Vasavi Hospitals, Bangalore.",
       briefProfile: "Dr. Akshay Masur is an internal medicine specialist with over nine years of experience in different aspects of internal medicine. Dr. Akshay Masur has graduated from the Sri Siddhartha Medical College and pursued his specialization in Internal Medicine (MD) at Dr.S N Medical College, Jodhpur, Rajasthan. Later on he has worked in multiple reputed institutions and acquired “Fellowship in Therapeutic Gastrointestinal Endoscopy” (affiliated by RGUHS) in 2017, and acquired DNB in internal medicine in 2019. He has worked as a senior resident cum fellow in BGS Global Hospital Bangalore in the Department of Gastroenterology. Currently, along with treating the illnesses in the preview of internal medicine, he also specializes in Upper GI Endoscopy and Colonoscopy (both diagnostic and therapeutic procedures) and practices at Vasavi Hospitals Bangalore as a lead consultant.",
       qualification: "MBBS, MD - General Medicine, DNB (General Medicine - NBE New Delhi) 2017, Fellowship in Therapeutic GI Endoscopy - RGUHS 2017",
-      department: "Internal Medicine",
+      department: "Gastroenterology",
       experience: "14+",
       // designation: "Sr. Consultant Orthopaedic Surgeon",
       awards: [
