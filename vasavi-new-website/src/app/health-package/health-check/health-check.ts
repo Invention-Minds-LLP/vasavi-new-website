@@ -665,11 +665,9 @@ export class HealthCheck {
         "Structured into investigations, imaging, cardiac care and specialist consultations.",
       includes: [
         {
-          title: "Hematology",
+          title: "Haematology",
           content: [
-            "Complete Blood Count (CBC) (4 times / year)",
-            "ESR – Erythrocyte Sedimentation Rate (Once / year)",
-            "Peripheral Smear (Once / year)"
+            "Complete Blood Count (CBC) (4 times / year)"
           ]
         },
         {
@@ -677,58 +675,24 @@ export class HealthCheck {
           content: [
             "Fasting Blood Sugar (FBS) (4 times / year)",
             "Post Prandial Blood Sugar (PPBS) (4 times / year)",
-            "Random Blood Sugar (RBS) (Once / year)",
-            "Blood Urea (Once / year)",
-            "Serum Creatinine (3 times / year)",
-            "Uric Acid (Once / year)",
-            "Electrolytes – Sodium, Potassium, Chloride (Once / year)",
-            "HbA1c – Glycosylated Hemoglobin (3 times / year)",
-            "Vitamin B12 (Once / year)",
-            "Vitamin D (25-OH Total) (Once / year)"
+            "HbA1c (3 times / year)",
+            "Serum Creatinine (3 times / year)"
           ]
         },
         {
           title: "Lipid Profile Test",
           content: [
-            "Total Cholesterol (3 times / year)",
-            "HDL Cholesterol (3 times / year)",
-            "LDL Cholesterol (3 times / year)",
-            "Triglycerides (3 times / year)",
-            "Total Cholesterol / HDL Ratio (3 times / year)"
+            "Lipid Profile (3 times / year)"
           ]
         },
         {
           title: "Cardiology",
           content: [
             "ECG (4 times / year)",
+            "2D ECHO (2 times / year)",
             "TMT – Treadmill Test (Once / year)",
-            "ECHO – 2D Echo (2 times / year)",
             "CPK (Once / year)",
             "CPK-MB (Once / year)"
-          ]
-        },
-        {
-          title: "Liver Function Test",
-          content: [
-            "Liver Function Test (LFT) (Once / year)",
-            "Total Bilirubin (Once / year)",
-            "Direct Bilirubin (Once / year)",
-            "Indirect Bilirubin (Once / year)",
-            "SGOT (AST) (Once / year)",
-            "SGPT (ALT) (Once / year)",
-            "Alkaline Phosphatase (Once / year)",
-            "Total Protein (Once / year)",
-            "Albumin (Once / year)",
-            "Globulin (Once / year)"
-          ]
-        },
-        {
-          title: "Other Tests",
-          content: [
-            "Urine Routine (Once / year)",
-            "TSH (Thyroid Stimulating Hormone) (Once / year)",
-            "Chest PA View (X-Ray) (Once / year)",
-            "Abdomen & Pelvis (USG) (Once / year)"
           ]
         },
         {
@@ -738,20 +702,11 @@ export class HealthCheck {
           ]
         },
         {
-          title: "Special Tests",
-          content: [
-            "Serum Calcium (Once / year)",
-            "HbA1c (3 times / year)",
-            "CPK / CPK-MB (Once / year)"
-          ]
-        },
-        {
           title: "Consultations",
           content: [
             "Cardiologist Consultation (4 times / year)",
             "General Physician Consultation (4 times / year)",
-            "Dietician Consultation (4 times / year)",
-            "Physiotherapy Consultation (2 times / year)"
+            "Dietician Consultation (4 times / year)"
           ]
         }
       ],
@@ -886,7 +841,7 @@ export class HealthCheck {
         "Structured into investigations, imaging, Diabetes care and specialist consultations.",
       includes: [
         {
-          title: "Hematology",
+          title: "Haematology",
           content: [
             "Complete Blood Count (CBC) (2 times / year)"
           ]
@@ -896,7 +851,7 @@ export class HealthCheck {
           content: [
             "Fasting Blood Sugar (FBS) (4 times / year)",
             "Post Prandial Blood Sugar (PPBS) (4 times / year)",
-            "HbA1c – Glycosylated Hemoglobin (4 times / year)",
+            "HbA1c (4 times / year)",
             "Urine Microalbumin (4 times / year)",
             "Renal Function Test (RFT) (3 times / year)",
             "Thyroid Stimulating Hormone (TSH) (2 times / year)"
@@ -905,12 +860,12 @@ export class HealthCheck {
         {
           title: "Lipid Profile Test",
           content: [
-            "Lipid Profile (2 times / year)",
-            "Total Cholesterol (2 times / year)",
-            "HDL Cholesterol (2 times / year)",
-            "LDL Cholesterol (2 times / year)",
-            "Triglycerides (2 times / year)",
-            "Liver Function Test",
+            "Lipid Profile (2 times / year)"
+          ]
+        },
+        {
+          title: "Liver Function Test",
+          content: [
             "Liver Function Test (LFT) (2 times / year)"
           ]
         },
@@ -932,9 +887,13 @@ export class HealthCheck {
         {
           title: "Special Tests",
           content: [
-            "CT Calcium Scoring (Once / year)",
-            "Other Tests Supportive Care",
-            "Physiotherapy Consultation (Once / year)"
+            "CT Calcium Scoring (Once / year)"
+          ]
+        },
+        {
+          title: "Other Tests",
+          content: [
+            "Physiotherapy (if required) (Once / year)"
           ]
         },
         {
