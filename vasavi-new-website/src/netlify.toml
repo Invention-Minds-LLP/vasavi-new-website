@@ -1,0 +1,7 @@
+[build]
+  command = "npm install --legacy-peer-deps && npm run build"
+  publish = "vasavi-new-website/dist/vasavi-new-website/browser"
+
+[build.environment]
+  NODE_VERSION = "22.21.1"
+  NPM_VERSION = "10.9.4"
