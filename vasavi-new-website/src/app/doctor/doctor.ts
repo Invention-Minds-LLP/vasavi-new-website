@@ -52,7 +52,7 @@ export class Doctor {
   //   this.formSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
   // }
 
-  isSpecialDoctor: boolean = false; 
+  isSpecialDoctor: boolean = false;
   specialDoctorSlug: string = "dr-kumaresh-krishnamoorthy";
 
   constructor(private route: ActivatedRoute,
@@ -1144,9 +1144,10 @@ export class Doctor {
       image: "img/new-doctor-image/dr-krishna-kumar-b-r.png",
       alt: "Dr. Krishna Kumar B R | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
       areasOfExpertise: [
-         { icon: "", expertise: "Clinical Cardiology" },
+        { icon: "", expertise: "Clinical Cardiology" },
         { icon: "", expertise: "Heart Failure Management" },
-        { icon: "", expertise: `ECG, Echocardiography, TMT, C-MRI (Cardiac MRI), 
+        {
+          icon: "", expertise: `ECG, Echocardiography, TMT, C-MRI (Cardiac MRI), 
           CT-CAG (CT Coronary Angiography)` },
         { icon: "", expertise: "Cardiac Stress Studies" },
       ],
@@ -1170,7 +1171,46 @@ export class Doctor {
       ],
       professionalAffilications: [
       ],
-      publications: [ ]
+      publications: []
+    },
+
+    {
+      id: '',
+      name: "Dr. Sruthi Bhaskaran",
+      image: "img/new-doctor-image/dr-sruthi-bhaskaran.png",
+      alt: "Dr. Krishna Kumar B R | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
+      areasOfExpertise: [
+        { icon: "", expertise: "Emergency & Trauma Care" },
+        { icon: "", expertise: "Acute Critical Care Management" },
+        {icon: "", expertise: `Triage Optimization & ER Operations` },
+        { icon: "", expertise: "Trauma Protocol Development" },
+        { icon: "", expertise: "Prehospital & Point-of-Care Testing" },
+        { icon: "", expertise: "Neurological and Cardiac Emergencies" },
+        { icon: "", expertise: "Pediatric Emergency Care" },
+        { icon: "", expertise: "Crisis & Disaster Management (COVID-19 response)" },
+        { icon: "", expertise: "Medical Education & Clinical Training" },
+      ],
+      title: "",
+      description: "",
+      briefProfile: "Dr. Sruthi Bhaskaran is an experienced Emergency Medicine specialist and the Head of Department – Emergency Medicine at Vasavi Hospitals. With over a decade of clinical and leadership experience, she has played a pivotal role in enhancing emergency department efficiency, improving trauma survival rates, and strengthening critical care systems. She has successfully led large multidisciplinary teams, expanded HDU capacity by 200% during the COVID-19 pandemic, reduced ER wait times, and implemented data-driven clinical protocols. Dr. Sruthi is deeply committed to patient-centered care, clinical excellence, and training the next generation of emergency care professionals.",
+      qualification: "MBBS, DNB(Emergency Medicine), FICM, CPCDM, Geriatric Certification",
+      department: "Emergency Medicine",
+      experience: "10+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
     },
   ];
 
