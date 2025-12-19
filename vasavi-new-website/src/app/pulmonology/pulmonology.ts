@@ -6,10 +6,10 @@ import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-pulmonology',
-  imports: [CommonModule, Cta, ReactiveFormsModule],
+  imports: [CommonModule, Cta, ReactiveFormsModule,RouterModule],
   templateUrl: './pulmonology.html',
   styleUrl: './pulmonology.css'
 })

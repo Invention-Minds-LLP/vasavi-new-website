@@ -157,6 +157,7 @@ h4,
     position: relative;
     overflow: hidden;
     text-align: center;
+    cursor: pointer;
 }
 
 .box5:before {
