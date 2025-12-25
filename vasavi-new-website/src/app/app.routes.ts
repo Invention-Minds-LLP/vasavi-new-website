@@ -69,6 +69,7 @@ import { DoctorsPage } from './doctors-page/doctors-page';
 import { Maternity } from './surgery-packages/maternity/maternity';
 import { HealthCheck } from './health-package/health-check/health-check';
 import { SeniorDoctorProfile } from './senior-doctor-profile/senior-doctor-profile';
+import { Animation } from './animation/animation';
 // import { HealthCheck } from './health-package/health-check/health-check';
 
 // export const routes: Routes = [
@@ -173,7 +174,8 @@ export const routes: Routes = [
   // { path: 'health-check', component: HealthCheck },
   // { path: 'diabetic-health-check-package', component: HealthCheck },
   { path: 'health-package/:slug', component: HealthCheck },
-  // { path: 'senior-doctors', component: SeniorDoctorProfile },
+  { path: 'doctors', component: DoctorsPage },
+  { path: 'animation', component: Animation },
 
 
 

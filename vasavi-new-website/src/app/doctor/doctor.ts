@@ -47,6 +47,7 @@ export class Doctor {
   // apiUrl = "https://backend-812956739285.us-east4.run.app/api";
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
   @ViewChild('formSection') formSection!: ElementRef;
+  @ViewChild('appointmentForm') appointmentForm!: ElementRef;
 
   // scrollToForm() {
   //   this.formSection.nativeElement.scrollIntoView({ behavior: 'smooth' });
@@ -1653,6 +1654,20 @@ export class Doctor {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+
+  ngAfterViewInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['book'] === 'true') {
+        setTimeout(() => {
+          this.appointmentForm.nativeElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 300);
+      }
+    });
   }
 
 
