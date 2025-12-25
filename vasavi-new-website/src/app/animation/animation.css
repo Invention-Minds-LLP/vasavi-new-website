@@ -1,0 +1,38 @@
+.spline-wrapper {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Canvas as background */
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+}
+
+/* Spline canvas */
+canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 1;
+  pointer-events: none; 
+}
+
+::ng-deep .banner,
+::ng-deep .header {
+  position: relative;
+  z-index: 2;
+}
+
+/* canvas{
+    pointer-events: none;
+} */

@@ -150,7 +150,7 @@
     <div class="pacage-form" id="appointment">
       <app-health-package-form *ngIf="isSpecialDoctor" [doctor]="filteredDoctor" [page]="'Doctor-Page'"></app-health-package-form>
     </div>
-    <div class="form-section" id="appointment" #formSection *ngIf="!isSpecialDoctor">
+    <div class="form-section" id="appointment" #formSection *ngIf="!isSpecialDoctor" #appointmentForm>
       <div class="form-container">
         <div class="form-box">
           <div class="form-title">
