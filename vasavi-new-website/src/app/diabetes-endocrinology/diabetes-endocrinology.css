@@ -37,6 +37,10 @@ h2,
     padding-bottom: 10px;
 }
 
+.cursor{
+    cursor: pointer;
+}
+
 .section-header1 h2 {
     font-size: 28px;
     font-weight: 300;

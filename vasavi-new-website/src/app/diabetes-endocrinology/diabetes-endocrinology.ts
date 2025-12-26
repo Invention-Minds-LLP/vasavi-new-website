@@ -5,10 +5,11 @@ import { ContactFom } from "../contact-fom/contact-fom";
 import { SubNavbar } from "../sub-navbar/sub-navbar";
 import { Cta } from "../cta/cta";
 import { Meta, Title } from '@angular/platform-browser';
+import { RouterLink, RouterModule } from "@angular/router";
 
 @Component({
   selector: 'app-diabetes-endocrinology',
-  imports: [CarouselModule, CommonModule, ContactFom, SubNavbar, Cta],
+  imports: [CarouselModule, CommonModule, ContactFom, SubNavbar, Cta, RouterLink, RouterModule],
   templateUrl: './diabetes-endocrinology.html',
   styleUrl: './diabetes-endocrinology.css'
 })

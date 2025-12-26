@@ -26,20 +26,64 @@ export class DoctorsPage {
 
   deptOpen: boolean = false;
 
+  departmentMap: { [key: string]: string[] } = {
+    "Gynecology": ["Gynecology", "Obstetrics & Gynecology"],
+    "Nutrition": ["Nutrition", "Nutrition & Dietetics"],
+    "General Surgery": ["General Surgery", "General Surgery (MIS)"],
+    "Neonatology": ["Neonatology", "Pediatrics & Neonatology"],
+    "Pediatrics & Neonatology": ["Pediatrics & Neonatology"],
+    "ENT": ["ENT"],
+    "Orthopedics": ["Orthopedics"],
+    "Cardiology": ["Cardiology"],
+    "Nephrology": ["Nephrology"],
+    "Pulmonology": ["Pulmonology"],
+    "Gastroenterology": ["Gastroenterology"],
+    "Dermatology": ["Dermatology"],
+    "Neurology": ["Neurology"],
+    "Neurosurgery": ["Neurosurgery"],
+    "Anesthesiology": ["Anesthesiology"],
+    "Critical Care": ["Critical Care"],
+    "Emergency Medicine": ["Emergency Medicine", "Critical Care"],
+    "General Medicine": ["General Medicine"],
+    "Ophthalmology": ["Ophthalmology"],
+    "Dentistry": ["Dentistry"],
+    "Bariatric Surgery": ["Bariatric Surgery", "General Surgery (MIS)"],
+    "Internal Medicine": ["Internal Medicine", "Gastroenterology", "General Medicine"],
+
+  };
+
+  matchesDepartment(doctorDepartment: string, selectedDepartment: string): boolean {
+    if (!selectedDepartment) return true;
+
+    // Direct match
+    if (doctorDepartment === selectedDepartment) return true;
+
+    const selectedGroup = this.departmentMap[selectedDepartment];
+    if (selectedGroup?.includes(doctorDepartment)) return true;
+
+    // Check reverse mapping (for Internal Medicine case)
+    const doctorGroup = this.departmentMap[doctorDepartment];
+    if (doctorGroup?.includes(selectedDepartment)) return true;
+
+    return false;
+  }
+
   filterDoctors() {
     return this.doctors.filter(d => {
 
       const searchMatch =
-        this.searchText.trim() === "" ||
+        !this.searchText ||
         d.name.toLowerCase().includes(this.searchText.toLowerCase());
 
-      const depMatch =
-        this.selectedDepartment === "" ||
-        d.department === this.selectedDepartment;
+      const depMatch = this.matchesDepartment(
+        d.department,
+        this.selectedDepartment
+      );
 
       return searchMatch && depMatch;
     });
   }
+
 
   openForm(index: number) {
     this.activeDoctorIndex = index;
@@ -74,9 +118,12 @@ export class DoctorsPage {
     { name: 'Anesthesiology', icon: '/img/departments/anesthesiology.png' },
 
     // 🔹 Diagnostics & care
+    // 🔹 Diagnostics & care
     { name: 'Critical Care', icon: '/img/departments/critical-care.png' },
     { name: 'Emergency Medicine', icon: '/img/departments/emergency.png' },
     { name: 'General Medicine', icon: '/img/departments/general-medicine.png' },
+    { name: 'Internal Medicine', icon: '/img/departments/internal-medicine.png' },
+
 
     // 🔹 Allied health
     { name: 'ENT', icon: '/img/departments/ent.png' },
@@ -125,21 +172,21 @@ export class DoctorsPage {
     {
       name: "Dr. Ashok M. V",
       img: "/img/doctor-page/dr-ashok-m-v.png",
-      alt: "Dr. Ashok MV | Pediatrician & Neonatologist | Vasavi Hospitals Bangalore",
+      alt: "Dr. Ashok M. V | Pediatrician & Neonatologist | Vasavi Hospitals Bangalore",
       experience: "15+",
-      qualification: "MBBS, MD (Pediatrics), Fellowship in Neonatology",
+      qualification: "MBBS, MD Pediatrics, Fellowship in Neonatology",
       department: "Pediatrics & Neonatology",
-      consultant: "Consultant - Neonatologist",
+      consultant: "Consultant Neonatologist",
       slug: "/dr-ashok-m-v"
     },
     {
       name: "Dr. Sreenidhi H. C",
-      img: "/img/new-doctor-image/dummy-male.png",
-      alt: "Dr. Sreenidhi Chandrashekar | Nephrologist | Vasavi Hospitals Bangalore",
+      img: "/img/new-doctor-image/dr-sreenidhi-h-c-sq.png",
+      alt: "Dr. Sreenidhi H. C | Nephrologist | Vasavi Hospitals Bangalore",
       experience: "3+",
-      qualification: "MBBS, MD (General Medicine), DM (Nephrology)",
+      qualification: "MBBS, MD, DM Nephrology",
       department: "Nephrology",
-      consultant: "Consultant - Nephrologist",
+      consultant: "Consultant Nephrologist",
       slug: "/dr-sreenidhi-h-c"
     },
     {
@@ -147,19 +194,19 @@ export class DoctorsPage {
       img: "/img/doctor-page/dr-nisha-buchade.png",
       alt: "Dr. Nisha Buchade | Gynecologist | Vasavi Hospitals Bangalore",
       experience: "15+",
-      qualification: "MBBS, MS (OBG), Fellowship in Gynecological Oncology, Fellowship in Advanced Infertility",
+      qualification: "MBBS, MS (OBG)",
       department: "Gynecology",
-      consultant: "Consultant - Gynecologist",
+      consultant: "Consultant Gynecologist",
       slug: "/dr-nisha-buchade"
     },
     {
       name: "Dr. Venkatesh Rathod R",
       img: "/img/doctor-page/dr-venkatesh-rathod-r.png",
-      alt: "Dr. Venkatesh Rathod | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
+      alt: "Dr. Venkatesh Rathod R | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
       experience: "16+",
-      qualification: "MBBS, D.Ortho, DNB (Orthopedics)",
+      qualification: "MBBS, D.Ortho, DNB Ortho",
       department: "Orthopedics",
-      consultant: "Consultant - Orthopedic Surgeon",
+      consultant: "Consultant Orthopedic Surgeon",
       slug: "/dr-venkatesh-rathod-r"
     },
     {
@@ -169,7 +216,7 @@ export class DoctorsPage {
       experience: "14+",
       qualification: "MBBS, MD (General Medicine)",
       department: "General Medicine",
-      consultant: "Consultant - Physician",
+      consultant: "Consultant Physician",
       slug: "/dr-vinay-hosadurga"
     },
     {
@@ -179,7 +226,7 @@ export class DoctorsPage {
       experience: "13+",
       qualification: "BDS, MDS",
       department: "Dentistry",
-      consultant: "Consultant - Endodontist",
+      consultant: "Consultant Endodontist",
       slug: "/dr-sneha-sundaram"
     },
     {
@@ -187,9 +234,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dr-abhiram-r.png",
       alt: "Dr. Abhiram R | Dermatologist | Vasavi Hospitals Bangalore",
       experience: "10+",
-      qualification: "MBBS, MD (Dermatology), FRGUHS (Dermatosurgery)",
+      qualification: "MBBS, MD Dermatology",
       department: "Dermatology",
-      consultant: "Consultant - Dermatologist",
+      consultant: "Consultant Dermatologist",
       slug: "/dr-abhiram-r"
     },
     {
@@ -197,9 +244,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dummy-male.png",
       alt: "Dr. Sunil R | Nephrologist | Vasavi Hospitals Bangalore",
       experience: "15+",
-      qualification: "MBBS, MD (General Medicine), DM (Nephrology)",
+      qualification: "MD, DM Nephrology",
       department: "Nephrology",
-      consultant: "Consultant - Nephrologist",
+      consultant: "Consultant Nephrologist",
       slug: "/dr-sunil-r"
     },
     {
@@ -207,9 +254,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dummy-male.png",
       alt: "Dr. Pratham R Bysani | Neurosurgeon | Vasavi Hospitals Bangalore",
       experience: "10+",
-      qualification: "MBBS, MS (General Surgery), MCh (Neurosurgery), FRCS (Edinburgh)",
+      qualification: "MBBS, MS, MCh Neurosurgery",
       department: "Neurosurgery",
-      consultant: "Consultant - Neurosurgeon",
+      consultant: "Consultant Neurosurgeon",
       slug: "/dr-pratham-r-bysani"
     },
     {
@@ -217,9 +264,9 @@ export class DoctorsPage {
       img: "/img/doctor-page/dr-karthik-k.png",
       alt: "Dr. Karthik K | Anesthesiologist | Vasavi Hospitals Bangalore",
       experience: "21+",
-      qualification: "MBBS, DA, DNB (Anaesthesiology)",
+      qualification: "MBBS, DA, DNB Anaesthesiology",
       department: "Anesthesiology",
-      consultant: "Consultant - Anesthesiologist",
+      consultant: "Consultant Anesthesiologist",
       slug: "/dr-karthik-k"
     },
     {
@@ -227,9 +274,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dummy-male.png",
       alt: "Dr. Pradeep A Dongare | Anesthesiologist | Vasavi Hospitals Bangalore",
       experience: "12+",
-      qualification: "DA, DNB (Anaesthesiology)",
+      qualification: "DA, DNB",
       department: "Anesthesiology",
-      consultant: "Consultant - Anesthesiologist",
+      consultant: "Consultant Anesthesiologist",
       slug: "/dr-pradeep-a-dongare"
     },
     {
@@ -237,9 +284,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dummy-female.png",
       alt: "Dr. Abhirami Ravindran | Anesthesiologist | Vasavi Hospitals Bangalore",
       experience: "13+",
-      qualification: "MBBS, DNB (Anaesthesiology)",
+      qualification: "MBBS, DNB Anaesthesia",
       department: "Anesthesiology",
-      consultant: "Consultant - Anesthesiologist",
+      consultant: "Consultant Anesthesiologist",
       slug: "/dr-abhirami-ravindran"
     },
     {
@@ -247,19 +294,29 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dummy-male.png",
       alt: "Dr. Raveendra Reddy | Critical Care Specialist | Vasavi Hospitals Bangalore",
       experience: "16+",
-      qualification: "MBBS, FcARCSI, FCCS, Fellowship in Critical Care",
+      qualification: "MBBS, FCCS",
       department: "Critical Care",
-      consultant: "Consultant - Critical Care Specialist",
+      consultant: "Consultant Critical Care Specialist",
       slug: "/dr-raveendra-reddy"
+    },
+    {
+      name: "Dr. Ramesh Hanumegowda",
+      img: "/img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png",
+      alt: "Dr. Ramesh Hanumegowda | Urologist | Vasavi Hospitals Bangalore",
+      experience: "15+",
+      qualification: "MBBS, MS, MCh Urology",
+      department: "Urology",
+      consultant: "Consultant Urologist",
+      slug: "/dr-ramesh-hanumegowda"
     },
     {
       name: "Dr. Sudeep Putta Manohar",
       img: "/img/new-doctor-image/dummy-male.png",
       alt: "Dr. Sudeep Putta Manohar | Endocrinologist | Vasavi Hospitals Bangalore",
       experience: "15+",
-      qualification: "MBBS, MRCP (UK), MRCP (Endocrinology), CCT",
+      qualification: "MBBS, MRCP (UK)",
       department: "Endocrinology",
-      consultant: "Consultant - Endocrinologist",
+      consultant: "Consultant Endocrinologist",
       slug: "/dr-sudeep-putta-manohar"
     },
     {
@@ -267,9 +324,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
       alt: "Dr. Sowmya Sangmesh | Gynecologist | Vasavi Hospitals Bangalore",
       experience: "14+",
-      qualification: "MBBS, MS (OBG), Fellowship in Minimal Access Surgery",
+      qualification: "MBBS, MS (OBG)",
       department: "Gynecology",
-      consultant: "Consultant - Gynecologist",
+      consultant: "Consultant Gynec Laparoscopic Surgeon",
       slug: "/dr-sowmya-sangmesh"
     },
     {
@@ -277,9 +334,9 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dummy-female.png",
       alt: "Dr. Madhu B Jagalasar | Neonatologist | Vasavi Hospitals Bangalore",
       experience: "13+",
-      qualification: "MD (Pediatrics), DM (Neonatology), MBA (HCM)",
+      qualification: "MD Pediatrics, DM Neonatology",
       department: "Neonatology",
-      consultant: "Consultant - Neonatologist",
+      consultant: "Consultant Neonatologist",
       slug: "/dr-madhu-b-jagalasar"
     },
     {
@@ -287,19 +344,19 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/dr-mutharaju-k-r.png",
       alt: "Dr. Mutharaju K R | Bariatric Surgeon | Vasavi Hospitals Bangalore",
       experience: "23+",
-      qualification: "MBBS, MS, FMBS (Bariatric & Metabolic Surgery)",
+      qualification: "MBBS, MS, FMBS",
       department: "Bariatric Surgery",
-      consultant: "Senior Consultant - Bariatric Surgeon",
+      consultant: "Sr. Consultant Bariatric Surgeon",
       slug: "/dr-mutharaju-k-r"
     },
     {
       name: "Dr. Gargi Das",
       img: "/img/new-doctor-image/Dr Gargi Das.png",
-      alt: "Dr Gargi Das | Ophthalmologist | Vasavi Hospitals Bangalore",
+      alt: "Dr. Gargi Das | Ophthalmologist | Vasavi Hospitals Bangalore",
       experience: "6+",
       qualification: "MBBS, MD, FPRS",
       department: "Ophthalmology",
-      consultant: "Consultant - Ophthalmologist",
+      consultant: "Consultant Ophthalmologist",
       slug: "/dr-gargi-das"
     },
     {
@@ -307,82 +364,188 @@ export class DoctorsPage {
       img: "/img/new-doctor-image/Dr Sphoorthy G Itigi.png",
       alt: "Dr. Sphoorthy G Itigi | ENT Surgeon | Vasavi Hospitals Bangalore",
       experience: "8+",
-      qualification: "MBBS, DLO, DNB (ENT)",
+      qualification: "MBBS, DLO, DNB ENT",
       department: "ENT",
-      consultant: "Consultant - ENT Surgeon",
+      consultant: "Consultant ENT Surgeon",
       slug: "/dr-sphoorthy-g-itigi"
     },
     {
       name: "Dr. Naneboena Sunitha",
-      img: "/img/new-doctor-image/dr-naneboena-sunitha-sq.png",
-      alt: "Dr Naneboena Sunitha | Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
+      img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+      alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
       experience: "26+",
-      qualification: "PhD (Food & Nutrition), MSc, MBA",
-      department: "Nutrition & Dietetics",
-      consultant: "Consultant - Nutritionist & Dietitian",
+      qualification: "PhD Food & Nutrition",
+      department: "Nutrition",
+      consultant: "Consultant Nutritionist & Dietitian",
       slug: "/dr-naneboena-sunitha"
     },
     {
-      name: "Dr. Revathi Natesan",
-      img: "/img/new-doctor-image/dr-revathi-natesan.png",
-      alt: "Dr. Revathi Natesan | Endodontist | Vasavi Hospitals Bangalore",
-      experience: "15+",
-      qualification: "MDS (Conservative Dentistry & Endodontics)",
-      department: "Dentistry",
-      consultant: "Consultant - Endodontist",
-      slug: "/dr-revathi-natesan"
+      name: "Dr. Kumaresh Krishnamoorthy",
+      img: "/img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
+      alt: "Dr. Kumaresh Krishnamoorthy | ENT Specialist | Vasavi Hospitals Bangalore",
+      experience: "25+",
+      qualification: "MS ENT, Fellowship (USA)",
+      department: "ENT",
+      consultant: "Consultant ENT & Neurotologist",
+      slug: "/dr-kumaresh-krishnamoorthy"
+    },
+    {
+      name: "Dr. Ramesh T. S",
+      img: "/img/new-doctor-image/dr-ramesh-t-s.png",
+      alt: "Dr. Ramesh T. S | General Surgeon | Vasavi Hospitals Bangalore",
+      experience: "30+",
+      qualification: "MBBS, DNB, MRCS (UK)",
+      department: "General Surgery",
+      consultant: "Sr. Consultant – Minimally Invasive Surgery",
+      slug: "/dr-ramesh-t-s"
     },
     {
       name: "Dr. Yashaswi Srikakula",
-      img: "/img/new-doctor-image/dr-yashasvi-sq.png",
+      img: "/img/new-doctor-image/dr-yashasvi.png",
       alt: "Dr. Yashaswi Srikakula | ENT Specialist | Vasavi Hospitals Bangalore",
       experience: "15+",
-      qualification: "MBBS, DLO, Fellowship in Rhinology & Anterior Skull Base",
+      qualification: "MBBS, DLO",
       department: "ENT",
-      consultant: "Consultant - ENT Surgeon",
+      consultant: "Consultant ENT",
       slug: "/dr-yashaswi-srikakula"
+    },
+    {
+      name: "Dr. Rupendu T",
+      img: "/img/new-doctor-image/dr-rupendu-t.png",
+      alt: "Dr. Rupendu T | Orthopaedic Surgeon | Vasavi Hospitals Bangalore",
+      experience: "45+",
+      qualification: "MBBS, MS Orthopaedics",
+      department: "Orthopedics",
+      consultant: "Sr. Consultant Orthopaedic Surgeon",
+      slug: "/dr-rupendu-t"
     },
     {
       name: "Dr. Krishna Kumar B R",
       img: "/img/new-doctor-image/dr-krishna-kumar-b-r-sq.png",
       alt: "Dr. Krishna Kumar B R | Cardiologist | Vasavi Hospitals Bangalore",
       experience: "17+",
-      qualification: "MBBS, Diploma in Clinical Cardiology",
+      qualification: "MBBS, Diploma Clinical Cardiology",
       department: "Cardiology",
-      consultant: "Consultant - Cardiologist",
+      consultant: "Consultant Cardiologist",
       slug: "/dr-krishna-kumar-b-r"
     },
     {
       name: "Dr. Sruthi Bhaskaran",
       img: "/img/new-doctor-image/dr-sruthi-bhaskaran-sq.png",
-      alt: "Dr. Sruthi Bhaskaran | Emergency Medicine Specialist | Vasavi Hospitals Bangalore",
+      alt: "Dr. Sruthi Bhaskaran | Emergency Medicine | Vasavi Hospitals Bangalore",
       experience: "10+",
-      qualification: "MBBS, DNB (Emergency Medicine), FICM, CPCDM",
+      qualification: "MBBS, DNB Emergency Medicine",
       department: "Emergency Medicine",
-      consultant: "Consultant - Emergency Medicine Specialist",
+      consultant: "HOD – Emergency Medicine",
       slug: "/dr-sruthi-bhaskaran"
     },
     {
       name: "Dr. Manjunath P H",
       img: "/img/new-doctor-image/dr-manjunath-p-h-sq.png",
       alt: "Dr. Manjunath P H | Pulmonologist | Vasavi Hospitals Bangalore",
-      experience: "8+",
+      experience: "17+",
       qualification: "MBBS, DTCD, DNB",
       department: "Pulmonology",
-      consultant: "Consultant - Pulmonologist",
+      consultant: "Consultant Pulmonologist",
       slug: "/dr-manjunath-p-h"
     },
     {
       name: "Dr. Akshay Masur",
-      img: "img/new-doctor-image/dr-akshay-masur.png",
-      alt: "Dr. Akshay Masur | Internal Medicine & Endoscopy Specialist | Vasavi Hospitals Bangalore",
-      experience: "9+",
-      qualification: "MBBS, MD (General Medicine), DNB, Fellowship in GI Endoscopy",
-      department: "Internal Medicine",
-      consultant: "Consultant - Internal Medicine & Endoscopy Specialist",
+      img: "/img/new-doctor-image/dr-akshay-masur.png",
+      alt: "Dr. Akshay Masur | Internal Medicine & Gastroenterology | Vasavi Hospitals Bangalore",
+      experience: "14+",
+      qualification: "MBBS, MD, DNB",
+      department: "Gastroenterology",
+      consultant: "Consultant Internal Medicine",
       slug: "/dr-akshay-masur"
+    },
+    {
+      name: "Dr. Revathi Natesan",
+      img: "/img/new-doctor-image/dr-revathi-natesan.png",
+      alt: "Dr. Revathi Natesan | Endodontist | Vasavi Hospitals Bangalore",
+      experience: "15+",
+      qualification: "MDS Conservative Dentistry & Endodontics",
+      department: "Dentistry",
+      consultant: "Consultant Endodontist",
+      slug: "/dr-revathi-natesan"
+    },
+    {
+      name: "Dr. Srivatsa Subramanya",
+      img: "/img/new-doctor-image/dr-srivatsa-subramanya.png",
+      alt: "Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
+      experience: "17+",
+      qualification: "MBBS, MS (Ortho), DNB (Ortho), Fellowships (Australia, Italy, Korea)",
+      department: "Orthopedics",
+      consultant: "Consultant Orthopedic Surgeon",
+      slug: "/dr-srivatsa-subramanya"
+    },
+    {
+      name: "Dr. Mohan Ram. P",
+      img: "/img/new-doctor-image/dr-mohan-ram- p-sq.png",
+      alt: "Dr. Mohan Ram. P | Laparoscopic General Surgeon | Vasavi Hospitals Bangalore",
+      experience: "15+",
+      qualification: "MBBS, MS (General Surgery), FIAGES, FALS",
+      department: "General Surgery",
+      consultant: "Consultant Laparoscopic & General Surgeon | Laser Proctologist",
+      slug: "/dr-mohan-ram-p"
     }
+
+
+
   ];
+
+
+
+  faqs = [
+    {
+      title: "How experienced are the doctors at Vasavi Hospitals?",
+      content:
+        "Our doctors bring 20–45+ years of clinical experience, handling complex cases with expertise, care, and compassion across multiple specialties."
+    },
+    {
+      title: "Are Vasavi Hospital doctors specialists or general physicians?",
+      content:
+        "We have a strong team of highly qualified specialists, including surgeons, physicians, gynecologists, orthopaedic surgeons, pediatricians, and super-specialists."
+    },
+    {
+      title: "Can I consult a senior doctor directly?",
+      content:
+        "Yes. Patients can book appointments with senior and experienced doctors based on availability and department."
+    },
+    {
+      title: "Do doctors at Vasavi Hospitals provide second opinions?",
+      content:
+        "Absolutely. We encourage second-opinion consultations, especially for surgeries, so patients can make informed and confident decisions."
+    },
+    {
+      title: "Are the doctors registered and certified?",
+      content:
+        "Yes. All our doctors are fully certified, licensed, and registered with relevant medical councils, and they follow ethical medical practices."
+    },
+    {
+      title: "How can I book an appointment with a doctor?",
+      content:
+        "You can book an appointment online through our website, call our hospital helpdesk, or visit the hospital reception directly."
+    },
+    {
+      title: "Do doctors work with advanced medical technology?",
+      content:
+        "Our doctors use modern diagnostic tools and advanced surgical techniques, including minimally invasive and laparoscopic procedures."
+    },
+    {
+      title: "Are both male and female doctors available?",
+      content:
+        "Yes. We have both male and female doctors across departments to ensure patient comfort and choice."
+    }
+  ]
+
+
+  openedIndex: number | null = null;
+
+  toggle(index: number) {
+    this.openedIndex = this.openedIndex === index ? null : index;
+  }
+
 
 
 
