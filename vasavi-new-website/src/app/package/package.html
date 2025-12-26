@@ -1,126 +1,522 @@
-<div class="package">
-    <div class="page-header">
-        <div class="">
-            <img src="img/health-package/3d-rendering-concept-healthcare-medical-illustration 1.png" alt=""
-                class="banner-img">
-        </div>
-        <div class="content">
-            <div class="banner-heading">Affordable Health Check Packages in Bangalore</div>
-            <div class="banner-para">Choosing the best health check packages in Bangalore helps you detect health concerns early and stay proactive about your well-being. Our comprehensive health check packages include essential screenings for heart health, diabetes, thyroid, liver, kidney function, and routine blood tests. Suitable for all age groups, these preventive health check-ups offer accurate diagnostics and medical guidance. We provide affordable health check packages in Bangalore, making quality preventive care accessible for long-term wellness.</div>
+<div class="page-header">
+    <div class="container container-banner">
+        <div class="row d-flex justify-content-center centered-element-banner">
+            <div class="col-12">
+                <h1 class="display-4 text-center text-white " data-aos="slide-down">Health Packages</h1>
+                <nav aria-label="breadcrumb " data-aos="slide-down">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item text-white"><a [routerLink]="'/'">Home</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Health Packages</li>
+                    </ol>
+                </nav>
+            </div>
         </div>
     </div>
-
-    <div class="package-cards">
-        <div class="card">
-            <div class="card-content">
-                <div class="card-1">
-                    <div class="card-heading">Basic Health Check Package</div>
-                    <div class="card-price">Rs.1700/-</div>
-                </div>
-
-
-                <a href="" data-bs-toggle="modal" data-bs-target="#enquire"> <button type="button" class="btn">Enquire
-                        Now</button></a>
-            </div>
-            <img src="img/health-package/basic-health-check-package.png" alt="" class="img-1">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-2">
-                    <div class="card-heading">Vasavi Well Women Health Check up</div>
-                    <div class="card-price">Rs. 1999/-</div>
-                </div>
-
-
-                <a href="" data-bs-toggle="modal" data-bs-target="#enquire"> <button type="button" class="btn">Enquire
-                        Now</button></a>
-            </div>
-            <img src="img/health-package/vasavi-well-women-health-check-up.png" alt="" class="img-2">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-3">
-                    <div class="card-heading">Cardiac Wellness Package</div>
-                    <div class="card-price">Rs.5999/-</div>
-                </div>
-
-                <button class="btn" (click)="goToPackage('cardiac-wellness-package')">Enquire Now</button>
-            </div>
-            <img src="img/health-package/cardiac-wellness-package.png" alt="" class="img-3">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-4">
-                    <div class="card-heading">Vasavi Diabetic Health Check up</div>
-                    <div class="card-price">Rs.4000/-</div>
-                </div>
-
-                <button class="btn" (click)="goToPackage('diabetes-health-check')">Enquire Now</button>
-            </div>
-            <img src="img/health-package/vasavi-diabetic-health-check-up.png" alt="" class="img-4">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-5">
-                    <div class="card-heading">Vasavi Master Health Check - Men</div>
-                    <div class="card-price">Rs. 4000/-</div>
-                </div>
-
-                <a href="" data-bs-toggle="modal" data-bs-target="#enquire"> <button type="button" class="btn">Enquire
-                        Now</button></a>
-            </div>
-            <img src="img/health-package/vasavi-master-health-check-men.png" alt="" class="img-5">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-6">
-                    <div class="card-heading">Vasavi Master Health Check - Women</div>
-                    <div class="card-price">Rs. 4500/-</div>
-                </div>
-
-
-                <a href="" data-bs-toggle="modal" data-bs-target="#enquire"> <button type="button" class="btn">Enquire
-                        Now</button></a>
-            </div>
-            <img src="img/health-package/vasavi-master-health-Check-women.png" alt="" class="img-6">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-7">
-                    <div class="card-heading">Comprehensive Annual Diabetes Care Package</div>
-                    <div class="card-price">Rs. 9999/-</div>
-                </div>
-
-                <button class="btn" (click)="goToPackage('comprehensive-annual-diabetes-care-package')">Enquire
-                    Now</button>
-            </div>
-            <img src="img/health-package/comprehensive-annual-diabetes-care-package.png" alt="" class="img-7">
-        </div>
-
-        <div class="card">
-            <div class="card-content">
-                <div class="card-8">
-                    <div class="card-heading">Comprehensive Annual Heart Care Package</div>
-                    <div class="card-price">Rs. 6999/-</div>
-                </div>
-
-                <button class="btn" (click)="goToPackage('comprehensive-annual-heart-care-package')">Enquire
-                    Now</button>
-            </div>
-            <img src="img/health-package/comprehensive-annual-heart-care-package.png" alt="" class="img-8">
-        </div>
-
-    </div>
-
 </div>
 
 
+<section>
+    <div class="container">
+        <div class="table-wrapper">
+            <table>
+                <thead class="">
+                    <tr>
+                        <th>
+                            <div>
+                                Select your plan
+                                <div class="svg-wrapper">
+                                    <svg viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 17v-4h-8v-2h8v-4l6 5-6 5z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Basic Health Check Package<p class="pb-2"></p>
+                            </div>
+                            <div class="info">
+                                <div class="amount">Rs.1700/-</div>
+                                <button (click)="goToPackage('basic-health-check-package')"
+                                        type="button">Enquire Now</button>
+
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Vasavi Well Women Health Check up</div>
+                            <div class="info">
+                                <div class="amount">Rs. 1999/-</div>
+                                <button (click)="goToPackage('well-women-health-check-up')"
+                                        type="button">Enquire Now</button>
+
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Cardiac Wellness Package</div>
+                            <div class="info">
+                                <div class="amount"> Rs.5999/-</div>
+                                <button (click)="goToPackage('cardiac-wellness-package')" type="button">Enquire
+                                    Now</button>
+
+                            </div>
+                        </th>
+
+                        <th style="cursor: pointer;">
+                            <div class="heading">Vasavi Diabetic Health Check up<p class="pb-2"></p>
+                            </div>
+                            <div class="info">
+                                <div class="amount">Rs.4000/-</div>
+                                <button (click)="goToPackage('diabetes-health-check')" type="button">Enquire
+                                    Now</button>
+
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Vasavi Master Health Check - Men</div>
+                            <div class="info">
+                                <div class="amount">Rs. 4000/-</div>
+                                <button (click)="goToPackage('vasavi-master-health-check-men')"
+                                        type="button">Enquire Now</button>
+
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Vasavi Master Health Check - Women</div>
+                            <div class="info">
+                                <div class="amount">Rs. 4500/-</div>
+                                <button (click)="goToPackage('vasavi-master-health-check-women')"
+                                        type="button">Enquire Now</button>
+
+                            </div>
+                        </th>
+                        <th>
+                            <div class="heading">Comprehensive Annual Diabetes Care Package</div>
+                            <div class="info">
+                                <div class="amount">Rs. 9999/-</div>
+                                <button (click)="goToPackage('comprehensive-annual-diabetes-care-package')"
+                                    type="button">Enquire
+                                    Now</button>
+
+                            </div>
+                        </th>
+
+                        <th>
+                            <div class="heading">Comprehensive Annual Heart Care Package</div>
+                            <div class="info">
+                                <div class="amount">Rs. 6999/-</div>
+                                <button (click)="goToPackage('comprehensive-annual-heart-care-package')"
+                                    type="button">Enquire
+                                    Now</button>
+
+                            </div>
+                        </th>
+
+                    </tr>
+                </thead>
+
+
+                <tbody>
+                    <tr>
+                        <td class="heading-priceing border-bottom border-light">Haematology</td>
+                        <td>
+                            <!-- <svg class="starter" viewBox="0 0 24 24">
+								<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+							</svg> -->
+                            <p>Complete Blood Count (CBC), ESR (Erythrocyte Sedimentation Rate)</p>
+                        </td>
+
+                        <td>
+                            <p>Complete Blood Count (CBC) , ESR (Erythrocyte Sedimentation Rate)</p>
+                        </td>
+
+                        <td>
+                            <p>Complete Blood Count (CBC), Peripheral Smear, ESR (Erythrocyte Sedimentation Rate)</p>
+                        </td>
+
+                        <td>
+                            <p>Complete Blood Count (CBC) ESR (Erythrocyte Sedimentation Rate), Peripheral Smear</p>
+                        </td>
+
+                        <td>
+                            <p>Complete Blood Count (CBC), ESR (Erythrocyte Sedimentation Rate), Peripheral Smear</p>
+                        </td>
+
+                        <td>
+                            <p>Complete Blood Count (CBC), ESR (Erythrocyte Sedimentation Rate), Peripheral Smear</p>
+                        </td>
+                        <td>
+                            <p>Complete Blood Count (CBC) (2 times / year)</p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Complete Blood Count (CBC) (4 times / year)
+                            </p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Biochemical Parameters</td>
+                        <td>
+                            <!-- <svg class="starter" viewBox="0 0 24 24">
+								<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+							</svg> -->
+                            <p>Fasting Blood Sugar & Post Prandial, Creatinine</p>
+                        </td>
+
+                        <td>
+                            <p>Fasting Blood Sugar & Post Prandial</p>
+                        </td>
+
+                        <td>
+                            <p>Iron Profile, Random Blood Sugar, Electrolytes (Sodium, Potassium, Chloride), Blood Urea,
+                                Serum Creatinine, Uric Acid, Glycosylated, Hemoglobin (HbA1C), Vitamin B12, Total 25 OH
+                                Vitamin D, CPK</p>
+                        </td>
+
+                        <td>
+                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated
+                                Hemoglobin(Hba1c)</p>
+                        </td>
+
+                        <td>
+                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated
+                                Hemoglobin(Hba1c), Vitamin B12,Vitamin D</p>
+                        </td>
+
+                        <td>
+                            <p>Fasting Blood Sugar & Post Prandial, Urea, Creatinine, Uric Acid, Glycosylated
+                                Hemoglobin(Hba1c), Vitamin B12, Vitamin D</p>
+                        </td>
+                        <td>
+                            <p>
+                                Fasting Blood Sugar (FBS) (4 times / year),
+                                Post Prandial Blood Sugar (PPBS) (4 times / year),
+                                HbA1c (4 times / year),
+                                Urine Microalbumin (4 times / year),
+                                Renal Function Test (RFT) (3 times / year),
+                                Thyroid Stimulating Hormone (TSH) (2 times / year)
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Fasting Blood Sugar (FBS) (4 times / year),
+                                Post Prandial Blood Sugar (PPBS) (4 times / year),
+                                HbA1c (3 times / year),
+                                Serum Creatinine (3 times / year)
+                            </p>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Lipid Profile Test</td>
+                        <td>
+                            <!-- <svg class="starter" viewBox="0 0 24 24">
+								<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+							</svg> -->
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>-</p>
+                        </td>
+
+                        <td>
+                            <p>Lipid Profile</p>
+                        </td>
+
+                        <td>
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Total Cholesterol, HDL Cholesterol, LDL Cholesterol, Triglycerides, Total Cholesterol /
+                                HDL Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Lipid Profile (2 times / year)
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Lipid Profile (3 times / year)
+                            </p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Liver Function Test</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                            <p>Liver Function Test (LFT), Gamma-Glutamyl Transferase (GGT)</p>
+                        </td>
+                        <td>
+                            <!-- <svg class="starter" viewBox="0 0 24 24">
+								<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+							</svg> -->
+                            <p>Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, SGPT, SGOT, Alkaline Phosphatase,
+                                Total Protein, Albumin, Globulin, A / G Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, SGPT, SGOT, Alkaline Phosphatase,
+                                Total Protein, Albumin, Globulin, A / G Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Total Bilirubin, Direct Bilirubin, Indirect Bilirubin, SGPT, SGOT, Alkaline Phosphatase,
+                                Total Protein, Albumin, Globulin, A / G Ratio</p>
+                        </td>
+
+                        <td>
+                            <p>Liver Function Test (LFT) (2 times / year)</p>
+                        </td>
+
+                        <td>
+                            <p>-
+                            </p>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td class="heading-priceing">Other Tests</td>
+                        <td>
+                            <!-- <svg class="starter" viewBox="0 0 24 24">
+								<path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"/>
+							</svg> -->
+                            <p>Blood Grouping – Rh Typing, Urine Analysis, Stool – occult blood </p>
+                        </td>
+                        <td>
+                            <p>Pap Smear & Breast Examination for women, Thyroid Profile (T3, T4, TSH), Blood Grouping -
+                                Rh Typing, Total Cholesterol, Serum Calcium, Urine Routine</p>
+                        </td>
+
+                        <td>
+                            <p>Urine Routine, TSH (Thyroid Stimulating Hormone), Chest PA View (X-Ray), Abdomen & Pelvis
+                                (USG) </p>
+                        </td>
+
+                        <td>
+                            <p>Blood Grouping – Rh Typing, Complete Urine Analysis, Urine for Micro-albumin, Stool
+                                Examination, GGTP</p>
+                        </td>
+
+
+                        <td>
+                            <p>Blood Grouping – Rh Typing, Complete Urine Analysis, TSH, GGTP</p>
+                        </td>
+
+                        <td>
+                            <p>Blood Grouping – Rh Typing, Complete Urine Analysis, Pap Smear & Breast Examination for
+                                women, TSH, GGTP</p>
+                        </td>
+
+                        <td>
+                            <p>Physiotherapy (if required) (Once / year)</p>
+                        </td>
+
+                        <td>
+                            <p>-</p>
+                        </td>
+
+
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Cardiology</td>
+                        <td>
+                            <p>ECG (Resting)</p>
+                        </td>
+                        <td>
+                            <p>-</p>
+                        </td>
+                        <td>
+                            <p>ECG (Resting), 2D ECHO CARDIOGRAPHY, Tread Mill Test (TMT) </p>
+                        </td>
+                        <td>
+                            <p>ECG (Resting)</p>
+                        </td>
+
+                        <td>
+                            <p>ECG (Resting)</p>
+                        </td>
+
+                        <td>
+                            <p>ECG (Resting)</p>
+                        </td>
+
+                        <td>
+                            <p>
+                                ECG (2 times / year),
+                                TMT – Treadmill Test (Once / year),
+                                2D ECHO (Once / year)
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>
+                                ECG (4 times / year),
+                                2D ECHO (2 times / year),
+                                TMT – Treadmill Test (Once / year),
+                                CPK (Once / year),
+                                CPK-MB (Once / year)
+                            </p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Radiology</td>
+                        <td>
+                            <p>Chest X-Ray , Ultrasound – Abdomen</p>
+                        </td>
+
+                        <td>
+                            <p>Mamography both x- Ray, Ultrasound – Abdomen</p>
+                        </td>
+
+                        <td>
+                            <p>-</p>
+                        </td>
+
+                        <td>
+                            <p>Chest X-Ray, Ultrasound – Abdomen, Foot Scan</p>
+                        </td>
+
+                        <td>
+                            <p>Chest X-Ray, Ultrasound – Abdomen, 2D ECHO CARDIOGRAPHY, *TMT on doctor's advice</p>
+                        </td>
+
+                        <td>
+                            <p>Chest X-Ray, Ultrasound – Abdomen, 2D ECHO CARDIOGRAPHY, *TMT on doctor's advice</p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Chest X-Ray (Once / year),
+                                USG Abdomen & Pelvis (Once / year)
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>Chest X-Ray (2 times / year)</p>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Special Tests </td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>
+                            <p>Pulmonary Function Test</p>
+                        </td>
+                        <td>
+                            <p>Pulmonary Function Test</p>
+                        </td>
+
+                        <td>
+                            <p>
+                                CT Calcium Scoring (Once / year)
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>
+                                -
+                            </p>
+                        </td>
+
+
+                    </tr>
+
+                    <tr>
+                        <td class="heading-priceing">Consultations </td>
+                        <td>
+                            <p>
+                                Internal Medicine Consultation, Dental Consultation, Dietitian Consultation
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Gyneac Consultation, Dental Consultation, Dietitian Consultation
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                Cardiologist Consultation, Dental Consultation, Ophthalmologist Consultation
+                            </p>
+                        </td>
+                        <td>
+                            <p>Internal Medicine Consultation, Surgical Consultation, Diabetologist Consultation,
+                                Dental Consultation, Ophthalmologist Consultation, One additional Consultation of
+                                customer's choice (within 2 days), Dietitian Consultation</p>
+                        </td>
+                        <td>
+                            <p>Internal Medicine Consultation, Surgical Consultation, Dental Consultation,
+                                Ophthalmologist Consultation, One
+                                additional Consultation of customer's choice (within 2 days), Dietitian Consultation</p>
+                        </td>
+                        <td>
+                            <p>Internal Medicine Consultation, Gynecology Consultation, Ophthalmologist Consultation,
+                                Dental Consultation, One additional Consultation of customer's choice (within 2 days),
+                                Dietitian Consultation
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Physician / Diabetologist Consultation (4 times / year),
+                                Lifestyle Management Consultation (4 times / year),
+                                Dietician Consultation (4 times / year)
+                            </p>
+                        </td>
+
+                        <td>
+                            <p>
+                                Cardiologist Consultation (4 times / year),
+                                General Physician Consultation (4 times / year),
+                                Dietician Consultation (4 times / year)
+                            </p>
+                        </td>
+
+
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
 
 
 <div class="modal fade" id="enquire" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

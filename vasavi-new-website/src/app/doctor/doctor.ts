@@ -182,7 +182,7 @@ export class Doctor {
     {
       id: 2,
       name: "Dr. Sreenidhi H. C",
-      image: "/img/new-doctor-image/dummy-male.png",
+      image: "img/new-doctor-image/dr-sreenidhi-h-c.png",
       alt: "Dr. Sreenidhi Chandrashekar | Nephrologist | Vasavi Hospitals Bangalore",
       areasOfExpertise: [
         { icon: "fas fa-kidney", expertise: "Nephrology" },

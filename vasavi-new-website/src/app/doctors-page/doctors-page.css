@@ -65,8 +65,8 @@
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
-    text-transform: capitalize;
+    line-height: 25px;
+    /* text-transform: capitalize; */
     align-self: stretch;
 }
 
@@ -902,6 +902,84 @@ ul {
 }
 
 
+.accordion-wrapper {
+    width: 100%;
+    max-width: 840px;
+    margin: auto;
+}
+
+.accordion-item {
+    background: #fff;
+    border-bottom: 3px solid #000;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    padding: 15px 20px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 23.8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34.8px;
+    letter-spacing: -0.24px;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+    font-size: 20px;
+}
+
+.arrow.open {
+    transform: rotate(90deg);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease;
+}
+
+.accordion-body.open {
+    max-height: 500px;
+}
+
+.accordion-content {
+    padding: 15px 20px;
+    color: #000;
+    font-family: Inter;
+    font-size: 15.6px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.header {
+    text-align: center;
+    color: #000;
+    font-family: Inter;
+    font-size: 36.4px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 43.2px;
+    letter-spacing: -0.72px;
+}
+
+.faq-heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 23.8px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 34.8px;
+    /* 146.218% */
+    letter-spacing: -0.24px;
+}
 
 
 
@@ -983,6 +1061,10 @@ ul {
 
     .dept-toggle {
         width: 410px;
+    }
+
+    .faq-heading {
+        font-size: 20px;
     }
 
     .dept-drawer {
@@ -1101,6 +1183,11 @@ ul {
 
     .search-wrapper {
         flex-direction: row;
+    }
+
+      .faq-heading {
+        font-size: 18px;
+        line-height: 25px;
     }
 
     .dept-toggle {

@@ -3,9 +3,7 @@
         <div class="animation">
             <div class="header">
                 <div class="heading">Our Specialized Doctors</div>
-                <div class="para">Our experienced doctors in Bangalore provide comprehensive, ethical, and advanced
-                    medical care. Backed by modern technology and years of hands-on experience, our specialists focus on
-                    better outcomes and personalized treatment for every patient.</div>
+                <div class="para">Our Experienced Doctors in Bangalore provide Comprehensive, Ethical and Advanced Medical care. Backed by Modern Technology and years of hands-on experience, our specialists focus on better outcomes and personalized treatment for every patient.</div>
             </div>
         </div>
     </app-animation>
@@ -185,7 +183,37 @@
 
     </div>
 
+
     <div class="Surgery-container">
+
+        <div class="accordion-wrapper">
+          <div class="header">FAQs</div>
+        
+          <div class="accordion-item" *ngFor="let item of faqs; let i = index">
+        
+            <div class="accordion-header" (click)="toggle(i)">
+              <span class="arrow" [class.open]="openedIndex === i">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16">
+                  <path d="M7.3 8L0 2.3L1.8 0L12 8L1.8 16L0 13.7L7.3 8Z" fill="black" />
+                </svg>
+              </span>
+        
+              <div class="faq-heading">{{ item.title }}</div>
+            </div>
+        
+            <div class="accordion-body" [class.open]="openedIndex === i">
+              <div class="accordion-content">
+                {{ item.content }}
+              </div>
+            </div>
+        
+          </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="Surgery-container">
         <div class="surgery-header">
             <div class="surgery-heading">
                 Robotic Surgery
@@ -235,9 +263,9 @@
                 <img src="img/doctor-page/Mako Robotic 1.png" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="bottom-part">
+    <!-- <div class="bottom-part">
         <div class="bottom-right">
             <div class="flex1">
                 <div class="Obstetrics-card">
@@ -277,7 +305,7 @@
                 <img src="img/doctor-page/stopwatch-with-24h-text 1.png" alt="">
             </div>
         </div>
-    </div>
+    </div> -->
 
 
 </div>

@@ -65,6 +65,10 @@
     background: #fff;
     box-shadow: 3px 4px 20px 0 rgba(0, 0, 0, 0.25);
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:center ;
 }
 
 .blue {
@@ -132,7 +136,7 @@
 
 .banner-package-price {
     width: 370px;
-    height: 200px;
+    height: auto;
     border-radius: 20px;
     background: white;
     box-shadow: 3px 4px 20px 0 rgba(0, 0, 0, 0.25);
@@ -472,7 +476,7 @@ label {
 
 .choose-cards {
     width: 300px;
-    height: 100px;
+    height: auto;
     border-radius: 14px;
     background: #FFF;
     box-shadow: 3px 4px 12px 0 rgba(0, 0, 0, 0.25);
@@ -968,5 +972,9 @@ label {
 
     .about-para span {
         font-size: 16px;
+    }
+
+    .banner-card {
+        align-items: center;
     }
 }
