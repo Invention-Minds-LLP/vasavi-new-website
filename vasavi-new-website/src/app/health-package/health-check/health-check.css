@@ -56,6 +56,7 @@
     font-weight: 600;
     line-height: normal;
     /* width: 537px; */
+    width: 637px;
 }
 
 .banner-card {
@@ -68,7 +69,7 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    justify-content:center ;
+    justify-content: center;
 }
 
 .blue {
@@ -656,7 +657,8 @@ label {
 .book-appointment .para {
     color: white;
 }
-.book-appointment .para{
+
+.book-appointment .para {
     padding: 0 6px;
 }
 
@@ -756,6 +758,10 @@ label {
         font-size: 20px;
     }
 
+    .banner-para {
+        width: 100%;
+    }
+
     .gray-1 {
         width: 419px;
     }
@@ -807,6 +813,10 @@ label {
     .blue {
         top: 1020px;
 
+    }
+
+    .banner-para {
+        width: 100%;
     }
 
     .card {
@@ -864,6 +874,11 @@ label {
         align-items: center;
         margin-top: 0;
     }
+
+    .banner-para {
+        width: 100%;
+    }
+
 
 
     .card {
