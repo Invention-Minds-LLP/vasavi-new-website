@@ -1506,7 +1506,7 @@ Book the Vasavi Well Women Health Check-Up and prioritize your well-being.`,
 
 
       // Banner section
-      pageTitle: "Vasavi Master Health Check – Men",
+      pageTitle: "Master Health Check – Men",
       pagePrice: "4000",
       pageSubtitle: "Comprehensive Men’s Health Assessment",
       pageDescription: "An all-inclusive health evaluation covering heart, liver, lungs, metabolism, and nutritional status for long-term wellness.",
@@ -1786,7 +1786,7 @@ Book the Vasavi Master Health Check - Men and invest in long-term well-being.`,
 
 
       // Banner section
-      pageTitle: "Vasavi Master Health Check – Women",
+      pageTitle: "Master Health Check – Women",
       pagePrice: "4500",
       pageSubtitle: "Advanced Total Women’s Health Care",
       pageDescription: "A premium preventive package addressing metabolic health, heart function, nutrition, reproductive health, and immunity.",

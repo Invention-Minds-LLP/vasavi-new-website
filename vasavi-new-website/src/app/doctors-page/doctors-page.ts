@@ -42,13 +42,12 @@ export class DoctorsPage {
     "Neurology": ["Neurology"],
     "Neurosurgery": ["Neurosurgery"],
     "Anesthesiology": ["Anesthesiology"],
-    "Critical Care": ["Critical Care"],
-    "Emergency Medicine": ["Emergency Medicine", "Critical Care"],
+    "Emergency Medicine & Critical Care": ["Emergency Medicine","Critical Care"],
     "General Medicine": ["General Medicine"],
     "Ophthalmology": ["Ophthalmology"],
     "Dentistry": ["Dentistry"],
     "Bariatric Surgery": ["Bariatric Surgery", "General Surgery (MIS)"],
-    "Internal Medicine": ["Internal Medicine", "Gastroenterology", "General Medicine"],
+    "Internal Medicine": ["Internal Medicine", "General Medicine"],
 
   };
 
@@ -119,9 +118,9 @@ export class DoctorsPage {
 
     // 🔹 Diagnostics & care
     // 🔹 Diagnostics & care
-    { name: 'Critical Care', icon: '/img/departments/critical-care.png' },
-    { name: 'Emergency Medicine', icon: '/img/departments/emergency.png' },
-    { name: 'General Medicine', icon: '/img/departments/general-medicine.png' },
+    { name: 'Emergency Medicine & Critical Care', icon: '/img/departments/critical-care.png' },
+    // { name: 'Emergency Medicine', icon: '/img/departments/emergency.png' },
+    // { name: 'General Medicine', icon: '/img/departments/general-medicine.png' },
     { name: 'Internal Medicine', icon: '/img/departments/internal-medicine.png' },
 
 
@@ -456,7 +455,7 @@ export class DoctorsPage {
       experience: "14+",
       qualification: "MBBS, MD, DNB",
       department: "Gastroenterology",
-      consultant: "Consultant Internal Medicine",
+      consultant: "Consultant Gastroenterology",
       slug: "/dr-akshay-masur"
     },
     {
@@ -488,7 +487,18 @@ export class DoctorsPage {
       department: "General Surgery",
       consultant: "Consultant Laparoscopic & General Surgeon | Laser Proctologist",
       slug: "/dr-mohan-ram-p"
+    },
+    {
+      name: "Dr. Sridhar Srinivasan G",
+      img: "/img/new-doctor-image/dr-sridhar-srinivasan-g.png",
+      alt: "Dr. Sridhar Srinivasan G | Internal Medicine | Vasavi Hospitals Bangalore",
+      // experience: "",
+      qualification: " MBBS, MD",
+      department: "Internal Medicine",
+      consultant: "Consultant Internal Medicine",
+      slug: ""
     }
+
 
 
 
