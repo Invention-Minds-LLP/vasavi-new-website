@@ -1,334 +1,210 @@
-.page-header {
-    background: linear-gradient(rgba(59, 60, 66, 0.749), rgba(69, 70, 75, 0.8)), url('/img/Home/opd.jpg') center center no-repeat;
+.banner{
+    background-image: url('/img/health-check-package/health-check-package-banner.png');
     background-size: cover;
-    height: 50vh;
-}
-
-.page-header .container-banner {
-    position: relative;
-    height: 50vh;
-}
-
-.page-header .centered-element-banner {
-    margin: 0;
-    position: inherit;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center !important;
-}
-
-
-.page-header .breadcrumb-item a,
-.page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--light);
-}
-
-.page-header .breadcrumb-item a:hover,
-.page-header .breadcrumb-item.active {
-    color: var(--light);
-}
-
-a {
-    text-decoration: none;
-}
-
-  .heading-priceing{
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--secondary);
-  }
-
-  
-  h1 {
-    font-size: 2.5rem;
-  }
-
-section {
-    padding: 20px 0;
-    overflow: hidden;
-}
-
-.table-wrapper {
-    background: var(--white);
-    overflow-x: auto;
-}
-
-table {
-    position: relative;
-    text-align: center;
+    background-position: center center;
     width: 100%;
-}
-
-table thead {
-    background: var(--white);
-    transition: box-shadow 0.2s;
-}
-
-table tr {
-    display: flex;
-}
-
-table th,
-table td {
-    width: 35%;
-    min-width: 150px;
-}
-
-table td p {
-    font-size: 14px;
-}
-
-table th:nth-child(1) {
+    height: 500px;
+    margin-bottom: 60px;
+    padding: 4%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    padding: 0 10px;
 }
 
-table th:nth-child(1) .svg-wrapper {
-    margin-top: 10px;
-}
-
-table th:nth-child(1) svg {
-    width: 22px;
-    height: 22px;
-}
-
-table th .heading {
-    padding: 1rem;
-    color: var(--white);
-}
-
-table th:nth-child(2) .heading {
-    background: var(--starter);
-}
-
-table th:nth-child(3) .heading {
-    background: var(--essential);
-}
-
-table th:nth-child(4) .heading {
-    background: var(--professional);
-}
-
-table th:nth-child(5) .heading {
-    background: var(--secondary);
-}
-
-table th:nth-child(6) .heading {
-    background: var(--starter);
-}
-
-table th:nth-child(7) .heading {
-    background: var(--essential);
-}
-table th:nth-child(8) .heading {
-    background: var(--professional);
-}
-table th:nth-child(9) .heading {
-    background: var(--essential);
-}
-
-table th .info {
-    position: relative;
-    padding: 1.5rem 0;
-    border-left: 1px solid var(--lightgray);
-    border-bottom: 1px solid var(--lightgray);
-}
-
-table th .popular {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    font-size: 11px;
-    background: var(--popular);
-    padding: 4px 8px;
-    border-radius: 2px;
-}
-
-table th .amount {
-    font-size: 1rem;
-}
-
-table th .amount span {
-    display: block;
-    transform: translateY(-8px);
-}
-
-table th:nth-child(2) .amount {
-    color: var(--starter);
-}
-
-table th:nth-child(3) .amount {
-    color: var(--essential);
-}
-
-table th:nth-child(4) .amount {
-    color: var(--professional);
-}
-
-table th:nth-child(5) .amount {
-    color: var(--secondary);
-}
-
-table th:nth-child(6) .amount {
-    color: var(--starter);
-}
-
-table th:nth-child(7) .amount {
-    color: var(--essential);
-}
-table th:nth-child(8) .amount {
-    color: var(--professional);
-}
-table th:nth-child(9) .amount {
-    color: var(--essential);
-}
-
-
-table th .billing-msg,
-table th .amount span {
-    font-weight: normal;
-    font-size: 0.8rem;
-}
-
-table th button {
+.banner h1{
+    color: #FFF;
+    font-family: "Pragati Narrow";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: capitalize;
+     background-color: rgba(0, 51, 77, 0.8);
+    padding: 15px 20px;
     display: inline-block;
+    max-width: fit-content;
+    border-radius: 10px;
+}
+
+.banner p{
+    max-width: 730px;
+    color: white;
+    margin-top: 30px;
+     background-color: rgba(0, 51, 77, 0.8);
+    padding: 20px;
+    line-height: 1.6;
+    border-radius: 10px;
+}
+
+.banner-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+}
+
+.banner-button svg{
+    position: relative;
+    margin-top: -5px;
+}
+
+.banner .banner-button-text{
+    color: #FFF;
+    font-family: "Pragati Narrow";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: normal; */
     border-radius: 20px;
-    padding: 8px 15px;
-    margin-top: 10px;
-    transition: all 0.2s;
-    background: transparent;
+    background: #1B8FCD;
+    width: 313px;
+    height: 64px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-body.modal-open {
-	overflow: hidden;
+.card-section-heading-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 5%;
+  width: 100%;
 }
 
-body.mobile.modal-open #wpwrap {
-	overflow: hidden;
-	position: fixed;
-	height: 100%;
+.card-section-heading {
+  color: #000;
+  font-family: "Pragati Narrow";
+  font-size: 24px;
+  font-weight: 400;
+  text-transform: capitalize;
+  white-space: nowrap;   
+  flex-shrink: 0;        
 }
 
-table th:nth-child(2) button {
-    color: var(--starter);
-    border: 1px solid var(--starter);
+.heading-line {
+  flex: 1;               
+  height: 2px;
+  background-color: #000;
 }
 
-table th:nth-child(2) button:hover {
-    background: var(--starter);
+.cards-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
-table th:nth-child(3) button {
-    color: var(--essential);
-    border: 1px solid var(--essential);
+.card {
+    max-width: 406px;
+    gap: 10px;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background: #FFF;
+    margin-top: 30px;
 }
 
-table th:nth-child(3) button:hover {
-    background: var(--essential);
+.price-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-table th:nth-child(4) button {
-    color: var(--professional);
-    border: 1px solid var(--professional);
+.card-heading {
+    color: #000;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+    max-width: 324px;
 }
 
-table th:nth-child(4) button:hover {
-    background: var(--professional);
+.price {
+    color: #303394;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
-table th:nth-child(5) button {
-    color: var(--secondary);
-    border: 1px solid var(--secondary);
+.price-section img {
+    width: 64px;
+    height: 64px;
 }
 
-table th:nth-child(5) button:hover {
-    background: var(--secondary);
-}
-
-table th:nth-child(6) button {
-    color: var(--starter);
-    border: 1px solid var(--starter);
-}
-
-table th:nth-child(6) button:hover {
-    background: var(--starter);
-}
-
-table th:nth-child(7) button {
-    color: var(--essential);
-    border: 1px solid var(--essential);
-}
-
-table th:nth-child(7) button:hover {
-    background: var(--essential);
-}
-table th:nth-child(8) button {
-    color: var(--professional);
-    border: 1px solid var(--professional);
-}
-
-table th:nth-child(8) button:hover {
-    background: var(--professional);
-}
-table th:nth-child(9) button {
-    color: var(--essential);
-    border: 1px solid var(--essential);
-}
-
-table th:nth-child(9) button:hover {
-    background: var(--essential);
-}
-
-
-table th button:hover {
-    color: var(--white);
-}
-
-table td {
-    padding: 10px;
-}
-
-table td:not(:first-child) {
-    border-left: 1px solid var(--lightgray);
-    border-bottom: 1px solid var(--lightgray);
-}
-
-table tr:not(:first-child) {
-    border-right: 1px solid var(--lightgray);
-    border-bottom: 1px solid var(--lightgray);
-}
-
-
-table td:first-child {
-    font-size: 1rem;
+.card-list {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     text-align: left;
 }
 
-table svg {
-    width: 18px;
-    height: 18px;
+.card_image {
+    position: relative;
 }
 
-table svg.not-included {
-    fill: var(--gray);
+.card_image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    
 }
 
-table svg.starter {
-    fill: var(--starter);
+.card_image button {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 40px;
+    background: #18A0FB;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: inline-flex;
+    padding: 8px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none
 }
 
-table svg.essential {
-    fill: var(--essential);
-}
+@media (max-width : 500px){
+    .price-section img{
+        width: 50px;
+        height: auto;
+    }
 
-table svg.professional {
-    fill: var(--professional);
-}
+    .price{
+        font-size: 24px;
+    }
 
-.modal-content{
-    /* margin-top: 15%; */
+    .card-heading{
+        font-size: 20px;
+    }
+
+    .card-list{
+        font-size: 12px;
+    }
+
+    .card{
+        padding: 2%;
+    }
+
+    .cards-wrapper{
+        padding: 7%;
+    }
 }

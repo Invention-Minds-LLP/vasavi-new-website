@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
@@ -117,5 +117,81 @@ export class Package implements OnInit {
   goToPackage(slug: string) {
   this.router.navigate(['/health-package', slug]);
 }
+
+  packages:any = [
+    {
+      icon : "/img/health-check-package/icon-1.png",
+      price : "Rs.1700/-",
+      package_name : "Basic Health Check Package",
+      list : ['Essential Tests', 'Early Detection', 'Annual Screening'],
+      image : "basic-health-check-package.png",
+      slug : "/health-package/basic-health-check-package"
+    },
+    {
+      icon : "/img/health-check-package/icon-2.png",
+      price : "Rs. 1999/-",
+      package_name : "Vasavi Well Women Health Check up",
+      list : ['Women-Specific Tests', 'Hormonal Health', 'Preventive Care'],
+      image : "vasavi-well-women-health-check-up.png",
+      slug : "/health-package/well-women-health-check-up"
+    },
+    {
+      icon : "/img/health-check-package/icon-3.png",
+      price : "Rs. 5999/-",
+      package_name : "Cardiac Wellness Package",
+      list : ['Advanced Cardiac Checks', 'Heart Risk Detection', '30+ Tests'],
+      image : "cardiac-wellness-package.png",
+      slug : "/health-package/cardiac-wellness-package"
+    },
+    {
+      icon : "/img/health-check-package/icon-4.png",
+      price : "Rs.4000/-",
+      package_name : "Vasavi Diabetic Health Check up",
+      list : ['39 tests', 'Type 1 & Type 2', 'Complete Screening'],
+      image : "vasavi-diabetic-health-check-up.png",
+      slug : "/health-package/diabetes-health-check"
+    },
+    {
+      icon : "/img/health-check-package/icon-5.png",
+      price : "Rs.4000/-",
+      package_name : "Vasavi Master Health Check - Men",
+      list : ['Advanced Screening', 'Heart & Lung Care', 'Lifestyle Risk Control'],
+      image : "vasavi-master-health-check-men.png",
+      slug : "/health-package/vasavi-master-health-check-men"
+    },
+    {
+      icon : "/img/health-check-package/icon-6.png",
+      price : "Rs.4500/-",
+      package_name : "Vasavi Master Health Check - Women",
+      list : ['Women-Focused Screening', 'Complete Cardiac Care', 'Holistic Wellness'],
+      image : "vasavi-master-health-check-women.png",
+      slug : "/health-package/vasavi-master-health-check-women"
+    },
+    {
+      icon : "/img/health-check-package/icon-7.png",
+      price : "Rs.9999/-",
+      package_name : "Comprehensive Annual Diabetes Care Package",
+      list : ['Complete Diabetes Screening', 'Type 1 & Type 2', '39+ Tests'],
+      image : "comprehensive-annual-diabetes-care-package.png",
+      slug : "/health-package/comprehensive-annual-diabetes-care-package"
+    },
+    {
+      icon : "/img/health-check-package/icon-8.png",
+      price : "Rs.6999/-",
+      package_name : "Comprehensive Annual Heart Care Package",
+      list : ['Complete Heart Screening', 'Preventive & Diagnostic', '40+ Tests'],
+      image : "comprehensive-annual-heart-care-package.png",
+      slug : "/health-package/comprehensive-annual-heart-care-package"
+    },
+  ]
+
+  @ViewChild('nextSection') nextSection!: ElementRef;
+
+  scrollToNextSection(): void {
+    this.nextSection.nativeElement.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
 
 }
