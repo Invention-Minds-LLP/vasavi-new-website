@@ -17,6 +17,7 @@ import { Maternity } from "./surgery-packages/maternity/maternity";
 import { SeoSchema } from './SEO/seo-schema';
 import { SCHEMA_MAP } from './SEO/schema-map';
 import { filter } from 'rxjs/operators';
+import { Urodynamic } from "./urodynamic/urodynamic";
 
 
 
@@ -32,7 +33,8 @@ import { filter } from 'rxjs/operators';
     Chatbot,
     Popup,
     CommonModule,
-    Maternity
+    Maternity,
+    Urodynamic
 ],
   templateUrl: './app.html',
  styleUrls: ['./app.css'],

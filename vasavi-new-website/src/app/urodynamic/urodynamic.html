@@ -1,0 +1,491 @@
+<!-- urodynamic.component.html -->
+<div class="hero-section">
+    <img src="img/urology/urodynamic-banner.png" class="desktop_banner"
+        alt="Urodynamic Study - Comprehensive bladder function testing at Vasavi Hospitals">
+    <img src="img/urology/urodynamic-banner-mobile.png" class="mobile_banner"
+        alt="Urodynamic Study - Comprehensive bladder function testing at Vasavi Hospitals">
+    <a (click)="scrollToSection('appointment')" class="book-btn">Schedule Your Test</a>
+</div>
+
+<!-- Navigation -->
+<div class="carousel-container sticky-top">
+    <div class="carousel-track" id="carouselTrack" #carouselTrack>
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
+            {{ section.name }}
+        </a>
+    </div>
+
+    <button class="carousel-btn prev" id="prevBtn" #prevBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" #nextBtn>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+    </button>
+</div>
+
+<!-- Overview Section -->
+<div class="container_1" id="overview">
+    <div class="content">
+        <h1 class="heading text-left" style="padding: 0; margin: 0">Urodynamic Study at Vasavi Hospitals, Bangalore</h1>
+        <p class="para_style">A urodynamic study is an advanced diagnostic assessment designed to understand how your
+            bladder and urinary tract function during urine storage and emptying. This comprehensive test provides
+            precise information about bladder capacity, pressure, urine flow, and muscle coordination, helping our
+            specialists accurately diagnose the underlying cause of your urinary symptoms.</p>
+        <p class="para_style">This evaluation is especially valuable when symptoms are complex, persistent, or haven't
+            improved with initial treatment. By thoroughly assessing the lower urinary tract—including the bladder,
+            urethra, and sphincter muscles—we can distinguish between different conditions that may present similar
+            symptoms and create a targeted treatment plan.</p>
+    </div>
+
+    <div class="image">
+        <img src="img/urodynamic/urodynamic-assessment.png" alt="Advanced urodynamic assessment at Vasavi Hospitals">
+    </div>
+</div>
+
+<!-- When Recommended Section -->
+<div class="treatments" id="when-recommended">
+    <h2 class="heading text-center">When Is a Urodynamic Study Recommended?</h2>
+
+    <div class="treatment_container_3">
+        <!-- card-1 -->
+        <div class="treatment-box">
+            <div class="service-icon">
+                <i class="fas fa-droplet"></i>
+            </div>
+            <h3 class="sub_heading">Urinary Leakage or Incontinence</h3>
+            <p class="box_para">Experiencing unexpected urine leakage during daily activities or stress incontinence</p>
+        </div>
+
+        <!-- card-2 -->
+        <div class="treatment-box">
+            <div class="service-icon">
+                <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="sub_heading">Frequent or Urgent Urination</h3>
+            <p class="box_para">Sudden, strong urge to urinate or frequent bathroom visits, including nighttime symptoms
+            </p>
+        </div>
+
+        <!-- card-3 -->
+        <div class="treatment-box">
+            <div class="service-icon">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+            <h3 class="sub_heading">Difficulty Starting Urination</h3>
+            <p class="box_para">Trouble initiating urination or experiencing a weak, interrupted urine stream</p>
+        </div>
+
+        <!-- card-4 -->
+        <div class="treatment-box">
+            <div class="service-icon">
+                <i class="fas fa-battery-quarter"></i>
+            </div>
+            <h3 class="sub_heading">Incomplete Bladder Emptying</h3>
+            <p class="box_para">Persistent sensation that your bladder hasn't fully emptied after urination</p>
+        </div>
+
+        <!-- card-5 -->
+        <div class="treatment-box">
+            <div class="service-icon">
+                <i class="fas fa-virus"></i>
+            </div>
+            <h3 class="sub_heading">Recurrent UTIs</h3>
+            <p class="box_para">Frequent urinary tract infections that require comprehensive evaluation</p>
+        </div>
+
+        <!-- card-6 -->
+        <div class="treatment-box">
+            <div class="service-icon">
+                <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3 class="sub_heading">Pre-Surgical Assessment</h3>
+            <p class="box_para">Evaluation before certain urological or incontinence surgical procedures</p>
+        </div>
+    </div>
+</div>
+
+<!-- Procedure Section -->
+<div class="surgeriers" id="procedure">
+    <h2 class="heading text-center">How Is a Urodynamic Study Performed?</h2>
+
+    <div class="surgery_container">
+        <div class="surgery_content">
+            <!-- card-1 -->
+            <div class="sur_card">
+                <div class="sur_card_content">
+                    <h3 class="sub_heading">Before the Test</h3>
+                    <p class="box_para">Arrive with a comfortably full bladder. Your medical history and medications
+                        will be reviewed. No fasting or anesthesia required.</p>
+                </div>
+                <!-- <img src="img/urodynamic/preparation.png" alt="Urodynamic study preparation"> -->
+            </div>
+
+            <!-- card-2 -->
+            <div class="sur_card">
+                <div class="sur_card_content">
+                    <h3 class="sub_heading">Catheter Placement</h3>
+                    <p class="box_para">A thin, soft catheter is gently placed into the bladder. Additional sensors may
+                        be used to measure pressure accurately.</p>
+                </div>
+                <!-- <img src="img/urodynamic/catheter-placement.png" alt="Catheter placement for urodynamic testing"> -->
+            </div>
+
+            <!-- card-3 -->
+            <div class="sur_card">
+                <div class="sur_card_content">
+                    <h3 class="sub_heading">Bladder Filling Phase</h3>
+                    <p class="box_para">The bladder is slowly filled with sterile fluid while monitoring pressure and
+                        sensation. You'll report what you feel during filling.</p>
+                </div>
+                <!-- <img src="img/urodynamic/bladder-filling.png" alt="Bladder filling phase of urodynamic study"> -->
+            </div>
+
+            <!-- card-4 -->
+            <div class="sur_card">
+                <div class="sur_card_content">
+                    <h3 class="sub_heading">Voiding Phase</h3>
+                    <p class="box_para">Once full, you'll urinate while we measure flow rate and bladder pressure to
+                        assess emptying function.</p>
+                </div>
+                <!-- <img src="img/urodynamic/voiding-phase.png" alt="Voiding phase of urodynamic assessment"> -->
+            </div>
+
+            <!-- card-5 -->
+            <div class="sur_card">
+                <div class="sur_card_content">
+                    <h3 class="sub_heading">Additional Measurements</h3>
+                    <p class="box_para">Pelvic floor muscle activity may be assessed. Residual urine is measured after
+                        voiding to check complete emptying.</p>
+                </div>
+                <!-- <img src="img/urodynamic/measurements.png" alt="Additional urodynamic measurements"> -->
+            </div>
+
+            <!-- card-6 -->
+            <div class="sur_card">
+                <div class="sur_card_content">
+                    <h3 class="sub_heading">After the Test</h3>
+                    <p class="box_para">Resume normal activities immediately. Drink plenty of fluids. Contact us if you
+                        experience fever or persistent discomfort.</p>
+                </div>
+                <!-- <img src="img/urodynamic/aftercare.png" alt="Post-urodynamic study care"> -->
+            </div>
+        </div>
+
+        <div class="form-container" id="appointment">
+            <h3 class="form-title">Book Appointment</h3>
+            <p class="form-subtitle">Schedule your visit with our Orthopedic specialists</p>
+
+            <div *ngIf="successMsg" class="success">{{ successMsg }}</div>
+            <div *ngIf="errorMsg" class="error-msg">{{ errorMsg }}</div>
+
+            <!-- ✅ IMPORTANT: bind the form to FormGroup -->
+            <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()" novalidate>
+
+                <div class="input-wrapper">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input id="name" formControlName="name" placeholder="Enter your full name" />
+                        <div class="error" *ngIf="submitted && f['name'].errors">
+                            <small *ngIf="f['name'].errors['required']">Name is required</small>
+                            <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                            <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Contact Number *</label>
+                        <input id="phone" formControlName="phone" placeholder="Enter 10-digit mobile number" />
+                        <div class="error" *ngIf="submitted && f['phone'].errors">
+                            <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
+                            <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-wrapper">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input id="email" formControlName="email" placeholder="Enter your email" />
+                        <div class="error" *ngIf="submitted && f['email'].errors">
+                            <small *ngIf="f['email'].errors['required']">Email is required</small>
+                            <small *ngIf="f['email'].errors['email']">Invalid email format</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" formControlName="date" />
+                        <div class="error" *ngIf="submitted && f['date'].errors">
+                            <small *ngIf="f['date'].errors['required']">Appointment date is required</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctor_name">Select Doctor *</label>
+                    <select id="doctor_name" formControlName="doctor">
+                        <option value="">-- Select Doctor --</option>
+                        <option value="Dr. Ramesh Hanumegowda">Dr. Ramesh Hanumegowda</option>
+                        <option value="Dr. Supreeth Nagaraju">Dr. Supreeth Nagaraju</option>
+                    </select>
+                    <div class="error" *ngIf="submitted && f['doctor'].errors">
+                        <small *ngIf="f['doctor'].errors['required']">Please select a doctor</small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message / Reason for Visit *</label>
+                    <textarea id="message" formControlName="message" placeholder="Describe your symptoms..."></textarea>
+                    <div class="error" *ngIf="submitted && f['message'].errors">
+                        <small *ngIf="f['message'].errors['required']">Message is required</small>
+                        <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Book Appointment</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- doctors section -->
+<!-- doctor section -->
+<div class="doctors-section" id="doctors">
+    <h2 class="heading">Meet Our Expert Urology Specialists</h2>
+    <p class="para_style doc_sec_para">Our team of board-certified urologists brings decades of combined experience
+        in treating complex urological conditions with compassion and precision.</p>
+
+    <div class="doctors-container">
+        <!-- Doctor 1 -->
+        <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Ramesh Hanumegowda</h3>
+            <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
+            <p class="qualification">MBBS, MS, MCh</p>
+            <p class="doctor-experience">15+ Years Experience</p>
+            <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-ramesh-hanumegowda'">Book Appointment</a>
+        </div>
+
+        <!-- Doctor 2 -->
+        <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/dummy-male-sq.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Supreeth Nagaraju</h3>
+            <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
+            <p class="qualification">MBBS, MS in General Surgery</p>
+            <!-- <p class="doctor-experience">15+ Years Experience</p> -->
+            <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
+            <!-- <a class="appointment-btn" href="/doctor-profile.php?slug=dr-ramesh-hanumegowda">Book Appointment</a> -->
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+<!-- Tests Included Section -->
+<div class="container_1" id="tests">
+    <div class="cathlab_section">
+        <div class="cathlab_container">
+            <div class="cathlab_content">
+                <h2 class="cathlab_main_title">Tests Commonly Included in Urodynamic Evaluation</h2>
+                <p class="cathlab_intro_text">Depending on your specific symptoms and medical history, the urodynamic
+                    study may include several specialized tests to provide a comprehensive assessment of your bladder
+                    and urinary tract function.</p>
+
+                <div class="cathlab_features">
+                    <!-- card-1 -->
+                    <div class="cathlab_feature_item">
+                        <div class="cathlab_icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <div class="cathlab_feature_content">
+                            <h4 class="cathlab_feature_title">Uroflowmetry</h4>
+                            <p class="cathlab_feature_desc">Measures urine flow rate and volume to assess how
+                                efficiently the bladder empties</p>
+                        </div>
+                    </div>
+
+                    <!-- card-2 -->
+                    <div class="cathlab_feature_item">
+                        <div class="cathlab_icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="cathlab_feature_content">
+                            <h4 class="cathlab_feature_title">Cystometry</h4>
+                            <p class="cathlab_feature_desc">Assesses bladder pressure and capacity during filling to
+                                evaluate storage function</p>
+                        </div>
+                    </div>
+
+                    <!-- card-3 -->
+                    <div class="cathlab_feature_item">
+                        <div class="cathlab_icon">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                        </div>
+                        <div class="cathlab_feature_content">
+                            <h4 class="cathlab_feature_title">Pressure Flow Study</h4>
+                            <p class="cathlab_feature_desc">Evaluates bladder and urethral function during urination to
+                                identify obstruction</p>
+                        </div>
+                    </div>
+
+                    <!-- card-4 -->
+                    <div class="cathlab_feature_item">
+                        <div class="cathlab_icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="cathlab_feature_content">
+                            <h4 class="cathlab_feature_title">Post-Void Residual</h4>
+                            <p class="cathlab_feature_desc">Determines the amount of urine remaining in the bladder
+                                after voiding</p>
+                        </div>
+                    </div>
+
+                    <!-- card-5 -->
+                    <div class="cathlab_feature_item">
+                        <div class="cathlab_icon">
+                            <i class="fas fa-wave-square"></i>
+                        </div>
+                        <div class="cathlab_feature_content">
+                            <h4 class="cathlab_feature_title">Electromyography (EMG)</h4>
+                            <p class="cathlab_feature_desc">Evaluates pelvic floor muscle coordination during bladder
+                                filling and emptying</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt">
+                    <p class="cathlab_intro_text">Each test provides crucial information that helps our urologists
+                        create a precise diagnosis and personalized treatment plan tailored to your specific condition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Vasavi Section -->
+<div class="why_choose_us mt" id="whyvasavi">
+    <div class="why_content">
+        <h2 class="heading">Why Choose Vasavi Hospitals for Urodynamic Testing?</h2>
+
+        <div class="content_flex">
+            <div class="tic_icon"><i class="fa-solid fa-check"></i></div>
+            <span><b>Expert Urologists</b> – Experienced specialists trained in advanced urodynamic assessment and
+                interpretation</span>
+        </div>
+        <div class="content_flex">
+            <div class="tic_icon"><i class="fa-solid fa-check"></i></div>
+            <span><b>Advanced Technology</b> – State-of-the-art equipment for accurate, detailed bladder function
+                evaluation</span>
+        </div>
+        <div class="content_flex">
+            <div class="tic_icon"><i class="fa-solid fa-check"></i></div>
+            <span><b>Patient Comfort</b> – Comfortable, private setting with compassionate care throughout the
+                procedure</span>
+        </div>
+        <div class="content_flex">
+            <div class="tic_icon"><i class="fa-solid fa-check"></i></div>
+            <span><b>Comprehensive Analysis</b> – Detailed interpretation and personalized treatment recommendations
+                based on results</span>
+        </div>
+        <div class="content_flex">
+            <div class="tic_icon"><i class="fa-solid fa-check"></i></div>
+            <span><b>Quick Results</b> – Fast turnaround time with follow-up consultations to discuss findings and
+                treatment options</span>
+        </div>
+
+        <div class="wcu_description" style="margin-bottom: 30px;">At Vasavi Hospitals, we understand that urinary
+            symptoms can significantly impact your quality of life. Our urodynamic testing provides the precise answers
+            you need for effective treatment.</div>
+    </div>
+
+    <img src="img/urodynamic/vasavi-urodynamic-testing.png" alt="Urodynamic testing at Vasavi Hospitals Bangalore">
+</div>
+
+<!-- Conclusion -->
+<div class="container_1" style="margin: 50px 0">
+    <div class="consclusion">
+        <h2 class="heading">Take Control of Your Urinary Health</h2>
+        <p class="para_style">Don't let urinary symptoms affect your daily comfort and confidence. Whether you're
+            experiencing leakage, frequent urination, or difficulty emptying your bladder, our comprehensive urodynamic
+            study provides the accurate diagnosis needed for effective treatment. Schedule your test today and take the
+            first step toward better urinary health.</p>
+    </div>
+</div>
+
+<!-- FAQs Section -->
+<div class="faqs container_2" id="faqs">
+    <h2 class="heading text-center">Frequently Asked Questions</h2>
+
+    <div class="faq_grid">
+        <div class="faq_container">
+            <div class="ques">1. Is the urodynamic study painful?</div>
+            <div class="ans">Most patients experience only mild discomfort or pressure during the procedure. The test is
+                generally well tolerated, and our team takes every measure to ensure your comfort throughout the
+                examination.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">2. How long does the urodynamic study take?</div>
+            <div class="ans">The complete urodynamic study typically takes 30 to 60 minutes, depending on the specific
+                tests required for your condition. It's performed as an outpatient procedure, allowing you to return
+                home the same day.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">3. What should I expect after the test?</div>
+            <div class="ans">You can resume normal activities immediately after the test. Some patients may experience
+                mild burning during urination or slight blood in the urine temporarily. We recommend drinking plenty of
+                fluids after the procedure.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">4. Do I need to prepare for the urodynamic study?</div>
+            <div class="ans">You may be asked to arrive with a comfortably full bladder. Your doctor will provide
+                specific instructions. Generally, fasting or anesthesia is not required, and you can take your regular
+                medications unless advised otherwise.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">5. When will I receive my test results?</div>
+            <div class="ans">Your urologist will review the results with you during a follow-up appointment, usually
+                within a few days. They will discuss the findings in detail and recommend an appropriate treatment plan
+                based on the results.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">6. Is urodynamic testing safe?</div>
+            <div class="ans">Yes, urodynamic testing is very safe with minimal risks. Complications are rare but may
+                include temporary discomfort, mild bleeding, or a slight risk of urinary tract infection. Our
+                experienced team follows strict protocols to minimize any risks.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">7. Will my insurance cover the urodynamic study?</div>
+            <div class="ans">Most insurance plans cover urodynamic testing when medically necessary. We recommend
+                checking with your insurance provider before the test. Our staff can help with any insurance-related
+                questions.</div>
+        </div>
+
+        <div class="faq_container">
+            <div class="ques">8. Can I drive myself home after the test?</div>
+            <div class="ans">Yes, you can drive yourself home after the urodynamic study as no sedation or anesthesia is
+                used. The procedure does not affect your ability to drive or perform normal activities.</div>
+        </div>
+    </div>
+</div>
+
+<app-cta />
