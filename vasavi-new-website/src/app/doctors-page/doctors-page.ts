@@ -42,7 +42,7 @@ export class DoctorsPage {
     "Neurology": ["Neurology"],
     "Neurosurgery": ["Neurosurgery"],
     "Anesthesiology": ["Anesthesiology"],
-    "Emergency Medicine & Critical Care": ["Emergency Medicine","Critical Care"],
+    "Emergency Medicine & Critical Care": ["Emergency Medicine", "Critical Care"],
     "General Medicine": ["General Medicine"],
     "Ophthalmology": ["Ophthalmology"],
     "Dentistry": ["Dentistry"],
@@ -161,6 +161,14 @@ export class DoctorsPage {
     this.router.navigate(['/doctors' + slug], {
       queryParams: { book: 'true' }
     });
+  }
+
+  showSpline = false;
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.showSpline = true;
+    }, 1000); // load after page settles
   }
 
 
@@ -290,7 +298,7 @@ export class DoctorsPage {
     },
     {
       name: "Dr. Raveendra Reddy",
-      img: "/img/new-doctor-image/dummy-male.png",
+      img: "/img/new-doctor-image/Dr. Ravindhra Reddy-sq.png",
       alt: "Dr. Raveendra Reddy | Critical Care Specialist | Vasavi Hospitals Bangalore",
       experience: "16+",
       qualification: "MBBS, FCCS",
@@ -319,14 +327,14 @@ export class DoctorsPage {
       slug: "/dr-sudeep-putta-manohar"
     },
     {
-      name: "Dr. Sowmya Sangmesh",
+      name: "Dr. Sowmya Sangamesh",
       img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-      alt: "Dr. Sowmya Sangmesh | Gynecologist | Vasavi Hospitals Bangalore",
+      alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
       experience: "14+",
       qualification: "MBBS, MS (OBG)",
       department: "Gynecology",
       consultant: "Consultant Gynec Laparoscopic Surgeon",
-      slug: "/dr-sowmya-sangmesh"
+      slug: "/dr-sowmya-sangamesh"
     },
     {
       name: "Dr. Madhu B Jagalasar",

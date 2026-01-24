@@ -93,7 +93,7 @@ export class Tonsillectomy {
     {
       name: "Dr. Sphoorthy G Itigi",
       img: "img/Doctor-img/ENT/dr-spoorthi.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
       experience: "8+",
       department: "Consultant - ENT",
       qualification: "MBBS, DLO, DNB (ENT)",

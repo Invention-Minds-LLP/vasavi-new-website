@@ -53,11 +53,11 @@ export class CoronaryAngiography {
     {
       name: "Dr. Girish Navasundi",
       img: "img/new-doctor-image/dr-girish-b-navasundi.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
       // experience: "14+",
       // department: "Consultant - ENT",
       qualification: "MBBS MD DNB",
-      // slug: "/dr-sowmya-sangmesh"
+      // slug: "/dr-sowmya-sangamesh"
     },
     {
       name: "Dr. Praneeth",
@@ -71,11 +71,11 @@ export class CoronaryAngiography {
     {
       name: "Dr. Balaraj",
       img: "img/new-doctor-image/dr-balaraj.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
       // experience: "14+",
       // department: "Consultant - ENT",
       qualification: "MBBS MD DNB DM Cardiology",
-      // slug: "/dr-sowmya-sangmesh"
+      // slug: "/dr-sowmya-sangamesh"
     }
   ];
 

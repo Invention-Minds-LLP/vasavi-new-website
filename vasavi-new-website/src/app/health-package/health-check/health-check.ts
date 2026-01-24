@@ -1425,14 +1425,14 @@ export class HealthCheck {
           slug: "/dr-nisha-buchade"
         },
         {
-          name: "Dr. Sowmya Sangmesh",
+          name: "Dr. Sowmya Sangamesh",
           img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-          alt: "Dr. Sowmya Sangmesh | Gynecologist | Vasavi Hospitals Bangalore",
+          alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
           experience: "14+",
           qualification: "MBBS, MS (OBG)",
           department: "Gynecology",
           consultant: "Consultant Gynec Laparoscopic Surgeon",
-          slug: "/dr-sowmya-sangmesh"
+          slug: "/dr-sowmya-sangamesh"
         },
         {
           name: "Dr. Revathi Natesan",
@@ -1974,14 +1974,14 @@ Book the Vasavi Master Health Check - Men and invest in long-term well-being.`,
         },
 
         {
-          name: "Dr. Sowmya Sangmesh",
+          name: "Dr. Sowmya Sangamesh",
           img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-          alt: "Dr. Sowmya Sangmesh | Gynecologist | Vasavi Hospitals Bangalore",
+          alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
           experience: "14+",
           qualification: "MBBS, MS (OBG)",
           department: "Gynecology",
           consultant: "Consultant Gynec Laparoscopic Surgeon",
-          slug: "/dr-sowmya-sangmesh"
+          slug: "/dr-sowmya-sangamesh"
         },
 
         {

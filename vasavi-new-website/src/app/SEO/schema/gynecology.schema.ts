@@ -73,7 +73,7 @@ export const GYNECOLOGY_SCHEMA = {
       },
       {
         "@type": "Physician",
-        "name": "Dr. Sowmya Sangmesh"
+        "name": "Dr. Sowmya Sangamesh"
       }
     ]
   }
