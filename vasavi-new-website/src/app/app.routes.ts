@@ -70,6 +70,7 @@ import { Maternity } from './surgery-packages/maternity/maternity';
 import { HealthCheck } from './health-package/health-check/health-check';
 import { SeniorDoctorProfile } from './senior-doctor-profile/senior-doctor-profile';
 import { Animation } from './animation/animation';
+import { Urodynamic } from './urodynamic/urodynamic';
 // import { HealthCheck } from './health-package/health-check/health-check';
 
 // export const routes: Routes = [
@@ -125,7 +126,6 @@ import { Animation } from './animation/animation';
 
 // ];
 
-
 export const routes: Routes = [
   { path: 'anesthesiology-hospital-in-bangalore', component: Anesthesiology },
   { path: 'bariatric-surgery-in-bangalore', component: Bariatricsurgery },
@@ -160,6 +160,7 @@ export const routes: Routes = [
   { path: 'orthopedic-hospital-in-bangalore', component: Orthopedic },
   { path: 'lung-specialist-in-bangalore', component: Pulmonology },
   { path: 'urology-hospital-in-bangalore', component: Urology },
+  {path: 'urology-hospital-in-bangalore/urodynamic-test-bangalore', component: Urodynamic},
   { path: 'awards-and-recognition', component: Awards },
   { path: 'gallery', component: Gallery },
   { path: 'contact-vasavi-hospitals-in-bangalore', component: Contact },
@@ -176,10 +177,6 @@ export const routes: Routes = [
   { path: 'health-package/:slug', component: HealthCheck },
   { path: 'doctors', component: DoctorsPage },
   { path: 'animation', component: Animation },
-
-
-
-
 
   // surgery packages
 
@@ -201,8 +198,6 @@ export const routes: Routes = [
   { path: 'fibroid-removal-in-bangalore', component: FibroidRemoval },
   { path: 'ct-angiography-in-bangalore', component: CTAngiography },
   { path: 'coronary-angiography-in-bangalore', component: CoronaryAngiography },
-
-
 
   // ads
 
