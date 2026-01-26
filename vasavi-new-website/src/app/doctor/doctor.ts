@@ -557,7 +557,7 @@ export class Doctor {
     {
       id: 17,
       name: "Dr. Raveendra Reddy",
-      image: "/img/new-doctor-image/dummy-male.png",
+      image: "/img/new-doctor-image/Dr. Ravindhra Reddy.png",
       alt: "Dr. Raveendra Reddy | Critical Care Specialist | Vasavi Hospitals Bangalore",
       areasOfExpertise: [
         { icon: "fas fa-bacteria", expertise: "Sepsis" },
@@ -638,9 +638,9 @@ export class Doctor {
     },
     {
       id: 15,
-      name: "Dr. Sowmya Sangmesh",
+      name: "Dr. Sowmya Sangamesh",
       image: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-      alt: "Dr. Sowmya Sangmesh | Gynecologist | Vasavi Hospitals Bangalore",
+      alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
       areasOfExpertise: [
         { icon: "fas fa-cut", expertise: "Laparoscopic and Minimally Invasive Gynecologic Surgery" },
         { icon: "fas fa-cut", expertise: "Reproductive Medicine and Infertility Management" },
@@ -648,8 +648,8 @@ export class Doctor {
         { icon: "fas fa-cut", expertise: "Maternal-Fetal Medicine & High-Risk Obstetrics" },
         { icon: "fas fa-cut", expertise: "Comprehensive Gynecologic Care" }
       ],
-      title: "Dr. Sowmya Sangmesh | Gynecologist at Vasavi Hospitals",
-      description: "Dr. Sowmya Sangmesh is a skilled Gynecologist with 14+ years of experience in laparoscopic and robotic surgery and fertility care.",
+      title: "Dr. Sowmya Sangamesh | Gynecologist at Vasavi Hospitals",
+      description: "Dr. Sowmya Sangamesh is a skilled Gynecologist with 14+ years of experience in laparoscopic and robotic surgery and fertility care.",
       briefProfile: "Highly skilled Obstetrician and Gynecologist with over 14 years experience, specializing in fertility care, laparoscopic and robotic surgeries. MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma Reproductive Medicine (Germany).",
       qualification: "MBBS, MS (OBG), Fellowship Minimal Access Surgery, Advanced Diploma Reproductive Medicine",
       department: "Gynecology",
@@ -732,7 +732,7 @@ export class Doctor {
       ]
     },
     {
-      id: 18,
+      id: 29,
       name: "Dr. Mutharaju K. R",
       image: "/img/new-doctor-image/dr-mutharaju-k-r.png",
       alt: "Dr. Mutharaju K R | Bariatric Surgeon | Vasavi Hospitals Bangalore",
@@ -757,7 +757,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 18,
+      id: 28,
       name: "Dr. Gargi Das",
       image: "/img/new-doctor-image/Dr Gargi Das.png",
       alt: "Dr Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
@@ -782,7 +782,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 18,
+      id: 26,
       name: "Dr. Sphoorthy G Itigi",
       image: "/img/new-doctor-image/Dr Sphoorthy G Itigi.png",
       alt: "Dr. Sphoorthy G Itigi - Consultant ENT Surgeon | Vasavi Hospitals Bangalore",
@@ -905,7 +905,7 @@ export class Doctor {
       ]
     },
     {
-      id: 20,
+      id: 27,
       name: "Dr. Mohan Ram. P",
       image: "/img/new-doctor-image/dr-mohan-ram-p.png",
       alt: "Dr. Mohan Ram. P | Laparoscopic General Surgeon at Vasavi Hospital Bangalore",
@@ -944,7 +944,7 @@ export class Doctor {
       ]
     },
     {
-      "id": 21,
+      "id": 24,
       "name": "Dr. Revathi Natesan",
       "image": "/img/new-doctor-image/dr-revathi-natesan.png",
       "alt": "Dr. Revathi Natesan | Endodontist | Vasavi Hospitals Bangalore",
@@ -1011,7 +1011,7 @@ export class Doctor {
     //   ]
     // },
     {
-      id: 22,
+      id: 21,
       name: "Dr. Ramesh T. S",
       image: "/img/new-doctor-image/dr-ramesh-t-s.png",
       alt: "Dr. Ramesh T. S | General Surgeon at Vasavi Hospital Bangalore",
@@ -1053,7 +1053,7 @@ export class Doctor {
       ]
     },
     {
-      id: 23,
+      id: 22,
       name: "Dr. Yashaswi Srikakula",
       image: "/img/new-doctor-image/dr-yashasvi.png",
       alt: "Dr. Yashaswi Srikakula | Consultant ENT at Vasavi Hospital Bangalore",
@@ -1096,7 +1096,7 @@ export class Doctor {
     },
 
     {
-      id: 24,
+      id: 23,
       name: "Dr. Rupendu T",
       image: "/img/new-doctor-image/dr-rupendu-t.png",
       alt: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",

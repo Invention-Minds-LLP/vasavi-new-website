@@ -28,6 +28,8 @@ export class Footer implements OnInit {
 
   hide: boolean = true;
 
+  currentYear = new Date().getFullYear();
+
   // apiUrl = 'http://localhost:3000/api';.
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 

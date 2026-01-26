@@ -341,6 +341,7 @@ input {
     height: 337px;
     background: transparent;
     margin-right: 50px;
+    border-radius: 20px;
 }
 
 .about-heading {

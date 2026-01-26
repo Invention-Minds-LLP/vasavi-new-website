@@ -69,13 +69,13 @@ export class Maternity {
       slug: "/dr-nisha-buchade"
     },
     {
-      name: "Dr. Sowmya Sangmesh",
+      name: "Dr. Sowmya Sangamesh",
       img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangmesh",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
       experience: "14+",
       // department: "Consultant - ENT",
       qualification: "MBBS.,MS (OBG) .FELLOWSHIP MINIMAL ACCESS SURGERY, ADVANCED DIPLOMA REPRODUCTIVE MEDICINE",
-      slug: "/dr-sowmya-sangmesh"
+      slug: "/dr-sowmya-sangamesh"
     }
   ];
 

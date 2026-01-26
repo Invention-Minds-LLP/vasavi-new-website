@@ -16,11 +16,22 @@ export class Animation {
   ngAfterViewInit(): void {
 
     // if (window.innerWidth < 768) return;
+    const loadSpline = () => {
+      this.splineApp = new Application(this.canvas.nativeElement);
 
-    this.splineApp = new Application(this.canvas.nativeElement);
-    this.splineApp.load(
-      'https://prod.spline.design/sV3mm5nhyTuo0xf9/scene.splinecode'
-    );
+      this.splineApp.setQuality?.('low');
+      this.splineApp.setDpr?.(1); // reduce GPU load
+      
+      this.splineApp.load(
+        'https://prod.spline.design/sV3mm5nhyTuo0xf9/scene.splinecode'
+      );
+    };
+
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(loadSpline);
+    } else {
+      setTimeout(loadSpline, 1500); // fallback
+    }
 
     // ✅ Pause animation when tab is hidden
     document.addEventListener('visibilitychange', () => {
@@ -30,6 +41,9 @@ export class Animation {
         this.splineApp?.play?.();
       }
     });
+
+
+
   }
 
   ngOnDestroy(): void {

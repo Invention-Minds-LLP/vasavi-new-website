@@ -23,7 +23,9 @@ export class Bariatricsurgery {
     { name: 'Surgery Options', id: 'surgeries' },
     { name: 'Robotic Surgery', id: 'roboticSurgery' },
     { name: 'Book an Appointment', id: 'appointment' },
+    { name: 'Our Doctors', id: 'doctors' },
     { name: 'Why Vasavi', id: 'whyvasavi' },
+    { name: 'Insurance Partners', id: 'insurance' },
     { name: 'FAQs', id: 'faqs' }
   ];
 
