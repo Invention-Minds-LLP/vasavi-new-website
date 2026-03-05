@@ -364,11 +364,11 @@ export class CallbackForm {
 
     const emailRequest = {
       // whatsappNumber:['919342287945'],
-      whatsappNumber:['916382112241'],
-      // whatsappNumber: ['919164840378'],
-      // to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
+      // whatsappNumber:['916382112241'],
+      whatsappNumber: ['919164840378'],
+      to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
       // to:['inventionmindsblr@gmail.com'],
-      to:['govindarajkg222@gmail.com'],
+      // to:['govindarajkg222@gmail.com'],
       status: 'Callback-Form',
       appointmentDetails,
     };

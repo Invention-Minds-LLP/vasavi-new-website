@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, viewChild } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { CarouselComponent, CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { Cta } from "../cta/cta";
 import * as bootstrap from 'bootstrap';
@@ -21,6 +21,8 @@ export class Home {
   direction: 'forward' | 'backward' = 'forward';
   autoplayInterval: any;
   autoplayInterval2: any;
+
+
 
 
   treatments = [
@@ -168,7 +170,7 @@ export class Home {
       alt: "Best General Surgeon in Bangalore | Dr. Ramesh T S",
       experience: "30+",
       department: "General Surgery",
-      slug:'/dr-ramesh-t-s'
+      slug: '/dr-ramesh-t-s'
     },
 
 
@@ -230,6 +232,12 @@ export class Home {
       this.startManualAutoplay();
       this.startManualAutoplay2();
     }, 800);
+
+    if (!(window as any).homePopupShown) {
+      this.showPopup1 = true;
+      (window as any).homePopupShown = true;
+    }
+
   }
 
   startManualAutoplay() {
@@ -308,6 +316,26 @@ export class Home {
   bookAppointment() {
     window.open("http://115.243.85.241:650/", "_blank");
   }
-  
+
+
+  showPopup1 = false;
+  showPopup2 = false;
+
+  closePopups(type: number) {
+
+    if (type === 1) {
+      this.showPopup1 = false;
+
+      setTimeout(() => {
+        this.showPopup2 = true;
+      }, 5000);
+    }
+
+    if (type === 2) {
+      this.showPopup2 = false;
+    }
+
+  }
+
 
 }

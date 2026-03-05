@@ -69,7 +69,7 @@ export class App {
 
   ngOnInit(): void {
     this.showPopup = false;
-    this.showPopup1 = true;
+    // this.showPopup1 = true;
     // Initialize outside Angular to avoid DOM timing conflicts
     this.ngZone.runOutsideAngular(() => {
       setTimeout(() => {
@@ -139,22 +139,4 @@ export class App {
     this.showPopup = false;
   }
 
-  showPopup1 = false;
-  showPopup2 = false;
-  closePopups(type: number) {
-
-    if (type === 1) {
-      this.showPopup1 = false;
-
-      setTimeout(() => {
-        this.showPopup2 = true;
-      }, 5000);
-    }
-
-    if (type === 2) {
-      this.showPopup2 = false;
-    }
-
-
-  }
 }
