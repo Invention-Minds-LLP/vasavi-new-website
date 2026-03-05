@@ -856,7 +856,7 @@
     border: 1px solid #e2e8f0;
     margin-top: 30px;
     margin: 2% 3%;
-   
+
 }
 
 .carousel-track {
@@ -1445,25 +1445,25 @@
 
 /* Close button */
 .close-btn {
-  position: absolute;
-  top:130px;
-  right: 400px;
-  background: red;
-  color: white;
-  border: none;
-  font-size: 20px;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    position: relative;
+    top: -240px;
+    left: 711px;
+    background: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* .popup-close:hover {
     color: #000;
   } */
 
-  .popup-close {
+.popup-close {
     position: absolute;
     top: 58px;
     right: 6px;
@@ -1784,17 +1784,17 @@
 }
 
 @media(max-width:1439px) {
-    .close-btn {
+    /* .close-btn {
         top: 205px;
         right: 154px;
-    }
+    } */
 }
 
 @media(max-width:1023px) {
-    .close-btn {
+    /* .close-btn {
         top: 85px;
         right: 27px;
-    }
+    } */
 }
 
 @media (max-width: 330px) {
@@ -1807,8 +1807,8 @@
     }
 }
 
-@media(max-width: 320px){
-     .timeline-header-h h2 {
+@media(max-width: 320px) {
+    .timeline-header-h h2 {
         font-size: 1.5em;
         margin-bottom: 10px;
     }
@@ -1816,13 +1816,13 @@
 
 @media (max-width : 767px) {
 
-    .popup-image{
+    .popup-image {
         width: 100%;
         padding: 20px;
     }
 
-     .close-btn{
-        top: 238px;
-        right: 8px;
+    .close-btn {
+        top: 46px;
+        left: 90%;
     }
 }

@@ -238,4 +238,14 @@ export class FibroidRemoval {
     this.isPopupImageOpen = false;
   }
 
+  selectedPageName: string = 'fibroid-removal';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Fibroid Removal, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
 }

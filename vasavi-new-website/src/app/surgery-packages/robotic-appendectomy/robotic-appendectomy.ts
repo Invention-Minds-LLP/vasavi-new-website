@@ -272,4 +272,14 @@ export class RoboticAppendectomy {
     this.isPopupImageOpen = false;
   }
 
+   selectedPageName: string = 'Appendectomy';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Appendectomy, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
 }

@@ -364,4 +364,14 @@ export class RoboticTkrComponent {
 
     ]
   }
+
+     selectedPageName: string = 'TKR';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `TKR, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
 }

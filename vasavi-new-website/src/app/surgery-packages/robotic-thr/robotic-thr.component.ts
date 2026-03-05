@@ -364,4 +364,14 @@ export class RoboticThrComponent {
     ]
   }
 
+     selectedPageName: string = 'Total-Hip-Replacement';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Total Hip Replacement, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
 }

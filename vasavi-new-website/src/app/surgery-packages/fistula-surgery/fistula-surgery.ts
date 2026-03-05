@@ -229,4 +229,14 @@ export class FistulaSurgery {
   closeImagePopup() {
     this.isPopupImageOpen = false;
   }
+
+  selectedPageName: string = 'fistula-surgery';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Fistula Surgery, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
 }

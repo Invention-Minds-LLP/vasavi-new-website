@@ -1445,9 +1445,9 @@
 
 /* Close button */
 .close-btn {
-  position: absolute;
-  top:130px;
-  right: 400px;
+    position: relative;
+    top: -240px;
+    left: 711px;
   background: red;
   color: white;
   border: none;
@@ -1783,17 +1783,17 @@
     font-weight: 600;
 }
 @media(max-width:1439px) {
-    .close-btn {
+    /* .close-btn {
         top: 205px;
         right: 154px;
-    }
+    } */
 }
 
 @media(max-width:1023px) {
-    .close-btn {
+    /* .close-btn {
         top: 85px;
         right: 27px;
-    }
+    } */
 }
 
 @media (max-width: 330px) {
@@ -1820,8 +1820,8 @@
         padding: 20px;
     }
 
-     .close-btn{
-        top: 238px;
-        right: 8px;
+   .close-btn {
+        top: 46px;
+        left: 90%;
     }
 }
