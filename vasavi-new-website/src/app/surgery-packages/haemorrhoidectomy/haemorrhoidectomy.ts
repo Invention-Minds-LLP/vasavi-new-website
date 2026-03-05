@@ -263,4 +263,14 @@ export class Haemorrhoidectomy {
   closeImagePopup() {
     this.isPopupImageOpen = false;
   }
+
+  selectedPageName: string = 'Haemorrhoidectomy';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Haemorrhoidectomy, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
 }

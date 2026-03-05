@@ -326,4 +326,14 @@ export class RoboticHerniaComponent {
   closeImagePopup() {
     this.isPopupImageOpen = false;
   }
+
+     selectedPageName: string = 'Hernia';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Hernia, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
 }

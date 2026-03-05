@@ -256,4 +256,14 @@ export class CoronaryAngiography {
     this.isPopupImageOpen = false;
   }
 
+   selectedPageName: string = 'coronary-angiography';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Coronary Angiography, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
 }

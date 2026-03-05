@@ -12,8 +12,8 @@ interface HerniaType {
   title: string;
   description: string;
   tag?: string;
-  location? : string;
-  recoverytime? : string;
+  location?: string;
+  recoverytime?: string;
   hospitalStay?: string
 }
 
@@ -26,7 +26,7 @@ interface HerniaType {
 })
 export class SinusSurgery {
 
-  constructor(private title:Title, private meta:Meta){}
+  constructor(private title: Title, private meta: Meta) { }
 
   @ViewChild('carouselTrack', { static: false }) trackRef!: ElementRef<HTMLDivElement>;
   @ViewChild('prevBtn', { static: false }) prevBtnRef!: ElementRef<HTMLButtonElement>;
@@ -39,7 +39,7 @@ export class SinusSurgery {
   activeSection = 'overview';
 
   sections = [
-   { name: 'Overview', id: 'overview' },
+    { name: 'Overview', id: 'overview' },
     { name: 'Symptoms', id: 'symptoms' },
     { name: 'Book an Appointment', id: 'appointment' },
     { name: 'Our Doctors', id: 'doctors' },
@@ -49,13 +49,13 @@ export class SinusSurgery {
   ];
 
 
-  doctorHeader : any = {
-    title : "Meet Our Surgery Specialist",
-    description : ""
+  doctorHeader: any = {
+    title: "Meet Our Surgery Specialist",
+    description: ""
   }
 
   doctors: any = [
-     {
+    {
       name: "Dr. Kumaresh Krishnamoorthy",
       img: "img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
       alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
@@ -96,17 +96,17 @@ export class SinusSurgery {
     document.body.style.overflow = ''; // restore scroll
   }
 
-  
-  
+
+
   private popupInterval: any;
 
   ngOnInit(): void {
- setTimeout(() => {
+    setTimeout(() => {
       this.openImagePopup();
     }, 5000);
 
     this.title.setTitle('Endoscopic Sinus Surgery in Bangalore | Vasavi Hospitals ENT');
-    this.meta.updateTag({name:'description', content:'Relieve sinus infections & breathing issues with advanced endoscopic sinus surgery. Minimally invasive, faster healing.'})
+    this.meta.updateTag({ name: 'description', content: 'Relieve sinus infections & breathing issues with advanced endoscopic sinus surgery. Minimally invasive, faster healing.' })
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
@@ -118,8 +118,8 @@ export class SinusSurgery {
     // ✅ You can send this data to backend or API here
     this.closePopup(); // close popup after success
   }
-  
-  
+
+
   // sub navbar
   ngAfterViewInit(): void {
     this.updateCarouselMode();
@@ -259,6 +259,16 @@ export class SinusSurgery {
 
   closeImagePopup() {
     this.isPopupImageOpen = false;
+  }
+
+  selectedPageName: string = 'Sinus Surgery';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Sinus Surgery, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
   }
 
 

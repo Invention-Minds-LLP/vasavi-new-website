@@ -292,4 +292,14 @@ export class RoboticHysterectomy {
     this.isPopupImageOpen = false;
   }
 
+     selectedPageName: string = 'Hysterectomy';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Hysterectomy, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
 }

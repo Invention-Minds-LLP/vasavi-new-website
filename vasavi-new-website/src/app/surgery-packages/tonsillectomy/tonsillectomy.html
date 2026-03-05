@@ -191,7 +191,7 @@
         </div>
 
         <div class="form" id="appointment">
-            <app-callback-form [pageName]="'Tonsillectomy'" />
+            <app-callback-form [pageName]="selectedPageName" />
         </div>
 
     </div>
@@ -204,7 +204,7 @@
     <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
 </div>
 
-<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" (bookAppointment)="handleBookAppointment($event)" />
 
 <!-- <div class="hernia-flow-section">
         <div class="section-header">
@@ -383,7 +383,7 @@
 <div class="popup-overlay" *ngIf="isPopupOpen">
     <div class="popup-container" (click)="$event.stopPropagation()">
         <button class="popup-close" (click)="closePopup()">✖</button>
-        <app-callback-form [pageName]="'Tonsillectomy'"></app-callback-form>
+        <app-callback-form [pageName]="selectedPageName"></app-callback-form>
     </div>
 </div>
 <div class="popup-overlay image-pop-up" *ngIf="isPopupImageOpen">

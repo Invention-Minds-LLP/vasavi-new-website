@@ -38,7 +38,7 @@ export class Tonsillectomy {
   activeSection = 'overview';
 
   sections = [
-   { name: 'Overview', id: 'overview' },
+    { name: 'Overview', id: 'overview' },
     { name: 'Symptoms', id: 'symptoms' },
     { name: 'Book an Appointment', id: 'appointment' },
     { name: 'Our Doctors', id: 'doctors' },
@@ -49,7 +49,7 @@ export class Tonsillectomy {
 
 
   ngOnInit(): void {
-     setTimeout(() => {
+    setTimeout(() => {
       this.openImagePopup();
     }, 5000);
     this.title.setTitle('Tonsil Removal Surgery in Bangalore | ENT Specialists');
@@ -141,7 +141,7 @@ export class Tonsillectomy {
     }
   ];
 
-  
+
   // sub navbar
   ngAfterViewInit(): void {
     this.updateCarouselMode();
@@ -281,5 +281,15 @@ export class Tonsillectomy {
 
   closeImagePopup() {
     this.isPopupImageOpen = false;
+  }
+
+  selectedPageName: string = 'Tonsillectomy';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Tonsillectomy, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
   }
 }

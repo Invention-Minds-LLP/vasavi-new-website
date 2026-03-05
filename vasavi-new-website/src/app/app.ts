@@ -1,5 +1,5 @@
 import { Component, signal, NgZone } from '@angular/core';
-import { RouterOutlet  } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
 import { Footer } from './footer/footer';
 import { RoboticTkrComponent } from './surgery-packages/robotic-tkr/robotic-tkr.component';
@@ -7,12 +7,12 @@ import { RoboticHerniaComponent } from './surgery-packages/robotic-hernia/roboti
 import { RoboticThrComponent } from './surgery-packages/robotic-thr/robotic-thr.component';
 import { Chatbot } from './chatbot/chatbot';
 import { Router, NavigationEnd } from '@angular/router';
-import  WOW  from 'wowjs';
+import WOW from 'wowjs';
 import AOS from 'aos';
 import { Popup } from "./popup/popup";
 import { CommonModule } from '@angular/common';
 import { CanonicalUrl } from './canonical-url';
-import { Maternity } from "./surgery-packages/maternity/maternity"; 
+import { Maternity } from "./surgery-packages/maternity/maternity";
 
 import { SeoSchema } from './SEO/seo-schema';
 import { SCHEMA_MAP } from './SEO/schema-map';
@@ -35,9 +35,9 @@ import { Urodynamic } from "./urodynamic/urodynamic";
     CommonModule,
     Maternity,
     Urodynamic
-],
+  ],
   templateUrl: './app.html',
- styleUrls: ['./app.css'],
+  styleUrls: ['./app.css'],
 })
 export class App {
   protected readonly title = signal('vasavi-new-website');
@@ -47,28 +47,29 @@ export class App {
   currentRoute = '';
 
 
-  constructor(private router: Router,private ngZone: NgZone, private canonicalUrls : CanonicalUrl, private SeoSchema: SeoSchema) {
+  constructor(private router: Router, private ngZone: NgZone, private canonicalUrls: CanonicalUrl, private SeoSchema: SeoSchema) {
     this.router.events
-  .pipe(filter(event => event instanceof NavigationEnd))
-  .subscribe((event: NavigationEnd) => {
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: NavigationEnd) => {
 
-    console.log('NavigationEnd fired'); // 👈 ADD THIS
+        console.log('NavigationEnd fired'); // 👈 ADD THIS
 
-    const url = event.urlAfterRedirects.split('?')[0];
-    console.log('Current URL:', url);   // 👈 ADD THIS
+        const url = event.urlAfterRedirects.split('?')[0];
+        console.log('Current URL:', url);   // 👈 ADD THIS
 
-    console.log('Schema exists:', SCHEMA_MAP[url]); // 👈 ADD THIS
+        console.log('Schema exists:', SCHEMA_MAP[url]); // 👈 ADD THIS
 
-    if (SCHEMA_MAP[url]) {
-      this.SeoSchema.setSchema(SCHEMA_MAP[url]);
-      console.log('Schema injected'); // 👈 ADD THIS
-    }
-  });
+        if (SCHEMA_MAP[url]) {
+          this.SeoSchema.setSchema(SCHEMA_MAP[url]);
+          console.log('Schema injected'); // 👈 ADD THIS
+        }
+      });
 
   }
 
   ngOnInit(): void {
     this.showPopup = false;
+    this.showPopup1 = true;
     // Initialize outside Angular to avoid DOM timing conflicts
     this.ngZone.runOutsideAngular(() => {
       setTimeout(() => {
@@ -96,7 +97,7 @@ export class App {
         });
       }
     });
-    
+
   }
 
   toggleTheme() {
@@ -138,5 +139,22 @@ export class App {
     this.showPopup = false;
   }
 
- 
+  showPopup1 = false;
+  showPopup2 = false;
+  closePopups(type: number) {
+
+    if (type === 1) {
+      this.showPopup1 = false;
+
+      setTimeout(() => {
+        this.showPopup2 = true;
+      }, 5000);
+    }
+
+    if (type === 2) {
+      this.showPopup2 = false;
+    }
+
+
+  }
 }

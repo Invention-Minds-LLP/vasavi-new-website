@@ -15,7 +15,7 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class CTAngiography {
 
-  constructor(private title:Title, private meta:Meta){}
+  constructor(private title: Title, private meta: Meta) { }
   @ViewChild('carouselTrack', { static: false }) trackRef!: ElementRef<HTMLDivElement>;
   @ViewChild('prevBtn', { static: false }) prevBtnRef!: ElementRef<HTMLButtonElement>;
   @ViewChild('nextBtn', { static: false }) nextBtnRef!: ElementRef<HTMLButtonElement>;
@@ -27,7 +27,7 @@ export class CTAngiography {
   activeSection = 'overview';
 
   sections = [
-       { name: 'Overview', id: 'overview' },
+    { name: 'Overview', id: 'overview' },
     { name: 'Symptoms', id: 'symptoms' },
     { name: 'Book an Appointment', id: 'appointment' },
     { name: 'Our Doctors', id: 'doctors' },
@@ -36,13 +36,13 @@ export class CTAngiography {
     { name: 'Procedures', id: 'procedures' }
   ];
 
-   doctorHeader : any = {
-    title : "Meet Our Surgery Specialist",
-    description : ""
+  doctorHeader: any = {
+    title: "Meet Our Surgery Specialist",
+    description: ""
   }
 
   doctors: any = [
- {
+    {
       name: "Dr. Krishna Kumar B. R",
       img: "img/new-doctor-image/dr-krishna-kumar-b-r-sq.png",
       alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
@@ -92,16 +92,16 @@ export class CTAngiography {
     document.body.style.overflow = ''; // restore scroll
   }
 
-  
-  
+
+
   private popupInterval: any;
 
   ngOnInit(): void {
-   setTimeout(() => {
+    setTimeout(() => {
       this.openImagePopup();
     }, 5000);
     this.title.setTitle('CT Angiography Test in Bangalore | Advanced Diagnostic Imaging');
-    this.meta.updateTag({name:'description', content:'High-precision CT angiography for heart, brain & arteries. Quick, safe & insurance-covered diagnostic test.'})
+    this.meta.updateTag({ name: 'description', content: 'High-precision CT angiography for heart, brain & arteries. Quick, safe & insurance-covered diagnostic test.' })
 
     // this.popupInterval = setInterval(() => {
     //   this.openPopup();
@@ -114,7 +114,7 @@ export class CTAngiography {
     this.closePopup(); // close popup after success
   }
 
-  
+
   // sub navbar
   ngAfterViewInit(): void {
     this.updateCarouselMode();
@@ -254,6 +254,16 @@ export class CTAngiography {
 
   closeImagePopup() {
     this.isPopupImageOpen = false;
+  }
+
+  selectedPageName: string = 'CT-angiography';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `CT-angiography, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
   }
 
 }

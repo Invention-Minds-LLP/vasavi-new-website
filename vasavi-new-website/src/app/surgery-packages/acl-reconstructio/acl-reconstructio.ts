@@ -75,8 +75,9 @@ export class ACLReconstructio {
 
   openPopup(): void {
     this.isPopupOpen = true;
-    document.body.style.overflow = 'hidden'; // disable background scroll
+    document.body.style.overflow = 'hidden';
   }
+
 
   closePopup(): void {
     this.isPopupOpen = false;
@@ -256,7 +257,7 @@ export class ACLReconstructio {
 
   doctorProfileData: any = {
     name: 'Dr. Rupendu T',
-    header:"Orthopedic",
+    header: "Orthopedic",
     bannerImg: 'img/senior-doctor/6363 2.png',
     img: 'img/senior-doctor/ortho-dr-rupendu-t.png',
     alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
@@ -284,6 +285,19 @@ export class ACLReconstructio {
 
     ]
   }
+
+  selectedPageName: string = 'ACL-reconstruction';
+
+
+  handleBookAppointment(doctor: any) {
+    console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `ACL-reconstruction, Doctor Name: ${doctor.name}`;
+    console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
+
+
 
 
 

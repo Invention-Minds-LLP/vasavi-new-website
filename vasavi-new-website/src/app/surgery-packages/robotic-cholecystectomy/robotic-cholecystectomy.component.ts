@@ -291,4 +291,14 @@ export class RoboticCholecystectomyComponent {
   closeImagePopup() {
     this.isPopupImageOpen = false;
   }
+
+   selectedPageName: string = 'Cholecystectomy';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `Cholecystectomy, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
 }

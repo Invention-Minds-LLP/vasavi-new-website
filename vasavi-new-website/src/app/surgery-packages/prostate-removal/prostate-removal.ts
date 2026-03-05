@@ -270,4 +270,14 @@ herniaTypes: HerniaType[] = [
     this.isPopupImageOpen = false;
   }
 
+  selectedPageName: string = 'TURP';
+
+
+  handleBookAppointment(doctor: any) {
+    // console.log('Doctor clicked:', doctor);
+    this.selectedPageName = `TURP, Doctor Name: ${doctor.name}`;
+    // console.log('Page Name:', this.selectedPageName);
+    this.openPopup();
+  }
+
 }

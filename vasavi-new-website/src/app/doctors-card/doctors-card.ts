@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from "@angular/router";
 
@@ -10,9 +10,13 @@ import { RouterLink } from "@angular/router";
 })
 export class DoctorsCard {
 
-@Input() doctorDetails:any
-@Input() headers:any
+  @Input() doctorDetails: any
+  @Input() headers: any
 
+  @Output() bookAppointment = new EventEmitter<any>();
 
+  onBookClick(doctor: any) {
+    this.bookAppointment.emit(doctor);
+  }
 
 }

@@ -11,8 +11,8 @@
 <!-- navs -->
 <div class="carousel-container sticky-top">
     <div class="carousel-track" id="carouselTrack" #carouselTrack>
-        <a *ngFor="let section of sections" class="section-item"
-            [class.active]="activeSection === section.id" (click)="scrollToSection(section.id)">
+        <a *ngFor="let section of sections" class="section-item" [class.active]="activeSection === section.id"
+            (click)="scrollToSection(section.id)">
             {{ section.name }}
         </a>
 
@@ -30,7 +30,7 @@
     </button>
 </div>
 
-<section class="stats-section"id="treatments">
+<section class="stats-section" id="treatments">
     <p class="stats-subtitle">
         Years of Expertise in Advanced ACL Reconstruction Care
     </p>
@@ -172,7 +172,7 @@
         </div>
 
         <div class="form" id="appointment">
-            <app-callback-form [pageName]="'ACL-reconstruction'" />
+            <app-callback-form  [pageName]="selectedPageName" />
         </div>
 
     </div>
@@ -185,11 +185,14 @@
     <button class="cta-button" (click)="openPopup()">Check Availability & Book Now</button>
 </div>
 
-<div >
-    <app-senior-doctor-profile class="senior-doctor" [doctorProfileData]="doctorProfileData"></app-senior-doctor-profile>
+<div>
+    <app-senior-doctor-profile class="senior-doctor"
+        [doctorProfileData]="doctorProfileData"></app-senior-doctor-profile>
 </div>
 
-<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+<app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" (bookAppointment)="handleBookAppointment($event)">
+</app-doctors-card>
+
 
 <!-- <div class="comparison-section" style="margin-top: 30px;">
         <div class="comparison-header">
@@ -285,7 +288,8 @@
             <h3>Recovery & Follow-Up</h3>
             <p>Most patients can walk with support within a few days. Full recovery and return to sports typically take
                 <b>4-6 months</b>, with regular physiotherapy and follow-up visits ensuring complete knee strength and
-                stability.</p>
+                stability.
+            </p>
         </div>
     </div>
 
@@ -339,13 +343,13 @@
 <div class="popup-overlay" *ngIf="isPopupOpen">
     <div class="popup-container" (click)="$event.stopPropagation()">
         <button class="popup-close" (click)="closePopup()">✖</button>
-        <app-callback-form [pageName]="'ACL-reconstructio'"></app-callback-form>
+        <app-callback-form [pageName]="selectedPageName" ></app-callback-form>
     </div>
 </div>
 
 <div class="popup-overlay image-pop-up" *ngIf="isPopupImageOpen">
-  <div class="popup-content" (click)="$event.stopPropagation()">
-    <button class="close-btn" (click)="closeImagePopup()">✖</button>
-    <img src="img/packages/surgery-pop-ups.jpg" class="popup-image" />
-  </div>
+    <div class="popup-content" (click)="$event.stopPropagation()">
+        <button class="close-btn" (click)="closeImagePopup()">✖</button>
+        <img src="img/packages/surgery-pop-ups.jpg" class="popup-image" />
+    </div>
 </div>

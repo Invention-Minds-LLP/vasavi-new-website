@@ -156,7 +156,7 @@
             </div>
 
             <div class="form" id="appointment">
-                <app-callback-form [pageName]="'Total-Hip-Replacement'" />
+                <app-callback-form [pageName]="selectedPageName" />
             </div>
         </div>
 
@@ -172,7 +172,7 @@
         <app-senior-doctor-profile class="senior-doctor" [doctorProfileData]="doctorProfileData"></app-senior-doctor-profile>
     </div>
 
-    <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" />
+    <app-doctors-card [doctorDetails]="doctors" [headers]="doctorHeader" (bookAppointment)="handleBookAppointment($event)" />
 
     <!-- Comparison Section -->
     <div class="comparison-section" style="margin-top: 30px;" id="surgery">
@@ -280,7 +280,7 @@
 <div class="popup-overlay" *ngIf="isPopupOpen">
     <div class="popup-container" (click)="$event.stopPropagation()">
         <button class="popup-close" (click)="closePopup()">✖</button>
-        <app-callback-form [pageName]="'Total-Hip-Replacement'"></app-callback-form>
+        <app-callback-form [pageName]="selectedPageName"></app-callback-form>
     </div>
 </div>
 
