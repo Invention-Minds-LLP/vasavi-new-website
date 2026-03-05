@@ -710,6 +710,7 @@ a {
 .why_choose_us img {
     width: 50%;
     height: auto;
+    object-fit: cover;
 }
 
 .content_flex {
