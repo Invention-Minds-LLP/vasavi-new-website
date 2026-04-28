@@ -386,16 +386,16 @@ export class DoctorsPage {
       consultant: "Consultant Nutritionist & Dietitian",
       slug: "/dr-naneboena-sunitha"
     },
-    {
-      name: "Dr. Kumaresh Krishnamoorthy",
-      img: "/img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
-      alt: "Dr. Kumaresh Krishnamoorthy | ENT Specialist | Vasavi Hospitals Bangalore",
-      experience: "25+",
-      qualification: "MS ENT, Fellowship (USA)",
-      department: "ENT",
-      consultant: "Consultant ENT & Neurotologist",
-      slug: "/dr-kumaresh-krishnamoorthy"
-    },
+    // {
+    //   name: "Dr. Kumaresh Krishnamoorthy",
+    //   img: "/img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
+    //   alt: "Dr. Kumaresh Krishnamoorthy | ENT Specialist | Vasavi Hospitals Bangalore",
+    //   experience: "25+",
+    //   qualification: "MS ENT, Fellowship (USA)",
+    //   department: "ENT",
+    //   consultant: "Consultant ENT & Neurotologist",
+    //   slug: "/dr-kumaresh-krishnamoorthy"
+    // },
     {
       name: "Dr. Ramesh T. S",
       img: "/img/new-doctor-image/dr-ramesh-t-s.png",
