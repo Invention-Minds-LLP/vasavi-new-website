@@ -183,15 +183,15 @@ export class Home {
       slug: '/dr-mohan-ram-p'
     },
 
-    {
-      name: "Dr. Kumaresh Krishnamoorthy",
-      img: "img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
-      alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
-      experience: "25+",
-      department: "ENT",
-      qualification: "MS(ENT), Fellow, Head & Neck Surgery (USA), Fellow, Otology & Neurotology (USA)",
-      slug: "/dr-kumaresh-krishnamoorthy"
-    },
+    // {
+    //   name: "Dr. Kumaresh Krishnamoorthy",
+    //   img: "img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
+    //   alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
+    //   experience: "25+",
+    //   department: "ENT",
+    //   qualification: "MS(ENT), Fellow, Head & Neck Surgery (USA), Fellow, Otology & Neurotology (USA)",
+    //   slug: "/dr-kumaresh-krishnamoorthy"
+    // },
   ]
 
 

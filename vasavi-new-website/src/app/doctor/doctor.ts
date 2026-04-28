@@ -614,7 +614,7 @@ export class Doctor {
     {
       id: 10,
       name: "Dr. Sudeep Putta Manohar",
-      image: "/img/new-doctor-image/dummy-male.png",
+      image: "img/new-doctor-image/dr-sudeep-putta-manohar.jpg.png",
       alt: "Dr. Sudeep Putta Manohar | Endocrinologist | Vasavi Hospitals Bangalore",
       areasOfExpertise: [
         { icon: "fas fa-syringe", expertise: "Diabetes" },
@@ -840,70 +840,70 @@ export class Doctor {
         'Contributed articles on preventive health, balanced diets, and corporate wellness nutrition'
       ]
     },
-    {
-      id: 16,
-      name: "Dr. Kumaresh Krishnamoorthy",
-      image: "/img/new-doctor-image/dr-kumaresh-krishnamoorthy.png",
-      alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
-      areasOfExpertise: [
-        { icon: "", expertise: "General ENT" },
-        { icon: "", expertise: "Paediatric ENT" },
-        { icon: "", expertise: "Head & Neck" },
-        { icon: "", expertise: "Vertigo" },
-        { icon: "", expertise: "Thyroid" },
-        { icon: "", expertise: "Hearing Loss" },
-        { icon: "", expertise: "Implantation Otology" },
-      ],
-      title: "Dr. Kumaresh Krishnamoorthy Itigi - Consultant ENT Surgeon | Vasavi Hospitals Bangalore",
-      description: "Dr. Kumaresh Krishnamoorthy is a leading ENT specialist at Vasavi Hospitals, Bangalore, with 25 years of expertise in General ENT, Paediatric ENT, Head & Neck care, vertigo treatment, thyroid disorders, hearing loss and implantation otology.",
-      briefProfile: "I am an ENT, Head & Neck, and Neurotology specialist with over two decades of experience dedicated to restoring hearing, balance, voice, and breathing. After completing my basic surgical training in India, I pursued dual fellowships in the USA - one in Head & Neck Surgery and another in Otology & Neurotology - which helped me refine my expertise in managing complex skull-base and otological conditions. My practice focuses on advanced ENT surgeries, including cochlear implantation, bone-anchored hearing reconstruction, voice and sinus surgeries, and head & neck cancer care. Over the years, I’ve had the privilege of treating patients from across India and abroad, and each case reinforces my belief in a patient-centric, compassionate approach to care. Beyond clinical practice, I am deeply passionate about healthcare innovation and frugal medical technology. I mentor startups, guide young innovators, and have been part of several national initiatives to promote healthcare entrepreneurship. I train specialists in resource limited countries like Iraq and Tanzannia and have been profiled in almost all leading news media and tele media",
-      qualification: "MS (ENT), Fellow – Head & Neck Surgery (USA) Fellow – Otology & Neurotology (USA)",
-      department: "ENT",
-      experience: "25+",
-      designation: "Consultant - ENT, Head & Neck and Neurotologist",
-      awards: [
-        { icon: "fas fa-medal", awardFor: "Distinguished Alumnus - PSG Institutions", awardDescription: "Honored by PSG Institutions for professional excellence.", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
-        { icon: "fas fa-medal", awardFor: "Top 25 HealthTech Entrepreneurs of India (2023)", awardDescription: "Recognized by Indian Innovators Association.", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
-        { icon: "fas fa-medal", awardFor: "Healthcare Disruptor Award", awardDescription: "Awarded by Delhi Management Association for impactful healthcare innovation.", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
-        { icon: "fas fa-medal", awardFor: "National Innovation Mentor - NITI Aayog", awardDescription: "Mentor under Atal Innovation Mission for national innovation programs.", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
-        { icon: "fas fa-medal", awardFor: "Healthcare Innovation Recognition", awardDescription: "Acknowledged for advancing affordable and scalable medical solutions.", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
-        { icon: "fas fa-medal", awardFor: "Innovation Council Board Member", awardDescription: "Serving on innovation boards of leading institutions.", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
-        { icon: "fas fa-medal", awardFor: "Best ENT Specialist - NDTV", awardDescription: "Recognized by NDTV for excellence in ENT care.", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
-        { icon: "fas fa-medal", awardFor: "12+ IPRs & FDA-Cleared Devices", awardDescription: "Holds multiple IPRs, including FDA-approved medical devices.", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
-        { icon: "fas fa-medal", awardFor: "Cochlear Implant Program Initiator", awardDescription: "Started programs in day-care centers and government teaching hospitals.", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+    // {
+    //   id: 16,
+    //   name: "Dr. Kumaresh Krishnamoorthy",
+    //   image: "/img/new-doctor-image/dr-kumaresh-krishnamoorthy.png",
+    //   alt: "Dr. Kumaresh Krishnamoorthy | Best ENT Doctor",
+    //   areasOfExpertise: [
+    //     { icon: "", expertise: "General ENT" },
+    //     { icon: "", expertise: "Paediatric ENT" },
+    //     { icon: "", expertise: "Head & Neck" },
+    //     { icon: "", expertise: "Vertigo" },
+    //     { icon: "", expertise: "Thyroid" },
+    //     { icon: "", expertise: "Hearing Loss" },
+    //     { icon: "", expertise: "Implantation Otology" },
+    //   ],
+    //   title: "Dr. Kumaresh Krishnamoorthy Itigi - Consultant ENT Surgeon | Vasavi Hospitals Bangalore",
+    //   description: "Dr. Kumaresh Krishnamoorthy is a leading ENT specialist at Vasavi Hospitals, Bangalore, with 25 years of expertise in General ENT, Paediatric ENT, Head & Neck care, vertigo treatment, thyroid disorders, hearing loss and implantation otology.",
+    //   briefProfile: "I am an ENT, Head & Neck, and Neurotology specialist with over two decades of experience dedicated to restoring hearing, balance, voice, and breathing. After completing my basic surgical training in India, I pursued dual fellowships in the USA - one in Head & Neck Surgery and another in Otology & Neurotology - which helped me refine my expertise in managing complex skull-base and otological conditions. My practice focuses on advanced ENT surgeries, including cochlear implantation, bone-anchored hearing reconstruction, voice and sinus surgeries, and head & neck cancer care. Over the years, I’ve had the privilege of treating patients from across India and abroad, and each case reinforces my belief in a patient-centric, compassionate approach to care. Beyond clinical practice, I am deeply passionate about healthcare innovation and frugal medical technology. I mentor startups, guide young innovators, and have been part of several national initiatives to promote healthcare entrepreneurship. I train specialists in resource limited countries like Iraq and Tanzannia and have been profiled in almost all leading news media and tele media",
+    //   qualification: "MS (ENT), Fellow – Head & Neck Surgery (USA) Fellow – Otology & Neurotology (USA)",
+    //   department: "ENT",
+    //   experience: "25+",
+    //   designation: "Consultant - ENT, Head & Neck and Neurotologist",
+    //   awards: [
+    //     { icon: "fas fa-medal", awardFor: "Distinguished Alumnus - PSG Institutions", awardDescription: "Honored by PSG Institutions for professional excellence.", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+    //     { icon: "fas fa-medal", awardFor: "Top 25 HealthTech Entrepreneurs of India (2023)", awardDescription: "Recognized by Indian Innovators Association.", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+    //     { icon: "fas fa-medal", awardFor: "Healthcare Disruptor Award", awardDescription: "Awarded by Delhi Management Association for impactful healthcare innovation.", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+    //     { icon: "fas fa-medal", awardFor: "National Innovation Mentor - NITI Aayog", awardDescription: "Mentor under Atal Innovation Mission for national innovation programs.", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+    //     { icon: "fas fa-medal", awardFor: "Healthcare Innovation Recognition", awardDescription: "Acknowledged for advancing affordable and scalable medical solutions.", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+    //     { icon: "fas fa-medal", awardFor: "Innovation Council Board Member", awardDescription: "Serving on innovation boards of leading institutions.", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+    //     { icon: "fas fa-medal", awardFor: "Best ENT Specialist - NDTV", awardDescription: "Recognized by NDTV for excellence in ENT care.", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+    //     { icon: "fas fa-medal", awardFor: "12+ IPRs & FDA-Cleared Devices", awardDescription: "Holds multiple IPRs, including FDA-approved medical devices.", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+    //     { icon: "fas fa-medal", awardFor: "Cochlear Implant Program Initiator", awardDescription: "Started programs in day-care centers and government teaching hospitals.", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
 
-      ],
-      professionalAffilications: [
-        { image: "/img/affiliations/AOI.jpg", icon: "fas fa-user-md card-icon", paHeading: "AOI", paDescription: "Association of Otolaryngologists of India" },
-        { image: "/img/affiliations/FHNO.jpg", icon: "fas fa-user-md card-icon", paHeading: "FHNO", paDescription: "Foundation for Head and Neck Oncology" },
-        // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
-      ],
-      publications: [
-        "Delayed Extrusion of Hydroxyapatite Following Transpetrosal Reconstruction - Krishnamoorthy K, Samy RN, Pensak ML. Laryngoscope. 2006 Oct;116(10):1817-1819.",
-        "DuraSeal: A Novel Agent to Prevent CSF Leak - Presented at the Triological Society Meeting, Chicago, 2006.",
-        "Use of a Novel Ultrasonic Surgical System for Decompression of the Facial Nerve - Triological Society Meeting, Chicago, 2006.",
-        "Intraoperative Nerve Monitoring in Skull Base Surgery - Annual Academy of Otolaryngologists, Toronto, September 2006.",
-        "Esthesioneuroblastoma - Review of 25 Cases - Thesis submitted to Roswell Park Cancer Institute, USA.",
-        "Bilateral Choanal Atresia - A Rare Presentation - Presented at the Indian Pediatric Otolaryngology Conference, Cochin, 2000.",
-        "Comprehensive Study of Penetrating Neck Injuries - Thesis submitted to Dr. M.G.R Medical University, Chennai.",
-        "Aggressive Fibromatosis in Children - Grand Rounds, AIMS, Cochin.",
+    //   ],
+    //   professionalAffilications: [
+    //     { image: "/img/affiliations/AOI.jpg", icon: "fas fa-user-md card-icon", paHeading: "AOI", paDescription: "Association of Otolaryngologists of India" },
+    //     { image: "/img/affiliations/FHNO.jpg", icon: "fas fa-user-md card-icon", paHeading: "FHNO", paDescription: "Foundation for Head and Neck Oncology" },
+    //     // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+    //   ],
+    //   publications: [
+    //     "Delayed Extrusion of Hydroxyapatite Following Transpetrosal Reconstruction - Krishnamoorthy K, Samy RN, Pensak ML. Laryngoscope. 2006 Oct;116(10):1817-1819.",
+    //     "DuraSeal: A Novel Agent to Prevent CSF Leak - Presented at the Triological Society Meeting, Chicago, 2006.",
+    //     "Use of a Novel Ultrasonic Surgical System for Decompression of the Facial Nerve - Triological Society Meeting, Chicago, 2006.",
+    //     "Intraoperative Nerve Monitoring in Skull Base Surgery - Annual Academy of Otolaryngologists, Toronto, September 2006.",
+    //     "Esthesioneuroblastoma - Review of 25 Cases - Thesis submitted to Roswell Park Cancer Institute, USA.",
+    //     "Bilateral Choanal Atresia - A Rare Presentation - Presented at the Indian Pediatric Otolaryngology Conference, Cochin, 2000.",
+    //     "Comprehensive Study of Penetrating Neck Injuries - Thesis submitted to Dr. M.G.R Medical University, Chennai.",
+    //     "Aggressive Fibromatosis in Children - Grand Rounds, AIMS, Cochin.",
 
-        `
-            <b>Book Chapters</b><br>
-            <p>I. Sarcoidosis - In Encyclopedia of Otolaryngology, Head and Neck Surgery - Springer Publications.</p>
-            <p>II. Cancer of the Skull Base - In Essentials of Head and Neck Cancer - Byword Books.</p>
-          `,
-        `
-          <b>Over the years, authored 100+ published features, including:</b>
-          <ul>
-          <li>Expert medical columns</li>
-          <li>Educational clinical articles</li>
-          <li>Editorial board contributions</li>
-          <li>Papers in national & international medical platforms</li>
-          </ul>
-          `
-      ]
-    },
+    //     `
+    //         <b>Book Chapters</b><br>
+    //         <p>I. Sarcoidosis - In Encyclopedia of Otolaryngology, Head and Neck Surgery - Springer Publications.</p>
+    //         <p>II. Cancer of the Skull Base - In Essentials of Head and Neck Cancer - Byword Books.</p>
+    //       `,
+    //     `
+    //       <b>Over the years, authored 100+ published features, including:</b>
+    //       <ul>
+    //       <li>Expert medical columns</li>
+    //       <li>Educational clinical articles</li>
+    //       <li>Editorial board contributions</li>
+    //       <li>Papers in national & international medical platforms</li>
+    //       </ul>
+    //       `
+    //   ]
+    // },
     {
       id: 27,
       name: "Dr. Mohan Ram. P",

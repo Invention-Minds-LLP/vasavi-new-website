@@ -39,22 +39,22 @@ export const ENT_SCHEMA = {
       "name": "Skin Prick Test and SLIT Test"
     }
   ],
-  "department": {
-    "@type": "MedicalOrganization",
-    "name": "ENT Department",
-    "member": [
-      {
-        "@type": "Physician",
-        "name": "Dr. Kumaresh Krishnamoorthy"
-      },
-      {
-        "@type": "Physician",
-        "name": "Dr. Yashaswi Srikakula"
-      },
-      {
-        "@type": "Physician",
-        "name": "Dr. Sphoorthy G Itigi"
-      }
-    ]
-  }
+  // "department": {
+  //   "@type": "MedicalOrganization",
+  //   "name": "ENT Department",
+  //   "member": [
+  //     {
+  //       "@type": "Physician",
+  //       "name": "Dr. Kumaresh Krishnamoorthy"
+  //     },
+  //     {
+  //       "@type": "Physician",
+  //       "name": "Dr. Yashaswi Srikakula"
+  //     },
+  //     {
+  //       "@type": "Physician",
+  //       "name": "Dr. Sphoorthy G Itigi"
+  //     }
+  //   ]
+  // }
 }
