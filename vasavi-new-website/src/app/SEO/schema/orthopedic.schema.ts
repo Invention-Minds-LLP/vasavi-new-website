@@ -59,14 +59,10 @@ export const ORTHOPEDIC_SCHEMA = {
     "@type": "MedicalOrganization",
     "name": "Orthopedics Department",
     "member": [
-      {
-        "@type": "Physician",
-        "name": "Dr. Rupendu T"
-      },
-      {
-        "@type": "Physician",
-        "name": "Dr. Srivatsa Subramanya"
-      },
+      // {
+      //   "@type": "Physician",
+      //   "name": "Dr. Rupendu T"
+      // },
       {
         "@type": "Physician",
         "name": "Dr. Venkatesh Rathod R"

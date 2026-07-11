@@ -51,24 +51,16 @@ export class CTAngiography {
       qualification: "MBBS, Diploma in Clinical Cardiology",
       slug: "/dr-krishna-kumar-b-r"
     },
-    {
-      name: "Dr. Girish Navasundi",
-      img: "img/new-doctor-image/dr-girish-b-navasundi.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
-      // experience: "14+",
-      // department: "Consultant - ENT",
-      qualification: "MBBS MD DNB",
-      // slug: "/dr-sowmya-sangamesh"
-    },
-    {
-      name: "Dr. Praneeth",
-      img: "img/new-doctor-image/dr-praneeth-s.png",
-      alt: "Best Gynecologic Oncologist and Robotic Hysterectomy Surgeon in Bangalore | Dr. Nisha Buchade",
-      // experience: "15+",
-      // department: "Gynecology, Robotic & Laparoscopic Surgery",
-      qualification: "MBBS MD DM",
-      // slug: "/dr-nisha-buchade"
-    },
+    // {
+    //   name: "Dr. Girish Navasundi",
+    //   img: "img/new-doctor-image/dr-girish-b-navasundi.png",
+    //   alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
+    //   // experience: "14+",
+    //   // department: "Consultant - ENT",
+    //   qualification: "MBBS MD DNB",
+    //   // slug: "/dr-sowmya-sangamesh"
+    // },
+    
     {
       name: "Dr. Balaraj",
       img: "img/new-doctor-image/dr-balaraj.png",

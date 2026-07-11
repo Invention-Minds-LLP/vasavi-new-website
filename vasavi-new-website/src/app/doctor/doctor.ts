@@ -350,34 +350,34 @@ export class Doctor {
       professionalAffilications: [],
       publications: []
     },
-    {
-      id: 5,
-      name: "Dr. Sneha Sundaram",
-      image: "/img/new-doctor-image/dummy-female.png",
-      alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
-      areasOfExpertise: [
-        { icon: "fas fa-tooth", expertise: "Endodontist (root canal specialist)" },
-        { icon: "fas fa-teeth", expertise: "Conservative dentistry" }
-      ],
-      title: "Dr. Sneha Sundaram | Endodontist at Vasavi Hospitals",
-      description: "Dr. Sneha Sundaram is a skilled Endodontist at Vasavi Hospitals with 13+ years of experience. Specializes in root canal therapy, conservative dentistry and comprehensive oral health care. Book dental appointments.",
-      briefProfile: "Experienced endodontist with 8+ years of experience and dedication providing help to patients to achieve optimal oral health and overcome complex mouth and tooth problems. Skilled in Root canal therapy, Conservative dentistry and comprehensive patient oral care. Committed to achieve highest patient satisfaction level with expertise to accurately diagnose patient and provide effective treatment plans.",
-      qualification: "BDS, MDS",
-      department: "Dentistry",
-      experience: "13+",
-      designation: "Consultant Endodontist",
-      awards: [
-        {
-          icon: "fas fa-medal",
-          awardFor: "Best Paper Presentation",
-          awardDescription: "Won 2 times best paper presentation award at dental Conference",
-          cardColorClass: "award-card blue",
-          iconColorClass: "award-icon blue"
-        }
-      ],
-      professionalAffilications: [],
-      publications: ["2 publications in dentistry field"]
-    },
+    // {
+    //   id: 5,
+    //   name: "Dr. Sneha Sundaram",
+    //   image: "/img/new-doctor-image/dummy-female.png",
+    //   alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "fas fa-tooth", expertise: "Endodontist (root canal specialist)" },
+    //     { icon: "fas fa-teeth", expertise: "Conservative dentistry" }
+    //   ],
+    //   title: "Dr. Sneha Sundaram | Endodontist at Vasavi Hospitals",
+    //   description: "Dr. Sneha Sundaram is a skilled Endodontist at Vasavi Hospitals with 13+ years of experience. Specializes in root canal therapy, conservative dentistry and comprehensive oral health care. Book dental appointments.",
+    //   briefProfile: "Experienced endodontist with 8+ years of experience and dedication providing help to patients to achieve optimal oral health and overcome complex mouth and tooth problems. Skilled in Root canal therapy, Conservative dentistry and comprehensive patient oral care. Committed to achieve highest patient satisfaction level with expertise to accurately diagnose patient and provide effective treatment plans.",
+    //   qualification: "BDS, MDS",
+    //   department: "Dentistry",
+    //   experience: "13+",
+    //   designation: "Consultant Endodontist",
+    //   awards: [
+    //     {
+    //       icon: "fas fa-medal",
+    //       awardFor: "Best Paper Presentation",
+    //       awardDescription: "Won 2 times best paper presentation award at dental Conference",
+    //       cardColorClass: "award-card blue",
+    //       iconColorClass: "award-icon blue"
+    //     }
+    //   ],
+    //   professionalAffilications: [],
+    //   publications: ["2 publications in dentistry field"]
+    // },
     {
       id: 6,
       name: "Dr. Abhiram R",
@@ -672,65 +672,65 @@ export class Doctor {
         "Poster - Gastroschisis and Neonatal Outcome"
       ]
     },
-    {
-      id: 11,
-      name: "Dr. Madhu B Jagalasar",
-      image: "/img/new-doctor-image/dummy-female.png",
-      alt: "Dr. Madhu B Jagalasar | Neonatologist | Vasavi Hospitals Bangalore",
-      areasOfExpertise: [
-        { icon: "fas fa-baby", expertise: "Neonatology" }
-      ],
-      title: "Dr. Madhu B Jagalasar | Neonatologist at Vasavi Hospitals",
-      description: "Dr. Madhu B Jagalasar is an expert Neonatologist with 13+ years of experience in newborn intensive care and MBA (HCM).",
-      briefProfile: "",
-      qualification: "MD Paediatrics, DM Neonatology, MBA (HCM)",
-      department: "Neonatology",
-      experience: "13+",
-      designation: "Consultant Neonatologist",
-      awards: [],
-      professionalAffilications: [
-        { image: "/img/affiliations/IAP.jpg", icon: "fas fa-user-md card-icon", paHeading: "IAP", paDescription: "Indian Academy of Pediatrics" },
-        { image: "/img/affiliations/NNF.png", icon: "fas fa-hospital card-icon", paHeading: "NNF", paDescription: "National Neonatology Forum" },
-        { image: "/img/affiliations/IMA.png", icon: "fas fa-stethoscope card-icon", paHeading: "IMA", paDescription: "Indian Medical Association" }
-      ],
-      publications: ["3 publications in neonatology"]
-    },
-    {
-      id: 12,
-      name: "Dr. Srivatsa Subramanya",
-      image: "/img/new-doctor-image/dr-srivatsa-subramanya.png",
-      alt: "Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
-      areasOfExpertise: [
-        { icon: "fas fa-bone", expertise: "Orthopaedic Trauma" },
-        { icon: "fas fa-procedures", expertise: "Shoulder and knee joint preservation, reconstruction, arthroscopy and replacement" },
-        { icon: "fas fa-running", expertise: "Sports injuries, ligament reconstruction" }
-      ],
-      title: "Dr. Srivatsa Subramanya | Orthopedic Surgeon at Vasavi Hospitals",
-      description: "Renowned Orthopedic Surgeon with 17+ years of global experience in shoulder and knee surgery, sports injuries and replacements.",
-      briefProfile: "Orthopaedic surgeon and shoulder & knee specialist with global training (Australia, Italy, Japan, Korea). Expert in joint preservation, reconstructive and replacement surgeries; faculty in international meetings and published author.",
-      qualification: "MBBS, MS (Ortho), DNB (Ortho), Fellowship in Knee (Australia), Fellowship in Shoulder (Australia, Italy), Fellowship in Trauma (S. Korea)",
-      department: "Orthopedics",
-      experience: "17+",
-      designation: "Consultant Orthopedic Surgeon",
-      awards: [
-        { icon: "fas fa-medal", awardFor: "Prof. M. Natarajan Gold Medal", awardDescription: "Outcome after acetabular fractures - mid-term analysis of 84 cases - TNOACON 2011", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
-        { icon: "fas fa-trophy", awardFor: "Best Post Graduate Paper", awardDescription: "Outcome of surgically treated acetabular fractures - OASISCON 2010", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
-        { icon: "fas fa-award", awardFor: "Best Paper of the Session", awardDescription: "Intricacies of proximal femoral deformity correction - MOS 2010", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
-        { icon: "fas fa-star", awardFor: "Best Paper of the Session", awardDescription: "Role of S-ROM prosthesis in dysplastic Hip - MOS 2009", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" }
-      ],
-      professionalAffilications: [
-        { image: "/img/affiliations/IAS.png", icon: "fas fa-user-md card-icon", paHeading: "IAS", paDescription: "Indian Arthroscopy Society" }
-      ],
-      publications: [
-        "Reverse shoulder arthroplasty with patient-specific glenoid guides - Techniques in Shoulder and Elbow Surgery, 2014",
-        "Sport Specific ACL Reconstruction - KSSTA Review",
-        "UNIX Unicompartment Knee Replacement - 15-year Survivorship Analysis",
-        "Patient Specific Instrumentation in Reverse Shoulder Arthroplasty - AOA 2014",
-        "Management of Chondral Injuries in Athletes - AFL Meeting",
-        "Effect of Rotational Alignment of Femoral Component in TKA - JOASIS 2010",
-        "Vanishing Bone Disease - JTNOA 2011"
-      ]
-    },
+    // {
+    //   id: 11,
+    //   name: "Dr. Madhu B Jagalasar",
+    //   image: "/img/new-doctor-image/dummy-female.png",
+    //   alt: "Dr. Madhu B Jagalasar | Neonatologist | Vasavi Hospitals Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "fas fa-baby", expertise: "Neonatology" }
+    //   ],
+    //   title: "Dr. Madhu B Jagalasar | Neonatologist at Vasavi Hospitals",
+    //   description: "Dr. Madhu B Jagalasar is an expert Neonatologist with 13+ years of experience in newborn intensive care and MBA (HCM).",
+    //   briefProfile: "",
+    //   qualification: "MD Paediatrics, DM Neonatology, MBA (HCM)",
+    //   department: "Neonatology",
+    //   experience: "13+",
+    //   designation: "Consultant Neonatologist",
+    //   awards: [],
+    //   professionalAffilications: [
+    //     { image: "/img/affiliations/IAP.jpg", icon: "fas fa-user-md card-icon", paHeading: "IAP", paDescription: "Indian Academy of Pediatrics" },
+    //     { image: "/img/affiliations/NNF.png", icon: "fas fa-hospital card-icon", paHeading: "NNF", paDescription: "National Neonatology Forum" },
+    //     { image: "/img/affiliations/IMA.png", icon: "fas fa-stethoscope card-icon", paHeading: "IMA", paDescription: "Indian Medical Association" }
+    //   ],
+    //   publications: ["3 publications in neonatology"]
+    // },
+    // {
+    //   id: 12,
+    //   name: "Dr. Srivatsa Subramanya",
+    //   image: "/img/new-doctor-image/dr-srivatsa-subramanya.png",
+    //   alt: "Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "fas fa-bone", expertise: "Orthopaedic Trauma" },
+    //     { icon: "fas fa-procedures", expertise: "Shoulder and knee joint preservation, reconstruction, arthroscopy and replacement" },
+    //     { icon: "fas fa-running", expertise: "Sports injuries, ligament reconstruction" }
+    //   ],
+    //   title: "Dr. Srivatsa Subramanya | Orthopedic Surgeon at Vasavi Hospitals",
+    //   description: "Renowned Orthopedic Surgeon with 17+ years of global experience in shoulder and knee surgery, sports injuries and replacements.",
+    //   briefProfile: "Orthopaedic surgeon and shoulder & knee specialist with global training (Australia, Italy, Japan, Korea). Expert in joint preservation, reconstructive and replacement surgeries; faculty in international meetings and published author.",
+    //   qualification: "MBBS, MS (Ortho), DNB (Ortho), Fellowship in Knee (Australia), Fellowship in Shoulder (Australia, Italy), Fellowship in Trauma (S. Korea)",
+    //   department: "Orthopedics",
+    //   experience: "17+",
+    //   designation: "Consultant Orthopedic Surgeon",
+    //   awards: [
+    //     { icon: "fas fa-medal", awardFor: "Prof. M. Natarajan Gold Medal", awardDescription: "Outcome after acetabular fractures - mid-term analysis of 84 cases - TNOACON 2011", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+    //     { icon: "fas fa-trophy", awardFor: "Best Post Graduate Paper", awardDescription: "Outcome of surgically treated acetabular fractures - OASISCON 2010", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+    //     { icon: "fas fa-award", awardFor: "Best Paper of the Session", awardDescription: "Intricacies of proximal femoral deformity correction - MOS 2010", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+    //     { icon: "fas fa-star", awardFor: "Best Paper of the Session", awardDescription: "Role of S-ROM prosthesis in dysplastic Hip - MOS 2009", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" }
+    //   ],
+    //   professionalAffilications: [
+    //     { image: "/img/affiliations/IAS.png", icon: "fas fa-user-md card-icon", paHeading: "IAS", paDescription: "Indian Arthroscopy Society" }
+    //   ],
+    //   publications: [
+    //     "Reverse shoulder arthroplasty with patient-specific glenoid guides - Techniques in Shoulder and Elbow Surgery, 2014",
+    //     "Sport Specific ACL Reconstruction - KSSTA Review",
+    //     "UNIX Unicompartment Knee Replacement - 15-year Survivorship Analysis",
+    //     "Patient Specific Instrumentation in Reverse Shoulder Arthroplasty - AOA 2014",
+    //     "Management of Chondral Injuries in Athletes - AFL Meeting",
+    //     "Effect of Rotational Alignment of Femoral Component in TKA - JOASIS 2010",
+    //     "Vanishing Bone Disease - JTNOA 2011"
+    //   ]
+    // },
     {
       id: 29,
       name: "Dr. Mutharaju K. R",
@@ -756,31 +756,31 @@ export class Doctor {
       professionalAffilications: [],
       publications: []
     },
-    {
-      id: 28,
-      name: "Dr. Gargi Das",
-      image: "/img/new-doctor-image/Dr Gargi Das.png",
-      alt: "Dr Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
-      areasOfExpertise: [
-        { icon: "", expertise: "Ophthalmology" },
-        { icon: "", expertise: "Refractive Surgery" },
-        { icon: "", expertise: "Glaucoma" },
-        { icon: "", expertise: "Diabetic Retinopathy Screening & Management" },
-        { icon: "", expertise: "Preventive Eye Care" },
-        { icon: "", expertise: "Corneal Disorders" },
-        { icon: "", expertise: "Eye Trauma Management" }
-      ],
-      title: "Dr. Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
-      description: "Dr. Gargi Das specializes in ophthalmology, refractive surgery, glaucoma and diabetic retinopathy management at Vasavi Hospitals, Bangalore.",
-      briefProfile: "",
-      qualification: "MBBS, MD, FPRS",
-      department: "Ophthalmology",
-      experience: "6+",
-      designation: "Consultant - Ophthalmology",
-      awards: [],
-      professionalAffilications: [],
-      publications: []
-    },
+    // {
+    //   id: 28,
+    //   name: "Dr. Gargi Das",
+    //   image: "/img/new-doctor-image/Dr Gargi Das.png",
+    //   alt: "Dr Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "", expertise: "Ophthalmology" },
+    //     { icon: "", expertise: "Refractive Surgery" },
+    //     { icon: "", expertise: "Glaucoma" },
+    //     { icon: "", expertise: "Diabetic Retinopathy Screening & Management" },
+    //     { icon: "", expertise: "Preventive Eye Care" },
+    //     { icon: "", expertise: "Corneal Disorders" },
+    //     { icon: "", expertise: "Eye Trauma Management" }
+    //   ],
+    //   title: "Dr. Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
+    //   description: "Dr. Gargi Das specializes in ophthalmology, refractive surgery, glaucoma and diabetic retinopathy management at Vasavi Hospitals, Bangalore.",
+    //   briefProfile: "",
+    //   qualification: "MBBS, MD, FPRS",
+    //   department: "Ophthalmology",
+    //   experience: "6+",
+    //   designation: "Consultant - Ophthalmology",
+    //   awards: [],
+    //   professionalAffilications: [],
+    //   publications: []
+    // },
     {
       id: 26,
       name: "Dr. Sphoorthy G Itigi",
@@ -1095,49 +1095,49 @@ export class Doctor {
       ]
     },
 
-    {
-      id: 23,
-      name: "Dr. Rupendu T",
-      image: "/img/new-doctor-image/dr-rupendu-t.png",
-      alt: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
-      areasOfExpertise: [
-        { icon: "", expertise: "Joint Replacement Surgery (Hip, Knee)" },
-        { icon: "", expertise: "ACL & PCL Reconstruction" },
-        { icon: "", expertise: "Hip Resurfacing" },
-        { icon: "", expertise: "Fracture Management" },
-        { icon: "", expertise: "Spine Disorders" },
-        { icon: "", expertise: "Arthritis Treatment" },
-        { icon: "", expertise: "Sports Injuries" },
-        { icon: "", expertise: "Shoulder Dislocation" },
-        { icon: "", expertise: "Bone Tumors" },
-        { icon: "", expertise: "Knee Braces & Pain Management" },
-        { icon: "", expertise: "Nerve and Muscle Disorders" },
-      ],
-      title: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
-      description: "Dr. Rupendu T is an experienced orthopaedic surgeon specializing in advanced bone, joint, and musculoskeletal treatments. His expertise includes fracture management, joint replacement surgeries, sports injuries, and minimally invasive orthopaedic procedures.",
-      briefProfile: "Dr. Rupendu Thongavalen is a highly experienced Orthopedic Surgeon with over 45 years of overall experience, including 38 years as a specialist. He completed his MBBS from Bangalore Medical College and Research Institute in 1979 and his MS in Orthopedics from Bangalore University in 1987. Known for his expertise, compassion, and patient-centric approach, Dr. Thongavalen currently practices at Shanti Hospital and Research Clinic & Trauma & Joint Clinic in Jayanagar, Bangalore. He specializes in advanced orthopedic care, including joint replacements, spine surgeries, fracture management, arthritis treatment, and sports injury management. Patients can trust him for comprehensive and personalized orthopedic care, backed by decades of experience and a commitment to improving mobility and quality of life.",
-      qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
-      // department: "Accredited Robotic Surgeon of Edinburgh",
-      experience: "45+",
-      designation: "Sr. Consultant Orthopaedic Surgeon",
-      awards: [
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
-        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
-      ],
-      professionalAffilications: [
-        { image: "/img/affiliations/KMC (2).jpg", icon: "fas fa-user-md card-icon", paHeading: "KMC", paDescription: "Karnataka Medical Council" },
-        { image: "/img/affiliations/IMA.png", icon: "fas fa-user-md card-icon", paHeading: "IMA", paDescription: "Indian Medical Association" },
-        // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
-      ],
-      publications: []
-    },
+    // {
+    //   id: 23,
+    //   name: "Dr. Rupendu T",
+    //   image: "/img/new-doctor-image/dr-rupendu-t.png",
+    //   alt: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "", expertise: "Joint Replacement Surgery (Hip, Knee)" },
+    //     { icon: "", expertise: "ACL & PCL Reconstruction" },
+    //     { icon: "", expertise: "Hip Resurfacing" },
+    //     { icon: "", expertise: "Fracture Management" },
+    //     { icon: "", expertise: "Spine Disorders" },
+    //     { icon: "", expertise: "Arthritis Treatment" },
+    //     { icon: "", expertise: "Sports Injuries" },
+    //     { icon: "", expertise: "Shoulder Dislocation" },
+    //     { icon: "", expertise: "Bone Tumors" },
+    //     { icon: "", expertise: "Knee Braces & Pain Management" },
+    //     { icon: "", expertise: "Nerve and Muscle Disorders" },
+    //   ],
+    //   title: "Dr. Rupendu T | Senior Consultant Orthopaedic Surgeon at Vasavi Hospital Bangalore",
+    //   description: "Dr. Rupendu T is an experienced orthopaedic surgeon specializing in advanced bone, joint, and musculoskeletal treatments. His expertise includes fracture management, joint replacement surgeries, sports injuries, and minimally invasive orthopaedic procedures.",
+    //   briefProfile: "Dr. Rupendu Thongavalen is a highly experienced Orthopedic Surgeon with over 45 years of overall experience, including 38 years as a specialist. He completed his MBBS from Bangalore Medical College and Research Institute in 1979 and his MS in Orthopedics from Bangalore University in 1987. Known for his expertise, compassion, and patient-centric approach, Dr. Thongavalen currently practices at Shanti Hospital and Research Clinic & Trauma & Joint Clinic in Jayanagar, Bangalore. He specializes in advanced orthopedic care, including joint replacements, spine surgeries, fracture management, arthritis treatment, and sports injury management. Patients can trust him for comprehensive and personalized orthopedic care, backed by decades of experience and a commitment to improving mobility and quality of life.",
+    //   qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
+    //   // department: "Accredited Robotic Surgeon of Edinburgh",
+    //   experience: "45+",
+    //   designation: "Sr. Consultant Orthopaedic Surgeon",
+    //   awards: [
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+    //     // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+    //   ],
+    //   professionalAffilications: [
+    //     { image: "/img/affiliations/KMC (2).jpg", icon: "fas fa-user-md card-icon", paHeading: "KMC", paDescription: "Karnataka Medical Council" },
+    //     { image: "/img/affiliations/IMA.png", icon: "fas fa-user-md card-icon", paHeading: "IMA", paDescription: "Indian Medical Association" },
+    //     // { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "S  CNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+    //   ],
+    //   publications: []
+    // },
 
     {
       id: 18,
