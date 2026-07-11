@@ -54,24 +54,24 @@ export class RoboticThrComponent {
   };
 
   doctors: any = [
-   {
-      name: "Dr. Rupendu T",
-      img: "img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png",
-      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
-      experience: "45+",
-      department: "Sr. Consultant Orthopaedic Surgeon",
-      // qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
-      slug: "/dr-rupendu-t"
-    },
-    {
-      name: 'Dr. Srivatsa Subramanya',
-      img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
-      alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
-      experience: '17+',
-      department: 'Consultant-Orthopedics',
-      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-srivatsa-subramanya" 
-    },
+  //  {
+  //     name: "Dr. Rupendu T",
+  //     img: "img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png",
+  //     alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
+  //     experience: "45+",
+  //     department: "Sr. Consultant Orthopaedic Surgeon",
+  //     // qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
+  //     slug: "/dr-rupendu-t"
+  //   },
+    // {
+    //   name: 'Dr. Srivatsa Subramanya',
+    //   img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
+    //   alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
+    //   experience: '17+',
+    //   department: 'Consultant-Orthopedics',
+    //   // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+    //   slug: "/dr-srivatsa-subramanya" 
+    // },
     {
       name: "Dr. Venkatesh Rathod R",
       img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",

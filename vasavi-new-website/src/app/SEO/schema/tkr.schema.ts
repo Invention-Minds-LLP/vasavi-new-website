@@ -17,14 +17,14 @@ export const TKR_SCHEMA = {
     "url": "https://www.vasavihospitals.com/"
   },
   "performedBy": [
-    {
-      "@type": "Physician",
-      "name": "Dr. Rupendu T"
-    },
-    {
-      "@type": "Physician",
-      "name": "Dr. Srivatsa Subramanya"
-    },
+    // {
+    //   "@type": "Physician",
+    //   "name": "Dr. Rupendu T"
+    // },
+    // {
+    //   "@type": "Physician",
+    //   "name": "Dr. Srivatsa Subramanya"
+    // },
     {
       "@type": "Physician",
       "name": "Dr. Venkatesh Rathod R"

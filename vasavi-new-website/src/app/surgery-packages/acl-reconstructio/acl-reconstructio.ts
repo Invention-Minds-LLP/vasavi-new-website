@@ -41,24 +41,24 @@ export class ACLReconstructio {
   ];
 
   doctors: any = [
-    {
-      name: 'Dr. Rupendu T',
-      img: 'img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png',
-      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
-      experience: '45+',
-      department: 'Sr. Consultant Orthopaedic Surgeon',
-      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-rupendu-t"
-    },
-    {
-      name: 'Dr. Srivatsa Subramanya',
-      img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
-      alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
-      experience: '17+',
-      department: 'Consultant-Orthopedics',
-      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-srivatsa-subramanya"
-    },
+    // {
+    //   name: 'Dr. Rupendu T',
+    //   img: 'img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png',
+    //   alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
+    //   experience: '45+',
+    //   department: 'Sr. Consultant Orthopaedic Surgeon',
+    //   // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+    //   slug: "/dr-rupendu-t"
+    // },
+    // {
+    //   name: 'Dr. Srivatsa Subramanya',
+    //   img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
+    //   alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
+    //   experience: '17+',
+    //   department: 'Consultant-Orthopedics',
+    //   // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+    //   slug: "/dr-srivatsa-subramanya"
+    // },
     {
       name: 'Dr. Venkatesh Rathod R',
       img: 'img/new-doctor-image/dr-venkatesh-rathod-spec.png',
@@ -255,36 +255,6 @@ export class ACLReconstructio {
     this.isPopupImageOpen = false;
   }
 
-  doctorProfileData: any = {
-    name: 'Dr. Rupendu T',
-    header: "Orthopedic",
-    bannerImg: 'img/senior-doctor/6363 2.png',
-    img: 'img/senior-doctor/ortho-dr-rupendu-t.png',
-    alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
-    experience: '45+',
-    department: 'Sr. Consultant Orthopaedic Surgeon',
-    qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-    slug: "dr-rupendu-t",
-    boxDetails: [
-      {
-        img: "img/senior-doctor/kneepad.png",
-        count: "45+ Years",
-        department: "of Orthopedic Excellence"
-      },
-      {
-        img: "img/senior-doctor/surgery.png",
-        count: "5000+",
-        department: "Surgeries Performed"
-      },
-      {
-        img: "img/senior-doctor/Vector.png",
-        count: "10,000+",
-        department: "Patients Treated Successfully"
-      },
-
-
-    ]
-  }
 
   selectedPageName: string = 'ACL-reconstruction';
 

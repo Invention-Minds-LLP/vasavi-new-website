@@ -378,14 +378,14 @@ export class HealthCheck {
           department: "Nephrology",
           slug: "/dr-sunil-r"
         },
-        {
-          name: "Dr. Gargi Das",
-          img: "/img/new-doctor-image/Dr Gargi Das.png",
-          alt: "Dr Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
-          experience: "6+",
-          department: "Ophthalmology",
-          slug: "/dr-gargi-das"
-        },
+        // {
+        //   name: "Dr. Gargi Das",
+        //   img: "/img/new-doctor-image/Dr Gargi Das.png",
+        //   alt: "Dr Gargi Das - Consultant Ophthalmologist | Vasavi Hospitals Bangalore",
+        //   experience: "6+",
+        //   department: "Ophthalmology",
+        //   slug: "/dr-gargi-das"
+        // },
         {
           name: "Dr. Ramesh Hanumegowda",
           img: "img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png",
@@ -1227,16 +1227,16 @@ export class HealthCheck {
           consultant: "Consultant Endodontist",
           slug: "/dr-revathi-natesan"
         },
-        {
-          name: "Dr. Sneha Sundaram",
-          img: "/img/new-doctor-image/dummy-female.png",
-          alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
-          experience: "13+",
-          qualification: "BDS, MDS",
-          department: "Dentistry",
-          consultant: "Consultant Endodontist",
-          slug: "/dr-sneha-sundaram"
-        },
+        // {
+        //   name: "Dr. Sneha Sundaram",
+        //   img: "/img/new-doctor-image/dummy-female.png",
+        //   alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
+        //   experience: "13+",
+        //   qualification: "BDS, MDS",
+        //   department: "Dentistry",
+        //   consultant: "Consultant Endodontist",
+        //   slug: "/dr-sneha-sundaram"
+        // },
         {
           name: "Dr. Naneboena Sunitha",
           img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
@@ -1444,16 +1444,16 @@ export class HealthCheck {
           consultant: "Consultant Endodontist",
           slug: "/dr-revathi-natesan"
         },
-        {
-          name: "Dr. Sneha Sundaram",
-          img: "/img/new-doctor-image/dummy-female.png",
-          alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
-          experience: "13+",
-          qualification: "BDS, MDS",
-          department: "Dentistry",
-          consultant: "Consultant Endodontist",
-          slug: "/dr-sneha-sundaram"
-        },
+        // {
+        //   name: "Dr. Sneha Sundaram",
+        //   img: "/img/new-doctor-image/dummy-female.png",
+        //   alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
+        //   experience: "13+",
+        //   qualification: "BDS, MDS",
+        //   department: "Dentistry",
+        //   consultant: "Consultant Endodontist",
+        //   slug: "/dr-sneha-sundaram"
+        // },
         {
           name: "Dr. Naneboena Sunitha",
           img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
@@ -1692,16 +1692,16 @@ Book the Vasavi Well Women Health Check-Up and prioritize your well-being.`,
           consultant: "Consultant Endodontist",
           slug: "/dr-revathi-natesan"
         },
-        {
-          name: "Dr. Sneha Sundaram",
-          img: "/img/new-doctor-image/dummy-female.png",
-          alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
-          experience: "13+",
-          qualification: "BDS, MDS",
-          department: "Dentistry",
-          consultant: "Consultant Endodontist",
-          slug: "/dr-sneha-sundaram"
-        },
+        // {
+        //   name: "Dr. Sneha Sundaram",
+        //   img: "/img/new-doctor-image/dummy-female.png",
+        //   alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
+        //   experience: "13+",
+        //   qualification: "BDS, MDS",
+        //   department: "Dentistry",
+        //   consultant: "Consultant Endodontist",
+        //   slug: "/dr-sneha-sundaram"
+        // },
         {
           name: "Dr. Naneboena Sunitha",
           img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
@@ -1734,16 +1734,16 @@ Book the Vasavi Well Women Health Check-Up and prioritize your well-being.`,
           slug: "/dr-ramesh-t-s"
         },
 
-        {
-          name: "Dr. Gargi Das",
-          img: "/img/new-doctor-image/Dr Gargi Das.png",
-          alt: "Dr. Gargi Das | Ophthalmologist | Vasavi Hospitals Bangalore",
-          experience: "6+",
-          qualification: "MBBS, MD, FPRS",
-          department: "Ophthalmology",
-          consultant: "Consultant Ophthalmologist",
-          slug: "/dr-gargi-das"
-        },
+        // {
+        //   name: "Dr. Gargi Das",
+        //   img: "/img/new-doctor-image/Dr Gargi Das.png",
+        //   alt: "Dr. Gargi Das | Ophthalmologist | Vasavi Hospitals Bangalore",
+        //   experience: "6+",
+        //   qualification: "MBBS, MD, FPRS",
+        //   department: "Ophthalmology",
+        //   consultant: "Consultant Ophthalmologist",
+        //   slug: "/dr-gargi-das"
+        // },
 
       ],
 
@@ -2012,16 +2012,16 @@ Book the Vasavi Master Health Check - Men and invest in long-term well-being.`,
           slug: "/dr-revathi-natesan"
         },
 
-        {
-          name: "Dr. Sneha Sundaram",
-          img: "/img/new-doctor-image/dummy-female.png",
-          alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
-          experience: "13+",
-          qualification: "BDS, MDS",
-          department: "Dentistry",
-          consultant: "Consultant Endodontist",
-          slug: "/dr-sneha-sundaram"
-        },
+        // {
+        //   name: "Dr. Sneha Sundaram",
+        //   img: "/img/new-doctor-image/dummy-female.png",
+        //   alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
+        //   experience: "13+",
+        //   qualification: "BDS, MDS",
+        //   department: "Dentistry",
+        //   consultant: "Consultant Endodontist",
+        //   slug: "/dr-sneha-sundaram"
+        // },
 
         {
           name: "Dr. Naneboena Sunitha",

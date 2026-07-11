@@ -53,14 +53,6 @@ export const CARDIOLOGY_SCHEMA = {
       },
       {
         "@type": "Physician",
-        "name": "Dr. Girish Navasundi"
-      },
-      {
-        "@type": "Physician",
-        "name": "Dr. Praneeth"
-      },
-      {
-        "@type": "Physician",
         "name": "Dr. Balaraj"
       }
     ]

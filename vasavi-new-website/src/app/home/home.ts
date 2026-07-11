@@ -147,15 +147,15 @@ export class Home {
       // qualification: "MBBS, MS Fellowship in gynec-oncology, Fellowship in Advanced infertility",
       slug: "/dr-nisha-buchade"
     },
-    {
-      name: 'Dr. Srivatsa Subramanya',
-      img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
-      alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
-      experience: '17+',
-      department: 'Orthopedics',
-      // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-      slug: "/dr-srivatsa-subramanya"
-    },
+    // {
+    //   name: 'Dr. Srivatsa Subramanya',
+    //   img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
+    //   alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
+    //   experience: '17+',
+    //   department: 'Orthopedics',
+    //   // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+    //   slug: "/dr-srivatsa-subramanya"
+    // },
     {
       name: "Dr. Ramesh Hanumegowda",
       img: "img/new-doctor-image/dr-ramesh-hanumegowda-urologist-transparent.png",

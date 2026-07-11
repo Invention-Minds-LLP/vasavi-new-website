@@ -226,16 +226,16 @@ export class DoctorsPage {
       consultant: "Consultant Physician",
       slug: "/dr-vinay-hosadurga"
     },
-    {
-      name: "Dr. Sneha Sundaram",
-      img: "/img/new-doctor-image/dummy-female.png",
-      alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
-      experience: "13+",
-      qualification: "BDS, MDS",
-      department: "Dentistry",
-      consultant: "Consultant Endodontist",
-      slug: "/dr-sneha-sundaram"
-    },
+    // {
+    //   name: "Dr. Sneha Sundaram",
+    //   img: "/img/new-doctor-image/dummy-female.png",
+    //   alt: "Dr. Sneha Sundaram | Endodontist | Vasavi Hospitals Bangalore",
+    //   experience: "13+",
+    //   qualification: "BDS, MDS",
+    //   department: "Dentistry",
+    //   consultant: "Consultant Endodontist",
+    //   slug: "/dr-sneha-sundaram"
+    // },
     {
       name: "Dr. Abhiram R",
       img: "/img/new-doctor-image/dr-abhiram-r.png",
@@ -336,16 +336,16 @@ export class DoctorsPage {
       consultant: "Consultant Gynec Laparoscopic Surgeon",
       slug: "/dr-sowmya-sangamesh"
     },
-    {
-      name: "Dr. Madhu B Jagalasar",
-      img: "/img/new-doctor-image/dummy-female.png",
-      alt: "Dr. Madhu B Jagalasar | Neonatologist | Vasavi Hospitals Bangalore",
-      experience: "13+",
-      qualification: "MD Pediatrics, DM Neonatology",
-      department: "Neonatology",
-      consultant: "Consultant Neonatologist",
-      slug: "/dr-madhu-b-jagalasar"
-    },
+    // {
+    //   name: "Dr. Madhu B Jagalasar",
+    //   img: "/img/new-doctor-image/dummy-female.png",
+    //   alt: "Dr. Madhu B Jagalasar | Neonatologist | Vasavi Hospitals Bangalore",
+    //   experience: "13+",
+    //   qualification: "MD Pediatrics, DM Neonatology",
+    //   department: "Neonatology",
+    //   consultant: "Consultant Neonatologist",
+    //   slug: "/dr-madhu-b-jagalasar"
+    // },
     {
       name: "Dr. Mutharaju K. R",
       img: "/img/new-doctor-image/dr-mutharaju-k-r.png",
@@ -356,16 +356,16 @@ export class DoctorsPage {
       consultant: "Sr. Consultant Bariatric Surgeon",
       slug: "/dr-mutharaju-k-r"
     },
-    {
-      name: "Dr. Gargi Das",
-      img: "/img/new-doctor-image/Dr Gargi Das.png",
-      alt: "Dr. Gargi Das | Ophthalmologist | Vasavi Hospitals Bangalore",
-      experience: "6+",
-      qualification: "MBBS, MD, FPRS",
-      department: "Ophthalmology",
-      consultant: "Consultant Ophthalmologist",
-      slug: "/dr-gargi-das"
-    },
+    // {
+    //   name: "Dr. Gargi Das",
+    //   img: "/img/new-doctor-image/Dr Gargi Das.png",
+    //   alt: "Dr. Gargi Das | Ophthalmologist | Vasavi Hospitals Bangalore",
+    //   experience: "6+",
+    //   qualification: "MBBS, MD, FPRS",
+    //   department: "Ophthalmology",
+    //   consultant: "Consultant Ophthalmologist",
+    //   slug: "/dr-gargi-das"
+    // },
     {
       name: "Dr. Sphoorthy G Itigi",
       img: "/img/new-doctor-image/Dr Sphoorthy G Itigi.png",
@@ -416,16 +416,16 @@ export class DoctorsPage {
       consultant: "Consultant ENT",
       slug: "/dr-yashaswi-srikakula"
     },
-    {
-      name: "Dr. Rupendu T",
-      img: "/img/new-doctor-image/dr-rupendu-t.png",
-      alt: "Dr. Rupendu T | Orthopaedic Surgeon | Vasavi Hospitals Bangalore",
-      experience: "45+",
-      qualification: "MBBS, MS Orthopaedics",
-      department: "Orthopedics",
-      consultant: "Sr. Consultant Orthopaedic Surgeon",
-      slug: "/dr-rupendu-t"
-    },
+    // {
+    //   name: "Dr. Rupendu T",
+    //   img: "/img/new-doctor-image/dr-rupendu-t.png",
+    //   alt: "Dr. Rupendu T | Orthopaedic Surgeon | Vasavi Hospitals Bangalore",
+    //   experience: "45+",
+    //   qualification: "MBBS, MS Orthopaedics",
+    //   department: "Orthopedics",
+    //   consultant: "Sr. Consultant Orthopaedic Surgeon",
+    //   slug: "/dr-rupendu-t"
+    // },
     {
       name: "Dr. Krishna Kumar B R",
       img: "/img/new-doctor-image/dr-krishna-kumar-b-r-sq.png",
@@ -476,16 +476,16 @@ export class DoctorsPage {
       consultant: "Consultant Endodontist",
       slug: "/dr-revathi-natesan"
     },
-    {
-      name: "Dr. Srivatsa Subramanya",
-      img: "/img/new-doctor-image/dr-srivatsa-subramanya.png",
-      alt: "Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
-      experience: "17+",
-      qualification: "MBBS, MS (Ortho), DNB (Ortho), Fellowships (Australia, Italy, Korea)",
-      department: "Orthopedics",
-      consultant: "Consultant Orthopedic Surgeon",
-      slug: "/dr-srivatsa-subramanya"
-    },
+    // {
+    //   name: "Dr. Srivatsa Subramanya",
+    //   img: "/img/new-doctor-image/dr-srivatsa-subramanya.png",
+    //   alt: "Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore",
+    //   experience: "17+",
+    //   qualification: "MBBS, MS (Ortho), DNB (Ortho), Fellowships (Australia, Italy, Korea)",
+    //   department: "Orthopedics",
+    //   consultant: "Consultant Orthopedic Surgeon",
+    //   slug: "/dr-srivatsa-subramanya"
+    // },
     {
       name: "Dr. Mohan Ram. P",
       img: "/img/new-doctor-image/dr-mohan-ram- p-sq.png",
