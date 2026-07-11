@@ -71,6 +71,7 @@ import { HealthCheck } from './health-package/health-check/health-check';
 import { SeniorDoctorProfile } from './senior-doctor-profile/senior-doctor-profile';
 import { Animation } from './animation/animation';
 import { Urodynamic } from './urodynamic/urodynamic';
+import { NotFound } from './not-found/not-found';
 // import { HealthCheck } from './health-package/health-check/health-check';
 
 // export const routes: Routes = [
@@ -202,5 +203,5 @@ export const routes: Routes = [
   // ads
 
   { path: 'robotic-hernia-ads', component: RoboticHernia },
-  { path: '**', redirectTo: '' },
+  { path: '**', component: NotFound },
 ];

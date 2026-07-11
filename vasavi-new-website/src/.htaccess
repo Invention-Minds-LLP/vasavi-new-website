@@ -1,7 +1,10 @@
+# =============================================================================
+# IMPORTANT: Keep the "Known Angular routes" list below in sync with
+#            src/app/app.routes.ts. Any new route added to the router MUST
+#            also be added here, otherwise it will return HTTP 404 in prod.
+# =============================================================================
 
-
-
-# ===== 301 Redirects from Old PHP Pages to New Angular Pages =====
+# ----- 301 Redirects from Old PHP Pages to New Angular Pages -----------------
 
 Redirect 301 /anesthesiology.php https://www.vasavihospitals.com/anesthesiology-hospital-in-bangalore
 Redirect 301 /bariatric-surgery.php https://www.vasavihospitals.com/bariatric-surgery-in-bangalore
@@ -35,34 +38,151 @@ Redirect 301 /urology.php https://www.vasavihospitals.com/urology-hospital-in-ba
 Redirect 301 /pulmonology.php https://www.vasavihospitals.com/lung-specialist-in-bangalore
 Redirect 301 /oncology.php https://www.vasavihospitals.com/oncology-hospital-in-bangalore
 Redirect 301 /orthopedic.php https://www.vasavihospitals.com/orthopedic-hospital-in-bangalore
-
-# Pages like About / Contact / Awards / Gallery
 Redirect 301 /about.php https://www.vasavihospitals.com/about-vasavi-hospitals-in-bangalore
 Redirect 301 /contact.php https://www.vasavihospitals.com/contact-vasavi-hospitals-in-bangalore
 Redirect 301 /awards.php https://www.vasavihospitals.com/awards-and-recognition
 Redirect 301 /gallery.php https://www.vasavihospitals.com/gallery
 Redirect 301 /package.php https://www.vasavihospitals.com/health-packages-in-bangalore
-
-# Doctor Profile
 Redirect 301 /doctor-profile.php https://www.vasavihospitals.com/doctors
 
+# ----- (Optional) Force HTTPS. Uncomment when ready to enable. ---------------
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{HTTPS} off
+#   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </IfModule>
 
+# ----- Rewrite rules: serve real files, allow known routes, 404 the rest ----
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Never rewrite index.html itself
   RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+
+  # Serve real files / directories (hashed JS/CSS, images, fonts, robots.txt, sitemap, etc.) as-is
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # ----- Known Angular routes (keep in sync with src/app/app.routes.ts) -----
+
+  # Home
+  RewriteRule ^$ /index.html [L]
+
+  # Specialities / departments
+  RewriteRule ^anesthesiology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^bariatric-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^dental-clinic-in-bangalore/?$ /index.html [L]
+  RewriteRule ^dermatology-skin-clinic-in-bangalore/?$ /index.html [L]
+  RewriteRule ^diabetes-and-endocrinology-center-in-bangalore/?$ /index.html [L]
+  RewriteRule ^emergency-and-critical-care-in-bangalore/?$ /index.html [L]
+  RewriteRule ^internal-medicine-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^liver-hpb-care-center-in-bangalore/?$ /index.html [L]
+  RewriteRule ^gastroenterology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^medical-oncology-cancer-treatment-in-bangalore/?$ /index.html [L]
+  RewriteRule ^minimally-invasive-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^neonatology-and-nicu-care-in-bangalore/?$ /index.html [L]
+  RewriteRule ^neurology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^neurosurgery-specialist-in-bangalore/?$ /index.html [L]
+  RewriteRule ^nutrition-and-dietetics-consultation-in-bangalore/?$ /index.html [L]
+  RewriteRule ^eye-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^oral-and-maxillofacial-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^pediatric-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^physiotherapy-center-in-bangalore/?$ /index.html [L]
+  RewriteRule ^plastic-and-reconstructive-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^psychiatry-and-mental-health-in-bangalore/?$ /index.html [L]
+  RewriteRule ^radiology-and-imaging-services-in-bangalore/?$ /index.html [L]
+  RewriteRule ^surgical-gastroenterology-in-bangalore/?$ /index.html [L]
+  RewriteRule ^vascular-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^surgical-oncology-cancer-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^cardiology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^ent-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^nephrology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^obstetrics-and-gynaecology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^oncology-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^orthopedic-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^lung-specialist-in-bangalore/?$ /index.html [L]
+
+  # Urology + child (urodynamic-test-bangalore)
+  RewriteRule ^urology-hospital-in-bangalore(/urodynamic-test-bangalore)?/?$ /index.html [L]
+
+  # Content / misc pages
+  RewriteRule ^awards-and-recognition/?$ /index.html [L]
+  RewriteRule ^gallery/?$ /index.html [L]
+  RewriteRule ^contact-vasavi-hospitals-in-bangalore/?$ /index.html [L]
+  RewriteRule ^about-vasavi-hospitals-in-bangalore/?$ /index.html [L]
+  RewriteRule ^health-packages-in-bangalore/?$ /index.html [L]
+  RewriteRule ^thank-you/?$ /index.html [L]
+  RewriteRule ^ai-health-chatbot-in-bangalore/?$ /index.html [L]
+  RewriteRule ^all-doctors/?$ /index.html [L]
+  RewriteRule ^maternity-hospital-in-bangalore/?$ /index.html [L]
+  RewriteRule ^animation/?$ /index.html [L]
+
+  # Doctors: parent + /doctors/:slug
+  RewriteRule ^doctors(/[^/]+)?/?$ /index.html [L]
+
+  # Health packages: /health-package/:slug
+  RewriteRule ^health-package/[^/]+/?$ /index.html [L]
+
+  # Surgery packages
+  RewriteRule ^hernia-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^total-knee-replacement-in-bangalore/?$ /index.html [L]
+  RewriteRule ^total-hip-replacement-in-bangalore/?$ /index.html [L]
+  RewriteRule ^gallbladder-removal-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^appendectomy-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^hysterectomy-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^sinus-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^adenoid-removal-in-bangalore/?$ /index.html [L]
+  RewriteRule ^acl-reconstruction-in-bangalore/?$ /index.html [L]
+  RewriteRule ^fistula-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^turp-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^piles-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^tonsillectomy-surgery-in-bangalore/?$ /index.html [L]
+  RewriteRule ^ovarian-cystectomy-in-bangalore/?$ /index.html [L]
+  RewriteRule ^fibroid-removal-in-bangalore/?$ /index.html [L]
+  RewriteRule ^ct-angiography-in-bangalore/?$ /index.html [L]
+  RewriteRule ^coronary-angiography-in-bangalore/?$ /index.html [L]
+
+  # Ads landing pages
+  RewriteRule ^robotic-hernia-ads/?$ /index.html [L]
+
+  # ----- Catch-all: anything that reaches this line is unknown -> real 404 --
+  RewriteRule ^ - [R=404,L]
 </IfModule>
+
+# ErrorDocument returns the Angular shell for the 404 body (UI),
+# while the response status stays 404 (set by the [R=404] rule above).
+ErrorDocument 404 /index.html
+
+# ----- Compression ----------------------------------------------------------
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ----- Security headers -----------------------------------------------------
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(self), camera=(), microphone=(), interest-cohort=()"
+</IfModule>
+
+# ----- Caching: disable caching for all assets ------------------------------
 <IfModule mod_headers.c>
   Header set Cache-Control "no-cache, no-store, must-revalidate"
   Header set Pragma "no-cache"
-  Header set Expires 0
+  Header set Expires "0"
 </IfModule>
 
+# ----- cPanel PHP handler (leave untouched) ---------------------------------
 # php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php81” package as the default “PHP” programming language.
+# Set the "ea-php81" package as the default "PHP" programming language.
 <IfModule mime_module>
   AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
 </IfModule>

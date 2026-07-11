@@ -614,7 +614,7 @@ export class Doctor {
     {
       id: 10,
       name: "Dr. Sudeep Putta Manohar",
-      image: "img/new-doctor-image/dr-sudeep-putta-manohar.jpg.png",
+      image: "img/new-doctor-image/dr-sudeep-putta-manohar.png",
       alt: "Dr. Sudeep Putta Manohar | Endocrinologist | Vasavi Hospitals Bangalore",
       areasOfExpertise: [
         { icon: "fas fa-syringe", expertise: "Diabetes" },
