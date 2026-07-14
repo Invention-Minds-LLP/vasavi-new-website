@@ -13,6 +13,12 @@ import { TKR_SCHEMA } from "./schema/tkr.schema";
 import { THR_SCHEMA } from "./schema/thr.schema";
 import { ACL_SCHEMA } from "./schema/acl-reconstruction";
 import { GALLSTONE_SCHEMA } from "./schema/gallstone.schema";
+import { SINUS_SURGERY_SCHEMA } from "./schema/sinus-surgery.schema";
+import { TONSILLECTOMY_SCHEMA } from "./schema/tonsillectomy.schema";
+import { ADENOID_REMOVAL_SCHEMA } from "./schema/adenoid-removal.schema";
+import { APPENDECTOMY_SCHEMA } from "./schema/appendectomy.schema";
+import { PILES_SCHEMA } from "./schema/piles.schema";
+import { FISTULA_SCHEMA } from "./schema/fistula.schema";
 import { DR_KUMARESH_SCHEMA } from "./schema/doctor-schema/dr-kumaresh-krishnamoorthy.schema";
 import { DR_NISHA_SCHEMA } from "./schema/doctor-schema/dr-nisha-buchade";
 import { DR_RAMESH_HANUMEGOWDA_SCHEMA } from "./schema/doctor-schema/dr-ramesh-hanume-gowda.schema";
@@ -39,6 +45,12 @@ export const SCHEMA_MAP: any = {
   '/total-hip-replacement-in-bangalore': THR_SCHEMA,
   '/acl-reconstruction-in-bangalore': ACL_SCHEMA,
   '/gallbladder-removal-surgery-in-bangalore': GALLSTONE_SCHEMA,
+  '/sinus-surgery-in-bangalore': SINUS_SURGERY_SCHEMA,
+  '/tonsillectomy-surgery-in-bangalore': TONSILLECTOMY_SCHEMA,
+  '/adenoid-removal-in-bangalore': ADENOID_REMOVAL_SCHEMA,
+  '/appendectomy-surgery-in-bangalore': APPENDECTOMY_SCHEMA,
+  '/piles-surgery-in-bangalore': PILES_SCHEMA,
+  '/fistula-surgery-in-bangalore': FISTULA_SCHEMA,
 
    // DOCTORS
   '/doctors/dr-kumaresh-krishnamoorthy': DR_KUMARESH_SCHEMA,

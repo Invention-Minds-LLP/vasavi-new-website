@@ -47,6 +47,7 @@ import { ThankyouPage } from './thankyou-page/thankyou-page';
 import { Doctor } from './doctor/doctor';
 import { Chatbot } from './chatbot/chatbot';
 import { RoboticHerniaComponent } from './surgery-packages/robotic-hernia/robotic-hernia.component';
+import { HerniaComponent } from './surgery-packages/hernia/hernia.component';
 import { RoboticTkrComponent } from './surgery-packages/robotic-tkr/robotic-tkr.component';
 import { RoboticThrComponent } from './surgery-packages/robotic-thr/robotic-thr.component';
 import { RoboticCholecystectomyComponent } from './surgery-packages/robotic-cholecystectomy/robotic-cholecystectomy.component';
@@ -181,7 +182,7 @@ export const routes: Routes = [
 
   // surgery packages
 
-  { path: 'hernia-surgery-in-bangalore', component: RoboticHerniaComponent },
+  { path: 'hernia-surgery-in-bangalore', component: HerniaComponent },
   { path: 'total-knee-replacement-in-bangalore', component: RoboticTkrComponent },
   { path: 'total-hip-replacement-in-bangalore', component: RoboticThrComponent },
   { path: 'gallbladder-removal-surgery-in-bangalore', component: RoboticCholecystectomyComponent },

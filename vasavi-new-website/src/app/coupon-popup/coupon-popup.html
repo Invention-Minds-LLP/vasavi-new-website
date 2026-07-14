@@ -1,0 +1,96 @@
+<div class="popup-overlay" [class.active]="isOpen" (click)="closePopup()"></div>
+
+<div class="popup-modal popup-coupon-modal" [class.active]="isOpen" role="dialog" aria-modal="true">
+  <button class="popup-close" (click)="closePopup()" aria-label="Close">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <!-- VIEW 1: Claim -->
+  <div class="coupon-view" [class.active]="view === 'claim'">
+    <div class="coupon-claim-header">
+      <div class="coupon-tag-icon">🎟</div>
+      <h3 class="coupon-claim-title">Your Exclusive Discount Awaits!</h3>
+      <p class="coupon-claim-sub">Fill in your details below to reveal your personal coupon code and claim your offer.</p>
+    </div>
+
+    <div class="coupon-claim-body">
+      <div class="coupon-offer-strip">
+        <div class="coupon-offer-item"><i class="fa-solid fa-tag"></i> 30% off on consultation fee</div>
+        <div class="coupon-offer-item"><i class="fa-solid fa-tag"></i> 30% off on surgery cost</div>
+        <div class="coupon-offer-item"><i class="fa-solid fa-microscope"></i> Free second surgical opinion</div>
+      </div>
+
+      <form class="coupon-claim-form" [formGroup]="claimForm" (ngSubmit)="submitClaim()">
+        <div class="popup-field">
+          <label for="cc-name">Full Name</label>
+          <input
+            type="text"
+            id="cc-name"
+            formControlName="name"
+            placeholder="Enter your full name"
+            [class.input-error]="claimForm.get('name')?.invalid && claimForm.get('name')?.touched"
+          />
+          <span class="error-text" *ngIf="claimForm.get('name')?.invalid && claimForm.get('name')?.touched">
+            {{ nameError }}
+          </span>
+        </div>
+        <div class="popup-field">
+          <label for="cc-phone">Mobile Number</label>
+          <input
+            type="tel"
+            id="cc-phone"
+            formControlName="phone"
+            placeholder="+91 XXXXX XXXXX"
+            maxlength="10"
+            inputmode="numeric"
+            [class.input-error]="claimForm.get('phone')?.invalid && claimForm.get('phone')?.touched"
+          />
+          <span class="error-text" *ngIf="claimForm.get('phone')?.invalid && claimForm.get('phone')?.touched">
+            {{ phoneError }}
+          </span>
+        </div>
+        <button type="submit" class="coupon-claim-submit">
+          <i class="fa-solid fa-gift"></i> Reveal My Coupon Code
+        </button>
+      </form>
+
+      <p class="popup-privacy" style="margin-top: 12px;">
+        <i class="fa-solid fa-lock"></i> 100% confidential · Valid for 15 days
+      </p>
+    </div>
+  </div>
+
+  <!-- VIEW 2: Reveal -->
+  <div class="coupon-view" [class.active]="view === 'reveal'">
+    <div class="coupon-body" style="padding-top: 32px;">
+      <div class="coupon-label-text">Your Exclusive Offer Code</div>
+
+      <div class="coupon-card">
+        <div class="coupon-code-display">{{ couponCode }}</div>
+        <button class="coupon-copy-btn" [class.copied]="copied" (click)="copyCode()">
+          <i class="fa-solid" [class.fa-copy]="!copied" [class.fa-check]="copied"></i>
+          {{ copied ? 'Copied!' : 'Copy Code' }}
+        </button>
+      </div>
+
+      <div style="text-align: center; margin-bottom: 14px;">
+        <span class="coupon-validity-badge">
+          <i class="fa-solid fa-clock"></i>
+          Valid 15 days · Expires {{ couponExpiry }}
+        </span>
+      </div>
+
+      <div class="coupon-benefits">
+        <div class="coupon-benefit"><i class="fa-solid fa-tag"></i> 30% off consultation fee</div>
+        <div class="coupon-benefit"><i class="fa-solid fa-tag"></i> 30% off surgery cost</div>
+        <div class="coupon-benefit"><i class="fa-solid fa-microscope"></i> Free second surgical opinion</div>
+      </div>
+
+      <a [href]="'tel:' + phoneNumber" class="coupon-call-btn">
+        <i class="fa-solid fa-phone"></i> Call Now to Use This Code
+      </a>
+
+      <p class="coupon-note">Mention your code when you call or visit. One code per patient.</p>
+    </div>
+  </div>
+</div>
