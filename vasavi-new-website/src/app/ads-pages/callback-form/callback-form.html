@@ -50,7 +50,7 @@
     !captchaVerified ||
     isSending
   " (click)="sendOtp(callbackForm)">
-        {{ isSending ? 'Sending OTP...' : 'Send OTP' }}
+        {{ isSending ? (otpEnabled ? 'Sending OTP...' : 'Submitting...') : (otpEnabled ? 'Send OTP' : 'Submit Request') }}
       </button>
     </form>
 
