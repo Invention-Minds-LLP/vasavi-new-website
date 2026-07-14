@@ -20,6 +20,10 @@
     transform: translateY(-50%);
 }
 
+.cu{
+    cursor: pointer;
+}
+
 /*** Heading ***/
 h1,
 h2,

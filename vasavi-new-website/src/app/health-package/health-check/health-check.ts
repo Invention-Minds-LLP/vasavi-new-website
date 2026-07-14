@@ -402,14 +402,14 @@ export class HealthCheck {
           department: "Obstetrics and Gynaecology",
           slug: "/dr-nisha-buchade"
         },
-        {
-          name: "Dr. Naneboena Sunitha",
-          img: "/img/new-doctor-image/dr-naneboena-sunitha-sq.png",
-          alt: "Dr Naneboena Sunitha | Consultant Nutritionist",
-          experience: "26+",
-          department: "Nutrition & Dietetics",
-          slug: "/dr-naneboena-sunitha"
-        }
+        // {
+        //   name: "Dr. Naneboena Sunitha",
+        //   img: "/img/new-doctor-image/dr-naneboena-sunitha-sq.png",
+        //   alt: "Dr Naneboena Sunitha | Consultant Nutritionist",
+        //   experience: "26+",
+        //   department: "Nutrition & Dietetics",
+        //   slug: "/dr-naneboena-sunitha"
+        // }
       ],
 
       // CTA
@@ -1237,16 +1237,16 @@ export class HealthCheck {
         //   consultant: "Consultant Endodontist",
         //   slug: "/dr-sneha-sundaram"
         // },
-        {
-          name: "Dr. Naneboena Sunitha",
-          img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
-          alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
-          experience: "26+",
-          qualification: "PhD Food & Nutrition",
-          department: "Nutrition",
-          consultant: "Consultant Nutritionist & Dietitian",
-          slug: "/dr-naneboena-sunitha"
-        },
+        // {
+        //   name: "Dr. Naneboena Sunitha",
+        //   img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+        //   alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
+        //   experience: "26+",
+        //   qualification: "PhD Food & Nutrition",
+        //   department: "Nutrition",
+        //   consultant: "Consultant Nutritionist & Dietitian",
+        //   slug: "/dr-naneboena-sunitha"
+        // },
       ],
 
       // CTA
@@ -1424,16 +1424,16 @@ export class HealthCheck {
           department: "Obstetrics and Gynaecology",
           slug: "/dr-nisha-buchade"
         },
-        {
-          name: "Dr. Sowmya Sangamesh",
-          img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-          alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
-          experience: "14+",
-          qualification: "MBBS, MS (OBG)",
-          department: "Gynecology",
-          consultant: "Consultant Gynec Laparoscopic Surgeon",
-          slug: "/dr-sowmya-sangamesh"
-        },
+        // {
+        //   name: "Dr. Sowmya Sangamesh",
+        //   img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
+        //   alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
+        //   experience: "14+",
+        //   qualification: "MBBS, MS (OBG)",
+        //   department: "Gynecology",
+        //   consultant: "Consultant Gynec Laparoscopic Surgeon",
+        //   slug: "/dr-sowmya-sangamesh"
+        // },
         {
           name: "Dr. Revathi Natesan",
           img: "/img/new-doctor-image/dr-revathi-natesan.png",
@@ -1454,16 +1454,16 @@ export class HealthCheck {
         //   consultant: "Consultant Endodontist",
         //   slug: "/dr-sneha-sundaram"
         // },
-        {
-          name: "Dr. Naneboena Sunitha",
-          img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
-          alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
-          experience: "26+",
-          qualification: "PhD Food & Nutrition",
-          department: "Nutrition",
-          consultant: "Consultant Nutritionist & Dietitian",
-          slug: "/dr-naneboena-sunitha"
-        },
+        // {
+        //   name: "Dr. Naneboena Sunitha",
+        //   img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+        //   alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
+        //   experience: "26+",
+        //   qualification: "PhD Food & Nutrition",
+        //   department: "Nutrition",
+        //   consultant: "Consultant Nutritionist & Dietitian",
+        //   slug: "/dr-naneboena-sunitha"
+        // },
 
       ],
 
@@ -1702,16 +1702,16 @@ Book the Vasavi Well Women Health Check-Up and prioritize your well-being.`,
         //   consultant: "Consultant Endodontist",
         //   slug: "/dr-sneha-sundaram"
         // },
-        {
-          name: "Dr. Naneboena Sunitha",
-          img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
-          alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
-          experience: "26+",
-          qualification: "PhD Food & Nutrition",
-          department: "Nutrition",
-          consultant: "Consultant Nutritionist & Dietitian",
-          slug: "/dr-naneboena-sunitha"
-        },
+        // {
+        //   name: "Dr. Naneboena Sunitha",
+        //   img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+        //   alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
+        //   experience: "26+",
+        //   qualification: "PhD Food & Nutrition",
+        //   department: "Nutrition",
+        //   consultant: "Consultant Nutritionist & Dietitian",
+        //   slug: "/dr-naneboena-sunitha"
+        // },
         {
           name: "Dr. Vinay Hosadurga",
           img: "/img/doctor-page/dr-vinay-hosadurga.png",
@@ -1973,16 +1973,16 @@ Book the Vasavi Master Health Check - Men and invest in long-term well-being.`,
           slug: "/dr-vinay-hosadurga"
         },
 
-        {
-          name: "Dr. Sowmya Sangamesh",
-          img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-          alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
-          experience: "14+",
-          qualification: "MBBS, MS (OBG)",
-          department: "Gynecology",
-          consultant: "Consultant Gynec Laparoscopic Surgeon",
-          slug: "/dr-sowmya-sangamesh"
-        },
+        // {
+        //   name: "Dr. Sowmya Sangamesh",
+        //   img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
+        //   alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
+        //   experience: "14+",
+        //   qualification: "MBBS, MS (OBG)",
+        //   department: "Gynecology",
+        //   consultant: "Consultant Gynec Laparoscopic Surgeon",
+        //   slug: "/dr-sowmya-sangamesh"
+        // },
 
         {
           name: "Dr. Gargi Das",
@@ -2023,16 +2023,16 @@ Book the Vasavi Master Health Check - Men and invest in long-term well-being.`,
         //   slug: "/dr-sneha-sundaram"
         // },
 
-        {
-          name: "Dr. Naneboena Sunitha",
-          img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
-          alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
-          experience: "26+",
-          qualification: "PhD Food & Nutrition",
-          department: "Nutrition",
-          consultant: "Consultant Nutritionist & Dietitian",
-          slug: "/dr-naneboena-sunitha"
-        },
+        // {
+        //   name: "Dr. Naneboena Sunitha",
+        //   img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+        //   alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
+        //   experience: "26+",
+        //   qualification: "PhD Food & Nutrition",
+        //   department: "Nutrition",
+        //   consultant: "Consultant Nutritionist & Dietitian",
+        //   slug: "/dr-naneboena-sunitha"
+        // },
       ],
 
       // CTA

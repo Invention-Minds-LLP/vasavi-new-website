@@ -78,13 +78,23 @@ export class ProstateRemoval {
       department : "Urology",
       slug:'/dr-ramesh-hanumegowda'
     },
-    {
-      name : "Dr. Supreeth Nagaraju",
-      img : "img/new-doctor-image/dummy-male-sq.png",
-      alt : "Best General Surgeon in Bangalore | Dr. Mutharaju K. R",
-      experience : "",
-      department : "Urology",
-      slug:''
+    // {
+    //   name : "Dr. Supreeth Nagaraju",
+    //   img : "img/new-doctor-image/dummy-male-sq.png",
+    //   alt : "Best General Surgeon in Bangalore | Dr. Mutharaju K. R",
+    //   experience : "",
+    //   department : "Urology",
+    //   slug:''
+    // },
+     {
+      name: "Dr. Rohini S",
+      img: "img/new-doctor-image/dr-rohini-sq.png",
+      alt: "",
+      experience: "8+",
+      // qualification: "MBBS, MS (General Surgery), M.Ch (Urology)",
+      department: "Urology",
+      // consultant: "Jr. Consultant - Urologist",
+      slug: "/dr-rohini-s"
     },
   ]
 

@@ -97,7 +97,7 @@
     </div>
 
     <div class="doctor-list">
-        <div class="doctor-card-container" *ngFor="let doctor of filterDoctors(); let i = index">
+        <div class="doctor-card-container" *ngFor="let doctor of filterDoctors(); let i = index" [id]="doctor.slug ? 'doc-' + doctor.slug.slice(1) : null">
 
             <div class="doctor-card-flip" [class.flipped]="activeDoctorIndex === i">
 
@@ -308,4 +308,3 @@
     </div> -->
 
 
-</div>

@@ -48,6 +48,7 @@ export class DoctorsPage {
     "Dentistry": ["Dentistry"],
     "Bariatric Surgery": ["Bariatric Surgery", "General Surgery (MIS)"],
     "Internal Medicine": ["Internal Medicine", "General Medicine"],
+    "Oncology": ["Oncology"],
 
   };
 
@@ -115,6 +116,7 @@ export class DoctorsPage {
     { name: 'Neurosurgery', icon: '/img/departments/neurosurgery.png' },
     { name: 'Bariatric Surgery', icon: '/img/departments/bariatric.png' },
     { name: 'Anesthesiology', icon: '/img/departments/anesthesiology.png' },
+    { name: 'Oncology', icon: '/img/departments/oncology.png' },
 
     // 🔹 Diagnostics & care
     // 🔹 Diagnostics & care
@@ -165,10 +167,30 @@ export class DoctorsPage {
 
   showSpline = false;
 
+  scrollToSlug: string | null = null;
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      const slug = params['scrollTo'];
+      if (slug) {
+        this.scrollToSlug = slug;
+      }
+    });
+  }
+
   ngAfterViewInit() {
     setTimeout(() => {
       this.showSpline = true;
-    }, 1000); // load after page settles
+
+      if (this.scrollToSlug) {
+        setTimeout(() => {
+          const el = document.getElementById('doc-' + this.scrollToSlug);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 200);
+      }
+    }, 1000);
   }
 
 
@@ -326,16 +348,16 @@ export class DoctorsPage {
       consultant: "Consultant Endocrinologist",
       slug: "/dr-sudeep-putta-manohar"
     },
-    {
-      name: "Dr. Sowmya Sangamesh",
-      img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-      alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
-      experience: "14+",
-      qualification: "MBBS, MS (OBG)",
-      department: "Gynecology",
-      consultant: "Consultant Gynec Laparoscopic Surgeon",
-      slug: "/dr-sowmya-sangamesh"
-    },
+    // {
+    //   name: "Dr. Sowmya Sangamesh",
+    //   img: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
+    //   alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
+    //   experience: "14+",
+    //   qualification: "MBBS, MS (OBG)",
+    //   department: "Gynecology",
+    //   consultant: "Consultant Gynec Laparoscopic Surgeon",
+    //   slug: "/dr-sowmya-sangamesh"
+    // },
     // {
     //   name: "Dr. Madhu B Jagalasar",
     //   img: "/img/new-doctor-image/dummy-female.png",
@@ -376,16 +398,16 @@ export class DoctorsPage {
       consultant: "Consultant ENT Surgeon",
       slug: "/dr-sphoorthy-g-itigi"
     },
-    {
-      name: "Dr. Naneboena Sunitha",
-      img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
-      alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
-      experience: "26+",
-      qualification: "PhD Food & Nutrition",
-      department: "Nutrition",
-      consultant: "Consultant Nutritionist & Dietitian",
-      slug: "/dr-naneboena-sunitha"
-    },
+    // {
+    //   name: "Dr. Naneboena Sunitha",
+    //   img: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+    //   alt: "Dr. Naneboena Sunitha | Nutritionist | Vasavi Hospitals Bangalore",
+    //   experience: "26+",
+    //   qualification: "PhD Food & Nutrition",
+    //   department: "Nutrition",
+    //   consultant: "Consultant Nutritionist & Dietitian",
+    //   slug: "/dr-naneboena-sunitha"
+    // },
     // {
     //   name: "Dr. Kumaresh Krishnamoorthy",
     //   img: "/img/new-doctor-image/dr-kumaresh-Kkrishnamoorthy-sq.png",
@@ -505,7 +527,90 @@ export class DoctorsPage {
       department: "Internal Medicine",
       consultant: "Consultant Internal Medicine",
       slug: ""
-    }
+    },
+    {
+      name: "Dr. Sivacharan P. V",
+      img: "/img/new-doctor-image/dr-shivacharan-sq.png",
+      alt: "",
+      experience: "18+",
+      qualification: "MBBS, MRCP (UK) & MRCP (Medical Oncology) with CCT - Royal Colleges of Physicians, UK; ICH-GCP Certified.",
+      department: "Oncology",
+      consultant: "Consultant Medical Oncology",
+      slug: "/dr-sivacharan-p-v"
+    },
+    {
+      name: "Dr. Hamsa B T",
+      img: "img/new-doctor-image/dr-hamsa-sq.png",
+      alt: "",
+      experience: "7+",
+      qualification: "MBBS, MD (General Medicine), DM (Neurology)",
+      department: "Neurology",
+      consultant: "Consultant - Neurology",
+      slug: "/dr-hamsa-b-t"
+    },
+    {
+      name: "Dr. Rashmi A.G.",
+      img: "img/new-doctor-image/dr-rashmi-a-g-sq.png",
+      alt: "",
+      experience: "19+",
+      qualification: "MBBS, MS (Obstetrics & Gynaecology), FIGE (Fellowship in Gynaec Endoscopy)",
+      department: "Obstetrics & Gynecology",
+      consultant: "Consultant Obstetrician and Gynaecologist",
+      slug: "/dr-rashmi-ag"
+    },
+    {
+      name: "Dr. Rohini S",
+      img: "img/new-doctor-image/dr-rohini-sq.png",
+      alt: "",
+      experience: "8+",
+      qualification: "MBBS, MS (General Surgery), M.Ch (Urology)",
+      department: "Urology",
+      consultant: "Jr. Consultant - Urologist",
+      slug: "/dr-rohini-s"
+    },
+    {
+      name: "Dr. Sarvajith S S",
+      img: "img/new-doctor-image/dr-sarvajith-sq.png",
+      alt: "",
+      experience: "6+",
+      qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor Bangaluru FC",
+      department: "Orthopedics",
+      consultant: "Consultant Orthopaedics",
+      slug: "/dr-sarvajith-s-s"
+    },
+    {
+      name: "Dr. Vivek Kumar N Savsani",
+      img: "img/new-doctor-image/dr-vivek-sq.png",
+      alt: "",
+      experience: "15+",
+      qualification: "MBBS, MS (Orthopaedics), Fellowship in Joint Replacement",
+      department: "Orthopedics",
+      consultant: "Consultant Orthopaedic Surgeon & Joint Replacement Specialist",
+      slug: "/dr-vivek-kumar-n-savsani"
+    },
+    {
+      name: "Dr. Balakrishna G T",
+      img: "img/new-doctor-image/dr-balakrishna-sq.png",
+      alt: "",
+      experience: "7+",
+      qualification: "MBBS | MD General Medicine, DM Cardiology",
+      department: "Cardiology",
+      consultant: "Consultant Interventional Cardiologist",
+      slug: "/dr-balakrishna-g-t"
+    },
+    {
+      name: "Dr. Rashmi",
+      img: "img/new-doctor-image/dr-rashmi-r-sq.png",
+      alt: "",
+      experience: "10+",
+      qualification: "M. Sc in Food and Nutrition, Certified Diabetes Educator",
+      department: "Nutrition",
+      consultant: "Consultant - Senior Dietitian",
+      slug: ""
+    },
+
+
+    
 
 
 

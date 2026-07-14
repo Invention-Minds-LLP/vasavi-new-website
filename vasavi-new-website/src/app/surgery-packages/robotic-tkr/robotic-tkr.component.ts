@@ -258,6 +258,35 @@ export class RoboticTkrComponent implements OnInit, AfterViewInit, OnDestroy {
       experience: '16+ Years Experience',
       slug: '/dr-venkatesh-rathod-r',
     },
+    // {
+    //   name: "Dr. Venkatesh Rathod R",
+    //   img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
+    //   alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
+    //   experience: "16+",
+    //   specialty: "Consultant - Orthopedics",
+    //   // qualification: "MBBS, Dortho, DNB ortho",
+    //   slug: "/dr-venkatesh-rathod-r"
+    // },
+    {
+      name: 'Dr. Vivek Kumar N Savsani',
+      img: 'img/new-doctor-image/dr-vivek-sq.png',
+      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Vivek Kumar N Savsani',
+      experience: '15+',
+      specialty: 'Consultant Orthopaedic Surgeon & Joint Replacement Specialist',
+      // department: "Consultant - ENT",
+      // qualification: "MBBS, MS (Orthopaedics), Fellowship in Joint Replacement",
+      slug: '/dr-vivek-kumar-n-savsani',
+    },
+    {
+      name: 'Dr. Sarvajith S S',
+      img: 'img/new-doctor-image/dr-sarvajith-sq.png',
+      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Sarvajith S S',
+      experience: '6+',
+      specialty: 'Consultant Orthopaedics',
+      // department: "Consultant - ENT",
+      // qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor Bangaluru FC",
+      slug: '/dr-sarvajith-s-s',
+    },
   ];
 
   conditionTypes: ConditionCard[] = [
@@ -517,3 +546,45 @@ export class RoboticTkrComponent implements OnInit, AfterViewInit, OnDestroy {
     }, 40000);
   }
 }
+  // doctorProfileData: any = {
+  //   name: 'Dr. Rupendu T',
+  //   header: "Orthopedic",
+  //   bannerImg: 'img/senior-doctor/6363 2.png',
+  //   img: 'img/senior-doctor/ortho-dr-rupendu-t.png',
+  //   alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
+  //   experience: '45+',
+  //   department: 'Sr. Consultant Orthopaedic Surgeon',
+  //   qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
+  //   slug: "dr-rupendu-t",
+  //   boxDetails: [
+  //     {
+  //       img: "img/senior-doctor/kneepad.png",
+  //       count: "45+ Years",
+  //       department: "of Orthopedic Excellence"
+  //     },
+  //     {
+  //       img: "img/senior-doctor/surgery.png",
+  //       count: "5000+",
+  //       department: "Surgeries Performed"
+  //     },
+  //     {
+  //       img: "img/senior-doctor/Vector.png",
+  //       count: "10,000+",
+  //       department: "Patients Treated Successfully"
+  //     },
+
+
+  //   ]
+  // }
+
+  // selectedPageName: string = 'TKR';
+
+
+  // handleBookAppointment(doctor: any) {
+  //   // console.log('Doctor clicked:', doctor);
+  //   this.selectedPageName = `TKR, Doctor Name: ${doctor.name}`;
+  //   // console.log('Page Name:', this.selectedPageName);
+  //   this.openPopup();
+  // }
+  // }
+
