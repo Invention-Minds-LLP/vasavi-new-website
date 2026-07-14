@@ -21,6 +21,8 @@ export class CallbackForm {
   // apiUrl: string = 'http://localhost:3000/api';
   apiUrl = 'https://vasavi-hospitals-812956739285.us-east4.run.app/api';
 
+  otpEnabled = false;
+
   formData = {
     name: '',
     mobile: '',
@@ -273,6 +275,13 @@ export class CallbackForm {
 
     this.fetchUserLocation();
 
+    if (!this.otpEnabled) {
+      // TEMPORARY: OTP disabled - submit the lead directly, skip SMS/verify.
+      this.isSending = true;
+      this.sendEmail();
+      return;
+    }
+
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
     localStorage.setItem('callback_otp', otp);
     localStorage.setItem('callback_otp_expiry', (Date.now() + 2 * 60 * 1000).toString()); // 2 min expiry
@@ -375,10 +384,12 @@ export class CallbackForm {
 
     this.http.post(`${this.apiUrl}/email/send-pages-email`, emailRequest).subscribe({
       next: () => {
+        this.isSending = false;
         this.successMessage = '✅ Thank you! We will call you back shortly.';
         this.router.navigate(['/thank-you']);
       },
       error: (err) => {
+        this.isSending = false;
         console.error('❌ Email send failed:', err);
         alert('❌ Failed to send email. Please try again later.');
       },

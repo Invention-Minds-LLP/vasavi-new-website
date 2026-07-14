@@ -69,6 +69,8 @@ export class InsuranceCheckForm implements OnChanges, OnDestroy {
     'CGHS',
   ];
 
+  otpEnabled = false;
+
   detailsForm: FormGroup;
   otp = '';
 
@@ -168,6 +170,12 @@ export class InsuranceCheckForm implements OnChanges, OnDestroy {
   submitDetailsForm(): void {
     if (this.detailsForm.invalid) {
       this.detailsForm.markAllAsTouched();
+      return;
+    }
+
+    if (!this.otpEnabled) {
+      // TEMPORARY: OTP disabled - submit the lead directly, skip SMS/verify.
+      this.sendLeadEmail();
       return;
     }
 
