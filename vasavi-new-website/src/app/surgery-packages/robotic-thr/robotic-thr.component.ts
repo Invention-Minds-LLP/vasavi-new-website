@@ -1,377 +1,519 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DoctorsCard } from '../../doctors-card/doctors-card';
-import { PopUpFormAds } from '../../pop-up-form-ads/pop-up-form-ads';
-import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
-import { PackageForm } from "../../package-form/package-form";
+import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
-import { SeniorDoctorProfile } from "../../senior-doctor-profile/senior-doctor-profile";
 
-interface HerniaType {
+import { SecondOpinionPopup } from '../../second-opinion-popup/second-opinion-popup';
+import { CallbackForm } from '../../ads-pages/callback-form/callback-form';
+import { InsuranceCheckForm } from '../../insurance-check-form/insurance-check-form';
+
+interface ConditionCard {
   cssClass: string;
+  icon: string;
   badgeText: string;
   title: string;
   description: string;
-  tag?: string;
-  location?: string;
-  recoverytime?: string;
-  hospitalStay?: string;
+  location: string;
+  recoveryTime: string;
+  hospitalStay: string;
 }
 
+interface FaqItem {
+  icon: string;
+  question: string;
+  answer: string;
+  awareness?: boolean;
+  awarenessTag?: string;
+  open: boolean;
+}
 
+interface ThrDoctor {
+  name: string;
+  img: string;
+  alt: string;
+  specialty: string;
+  experience: string;
+  slug: string;
+}
+
+interface InsurancePartner {
+  name: string;
+  logo: string;
+}
+
+interface PatientReview {
+  name: string;
+  text: string;
+}
+
+/**
+ * "Total Hip Replacement Surgery in Bangalore" PPC landing page - rebuilt on
+ * the same conversion infrastructure as the TKR / ACL Reconstruction /
+ * Appendectomy / Hernia / Gallstone pages (trust bar, compact doctors, cost
+ * & insurance quiz, insurance marquee, live reviews/Instagram, exit-intent,
+ * sticky bars, 2-step lead form).
+ *
+ * 1. "Recognizing When You Need a Hip Replacement" condition grid carried
+ *    forward from the pre-rebuild page's real content (hip pain worsening
+ *    with walking, difficulty sitting/standing/bending, grinding or
+ *    stiffness in the joint), reframed into the same 3-card format used on
+ *    TKR/ACL.
+ *
+ * 2. Interactive tool: same 3-tap COST & INSURANCE ESTIMATOR QUIZ pattern.
+ *    Step 1 uses plain, symptom-based language, not clinical terms - same
+ *    fix applied across every other surgery page. Step 2 offers the real
+ *    Mako Robotic-Assisted vs Conventional choice from the pre-rebuild page.
+ *
+ * 3. Pricing: the pre-rebuild page never showed a price on the visible page
+ *    - the real, already-live price (₹99,999) lives only in thr.schema.ts,
+ *    unchanged, consistent with this page staying off a price badge and
+ *    leaning on the callback/quiz.
+ *
+ * 4. Like TKR/ACL, hip arthritis/joint degeneration is a progressive
+ *    condition rather than an hours-level emergency - the "risk" section is
+ *    framed honestly around what delaying surgery does over months/years
+ *    (bone loss, deformity, loss of mobility), not around false urgency.
+ *
+ * 5. Treatment comparison (Mako Robotic-Assisted vs Conventional THR) is the
+ *    pre-rebuild page's real, detailed content, restructured into the same
+ *    "treatment-section" two-card format used on TKR/ACL.
+ *
+ * Doctor data (Dr. Venkatesh Rathod R - the same Orthopaedics consultant
+ * featured on the pre-rebuild page and in the live THR_SCHEMA; Dr. Rupendu T
+ * and Dr. Srivatsa Subramanya were already commented out there and stay
+ * excluded, same as TKR/ACL), insurance partner logos, patient reviews and
+ * the NABH logo are the same real, already-published assets used across the
+ * other surgery pages.
+ *
+ * Hero banner set (mobile/tablet/1024/desktop, 4-tier responsive, WebP,
+ * clean/no baked-in text or price) is live in public/img/packages/thr/ -
+ * see the `heroAsset()` calls in the template for exact filenames. The old
+ * hero images (total-hip-replacement-banner-deskto.png /
+ * total-hip-repalcement.png) were flat, non-responsive images with no
+ * baked-in price, but didn't match this page's HTML-overlay hero pattern,
+ * so they were not reused.
+ *
+ * The explainer video ("Total Hip Replacement.mp4") already exists sitewide
+ * flat at public/img/packages/ and is wired in below via a literal path,
+ * same pattern as TKR/ACL's own explainer videos.
+ */
 @Component({
   selector: 'app-robotic-thr',
-  imports: [CallbackForm, CommonModule, DoctorsCard, PopUpFormAds, PackageForm, SeniorDoctorProfile],
+  standalone: true,
+  imports: [CommonModule, FormsModule, SecondOpinionPopup, CallbackForm, InsuranceCheckForm],
   templateUrl: './robotic-thr.component.html',
-  styleUrl: './robotic-thr.component.css'
+  styleUrl: './robotic-thr.component.css',
 })
-export class RoboticThrComponent {
+export class RoboticThrComponent implements OnInit, AfterViewInit, OnDestroy {
+  constructor(private titleService: Title, private metaService: Meta, private router: Router) {}
 
-  constructor(private title:Title, private meta:Meta){}
-  @ViewChild('carouselTrack', { static: false }) trackRef!: ElementRef<HTMLDivElement>;
-  @ViewChild('prevBtn', { static: false }) prevBtnRef!: ElementRef<HTMLButtonElement>;
-  @ViewChild('nextBtn', { static: false }) nextBtnRef!: ElementRef<HTMLButtonElement>;
+  @ViewChild('thrVideo') thrVideoRef?: ElementRef<HTMLVideoElement>;
 
-  currentIndex = 0;
-  itemsPerView = 1;
-  isCarouselMode = false;
-  resizeTimeout: any;
-  activeSection = 'overview';
+  // Trust-bar "Google Reviews" / "Follow Us" links scroll to these two
+  // sections further down the page.
+  @ViewChild('patientReviewsSection') patientReviewsSection?: ElementRef<HTMLElement>;
+  @ViewChild('instagramSection') instagramSection?: ElementRef<HTMLElement>;
 
-  sections = [
-   { name: 'Overview', id: 'overview' },
-    { name: 'Symptoms', id: 'symptoms' },
-    { name: 'Book an Appointment', id: 'appointment' },
-    { name: 'Our Doctors', id: 'doctors' },
-    { name: 'Surgery Options', id: 'surgery' },
-    // { name: 'Types', id: 'types' },
-    { name: 'Procedures', id: 'procedures' }
-  ];
+  /** Hero banner set is live here - see class-level comment above. */
+  private readonly heroAssetBase = 'img/packages/thr';
+  /** The NABH logo is a flat, sitewide asset (not surgery-specific). */
+  readonly nabhLogoPath = 'img/packages/NABH-logo.webp';
 
-  doctorHeader: any = {
-    title: 'Meet Our Surgery Specialist',
-    description: '',
+  /** Real, verified hospital number - matches every other surgery page. */
+  readonly phoneNumber = '08071500500';
+  readonly phoneHref = 'tel:08071500500';
+
+  /** Click-to-chat WhatsApp - zero-friction alternative for mobile users who
+   *  hesitate to call. Pre-filled message keeps the conversation on-topic. */
+  readonly whatsappHref =
+    'https://wa.me/918844466000?text=' +
+    encodeURIComponent('Hi, I would like to know more about Total Hip Replacement Surgery at Vasavi Hospitals.');
+
+  /** Passed into <app-callback-form [pageName]>, shown to the backend/admin as the enquiry source. */
+  selectedPageName = 'Total Hip Replacement Surgery';
+
+  // ── Popup state ──────────────────────────────────────────
+  isBookingOpen = false;
+  isSecondOpinionOpen = false;
+  isInsuranceOpen = false;
+  isExitIntentOpen = false;
+  private exitIntentShown = false;
+  private handleMouseLeave = (e: MouseEvent): void => {
+    if (e.clientY <= 0 && !this.exitIntentShown && !this.anyPopupOpen()) {
+      this.exitIntentShown = true;
+      this.isExitIntentOpen = true;
+    }
   };
 
-  doctors: any = [
-  //  {
-  //     name: "Dr. Rupendu T",
-  //     img: "img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png",
-  //     alt: "Best Orthopedic Surgeon in Bangalore | Dr. Srivatsa Subramanya",
-  //     experience: "45+",
-  //     department: "Sr. Consultant Orthopaedic Surgeon",
-  //     // qualification: "MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)",
-  //     slug: "/dr-rupendu-t"
-  //   },
-    // {
-    //   name: 'Dr. Srivatsa Subramanya',
-    //   img: 'img/new-doctor-image/dr-srivatsa-subramanya-spec.png',
-    //   alt: 'Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore',
-    //   experience: '17+',
-    //   department: 'Consultant-Orthopedics',
-    //   // qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-    //   slug: "/dr-srivatsa-subramanya" 
-    // },
-    {
-      name: "Dr. Venkatesh Rathod R",
-      img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
-      alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
-      experience: "16+",
-      department: 'Consultant-Orthopedics',
-      // department: "Consultant - ENT",
-      // qualification: "MBBS, Dortho, DNB ortho",
-      slug: "/dr-venkatesh-rathod-r"
-    }
+  private soRepeatTimer: ReturnType<typeof setTimeout> | undefined;
+  private videoObserver?: IntersectionObserver;
+
+  // ── Insurance partners (Cost & Insurance section) ─────────
+  insurancePartners: InsurancePartner[] = [
+    { name: 'Aditya Birla', logo: 'img/insurance-logo/adithya-birla.webp' },
+    { name: 'Bajaj Allianz', logo: 'img/insurance-logo/Bajaj.webp' },
+    { name: 'Chola MS', logo: 'img/insurance-logo/chola.png' },
+    { name: 'Edelweiss', logo: 'img/insurance-logo/edelweisslife.webp' },
+    { name: 'Future Generali', logo: 'img/insurance-logo/future-generali.png' },
+    { name: 'Go Digit', logo: 'img/insurance-logo/go-digit.svg' },
+    { name: 'Liberty', logo: 'img/insurance-logo/liberty.jpg' },
+    { name: 'Star Health', logo: 'img/insurance-logo/star.svg' },
+    { name: 'Reliance', logo: 'img/insurance-logo/reliance.webp' },
+    { name: 'Tata AIG', logo: 'img/insurance-logo/tata-aig.png' },
   ];
 
-  herniaTypes: HerniaType[] = [
+  get insurancePartnersLoop(): InsurancePartner[] {
+    return [...this.insurancePartners, ...this.insurancePartners];
+  }
+
+  readonly instagramProfileUrl = 'https://www.instagram.com/vasavi_hospitals/';
+
+  // ── 2-step "micro-commitment" lead form (Section 2 only) ──
+  leadConcerns: string[] = [
+    'Hip Pain That Worsens With Walking',
+    'Difficulty Sitting, Standing or Bending',
+    'Grinding or Stiffness in the Hip',
+    'Just Exploring Options',
+  ];
+  leadConcern = '';
+  showLeadForm = false;
+  leadFormPageName = 'Total Hip Replacement Surgery';
+
+  selectLeadConcern(concern: string): void {
+    this.leadConcern = concern;
+    this.leadFormPageName = `Total Hip Replacement Surgery - Concern: ${concern}`;
+    this.showLeadForm = true;
+  }
+
+  changeLeadConcern(): void {
+    this.showLeadForm = false;
+  }
+
+  // ── Interactive COST & INSURANCE ESTIMATOR QUIZ ──
+  // Same 3-tap mechanic as TKR/ACL/Appendectomy/Hernia/Gallstone. Step 1
+  // uses plain, symptom-based language rather than clinical terms. Step 2
+  // uses the real Mako Robotic-Assisted vs Conventional choice.
+  quizStep = 1;
+  quizConditionType = '';
+  quizTechnique = '';
+  quizInsurance = '';
+
+  readonly quizConditionOptions: string[] = [
+    'Hip Pain Worsens With Walking',
+    'Difficulty Sitting, Standing or Bending',
+    'Grinding or Stiffness in the Hip',
+    'Pain Not Improving With Medication',
+  ];
+
+  readonly quizTechniqueOptions: string[] = [
+    'Mako Robotic-Assisted Replacement',
+    'Conventional Hip Replacement',
+    'Not Sure - Let the Doctor Recommend',
+  ];
+
+  readonly quizInsuranceOptions: string[] = [
+    'Yes, I Have Insurance',
+    'No / Not Sure',
+  ];
+
+  get quizPageName(): string {
+    return `Total Hip Replacement - Estimate Quiz: ${this.quizConditionType}, ${this.quizTechnique}, Insurance: ${this.quizInsurance}`;
+  }
+
+  selectQuizConditionType(type: string): void {
+    this.quizConditionType = type;
+    this.quizStep = 2;
+  }
+
+  selectQuizTechnique(technique: string): void {
+    this.quizTechnique = technique;
+    this.quizStep = 3;
+  }
+
+  selectQuizInsurance(insurance: string): void {
+    this.quizInsurance = insurance;
+    this.quizStep = 4;
+  }
+
+  /** Jump back to a given step to change an earlier answer, instead of a full reset. */
+  editQuizStep(step: number): void {
+    this.quizStep = step;
+  }
+
+  resetQuiz(): void {
+    this.quizStep = 1;
+    this.quizConditionType = '';
+    this.quizTechnique = '';
+    this.quizInsurance = '';
+  }
+
+  // ── Page data ────────────────────────────────────────────
+  doctors: ThrDoctor[] = [
+    {
+      name: 'Dr. Venkatesh Rathod R',
+      img: 'img/new-doctor-image/dr-venkatesh-rathod-spec.png',
+      alt: 'Dr. Venkatesh Rathod R - Orthopedic Surgeon Vasavi Hospitals Bangalore',
+      specialty: 'Orthopaedics & Joint Replacement Surgery',
+      experience: '16+ Years Experience',
+      slug: '/dr-venkatesh-rathod-r',
+    },
+  ];
+
+  conditionTypes: ConditionCard[] = [
     {
       cssClass: 'inguinal',
-      badgeText: 'Most Common',
-      title: 'Inguinal Hernia',
-      description:
-        'Occurs in the groin when tissue pushes through a weak spot in the abdominal wall. Common in men.',
-      location: 'Location: Groin',
-      hospitalStay: 'Stay: 1 day',
-      recoverytime: 'Recovery: 1–2 weeks',
-    },
-    {
-      cssClass: 'femoral',
-      badgeText: 'More Common in Women',
-      title: 'Femoral Hernia',
-      description:
-        'Appears in the upper thigh or outer groin when fatty tissue or intestine bulges through the femoral canal.',
-      location: 'Location: Upper Thigh',
-      hospitalStay: 'Stay: 1 day',
-      recoverytime: 'Recovery: 1–2 weeks',
+      icon: 'fa-person-walking-with-cane',
+      badgeText: 'Classic Presentation',
+      title: 'Advanced Hip Arthritis',
+      description: 'Persistent hip pain that worsens with walking or movement, and has stopped responding to medication or physiotherapy. The most common reason patients are referred for hip replacement.',
+      location: 'Hip Joint',
+      recoveryTime: 'Get an X-ray evaluation soon',
+      hospitalStay: 'Mako Robotic or Conventional THR',
     },
     {
       cssClass: 'umbilical',
-      badgeText: 'Often in Adults',
-      title: 'Umbilical Hernia',
-      description:
-        'Develops near the belly button when part of the intestine pushes through the abdominal wall.',
-      location: 'Location: Navel',
-      hospitalStay: 'Stay: 1 day',
-      recoverytime: 'Recovery: 1 week',
+      icon: 'fa-list-check',
+      badgeText: 'General Signs',
+      title: 'Common Symptoms',
+      description: 'Difficulty sitting, standing or bending comfortably, grinding or stiffness in the hip joint, pain that disturbs sleep, and reduced range of motion that limits everyday activities.',
+      location: 'Hip / Mobility',
+      recoveryTime: 'Seek evaluation promptly',
+      hospitalStay: 'Clinical exam + X-ray/MRI confirmation',
     },
     {
       cssClass: 'ventral',
-      badgeText: 'Abdominal Wall',
-      title: 'Ventral Hernia',
-      description:
-        'Occurs when tissue bulges through a weak area in the abdominal wall, often visible while standing or straining.',
-      location: 'Location: Abdomen',
-      hospitalStay: 'Stay: 1–2 days',
-      recoverytime: 'Recovery: 2 weeks',
-    },
-    {
-      cssClass: 'incisional',
-      badgeText: 'Post-Surgery Type',
-      title: 'Incisional Hernia',
-      description:
-        'Forms at the site of a previous surgical incision due to weakened tissue from healing.',
-      location: 'Location: Surgical Scar',
-      hospitalStay: 'Stay: 2 days',
-      recoverytime: 'Recovery: 2–3 weeks',
-    },
-    {
-      cssClass: 'hiatal',
-      badgeText: 'Internal Type',
-      title: 'Hiatal Hernia',
-      description:
-        'Part of the stomach moves up through the diaphragm into the chest cavity, often linked to acid reflux.',
-      location: 'Location: Upper Abdomen',
-      hospitalStay: 'Stay: 1–2 days',
-      recoverytime: 'Recovery: 2–3 weeks',
-    },
-    {
-      cssClass: 'epigastric',
-      badgeText: 'Upper Abdomen',
-      title: 'Epigastric Hernia',
-      description:
-        'Small bulge between the navel and chest caused by fat pushing through the abdominal wall.',
-      location: 'Location: Upper Abdomen',
-      hospitalStay: 'Stay: 1 day',
-      recoverytime: 'Recovery: 1 week',
+      icon: 'fa-triangle-exclamation',
+      badgeText: 'Needs Prompt Attention',
+      title: 'When It May Be More Urgent',
+      description: 'Sudden loss of the ability to bear weight, severe pain at rest, or a hip that has become visibly stiff or shortened can signal advanced joint damage or avascular necrosis that should not wait much longer.',
+      location: 'Whole Hip Joint',
+      recoveryTime: 'See an orthopaedic surgeon this week',
+      hospitalStay: 'Total Hip Replacement Surgery',
     },
   ];
 
-  private popupInterval: any;
+  faqs: FaqItem[] = [
+    {
+      icon: 'fa-circle-question',
+      question: 'Can hip arthritis be managed without surgery?',
+      answer:
+        'Early-stage hip arthritis is often managed with medication, physiotherapy, weight management and lifestyle changes. But once the joint cartilage has worn down significantly and pain persists despite these measures - especially pain at rest or at night - conservative treatment stops helping much, and hip replacement becomes the option that reliably restores pain-free mobility. Your orthopaedic surgeon can confirm which stage you are at with an X-ray.',
+      awareness: true,
+      awarenessTag: 'Important - Please Read',
+      open: true,
+    },
+    {
+      icon: 'fa-location-dot',
+      question: 'Which is the best hospital for hip replacement surgery in Bangalore?',
+      answer:
+        'Vasavi Hospitals in Kumaraswamy Layout, Bangalore offers both Mako Robotic-Assisted and Conventional Total Hip Replacement, backed by 40+ years of experienced orthopaedic surgeons and an in-house physiotherapy and rehabilitation unit - the part of THR recovery most patients underestimate. It is a trusted choice for hip replacement in South Bangalore.',
+      open: false,
+    },
+    {
+      icon: 'fa-indian-rupee-sign',
+      question: 'What is the cost of total hip replacement surgery in Bangalore?',
+      answer:
+        'The cost of hip replacement varies depending on the implant type, whether it is Mako robotic-assisted or conventional surgery, and your insurance coverage. At Vasavi Hospitals, we provide a free, personalised cost estimation so there are no surprises. Fill in the form above or call us for a transparent quote.',
+      open: false,
+    },
+    {
+      icon: 'fa-shield-halved',
+      question: 'Is hip replacement surgery covered under health insurance?',
+      answer:
+        'Yes. Total Hip Replacement is covered under most health insurance plans and government schemes, including corporate group insurance, when it is medically indicated. Our dedicated insurance team checks your eligibility upfront and handles the entire cashless approval process for you.',
+      open: false,
+    },
+    {
+      icon: 'fa-clock',
+      question: 'How long does hip replacement surgery take? How many days in hospital?',
+      answer:
+        'The procedure itself typically takes about 1-2 hours under anaesthesia. Most patients stand or walk with support within 24 hours of surgery, and a 2-3 day hospital stay includes guided physiotherapy sessions and pain management before you go home with a clear rehab plan.',
+      open: false,
+    },
+    {
+      icon: 'fa-robot',
+      question: 'Is Mako Robotic-Assisted hip replacement better than conventional surgery?',
+      answer:
+        'Both deliver lasting relief from hip arthritis. The Mako Robotic System uses a personalised 3D plan and a robotic arm to help the surgeon achieve controlled bone preparation and precise implant positioning, which can mean less soft-tissue damage, better leg-length equality and a smoother early recovery. Conventional hip replacement is a proven, time-tested technique with decades of high success rates. Your surgeon will recommend the best approach for your hip.',
+      open: false,
+    },
+    {
+      icon: 'fa-person-walking',
+      question: 'When can I walk again - and when can I return to normal activities?',
+      answer:
+        'Most patients stand or walk with support within 24 hours of surgery and are discharged in 2-3 days. Return to daily activities like walking, light housework and short outings typically happens over 4-6 weeks, guided by physiotherapy milestones. Full recovery, with improved strength, balance and range of motion, generally continues over 2-3 months.',
+      open: false,
+    },
+    {
+      icon: 'fa-hourglass-half',
+      question: 'What happens if I delay hip replacement surgery for years?',
+      answer:
+        'Hip arthritis is not an overnight emergency - but it is progressive. The longer a severely worn joint is left untreated, the more the hip can develop stiffness, muscle weakness and leg-length changes, which can make surgery more complex and rehabilitation slower. If pain is limiting your daily life despite medication and physiotherapy, earlier evaluation keeps your options - and your recovery - simpler.',
+      open: false,
+    },
+  ];
 
+  // ── Patient reviews (bottom of page - kept as fallback data, Elfsight
+  // widget is the primary live source; see .html) ───────────
+  patientReviews: PatientReview[] = [
+    {
+      name: 'Arun Kanti Chakraborty',
+      text: 'Excellent experience from doctors, nurses, front office staff, admission and insurance desk and ward staff. Experienced doctors who are very confident and efficient in their work and answer all queries satisfactorily and in detail. Overall much better experience than the other big names in the area like Fortis and Apollo hospitals.',
+    },
+    {
+      name: 'Sindhu NPG',
+      text: 'Good hospital in and around the location. Service is reachable and doctors also guide us in a proper way, where a common man can understand the medical issue and the staff are very supportive.',
+    },
+    {
+      name: 'Gurudatta Prasad',
+      text: 'Nice hospital, we have visited 14 days continuously for an injection for my mother. In the emergency unit all the nurses were helpful and took care of my mother.',
+    },
+    {
+      name: 'Vikrant Vij',
+      text: 'Great service by the hospital staff. They have taken care of my mother for about 25 days and helped her recover throughout. Very satisfied overall.',
+    },
+    {
+      name: 'Murali K G',
+      text: 'Very Good hospital with human touch. We are really satisfied with the way Dr. Balaraj (Cardiologist) handled our treatment. Thank you so much!',
+    },
+    {
+      name: 'Raghunandan D',
+      text: 'The hospital was clean and well-maintained, and the staff were friendly and helpful. Overall, I had a positive experience at Vasavi Hospitals and would recommend it to others.',
+    },
+  ];
+
+  // ── Asset path helpers (used in the template) ─────────────
+  heroAsset(file: string): string {
+    return `${this.heroAssetBase}/${file}`;
+  }
+
+  scrollToSection(target: ElementRef<HTMLElement> | undefined, event?: Event): void {
+    if (event) {
+      event.preventDefault();
+    }
+    target?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  scrollToPatientReviews(event?: Event): void {
+    this.scrollToSection(this.patientReviewsSection, event);
+  }
+
+  scrollToInstagram(event?: Event): void {
+    this.scrollToSection(this.instagramSection, event);
+  }
+
+  // ── Lifecycle ──────────────────────────────────────────────
   ngOnInit(): void {
-    setTimeout(() => {
-      this.openImagePopup();
-    }, 5000);
+    this.titleService.setTitle('Total Hip Replacement Surgery in Bangalore | Vasavi Hospitals');
+    this.metaService.updateTag({
+      name: 'description',
+      content:
+        'Mako Robotic-Assisted & Conventional Total Hip Replacement at Vasavi Hospitals, Bangalore. Regain pain-free mobility with expert orthopaedic care, faster recovery & cashless insurance.',
+    });
 
-    this.title.setTitle('Total Hip Replacement Surgery in Bangalore | Regain Mobility & Comfort');
-    this.meta.updateTag({name:'description', content:'Experience pain-free movement with advanced Hip Replacement surgery at Vasavi Hospitals. Safe, precise & affordable orthopedic care with fast recovery.'})
-
-    // this.popupInterval = setInterval(() => {
-    //   this.openPopup();
-    // }, 25000);
+    setTimeout(() => this.openSecondOpinion(), 15000);
   }
 
-  isPopupOpen = false;
-
-  openPopup() {
-    this.isPopupOpen = true;
-  }
-
-  closePopup() {
-    this.isPopupOpen = false;
-  }
-
-  handleFormSubmit(data: { name: string; phoneNumber: string; otp: string }) {
-    console.log('Form Data Received:', data);
-    // ✅ You can send this data to backend or API here
-    this.closePopup(); // close popup after success
-  }
-
-
-  
-  // sub navbar
   ngAfterViewInit(): void {
-    this.updateCarouselMode();
-    this.setupEventListeners();
+    const video = this.thrVideoRef?.nativeElement;
+    if (video && 'IntersectionObserver' in window) {
+      this.videoObserver = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              video.muted = true;
+              video.play().catch(() => {});
+            } else {
+              video.pause();
+            }
+          }
+        },
+        { threshold: 0.25 },
+      );
+      this.videoObserver.observe(video);
+    } else if (video) {
+      video.muted = true;
+      video.play().catch(() => {});
+    }
+
+    if (window.innerWidth > 768) {
+      document.addEventListener('mouseleave', this.handleMouseLeave);
+    }
   }
 
   ngOnDestroy(): void {
-    window.removeEventListener('resize', this.handleResize.bind(this));
+    clearTimeout(this.soRepeatTimer);
+    this.videoObserver?.disconnect();
+    document.removeEventListener('mouseleave', this.handleMouseLeave);
   }
 
-  // Carousel Items
-  private get items(): NodeListOf<HTMLElement> {
-    return this.trackRef.nativeElement.querySelectorAll('.section-item');
+  // ── FAQ accordion ────────────────────────────────────────
+  toggleFaq(item: FaqItem): void {
+    item.open = !item.open;
   }
 
-  // Update carousel mode
-  private updateCarouselMode(): void {
-    const containerWidth = this.trackRef.nativeElement.parentElement!.clientWidth - 32;
-    const itemsArray = Array.from(this.items);
-    const itemsWidth = itemsArray.reduce((total, item) => total + item.offsetWidth + 16, 0) - 16;
+  // ── Popup orchestration ──────────────────────────────────
+  private anyPopupOpen(): boolean {
+    return this.isBookingOpen || this.isSecondOpinionOpen || this.isInsuranceOpen || this.isExitIntentOpen;
+  }
 
-    this.isCarouselMode = itemsWidth > containerWidth;
+  closeExitIntent(): void {
+    this.isExitIntentOpen = false;
+  }
 
-    if (this.isCarouselMode) {
-      this.calculateItemsPerView();
-      this.showCarouselControls();
-      this.updateCarousel();
-    } else {
-      this.hideCarouselControls();
-      this.trackRef.nativeElement.style.transform = 'translateX(0)';
+  openBooking(): void {
+    this.selectedPageName = 'Total Hip Replacement Surgery';
+    this.isBookingOpen = true;
+  }
+
+  openBookingForDoctor(doctor: ThrDoctor): void {
+    this.selectedPageName = `Total Hip Replacement Surgery, Doctor: ${doctor.name}`;
+    this.isBookingOpen = true;
+  }
+
+  closeBooking(): void {
+    this.isBookingOpen = false;
+  }
+
+  openInsuranceCheck(): void {
+    this.isInsuranceOpen = true;
+  }
+
+  closeInsuranceCheck(): void {
+    this.isInsuranceOpen = false;
+  }
+
+  /** InsuranceCheckForm now sends the lead itself (real OTP + email) and
+   *  emits this once that succeeds - just make sure the popup is closed. */
+  onInsuranceSubmit(): void {
+    this.isInsuranceOpen = false;
+  }
+
+  openSecondOpinion(): void {
+    if (this.anyPopupOpen()) {
+      this.scheduleSecondOpinionRepeat();
+      return;
     }
+    this.isSecondOpinionOpen = true;
   }
 
-  // Calculate visible items
-  private calculateItemsPerView(): void {
-    const containerWidth = this.trackRef.nativeElement.parentElement!.clientWidth - 32;
-    let totalWidth = 0;
-    let itemCount = 0;
-
-    for (const item of Array.from(this.items)) {
-      const itemWidth = item.offsetWidth + 16;
-      if (totalWidth + itemWidth <= containerWidth) {
-        totalWidth += itemWidth;
-        itemCount++;
-      } else break;
-    }
-
-    this.itemsPerView = Math.max(1, itemCount);
+  closeSecondOpinion(): void {
+    this.isSecondOpinionOpen = false;
+    this.scheduleSecondOpinionRepeat();
   }
 
-  // Show/hide carousel buttons
-  private showCarouselControls(): void {
-    this.prevBtnRef.nativeElement.classList.remove('hide');
-    this.prevBtnRef.nativeElement.classList.add('show');
-    this.nextBtnRef.nativeElement.classList.remove('hide');
-    this.nextBtnRef.nativeElement.classList.add('show');
+  onSecondOpinionBook(): void {
+    this.isSecondOpinionOpen = false;
+    clearTimeout(this.soRepeatTimer);
+    this.openBooking();
   }
 
-  private hideCarouselControls(): void {
-    this.prevBtnRef.nativeElement.classList.remove('show');
-    this.prevBtnRef.nativeElement.classList.add('hide');
-    this.nextBtnRef.nativeElement.classList.remove('show');
-    this.nextBtnRef.nativeElement.classList.add('hide');
+  private scheduleSecondOpinionRepeat(): void {
+    clearTimeout(this.soRepeatTimer);
+    this.soRepeatTimer = setTimeout(() => {
+      if (!this.anyPopupOpen()) this.openSecondOpinion();
+      else this.scheduleSecondOpinionRepeat();
+    }, 40000);
   }
-
-  // Update carousel position
-  private updateCarousel(): void {
-    if (!this.isCarouselMode) return;
-    const itemWidth = this.items[0].offsetWidth + 16;
-    const translateX = -this.currentIndex * itemWidth * this.itemsPerView;
-    this.trackRef.nativeElement.style.transform = `translateX(${translateX}px)`;
-    this.updateButtons();
-  }
-
-  private updateButtons(): void {
-    const maxIndex = Math.ceil(this.items.length / this.itemsPerView) - 1;
-    this.prevBtnRef.nativeElement.disabled = this.currentIndex <= 0;
-    this.nextBtnRef.nativeElement.disabled = this.currentIndex >= maxIndex;
-  }
-
-  next(): void {
-    const maxIndex = Math.ceil(this.items.length / this.itemsPerView) - 1;
-    if (this.currentIndex < maxIndex) {
-      this.currentIndex++;
-      this.updateCarousel();
-    }
-  }
-
-  prev(): void {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-      this.updateCarousel();
-    }
-  }
-
-  // Scroll to section
-  scrollToSection(sectionId: string): void {
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      this.activeSection = sectionId;
-    }
-  }
-
-  // Event listeners
-  private setupEventListeners(): void {
-    this.prevBtnRef.nativeElement.addEventListener('click', () => this.prev());
-    this.nextBtnRef.nativeElement.addEventListener('click', () => this.next());
-
-    // Touch support
-    let startX: number | null = null;
-    const track = this.trackRef.nativeElement;
-
-    track.addEventListener('touchstart', (e: TouchEvent) => startX = e.touches[0].clientX);
-    track.addEventListener('touchend', (e: TouchEvent) => {
-      if (!startX || !this.isCarouselMode) return;
-      const diffX = startX - e.changedTouches[0].clientX;
-      if (Math.abs(diffX) > 50) diffX > 0 ? this.next() : this.prev();
-      startX = null;
-    });
-
-    // Window resize
-    window.addEventListener('resize', this.handleResize.bind(this));
-  }
-
-  private handleResize(): void {
-    clearTimeout(this.resizeTimeout);
-    this.resizeTimeout = setTimeout(() => this.updateCarouselMode(), 300);
-  }
-
-
-
-  isPopupImageOpen = false;
-  // selectedImage: string | null = null;
-
-  openImagePopup() {
-    this.isPopupImageOpen = true;
-  }
-
-  closeImagePopup() {
-    this.isPopupImageOpen = false;
-  }
-
-    doctorProfileData: any = {
-    name: 'Dr. Rupendu T',
-    header:"Orthopedic",
-    bannerImg: 'img/senior-doctor/6363 2.png',
-    img: 'img/senior-doctor/ortho-dr-rupendu-t.png',
-    alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Rupendu T',
-    experience: '45+',
-    department: 'Sr. Consultant Orthopaedic Surgeon',
-    qualification: 'MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)',
-    slug: "dr-rupendu-t",
-    boxDetails: [
-      {
-        img: "img/senior-doctor/kneepad.png",
-        count: "45+ Years",
-        department: "of Orthopedic Excellence"
-      },
-      {
-        img: "img/senior-doctor/surgery.png",
-        count: "5000+",
-        department: "Surgeries Performed"
-      },
-      {
-        img: "img/senior-doctor/Vector.png",
-        count: "10,000+",
-        department: "Patients Treated Successfully"
-      },
-
-
-    ]
-  }
-
-     selectedPageName: string = 'Total-Hip-Replacement';
-
-
-  handleBookAppointment(doctor: any) {
-    // console.log('Doctor clicked:', doctor);
-    this.selectedPageName = `Total Hip Replacement, Doctor Name: ${doctor.name}`;
-    // console.log('Page Name:', this.selectedPageName);
-    this.openPopup();
-  }
-
 }
