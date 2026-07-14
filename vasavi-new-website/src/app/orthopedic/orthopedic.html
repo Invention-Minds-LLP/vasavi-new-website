@@ -237,6 +237,8 @@
                   <option value="">-- Select Doctor --</option>
                   <!-- <option value="Dr. Srivatsa Subramanya">Dr. Srivatsa Subramanya</option> -->
                   <option value="Dr. Venkatesh Rathod R">Dr. Venkatesh Rathod R</option>
+                  <option value="Dr. Sarvajith S S">Dr. Sarvajith S S</option>
+                  <option value="Dr. Vivek Kumar N Savsani">Dr. Vivek Kumar N Savsani</option>
                 </select>
                 <div class="error" *ngIf="submitted && f['doctor'].errors">
                   <small *ngIf="f['doctor'].errors['required']">Please select a doctor</small>
@@ -375,6 +377,29 @@
             <p class="doctor-experience">11+ Years of Experience</p>
             <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
             <a class="appointment-btn" [routerLink]="'/doctors/dr-venkatesh-rathod-r'">Book Appointment</a>
+        </div>
+        <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/dr-sarvajith-sq.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Sarvajith S S</h3>
+            <p class="doctor-title">Consultant Orthopaedics</p>
+            <p class="qualification">MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor Bangaluru FC)</p>
+            <p class="doctor-experience">6+ Years of Experience</p>
+            <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-sarvajith-s-s'">Book Appointment</a>
+        </div>
+
+        <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/dr-vivek-sq.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Vivek Kumar N Savsani</h3>
+            <p class="doctor-title">Consultant Orthopaedic Surgeon & Joint Replacement Specialist</p>
+            <p class="qualification">MBBS, MS (Orthopaedics), Fellowship in Joint Replacement</p>
+            <p class="doctor-experience">15+ Years of Experience</p>
+            <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-vivek-kumar-n-savsani'">Book Appointment</a>
         </div>
 
 

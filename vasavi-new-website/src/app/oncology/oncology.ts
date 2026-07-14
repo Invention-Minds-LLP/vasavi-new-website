@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 import { Meta, Title } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-oncology',
-  imports: [Cta, CommonModule, ReactiveFormsModule],
+  imports: [Cta, CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './oncology.html',
   styleUrl: './oncology.css'
 })

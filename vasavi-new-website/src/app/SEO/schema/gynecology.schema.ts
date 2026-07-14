@@ -71,10 +71,10 @@ export const GYNECOLOGY_SCHEMA = {
         "@type": "Physician",
         "name": "Dr. Nisha Buchade"
       },
-      {
-        "@type": "Physician",
-        "name": "Dr. Sowmya Sangamesh"
-      }
+      // {
+      //   "@type": "Physician",
+      //   "name": "Dr. Sowmya Sangamesh"
+      // }
     ]
   }
 }

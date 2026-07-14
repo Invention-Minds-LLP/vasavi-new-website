@@ -60,7 +60,7 @@ export class CTAngiography {
     //   qualification: "MBBS MD DNB",
     //   // slug: "/dr-sowmya-sangamesh"
     // },
-    
+
     {
       name: "Dr. Balaraj",
       img: "img/new-doctor-image/dr-balaraj.png",
@@ -69,6 +69,15 @@ export class CTAngiography {
       // department: "Consultant - ENT",
       qualification: "MBBS MD DNB DM Cardiology",
       // slug: "/dr-sowmya-sangamesh"
+    },
+    {
+      name: "Dr. Balakrishna G T",
+      img: "img/new-doctor-image/dr-balakrishna-sq.png",
+      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Balakrishna G T",
+      // experience: "14+",
+      // department: "Consultant - ENT",
+      qualification: "MBBS | MD General Medicine, DM Cardiology",
+      slug: "/dr-balakrishna-g-t"
     }
   ];
 

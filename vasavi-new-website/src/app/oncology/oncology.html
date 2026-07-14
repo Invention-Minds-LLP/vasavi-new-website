@@ -170,75 +170,75 @@
         <div class="form-container" id="appointment">
             <h2 class="form-title">Book Appointment</h2>
             <p class="form-subtitle">Schedule your visit with our Oncology specialists</p>
-          
+
             <div *ngIf="successMsg" class="success">{{ successMsg }}</div>
             <div *ngIf="errorMsg" class="error-msg">{{ errorMsg }}</div>
-          
+
             <!-- ✅ IMPORTANT: bind the form to FormGroup -->
             <form [formGroup]="appointmentForm" (ngSubmit)="submitForm()" novalidate>
-          
-              <div class="input-wrapper">
-                <div class="form-group">
-                  <label for="name">Full Name *</label>
-                  <input id="name" formControlName="name" placeholder="Enter your full name" />
-                  <div class="error" *ngIf="submitted && f['name'].errors">
-                    <small *ngIf="f['name'].errors['required']">Name is required</small>
-                    <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
-                    <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
-                  </div>
+
+                <div class="input-wrapper">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input id="name" formControlName="name" placeholder="Enter your full name" />
+                        <div class="error" *ngIf="submitted && f['name'].errors">
+                            <small *ngIf="f['name'].errors['required']">Name is required</small>
+                            <small *ngIf="f['name'].errors['pattern']">Only letters and spaces allowed</small>
+                            <small *ngIf="f['name'].errors['minlength']">At least 2 characters</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Contact Number *</label>
+                        <input id="phone" formControlName="phone" placeholder="Enter 10-digit mobile number" />
+                        <div class="error" *ngIf="submitted && f['phone'].errors">
+                            <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
+                            <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
+                        </div>
+                    </div>
                 </div>
-          
-                <div class="form-group">
-                  <label for="phone">Contact Number *</label>
-                  <input id="phone" formControlName="phone" placeholder="Enter 10-digit mobile number" />
-                  <div class="error" *ngIf="submitted && f['phone'].errors">
-                    <small *ngIf="f['phone'].errors['required']">Contact number is required</small>
-                    <small *ngIf="f['phone'].errors['pattern']">Enter valid 10-digit number</small>
-                  </div>
+
+                <div class="input-wrapper">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input id="email" formControlName="email" placeholder="Enter your email" />
+                        <div class="error" *ngIf="submitted && f['email'].errors">
+                            <small *ngIf="f['email'].errors['required']">Email is required</small>
+                            <small *ngIf="f['email'].errors['email']">Invalid email format</small>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" formControlName="date" />
+                        <div class="error" *ngIf="submitted && f['date'].errors">
+                            <small *ngIf="f['date'].errors['required']">Appointment date is required</small>
+                        </div>
+                    </div>
                 </div>
-              </div>
-          
-              <div class="input-wrapper">
+
                 <div class="form-group">
-                  <label for="email">Email *</label>
-                  <input id="email" formControlName="email" placeholder="Enter your email" />
-                  <div class="error" *ngIf="submitted && f['email'].errors">
-                    <small *ngIf="f['email'].errors['required']">Email is required</small>
-                    <small *ngIf="f['email'].errors['email']">Invalid email format</small>
-                  </div>
-                </div>
-          
-                <div class="form-group">
-                  <label for="date">Preferred Date *</label>
-                  <input type="date" id="date" formControlName="date" />
-                  <div class="error" *ngIf="submitted && f['date'].errors">
-                    <small *ngIf="f['date'].errors['required']">Appointment date is required</small>
-                  </div>
-                </div>
-              </div>
-          
-              <div class="form-group">
-                <label for="doctor_name">Select Doctor *</label>
-                <select id="doctor_name" formControlName="doctor">
-                  <option value="">-- Select Doctor --</option>
-                  <!-- <option value="Dr. Mutharaju K. R">Dr. Mutharaju K. R</option>
+                    <label for="doctor_name">Select Doctor *</label>
+                    <select id="doctor_name" formControlName="doctor">
+                        <option value="">-- Select Doctor --</option>
+                        <!-- <option value="Dr. Mutharaju K. R">Dr. Mutharaju K. R</option>
                   <option value="Dr. Sowmya Sangamesh">Dr. Sowmya Sangamesh</option> -->
-                </select>
-                <div class="error" *ngIf="submitted && f['doctor'].errors">
-                  <small *ngIf="f['doctor'].errors['required']">Please select a doctor</small>
+                    </select>
+                    <div class="error" *ngIf="submitted && f['doctor'].errors">
+                        <small *ngIf="f['doctor'].errors['required']">Please select a doctor</small>
+                    </div>
                 </div>
-              </div>
-          
-              <div class="form-group">
-                <label for="message">Message / Reason for Visit *</label>
-                <textarea id="message" formControlName="message" placeholder="Describe your symptoms..."></textarea>
-                <div class="error" *ngIf="submitted && f['message'].errors">
-                  <small *ngIf="f['message'].errors['required']">Message is required</small>
-                  <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+
+                <div class="form-group">
+                    <label for="message">Message / Reason for Visit *</label>
+                    <textarea id="message" formControlName="message" placeholder="Describe your symptoms..."></textarea>
+                    <div class="error" *ngIf="submitted && f['message'].errors">
+                        <small *ngIf="f['message'].errors['required']">Message is required</small>
+                        <small *ngIf="f['message'].errors['minlength']">Minimum 10 characters required</small>
+                    </div>
                 </div>
-              </div>
-          
-              <button type="submit" class="submit-btn">Book Appointment</button>
+
+                <button type="submit" class="submit-btn">Book Appointment</button>
             </form>
         </div>
 
@@ -331,6 +331,53 @@
                 </div>
             </div> -->
         </div>
+    </div>
+</div>
+
+<!-- doctor section -->
+<div class="doctors-section" id="doctors">
+    <h2 class="heading">Meet Our Expert Oncology Specialists</h2>
+    <p class="para_style doc_sec_para">Our team of board-certified Oncology surgeons brings decades of combined
+        experience in treating complex bone, joint, and musculoskeletal conditions with care and precision.</p>
+
+    <div class="doctors-container">
+        <!-- Doctor 1 -->
+        <!-- <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/Doctor-img/ORTHOPEDICS/dr-rupendu-t-sq.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Rupendu T</h3>
+            <p class="doctor-title">Senior Consultant  Orthopedics</p>
+            <p class="qualification">MBBS, D.Ortho, MS(Ortho), Fellowship in Joint Replacement Surgery (Australia, Germany)</p>
+            <p class="doctor-experience">45+ Years of Experience</p>
+            <p class="doctor-specialties">Sr. Consultant Orthopaedic Surgeon</p>
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-rupendu-t'">Book Appointment</a>
+        </div> -->
+
+        <!-- <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/dr-srivatsa-subramanya-spec.png" alt="Dr. Srivatsa Subramanya | Orthopedic Surgeon | Vasavi Hospitals Bangalore">
+            </div>
+            <h3 class="doctor-name">Dr. Srivatsa Subramanya</h3>
+            <p class="doctor-title">Consultant - Orthopedics</p>
+            <p class="qualification">MBBS, MS (Ortho), DNB (Ortho), Fellowship in Knee (Australia), Fellowship in Shoulder (Australia, Italy), Fellowship in Trauma (S. Korea)</p>
+            <p class="doctor-experience">17+ Years of Experience</p>
+            <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p>
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-srivatsa-subramanya'">Book Appointment</a>
+        </div> -->
+
+        <div class="doctor-card">
+            <div class="doctor-image">
+                <img src="img/new-doctor-image/dr-shivacharan-sq.png" alt="">
+            </div>
+            <h3 class="doctor-name">Dr. Sivacharan P. V</h3>
+            <p class="doctor-title">Consultant Medical Oncology</p>
+            <p class="qualification">MBBS, MRCP (UK) & MRCP (Medical Oncology) with CCT - Royal Colleges of Physicians, UK; ICH-GCP Certified.</p>
+            <p class="doctor-experience">18+ Years of Experience</p>
+            <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-sivacharan-p-v'">Book Appointment</a>
+        </div>
+
     </div>
 </div>
 

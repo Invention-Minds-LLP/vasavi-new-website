@@ -258,6 +258,36 @@ export class RoboticThrComponent implements OnInit, AfterViewInit, OnDestroy {
       experience: '16+ Years Experience',
       slug: '/dr-venkatesh-rathod-r',
     },
+  // {
+  //     name: "Dr. Venkatesh Rathod R",
+  //     img: "img/new-doctor-image/dr-venkatesh-rathod-spec.png",
+  //     alt: "Best Orthopedic Surgeon in Bangalore | Dr. Venkatesh Rathod R",
+  //     experience: "16+",
+  //     specialty: 'Consultant-Orthopedics',
+  //     // department: "Consultant - ENT",
+  //     // qualification: "MBBS, Dortho, DNB ortho",
+  //     slug: "/dr-venkatesh-rathod-r"
+  //   },
+     {
+      name: 'Dr. Vivek Kumar N Savsani',
+      img: 'img/new-doctor-image/dr-vivek-sq.png',
+      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Vivek Kumar N Savsani',
+      experience: '15+',
+      specialty: 'Consultant Orthopaedic Surgeon & Joint Replacement Specialist',
+      // department: "Consultant - ENT",
+      // qualification: "MBBS, MS (Orthopaedics), Fellowship in Joint Replacement",
+      slug: '/dr-vivek-kumar-n-savsani',
+    },
+    {
+      name: 'Dr. Sarvajith S S',
+      img: 'img/new-doctor-image/dr-sarvajith-sq.png',
+      alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Sarvajith S S',
+      experience: '6+',
+      specialty: 'Consultant Orthopaedics',
+      // department: "Consultant - ENT",
+      // qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor Bangaluru FC",
+      slug: '/dr-sarvajith-s-s',
+    },
   ];
 
   conditionTypes: ConditionCard[] = [

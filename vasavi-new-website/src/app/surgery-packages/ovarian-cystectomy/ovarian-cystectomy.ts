@@ -50,15 +50,15 @@ export class OvarianCystectomy {
       qualification: "MBBS, MS (OBG), Fellowship in gynec-oncology, Fellowship in Advanced infertility,  Fellowship Minimal Access Surgery (Laparoscopic and Robotic Surgery)",
       slug: "/dr-nisha-buchade"
     },
-    {
-      name: "Dr. Sowmya Sangamesh",
-      img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
-      experience: "14+",
-      // department: "Consultant - ENT",
-      qualification: "MBBS, MS (OBG), Fellowship Minimal Access Surgery, Advanced Diploma Repoductive Medicine",
-      slug: "/dr-sowmya-sangamesh"
-    }
+    // {
+    //   name: "Dr. Sowmya Sangamesh",
+    //   img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
+    //   alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
+    //   experience: "14+",
+    //   // department: "Consultant - ENT",
+    //   qualification: "MBBS, MS (OBG), Fellowship Minimal Access Surgery, Advanced Diploma Repoductive Medicine",
+    //   slug: "/dr-sowmya-sangamesh"
+    // }
   ];
 
   isPopupOpen = false;

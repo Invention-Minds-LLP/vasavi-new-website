@@ -81,6 +81,11 @@ export class Doctor {
     });
     this.minDate = new Date();
   }
+  goBack() {
+    const slug = this.route.snapshot.params['slug'];
+    this.router.navigate(['/doctors'], { queryParams: { scrollTo: slug } });
+  }
+
   loadDoctorBySlug(slug: string) {
     // Replace with actual data source (e.g., service or static list)
     const doctor = this.allDoctors.find(doc =>
@@ -636,42 +641,42 @@ export class Doctor {
       professionalAffilications: [],
       publications: []
     },
-    {
-      id: 15,
-      name: "Dr. Sowmya Sangamesh",
-      image: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
-      alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
-      areasOfExpertise: [
-        { icon: "fas fa-cut", expertise: "Laparoscopic and Minimally Invasive Gynecologic Surgery" },
-        { icon: "fas fa-cut", expertise: "Reproductive Medicine and Infertility Management" },
-        { icon: "fas fa-cut", expertise: "Robotic-Assisted Gynecologic Surgery" },
-        { icon: "fas fa-cut", expertise: "Maternal-Fetal Medicine & High-Risk Obstetrics" },
-        { icon: "fas fa-cut", expertise: "Comprehensive Gynecologic Care" }
-      ],
-      title: "Dr. Sowmya Sangamesh | Gynecologist at Vasavi Hospitals",
-      description: "Dr. Sowmya Sangamesh is a skilled Gynecologist with 14+ years of experience in laparoscopic and robotic surgery and fertility care.",
-      briefProfile: "Highly skilled Obstetrician and Gynecologist with over 14 years experience, specializing in fertility care, laparoscopic and robotic surgeries. MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma Reproductive Medicine (Germany).",
-      qualification: "MBBS, MS (OBG), Fellowship Minimal Access Surgery, Advanced Diploma Reproductive Medicine",
-      department: "Gynecology",
-      experience: "14+",
-      designation: "Consultant Gynaec Laparoscopic Surgeon",
-      awards: [
-        { icon: "fas fa-medal", awardFor: "Best Paper Award", awardDescription: "FIRST Prize Best Paper [C.S DAWN] Placenta Accreta Spectrum Disorders AICOG 2023 (Kolkata)", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" }
-      ],
-      professionalAffilications: [
-        { image: "/img/affiliations/logobsog.png", icon: "fas fa-hospital card-icon", paHeading: "BSOG", paDescription: "Bangalore Society of Obstetrics and Gynecology" },
-        { image: "/img/affiliations/MOGS.png", icon: "fas fa-baby card-icon", paHeading: "MOGS", paDescription: "Mysore Obstetric and Gynecological Society" },
-        { image: "/img/affiliations/FOGSI.jpg", icon: "fas fa-venus card-icon", paHeading: "FOGSI", paDescription: "Federation of Obstetric and Gynecological Societies of India" },
-        { image: "/img/affiliations/IAGE.png", icon: "fas fa-user-md card-icon", paHeading: "IAGE", paDescription: "Indian Association of Gynaecological Endoscopists" },
-        { image: "/img/affiliations/AMASI.png", icon: "fas fa-stethoscope card-icon", paHeading: "AMASI", paDescription: "Association of Minimal Access Surgeons of India" }
-      ],
-      publications: [
-        "Article - To Compare and Analyze the Clinical Outcome and Complications of Total Abdominal Hysterectomy and Total Laparoscopic Hysterectomy",
-        "Superoxide Solution [Oxum] Vs Povidone Iodine Dressing in Diabetic Foot Ulcers - Prospective Study",
-        "Publication on Amniotic Fluid Index and Perinatal Outcome - Thesis",
-        "Poster - Gastroschisis and Neonatal Outcome"
-      ]
-    },
+    // {
+    //   id: 15,
+    //   name: "Dr. Sowmya Sangamesh",
+    //   image: "/img/new-doctor-image/dr-sowmya-sangmesh.png",
+    //   alt: "Dr. Sowmya Sangamesh | Gynecologist | Vasavi Hospitals Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "fas fa-cut", expertise: "Laparoscopic and Minimally Invasive Gynecologic Surgery" },
+    //     { icon: "fas fa-cut", expertise: "Reproductive Medicine and Infertility Management" },
+    //     { icon: "fas fa-cut", expertise: "Robotic-Assisted Gynecologic Surgery" },
+    //     { icon: "fas fa-cut", expertise: "Maternal-Fetal Medicine & High-Risk Obstetrics" },
+    //     { icon: "fas fa-cut", expertise: "Comprehensive Gynecologic Care" }
+    //   ],
+    //   title: "Dr. Sowmya Sangamesh | Gynecologist at Vasavi Hospitals",
+    //   description: "Dr. Sowmya Sangamesh is a skilled Gynecologist with 14+ years of experience in laparoscopic and robotic surgery and fertility care.",
+    //   briefProfile: "Highly skilled Obstetrician and Gynecologist with over 14 years experience, specializing in fertility care, laparoscopic and robotic surgeries. MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma Reproductive Medicine (Germany).",
+    //   qualification: "MBBS, MS (OBG), Fellowship Minimal Access Surgery, Advanced Diploma Reproductive Medicine",
+    //   department: "Gynecology",
+    //   experience: "14+",
+    //   designation: "Consultant Gynaec Laparoscopic Surgeon",
+    //   awards: [
+    //     { icon: "fas fa-medal", awardFor: "Best Paper Award", awardDescription: "FIRST Prize Best Paper [C.S DAWN] Placenta Accreta Spectrum Disorders AICOG 2023 (Kolkata)", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" }
+    //   ],
+    //   professionalAffilications: [
+    //     { image: "/img/affiliations/logobsog.png", icon: "fas fa-hospital card-icon", paHeading: "BSOG", paDescription: "Bangalore Society of Obstetrics and Gynecology" },
+    //     { image: "/img/affiliations/MOGS.png", icon: "fas fa-baby card-icon", paHeading: "MOGS", paDescription: "Mysore Obstetric and Gynecological Society" },
+    //     { image: "/img/affiliations/FOGSI.jpg", icon: "fas fa-venus card-icon", paHeading: "FOGSI", paDescription: "Federation of Obstetric and Gynecological Societies of India" },
+    //     { image: "/img/affiliations/IAGE.png", icon: "fas fa-user-md card-icon", paHeading: "IAGE", paDescription: "Indian Association of Gynaecological Endoscopists" },
+    //     { image: "/img/affiliations/AMASI.png", icon: "fas fa-stethoscope card-icon", paHeading: "AMASI", paDescription: "Association of Minimal Access Surgeons of India" }
+    //   ],
+    //   publications: [
+    //     "Article - To Compare and Analyze the Clinical Outcome and Complications of Total Abdominal Hysterectomy and Total Laparoscopic Hysterectomy",
+    //     "Superoxide Solution [Oxum] Vs Povidone Iodine Dressing in Diabetic Foot Ulcers - Prospective Study",
+    //     "Publication on Amniotic Fluid Index and Perinatal Outcome - Thesis",
+    //     "Poster - Gastroschisis and Neonatal Outcome"
+    //   ]
+    // },
     // {
     //   id: 11,
     //   name: "Dr. Madhu B Jagalasar",
@@ -806,40 +811,40 @@ export class Doctor {
       professionalAffilications: [],
       publications: []
     },
-    {
-      id: 18,
-      name: "Dr. Naneboena Sunitha",
-      image: "/img/new-doctor-image/dr-naneboena-sunitha.png",
-      alt: "Dr Naneboena Sunitha - Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
-      areasOfExpertise: [
-        { icon: "", expertise: "Clinical nutrition and diet therapy" },
-        { icon: "", expertise: "Obesity and weight management" },
-        { icon: "", expertise: "Diabetes and lifestyle disorder nutrition" },
-        { icon: "", expertise: "Oncology nutrition and cancer care diets" },
-        { icon: "", expertise: "Preventive and therapeutic nutrition planning" },
-        { icon: "", expertise: "Corporate and community nutrition education" }
-      ],
-      title: "Dr. Naneboena Sunitha - Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
-      description: "Dr. Naneboena Sunitha, Nutritionist & Dietitian with 26 years of experience in clinical nutrition, diabetes, weight management and oncology care at Vasavi Hospitals, Bangalore.",
-      briefProfile: "Dr. Naneboena Sunitha is a highly accomplished Nutritionist and Dietitian with over 26 years of experience in clinical and academic nutrition. She has served as a Professor of Nutrition at reputed institutions including MvJ Medical College and East Point Medical College. Her expertise spans across weight management, diabetes reversal, and oncology nutrition, with a focus on achieving healthy results without nutritional deficiencies. Dr. Sunitha has successfully guided over 3000 patients in sustainable weight reduction programs and has worked extensively in cancer nutrition care at Mega Hospital. Beyond clinical practice, she has led numerous corporate wellness and nutrition awareness programs for leading organizations such as Infosys, Wipro, and Accenture. Her evidence-based, holistic approach integrates lifestyle modification with preventive nutrition, empowering individuals to make long-term, healthy choices for improved well-being.",
-      qualification: "Ph.D. (Food & Nutrition) | M.Sc. | M.Ed. | MBA (Marketing) | Diploma in Catering | DCA",
-      department: "",
-      experience: "26+",
-      designation: "Consultant - Nutritionist & Dietitian",
-      awards: [
-        { icon: "fas fa-baby-carriage", awardFor: "Community Health Leadership", awardDescription: "Recognized for outstanding contribution to public health initiatives and community nutrition awareness", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
-        { icon: "fas fa-file-alt", awardFor: "Invited Expert Speaker", awardDescription: "Invited speaker at leading corporate wellness programs and academic medical conferences", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
-      ],
-      professionalAffilications: [
-        { image: "/img/affiliations/IDA.jpg", icon: "fas fa-user-md card-icon", paHeading: "IDA", paDescription: "Indian Dietetic Association" },
-        { image: "/img/affiliations/NSI3.png", icon: "fas fa-user-md card-icon", paHeading: "NSI", paDescription: "Nutrition Society of India" },
-        { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "SCNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
-      ],
-      publications: [
-        'Authored research papers on nutrition-based interventions for obesity and diabetes management',
-        'Contributed articles on preventive health, balanced diets, and corporate wellness nutrition'
-      ]
-    },
+    // {
+    //   id: 18,
+    //   name: "Dr. Naneboena Sunitha",
+    //   image: "/img/new-doctor-image/dr-naneboena-sunitha.png",
+    //   alt: "Dr Naneboena Sunitha - Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
+    //   areasOfExpertise: [
+    //     { icon: "", expertise: "Clinical nutrition and diet therapy" },
+    //     { icon: "", expertise: "Obesity and weight management" },
+    //     { icon: "", expertise: "Diabetes and lifestyle disorder nutrition" },
+    //     { icon: "", expertise: "Oncology nutrition and cancer care diets" },
+    //     { icon: "", expertise: "Preventive and therapeutic nutrition planning" },
+    //     { icon: "", expertise: "Corporate and community nutrition education" }
+    //   ],
+    //   title: "Dr. Naneboena Sunitha - Consultant Nutritionist & Dietitian | Vasavi Hospitals Bangalore",
+    //   description: "Dr. Naneboena Sunitha, Nutritionist & Dietitian with 26 years of experience in clinical nutrition, diabetes, weight management and oncology care at Vasavi Hospitals, Bangalore.",
+    //   briefProfile: "Dr. Naneboena Sunitha is a highly accomplished Nutritionist and Dietitian with over 26 years of experience in clinical and academic nutrition. She has served as a Professor of Nutrition at reputed institutions including MvJ Medical College and East Point Medical College. Her expertise spans across weight management, diabetes reversal, and oncology nutrition, with a focus on achieving healthy results without nutritional deficiencies. Dr. Sunitha has successfully guided over 3000 patients in sustainable weight reduction programs and has worked extensively in cancer nutrition care at Mega Hospital. Beyond clinical practice, she has led numerous corporate wellness and nutrition awareness programs for leading organizations such as Infosys, Wipro, and Accenture. Her evidence-based, holistic approach integrates lifestyle modification with preventive nutrition, empowering individuals to make long-term, healthy choices for improved well-being.",
+    //   qualification: "Ph.D. (Food & Nutrition) | M.Sc. | M.Ed. | MBA (Marketing) | Diploma in Catering | DCA",
+    //   department: "",
+    //   experience: "26+",
+    //   designation: "Consultant - Nutritionist & Dietitian",
+    //   awards: [
+    //     { icon: "fas fa-baby-carriage", awardFor: "Community Health Leadership", awardDescription: "Recognized for outstanding contribution to public health initiatives and community nutrition awareness", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+    //     { icon: "fas fa-file-alt", awardFor: "Invited Expert Speaker", awardDescription: "Invited speaker at leading corporate wellness programs and academic medical conferences", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+    //   ],
+    //   professionalAffilications: [
+    //     { image: "/img/affiliations/IDA.jpg", icon: "fas fa-user-md card-icon", paHeading: "IDA", paDescription: "Indian Dietetic Association" },
+    //     { image: "/img/affiliations/NSI3.png", icon: "fas fa-user-md card-icon", paHeading: "NSI", paDescription: "Nutrition Society of India" },
+    //     { image: "/img/affiliations/AFF.png", icon: "fas fa-user-md card-icon", paHeading: "SCNM", paDescription: "Society for Clinical Nutrition and Metabolism " }
+    //   ],
+    //   publications: [
+    //     'Authored research papers on nutrition-based interventions for obesity and diabetes management',
+    //     'Contributed articles on preventive health, balanced diets, and corporate wellness nutrition'
+    //   ]
+    // },
     // {
     //   id: 16,
     //   name: "Dr. Kumaresh Krishnamoorthy",
@@ -1183,7 +1188,7 @@ export class Doctor {
       areasOfExpertise: [
         { icon: "", expertise: "Emergency & Trauma Care" },
         { icon: "", expertise: "Acute Critical Care Management" },
-        {icon: "", expertise: `Triage Optimization & ER Operations` },
+        { icon: "", expertise: `Triage Optimization & ER Operations` },
         { icon: "", expertise: "Trauma Protocol Development" },
         { icon: "", expertise: "Prehospital & Point-of-Care Testing" },
         { icon: "", expertise: "Neurological and Cardiac Emergencies" },
@@ -1221,7 +1226,7 @@ export class Doctor {
       areasOfExpertise: [
         { icon: "", expertise: "Smoking Cessation Program" },
         { icon: "", expertise: "Sleep Disorder Management" },
-        {icon: "", expertise: `Pulmonary Rehabilitation` },
+        { icon: "", expertise: `Pulmonary Rehabilitation` },
         { icon: "", expertise: "Allergy and Immunology Services" },
         { icon: "", expertise: "Interventional Procedures" },
         { icon: "", expertise: "Bronchoscopy" },
@@ -1259,7 +1264,7 @@ export class Doctor {
       areasOfExpertise: [
         { icon: "", expertise: "Infectious Disease Treatment" },
         { icon: "", expertise: "Men And Women Wellness Screening" },
-        {icon: "", expertise: `Emergency Medicine` },
+        { icon: "", expertise: `Emergency Medicine` },
         { icon: "", expertise: "Medical Gastroenterology" },
         { icon: "", expertise: "Upper GI Endoscopy (Both Diagnostic & Therapeutic)" },
         { icon: "", expertise: "Colonoscopy" },
@@ -1296,6 +1301,236 @@ export class Doctor {
         // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
         // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
         // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Sivacharan P. V",
+      image: "img/new-doctor-image/dr-shivacharan.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Clinical Oncology" },
+        { icon: "", expertise: "Immunotherapy & Targeted Therapy" },
+        { icon: "", expertise: "Lung Cancer Treatment" },
+        { icon: "", expertise: "Breast Cancer Treatment" },
+        { icon: "", expertise: "Ovarian Cancer Management" },
+        { icon: "", expertise: "Lymphoma Management" },
+        { icon: "", expertise: "Cancer Screening & Preventive Oncology" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS, MRCP (UK) & MRCP (Medical Oncology) with CCT - Royal Colleges of Physicians, UK; ICH-GCP Certified.",
+      department: "Consultant Medical Oncology",
+      experience: "18+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card blue", iconColorClass: "award-icon blue" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card purple", iconColorClass: "award-icon purple" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: ".", cardColorClass: "award-card green", iconColorClass: "award-icon green" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card yellow", iconColorClass: "award-icon yellow" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-grey", iconColorClass: "award-icon soft-grey" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card apricot", iconColorClass: "award-icon apricot" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card sand", iconColorClass: "award-icon sand" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card mauve", iconColorClass: "award-icon mauve" },
+        // { icon: "fas fa-medal", awardFor: "", awardDescription: "", cardColorClass: "award-card soft-purple", iconColorClass: "award-icon soft-purple" },
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Hamsa B T",
+      image: "img/new-doctor-image/dr-hamsa.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Neurology (Adult Neurological Disorders)" },
+        { icon: "", expertise: "Stroke management" },
+        { icon: "", expertise: "Epilepsy & seizure disorders" },
+        { icon: "", expertise: "Neurocritical care" },
+        { icon: "", expertise: "Headache & migraine management" },
+        { icon: "", expertise: "Movement disorders" },
+        { icon: "", expertise: "Neuromuscular disorders" },
+        { icon: "", expertise: "General medicine & emergency care" },
+        { icon: "", expertise: "ICU & critical care procedures" },
+        { icon: "", expertise: "Lumbar puncture, intubation" },
+        { icon: "", expertise: "Dementia and sleep disorders Management" },
+        { icon: "", expertise: "Multiple Sclerosis and other immune mediated diseases" },
+        { icon: "", expertise: "Ataxia" },
+        { icon: "", expertise: "Low backache and neck pain" },
+        { icon: "", expertise: "Botulinum toxin injection for blepharospasm and hemifacial spasm" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS, MD (General Medicine), DM (Neurology)",
+      department: "Consultant - Neurology",
+      experience: "7+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Rashmi A.G.",
+      image: "img/new-doctor-image/dr-rashmi-a-g.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "High-Risk Pregnancy Management" },
+        { icon: "", expertise: "Infertility Evaluation & Treatment" },
+        { icon: "", expertise: "Laparoscopic & Hysteroscopic Surgeries" },
+        { icon: "", expertise: "Vaginal & Open Gynaecological Surgeries" },
+        { icon: "", expertise: "Endometriosis Management" },
+        { icon: "", expertise: "Ultrasound & Foetal Monitoring" },
+        { icon: "", expertise: "Women's Health & Preventive Gynaecology" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS, MS (Obstetrics & Gynaecology), FIGE (Fellowship in Gynaec Endoscopy)",
+      department: "Consultant Obstetrician and Gynaecologist",
+      experience: "19+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Rohini S",
+      image: "img/new-doctor-image/dr-rohini.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Endourology" },
+        { icon: "", expertise: "Laparoscopic Urology" },
+        { icon: "", expertise: "Reconstructive Urology" },
+        { icon: "", expertise: "Uro-oncology (basic exposure)" },
+        { icon: "", expertise: "Renal Transplant Care" },
+        { icon: "", expertise: "Management of Kidney Stones (RIRS, ureteric stones)" },
+        { icon: "", expertise: "Minimally Invasive Urological Procedures" },
+        { icon: "", expertise: "Urogynecology and Female urology" },
+        { icon: "", expertise: "Management of urinary incontinence & pelvic floor disorders." },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS, MS (General Surgery), M.Ch (Urology)",
+      department: "Jr. Consultant - Urologist",
+      experience: "8+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Sarvajith S S",
+      image: "img/new-doctor-image/dr-sarvajith.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Sports Injury Management" },
+        { icon: "", expertise: "Arthroscopy & Ligament Reconstruction" },
+        { icon: "", expertise: "Knee & Shoulder Arthroscopy" },
+        { icon: "", expertise: "Advanced Trauma & Fracture Care" },
+        { icon: "", expertise: "Cartilage Restoration & PRP Therapy" },
+        { icon: "", expertise: "Hip, Ankle & Elbow Arthroscopy" },
+        { icon: "", expertise: "Polytrauma & Sports Rehabilitation" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor - Bangaluru FC",
+      department: "Consultant Orthopaedics",
+      experience: "6+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Vivek Kumar N Savsani",
+      image: "img/new-doctor-image/dr-vivek.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Joint Replacement Surgery" },
+        { icon: "", expertise: "Total Knee Replacement" },
+        { icon: "", expertise: "Robotic Knee Replacement" },
+        { icon: "", expertise: "Hip Replacement Surgery" },
+        { icon: "", expertise: "Trauma & Fracture Management" },
+        { icon: "", expertise: "Arthroscopy" },
+        { icon: "", expertise: "Sports Injury Management" },
+        { icon: "", expertise: "Foot & Ankle Disorders" },
+        { icon: "", expertise: "Shoulder Disorders & Arthroplasty" },
+        { icon: "", expertise: "Complex Orthopaedic Trauma Care" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS, MS (Orthopaedics), Fellowship in Joint Replacement",
+      department: "Consultant Orthopaedic Surgeon & Joint Replacement Specialist",
+      experience: "15+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
+    {
+      id: 0,
+      name: "Dr. Balakrishna G T",
+      image: "img/new-doctor-image/dr-balakrishna.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Coronary Angiography" },
+        { icon: "", expertise: "Coronary Angioplasty (PCI)" },
+        { icon: "", expertise: "Acute Coronary Syndrome Management" },
+        { icon: "", expertise: "Heart Failure Management" },
+        { icon: "", expertise: "Arrhythmia Management" },
+        { icon: "", expertise: "Valvular Heart Disease" },
+        { icon: "", expertise: "2D Echocardiography" },
+        { icon: "", expertise: "Treadmill Test (TMT)" },
+        { icon: "", expertise: "Holter Monitoring Interpretation" },
+        { icon: "", expertise: "Temporary Pacemaker Insertion" },
+        { icon: "", expertise: "Pericardiocentesis" },
+        { icon: "", expertise: "Cardiac ICU & CCU Care" },
+        { icon: "", expertise: "Structural Heart Interventions" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS | MD General Medicine, DM Cardiology",
+      department: "Consultant Interventional Cardiologist",
+      experience: "7+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
       ],
       professionalAffilications: [
       ],

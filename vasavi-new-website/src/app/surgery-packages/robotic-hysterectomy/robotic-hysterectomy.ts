@@ -61,15 +61,15 @@ export class RoboticHysterectomy {
       // qualification: "MBBS, MS, Fellowship in Gynec-Oncology, Fellowship in Advanced Infertility",
       slug: "/dr-nisha-buchade"
     },
-    {
-      name: "Dr. Sowmya Sangamesh",
-      img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
-      alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
-      experience: "14+",
-      department: "Obstetrics & Gynecology, Minimal Access & Reproductive Surgery",
-      // qualification: "MBBS, MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma in Reproductive Medicine",
-      slug: "/dr-sowmya-sangamesh"
-    }
+    // {
+    //   name: "Dr. Sowmya Sangamesh",
+    //   img: "img/new-doctor-image/dr-sowmya-sangmesh-sq.png",
+    //   alt: "Best Gynecologist and Laparoscopic Surgeon in Bangalore | Dr. Sowmya Sangamesh",
+    //   experience: "14+",
+    //   department: "Obstetrics & Gynecology, Minimal Access & Reproductive Surgery",
+    //   // qualification: "MBBS, MS (OBG), Fellowship in Minimal Access Surgery, Advanced Diploma in Reproductive Medicine",
+    //   slug: "/dr-sowmya-sangamesh"
+    // }
   ];
 
   isPopupOpen = false;

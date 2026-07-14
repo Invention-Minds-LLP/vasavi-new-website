@@ -231,7 +231,7 @@
                 </div>
               </div>
           
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="doctor_name">Select Doctor *</label>
                 <select id="doctor_name" formControlName="doctor">
                   <option value="">-- Select Doctor --</option>
@@ -241,7 +241,7 @@
                 <div class="error" *ngIf="submitted && f['doctor'].errors">
                   <small *ngIf="f['doctor'].errors['required']">Please select a doctor</small>
                 </div>
-              </div>
+              </div> -->
           
               <div class="form-group">
                 <label for="message">Message / Reason for Visit *</label>
@@ -376,15 +376,14 @@
 
         <div class="doctor-card">
             <div class="doctor-image">
-                <img src="img/new-doctor-image/dr-sowmya-sangmesh-sq.png" alt="">
+                <img src="img/new-doctor-image/dr-rashmi-a-g-sq.png" alt="">
             </div>
-            <h3 class="doctor-name">Dr. Sowmya Sangamesh </h3>
-            <!-- <p class="doctor-title">Senior Consultant Urologist</p> -->
-            <p class="qualification">MBBS.,MS (OBG) .FELLOWSHIP MINIMAL ACCESS SURGERY, ADVANCED DIPLOMA REPRODUCTIVE
-                MEDICINE</p>
-            <p class="doctor-experience">14+ Years Experience</p>
+            <h3 class="doctor-name">Dr. Rashmi A.G.</h3>
+            <p class="doctor-title">Consultant Obstetrician and Gynaecologist</p>
+            <p class="qualification">MBBS, MS (Obstetrics & Gynaecology), FIGE (Fellowship in Gynaec Endoscopy)</p>
+            <p class="doctor-experience">19+ Years Experience</p>
             <!-- <p class="doctor-specialties">Specializes in Kidney Stones, Prostate Surgery, and Minimally Invasive Procedures</p> -->
-            <a class="appointment-btn" [routerLink]="'/doctors/dr-sowmya-sangmesh'">Book Appointment</a>
+            <a class="appointment-btn" [routerLink]="'/doctors/dr-rashmi-ag'">Book Appointment</a>
         </div>
 
 
