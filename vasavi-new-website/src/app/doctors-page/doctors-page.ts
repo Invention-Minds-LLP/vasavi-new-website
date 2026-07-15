@@ -599,7 +599,7 @@ export class DoctorsPage {
       slug: "/dr-balakrishna-g-t"
     },
     {
-      name: "Dr. Rashmi",
+      name: "Dt. Rashmi",
       img: "img/new-doctor-image/dr-rashmi-r-sq.png",
       alt: "",
       experience: "10+",
