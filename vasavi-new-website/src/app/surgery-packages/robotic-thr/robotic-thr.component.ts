@@ -282,7 +282,7 @@ export class RoboticThrComponent implements OnInit, AfterViewInit, OnDestroy {
       name: 'Dr. Sarvajith S S',
       img: 'img/new-doctor-image/dr-sarvajith-sq.png',
       alt: 'Best Orthopedic Surgeon in Bangalore | Dr. Sarvajith S S',
-      experience: '6+ Years Experience',
+      experience: '10+ Years Experience',
       specialty: 'Consultant Orthopaedics',
       // department: "Consultant - ENT",
       // qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor Bangaluru FC",
