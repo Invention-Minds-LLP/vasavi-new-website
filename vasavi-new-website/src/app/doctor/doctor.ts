@@ -1460,7 +1460,7 @@ export class Doctor {
       briefProfile: "",
       qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor - Bangaluru FC",
       department: "Consultant Orthopaedics",
-      experience: "6+",
+      experience: "10+",
       // designation: "Sr. Consultant Orthopaedic Surgeon",
       awards: [
 

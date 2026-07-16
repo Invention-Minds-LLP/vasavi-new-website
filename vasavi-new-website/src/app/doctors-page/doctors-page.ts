@@ -572,7 +572,7 @@ export class DoctorsPage {
       name: "Dr. Sarvajith S S",
       img: "img/new-doctor-image/dr-sarvajith-sq.png",
       alt: "",
-      experience: "6+",
+      experience: "10+",
       qualification: "MBBS | MS (Orthopaedics FRGUHS (Sanjay Gandhi Institute of Trauma) Fellowship in Arthroscopy & Sports Medicine, Fellowship in Advanced Trauma First team doctor Bangaluru FC",
       department: "Orthopedics",
       consultant: "Consultant Orthopaedics",
