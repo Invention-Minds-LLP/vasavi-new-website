@@ -1382,7 +1382,7 @@ export class Doctor {
     },
     {
       id: 0,
-      name: "Dt. Rashmi A.G.",
+      name: "Dr. Rashmi A.G.",
       image: "img/new-doctor-image/dr-rashmi-a-g.png",
       alt: "",
       areasOfExpertise: [
