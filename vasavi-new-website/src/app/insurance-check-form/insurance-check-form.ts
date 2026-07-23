@@ -27,11 +27,12 @@ import { LocationService } from '../location-service';
  * fake-OTP flow that silently dropped the lead. No hCaptcha gate here (per
  * product decision) - CallbackForm has one, this form deliberately doesn't.
  *
- * The insurance-specific fields (provider, policy number, employer group,
- * TPA) are folded into the `page` field sent to the backend, e.g.
- * "Hernia Surgery, Star Health Insurance, POL12345, Acme Corp Group Plan,
- * Medi Assist TPA" - so the existing email/WhatsApp notification carries
- * full context without needing any new backend endpoint.
+ * The lead is sent with status "Insurance-Check-Form", which the backend
+ * `conditionalEmail` controller handles with its own branch: the
+ * insurance-specific fields (provider, policy number, employer group, TPA)
+ * are sent as discrete fields and rendered as their own lines in the
+ * email/WhatsApp notification. The OTP SMS still uses the flattened
+ * `buildPageLabel()` string, since that endpoint takes a single `service`.
  */
 @Component({
   selector: 'app-insurance-check-form',
@@ -267,17 +268,25 @@ export class InsuranceCheckForm implements OnChanges, OnDestroy {
   }
 
   private finishSend(): void {
+    const v = this.detailsForm.value;
+
     const appointmentDetails = {
-      name: this.detailsForm.value.name,
-      phone: this.detailsForm.value.phoneNumber,
+      name: v.name,
+      phone: v.phoneNumber,
       address: this.userAddress,
-      page: this.buildPageLabel(),
+      page: this.surgeryName,
+      insuranceProvider: v.insuranceProvider,
+      policyNumber: v.policyNumber,
+      employerGroupName: v.employerGroupName,
+      tpaName: v.tpaName,
     };
 
     const emailRequest = {
       whatsappNumber: ['919164840378'],
+      // whatsappNumber: ['919342287945'],
       to: ['Vinay.d@vasavihospitals.com', 'digital@vasavihospitals.com', 'Ceo@vasavihospitals.com'],
-      status: 'Callback-Form',
+      // to:['inventionmindskar@gmail.com'],
+      status: 'Insurance-Check-Form',
       appointmentDetails,
     };
 

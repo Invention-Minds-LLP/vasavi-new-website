@@ -1307,7 +1307,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 30,
       name: "Dr. Sivacharan P. V",
       image: "img/new-doctor-image/dr-shivacharan.png",
       alt: "",
@@ -1344,7 +1344,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 31,
       name: "Dr. Hamsa B T",
       image: "img/new-doctor-image/dr-hamsa.png",
       alt: "",
@@ -1381,7 +1381,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 32,
       name: "Dr. Rashmi A.G.",
       image: "img/new-doctor-image/dr-rashmi-a-g.png",
       alt: "",
@@ -1410,7 +1410,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 33,
       name: "Dr. Rohini S",
       image: "img/new-doctor-image/dr-rohini.png",
       alt: "",
@@ -1441,7 +1441,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 34,
       name: "Dr. Sarvajith S S",
       image: "img/new-doctor-image/dr-sarvajith.png",
       alt: "",
@@ -1470,7 +1470,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 35,
       name: "Dr. Vivek Kumar N Savsani",
       image: "img/new-doctor-image/dr-vivek.png",
       alt: "",
@@ -1502,7 +1502,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 36,
       name: "Dr. Balakrishna G T",
       image: "img/new-doctor-image/dr-balakrishna.png",
       alt: "",
