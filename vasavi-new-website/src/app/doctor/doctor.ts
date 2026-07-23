@@ -1536,6 +1536,43 @@ export class Doctor {
       ],
       publications: []
     },
+    {
+      id: 0,
+      name: "Dr. Sachin Jadhav",
+      image: "img/new-doctor-image/sachin-jadhav.png",
+      alt: "",
+      areasOfExpertise: [
+        { icon: "", expertise: "Bone Marrow Transplantation (Autologous & Allogeneic)" },
+        { icon: "", expertise: "Treatment of Leukemia" },
+        { icon: "", expertise: "Lymphoma Management" },
+        { icon: "", expertise: "Multiple Myeloma Treatment" },
+        { icon: "", expertise: "Aplastic Anaemia Management" },
+        { icon: "", expertise: "Myelodysplastic Syndromes (MDS)" },
+        { icon: "", expertise: "Hematologic Malignancies" },
+        { icon: "", expertise: "Stem Cell Transplantation" },
+        { icon: "", expertise: "Management of Complex Blood Disorders" },
+        { icon: "", expertise: "Development and Leadership of Hematology & BMT Centres" },
+        { icon: "", expertise: "Cancer Genomics" },
+        { icon: "", expertise: "Graft-versus-Host Disease (GVHD)" },
+        { icon: "", expertise: "Infections in Hematologic Malignancies" },
+        { icon: "", expertise: "Febrile Neutropenia Management" },
+        { icon: "", expertise: "Clinical Research in Hematology and Transplant Medicine" },
+
+      ],
+      title: "",
+      description: "",
+      briefProfile: "",
+      qualification: "MBBS, MD, DM (Clinical Hematology) Chairman, International Hematology ConsortiumMBBS | MD General Medicine, DM Cardiology",
+      department: "Consultant - Hematology & Bone Marrow Transplant (BMT)",
+      experience: "20+",
+      // designation: "Sr. Consultant Orthopaedic Surgeon",
+      awards: [
+
+      ],
+      professionalAffilications: [
+      ],
+      publications: []
+    },
   ];
 
 
