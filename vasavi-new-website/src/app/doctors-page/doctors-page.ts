@@ -110,6 +110,7 @@ export class DoctorsPage {
     { name: 'Pulmonology', icon: '/img/departments/pulmonology.png' },
     { name: 'Gastroenterology', icon: '/img/departments/gastroenterology.png' },
     { name: 'Dermatology', icon: '/img/departments/dermatology.png' },
+    { name: 'Hematology', icon: '/img/departments/hematology.png' },
 
     // 🔹 Surgical & procedural
 
@@ -607,6 +608,16 @@ export class DoctorsPage {
       department: "Nutrition",
       consultant: "Consultant - Senior Dietitian",
       slug: ""
+    },
+    {
+      name: "Dr. Sachin Jadhav",
+      img: "img/new-doctor-image/sachin-jadhav-sq.png",
+      alt: "",
+      experience: "10+",
+      qualification: "MBBS, MD, DM (Clinical Hematology) Chairman, International Hematology Consortium",
+      department: "Hematology",
+      consultant: "Consultant - Hematology & Bone Marrow Transplant (BMT)",
+      slug: "/dr-sachin-jadhav"
     },
 
 
