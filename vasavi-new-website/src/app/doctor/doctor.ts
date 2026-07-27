@@ -1561,7 +1561,7 @@ export class Doctor {
       ],
       title: "",
       description: "",
-      briefProfile: "",
+      briefProfile: "Dr. Sachin Jadhav is now practicing at Vasavi Hospitals, as well as the Director of Hematology and Bone Marrow Transplantation (BMT) at Trustwell Hospitals Pvt Ltd. With extensive experience in founding and managing BMT centers, he has successfully established 14 such centers since 2013. Additionally, Dr. Jadhav serves as the CEO of Chiron Cancer, where he focuses on creating accessible cancer and BMT facilities across multiple countries. He plays an active role in several prestigious professional organizations, including ASTCT, ASH, and AAAS, and holds various leadership positions such as International Ambassador for the CGC.",
       qualification: "MBBS, MD, DM (Clinical Hematology) Chairman, International Hematology ConsortiumMBBS | MD General Medicine, DM Cardiology",
       department: "Consultant - Hematology & Bone Marrow Transplant (BMT)",
       experience: "20+",
