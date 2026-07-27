@@ -613,19 +613,12 @@ export class DoctorsPage {
       name: "Dr. Sachin Jadhav",
       img: "img/new-doctor-image/sachin-jadhav-sq.png",
       alt: "",
-      experience: "10+",
+      experience: "20+",
       qualification: "MBBS, MD, DM (Clinical Hematology) Chairman, International Hematology Consortium",
       department: "Hematology",
       consultant: "Consultant - Hematology & Bone Marrow Transplant (BMT)",
       slug: "/dr-sachin-jadhav"
     },
-
-
-    
-
-
-
-
   ];
 
 
