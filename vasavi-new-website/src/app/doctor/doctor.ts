@@ -1537,7 +1537,7 @@ export class Doctor {
       publications: []
     },
     {
-      id: 0,
+      id: 37,
       name: "Dr. Sachin Jadhav",
       image: "img/new-doctor-image/sachin-jadhav.png",
       alt: "",
