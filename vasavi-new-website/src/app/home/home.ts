@@ -338,4 +338,43 @@ export class Home {
   }
 
 
+  /* ══════════════════════════════════════════════════════════════
+     CGHS SECTION DATA
+
+     Mirrors the CGHS landing page (src/app/cghs/) so the two never
+     drift. If a specialty is added or a route renamed there, update
+     it here too.
+
+     COMPLIANCE (same rules as the CGHS page, please keep):
+      - says "CGHS services available", never asserts empanelment
+      - no package rates, no rupee figures, no reimbursement or
+        approval promises — those are set by CGHS, not the hospital
+      - every CTA routes to the CGHS Helpdesk, never to an
+        "insurance check" (CGHS is a government scheme, not an insurer)
+     ══════════════════════════════════════════════════════════════ */
+
+  readonly cghsPhone = '08071500500';
+  readonly cghsPhoneHref = 'tel:08071500500';
+
+  /**
+   * Six of the nine specialties on the CGHS page — the ones with the
+   * highest CGHS enquiry volume. Full list lives on the landing page.
+   *
+   * Name only, no blurb: the home page section is a signpost, not a
+   * summary of the CGHS page. Descriptions here made it read as a wall
+   * of text.
+   */
+  cghsSpecialties = [
+    { icon: 'fa-heart-pulse', title: 'Cardiology & Cardiac Care', link: '/cardiology-hospital-in-bangalore' },
+    { icon: 'fa-bone', title: 'Orthopaedics & Joint Replacement', link: '/orthopedic-hospital-in-bangalore' },
+    { icon: 'fa-droplet', title: 'Urology Services', link: '/urology-hospital-in-bangalore' },
+    { icon: 'fa-kit-medical', title: 'Nephrology & Dialysis', link: '/nephrology-hospital-in-bangalore' },
+    { icon: 'fa-disease', title: 'Gastroenterology & GI Surgery', link: '/gastroenterology-hospital-in-bangalore' },
+    { icon: 'fa-robot', title: 'Robotic & Minimally Invasive Surgery', link: '/minimally-invasive-surgery-in-bangalore' },
+  ];
+
+  /* Dropped from the home page on purpose — the "how to use the scheme"
+     steps and the "what to bring" checklist both live on the CGHS landing
+     page. Repeating them here made this section read as a second page. */
+
 }

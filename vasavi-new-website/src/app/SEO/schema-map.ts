@@ -19,6 +19,7 @@ import { ADENOID_REMOVAL_SCHEMA } from "./schema/adenoid-removal.schema";
 import { APPENDECTOMY_SCHEMA } from "./schema/appendectomy.schema";
 import { PILES_SCHEMA } from "./schema/piles.schema";
 import { FISTULA_SCHEMA } from "./schema/fistula.schema";
+import { CGHS_SCHEMA } from "./schema/cghs.schema";
 import { DR_KUMARESH_SCHEMA } from "./schema/doctor-schema/dr-kumaresh-krishnamoorthy.schema";
 import { DR_NISHA_SCHEMA } from "./schema/doctor-schema/dr-nisha-buchade";
 import { DR_RAMESH_HANUMEGOWDA_SCHEMA } from "./schema/doctor-schema/dr-ramesh-hanume-gowda.schema";
@@ -51,6 +52,9 @@ export const SCHEMA_MAP: any = {
   '/appendectomy-surgery-in-bangalore': APPENDECTOMY_SCHEMA,
   '/piles-surgery-in-bangalore': PILES_SCHEMA,
   '/fistula-surgery-in-bangalore': FISTULA_SCHEMA,
+
+   // SCHEMES
+  '/cghs-hospital-in-bangalore': CGHS_SCHEMA,
 
    // DOCTORS
   '/doctors/dr-kumaresh-krishnamoorthy': DR_KUMARESH_SCHEMA,

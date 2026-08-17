@@ -72,6 +72,7 @@ import { HealthCheck } from './health-package/health-check/health-check';
 import { SeniorDoctorProfile } from './senior-doctor-profile/senior-doctor-profile';
 import { Animation } from './animation/animation';
 import { Urodynamic } from './urodynamic/urodynamic';
+import { Cghs } from './cghs/cghs';
 import { NotFound } from './not-found/not-found';
 // import { HealthCheck } from './health-package/health-check/health-check';
 
@@ -200,6 +201,9 @@ export const routes: Routes = [
   { path: 'fibroid-removal-in-bangalore', component: FibroidRemoval },
   { path: 'ct-angiography-in-bangalore', component: CTAngiography },
   { path: 'coronary-angiography-in-bangalore', component: CoronaryAngiography },
+
+  // schemes
+  { path: 'cghs-hospital-in-bangalore', component: Cghs },
 
   // ads
 

@@ -326,6 +326,90 @@
     </div>
 
 
+    <!-- ======= CGHS Lead Strip =======
+         Deliberately a slim, text-only band rather than a full section: the
+         image + dark-panel CTA a little further up already carries the visual
+         weight, and a second picture block here would read as repetition.
+         Palette matches the CGHS landing page so the click-through feels
+         continuous. Copy says "CGHS services" - NOT "empanelled" - matching
+         the wording agreed for the CGHS page itself.
+    ============================================= -->
+    <section class="cghs-lead">
+        <div class="container">
+
+            <!-- ── header row ── -->
+            <div class="cghs-lead-inner">
+
+                <div class="cghs-lead-icon" aria-hidden="true">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <div class="cghs-lead-copy">
+                    <span class="cghs-lead-tag">Central Government Health Scheme</span>
+                    <h2>CGHS Services at Vasavi Hospital</h2>
+                    <p>
+                        Cardiology, orthopaedics, urology, nephrology and advanced surgical care for CGHS
+                        beneficiaries &mdash; with a dedicated helpdesk for appointments and documentation.
+                    </p>
+                </div>
+
+                <div class="cghs-lead-actions">
+                    <a class="cghs-lead-btn" rel="canonical" [routerLink]="'/cghs-hospital-in-bangalore'">
+                        Explore CGHS Services <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a class="cghs-lead-btn-line" [href]="cghsPhoneHref">
+                        <i class="fa-solid fa-phone"></i> CGHS Helpdesk &middot; {{ cghsPhone }}
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- ── what CGHS is (left) + specialties (right) ── -->
+            <div class="cghs-main">
+
+                <div class="cghs-about">
+                    <p class="cghs-block-h">What CGHS is</p>
+                    <p>
+                        A Government of India scheme, run by the Ministry of Health &amp; Family Welfare,
+                        covering serving central government employees, pensioners and their eligible
+                        dependants.
+                    </p>
+                    <p>
+                        Beneficiaries are referred from their CGHS Wellness Centre for specialist
+                        consultations, diagnostics and surgery &mdash; and treated here under the scheme's
+                        notified guidelines.
+                    </p>
+                </div>
+
+                <div class="cghs-block">
+                    <p class="cghs-block-h">Specialties for CGHS beneficiaries</p>
+                    <div class="cghs-cards">
+                        <a class="cghs-card" *ngFor="let item of cghsSpecialties" [routerLink]="item.link">
+                            <span class="cghs-card-ico"><i class="fa-solid {{ item.icon }}"></i></span>
+                            <strong>{{ item.title }}</strong>
+                            <i class="fa-solid fa-arrow-right cghs-card-arrow" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <p class="cghs-note">
+                        <a [routerLink]="'/cghs-hospital-in-bangalore'">See all specialties and procedures</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- ── trust footer ── -->
+            <div class="cghs-foot">
+                <span><i class="fa-solid fa-certificate" aria-hidden="true"></i> NABH accredited hospital</span>
+                <span><i class="fa-solid fa-truck-medical" aria-hidden="true"></i> 24x7 emergency department</span>
+                <span><i class="fa-solid fa-headset" aria-hidden="true"></i> Dedicated CGHS helpdesk</span>
+                <span><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Kumaraswamy Layout, Bangalore</span>
+            </div>
+
+        </div>
+    </section>
+    <!-- ======= End CGHS Lead Strip ======= -->
+
+
     <!-- ======= Counts Section ======= -->
     <!-- <section id="counts" class="counts bg-light">
             <div class="container" data-aos="fade-up">
