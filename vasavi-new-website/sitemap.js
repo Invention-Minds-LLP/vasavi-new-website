@@ -79,6 +79,9 @@ const staticRoutes = [
   '/ct-angiography-in-bangalore',
   '/coronary-angiography-in-bangalore',
 
+  // --- Schemes ---
+  '/cghs-hospital-in-bangalore',
+
   // --- Others ---
   '/ai-health-chatbot-in-bangalore',
   '/thank-you',
